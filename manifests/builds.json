@@ -1,0 +1,43 @@
+{
+  "baseline": {
+    "binary": {
+      "path": "worktrees/baseline/HighDiv/highdiv",
+      "sha256": "aa68c320d3319bffddce027154e288ea7fd1ff9084614da79a270852e0cbf17f"
+    },
+    "library": {
+      "path": "deps/baseline/lib/libz3.so",
+      "sha256": "968b9fc64facee7af34320d96f035210ad8bcac30aac25c1e319610ebd9519b0"
+    },
+    "ldd": "\tlinux-vdso.so.1 (0x00007ffdb2d06000)\n\tlibz3.so => /mnt/Space1/SMT_Sampling/guided_sampler/deps/baseline/lib/libz3.so (0x0000774d64a18000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x0000774d647e2000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x0000774d647c2000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000774d64599000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x0000774d644b2000)\n\t/lib64/ld-linux-x86-64.so.2 (0x0000774d66793000)\n"
+  },
+  "guided": {
+    "binary": {
+      "path": "worktrees/guided/HighDiv/highdiv",
+      "sha256": "6c94b9bc58bcd91f368d919646b11ede6959c1fc400fb9d58363b870f2605c4b"
+    },
+    "library": {
+      "path": "deps/guided/lib/libz3.so",
+      "sha256": "121db332c0daa0c2edbfdf6e819055b1d39b231bafa4ce6539264aff49142a15"
+    },
+    "ldd": "\tlinux-vdso.so.1 (0x00007fff547d3000)\n\tlibz3.so => /mnt/Space1/SMT_Sampling/guided_sampler/deps/guided/lib/libz3.so (0x0000735ab9976000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x0000735ab9740000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x0000735ab9720000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000735ab94f7000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x0000735ab9410000)\n\t/lib64/ld-linux-x86-64.so.2 (0x0000735abb710000)\n"
+  },
+  "metric": {
+    "path": "worktrees/baseline/HighDiv/my_scripts/calc_metric.py",
+    "sha256": "a51cdd069321cd32becf8eeb5e606cb71fbab16ae3e0231f68963eaadf493f04"
+  },
+  "compiler": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "python": "Python 3.10.12\n",
+  "python_executable_sha256": "d6bca2b84e73c7775a0dd5e6a76899cfe4ee62863d7c8f88513811d1fda23f49",
+  "metric_loaded_libraries": [
+    {
+      "path": "/mnt/Space1/SMT_Sampling/guided_sampler/deps/baseline/lib/libz3.so",
+      "sha256": "968b9fc64facee7af34320d96f035210ad8bcac30aac25c1e319610ebd9519b0"
+    }
+  ],
+  "python_packages": "",
+  "headers": {
+    "nlohmann/json.hpp": "7262f190c3a2f2bb334236b3b74acaa1ac1ffb72920c4654bcaf02a7db1a4ec0",
+    "boost/multiprecision/cpp_int.hpp": "db4a453cde6e23385fc018e28a43d15763b66492cee924da3a8ddc42348302c2"
+  },
+  "host_flags": "-O3 -DNDEBUG -std=c++20 -Wall"
+}
