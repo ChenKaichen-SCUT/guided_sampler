@@ -1,0 +1,10 @@
+{"explicit_cost_seconds":0.009605295,"kind":"check_end","stats":{}}
+{"a_static_match":0,"bit":0,"coverage_version":1,"desired":false,"encoding":"created","epoch":3,"node":0,"sort":"Bool","target_id":0}
+{"a_static_match":0,"bit":0,"coverage_version":1,"desired":false,"encoding":"slice_incomplete","epoch":3,"node":1,"sort":"Bool","target_id":128}
+{"a_static_match":1,"bit":0,"coverage_version":1,"desired":false,"encoding":"slice_incomplete","epoch":3,"node":2,"sort":"Bool","target_id":256}
+{"a_static_match":0,"bit":0,"coverage_version":1,"desired":false,"encoding":"slice_incomplete","epoch":3,"node":3,"sort":"Int","target_id":384}
+{"a_static_match":0,"bit":1,"coverage_version":1,"desired":false,"encoding":"slice_incomplete","epoch":3,"node":3,"sort":"Int","target_id":386}
+{"a_static_match":0,"bit":2,"coverage_version":1,"desired":true,"encoding":"slice_incomplete","epoch":3,"node":3,"sort":"Int","target_id":389}
+{"a_static_match":0,"bit":3,"coverage_version":1,"desired":false,"encoding":"slice_incomplete","epoch":3,"node":3,"sort":"Int","target_id":390}
+{"a_static_match":0,"bit":4,"coverage_version":1,"desired":false,"encoding":"slice_incomplete","epoch":3,"node":3,"sort":"Int","target_id":392}
+{"explicit_cost_seconds":0.060841883,"kind":"check_end","stats":{"a_changed":0,"a_live":0,"a_same":0,"a_used":0,"b_internalized":0,"b_relevant":0,"b_used":0,"backend":1,"broker_seconds":0,"cap":0,"coverage_version":1,"deferred":0,"epoch":3,"events":[],"fallback":0,"native_registered_targets":0,"ordinary":0,"prepare_seconds":0,"propagated":0,"special":0,"unsupported":1}}

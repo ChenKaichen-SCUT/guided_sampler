@@ -1,0 +1,6 @@
+-----------------------------------------------------
+Suppressions used:
+  count      bytes template
+      8        256 lp::dioph_eq::imp::undo_fixed_column::undo_fixed_column
+-----------------------------------------------------
+

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/run_correctness.py", line 61, in <module>
+    if __name__=='__main__':main()
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/run_correctness.py", line 48, in main
+    summary=read(d/'summary.json');assert summary['formal_count']==8,summary
+AssertionError: {'coverage': None, 'elapsed': 15.002894104, 'formal_count': 1, 'guidance_cost': 0.0, 'queries': 22701, 'raw_count': 1, 'sample_limit': 8, 'status': 'deadline', 'total': None, 'wall_limit': 15.0}

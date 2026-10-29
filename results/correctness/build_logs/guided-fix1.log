@@ -1,0 +1,103 @@
++ make -C /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/guided/z3/build -j 10
+make: Entering directory '/tmp/guided_sampler_round1_worktrees/guided/z3/build'
+src/opt/opt_solver.cpp
+src/opt/sortmax.cpp
+src/opt/wmax.cpp
+src/muz/spacer/spacer_cluster.cpp
+src/muz/spacer/spacer_conjecture.cpp
+src/muz/spacer/spacer_ind_lemma_generalizer.cpp
+src/muz/spacer/spacer_expand_bnd_generalizer.cpp
+src/muz/spacer/spacer_util.cpp
+src/sat/smt/q_mam.cpp
+src/sat/smt/q_mbi.cpp
+src/sat/smt/q_model_fixer.cpp
+src/sat/smt/q_queue.cpp
+src/sat/smt/q_solver.cpp
+src/sat/smt/q_theory_checker.cpp
+src/smt/smt_context.cpp
+src/smt/smt_setup.cpp
+src/smt/theory_diff_logic.cpp
+src/smt/theory_seq.cpp
+src/smt/theory_utvpi.cpp
+src/parsers/smt2/smt2parser.cpp
+src/parsers/smt2/smt2scanner.cpp
+In file included from ../src/smt/smt_context.cpp:1802:
+../src/smt/z3_broker.inc: In member function ‘void smt::context::prepare_coverage_targets()’:
+../src/smt/z3_broker.inc:12:38: error: cannot convert ‘ref_vector<expr, ast_manager>::element_ref’ to ‘const expr*’
+   12 |         if(lit_internalized(g.atoms[i])) {
+      |                             ~~~~~~~~~^
+      |                                      |
+      |                                      ref_vector<expr, ast_manager>::element_ref
+In file included from ../src/smt/smt_context.cpp:19:
+../src/smt/smt_context.h:738:44: note:   initializing argument 1 of ‘bool smt::context::lit_internalized(const expr*) const’
+  738 |         bool lit_internalized(expr const * n) const {
+      |                               ~~~~~~~~~~~~~^
+In file included from ../src/smt/smt_context.cpp:1802:
+../src/smt/z3_broker.inc:19:12: error: no match for ‘operator!’ (operand type is ‘ref_vector<expr, ast_manager>::element_ref’)
+   19 |         if(!g.predicates[i] || reserved.count(i)) continue;
+      |            ^~~~~~~~~~~~~~~~
+../src/smt/z3_broker.inc:19:12: note: candidate: ‘operator!(bool)’ (built-in)
+../src/smt/z3_broker.inc:19:12: note:   no known conversion for argument 1 from ‘ref_vector<expr, ast_manager>::element_ref’ to ‘bool’
+../src/smt/z3_broker.inc:20:31: error: cannot convert ‘ref_vector<expr, ast_manager>::element_ref’ to ‘expr*’ in initialization
+   20 |         expr* e=g.predicates[i];
+      |                 ~~~~~~~~~~~~~~^
+      |                               |
+      |                               ref_vector<expr, ast_manager>::element_ref
+../src/smt/z3_broker.inc: In member function ‘bool smt::context::coverage_decide(smt::bool_var&, bool&, bool)’:
+../src/smt/z3_broker.inc:53:78: error: cannot convert ‘ref_vector<expr, ast_manager>::element_ref’ to ‘const expr*’
+   53 |             if(g.attempted.count(g.indices[i]) || !lit_internalized(g.atoms[i]))continue;
+      |                                                                     ~~~~~~~~~^
+      |                                                                              |
+      |                                                                              ref_vector<expr, ast_manager>::element_ref
+In file included from ../src/smt/smt_context.cpp:19:
+../src/smt/smt_context.h:738:44: note:   initializing argument 1 of ‘bool smt::context::lit_internalized(const expr*) const’
+  738 |         bool lit_internalized(expr const * n) const {
+      |                               ~~~~~~~~~~~~~^
+In file included from ../src/smt/smt_context.cpp:1802:
+../src/smt/z3_broker.inc:54:44: error: cannot convert ‘ref_vector<expr, ast_manager>::element_ref’ to ‘expr*’
+   54 |             literal l=get_literal(g.atoms[i]);
+      |                                   ~~~~~~~~~^
+      |                                            |
+      |                                            ref_vector<expr, ast_manager>::element_ref
+In file included from ../src/smt/smt_context.cpp:19:
+../src/smt/smt_context.h:370:36: note:   initializing argument 1 of ‘smt::literal smt::context::get_literal(expr*) const’
+  370 |         literal get_literal(expr * n) const;
+      |                             ~~~~~~~^
+In file included from ../src/smt/smt_context.cpp:1802:
+../src/smt/z3_broker.inc:67:72: error: cannot convert ‘ref_vector<expr, ast_manager>::element_ref’ to ‘const expr*’
+   67 |             if(g.attempted.count(i) || !lit_internalized(g.predicates[i]))continue;
+      |                                                          ~~~~~~~~~~~~~~^
+      |                                                                        |
+      |                                                                        ref_vector<expr, ast_manager>::element_ref
+In file included from ../src/smt/smt_context.cpp:19:
+../src/smt/smt_context.h:738:44: note:   initializing argument 1 of ‘bool smt::context::lit_internalized(const expr*) const’
+  738 |         bool lit_internalized(expr const * n) const {
+      |                               ~~~~~~~~~~~~~^
+In file included from ../src/smt/smt_context.cpp:1802:
+../src/smt/z3_broker.inc:68:49: error: cannot convert ‘ref_vector<expr, ast_manager>::element_ref’ to ‘expr*’
+   68 |             literal l=get_literal(g.predicates[i]);
+      |                                   ~~~~~~~~~~~~~~^
+      |                                                 |
+      |                                                 ref_vector<expr, ast_manager>::element_ref
+In file included from ../src/smt/smt_context.cpp:19:
+../src/smt/smt_context.h:370:36: note:   initializing argument 1 of ‘smt::literal smt::context::get_literal(expr*) const’
+  370 |         literal get_literal(expr * n) const;
+      |                             ~~~~~~~^
+src/math/lp/factorization.cpp
+src/shell/opt_frontend.cpp
+src/api/api_solver.cpp
+src/opt/maxcore.cpp
+src/opt/maxlex.cpp
+make: *** [Makefile:3193: smt/smt_context.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: Leaving directory '/tmp/guided_sampler_round1_worktrees/guided/z3/build'
+Traceback (most recent call last):
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/build_all.py", line 32, in <module>
+    if __name__=='__main__':main()
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/build_all.py", line 26, in main
+    run(['make','-C',tree/'z3/build','-j',a.jobs],env=env)
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/build_all.py", line 4, in run
+    def run(cmd,**kw):print('+',' '.join(map(str,cmd)),flush=True);subprocess.run(list(map(str,cmd)),check=True,**kw)
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['make', '-C', '/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/guided/z3/build', '-j', '10']' returned non-zero exit status 2.

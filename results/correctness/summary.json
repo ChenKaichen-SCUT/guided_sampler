@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": {
+    "release/summary.json": "645cee45ebaabbbbfc7d24368b43a1cad36ccfda9097687156b14d979e664f28",
+    "sanitize/summary.json": "a2c4c704daadf0382b99a876940de88b0d27d38899b31241e0e5572f865acd7c",
+    "release/upstream.json": "ae884d19f5506270e25ffc56ea646e308d697a243c9d1b2a58201397c97c78f7",
+    "sanitize/upstream.json": "2b3041ddb94a85b38e4c4b885002a517a968bb197b530402bf0c1e9bfb4d180c",
+    "scheduler.json": "7dc30e4185e0c9eaaa54757b35288a62778337a5b068c5feee34aad80c78501e",
+    "cli/summary.json": "2f273daaf99b1fc8449823c3533e87d2d804c17804122b1c4b82f9d2401541e5",
+    "input_preflight/summary.json": "2a8295419961210dd1b316d8b52b1f17bfccc439d0c8bfc0c220523f94692ac9"
+  },
+  "original_source_and_inputs_unchanged": true,
+  "upstream_leak_exception": {
+    "description": "Native no-guidance reproducer leaks 32 bytes in upstream undo_fixed_column copy constructor; only this frame is suppressed. ASan/UBSan and detect_leaks stay enabled.",
+    "suppression_sha256": "ae26b6ceec0af7a3ec1ac375b47b4f1f7ab065b1ec071d582222e4f04d367032",
+    "evidence": "results/correctness/upstream-leak/"
+  },
+  "formal_runs_started": 0,
+  "no_performance_promotion_gate": true
+}

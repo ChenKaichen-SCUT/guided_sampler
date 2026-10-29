@@ -1,0 +1,200 @@
+[
+  {
+    "path": "benchmarks/20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+    "sha256": "3d6448604971312772c02ae450fe761b9dc3eb9bcd5e8bac4b282b384614dc67",
+    "size": 15246,
+    "public_source": "benchmarks/QF_LIA/20180326-Bromberger/more_slacked/CAV_2009_benchmarks/smt/45-vars/v45_problem__003.smt2.slack.smt2",
+    "metric_nodes": 374,
+    "total": 16943,
+    "variables": 90,
+    "sorts": {
+      "Int": 90
+    },
+    "operations": {
+      "515": 99,
+      "512": 4,
+      "518": 20,
+      "45102": 90,
+      "521": 146,
+      "520": 3,
+      "514": 11
+    },
+    "compatibility": "passed",
+    "inspect_seconds": 0.09619815601035953,
+    "logic": "QF_LIA"
+  },
+  {
+    "path": "benchmarks/CAV_2009_benchmarks_problem__019.smt2",
+    "sha256": "89202474e9eeecad560fcec6bfff2a09ecd26448546925163a0a8667e01f35cb",
+    "size": 10643,
+    "public_source": "benchmarks/QF_LIA/CAV_2009_benchmarks/smt/35-vars/problem__019.smt2",
+    "metric_nodes": 215,
+    "total": 11429,
+    "variables": 35,
+    "sorts": {
+      "Int": 35
+    },
+    "operations": {
+      "261": 1,
+      "514": 35,
+      "512": 2,
+      "518": 35,
+      "521": 105,
+      "45102": 35,
+      "520": 1
+    },
+    "compatibility": "passed",
+    "inspect_seconds": 0.14522588101681322,
+    "logic": "QF_LIA"
+  },
+  {
+    "path": "benchmarks/SMT_random_LIA_ex14600_2600_100.smt2",
+    "sha256": "114fb8ac7228c36cc6124bd9f2d95fd16a3bf2d330c39e185e8145d56821de1f",
+    "size": 82948,
+    "public_source": "benchmarks/QF_LIA/bofill-scheduling/SMT_random_LIA/ex14600_2600_100.smt2",
+    "metric_nodes": 5792,
+    "total": 104639,
+    "variables": 780,
+    "sorts": {
+      "Int": 780
+    },
+    "operations": {
+      "261": 581,
+      "514": 1546,
+      "45102": 780,
+      "512": 135,
+      "518": 213,
+      "262": 364,
+      "258": 1481,
+      "515": 250,
+      "519": 441
+    },
+    "compatibility": "passed",
+    "inspect_seconds": 0.614554492989555,
+    "logic": "QF_LIA"
+  },
+  {
+    "path": "benchmarks/SMT_real_LIA_ex8500_2400_100.smt2",
+    "sha256": "9ff3c643c1756057b1f127c5818bf38c468761ad3d2dd742cf34e3511e0690ec",
+    "size": 59418,
+    "public_source": "benchmarks/QF_LIA/bofill-scheduling/SMT_real_LIA/ex8500_2400_100.smt2",
+    "metric_nodes": 4006,
+    "total": 66061,
+    "variables": 576,
+    "sorts": {
+      "Int": 576
+    },
+    "operations": {
+      "261": 379,
+      "514": 1144,
+      "45102": 576,
+      "512": 19,
+      "518": 114,
+      "262": 269,
+      "258": 1044,
+      "515": 184,
+      "519": 276
+    },
+    "compatibility": "passed",
+    "inspect_seconds": 0.4353869929909706,
+    "logic": "QF_LIA"
+  },
+  {
+    "path": "benchmarks/convert_convert-jpg2gif-query-1459.smt2",
+    "sha256": "0ea6c3119acb120f7655fae65cc9c743358f1914111e7cf2ab5290951d896f32",
+    "size": 132740,
+    "public_source": "benchmarks/QF_LIA/convert/convert-jpg2gif-query-1459.smt2",
+    "metric_nodes": 9580,
+    "total": 179302,
+    "variables": 1000,
+    "sorts": {
+      "Int": 1000
+    },
+    "operations": {
+      "261": 2724,
+      "258": 503,
+      "512": 213,
+      "518": 730,
+      "521": 407,
+      "520": 344,
+      "45102": 1000,
+      "514": 2253,
+      "265": 1206,
+      "262": 199
+    },
+    "compatibility": "passed",
+    "inspect_seconds": 0.8805033940006979,
+    "logic": "QF_LIA"
+  },
+  {
+    "path": "benchmarks/dillig_40-10.smt2",
+    "sha256": "92bdb63609e8729d48bf3c41084b50ce39ff6037b5999a94c11c311a7973c162",
+    "size": 9925,
+    "public_source": "benchmarks/QF_LIA/dillig/40-10.smt2",
+    "metric_nodes": 819,
+    "total": 50715,
+    "variables": 40,
+    "sorts": {
+      "Int": 40
+    },
+    "operations": {
+      "261": 1,
+      "514": 25,
+      "520": 3,
+      "512": 5,
+      "518": 605,
+      "521": 139,
+      "45102": 40
+    },
+    "compatibility": "passed",
+    "inspect_seconds": 0.12095725900144316,
+    "logic": "QF_LIA"
+  },
+  {
+    "path": "benchmarks/pb2010_normalized-j3048_8-sat.smt2",
+    "sha256": "ec3fc9a0adbf3aafeecab08306249e5963ae606ea7077f7be0eec81f0bd7eb56",
+    "size": 790255,
+    "public_source": "benchmarks/QF_LIA/pb2010/normalized-j3048_8-sat.smt2",
+    "metric_nodes": 36747,
+    "total": 1416258,
+    "variables": 2791,
+    "sorts": {
+      "Int": 2791
+    },
+    "operations": {
+      "515": 14849,
+      "520": 14,
+      "512": 15,
+      "518": 9139,
+      "521": 9938,
+      "45102": 2791
+    },
+    "compatibility": "passed",
+    "inspect_seconds": 6.568065771018155,
+    "logic": "QF_LIA"
+  },
+  {
+    "path": "benchmarks/prime_cone_sat_14.smt2",
+    "sha256": "ded05e9bba0042f2dfa9c9193d0d829ab5e4613f0f1687ca6f4e30f7c322fa2e",
+    "size": 3352,
+    "public_source": "benchmarks/QF_LIA/prime-cone/prime_cone_sat_14.smt2",
+    "metric_nodes": 299,
+    "total": 17246,
+    "variables": 14,
+    "sorts": {
+      "Int": 14
+    },
+    "operations": {
+      "515": 15,
+      "512": 30,
+      "518": 15,
+      "45102": 14,
+      "514": 14,
+      "521": 196,
+      "520": 14
+    },
+    "compatibility": "passed",
+    "inspect_seconds": 0.032698826980777085,
+    "logic": "QF_LIA"
+  }
+]

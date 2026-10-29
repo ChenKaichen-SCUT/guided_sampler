@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "command": [
+    "/usr/bin/python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "/tmp/guided_sampler_round1_worktrees/guided/tests",
+    "-p",
+    "test_partitioned_initialization.py",
+    "-v"
+  ],
+  "exit": 0,
+  "source_sha256": "5cecad602d14924f50ca3ea02ea5e120f32cef61e3b5d007efed051313efcaa7"
+}

@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "inputs": [
+    {
+      "nodes": 374,
+      "path": "/mnt/Space1/SMT_Sampling/benchmarks/20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+      "total": 16943,
+      "variables": 90
+    },
+    {
+      "nodes": 215,
+      "path": "/mnt/Space1/SMT_Sampling/benchmarks/CAV_2009_benchmarks_problem__019.smt2",
+      "total": 11429,
+      "variables": 35
+    },
+    {
+      "nodes": 5792,
+      "path": "/mnt/Space1/SMT_Sampling/benchmarks/SMT_random_LIA_ex14600_2600_100.smt2",
+      "total": 104639,
+      "variables": 780
+    },
+    {
+      "nodes": 4006,
+      "path": "/mnt/Space1/SMT_Sampling/benchmarks/SMT_real_LIA_ex8500_2400_100.smt2",
+      "total": 66061,
+      "variables": 576
+    },
+    {
+      "nodes": 9580,
+      "path": "/mnt/Space1/SMT_Sampling/benchmarks/convert_convert-jpg2gif-query-1459.smt2",
+      "total": 179302,
+      "variables": 1000
+    },
+    {
+      "nodes": 819,
+      "path": "/mnt/Space1/SMT_Sampling/benchmarks/dillig_40-10.smt2",
+      "total": 50715,
+      "variables": 40
+    },
+    {
+      "nodes": 36747,
+      "path": "/mnt/Space1/SMT_Sampling/benchmarks/pb2010_normalized-j3048_8-sat.smt2",
+      "total": 1416258,
+      "variables": 2791
+    },
+    {
+      "nodes": 299,
+      "path": "/mnt/Space1/SMT_Sampling/benchmarks/prime_cone_sat_14.smt2",
+      "total": 17246,
+      "variables": 14
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+
+=================================================================
+==248268==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 32 byte(s) in 1 object(s) allocated from:
+    #0 0x7fb0f7b46887 in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:145
+    #1 0x7fb0cde50ae1 in memory::allocate(unsigned long) ../src/util/memory_manager.cpp:303
+    #2 0x7fb0cdf6c603 in mpz_manager<true>::allocate(unsigned int) ../src/util/mpz.cpp:202
+    #3 0x7fb0cdf70b24 in mpz_manager<true>::big_set(mpz&, mpz const&) ../src/util/mpz.cpp:1511
+    #4 0x7fb0be25517a in mpz_manager<true>::set(mpz&, mpz const&) ../src/util/mpz.h:543
+    #5 0x7fb0be25517a in mpq_manager<true>::set(mpz&, mpz const&) ../src/util/mpq.h:665
+    #6 0x7fb0be25517a in mpq_manager<true>::set(mpq&, mpq const&) ../src/util/mpq.h:668
+    #7 0x7fb0be25517a in rational::rational(rational const&) ../src/util/rational.h:46
+    #8 0x7fb0c9313cd9 in lp::dioph_eq::imp::undo_fixed_column::undo_fixed_column(lp::dioph_eq::imp::undo_fixed_column const&) ../src/math/lp/dioph_eq.cpp:598
+    #9 0x7fb0c9313cd9 in void trail_stack::push<lp::dioph_eq::imp::undo_fixed_column>(lp::dioph_eq::imp::undo_fixed_column const&) ../src/util/trail.h:410
+    #10 0x7fb0c9313cd9 in lp::dioph_eq::imp::update_column_bound_callback(unsigned int) ../src/math/lp/dioph_eq.cpp:747
+    #11 0x7fb0c931491e in lp::dioph_eq::imp::imp(lp::int_solver&, lp::lar_solver&)::{lambda(unsigned int)#2}::operator()(unsigned int) const ../src/math/lp/dioph_eq.cpp:753
+    #12 0x7fb0c931491e in void std::__invoke_impl<void, lp::dioph_eq::imp::imp(lp::int_solver&, lp::lar_solver&)::{lambda(unsigned int)#2}&, unsigned int>(std::__invoke_other, lp::dioph_eq::imp::imp(lp::int_solver&, lp::lar_solver&)::{lambda(unsigned int)#2}&, unsigned int&&) /usr/include/c++/11/bits/invoke.h:61
+    #13 0x7fb0c931491e in std::enable_if<is_invocable_r_v<void, lp::dioph_eq::imp::imp(lp::int_solver&, lp::lar_solver&)::{lambda(unsigned int)#2}&, unsigned int>, void>::type std::__invoke_r<void, lp::dioph_eq::imp::imp(lp::int_solver&, lp::lar_solver&)::{lambda(unsigned int)#2}&, unsigned int>(lp::dioph_eq::imp::imp(lp::int_solver&, lp::lar_solver&)::{lambda(unsigned int)#2}&, unsigned int&&) /usr/include/c++/11/bits/invoke.h:111
+    #14 0x7fb0c931491e in std::_Function_handler<void (unsigned int), lp::dioph_eq::imp::imp(lp::int_solver&, lp::lar_solver&)::{lambda(unsigned int)#2}>::_M_invoke(std::_Any_data const&, unsigned int&&) /usr/include/c++/11/bits/std_function.h:290
+    #15 0x7fb0c8f33e74 in std::function<void (unsigned int)>::operator()(unsigned int) const /usr/include/c++/11/bits/std_function.h:590
+    #16 0x7fb0c8f33e74 in lp::lar_solver::update_column_type_and_bound(unsigned int, lp::lconstraint_kind, rational const&, dependency_manager<scoped_dependency_manager<unsigned int>::config>::dependency*) ../src/math/lp/lar_solver.cpp:1999
+    #17 0x7fb0c8f40641 in lp::lar_solver::update_column_type_and_bound(unsigned int, rational const&, unsigned int) ../src/math/lp/lar_solver.cpp:1887
+    #18 0x7fb0c8f46a2c in lp::lar_solver::update_column_type_and_bound_check_on_equal(unsigned int, rational const&, unsigned int, unsigned int&) ../src/math/lp/lar_solver.cpp:2011
+    #19 0x7fb0c8f46fc2 in lp::lar_solver::activate_check_on_equal(unsigned int, unsigned int&) ../src/math/lp/lar_solver.cpp:1814
+    #20 0x7fb0c8f4736c in lp::lar_solver::add_var_bound_check_on_equal(unsigned int, lp::lconstraint_kind, rational const&, unsigned int&) ../src/math/lp/lar_solver.cpp:1752
+    #21 0x7fb0c2ba2a5b in smt::theory_lra::imp::add_def_constraint_and_equality(unsigned int, lp::lconstraint_kind, rational const&) ../src/smt/theory_lra.cpp:717
+    #22 0x7fb0c2bbc4e3 in smt::theory_lra::imp::internalize_numeral(app*, rational const&) ../src/smt/theory_lra.cpp:331
+    #23 0x7fb0c2bbc4e3 in smt::theory_lra::imp::linearize(smt::theory_lra::imp::scoped_internalize_state&) ../src/smt/theory_lra.cpp:385
+    #24 0x7fb0c2ba7a39 in smt::theory_lra::imp::linearize_term(expr*, smt::theory_lra::imp::scoped_internalize_state&) ../src/smt/theory_lra.cpp:313
+    #25 0x7fb0c2ba7a39 in smt::theory_lra::imp::internalize_def(app*) ../src/smt/theory_lra.cpp:770
+    #26 0x7fb0c2bacc8e in smt::theory_lra::imp::internalize_term(app*) ../src/smt/theory_lra.cpp:940
+    #27 0x7fb0c29f981d in smt::theory_lra::internalize_term(app*) ../src/smt/theory_lra.cpp:4210
+    #28 0x7fb0c32198f8 in smt::context::internalize_theory_term(app*) ../src/smt/smt_internalizer.cpp:900
+    #29 0x7fb0c329ab9f in smt::context::internalize_term(app*) ../src/smt/smt_internalizer.cpp:839
+    #30 0x7fb0c3291342 in smt::context::internalize_rec(expr*, bool) ../src/smt/smt_internalizer.cpp:388
+    #31 0x7fb0c32a8d02 in smt::context::internalize(expr*, bool) ../src/smt/smt_internalizer.cpp:364
+    #32 0x7fb0c2a06aef in smt::theory_lra::imp::internalize_args(app*, bool) ../src/smt/theory_lra.cpp:524
+    #33 0x7fb0c2bbe208 in smt::theory_lra::imp::linearize(smt::theory_lra::imp::scoped_internalize_state&) ../src/smt/theory_lra.cpp:412
+    #34 0x7fb0c2ba7a39 in smt::theory_lra::imp::linearize_term(expr*, smt::theory_lra::imp::scoped_internalize_state&) ../src/smt/theory_lra.cpp:313
+    #35 0x7fb0c2ba7a39 in smt::theory_lra::imp::internalize_def(app*) ../src/smt/theory_lra.cpp:770
+    #36 0x7fb0c2ba9ea7 in smt::theory_lra::imp::internalize_atom(app*, bool) ../src/smt/theory_lra.cpp:901
+    #37 0x7fb0c29f9702 in smt::theory_lra::internalize_atom(app*, bool) ../src/smt/theory_lra.cpp:4207
+    #38 0x7fb0c3249aac in smt::context::internalize_theory_atom(app*, bool) ../src/smt/smt_internalizer.cpp:502
+    #39 0x7fb0c328f4bf in smt::context::internalize_formula(expr*, bool) ../src/smt/smt_internalizer.cpp:441
+    #40 0x7fb0c328ff3f in smt::context::internalize_rec(expr*, bool) ../src/smt/smt_internalizer.cpp:381
+    #41 0x7fb0c32a8d02 in smt::context::internalize(expr*, bool) ../src/smt/smt_internalizer.cpp:364
+
+SUMMARY: AddressSanitizer: 32 byte(s) leaked in 1 allocation(s).

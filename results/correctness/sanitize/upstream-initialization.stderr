@@ -1,0 +1,29 @@
+test_boolean_values_are_not_parsed_as_integers (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+test_boundary_move_samples_intervals_wider_than_int64_max (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+test_boundary_move_singleton_has_no_extra_endpoint (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+test_closures_are_disjoint_and_use_the_paper_threshold (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+test_complement_can_select_either_side (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+test_complement_excludes_original_endpoints (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+test_complement_handles_empty_full_and_extreme_intervals (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+test_different_sampler_sizes_have_independent_temporary_storage (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+test_domain_external_feasible_interval_is_not_discarded (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+test_empty_complement_uses_bounded_fallback (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+test_equality_group_preserves_sampling_bounds_for_moves (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+test_equality_group_starts_at_zero_or_nearest_hard_bound (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+test_guidance_uses_correct_coefficients_and_satisfied_literals (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+test_integer_parser_preserves_minimum_and_large_constants (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+test_missing_model_does_not_guide_from_zero (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+test_negated_inequality_uses_strict_integer_boundary (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+test_opposite_inequalities_require_conjunction_and_correct_pairing (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+test_overflow_does_not_produce_a_satisfying_assignment (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+test_oversized_model_integer_does_not_wrap (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+test_paper_boundary_move_stays_inside_contextual_interval (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+test_paper_example_for_high_frequency_and_general_groups (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+test_partitioned_initialization_honors_hard_bounds (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+test_unavailable_reverse_interval_falls_back_to_bounded_sampling (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+test_unsupported_integer_is_rejected_before_arithmetic (test_partitioned_initialization.PartitionedInitializationTests) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 8.063s
+
+OK

@@ -1,0 +1,126 @@
+{
+  "covered": 9,
+  "total": 330,
+  "observed": 338,
+  "models": 3,
+  "legal": true,
+  "official_class_result": "2.73%",
+  "prefixes": [
+    {
+      "index": 0,
+      "covered": 0,
+      "total": 330,
+      "observed": 198,
+      "new_covered": 0,
+      "new_observed": 198,
+      "legal_manual": true,
+      "legal_substitution": true,
+      "commit_complete": 0.056700892,
+      "source": "CDCL"
+    },
+    {
+      "index": 1,
+      "covered": 3,
+      "total": 330,
+      "observed": 331,
+      "new_covered": 3,
+      "new_observed": 133,
+      "legal_manual": true,
+      "legal_substitution": true,
+      "commit_complete": 0.06470153,
+      "source": "CDCL"
+    },
+    {
+      "index": 2,
+      "covered": 9,
+      "total": 330,
+      "observed": 338,
+      "new_covered": 6,
+      "new_observed": 7,
+      "legal_manual": true,
+      "legal_substitution": true,
+      "commit_complete": 0.090894629,
+      "source": "CDCL"
+    }
+  ],
+  "metric_sha256": "a51cdd069321cd32becf8eeb5e606cb71fbab16ae3e0231f68963eaadf493f04",
+  "formula_sha256": "072b20fd625a99d0e383611a7c89dfaaf0fe3d50e5d4b6098e6c64d99ab0add0",
+  "samples_sha256": "6c25589c58f00285fb12808994c76bd4a85304572d156b46fc8ff98c93539751",
+  "seen": {
+    "36": {
+      "seen1": "1",
+      "seen0": "0",
+      "sort": "bool"
+    },
+    "18": {
+      "seen1": "1",
+      "seen0": "0",
+      "sort": "bool"
+    },
+    "12": {
+      "seen1": "1",
+      "seen0": "0",
+      "sort": "bool"
+    },
+    "7": {
+      "seen1": "1",
+      "seen0": "1",
+      "sort": "bool"
+    },
+    "5": {
+      "seen1": "30",
+      "seen0": "18446744073709551615",
+      "sort": "int"
+    },
+    "6": {
+      "seen1": "0",
+      "seen0": "18446744073709551615",
+      "sort": "int"
+    },
+    "9": {
+      "seen1": "1",
+      "seen0": "1",
+      "sort": "bool"
+    },
+    "8": {
+      "seen1": "10",
+      "seen0": "18446744073709551605",
+      "sort": "int"
+    },
+    "11": {
+      "seen1": "1",
+      "seen0": "0",
+      "sort": "bool"
+    },
+    "10": {
+      "seen1": "20",
+      "seen0": "18446744073709551595",
+      "sort": "int"
+    },
+    "17": {
+      "seen1": "1",
+      "seen0": "0",
+      "sort": "bool"
+    },
+    "14": {
+      "seen1": "1",
+      "seen0": "1",
+      "sort": "bool"
+    },
+    "13": {
+      "seen1": "10",
+      "seen0": "18446744073709551615",
+      "sort": "int"
+    },
+    "15": {
+      "seen1": "1",
+      "seen0": "0",
+      "sort": "bool"
+    },
+    "16": {
+      "seen1": "0",
+      "seen0": "0",
+      "sort": "bool"
+    }
+  }
+}

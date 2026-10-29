@@ -1,0 +1,1033 @@
+{
+  "hints_checked": 274,
+  "prefixes": [
+    {
+      "covered": 0,
+      "new_covered": 0,
+      "new_observed": 522,
+      "nodes": [
+        {
+          "expr": "(and (or (= x 10) (= x 0) (> y (- 99999999999999999999999)))\n     (= (+ x y) (+ y x))\n     (= (ite b (- x) (* x 2)) (ite b (- x) (* x 2)))\n     (= (not b) (= x y)))",
+          "id": 0,
+          "seen0": "1",
+          "seen1": "0",
+          "visited": true
+        },
+        {
+          "expr": "(and (or (= x 10) (= x 0) (> y (- 99999999999999999999999)))\n     (= (+ x y) (+ y x))\n     (= (ite b (- x) (* x 2)) (ite b (- x) (* x 2)))\n     (= (not b) (= x y)))",
+          "id": 1,
+          "seen0": "1",
+          "seen1": "0",
+          "visited": true
+        },
+        {
+          "expr": "(or (= x 10) (= x 0) (> y (- 99999999999999999999999)))",
+          "id": 2,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(= x 10)",
+          "id": 3,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "x",
+          "id": 4,
+          "seen0": "18446744073709551605",
+          "seen1": "10",
+          "visited": true
+        },
+        {
+          "expr": "10",
+          "id": 5,
+          "seen0": "18446744073709551605",
+          "seen1": "10",
+          "visited": true
+        },
+        {
+          "expr": "(= x 0)",
+          "id": 6,
+          "seen0": "0",
+          "seen1": "0",
+          "visited": false
+        },
+        {
+          "expr": "0",
+          "id": 7,
+          "seen0": "0",
+          "seen1": "0",
+          "visited": false
+        },
+        {
+          "expr": "(> y (- 99999999999999999999999))",
+          "id": 8,
+          "seen0": "0",
+          "seen1": "0",
+          "visited": false
+        },
+        {
+          "expr": "y",
+          "id": 9,
+          "seen0": "18446744073709551615",
+          "seen1": "0",
+          "visited": true
+        },
+        {
+          "expr": "(- 99999999999999999999999)",
+          "id": 10,
+          "seen0": "0",
+          "seen1": "0",
+          "visited": false
+        },
+        {
+          "expr": "(= (+ x y) (+ y x))",
+          "id": 11,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(+ x y)",
+          "id": 12,
+          "seen0": "18446744073709551605",
+          "seen1": "10",
+          "visited": true
+        },
+        {
+          "expr": "(+ y x)",
+          "id": 13,
+          "seen0": "18446744073709551605",
+          "seen1": "10",
+          "visited": true
+        },
+        {
+          "expr": "(= (ite b (- x) (* x 2)) (ite b (- x) (* x 2)))",
+          "id": 14,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(ite b (- x) (* x 2))",
+          "id": 15,
+          "seen0": "18446744073709551595",
+          "seen1": "20",
+          "visited": true
+        },
+        {
+          "expr": "b",
+          "id": 16,
+          "seen0": "1",
+          "seen1": "0",
+          "visited": true
+        },
+        {
+          "expr": "(- x)",
+          "id": 17,
+          "seen0": "0",
+          "seen1": "0",
+          "visited": false
+        },
+        {
+          "expr": "(* x 2)",
+          "id": 18,
+          "seen0": "18446744073709551595",
+          "seen1": "20",
+          "visited": true
+        },
+        {
+          "expr": "2",
+          "id": 19,
+          "seen0": "18446744073709551613",
+          "seen1": "2",
+          "visited": true
+        },
+        {
+          "expr": "(= (not b) (= x y))",
+          "id": 20,
+          "seen0": "1",
+          "seen1": "0",
+          "visited": true
+        },
+        {
+          "expr": "(not b)",
+          "id": 21,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(= x y)",
+          "id": 22,
+          "seen0": "1",
+          "seen1": "0",
+          "visited": true
+        }
+      ],
+      "observed": 522,
+      "total": 716
+    },
+    {
+      "covered": 198,
+      "new_covered": 198,
+      "new_observed": 327,
+      "nodes": [
+        {
+          "expr": "(and (or (= x 10) (= x 0) (> y (- 99999999999999999999999)))\n     (= (+ x y) (+ y x))\n     (= (ite b (- x) (* x 2)) (ite b (- x) (* x 2)))\n     (= (not b) (= x y)))",
+          "id": 0,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(and (or (= x 10) (= x 0) (> y (- 99999999999999999999999)))\n     (= (+ x y) (+ y x))\n     (= (ite b (- x) (* x 2)) (ite b (- x) (* x 2)))\n     (= (not b) (= x y)))",
+          "id": 1,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(or (= x 10) (= x 0) (> y (- 99999999999999999999999)))",
+          "id": 2,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(= x 10)",
+          "id": 3,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "x",
+          "id": 4,
+          "seen0": "18446744073709551615",
+          "seen1": "10",
+          "visited": true
+        },
+        {
+          "expr": "10",
+          "id": 5,
+          "seen0": "18446744073709551605",
+          "seen1": "10",
+          "visited": true
+        },
+        {
+          "expr": "(= x 0)",
+          "id": 6,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "0",
+          "id": 7,
+          "seen0": "18446744073709551615",
+          "seen1": "0",
+          "visited": true
+        },
+        {
+          "expr": "(> y (- 99999999999999999999999))",
+          "id": 8,
+          "seen0": "0",
+          "seen1": "0",
+          "visited": false
+        },
+        {
+          "expr": "y",
+          "id": 9,
+          "seen0": "18446744073709551615",
+          "seen1": "18446744073709551615",
+          "visited": true
+        },
+        {
+          "expr": "(- 99999999999999999999999)",
+          "id": 10,
+          "seen0": "0",
+          "seen1": "0",
+          "visited": false
+        },
+        {
+          "expr": "(= (+ x y) (+ y x))",
+          "id": 11,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(+ x y)",
+          "id": 12,
+          "seen0": "18446744073709551605",
+          "seen1": "18446744073709551615",
+          "visited": true
+        },
+        {
+          "expr": "(+ y x)",
+          "id": 13,
+          "seen0": "18446744073709551605",
+          "seen1": "18446744073709551615",
+          "visited": true
+        },
+        {
+          "expr": "(= (ite b (- x) (* x 2)) (ite b (- x) (* x 2)))",
+          "id": 14,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(ite b (- x) (* x 2))",
+          "id": 15,
+          "seen0": "18446744073709551615",
+          "seen1": "20",
+          "visited": true
+        },
+        {
+          "expr": "b",
+          "id": 16,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(- x)",
+          "id": 17,
+          "seen0": "18446744073709551615",
+          "seen1": "0",
+          "visited": true
+        },
+        {
+          "expr": "(* x 2)",
+          "id": 18,
+          "seen0": "18446744073709551595",
+          "seen1": "20",
+          "visited": false
+        },
+        {
+          "expr": "2",
+          "id": 19,
+          "seen0": "18446744073709551613",
+          "seen1": "2",
+          "visited": false
+        },
+        {
+          "expr": "(= (not b) (= x y))",
+          "id": 20,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(not b)",
+          "id": 21,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(= x y)",
+          "id": 22,
+          "seen0": "1",
+          "seen1": "0",
+          "visited": true
+        }
+      ],
+      "observed": 849,
+      "total": 716
+    },
+    {
+      "covered": 385,
+      "new_covered": 187,
+      "new_observed": 252,
+      "nodes": [
+        {
+          "expr": "(and (or (= x 10) (= x 0) (> y (- 99999999999999999999999)))\n     (= (+ x y) (+ y x))\n     (= (ite b (- x) (* x 2)) (ite b (- x) (* x 2)))\n     (= (not b) (= x y)))",
+          "id": 0,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(and (or (= x 10) (= x 0) (> y (- 99999999999999999999999)))\n     (= (+ x y) (+ y x))\n     (= (ite b (- x) (* x 2)) (ite b (- x) (* x 2)))\n     (= (not b) (= x y)))",
+          "id": 1,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(or (= x 10) (= x 0) (> y (- 99999999999999999999999)))",
+          "id": 2,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(= x 10)",
+          "id": 3,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "x",
+          "id": 4,
+          "seen0": "18446744073709551615",
+          "seen1": "18446744073709551615",
+          "visited": true
+        },
+        {
+          "expr": "10",
+          "id": 5,
+          "seen0": "18446744073709551605",
+          "seen1": "10",
+          "visited": true
+        },
+        {
+          "expr": "(= x 0)",
+          "id": 6,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "0",
+          "id": 7,
+          "seen0": "18446744073709551615",
+          "seen1": "0",
+          "visited": true
+        },
+        {
+          "expr": "(> y (- 99999999999999999999999))",
+          "id": 8,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "y",
+          "id": 9,
+          "seen0": "18446744073709551615",
+          "seen1": "18446744073709551615",
+          "visited": true
+        },
+        {
+          "expr": "(- 99999999999999999999999)",
+          "id": 10,
+          "seen0": "200376420520689662",
+          "seen1": "18246367653188861953",
+          "visited": true
+        },
+        {
+          "expr": "(= (+ x y) (+ y x))",
+          "id": 11,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(+ x y)",
+          "id": 12,
+          "seen0": "18446744073709551607",
+          "seen1": "18446744073709551615",
+          "visited": true
+        },
+        {
+          "expr": "(+ y x)",
+          "id": 13,
+          "seen0": "18446744073709551607",
+          "seen1": "18446744073709551615",
+          "visited": true
+        },
+        {
+          "expr": "(= (ite b (- x) (* x 2)) (ite b (- x) (* x 2)))",
+          "id": 14,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(ite b (- x) (* x 2))",
+          "id": 15,
+          "seen0": "18446744073709551615",
+          "seen1": "18446744073709551614",
+          "visited": true
+        },
+        {
+          "expr": "b",
+          "id": 16,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(- x)",
+          "id": 17,
+          "seen0": "18446744073709551615",
+          "seen1": "0",
+          "visited": false
+        },
+        {
+          "expr": "(* x 2)",
+          "id": 18,
+          "seen0": "18446744073709551595",
+          "seen1": "18446744073709551614",
+          "visited": true
+        },
+        {
+          "expr": "2",
+          "id": 19,
+          "seen0": "18446744073709551613",
+          "seen1": "2",
+          "visited": true
+        },
+        {
+          "expr": "(= (not b) (= x y))",
+          "id": 20,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(not b)",
+          "id": 21,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(= x y)",
+          "id": 22,
+          "seen0": "1",
+          "seen1": "0",
+          "visited": true
+        }
+      ],
+      "observed": 1101,
+      "total": 716
+    },
+    {
+      "covered": 387,
+      "new_covered": 2,
+      "new_observed": 2,
+      "nodes": [
+        {
+          "expr": "(and (or (= x 10) (= x 0) (> y (- 99999999999999999999999)))\n     (= (+ x y) (+ y x))\n     (= (ite b (- x) (* x 2)) (ite b (- x) (* x 2)))\n     (= (not b) (= x y)))",
+          "id": 0,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(and (or (= x 10) (= x 0) (> y (- 99999999999999999999999)))\n     (= (+ x y) (+ y x))\n     (= (ite b (- x) (* x 2)) (ite b (- x) (* x 2)))\n     (= (not b) (= x y)))",
+          "id": 1,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(or (= x 10) (= x 0) (> y (- 99999999999999999999999)))",
+          "id": 2,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(= x 10)",
+          "id": 3,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "x",
+          "id": 4,
+          "seen0": "18446744073709551615",
+          "seen1": "18446744073709551615",
+          "visited": true
+        },
+        {
+          "expr": "10",
+          "id": 5,
+          "seen0": "18446744073709551605",
+          "seen1": "10",
+          "visited": true
+        },
+        {
+          "expr": "(= x 0)",
+          "id": 6,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "0",
+          "id": 7,
+          "seen0": "18446744073709551615",
+          "seen1": "0",
+          "visited": true
+        },
+        {
+          "expr": "(> y (- 99999999999999999999999))",
+          "id": 8,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "y",
+          "id": 9,
+          "seen0": "18446744073709551615",
+          "seen1": "18446744073709551615",
+          "visited": true
+        },
+        {
+          "expr": "(- 99999999999999999999999)",
+          "id": 10,
+          "seen0": "200376420520689662",
+          "seen1": "18246367653188861953",
+          "visited": true
+        },
+        {
+          "expr": "(= (+ x y) (+ y x))",
+          "id": 11,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(+ x y)",
+          "id": 12,
+          "seen0": "18446744073709551615",
+          "seen1": "18446744073709551615",
+          "visited": true
+        },
+        {
+          "expr": "(+ y x)",
+          "id": 13,
+          "seen0": "18446744073709551615",
+          "seen1": "18446744073709551615",
+          "visited": true
+        },
+        {
+          "expr": "(= (ite b (- x) (* x 2)) (ite b (- x) (* x 2)))",
+          "id": 14,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(ite b (- x) (* x 2))",
+          "id": 15,
+          "seen0": "18446744073709551615",
+          "seen1": "18446744073709551614",
+          "visited": true
+        },
+        {
+          "expr": "b",
+          "id": 16,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(- x)",
+          "id": 17,
+          "seen0": "18446744073709551615",
+          "seen1": "0",
+          "visited": true
+        },
+        {
+          "expr": "(* x 2)",
+          "id": 18,
+          "seen0": "18446744073709551595",
+          "seen1": "18446744073709551614",
+          "visited": false
+        },
+        {
+          "expr": "2",
+          "id": 19,
+          "seen0": "18446744073709551613",
+          "seen1": "2",
+          "visited": false
+        },
+        {
+          "expr": "(= (not b) (= x y))",
+          "id": 20,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(not b)",
+          "id": 21,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(= x y)",
+          "id": 22,
+          "seen0": "1",
+          "seen1": "0",
+          "visited": true
+        }
+      ],
+      "observed": 1103,
+      "total": 716
+    },
+    {
+      "covered": 389,
+      "new_covered": 2,
+      "new_observed": 2,
+      "nodes": [
+        {
+          "expr": "(and (or (= x 10) (= x 0) (> y (- 99999999999999999999999)))\n     (= (+ x y) (+ y x))\n     (= (ite b (- x) (* x 2)) (ite b (- x) (* x 2)))\n     (= (not b) (= x y)))",
+          "id": 0,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(and (or (= x 10) (= x 0) (> y (- 99999999999999999999999)))\n     (= (+ x y) (+ y x))\n     (= (ite b (- x) (* x 2)) (ite b (- x) (* x 2)))\n     (= (not b) (= x y)))",
+          "id": 1,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(or (= x 10) (= x 0) (> y (- 99999999999999999999999)))",
+          "id": 2,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(= x 10)",
+          "id": 3,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "x",
+          "id": 4,
+          "seen0": "18446744073709551615",
+          "seen1": "18446744073709551615",
+          "visited": true
+        },
+        {
+          "expr": "10",
+          "id": 5,
+          "seen0": "18446744073709551605",
+          "seen1": "10",
+          "visited": true
+        },
+        {
+          "expr": "(= x 0)",
+          "id": 6,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "0",
+          "id": 7,
+          "seen0": "18446744073709551615",
+          "seen1": "0",
+          "visited": true
+        },
+        {
+          "expr": "(> y (- 99999999999999999999999))",
+          "id": 8,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "y",
+          "id": 9,
+          "seen0": "18446744073709551615",
+          "seen1": "18446744073709551615",
+          "visited": true
+        },
+        {
+          "expr": "(- 99999999999999999999999)",
+          "id": 10,
+          "seen0": "200376420520689662",
+          "seen1": "18246367653188861953",
+          "visited": true
+        },
+        {
+          "expr": "(= (+ x y) (+ y x))",
+          "id": 11,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(+ x y)",
+          "id": 12,
+          "seen0": "18446744073709551615",
+          "seen1": "18446744073709551615",
+          "visited": true
+        },
+        {
+          "expr": "(+ y x)",
+          "id": 13,
+          "seen0": "18446744073709551615",
+          "seen1": "18446744073709551615",
+          "visited": true
+        },
+        {
+          "expr": "(= (ite b (- x) (* x 2)) (ite b (- x) (* x 2)))",
+          "id": 14,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(ite b (- x) (* x 2))",
+          "id": 15,
+          "seen0": "18446744073709551615",
+          "seen1": "18446744073709551614",
+          "visited": true
+        },
+        {
+          "expr": "b",
+          "id": 16,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(- x)",
+          "id": 17,
+          "seen0": "18446744073709551615",
+          "seen1": "0",
+          "visited": false
+        },
+        {
+          "expr": "(* x 2)",
+          "id": 18,
+          "seen0": "18446744073709551615",
+          "seen1": "18446744073709551614",
+          "visited": true
+        },
+        {
+          "expr": "2",
+          "id": 19,
+          "seen0": "18446744073709551613",
+          "seen1": "2",
+          "visited": true
+        },
+        {
+          "expr": "(= (not b) (= x y))",
+          "id": 20,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(not b)",
+          "id": 21,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(= x y)",
+          "id": 22,
+          "seen0": "1",
+          "seen1": "0",
+          "visited": true
+        }
+      ],
+      "observed": 1105,
+      "total": 716
+    },
+    {
+      "covered": 452,
+      "new_covered": 63,
+      "new_observed": 63,
+      "nodes": [
+        {
+          "expr": "(and (or (= x 10) (= x 0) (> y (- 99999999999999999999999)))\n     (= (+ x y) (+ y x))\n     (= (ite b (- x) (* x 2)) (ite b (- x) (* x 2)))\n     (= (not b) (= x y)))",
+          "id": 0,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(and (or (= x 10) (= x 0) (> y (- 99999999999999999999999)))\n     (= (+ x y) (+ y x))\n     (= (ite b (- x) (* x 2)) (ite b (- x) (* x 2)))\n     (= (not b) (= x y)))",
+          "id": 1,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(or (= x 10) (= x 0) (> y (- 99999999999999999999999)))",
+          "id": 2,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(= x 10)",
+          "id": 3,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "x",
+          "id": 4,
+          "seen0": "18446744073709551615",
+          "seen1": "18446744073709551615",
+          "visited": true
+        },
+        {
+          "expr": "10",
+          "id": 5,
+          "seen0": "18446744073709551605",
+          "seen1": "10",
+          "visited": true
+        },
+        {
+          "expr": "(= x 0)",
+          "id": 6,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": false
+        },
+        {
+          "expr": "0",
+          "id": 7,
+          "seen0": "18446744073709551615",
+          "seen1": "0",
+          "visited": false
+        },
+        {
+          "expr": "(> y (- 99999999999999999999999))",
+          "id": 8,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": false
+        },
+        {
+          "expr": "y",
+          "id": 9,
+          "seen0": "18446744073709551615",
+          "seen1": "18446744073709551615",
+          "visited": true
+        },
+        {
+          "expr": "(- 99999999999999999999999)",
+          "id": 10,
+          "seen0": "200376420520689662",
+          "seen1": "18246367653188861953",
+          "visited": false
+        },
+        {
+          "expr": "(= (+ x y) (+ y x))",
+          "id": 11,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(+ x y)",
+          "id": 12,
+          "seen0": "18446744073709551615",
+          "seen1": "18446744073709551615",
+          "visited": true
+        },
+        {
+          "expr": "(+ y x)",
+          "id": 13,
+          "seen0": "18446744073709551615",
+          "seen1": "18446744073709551615",
+          "visited": true
+        },
+        {
+          "expr": "(= (ite b (- x) (* x 2)) (ite b (- x) (* x 2)))",
+          "id": 14,
+          "seen0": "0",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(ite b (- x) (* x 2))",
+          "id": 15,
+          "seen0": "18446744073709551615",
+          "seen1": "18446744073709551614",
+          "visited": true
+        },
+        {
+          "expr": "b",
+          "id": 16,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(- x)",
+          "id": 17,
+          "seen0": "18446744073709551615",
+          "seen1": "18446744073709551606",
+          "visited": true
+        },
+        {
+          "expr": "(* x 2)",
+          "id": 18,
+          "seen0": "18446744073709551615",
+          "seen1": "18446744073709551614",
+          "visited": false
+        },
+        {
+          "expr": "2",
+          "id": 19,
+          "seen0": "18446744073709551613",
+          "seen1": "2",
+          "visited": false
+        },
+        {
+          "expr": "(= (not b) (= x y))",
+          "id": 20,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(not b)",
+          "id": 21,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        },
+        {
+          "expr": "(= x y)",
+          "id": 22,
+          "seen0": "1",
+          "seen1": "1",
+          "visited": true
+        }
+      ],
+      "observed": 1168,
+      "total": 716
+    }
+  ],
+  "targets_checked": [
+    1432,
+    1432,
+    1432,
+    1432,
+    1432,
+    1432
+  ]
+}

@@ -1,0 +1,1 @@
+(declare-const x Int)(declare-const y Int)(assert (and (or (= x 0) (= x 10) (= x 20)) (or (= y 0) (= y 10) (= y 20))))

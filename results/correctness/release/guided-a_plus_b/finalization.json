@@ -1,0 +1,63 @@
+{
+  "formal_count": 5,
+  "omitted": [
+    {
+      "raw_index": 1,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 2,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 3,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 5,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 6,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 7,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 9,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 10,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 11,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 13,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 14,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 15,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 16,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 17,
+      "reason": "duplicate"
+    }
+  ],
+  "raw_sha256": "c6104c075289c4919ee52b46e1b1496110f8f79548c67f2d1896c03b8f97ecd3",
+  "formal_sha256": "de468c24e3667b1441733e7b0a8d5f698af496950a24183611c5e84a91b9d740"
+}

@@ -1,0 +1,223 @@
+--- a/z3/src/solver/solver.h
++++ b/z3/src/solver/solver.h
+@@ -22,6 +22,7 @@
+ #include "solver/check_sat_result.h"
+ #include "solver/progress_callback.h"
+ #include "util/params.h"
++#include "solver/coverage_guidance.h"
+ 
+ class solver;
+ class model_converter;
+@@ -53,6 +54,8 @@
+     params_ref  m_params;
+     symbol      m_cancel_backup_file;
+ public:
++    std::shared_ptr<coverage_guidance> m_coverage;
++    virtual void set_coverage(std::shared_ptr<coverage_guidance> p) { m_coverage=std::move(p); }
+     solver(ast_manager& m): check_sat_result(m) {}
+ 
+     /**
+--- a/z3/src/solver/combined_solver.cpp
++++ b/z3/src/solver/combined_solver.cpp
+@@ -149,6 +149,9 @@
+         return r;
+     }
+ 
++    void set_coverage(std::shared_ptr<coverage_guidance> p) override {
++        solver::set_coverage(p); m_solver2->set_coverage(p);
++    }
+     void set_phase(expr* e) override { m_solver1->set_phase(e); m_solver2->set_phase(e); }
+     solver::phase* get_phase() override { auto* p = m_solver1->get_phase(); if (!p) p = m_solver2->get_phase(); return p; }
+     void set_phase(solver::phase* p) override { m_solver1->set_phase(p); m_solver2->set_phase(p); }
+@@ -267,6 +270,7 @@
+         
+         IF_VERBOSE(PS_VB_LVL, verbose_stream() << "(combined-solver \"using solver 1\")\n";);
+         m_use_solver1_results = true;
++        if(m_coverage) { m_coverage->unsupported++; m_coverage->fallback += m_coverage->backend==2; m_coverage->backend=1; }
+         round1_route("tactic");
+         return m_solver1->check_sat_core(num_assumptions, assumptions);
+     }
+--- a/z3/src/smt/smt_context.h
++++ b/z3/src/smt/smt_context.h
+@@ -17,6 +17,7 @@
+ 
+ --*/
+ #pragma once
++#include "solver/coverage_guidance.h"
+ #include "ast/quantifier_stat.h"
+ #include "smt/smt_clause.h"
+ #include "smt/smt_setup.h"
+@@ -106,6 +107,12 @@
+         scoped_ptr<quantifier_manager>   m_qmanager;
+         scoped_ptr<model_generator>      m_model_generator;
+         scoped_ptr<relevancy_propagator> m_relevancy_propagator;
++        std::shared_ptr<coverage_guidance> m_coverage;
++        expr_ref_vector m_coverage_registry{m};
++        expr_ref_vector m_coverage_proxies{m};
++        std::unordered_set<expr*> m_coverage_proxy_set;
++        void prepare_coverage_targets();
++        bool coverage_decide(bool_var& var, bool& is_pos, bool ordinary);
+         theory_user_propagator*          m_user_propagator;
+         random_gen                  m_random;
+         bool                        m_flushing; // (debug support) true when flushing
+@@ -725,6 +732,7 @@
+         //
+         // -----------------------------------
+     public:
++        void set_coverage(std::shared_ptr<coverage_guidance> p) { m_coverage=std::move(p); }
+         bool b_internalized(expr const * n) const {
+             return get_bool_var_of_id_option(n->get_id()) != null_bool_var;
+         }
+--- a/z3/src/smt/smt_context.cpp
++++ b/z3/src/smt/smt_context.cpp
+@@ -1799,6 +1799,8 @@
+    \brief Execute next case split, return false if there are no
+    more case splits to be performed.
+ */
++#include "smt/z3_broker.inc"
++
+ bool context::decide() {
+     if (at_search_level() && !m_tmp_clauses.empty()) {
+         switch (decide_clause()) {
+@@ -1813,14 +1815,21 @@
+     bool_var var;
+     bool is_pos;
+     bool used_queue = false;
++    bool coverage_arbitrated = false;
+ 
+     if (!has_split_candidate(var, is_pos)) {
+         lbool phase = l_undef;
+         m_case_split_queue->next_case_split(var, phase);
+         used_queue = true;
+         if (var == null_bool_var) {
+-            push_trail(value_trail(m_has_case_split, false));
+-            return false;
++            is_pos=true;
++            coverage_decide(var,is_pos,true);
++            coverage_arbitrated=true;
++            if (var == null_bool_var) {
++                push_trail(value_trail(m_has_case_split, false));
++                return false;
++            }
++            used_queue=false; // already arbitrated, no native queue entry removed
+         }
+ 
+         TRACE_CODE({
+@@ -1834,9 +1843,10 @@
+                           tout << "\n";);
+                 } });
+ 
+-        is_pos = guess(var, phase);
+-    }
+-
++        if (used_queue) is_pos = guess(var, phase);
++    }
++
++    if(m_coverage && !used_queue && !coverage_arbitrated)++m_coverage->special;
+     m_stats.m_num_decisions++;
+ 
+     push_scope();
+@@ -1849,7 +1859,13 @@
+     bool_var original_choice = var;
+ 
+     if (decide_user_interference(var, is_pos)) {
++        if(m_coverage)++m_coverage->special;
+         if (used_queue)
++            m_case_split_queue->unassign_var_eh(original_choice);
++        l = literal(var, false);
++    }
++    else if (used_queue) {
++        if (coverage_decide(var, is_pos, true))
+             m_case_split_queue->unassign_var_eh(original_choice);
+         l = literal(var, false);
+     }
+@@ -3651,6 +3667,7 @@
+         expr_ref_vector asms(m, num_assumptions, assumptions);
+         try {
+             internalize_assertions();
++            prepare_coverage_targets();
+             add_theory_assumptions(asms);
+             TRACE("unsat_core_bug", tout << asms << '\n';);
+             init_assumptions(asms);
+@@ -3676,6 +3693,7 @@
+         expr_ref_vector asms(cube);
+         try {
+             internalize_assertions();
++            prepare_coverage_targets();
+             add_theory_assumptions(asms);
+             // introducing proxies: if (!validate_assumptions(asms)) return l_undef;
+             for (auto const& clause : clauses)
+--- a/z3/src/smt/smt_solver.cpp
++++ b/z3/src/smt/smt_solver.cpp
+@@ -23,6 +23,7 @@
+ #include "ast/ast_pp.h"
+ #include "ast/func_decl_dependencies.h"
+ #include "smt/smt_kernel.h"
++#include "smt/smt_context.h"
+ #include "smt/params/smt_params.h"
+ #include "smt/params/smt_params_helper.hpp"
+ #include "solver/solver_na2as.h"
+@@ -197,6 +198,9 @@
+ 
+         lbool check_sat_core2(unsigned num_assumptions, expr * const * assumptions) override {
+             TRACE("solver_na2as", tout << "smt_solver::check_sat_core: " << num_assumptions << "\n";);
++            m_context.get_context().set_coverage(m_coverage);
++            struct clear_on_exit { smt::context& c; ~clear_on_exit(){c.set_coverage(nullptr);} } guard{m_context.get_context()};
++            if(m_coverage) m_coverage->backend=2;
+             return m_context.check(num_assumptions, assumptions);
+         }
+ 
+--- a/z3/src/api/api_solver.cpp
++++ b/z3/src/api/api_solver.cpp
+@@ -17,6 +17,7 @@
+ 
+ --*/
+ #include<thread>
++#include "api/z3_guidance.h"
+ #include "util/scoped_ctrl_c.h"
+ #include "util/cancel_eh.h"
+ #include "util/file_path.h"
+@@ -161,6 +162,43 @@
+     }
+ 
+ 
++    void Z3_API Z3_solver_set_coverage_guidance(Z3_context c,Z3_solver s,
++        unsigned mode,unsigned epoch,unsigned version,
++        unsigned nt,Z3_ast const preds[],unsigned const ids[],
++        unsigned nh,Z3_ast const atoms[],unsigned const phases[],unsigned const indices[]) {
++        Z3_TRY;
++        RESET_ERROR_CODE();
++        if(mode>3 || (mode==0 && (nt||nh)) || nt>8 || (nt && (!preds || !ids)) ||
++           (nh && (!atoms || !phases || !indices))) { SET_ERROR_CODE(Z3_INVALID_ARG,nullptr);return; }
++        auto p=std::make_shared<coverage_guidance>(mk_c(c)->m(),mode,epoch,version);
++        for(unsigned i=0;i<nt;++i) {
++            if(preds[i] && (!is_expr(to_ast(preds[i])) || !mk_c(c)->m().is_bool(to_expr(preds[i])))) {SET_ERROR_CODE(Z3_INVALID_ARG,nullptr);return;}
++            p->predicates.push_back(preds[i]?to_expr(preds[i]):nullptr);p->ids.push_back(ids[i]);
++        }
++        std::set<std::tuple<expr*,unsigned,unsigned>> unique;
++        for(unsigned i=0;i<nh;++i) {
++            if(!atoms[i] || !is_expr(to_ast(atoms[i])) || !mk_c(c)->m().is_bool(to_expr(atoms[i])) || phases[i]>1 || indices[i]>=nt) {SET_ERROR_CODE(Z3_INVALID_ARG,nullptr);return;}
++            if(!unique.emplace(to_expr(atoms[i]),phases[i],indices[i]).second)continue;
++            p->atoms.push_back(to_expr(atoms[i]));p->phases.push_back(phases[i]);p->indices.push_back(indices[i]);
++        }
++        init_solver(c,s);
++        to_solver(s)->m_solver->set_coverage(p);
++        Z3_CATCH;
++    }
++    void Z3_API Z3_solver_clear_coverage_guidance(Z3_context c,Z3_solver s) {
++        Z3_TRY;
++        RESET_ERROR_CODE();
++        if(to_solver(s)->m_solver)to_solver(s)->m_solver->set_coverage(nullptr);
++        Z3_CATCH;
++    }
++    Z3_string Z3_API Z3_solver_get_coverage_guidance_stats(Z3_context c,Z3_solver s) {
++        Z3_TRY;
++        RESET_ERROR_CODE();
++        auto p=to_solver(s)->m_solver?to_solver(s)->m_solver->m_coverage:nullptr;
++        return mk_c(c)->mk_external_string(p?p->json():"{}");
++        Z3_CATCH_RETURN("");
++    }
++
+     static void init_solver_log(Z3_context c, Z3_solver s) {
+         static std::thread::id g_thread_id = std::this_thread::get_id();
+         static bool g_is_threaded = false;

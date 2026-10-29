@@ -6,4 +6,4 @@
 A 只调整原生普通决策原子相位；B 的谓词在内核作为定义内部化，绝不作为必真 assertion 或 assumption。
 安装元数据不切换 combined solver；tactic 后端不支持指导并记录。
 
-正式运行前必须通过正确性门；目前处于开发阶段，尚未启动正式基线。
+正式运行前的正确性门已通过，证据见 results/correctness/summary.json；ASan/UBSan 含已复现的上游精确泄漏例外。此提交尚未启动正式基线。

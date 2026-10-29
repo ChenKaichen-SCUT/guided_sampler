@@ -1,0 +1,71 @@
+{
+  "formal_count": 3,
+  "omitted": [
+    {
+      "raw_index": 1,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 2,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 3,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 5,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 6,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 7,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 8,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 9,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 10,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 11,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 12,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 13,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 14,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 15,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 16,
+      "reason": "duplicate"
+    },
+    {
+      "raw_index": 17,
+      "reason": "duplicate"
+    }
+  ],
+  "raw_sha256": "1880d7b857aa1daf81d6b07ad512a635a82ba4ca79e2f0d6cc50664a93c803a4",
+  "formal_sha256": "6c25589c58f00285fb12808994c76bd4a85304572d156b46fc8ff98c93539751"
+}

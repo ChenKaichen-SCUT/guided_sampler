@@ -1,0 +1,33 @@
+make: Entering directory '/tmp/guided_sampler_round1_worktrees/baseline/HighDiv'
+g++ -I/mnt/Space1/SMT_Sampling/guided_sampler/deps/baseline/include -I/mnt/Space1/SMT_Sampling/guided_sampler/include -O3 -DNDEBUG -std=c++20 -Wall -MMD -MP -c src/main/main.cpp -o build/main/main.o
+g++ -I/mnt/Space1/SMT_Sampling/guided_sampler/deps/baseline/include -I/mnt/Space1/SMT_Sampling/guided_sampler/include -O3 -DNDEBUG -std=c++20 -Wall -MMD -MP -c src/sampler/liasampler.cpp -o build/sampler/liasampler.o
+In file included from src/main/../sampler/liasampler.h:7,
+                 from src/main/main.cpp:1:
+src/main/../sampler/sampler.h: In constructor ‘sampler::Sampler::Sampler(z3::context*, std::string, std::string, size_t, double)’:
+src/main/../sampler/sampler.h:21:18: warning: ‘sampler::Sampler::c’ will be initialized after [-Wreorder]
+   21 |     z3::context& c;
+      |                  ^
+src/main/../sampler/sampler.h:14:17: warning:   ‘std::string sampler::Sampler::smtFilePath’ [-Wreorder]
+   14 |     std::string smtFilePath;
+      |                 ^~~~~~~~~~~
+In file included from src/main/../sampler/liasampler.h:7,
+                 from src/main/main.cpp:1:
+src/main/../sampler/sampler.h:44:5: warning:   when initialized here [-Wreorder]
+   44 |     Sampler(z3::context* _c, std::string _smtFilePath, std::string _samplesFileDir, size_t _maxNumSamples, double _maxTimeLimit)
+      |     ^~~~~~~
+In file included from src/sampler/liasampler.h:7,
+                 from src/sampler/liasampler.cpp:1:
+src/sampler/sampler.h: In constructor ‘sampler::Sampler::Sampler(z3::context*, std::string, std::string, size_t, double)’:
+src/sampler/sampler.h:21:18: warning: ‘sampler::Sampler::c’ will be initialized after [-Wreorder]
+   21 |     z3::context& c;
+      |                  ^
+src/sampler/sampler.h:14:17: warning:   ‘std::string sampler::Sampler::smtFilePath’ [-Wreorder]
+   14 |     std::string smtFilePath;
+      |                 ^~~~~~~~~~~
+In file included from src/sampler/liasampler.h:7,
+                 from src/sampler/liasampler.cpp:1:
+src/sampler/sampler.h:44:5: warning:   when initialized here [-Wreorder]
+   44 |     Sampler(z3::context* _c, std::string _smtFilePath, std::string _samplesFileDir, size_t _maxNumSamples, double _maxTimeLimit)
+      |     ^~~~~~~
+g++ -O3 -DNDEBUG -std=c++20 -Wall build/main/main.o build/sampler/liasampler.o build/sampler/sampler.o -L/mnt/Space1/SMT_Sampling/guided_sampler/deps/baseline/lib -Wl,-rpath,/mnt/Space1/SMT_Sampling/guided_sampler/deps/baseline/lib -lz3 -o highdiv
+make: Leaving directory '/tmp/guided_sampler_round1_worktrees/baseline/HighDiv'

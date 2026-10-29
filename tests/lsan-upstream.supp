@@ -1,0 +1,5 @@
+# Fixed HighDiv/Z3 source: math/lp/dioph_eq.cpp undo_fixed_column owns an
+# unused mpq in a region-allocated trail whose undo() does not destroy it.
+# Native no-guidance reproducer: tests/upstream_leak.cpp (large modulus).
+# Do not suppress generic allocators, SMT frames, or any guided module.
+leak:lp::dioph_eq::imp::undo_fixed_column::undo_fixed_column

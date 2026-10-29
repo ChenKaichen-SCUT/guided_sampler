@@ -1,0 +1,133 @@
+{
+  "passed": true,
+  "tests": [
+    {
+      "variant": "baseline",
+      "case": "zero_count",
+      "summary": {
+        "coverage": null,
+        "elapsed": 0.014046637,
+        "formal_count": 0,
+        "guidance_cost": 0.0,
+        "queries": 0,
+        "raw_count": 0,
+        "sample_limit": 0,
+        "status": "complete100",
+        "total": null,
+        "wall_limit": 2.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "case": "zero_time",
+      "summary": {
+        "coverage": null,
+        "elapsed": 0.013939597,
+        "formal_count": 0,
+        "guidance_cost": 0.0,
+        "queries": 0,
+        "raw_count": 0,
+        "sample_limit": null,
+        "status": "deadline",
+        "total": null,
+        "wall_limit": 0.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "case": "unlimited",
+      "summary": {
+        "coverage": null,
+        "elapsed": 0.063828273,
+        "formal_count": 1,
+        "guidance_cost": 0.0,
+        "queries": 4,
+        "raw_count": 3,
+        "sample_limit": null,
+        "status": "finished",
+        "total": null,
+        "wall_limit": 2.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "case": "one_model",
+      "summary": {
+        "coverage": null,
+        "elapsed": 0.044585835,
+        "formal_count": 1,
+        "guidance_cost": 0.0,
+        "queries": 1,
+        "raw_count": 1,
+        "sample_limit": 1,
+        "status": "complete100",
+        "total": null,
+        "wall_limit": 2.0
+      }
+    },
+    {
+      "variant": "guided",
+      "case": "zero_count",
+      "summary": {
+        "coverage": null,
+        "elapsed": 0.013784429,
+        "formal_count": 0,
+        "guidance_cost": 0.0,
+        "queries": 0,
+        "raw_count": 0,
+        "sample_limit": 0,
+        "status": "complete100",
+        "total": null,
+        "wall_limit": 2.0
+      }
+    },
+    {
+      "variant": "guided",
+      "case": "zero_time",
+      "summary": {
+        "coverage": null,
+        "elapsed": 0.010002204,
+        "formal_count": 0,
+        "guidance_cost": 0.0,
+        "queries": 0,
+        "raw_count": 0,
+        "sample_limit": null,
+        "status": "deadline",
+        "total": null,
+        "wall_limit": 0.0
+      }
+    },
+    {
+      "variant": "guided",
+      "case": "unlimited",
+      "summary": {
+        "coverage": null,
+        "elapsed": 0.065803959,
+        "formal_count": 1,
+        "guidance_cost": 0.0,
+        "queries": 4,
+        "raw_count": 3,
+        "sample_limit": null,
+        "status": "finished",
+        "total": null,
+        "wall_limit": 2.0
+      }
+    },
+    {
+      "variant": "guided",
+      "case": "one_model",
+      "summary": {
+        "coverage": null,
+        "elapsed": 0.056143336,
+        "formal_count": 1,
+        "guidance_cost": 0.0,
+        "queries": 1,
+        "raw_count": 1,
+        "sample_limit": 1,
+        "status": "complete100",
+        "total": null,
+        "wall_limit": 2.0
+      }
+    }
+  ]
+}

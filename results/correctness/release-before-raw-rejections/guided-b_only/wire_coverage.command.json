@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/mnt/Space1/SMT_Sampling/guided_sampler/deps/baseline/bin/python3",
+    "/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/baseline/HighDiv/my_scripts/calc_metric.py",
+    "-f",
+    "/mnt/Space1/SMT_Sampling/guided_sampler/results/correctness/release/host.smt2",
+    "-s",
+    "/mnt/Space1/SMT_Sampling/guided_sampler/results/correctness/release/guided-b_only/samples.formal",
+    "-m",
+    "wire_coverage"
+  ],
+  "exit_code": 0,
+  "seconds": 0.23718250999809243,
+  "metric_sha256": "a51cdd069321cd32becf8eeb5e606cb71fbab16ae3e0231f68963eaadf493f04",
+  "input_sha256": "072b20fd625a99d0e383611a7c89dfaaf0fe3d50e5d4b6098e6c64d99ab0add0",
+  "samples_sha256": "e6faf0e641f7649ba50c87ec889c35a6a373ad0ac106be1cec6584ba798c115b"
+}

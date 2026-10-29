@@ -1,0 +1,83 @@
+--- a/z3/src/smt/smt_context.cpp
++++ b/z3/src/smt/smt_context.cpp
+@@ -1857,6 +1857,15 @@
+     if (!is_pos) l.neg();
+     TRACE("decide", tout << "case split " << l << "\n"
+                          << "activity: " << get_activity(var) << "\n";);
++// Test-only observational trace. Off unless explicitly requested by tests.
++// No RNG use and no solver mutation. Applied identically to both libraries.
++{
++    static const char* path = std::getenv("HIGHDIV_NATIVE_DECISION_TRACE");
++    if (path && *path) {
++        std::ofstream out(path, std::ios::app);
++        out << m_scope_lvl << ' ' << var << ' ' << is_pos << '\n';
++    }
++}
+     assign(l, b_justification::mk_axiom(), true);
+     return true;
+ }
+--- a/z3/src/solver/combined_solver.cpp
++++ b/z3/src/solver/combined_solver.cpp
+@@ -1,3 +1,5 @@
++#include <fstream>
++#include <cstdlib>
+ /*++
+ Copyright (c) 2012 Microsoft Corporation
+ 
+@@ -44,6 +46,17 @@
+        - parameter ignore_solver1==false
+ */
+ class combined_solver : public solver {
++    unsigned m_round1_route_epoch = 0;
++    void round1_route(char const* backend) {
++        auto path=std::getenv("HIGHDIV_ROUTE_LOG");
++        if (!path || !*path) return;
++        std::ofstream out(path,std::ios::app);
++        out << "{\"check_epoch\":" << m_round1_route_epoch
++            << ",\"solver\":" << reinterpret_cast<uintptr_t>(this)
++            << ",\"backend\":\"" << backend << "\"}\n";
++        out.flush();
++    }
++
+ public:
+     // Behavior when the incremental solver returns unknown.
+     enum inc_unknown_behavior {
+@@ -209,6 +222,7 @@
+     }
+ 
+     lbool check_sat_core(unsigned num_assumptions, expr * const * assumptions) override {
++        ++m_round1_route_epoch;
+         m_check_sat_executed  = true;        
+         m_use_solver1_results = false;
+ 
+@@ -217,12 +231,14 @@
+             m_ignore_solver1)  {
+             // must use incremental solver
+             switch_inc_mode();
++            round1_route("smt");
+             return m_solver2->check_sat_core(num_assumptions, assumptions);
+         }
+         
+         if (m_inc_mode) {
+             if (m_inc_timeout == UINT_MAX) {
+                 IF_VERBOSE(PS_VB_LVL, verbose_stream() << "(combined-solver \"using solver 2 (without a timeout)\")\n";);            
++                round1_route("smt");
+                 lbool r = m_solver2->check_sat_core(num_assumptions, assumptions);
+                 if (r != l_undef || !use_solver1_when_undef() || !get_manager().inc()) {
+                     return r;
+@@ -234,6 +250,7 @@
+                 lbool r = l_undef;
+                 try {
+                     scoped_timer timer(m_inc_timeout, &eh);
++                    round1_route("smt");
+                     r = m_solver2->check_sat_core(num_assumptions, assumptions);
+                 }
+                 catch (z3_exception&) {
+@@ -250,6 +267,7 @@
+         
+         IF_VERBOSE(PS_VB_LVL, verbose_stream() << "(combined-solver \"using solver 1\")\n";);
+         m_use_solver1_results = true;
++        round1_route("tactic");
+         return m_solver1->check_sat_core(num_assumptions, assumptions);
+     }
+     

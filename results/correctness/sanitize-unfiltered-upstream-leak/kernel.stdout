@@ -1,0 +1,361 @@
+{
+  "passed": true,
+  "tests": [
+    {
+      "stats": {
+        "a_changed": 0,
+        "a_live": 0,
+        "a_same": 0,
+        "a_used": 0,
+        "b_internalized": 0,
+        "b_relevant": 0,
+        "b_used": 0,
+        "backend": 1,
+        "broker_seconds": 0,
+        "cap": 0,
+        "coverage_version": 1,
+        "deferred": 0,
+        "epoch": 1,
+        "events": [],
+        "fallback": 0,
+        "native_registered_targets": 0,
+        "ordinary": 0,
+        "prepare_seconds": 0,
+        "propagated": 0,
+        "special": 0,
+        "unsupported": 1
+      },
+      "test": "metadata_route"
+    },
+    {
+      "stats": {
+        "a_changed": 0,
+        "a_live": 0,
+        "a_same": 0,
+        "a_used": 0,
+        "b_internalized": 1,
+        "b_relevant": 1,
+        "b_used": 1,
+        "backend": 2,
+        "broker_seconds": 0.000468366,
+        "cap": 0,
+        "coverage_version": 1,
+        "deferred": 0,
+        "epoch": 2,
+        "events": [
+          {
+            "actual_phase": 1,
+            "actual_var": 3,
+            "level": 2,
+            "native_phase": 0,
+            "native_var": 3,
+            "ordinary": 1,
+            "source": "B",
+            "targets": [
+              100
+            ]
+          }
+        ],
+        "fallback": 0,
+        "native_registered_targets": 1,
+        "ordinary": 2,
+        "prepare_seconds": 0.00753759,
+        "propagated": 0,
+        "special": 0,
+        "unsupported": 0
+      },
+      "test": "bounded_B"
+    },
+    {
+      "stats": {
+        "a_changed": 0,
+        "a_live": 0,
+        "a_same": 0,
+        "a_used": 0,
+        "b_internalized": 1,
+        "b_relevant": 1,
+        "b_used": 1,
+        "backend": 2,
+        "broker_seconds": 1.2809e-05,
+        "cap": 0,
+        "coverage_version": 1,
+        "deferred": 0,
+        "epoch": 1,
+        "events": [
+          {
+            "actual_phase": 1,
+            "actual_var": 2,
+            "level": 2,
+            "native_phase": 0,
+            "native_var": 2,
+            "ordinary": 1,
+            "source": "B",
+            "targets": [
+              100
+            ]
+          }
+        ],
+        "fallback": 0,
+        "native_registered_targets": 1,
+        "ordinary": 3,
+        "prepare_seconds": 0.000446189,
+        "propagated": 0,
+        "special": 0,
+        "unsupported": 0
+      },
+      "test": "infeasible_B"
+    },
+    {
+      "stats": {
+        "a_changed": 0,
+        "a_live": 0,
+        "a_same": 0,
+        "a_used": 0,
+        "b_internalized": 2,
+        "b_relevant": 2,
+        "b_used": 2,
+        "backend": 2,
+        "broker_seconds": 3.0191e-05,
+        "cap": 0,
+        "coverage_version": 1,
+        "deferred": 0,
+        "epoch": 1,
+        "events": [
+          {
+            "actual_phase": 1,
+            "actual_var": 3,
+            "level": 2,
+            "native_phase": 0,
+            "native_var": 9,
+            "ordinary": 1,
+            "source": "B",
+            "targets": [
+              100
+            ]
+          },
+          {
+            "actual_phase": 1,
+            "actual_var": 9,
+            "level": 3,
+            "native_phase": 0,
+            "native_var": 9,
+            "ordinary": 2,
+            "source": "B",
+            "targets": [
+              101
+            ]
+          }
+        ],
+        "fallback": 0,
+        "native_registered_targets": 5,
+        "ordinary": 12,
+        "prepare_seconds": 0.000645066,
+        "propagated": 0,
+        "special": 0,
+        "unsupported": 0
+      },
+      "test": "incompatible_targets"
+    },
+    {
+      "stats": {
+        "a_changed": 0,
+        "a_live": 0,
+        "a_same": 0,
+        "a_used": 0,
+        "b_internalized": 1,
+        "b_relevant": 1,
+        "b_used": 1,
+        "backend": 2,
+        "broker_seconds": 1.8515e-05,
+        "cap": 0,
+        "coverage_version": 1,
+        "deferred": 0,
+        "epoch": 2,
+        "events": [
+          {
+            "actual_phase": 1,
+            "actual_var": 3,
+            "level": 1,
+            "native_phase": 0,
+            "native_var": 3,
+            "ordinary": 1,
+            "source": "B",
+            "targets": [
+              100
+            ]
+          }
+        ],
+        "fallback": 0,
+        "native_registered_targets": 2,
+        "ordinary": 6,
+        "prepare_seconds": 3.037e-06,
+        "propagated": 0,
+        "special": 0,
+        "unsupported": 0
+      },
+      "test": "fixed_then_released"
+    },
+    {
+      "stats": {
+        "a_changed": 1,
+        "a_live": 1,
+        "a_same": 0,
+        "a_used": 1,
+        "b_internalized": 0,
+        "b_relevant": 0,
+        "b_used": 0,
+        "backend": 2,
+        "broker_seconds": 1.5168e-05,
+        "cap": 0,
+        "coverage_version": 1,
+        "deferred": 0,
+        "epoch": 1,
+        "events": [
+          {
+            "actual_phase": 1,
+            "actual_var": 2,
+            "level": 2,
+            "native_phase": 0,
+            "native_var": 2,
+            "ordinary": 1,
+            "source": "A",
+            "targets": [
+              100
+            ]
+          }
+        ],
+        "fallback": 0,
+        "native_registered_targets": 0,
+        "ordinary": 3,
+        "prepare_seconds": 1.079e-06,
+        "propagated": 0,
+        "special": 0,
+        "unsupported": 0
+      },
+      "test": "A_phase"
+    },
+    {
+      "assignments": 12,
+      "test": "all_modes_projection"
+    },
+    {
+      "pass": true,
+      "test": "pop_reset_solver_isolation"
+    },
+    {
+      "stats": {
+        "a_changed": 0,
+        "a_live": 0,
+        "a_same": 0,
+        "a_used": 0,
+        "b_internalized": 1,
+        "b_relevant": 1,
+        "b_used": 1,
+        "backend": 2,
+        "broker_seconds": 1.2281e-05,
+        "cap": 0,
+        "coverage_version": 1,
+        "deferred": 0,
+        "epoch": 2,
+        "events": [
+          {
+            "actual_phase": 1,
+            "actual_var": 9,
+            "level": 2,
+            "native_phase": 0,
+            "native_var": 9,
+            "ordinary": 1,
+            "source": "B",
+            "targets": [
+              100
+            ]
+          }
+        ],
+        "fallback": 0,
+        "native_registered_targets": 2,
+        "ordinary": 3,
+        "prepare_seconds": 0.000403607,
+        "propagated": 0,
+        "special": 0,
+        "unsupported": 0
+      },
+      "test": "unknown_reuse"
+    },
+    {
+      "stats": {
+        "a_changed": 0,
+        "a_live": 0,
+        "a_same": 0,
+        "a_used": 0,
+        "b_internalized": 8,
+        "b_relevant": 8,
+        "b_used": 4,
+        "backend": 2,
+        "broker_seconds": 2.396e-05,
+        "cap": 0,
+        "coverage_version": 1,
+        "deferred": 0,
+        "epoch": 5,
+        "events": [
+          {
+            "actual_phase": 1,
+            "actual_var": 182,
+            "level": 2,
+            "native_phase": 0,
+            "native_var": 7,
+            "ordinary": 1,
+            "source": "B",
+            "targets": [
+              100
+            ]
+          },
+          {
+            "actual_phase": 1,
+            "actual_var": 183,
+            "level": 3,
+            "native_phase": 0,
+            "native_var": 7,
+            "ordinary": 2,
+            "source": "B",
+            "targets": [
+              101
+            ]
+          },
+          {
+            "actual_phase": 1,
+            "actual_var": 184,
+            "level": 4,
+            "native_phase": 0,
+            "native_var": 7,
+            "ordinary": 3,
+            "source": "B",
+            "targets": [
+              102
+            ]
+          },
+          {
+            "actual_phase": 1,
+            "actual_var": 185,
+            "level": 5,
+            "native_phase": 0,
+            "native_var": 7,
+            "ordinary": 4,
+            "source": "B",
+            "targets": [
+              103
+            ]
+          }
+        ],
+        "fallback": 0,
+        "native_registered_targets": 4,
+        "ordinary": 100,
+        "prepare_seconds": 5.836e-06,
+        "propagated": 0,
+        "special": 0,
+        "unsupported": 0
+      },
+      "test": "quota_and_window_exhaustion"
+    },
+    {
+      "stats": {
+        "a_changed": 0,

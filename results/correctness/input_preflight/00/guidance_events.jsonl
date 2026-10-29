@@ -1,0 +1,10 @@
+{"explicit_cost_seconds":0.004032063,"kind":"check_end","stats":{}}
+{"a_static_match":0,"bit":0,"coverage_version":2,"desired":false,"encoding":"created","epoch":3,"node":0,"sort":"Bool","target_id":0}
+{"a_static_match":1,"bit":0,"coverage_version":2,"desired":false,"encoding":"created","epoch":3,"node":1,"sort":"Bool","target_id":128}
+{"a_static_match":0,"bit":0,"coverage_version":2,"desired":true,"encoding":"created","epoch":3,"node":2,"sort":"Int","target_id":257}
+{"a_static_match":0,"bit":2,"coverage_version":2,"desired":true,"encoding":"slice_incomplete","epoch":3,"node":2,"sort":"Int","target_id":261}
+{"a_static_match":0,"bit":3,"coverage_version":2,"desired":true,"encoding":"slice_incomplete","epoch":3,"node":2,"sort":"Int","target_id":263}
+{"a_static_match":0,"bit":6,"coverage_version":2,"desired":true,"encoding":"slice_incomplete","epoch":3,"node":2,"sort":"Int","target_id":269}
+{"a_static_match":0,"bit":7,"coverage_version":2,"desired":true,"encoding":"slice_incomplete","epoch":3,"node":2,"sort":"Int","target_id":271}
+{"a_static_match":0,"bit":21,"coverage_version":2,"desired":true,"encoding":"slice_incomplete","epoch":3,"node":2,"sort":"Int","target_id":299}
+{"explicit_cost_seconds":0.015453137999999998,"kind":"check_end","stats":{"a_changed":0,"a_live":1,"a_same":0,"a_used":0,"b_internalized":2,"b_relevant":2,"b_used":2,"backend":2,"broker_seconds":1.513e-05,"cap":0,"coverage_version":2,"deferred":0,"epoch":3,"events":[{"actual_phase":1,"actual_var":132,"level":2,"native_phase":0,"native_var":265,"ordinary":1,"source":"B","targets":[0]},{"actual_phase":1,"actual_var":265,"level":3,"native_phase":0,"native_var":264,"ordinary":2,"source":"B","targets":[257]}],"fallback":0,"native_registered_targets":5,"ordinary":37,"prepare_seconds":0.000205821,"propagated":0,"special":0,"unsupported":0}}

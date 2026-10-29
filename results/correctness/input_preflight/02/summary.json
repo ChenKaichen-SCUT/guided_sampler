@@ -1,0 +1,12 @@
+{
+  "coverage": 0,
+  "elapsed": 2.598642428,
+  "formal_count": 1,
+  "guidance_cost": 0.061122886,
+  "queries": 3,
+  "raw_count": 1,
+  "sample_limit": null,
+  "status": "finished",
+  "total": 104639,
+  "wall_limit": 3.0
+}

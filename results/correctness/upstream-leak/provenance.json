@@ -1,0 +1,11 @@
+{
+  "upstream_commit": "f2c6e1756b13281d96cbf90a8bd940129e56cce4",
+  "file": "z3/src/math/lp/dioph_eq.cpp",
+  "sha256": "c432d125297799255b5993652309981190a4746345078c8364b9fe155ffcf01e",
+  "native_reproducer_calls_guidance": false,
+  "large_modulus": "18446744073709551616",
+  "small_modulus": "16",
+  "large_leak_bytes": 32,
+  "small_leak_bytes": 0,
+  "scope": "Only undo_fixed_column copy constructor; detect_leaks remains enabled"
+}

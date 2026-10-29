@@ -1,0 +1,1 @@
+(declare-const x Int)(declare-const y Int)(assert (and (<= 0 x) (<= x 30) (<= 0 y) (<= y 30)))

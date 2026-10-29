@@ -1,0 +1,62 @@
++ /usr/bin/python3 /mnt/Space1/SMT_Sampling/guided_sampler/scripts/patch_common_z3.py /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/baseline
++ make -C /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/baseline/z3/build -j 4
+make: Entering directory '/tmp/guided_sampler_round1_worktrees/baseline/z3/build'
+Z3 was successfully built.
+Z3Py scripts can already be executed in the 'build/python' directory.
+Z3Py scripts stored in arbitrary directories can be executed if the 'build/python' directory is added to the PYTHONPATH environment variable and the 'build' directory is added to the LD_LIBRARY_PATH environment variable.
+Use the following command to install Z3 at prefix /mnt/Space1/SMT_Sampling/guided_sampler/deps/baseline.
+    sudo make install
+make: Leaving directory '/tmp/guided_sampler_round1_worktrees/baseline/z3/build'
++ make -C /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/baseline/z3/build install
+make: Entering directory '/tmp/guided_sampler_round1_worktrees/baseline/z3/build'
+Z3 was successfully installed.
+make: Leaving directory '/tmp/guided_sampler_round1_worktrees/baseline/z3/build'
++ /usr/bin/python3 /mnt/Space1/SMT_Sampling/guided_sampler/scripts/patch_host.py /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/baseline baseline
+Prepared baseline host (common measurement + optional metadata bridge)
++ make -C /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/baseline/HighDiv -j 4 Z3_PREFIX=/mnt/Space1/SMT_Sampling/guided_sampler/deps/baseline CXXFLAGS=-O3 -DNDEBUG -std=c++20 -Wall
+make: Entering directory '/tmp/guided_sampler_round1_worktrees/baseline/HighDiv'
+g++ -I/mnt/Space1/SMT_Sampling/guided_sampler/deps/baseline/include -I/mnt/Space1/SMT_Sampling/guided_sampler/include -O3 -DNDEBUG -std=c++20 -Wall -MMD -MP -c src/main/main.cpp -o build/main/main.o
+g++ -I/mnt/Space1/SMT_Sampling/guided_sampler/deps/baseline/include -I/mnt/Space1/SMT_Sampling/guided_sampler/include -O3 -DNDEBUG -std=c++20 -Wall -MMD -MP -c src/sampler/liasampler.cpp -o build/sampler/liasampler.o
+g++ -I/mnt/Space1/SMT_Sampling/guided_sampler/deps/baseline/include -I/mnt/Space1/SMT_Sampling/guided_sampler/include -O3 -DNDEBUG -std=c++20 -Wall -MMD -MP -c src/sampler/sampler.cpp -o build/sampler/sampler.o
+In file included from src/sampler/sampler.cpp:1:
+src/sampler/sampler.h: In constructor ‘sampler::Sampler::Sampler(z3::context*, std::string, std::string, size_t, double)’:
+src/sampler/sampler.h:21:18: warning: ‘sampler::Sampler::c’ will be initialized after [-Wreorder]
+   21 |     z3::context& c;
+      |                  ^
+src/sampler/sampler.h:14:17: warning:   ‘std::string sampler::Sampler::smtFilePath’ [-Wreorder]
+   14 |     std::string smtFilePath;
+      |                 ^~~~~~~~~~~
+In file included from src/sampler/sampler.cpp:1:
+src/sampler/sampler.h:44:5: warning:   when initialized here [-Wreorder]
+   44 |     Sampler(z3::context* _c, std::string _smtFilePath, std::string _samplesFileDir, size_t _maxNumSamples, double _maxTimeLimit)
+      |     ^~~~~~~
+In file included from src/main/../sampler/liasampler.h:7,
+                 from src/main/main.cpp:1:
+src/main/../sampler/sampler.h: In constructor ‘sampler::Sampler::Sampler(z3::context*, std::string, std::string, size_t, double)’:
+src/main/../sampler/sampler.h:21:18: warning: ‘sampler::Sampler::c’ will be initialized after [-Wreorder]
+   21 |     z3::context& c;
+      |                  ^
+src/main/../sampler/sampler.h:14:17: warning:   ‘std::string sampler::Sampler::smtFilePath’ [-Wreorder]
+   14 |     std::string smtFilePath;
+      |                 ^~~~~~~~~~~
+In file included from src/main/../sampler/liasampler.h:7,
+                 from src/main/main.cpp:1:
+src/main/../sampler/sampler.h:44:5: warning:   when initialized here [-Wreorder]
+   44 |     Sampler(z3::context* _c, std::string _smtFilePath, std::string _samplesFileDir, size_t _maxNumSamples, double _maxTimeLimit)
+      |     ^~~~~~~
+In file included from src/sampler/liasampler.h:7,
+                 from src/sampler/liasampler.cpp:1:
+src/sampler/sampler.h: In constructor ‘sampler::Sampler::Sampler(z3::context*, std::string, std::string, size_t, double)’:
+src/sampler/sampler.h:21:18: warning: ‘sampler::Sampler::c’ will be initialized after [-Wreorder]
+   21 |     z3::context& c;
+      |                  ^
+src/sampler/sampler.h:14:17: warning:   ‘std::string sampler::Sampler::smtFilePath’ [-Wreorder]
+   14 |     std::string smtFilePath;
+      |                 ^~~~~~~~~~~
+In file included from src/sampler/liasampler.h:7,
+                 from src/sampler/liasampler.cpp:1:
+src/sampler/sampler.h:44:5: warning:   when initialized here [-Wreorder]
+   44 |     Sampler(z3::context* _c, std::string _smtFilePath, std::string _samplesFileDir, size_t _maxNumSamples, double _maxTimeLimit)
+      |     ^~~~~~~
+g++ -O3 -DNDEBUG -std=c++20 -Wall build/main/main.o build/sampler/liasampler.o build/sampler/sampler.o -L/mnt/Space1/SMT_Sampling/guided_sampler/deps/baseline/lib -Wl,-rpath,/mnt/Space1/SMT_Sampling/guided_sampler/deps/baseline/lib -lz3 -o highdiv
+make: Leaving directory '/tmp/guided_sampler_round1_worktrees/baseline/HighDiv'

@@ -1,0 +1,790 @@
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:472 ---------
+clauses_vec:
+0
+2
+cls 0: ( 1 2 3 )
+cls 1: ( 4 5 6 )
+------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:475 ---------
+display_bool_var_defs:
+0 #1 := true
+1 #6 := 0
+#5 := x
+#7 := (= x 0)
+2 #8 := 10
+#9 := (= x 10)
+3 #10 := 20
+#11 := (= x 20)
+4 #13 := y
+#14 := (= y 0)
+5 #15 := (= y 10)
+6 #16 := (= y 20)
+------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:478 ---------
+expression -> bool_var:
+(#1 -> 0) (#7 -> 1) (#9 -> 2) (#11 -> 3) (#14 -> 4) (#15 -> 5) (#16 -> 6) 
+------------------------------------------------
+-------- [sampler] reduce_vars ../src/sampler/sampler.cpp:1234 ---------
+0
+------------------------------------------------
+-------- [sampler] ls_sampling ../src/sampler/sampler.cpp:1355 ---------
+interal_data_strctures:
+cls:
+cls 0: {1, 2, 3}
+cls 1: {4, 5, 6}
+_lits:
+1: ( 1 * 0 ) + ( 0 ) == 0
+2: ( 1 * 0 ) + ( -10 ) == 0
+3: ( 1 * 0 ) + ( -20 ) == 0
+4: ( 1 * 0 ) + ( 0 ) == 0
+5: ( 1 * 0 ) + ( -10 ) == 0
+6: ( 1 * 0 ) + ( -20 ) == 0
+
+_vars: 2
+(x:0); (y:1); 
+_tmp_vars: 2
+(x:0); (y:1); 
+_resolution_vars: 2
+(x:0); (y:1); 
+_name2resolution_var:
+(x:0); (y:1); 
+_name2var:
+(x:0); (y:1); 
+_name2tmp_var:
+(x:0); (y:1); ------------------------------------------------
+-------- [sampler] ls_sampling ../src/sampler/sampler.cpp:1372 ---------
+interal_data_strctures:
+cls:
+cls 0: {1, 2, 3}
+cls 1: {4, 5, 6}
+_lits:
+1: ( 1 * 0 ) + ( 0 ) == 0
+2: ( 1 * 0 ) + ( -10 ) == 0
+3: ( 1 * 0 ) + ( -20 ) == 0
+4: ( 1 * 0 ) + ( 0 ) == 0
+5: ( 1 * 0 ) + ( -10 ) == 0
+6: ( 1 * 0 ) + ( -20 ) == 0
+
+_vars: 2
+(x:0); (y:1); 
+_tmp_vars: 2
+(x:0); (y:1); 
+_resolution_vars: 2
+(x:0); (y:1); 
+_name2resolution_var:
+(x:0); (y:1); 
+_name2var:
+(x:0); (y:1); 
+_name2tmp_var:
+(x:0); (y:1); ------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:472 ---------
+clauses_vec:
+0
+2
+cls 0: ( 1 2 3 )
+cls 1: ( 4 5 6 )
+------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:475 ---------
+display_bool_var_defs:
+0 #1 := true
+1 #6 := 0
+#5 := x
+#7 := (= x 0)
+2 #8 := 10
+#9 := (= x 10)
+3 #10 := 20
+#11 := (= x 20)
+4 #13 := y
+#14 := (= y 0)
+5 #15 := (= y 10)
+6 #16 := (= y 20)
+------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:478 ---------
+expression -> bool_var:
+(#1 -> 0) (#7 -> 1) (#9 -> 2) (#11 -> 3) (#14 -> 4) (#15 -> 5) (#16 -> 6) 
+------------------------------------------------
+-------- [sampler] reduce_vars ../src/sampler/sampler.cpp:1234 ---------
+0
+------------------------------------------------
+-------- [sampler] ls_sampling ../src/sampler/sampler.cpp:1355 ---------
+interal_data_strctures:
+cls:
+cls 0: {1, 2, 3}
+cls 1: {4, 5, 6}
+_lits:
+1: ( 1 * 0 ) + ( 0 ) == 0
+2: ( 1 * 0 ) + ( -10 ) == 0
+3: ( 1 * 0 ) + ( -20 ) == 0
+4: ( 1 * 0 ) + ( 0 ) == 0
+5: ( 1 * 0 ) + ( -10 ) == 0
+6: ( 1 * 0 ) + ( -20 ) == 0
+
+_vars: 2
+(x:0); (y:1); 
+_tmp_vars: 2
+(x:0); (y:1); 
+_resolution_vars: 2
+(x:0); (y:1); 
+_name2resolution_var:
+(x:0); (y:1); 
+_name2var:
+(x:0); (y:1); 
+_name2tmp_var:
+(x:0); (y:1); ------------------------------------------------
+-------- [sampler] ls_sampling ../src/sampler/sampler.cpp:1372 ---------
+interal_data_strctures:
+cls:
+cls 0: {1, 2, 3}
+cls 1: {4, 5, 6}
+_lits:
+1: ( 1 * 0 ) + ( 0 ) == 0
+2: ( 1 * 0 ) + ( -10 ) == 0
+3: ( 1 * 0 ) + ( -20 ) == 0
+4: ( 1 * 0 ) + ( 0 ) == 0
+5: ( 1 * 0 ) + ( -10 ) == 0
+6: ( 1 * 0 ) + ( -20 ) == 0
+
+_vars: 2
+(x:0); (y:1); 
+_tmp_vars: 2
+(x:0); (y:1); 
+_resolution_vars: 2
+(x:0); (y:1); 
+_name2resolution_var:
+(x:0); (y:1); 
+_name2var:
+(x:0); (y:1); 
+_name2tmp_var:
+(x:0); (y:1); ------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:472 ---------
+clauses_vec:
+0
+2
+cls 0: ( 1 2 3 )
+cls 1: ( 4 5 6 )
+------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:475 ---------
+display_bool_var_defs:
+0 #1 := true
+1 #6 := 0
+#5 := x
+#7 := (= x 0)
+2 #8 := 10
+#9 := (= x 10)
+3 #10 := 20
+#11 := (= x 20)
+4 #13 := y
+#14 := (= y 0)
+5 #15 := (= y 10)
+6 #16 := (= y 20)
+------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:478 ---------
+expression -> bool_var:
+(#1 -> 0) (#7 -> 1) (#9 -> 2) (#11 -> 3) (#14 -> 4) (#15 -> 5) (#16 -> 6) 
+------------------------------------------------
+-------- [sampler] reduce_vars ../src/sampler/sampler.cpp:1234 ---------
+0
+------------------------------------------------
+-------- [sampler] ls_sampling ../src/sampler/sampler.cpp:1355 ---------
+interal_data_strctures:
+cls:
+cls 0: {1, 2, 3}
+cls 1: {4, 5, 6}
+_lits:
+1: ( 1 * 0 ) + ( 0 ) == 0
+2: ( 1 * 0 ) + ( -10 ) == 0
+3: ( 1 * 0 ) + ( -20 ) == 0
+4: ( 1 * 0 ) + ( 0 ) == 0
+5: ( 1 * 0 ) + ( -10 ) == 0
+6: ( 1 * 0 ) + ( -20 ) == 0
+
+_vars: 2
+(x:0); (y:1); 
+_tmp_vars: 2
+(x:0); (y:1); 
+_resolution_vars: 2
+(x:0); (y:1); 
+_name2resolution_var:
+(x:0); (y:1); 
+_name2var:
+(x:0); (y:1); 
+_name2tmp_var:
+(x:0); (y:1); ------------------------------------------------
+-------- [sampler] ls_sampling ../src/sampler/sampler.cpp:1372 ---------
+interal_data_strctures:
+cls:
+cls 0: {1, 2, 3}
+cls 1: {4, 5, 6}
+_lits:
+1: ( 1 * 0 ) + ( 0 ) == 0
+2: ( 1 * 0 ) + ( -10 ) == 0
+3: ( 1 * 0 ) + ( -20 ) == 0
+4: ( 1 * 0 ) + ( 0 ) == 0
+5: ( 1 * 0 ) + ( -10 ) == 0
+6: ( 1 * 0 ) + ( -20 ) == 0
+
+_vars: 2
+(x:0); (y:1); 
+_tmp_vars: 2
+(x:0); (y:1); 
+_resolution_vars: 2
+(x:0); (y:1); 
+_name2resolution_var:
+(x:0); (y:1); 
+_name2var:
+(x:0); (y:1); 
+_name2tmp_var:
+(x:0); (y:1); ------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:472 ---------
+clauses_vec:
+0
+2
+cls 0: ( 1 2 3 )
+cls 1: ( 4 5 6 )
+------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:475 ---------
+display_bool_var_defs:
+0 #1 := true
+1 #6 := 0
+#5 := x
+#7 := (= x 0)
+2 #8 := 10
+#9 := (= x 10)
+3 #10 := 20
+#11 := (= x 20)
+4 #13 := y
+#14 := (= y 0)
+5 #15 := (= y 10)
+6 #16 := (= y 20)
+------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:478 ---------
+expression -> bool_var:
+(#1 -> 0) (#7 -> 1) (#9 -> 2) (#11 -> 3) (#14 -> 4) (#15 -> 5) (#16 -> 6) 
+------------------------------------------------
+-------- [sampler] reduce_vars ../src/sampler/sampler.cpp:1234 ---------
+0
+------------------------------------------------
+-------- [sampler] ls_sampling ../src/sampler/sampler.cpp:1355 ---------
+interal_data_strctures:
+cls:
+cls 0: {1, 2, 3}
+cls 1: {4, 5, 6}
+_lits:
+1: ( 1 * 0 ) + ( 0 ) == 0
+2: ( 1 * 0 ) + ( -10 ) == 0
+3: ( 1 * 0 ) + ( -20 ) == 0
+4: ( 1 * 0 ) + ( 0 ) == 0
+5: ( 1 * 0 ) + ( -10 ) == 0
+6: ( 1 * 0 ) + ( -20 ) == 0
+
+_vars: 2
+(x:0); (y:1); 
+_tmp_vars: 2
+(x:0); (y:1); 
+_resolution_vars: 2
+(x:0); (y:1); 
+_name2resolution_var:
+(x:0); (y:1); 
+_name2var:
+(x:0); (y:1); 
+_name2tmp_var:
+(x:0); (y:1); ------------------------------------------------
+-------- [sampler] ls_sampling ../src/sampler/sampler.cpp:1372 ---------
+interal_data_strctures:
+cls:
+cls 0: {1, 2, 3}
+cls 1: {4, 5, 6}
+_lits:
+1: ( 1 * 0 ) + ( 0 ) == 0
+2: ( 1 * 0 ) + ( -10 ) == 0
+3: ( 1 * 0 ) + ( -20 ) == 0
+4: ( 1 * 0 ) + ( 0 ) == 0
+5: ( 1 * 0 ) + ( -10 ) == 0
+6: ( 1 * 0 ) + ( -20 ) == 0
+
+_vars: 2
+(x:0); (y:1); 
+_tmp_vars: 2
+(x:0); (y:1); 
+_resolution_vars: 2
+(x:0); (y:1); 
+_name2resolution_var:
+(x:0); (y:1); 
+_name2var:
+(x:0); (y:1); 
+_name2tmp_var:
+(x:0); (y:1); ------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:472 ---------
+clauses_vec:
+0
+2
+cls 0: ( 1 2 3 )
+cls 1: ( 4 5 6 )
+------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:475 ---------
+display_bool_var_defs:
+0 #1 := true
+1 #6 := 0
+#5 := x
+#7 := (= x 0)
+2 #8 := 10
+#9 := (= x 10)
+3 #10 := 20
+#11 := (= x 20)
+4 #13 := y
+#14 := (= y 0)
+5 #15 := (= y 10)
+6 #16 := (= y 20)
+------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:478 ---------
+expression -> bool_var:
+(#1 -> 0) (#7 -> 1) (#9 -> 2) (#11 -> 3) (#14 -> 4) (#15 -> 5) (#16 -> 6) 
+------------------------------------------------
+-------- [sampler] reduce_vars ../src/sampler/sampler.cpp:1234 ---------
+0
+------------------------------------------------
+-------- [sampler] ls_sampling ../src/sampler/sampler.cpp:1355 ---------
+interal_data_strctures:
+cls:
+cls 0: {1, 2, 3}
+cls 1: {4, 5, 6}
+_lits:
+1: ( 1 * 0 ) + ( 0 ) == 0
+2: ( 1 * 0 ) + ( -10 ) == 0
+3: ( 1 * 0 ) + ( -20 ) == 0
+4: ( 1 * 0 ) + ( 0 ) == 0
+5: ( 1 * 0 ) + ( -10 ) == 0
+6: ( 1 * 0 ) + ( -20 ) == 0
+
+_vars: 2
+(x:0); (y:1); 
+_tmp_vars: 2
+(x:0); (y:1); 
+_resolution_vars: 2
+(x:0); (y:1); 
+_name2resolution_var:
+(x:0); (y:1); 
+_name2var:
+(x:0); (y:1); 
+_name2tmp_var:
+(x:0); (y:1); ------------------------------------------------
+-------- [sampler] ls_sampling ../src/sampler/sampler.cpp:1372 ---------
+interal_data_strctures:
+cls:
+cls 0: {1, 2, 3}
+cls 1: {4, 5, 6}
+_lits:
+1: ( 1 * 0 ) + ( 0 ) == 0
+2: ( 1 * 0 ) + ( -10 ) == 0
+3: ( 1 * 0 ) + ( -20 ) == 0
+4: ( 1 * 0 ) + ( 0 ) == 0
+5: ( 1 * 0 ) + ( -10 ) == 0
+6: ( 1 * 0 ) + ( -20 ) == 0
+
+_vars: 2
+(x:0); (y:1); 
+_tmp_vars: 2
+(x:0); (y:1); 
+_resolution_vars: 2
+(x:0); (y:1); 
+_name2resolution_var:
+(x:0); (y:1); 
+_name2var:
+(x:0); (y:1); 
+_name2tmp_var:
+(x:0); (y:1); ------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:472 ---------
+clauses_vec:
+0
+2
+cls 0: ( 1 2 3 )
+cls 1: ( 4 5 6 )
+------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:475 ---------
+display_bool_var_defs:
+0 #1 := true
+1 #6 := 0
+#5 := x
+#7 := (= x 0)
+2 #8 := 10
+#9 := (= x 10)
+3 #10 := 20
+#11 := (= x 20)
+4 #13 := y
+#14 := (= y 0)
+5 #15 := (= y 10)
+6 #16 := (= y 20)
+------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:478 ---------
+expression -> bool_var:
+(#1 -> 0) (#7 -> 1) (#9 -> 2) (#11 -> 3) (#14 -> 4) (#15 -> 5) (#16 -> 6) 
+------------------------------------------------
+-------- [sampler] reduce_vars ../src/sampler/sampler.cpp:1234 ---------
+0
+------------------------------------------------
+-------- [sampler] ls_sampling ../src/sampler/sampler.cpp:1355 ---------
+interal_data_strctures:
+cls:
+cls 0: {1, 2, 3}
+cls 1: {4, 5, 6}
+_lits:
+1: ( 1 * 0 ) + ( 0 ) == 0
+2: ( 1 * 0 ) + ( -10 ) == 0
+3: ( 1 * 0 ) + ( -20 ) == 0
+4: ( 1 * 0 ) + ( 0 ) == 0
+5: ( 1 * 0 ) + ( -10 ) == 0
+6: ( 1 * 0 ) + ( -20 ) == 0
+
+_vars: 2
+(x:0); (y:1); 
+_tmp_vars: 2
+(x:0); (y:1); 
+_resolution_vars: 2
+(x:0); (y:1); 
+_name2resolution_var:
+(x:0); (y:1); 
+_name2var:
+(x:0); (y:1); 
+_name2tmp_var:
+(x:0); (y:1); ------------------------------------------------
+-------- [sampler] ls_sampling ../src/sampler/sampler.cpp:1372 ---------
+interal_data_strctures:
+cls:
+cls 0: {1, 2, 3}
+cls 1: {4, 5, 6}
+_lits:
+1: ( 1 * 0 ) + ( 0 ) == 0
+2: ( 1 * 0 ) + ( -10 ) == 0
+3: ( 1 * 0 ) + ( -20 ) == 0
+4: ( 1 * 0 ) + ( 0 ) == 0
+5: ( 1 * 0 ) + ( -10 ) == 0
+6: ( 1 * 0 ) + ( -20 ) == 0
+
+_vars: 2
+(x:0); (y:1); 
+_tmp_vars: 2
+(x:0); (y:1); 
+_resolution_vars: 2
+(x:0); (y:1); 
+_name2resolution_var:
+(x:0); (y:1); 
+_name2var:
+(x:0); (y:1); 
+_name2tmp_var:
+(x:0); (y:1); ------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:472 ---------
+clauses_vec:
+0
+2
+cls 0: ( 1 2 3 )
+cls 1: ( 4 5 6 )
+------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:475 ---------
+display_bool_var_defs:
+0 #1 := true
+1 #6 := 0
+#5 := x
+#7 := (= x 0)
+2 #8 := 10
+#9 := (= x 10)
+3 #10 := 20
+#11 := (= x 20)
+4 #13 := y
+#14 := (= y 0)
+5 #15 := (= y 10)
+6 #16 := (= y 20)
+------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:478 ---------
+expression -> bool_var:
+(#1 -> 0) (#7 -> 1) (#9 -> 2) (#11 -> 3) (#14 -> 4) (#15 -> 5) (#16 -> 6) 
+------------------------------------------------
+-------- [sampler] reduce_vars ../src/sampler/sampler.cpp:1234 ---------
+0
+------------------------------------------------
+-------- [sampler] ls_sampling ../src/sampler/sampler.cpp:1355 ---------
+interal_data_strctures:
+cls:
+cls 0: {1, 2, 3}
+cls 1: {4, 5, 6}
+_lits:
+1: ( 1 * 0 ) + ( 0 ) == 0
+2: ( 1 * 0 ) + ( -10 ) == 0
+3: ( 1 * 0 ) + ( -20 ) == 0
+4: ( 1 * 0 ) + ( 0 ) == 0
+5: ( 1 * 0 ) + ( -10 ) == 0
+6: ( 1 * 0 ) + ( -20 ) == 0
+
+_vars: 2
+(x:0); (y:1); 
+_tmp_vars: 2
+(x:0); (y:1); 
+_resolution_vars: 2
+(x:0); (y:1); 
+_name2resolution_var:
+(x:0); (y:1); 
+_name2var:
+(x:0); (y:1); 
+_name2tmp_var:
+(x:0); (y:1); ------------------------------------------------
+-------- [sampler] ls_sampling ../src/sampler/sampler.cpp:1372 ---------
+interal_data_strctures:
+cls:
+cls 0: {1, 2, 3}
+cls 1: {4, 5, 6}
+_lits:
+1: ( 1 * 0 ) + ( 0 ) == 0
+2: ( 1 * 0 ) + ( -10 ) == 0
+3: ( 1 * 0 ) + ( -20 ) == 0
+4: ( 1 * 0 ) + ( 0 ) == 0
+5: ( 1 * 0 ) + ( -10 ) == 0
+6: ( 1 * 0 ) + ( -20 ) == 0
+
+_vars: 2
+(x:0); (y:1); 
+_tmp_vars: 2
+(x:0); (y:1); 
+_resolution_vars: 2
+(x:0); (y:1); 
+_name2resolution_var:
+(x:0); (y:1); 
+_name2var:
+(x:0); (y:1); 
+_name2tmp_var:
+(x:0); (y:1); ------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:472 ---------
+clauses_vec:
+0
+2
+cls 0: ( 1 2 3 )
+cls 1: ( 4 5 6 )
+------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:475 ---------
+display_bool_var_defs:
+0 #1 := true
+1 #6 := 0
+#5 := x
+#7 := (= x 0)
+2 #8 := 10
+#9 := (= x 10)
+3 #10 := 20
+#11 := (= x 20)
+4 #13 := y
+#14 := (= y 0)
+5 #15 := (= y 10)
+6 #16 := (= y 20)
+------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:478 ---------
+expression -> bool_var:
+(#1 -> 0) (#7 -> 1) (#9 -> 2) (#11 -> 3) (#14 -> 4) (#15 -> 5) (#16 -> 6) 
+------------------------------------------------
+-------- [sampler] reduce_vars ../src/sampler/sampler.cpp:1234 ---------
+0
+------------------------------------------------
+-------- [sampler] ls_sampling ../src/sampler/sampler.cpp:1355 ---------
+interal_data_strctures:
+cls:
+cls 0: {1, 2, 3}
+cls 1: {4, 5, 6}
+_lits:
+1: ( 1 * 0 ) + ( 0 ) == 0
+2: ( 1 * 0 ) + ( -10 ) == 0
+3: ( 1 * 0 ) + ( -20 ) == 0
+4: ( 1 * 0 ) + ( 0 ) == 0
+5: ( 1 * 0 ) + ( -10 ) == 0
+6: ( 1 * 0 ) + ( -20 ) == 0
+
+_vars: 2
+(x:0); (y:1); 
+_tmp_vars: 2
+(x:0); (y:1); 
+_resolution_vars: 2
+(x:0); (y:1); 
+_name2resolution_var:
+(x:0); (y:1); 
+_name2var:
+(x:0); (y:1); 
+_name2tmp_var:
+(x:0); (y:1); ------------------------------------------------
+-------- [sampler] ls_sampling ../src/sampler/sampler.cpp:1372 ---------
+interal_data_strctures:
+cls:
+cls 0: {1, 2, 3}
+cls 1: {4, 5, 6}
+_lits:
+1: ( 1 * 0 ) + ( 0 ) == 0
+2: ( 1 * 0 ) + ( -10 ) == 0
+3: ( 1 * 0 ) + ( -20 ) == 0
+4: ( 1 * 0 ) + ( 0 ) == 0
+5: ( 1 * 0 ) + ( -10 ) == 0
+6: ( 1 * 0 ) + ( -20 ) == 0
+
+_vars: 2
+(x:0); (y:1); 
+_tmp_vars: 2
+(x:0); (y:1); 
+_resolution_vars: 2
+(x:0); (y:1); 
+_name2resolution_var:
+(x:0); (y:1); 
+_name2var:
+(x:0); (y:1); 
+_name2tmp_var:
+(x:0); (y:1); ------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:472 ---------
+clauses_vec:
+0
+2
+cls 0: ( 1 2 3 )
+cls 1: ( 4 5 6 )
+------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:475 ---------
+display_bool_var_defs:
+0 #1 := true
+1 #6 := 0
+#5 := x
+#7 := (= x 0)
+2 #8 := 10
+#9 := (= x 10)
+3 #10 := 20
+#11 := (= x 20)
+4 #13 := y
+#14 := (= y 0)
+5 #15 := (= y 10)
+6 #16 := (= y 20)
+------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:478 ---------
+expression -> bool_var:
+(#1 -> 0) (#7 -> 1) (#9 -> 2) (#11 -> 3) (#14 -> 4) (#15 -> 5) (#16 -> 6) 
+------------------------------------------------
+-------- [sampler] reduce_vars ../src/sampler/sampler.cpp:1234 ---------
+0
+------------------------------------------------
+-------- [sampler] ls_sampling ../src/sampler/sampler.cpp:1355 ---------
+interal_data_strctures:
+cls:
+cls 0: {1, 2, 3}
+cls 1: {4, 5, 6}
+_lits:
+1: ( 1 * 0 ) + ( 0 ) == 0
+2: ( 1 * 0 ) + ( -10 ) == 0
+3: ( 1 * 0 ) + ( -20 ) == 0
+4: ( 1 * 0 ) + ( 0 ) == 0
+5: ( 1 * 0 ) + ( -10 ) == 0
+6: ( 1 * 0 ) + ( -20 ) == 0
+
+_vars: 2
+(x:0); (y:1); 
+_tmp_vars: 2
+(x:0); (y:1); 
+_resolution_vars: 2
+(x:0); (y:1); 
+_name2resolution_var:
+(x:0); (y:1); 
+_name2var:
+(x:0); (y:1); 
+_name2tmp_var:
+(x:0); (y:1); ------------------------------------------------
+-------- [sampler] ls_sampling ../src/sampler/sampler.cpp:1372 ---------
+interal_data_strctures:
+cls:
+cls 0: {1, 2, 3}
+cls 1: {4, 5, 6}
+_lits:
+1: ( 1 * 0 ) + ( 0 ) == 0
+2: ( 1 * 0 ) + ( -10 ) == 0
+3: ( 1 * 0 ) + ( -20 ) == 0
+4: ( 1 * 0 ) + ( 0 ) == 0
+5: ( 1 * 0 ) + ( -10 ) == 0
+6: ( 1 * 0 ) + ( -20 ) == 0
+
+_vars: 2
+(x:0); (y:1); 
+_tmp_vars: 2
+(x:0); (y:1); 
+_resolution_vars: 2
+(x:0); (y:1); 
+_name2resolution_var:
+(x:0); (y:1); 
+_name2var:
+(x:0); (y:1); 
+_name2tmp_var:
+(x:0); (y:1); ------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:472 ---------
+clauses_vec:
+0
+2
+cls 0: ( 1 2 3 )
+cls 1: ( 4 5 6 )
+------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:475 ---------
+display_bool_var_defs:
+0 #1 := true
+1 #6 := 0
+#5 := x
+#7 := (= x 0)
+2 #8 := 10
+#9 := (= x 10)
+3 #10 := 20
+#11 := (= x 20)
+4 #13 := y
+#14 := (= y 0)
+5 #15 := (= y 10)
+6 #16 := (= y 20)
+------------------------------------------------
+-------- [sampler] expr_bool_var_map ../src/smt/smt_context_pp.cpp:478 ---------
+expression -> bool_var:
+(#1 -> 0) (#7 -> 1) (#9 -> 2) (#11 -> 3) (#14 -> 4) (#15 -> 5) (#16 -> 6) 
+------------------------------------------------
+-------- [sampler] reduce_vars ../src/sampler/sampler.cpp:1234 ---------
+0
+------------------------------------------------
+-------- [sampler] ls_sampling ../src/sampler/sampler.cpp:1355 ---------
+interal_data_strctures:
+cls:
+cls 0: {1, 2, 3}
+cls 1: {4, 5, 6}
+_lits:
+1: ( 1 * 0 ) + ( 0 ) == 0
+2: ( 1 * 0 ) + ( -10 ) == 0
+3: ( 1 * 0 ) + ( -20 ) == 0
+4: ( 1 * 0 ) + ( 0 ) == 0
+5: ( 1 * 0 ) + ( -10 ) == 0
+6: ( 1 * 0 ) + ( -20 ) == 0
+
+_vars: 2
+(x:0); (y:1); 
+_tmp_vars: 2
+(x:0); (y:1); 
+_resolution_vars: 2
+(x:0); (y:1); 
+_name2resolution_var:
+(x:0); (y:1); 
+_name2var:
+(x:0); (y:1); 
+_name2tmp_var:
+(x:0); (y:1); ------------------------------------------------
+-------- [sampler] ls_sampling ../src/sampler/sampler.cpp:1372 ---------
+interal_data_strctures:
+cls:
+cls 0: {1, 2, 3}
+cls 1: {4, 5, 6}
+_lits:
+1: ( 1 * 0 ) + ( 0 ) == 0
+2: ( 1 * 0 ) + ( -10 ) == 0
+3: ( 1 * 0 ) + ( -20 ) == 0
+4: ( 1 * 0 ) + ( 0 ) == 0
+5: ( 1 * 0 ) + ( -10 ) == 0
+6: ( 1 * 0 ) + ( -20 ) == 0
+
+_vars: 2
+(x:0); (y:1); 
+_tmp_vars: 2
+(x:0); (y:1); 
+_resolution_vars: 2
+(x:0); (y:1); 
+_name2resolution_var:
+(x:0); (y:1); 
+_name2var:
+(x:0); (y:1); 
+_name2tmp_var:
+(x:0); (y:1); ------------------------------------------------

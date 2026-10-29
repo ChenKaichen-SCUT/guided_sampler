@@ -1,0 +1,35 @@
+Traceback (most recent call last):
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/run_correctness.py", line 67, in <module>
+    if __name__=='__main__':main()
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/run_correctness.py", line 27, in main
+    kernel_result=json.loads(run([kernel],out/'kernel',env));assert kernel_result['passed']
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/run_correctness.py", line 17, in run
+    assert p.returncode==0,f'{cmd}: {p.stderr[-3000:]}'
+AssertionError: [PosixPath('/mnt/Space1/SMT_Sampling/guided_sampler/build/kernel-sanitize')]: int) ../src/math/lp/lar_solver.cpp:1887
+    #18 0x7b3491a99a2c in lp::lar_solver::update_column_type_and_bound_check_on_equal(unsigned int, rational const&, unsigned int, unsigned int&) ../src/math/lp/lar_solver.cpp:2011
+    #19 0x7b3491a99fc2 in lp::lar_solver::activate_check_on_equal(unsigned int, unsigned int&) ../src/math/lp/lar_solver.cpp:1814
+    #20 0x7b3491a9a36c in lp::lar_solver::add_var_bound_check_on_equal(unsigned int, lp::lconstraint_kind, rational const&, unsigned int&) ../src/math/lp/lar_solver.cpp:1752
+    #21 0x7b348b6f5a5b in smt::theory_lra::imp::add_def_constraint_and_equality(unsigned int, lp::lconstraint_kind, rational const&) ../src/smt/theory_lra.cpp:717
+    #22 0x7b348b70f4e3 in smt::theory_lra::imp::internalize_numeral(app*, rational const&) ../src/smt/theory_lra.cpp:331
+    #23 0x7b348b70f4e3 in smt::theory_lra::imp::linearize(smt::theory_lra::imp::scoped_internalize_state&) ../src/smt/theory_lra.cpp:385
+    #24 0x7b348b6faa39 in smt::theory_lra::imp::linearize_term(expr*, smt::theory_lra::imp::scoped_internalize_state&) ../src/smt/theory_lra.cpp:313
+    #25 0x7b348b6faa39 in smt::theory_lra::imp::internalize_def(app*) ../src/smt/theory_lra.cpp:770
+    #26 0x7b348b6ffc8e in smt::theory_lra::imp::internalize_term(app*) ../src/smt/theory_lra.cpp:940
+    #27 0x7b348b54c81d in smt::theory_lra::internalize_term(app*) ../src/smt/theory_lra.cpp:4210
+    #28 0x7b348bd6c8f8 in smt::context::internalize_theory_term(app*) ../src/smt/smt_internalizer.cpp:900
+    #29 0x7b348bdedb9f in smt::context::internalize_term(app*) ../src/smt/smt_internalizer.cpp:839
+    #30 0x7b348bde4342 in smt::context::internalize_rec(expr*, bool) ../src/smt/smt_internalizer.cpp:388
+    #31 0x7b348bdfbd02 in smt::context::internalize(expr*, bool) ../src/smt/smt_internalizer.cpp:364
+    #32 0x7b348b559aef in smt::theory_lra::imp::internalize_args(app*, bool) ../src/smt/theory_lra.cpp:524
+    #33 0x7b348b711208 in smt::theory_lra::imp::linearize(smt::theory_lra::imp::scoped_internalize_state&) ../src/smt/theory_lra.cpp:412
+    #34 0x7b348b6faa39 in smt::theory_lra::imp::linearize_term(expr*, smt::theory_lra::imp::scoped_internalize_state&) ../src/smt/theory_lra.cpp:313
+    #35 0x7b348b6faa39 in smt::theory_lra::imp::internalize_def(app*) ../src/smt/theory_lra.cpp:770
+    #36 0x7b348b6fcea7 in smt::theory_lra::imp::internalize_atom(app*, bool) ../src/smt/theory_lra.cpp:901
+    #37 0x7b348b54c702 in smt::theory_lra::internalize_atom(app*, bool) ../src/smt/theory_lra.cpp:4207
+    #38 0x7b348bd9caac in smt::context::internalize_theory_atom(app*, bool) ../src/smt/smt_internalizer.cpp:502
+    #39 0x7b348bde24bf in smt::context::internalize_formula(expr*, bool) ../src/smt/smt_internalizer.cpp:441
+    #40 0x7b348bde2f3f in smt::context::internalize_rec(expr*, bool) ../src/smt/smt_internalizer.cpp:381
+    #41 0x7b348bdfbd02 in smt::context::internalize(expr*, bool) ../src/smt/smt_internalizer.cpp:364
+
+SUMMARY: AddressSanitizer: 32 byte(s) leaked in 1 allocation(s).
+
