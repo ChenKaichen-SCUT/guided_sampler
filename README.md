@@ -8,6 +8,17 @@
 正式矩阵为 seed=0，4 配置 × 8 输入 × 2 独立预算，共 64 次；
 唯一基线只有 16 次，禁止自动补跑。
 
+本轮已完成64项正式会话与64项独立审计，32项独立100模型任务全部完成。
+[中文结果报告](docs/round1_results.zh.md) 同时报告负结果：固定900秒无总体收益，
+A-only没有实际相位介入，B确实进入搜索但部分实例出现大量算术Unknown。
+[完整主表与机制数据](results/analysis/) 保留精确计数和耗时。
+ASan/UBSan通过含一个[独立复现的上游32字节泄漏例外](docs/sanitizer_exception.zh.md)。
+
+原始模型、正式/失败日志和审计证据存于39个无损分片，共约1.87 GiB；
+逐片及全部2680个归档成员已验证SHA-256。
+请先按[恢复说明](archives/RESTORE.md)恢复结果；不要重跑唯一正式基线。
+归档后补充的分析CSV/JSON与最终报告直接保存在Git中。
+
 构建：`python3 scripts/build_all.py baseline`、`python3 scripts/build_all.py guided`、
 `python3 scripts/build_all.py sanitize`。需要 GNU C++20、Python venv、Boost 与
 nlohmann/json 开发头文件。构建不会使用系统 Z3。

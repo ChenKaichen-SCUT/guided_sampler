@@ -1,0 +1,5 @@
+{
+  "workers": 4,
+  "reason": "Bound peak memory while loading full typed receipts; formal sampling still used 16 fixed logical CPU slots",
+  "sampling_complete_sha256": "33f44a6c5d8b3fb2408b6a0fb2f819731bb8b8bbc1336381091f2360736c9427"
+}

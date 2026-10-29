@@ -1,0 +1,3 @@
+# Preserve generated CSV bytes (standard csv.writer CRLF) and archive hashes.
+*.csv -text whitespace=cr-at-eol
+archives/results.tar.gz.part* -text -diff

@@ -1,0 +1,1227 @@
+[
+  {
+    "id": "highdiv_time900_00",
+    "input": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+    "config": "highdiv",
+    "mode": "time900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CDCL",
+        "reason": "canceled",
+        "count": 1,
+        "check_seconds": 0.0018862059999946723
+      }
+    ]
+  },
+  {
+    "id": "highdiv_time900_01",
+    "input": "CAV_2009_benchmarks_problem__019.smt2",
+    "config": "highdiv",
+    "mode": "time900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": []
+  },
+  {
+    "id": "highdiv_time900_02",
+    "input": "SMT_random_LIA_ex14600_2600_100.smt2",
+    "config": "highdiv",
+    "mode": "time900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CCSS",
+        "reason": "smt tactic failed to show goal to be sat/unsat unknown",
+        "count": 235,
+        "check_seconds": 8.934507482999933
+      },
+      {
+        "source": "CDCL",
+        "reason": "timeout",
+        "count": 1,
+        "check_seconds": 1.4818943430000218
+      }
+    ]
+  },
+  {
+    "id": "highdiv_time900_03",
+    "input": "SMT_real_LIA_ex8500_2400_100.smt2",
+    "config": "highdiv",
+    "mode": "time900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CCSS",
+        "reason": "smt tactic failed to show goal to be sat/unsat unknown",
+        "count": 1431,
+        "check_seconds": 31.36390298700027
+      },
+      {
+        "source": "CDCL",
+        "reason": "timeout",
+        "count": 1,
+        "check_seconds": 0.4558800130000691
+      }
+    ]
+  },
+  {
+    "id": "highdiv_time900_04",
+    "input": "convert_convert-jpg2gif-query-1459.smt2",
+    "config": "highdiv",
+    "mode": "time900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CCSS",
+        "reason": "smt tactic failed to show goal to be sat/unsat unknown",
+        "count": 3,
+        "check_seconds": 180.220731125
+      },
+      {
+        "source": "CDCL",
+        "reason": "canceled",
+        "count": 5,
+        "check_seconds": 242.30345882100008
+      }
+    ]
+  },
+  {
+    "id": "highdiv_time900_05",
+    "input": "dillig_40-10.smt2",
+    "config": "highdiv",
+    "mode": "time900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": []
+  },
+  {
+    "id": "highdiv_time900_06",
+    "input": "pb2010_normalized-j3048_8-sat.smt2",
+    "config": "highdiv",
+    "mode": "time900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": []
+  },
+  {
+    "id": "highdiv_time900_07",
+    "input": "prime_cone_sat_14.smt2",
+    "config": "highdiv",
+    "mode": "time900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CDCL",
+        "reason": "canceled",
+        "count": 1,
+        "check_seconds": 0.003252896000049077
+      }
+    ]
+  },
+  {
+    "id": "highdiv_n100_t900_00",
+    "input": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+    "config": "highdiv",
+    "mode": "n100_t900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": []
+  },
+  {
+    "id": "highdiv_n100_t900_01",
+    "input": "CAV_2009_benchmarks_problem__019.smt2",
+    "config": "highdiv",
+    "mode": "n100_t900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": []
+  },
+  {
+    "id": "highdiv_n100_t900_02",
+    "input": "SMT_random_LIA_ex14600_2600_100.smt2",
+    "config": "highdiv",
+    "mode": "n100_t900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CCSS",
+        "reason": "smt tactic failed to show goal to be sat/unsat unknown",
+        "count": 99,
+        "check_seconds": 3.6732240339999995
+      }
+    ]
+  },
+  {
+    "id": "highdiv_n100_t900_03",
+    "input": "SMT_real_LIA_ex8500_2400_100.smt2",
+    "config": "highdiv",
+    "mode": "n100_t900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CCSS",
+        "reason": "smt tactic failed to show goal to be sat/unsat unknown",
+        "count": 99,
+        "check_seconds": 2.0053450130000305
+      }
+    ]
+  },
+  {
+    "id": "highdiv_n100_t900_04",
+    "input": "convert_convert-jpg2gif-query-1459.smt2",
+    "config": "highdiv",
+    "mode": "n100_t900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": []
+  },
+  {
+    "id": "highdiv_n100_t900_05",
+    "input": "dillig_40-10.smt2",
+    "config": "highdiv",
+    "mode": "n100_t900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": []
+  },
+  {
+    "id": "highdiv_n100_t900_06",
+    "input": "pb2010_normalized-j3048_8-sat.smt2",
+    "config": "highdiv",
+    "mode": "n100_t900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": []
+  },
+  {
+    "id": "highdiv_n100_t900_07",
+    "input": "prime_cone_sat_14.smt2",
+    "config": "highdiv",
+    "mode": "n100_t900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": []
+  },
+  {
+    "id": "a_only_time900_00",
+    "input": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+    "config": "a_only",
+    "mode": "time900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CDCL",
+        "reason": "canceled",
+        "count": 1,
+        "check_seconds": 0.002310727000008228
+      }
+    ]
+  },
+  {
+    "id": "a_only_time900_01",
+    "input": "CAV_2009_benchmarks_problem__019.smt2",
+    "config": "a_only",
+    "mode": "time900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": []
+  },
+  {
+    "id": "a_only_time900_02",
+    "input": "SMT_random_LIA_ex14600_2600_100.smt2",
+    "config": "a_only",
+    "mode": "time900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CCSS",
+        "reason": "smt tactic failed to show goal to be sat/unsat unknown",
+        "count": 246,
+        "check_seconds": 9.231487214999577
+      },
+      {
+        "source": "CDCL",
+        "reason": "timeout",
+        "count": 1,
+        "check_seconds": 0.9618362429999934
+      }
+    ]
+  },
+  {
+    "id": "a_only_time900_03",
+    "input": "SMT_real_LIA_ex8500_2400_100.smt2",
+    "config": "a_only",
+    "mode": "time900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CCSS",
+        "reason": "smt tactic failed to show goal to be sat/unsat unknown",
+        "count": 1454,
+        "check_seconds": 30.37599738599952
+      },
+      {
+        "source": "CDCL",
+        "reason": "timeout",
+        "count": 1,
+        "check_seconds": 0.3947064800000817
+      }
+    ]
+  },
+  {
+    "id": "a_only_time900_04",
+    "input": "convert_convert-jpg2gif-query-1459.smt2",
+    "config": "a_only",
+    "mode": "time900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CCSS",
+        "reason": "smt tactic failed to show goal to be sat/unsat unknown",
+        "count": 2,
+        "check_seconds": 120.14872968199998
+      },
+      {
+        "source": "CDCL",
+        "reason": "canceled",
+        "count": 10,
+        "check_seconds": 454.43972337799994
+      }
+    ]
+  },
+  {
+    "id": "a_only_time900_05",
+    "input": "dillig_40-10.smt2",
+    "config": "a_only",
+    "mode": "time900",
+    "target_attribution": {},
+    "cost_disabled": [
+      {
+        "budget": 45.0,
+        "cost": 45.00108746599911,
+        "epoch": 75853,
+        "kind": "cost_disabled"
+      }
+    ],
+    "unknown_reasons": []
+  },
+  {
+    "id": "a_only_time900_06",
+    "input": "pb2010_normalized-j3048_8-sat.smt2",
+    "config": "a_only",
+    "mode": "time900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": []
+  },
+  {
+    "id": "a_only_time900_07",
+    "input": "prime_cone_sat_14.smt2",
+    "config": "a_only",
+    "mode": "time900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CDCL",
+        "reason": "canceled",
+        "count": 1,
+        "check_seconds": 0.0027809260000140057
+      }
+    ]
+  },
+  {
+    "id": "a_only_n100_t900_00",
+    "input": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+    "config": "a_only",
+    "mode": "n100_t900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": []
+  },
+  {
+    "id": "a_only_n100_t900_01",
+    "input": "CAV_2009_benchmarks_problem__019.smt2",
+    "config": "a_only",
+    "mode": "n100_t900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": []
+  },
+  {
+    "id": "a_only_n100_t900_02",
+    "input": "SMT_random_LIA_ex14600_2600_100.smt2",
+    "config": "a_only",
+    "mode": "n100_t900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CCSS",
+        "reason": "smt tactic failed to show goal to be sat/unsat unknown",
+        "count": 99,
+        "check_seconds": 4.1970891389998775
+      }
+    ]
+  },
+  {
+    "id": "a_only_n100_t900_03",
+    "input": "SMT_real_LIA_ex8500_2400_100.smt2",
+    "config": "a_only",
+    "mode": "n100_t900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CCSS",
+        "reason": "smt tactic failed to show goal to be sat/unsat unknown",
+        "count": 99,
+        "check_seconds": 2.146417153000012
+      }
+    ]
+  },
+  {
+    "id": "a_only_n100_t900_04",
+    "input": "convert_convert-jpg2gif-query-1459.smt2",
+    "config": "a_only",
+    "mode": "n100_t900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": []
+  },
+  {
+    "id": "a_only_n100_t900_05",
+    "input": "dillig_40-10.smt2",
+    "config": "a_only",
+    "mode": "n100_t900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": []
+  },
+  {
+    "id": "a_only_n100_t900_06",
+    "input": "pb2010_normalized-j3048_8-sat.smt2",
+    "config": "a_only",
+    "mode": "n100_t900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": []
+  },
+  {
+    "id": "a_only_n100_t900_07",
+    "input": "prime_cone_sat_14.smt2",
+    "config": "a_only",
+    "mode": "n100_t900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": []
+  },
+  {
+    "id": "b_only_time900_00",
+    "input": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+    "config": "b_only",
+    "mode": "time900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 29,
+      "B_reach": 29,
+      "B_hit": 16,
+      "B_new_target_observation": 16,
+      "B_target_attempts": 721,
+      "B_without_formal_model": 692
+    },
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CDCL",
+        "reason": "(incomplete (theory arithmetic))",
+        "count": 254,
+        "check_seconds": 882.6745517270004
+      },
+      {
+        "source": "CDCL",
+        "reason": "canceled",
+        "count": 1,
+        "check_seconds": 4.534131996000042
+      }
+    ]
+  },
+  {
+    "id": "b_only_time900_01",
+    "input": "CAV_2009_benchmarks_problem__019.smt2",
+    "config": "b_only",
+    "mode": "time900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 12,
+      "B_reach": 12,
+      "B_hit": 2,
+      "B_new_target_observation": 2,
+      "B_target_attempts": 3438,
+      "B_without_formal_model": 3426
+    },
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CDCL",
+        "reason": "(incomplete (theory arithmetic))",
+        "count": 1503,
+        "check_seconds": 752.7981255340005
+      },
+      {
+        "source": "CDCL",
+        "reason": "canceled",
+        "count": 3,
+        "check_seconds": 100.67535063400001
+      }
+    ]
+  },
+  {
+    "id": "b_only_time900_02",
+    "input": "SMT_random_LIA_ex14600_2600_100.smt2",
+    "config": "b_only",
+    "mode": "time900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CCSS",
+        "reason": "smt tactic failed to show goal to be sat/unsat unknown",
+        "count": 216,
+        "check_seconds": 9.055847039999978
+      },
+      {
+        "source": "CDCL",
+        "reason": "timeout",
+        "count": 1,
+        "check_seconds": 3.386461848000067
+      }
+    ]
+  },
+  {
+    "id": "b_only_time900_03",
+    "input": "SMT_real_LIA_ex8500_2400_100.smt2",
+    "config": "b_only",
+    "mode": "time900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CCSS",
+        "reason": "smt tactic failed to show goal to be sat/unsat unknown",
+        "count": 1287,
+        "check_seconds": 30.118730792999962
+      },
+      {
+        "source": "CDCL",
+        "reason": "timeout",
+        "count": 1,
+        "check_seconds": 0.35616859999993267
+      }
+    ]
+  },
+  {
+    "id": "b_only_time900_04",
+    "input": "convert_convert-jpg2gif-query-1459.smt2",
+    "config": "b_only",
+    "mode": "time900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 378,
+      "B_reach": 378,
+      "B_hit": 1,
+      "B_new_target_observation": 1,
+      "B_target_attempts": 386,
+      "B_without_formal_model": 8
+    },
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CCSS",
+        "reason": "smt tactic failed to show goal to be sat/unsat unknown",
+        "count": 3,
+        "check_seconds": 180.28025196499996
+      },
+      {
+        "source": "CDCL",
+        "reason": "canceled",
+        "count": 9,
+        "check_seconds": 418.28650710399995
+      }
+    ]
+  },
+  {
+    "id": "b_only_time900_05",
+    "input": "dillig_40-10.smt2",
+    "config": "b_only",
+    "mode": "time900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 4,
+      "B_reach": 4,
+      "B_hit": 3,
+      "B_new_target_observation": 3,
+      "B_target_attempts": 3511,
+      "B_without_formal_model": 3507
+    },
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CDCL",
+        "reason": "(incomplete (theory arithmetic))",
+        "count": 1651,
+        "check_seconds": 858.2787033880007
+      },
+      {
+        "source": "CDCL",
+        "reason": "canceled",
+        "count": 1,
+        "check_seconds": 2.474734539999986
+      }
+    ]
+  },
+  {
+    "id": "b_only_time900_06",
+    "input": "pb2010_normalized-j3048_8-sat.smt2",
+    "config": "b_only",
+    "mode": "time900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 24,
+      "B_reach": 24,
+      "B_hit": 0,
+      "B_new_target_observation": 0,
+      "B_target_attempts": 79,
+      "B_without_formal_model": 55
+    },
+    "cost_disabled": [
+      {
+        "budget": 45.0,
+        "cost": 45.36878478700001,
+        "epoch": 193,
+        "kind": "cost_disabled"
+      }
+    ],
+    "unknown_reasons": [
+      {
+        "source": "CDCL",
+        "reason": "canceled",
+        "count": 1,
+        "check_seconds": 0.11442705000001752
+      }
+    ]
+  },
+  {
+    "id": "b_only_time900_07",
+    "input": "prime_cone_sat_14.smt2",
+    "config": "b_only",
+    "mode": "time900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 8,
+      "B_reach": 8,
+      "B_hit": 3,
+      "B_new_target_observation": 3,
+      "B_target_attempts": 708,
+      "B_without_formal_model": 700
+    },
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CDCL",
+        "reason": "(incomplete (theory arithmetic))",
+        "count": 238,
+        "check_seconds": 889.506460458
+      },
+      {
+        "source": "CDCL",
+        "reason": "canceled",
+        "count": 1,
+        "check_seconds": 4.710944495000035
+      }
+    ]
+  },
+  {
+    "id": "b_only_n100_t900_00",
+    "input": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+    "config": "b_only",
+    "mode": "n100_t900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 31,
+      "B_reach": 31,
+      "B_hit": 17,
+      "B_new_target_observation": 17,
+      "B_target_attempts": 86,
+      "B_without_formal_model": 55
+    },
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CDCL",
+        "reason": "(incomplete (theory arithmetic))",
+        "count": 42,
+        "check_seconds": 25.486449287
+      }
+    ]
+  },
+  {
+    "id": "b_only_n100_t900_01",
+    "input": "CAV_2009_benchmarks_problem__019.smt2",
+    "config": "b_only",
+    "mode": "n100_t900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 12,
+      "B_reach": 12,
+      "B_hit": 2,
+      "B_new_target_observation": 2,
+      "B_target_attempts": 88,
+      "B_without_formal_model": 76
+    },
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CDCL",
+        "reason": "(incomplete (theory arithmetic))",
+        "count": 76,
+        "check_seconds": 9.784789905999999
+      }
+    ]
+  },
+  {
+    "id": "b_only_n100_t900_02",
+    "input": "SMT_random_LIA_ex14600_2600_100.smt2",
+    "config": "b_only",
+    "mode": "n100_t900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CCSS",
+        "reason": "smt tactic failed to show goal to be sat/unsat unknown",
+        "count": 99,
+        "check_seconds": 3.987251137999891
+      }
+    ]
+  },
+  {
+    "id": "b_only_n100_t900_03",
+    "input": "SMT_real_LIA_ex8500_2400_100.smt2",
+    "config": "b_only",
+    "mode": "n100_t900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CCSS",
+        "reason": "smt tactic failed to show goal to be sat/unsat unknown",
+        "count": 99,
+        "check_seconds": 2.1289577779999815
+      }
+    ]
+  },
+  {
+    "id": "b_only_n100_t900_04",
+    "input": "convert_convert-jpg2gif-query-1459.smt2",
+    "config": "b_only",
+    "mode": "n100_t900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 58,
+      "B_reach": 58,
+      "B_hit": 0,
+      "B_new_target_observation": 0,
+      "B_target_attempts": 58,
+      "B_without_formal_model": 0
+    },
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CCSS",
+        "reason": "smt tactic failed to show goal to be sat/unsat unknown",
+        "count": 2,
+        "check_seconds": 120.158413672
+      }
+    ]
+  },
+  {
+    "id": "b_only_n100_t900_05",
+    "input": "dillig_40-10.smt2",
+    "config": "b_only",
+    "mode": "n100_t900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 4,
+      "B_reach": 4,
+      "B_hit": 3,
+      "B_new_target_observation": 3,
+      "B_target_attempts": 140,
+      "B_without_formal_model": 136
+    },
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CDCL",
+        "reason": "(incomplete (theory arithmetic))",
+        "count": 92,
+        "check_seconds": 5.677621515999996
+      }
+    ]
+  },
+  {
+    "id": "b_only_n100_t900_06",
+    "input": "pb2010_normalized-j3048_8-sat.smt2",
+    "config": "b_only",
+    "mode": "n100_t900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 24,
+      "B_reach": 24,
+      "B_hit": 0,
+      "B_new_target_observation": 0,
+      "B_target_attempts": 78,
+      "B_without_formal_model": 54
+    },
+    "cost_disabled": [
+      {
+        "budget": 45.0,
+        "cost": 45.210207716000035,
+        "epoch": 189,
+        "kind": "cost_disabled"
+      }
+    ],
+    "unknown_reasons": []
+  },
+  {
+    "id": "b_only_n100_t900_07",
+    "input": "prime_cone_sat_14.smt2",
+    "config": "b_only",
+    "mode": "n100_t900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 8,
+      "B_reach": 8,
+      "B_hit": 3,
+      "B_new_target_observation": 3,
+      "B_target_attempts": 173,
+      "B_without_formal_model": 165
+    },
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CDCL",
+        "reason": "(incomplete (theory arithmetic))",
+        "count": 84,
+        "check_seconds": 110.92408481300002
+      }
+    ]
+  },
+  {
+    "id": "a_plus_b_time900_00",
+    "input": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+    "config": "a_plus_b",
+    "mode": "time900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 41,
+      "B_reach": 41,
+      "B_hit": 20,
+      "B_new_target_observation": 20,
+      "B_target_attempts": 351,
+      "B_without_formal_model": 310
+    },
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CDCL",
+        "reason": "(incomplete (theory arithmetic))",
+        "count": 192,
+        "check_seconds": 834.5022646350004
+      },
+      {
+        "source": "CDCL",
+        "reason": "canceled",
+        "count": 2,
+        "check_seconds": 52.08549834000007
+      }
+    ]
+  },
+  {
+    "id": "a_plus_b_time900_01",
+    "input": "CAV_2009_benchmarks_problem__019.smt2",
+    "config": "a_plus_b",
+    "mode": "time900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 12,
+      "B_reach": 12,
+      "B_hit": 2,
+      "B_new_target_observation": 2,
+      "B_target_attempts": 2130,
+      "B_without_formal_model": 2118,
+      "A_target_attempts": 4,
+      "A_without_formal_model": 4
+    },
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CDCL",
+        "reason": "(incomplete (theory arithmetic))",
+        "count": 1301,
+        "check_seconds": 758.5137179580003
+      },
+      {
+        "source": "CDCL",
+        "reason": "canceled",
+        "count": 3,
+        "check_seconds": 100.64717458899992
+      }
+    ]
+  },
+  {
+    "id": "a_plus_b_time900_02",
+    "input": "SMT_random_LIA_ex14600_2600_100.smt2",
+    "config": "a_plus_b",
+    "mode": "time900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CCSS",
+        "reason": "smt tactic failed to show goal to be sat/unsat unknown",
+        "count": 225,
+        "check_seconds": 8.858151530000102
+      },
+      {
+        "source": "CDCL",
+        "reason": "timeout",
+        "count": 1,
+        "check_seconds": 2.429484785999989
+      }
+    ]
+  },
+  {
+    "id": "a_plus_b_time900_03",
+    "input": "SMT_real_LIA_ex8500_2400_100.smt2",
+    "config": "a_plus_b",
+    "mode": "time900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CCSS",
+        "reason": "smt tactic failed to show goal to be sat/unsat unknown",
+        "count": 1330,
+        "check_seconds": 29.628342926000574
+      },
+      {
+        "source": "CDCL",
+        "reason": "timeout",
+        "count": 1,
+        "check_seconds": 0.2776179370000591
+      }
+    ]
+  },
+  {
+    "id": "a_plus_b_time900_04",
+    "input": "convert_convert-jpg2gif-query-1459.smt2",
+    "config": "a_plus_b",
+    "mode": "time900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 267,
+      "B_reach": 267,
+      "B_hit": 0,
+      "B_new_target_observation": 0,
+      "A_attempt_with_formal_model": 13,
+      "A_reach": 13,
+      "A_hit": 0,
+      "A_new_target_observation": 0,
+      "B_target_attempts": 272,
+      "B_without_formal_model": 5,
+      "A_target_attempts": 13,
+      "A_without_formal_model": 0
+    },
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CCSS",
+        "reason": "smt tactic failed to show goal to be sat/unsat unknown",
+        "count": 8,
+        "check_seconds": 480.67241843599993
+      },
+      {
+        "source": "CDCL",
+        "reason": "canceled",
+        "count": 4,
+        "check_seconds": 168.69420585499995
+      }
+    ]
+  },
+  {
+    "id": "a_plus_b_time900_05",
+    "input": "dillig_40-10.smt2",
+    "config": "a_plus_b",
+    "mode": "time900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 4,
+      "B_reach": 4,
+      "B_hit": 3,
+      "B_new_target_observation": 3,
+      "B_target_attempts": 2660,
+      "B_without_formal_model": 2656,
+      "A_target_attempts": 9,
+      "A_without_formal_model": 9
+    },
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CDCL",
+        "reason": "(incomplete (theory arithmetic))",
+        "count": 1536,
+        "check_seconds": 864.1817398730008
+      },
+      {
+        "source": "CDCL",
+        "reason": "canceled",
+        "count": 1,
+        "check_seconds": 1.3970954489999485
+      }
+    ]
+  },
+  {
+    "id": "a_plus_b_time900_06",
+    "input": "pb2010_normalized-j3048_8-sat.smt2",
+    "config": "a_plus_b",
+    "mode": "time900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 24,
+      "B_reach": 24,
+      "B_hit": 0,
+      "B_new_target_observation": 0,
+      "B_target_attempts": 75,
+      "B_without_formal_model": 51
+    },
+    "cost_disabled": [
+      {
+        "budget": 45.0,
+        "cost": 45.08502650299996,
+        "epoch": 187,
+        "kind": "cost_disabled"
+      }
+    ],
+    "unknown_reasons": [
+      {
+        "source": "CDCL",
+        "reason": "canceled",
+        "count": 1,
+        "check_seconds": 0.05309270199995808
+      }
+    ]
+  },
+  {
+    "id": "a_plus_b_time900_07",
+    "input": "prime_cone_sat_14.smt2",
+    "config": "a_plus_b",
+    "mode": "time900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 13,
+      "B_reach": 13,
+      "B_hit": 5,
+      "B_new_target_observation": 5,
+      "B_target_attempts": 401,
+      "B_without_formal_model": 388
+    },
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CDCL",
+        "reason": "(incomplete (theory arithmetic))",
+        "count": 194,
+        "check_seconds": 887.6812800010002
+      },
+      {
+        "source": "CDCL",
+        "reason": "canceled",
+        "count": 1,
+        "check_seconds": 8.081086267999922
+      }
+    ]
+  },
+  {
+    "id": "a_plus_b_n100_t900_00",
+    "input": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+    "config": "a_plus_b",
+    "mode": "n100_t900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 44,
+      "B_reach": 44,
+      "B_hit": 19,
+      "B_new_target_observation": 19,
+      "B_target_attempts": 104,
+      "B_without_formal_model": 60,
+      "A_target_attempts": 1,
+      "A_without_formal_model": 1
+    },
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CDCL",
+        "reason": "(incomplete (theory arithmetic))",
+        "count": 40,
+        "check_seconds": 50.396290191999995
+      }
+    ]
+  },
+  {
+    "id": "a_plus_b_n100_t900_01",
+    "input": "CAV_2009_benchmarks_problem__019.smt2",
+    "config": "a_plus_b",
+    "mode": "n100_t900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 12,
+      "B_reach": 12,
+      "B_hit": 2,
+      "B_new_target_observation": 2,
+      "B_target_attempts": 88,
+      "B_without_formal_model": 76
+    },
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CDCL",
+        "reason": "(incomplete (theory arithmetic))",
+        "count": 76,
+        "check_seconds": 9.939822546
+      }
+    ]
+  },
+  {
+    "id": "a_plus_b_n100_t900_02",
+    "input": "SMT_random_LIA_ex14600_2600_100.smt2",
+    "config": "a_plus_b",
+    "mode": "n100_t900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CCSS",
+        "reason": "smt tactic failed to show goal to be sat/unsat unknown",
+        "count": 99,
+        "check_seconds": 2.800719258000008
+      }
+    ]
+  },
+  {
+    "id": "a_plus_b_n100_t900_03",
+    "input": "SMT_real_LIA_ex8500_2400_100.smt2",
+    "config": "a_plus_b",
+    "mode": "n100_t900",
+    "target_attribution": {},
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CCSS",
+        "reason": "smt tactic failed to show goal to be sat/unsat unknown",
+        "count": 99,
+        "check_seconds": 2.038539802999992
+      }
+    ]
+  },
+  {
+    "id": "a_plus_b_n100_t900_04",
+    "input": "convert_convert-jpg2gif-query-1459.smt2",
+    "config": "a_plus_b",
+    "mode": "n100_t900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 59,
+      "B_reach": 59,
+      "B_hit": 0,
+      "B_new_target_observation": 0,
+      "A_attempt_with_formal_model": 3,
+      "A_reach": 3,
+      "A_hit": 0,
+      "A_new_target_observation": 0,
+      "B_target_attempts": 59,
+      "B_without_formal_model": 0,
+      "A_target_attempts": 3,
+      "A_without_formal_model": 0
+    },
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CCSS",
+        "reason": "smt tactic failed to show goal to be sat/unsat unknown",
+        "count": 1,
+        "check_seconds": 60.099978877
+      }
+    ]
+  },
+  {
+    "id": "a_plus_b_n100_t900_05",
+    "input": "dillig_40-10.smt2",
+    "config": "a_plus_b",
+    "mode": "n100_t900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 3,
+      "B_reach": 3,
+      "B_hit": 2,
+      "B_new_target_observation": 2,
+      "B_target_attempts": 138,
+      "B_without_formal_model": 135
+    },
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CDCL",
+        "reason": "(incomplete (theory arithmetic))",
+        "count": 94,
+        "check_seconds": 7.9346227279999955
+      }
+    ]
+  },
+  {
+    "id": "a_plus_b_n100_t900_06",
+    "input": "pb2010_normalized-j3048_8-sat.smt2",
+    "config": "a_plus_b",
+    "mode": "n100_t900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 26,
+      "B_reach": 26,
+      "B_hit": 0,
+      "B_new_target_observation": 0,
+      "B_target_attempts": 81,
+      "B_without_formal_model": 55
+    },
+    "cost_disabled": [
+      {
+        "budget": 45.0,
+        "cost": 45.205137398000026,
+        "epoch": 205,
+        "kind": "cost_disabled"
+      }
+    ],
+    "unknown_reasons": []
+  },
+  {
+    "id": "a_plus_b_n100_t900_07",
+    "input": "prime_cone_sat_14.smt2",
+    "config": "a_plus_b",
+    "mode": "n100_t900",
+    "target_attribution": {
+      "B_attempt_with_formal_model": 13,
+      "B_reach": 13,
+      "B_hit": 5,
+      "B_new_target_observation": 5,
+      "B_target_attempts": 181,
+      "B_without_formal_model": 168
+    },
+    "cost_disabled": [],
+    "unknown_reasons": [
+      {
+        "source": "CDCL",
+        "reason": "(incomplete (theory arithmetic))",
+        "count": 84,
+        "check_seconds": 154.79267343299995
+      }
+    ]
+  }
+]

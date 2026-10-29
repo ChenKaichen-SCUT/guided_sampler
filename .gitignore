@@ -3,3 +3,6 @@
 /worktrees/
 __pycache__/
 *.pyc
+# Full formal evidence is committed as verified, lossless archive parts.
+/results/baseline_seed0_v1/
+/results/round1/
