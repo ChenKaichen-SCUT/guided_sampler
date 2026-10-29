@@ -1,0 +1,10 @@
+{
+  "seed": 0, "wall_seconds": 900, "window": 8, "ordinary_window": 64,
+  "a_only_limit": 4, "b_only_limit": 4, "ab_a_limit": 2, "ab_b_limit": 2,
+  "new_b_per_check": 2, "b_registry_limit": 2048, "encoding_nodes": 4096,
+  "explicit_cost_fraction": 0.05, "preparation_slice_ms": 10,
+  "cdcl_timeout_ms": 50000, "ls_timeout_seconds": 60,
+  "workers": 16, "sample_modes": {"time900": null, "n100_t900": 100},
+  "queue": ["highdiv", "a_only", "b_only", "a_plus_b"],
+  "baseline_id": "baseline_seed0_v1", "baseline_rerun": false
+}
