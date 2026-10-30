@@ -9,3 +9,9 @@ __pycache__/
 /results/round2_a/formal/
 /results/round2_a/micro/runs/
 /results/round2_a/micro/snapshots/
+# Full third-round diagnostic evidence is committed as a verified lossless archive.
+/results/round3_semantics/traces/
+/results/round3_semantics/correctness/
+/results/round3_semantics/oracle/
+/results/round3_semantics/micro/
+/results/round3_semantics/mapping/

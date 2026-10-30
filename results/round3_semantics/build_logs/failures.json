@@ -1,0 +1,14 @@
+{
+  "failures": [
+    {
+      "file": "round3-release-build-failure01.log",
+      "reason": "Z3 component dependency graph disallowed including an SMT-owned header from tactic; moved header to model component."
+    },
+    {
+      "file": "round3-sanitize-build-failure01.log",
+      "reason": "Staged patch generator did not create the new model source directory before copying the diagnostic header."
+    }
+  ],
+  "runtime_correctness_failures_so_far": 0,
+  "D1_experiment_retries": 0
+}

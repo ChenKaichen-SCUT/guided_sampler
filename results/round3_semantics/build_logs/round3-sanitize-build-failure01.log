@@ -1,0 +1,18 @@
++ cp -a --reflink=auto /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round2_sanitize/z3/build /tmp/guided_sampler_round3_worktrees/sanitize/z3/build
++ /usr/bin/python3 -m venv /mnt/Space1/SMT_Sampling/guided_sampler/deps/round3_sanitize
++ /usr/bin/python3 /mnt/Space1/SMT_Sampling/guided_sampler/scripts/patch_round3_diagnostics.py /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round3_sanitize
+A-only patch applied; old B patch was never applied: /tmp/round3-patch-7c9s_00w
+Traceback (most recent call last):
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/patch_round3_diagnostics.py", line 9, in <module>
+    shutil.copyfile(ROOT/'src/round3/semantic_trace.h',z/'model/semantic_trace.h')
+  File "/usr/lib/python3.10/shutil.py", line 256, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/round3-patch-7c9s_00w/z3/src/model/semantic_trace.h'
+Traceback (most recent call last):
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/build_round3.py", line 20, in <module>
+    run([sys.executable,ROOT/'scripts/patch_round3_diagnostics.py',tree])
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/build_round3.py", line 8, in run
+    def run(c,**kw):print('+',' '.join(map(str,c)),flush=True);subprocess.run(list(map(str,c)),check=True,**kw)
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/usr/bin/python3', '/mnt/Space1/SMT_Sampling/guided_sampler/scripts/patch_round3_diagnostics.py', '/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round3_sanitize']' returned non-zero exit status 1.

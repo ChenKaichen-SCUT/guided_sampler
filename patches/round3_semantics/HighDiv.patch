@@ -1,0 +1,271 @@
+--- a/HighDiv/src/main/main.cpp
++++ b/HighDiv/src/main/main.cpp
+@@ -1,8 +1,10 @@
+ #include "../sampler/liasampler.h"
++#include <filesystem>
+ 
+ struct my_args {
+     std::string smtFilePath;
+-    std::string outputDir{getcwd(NULL, 0)};
++    std::string outputDir{std::filesystem::current_path().string()};
++    bool unlimited=false; unsigned guidance_mode=0;
+     size_t maxNumSamples = 1000;
+     double maxTimeLimit = 3600.0;
+     int randomSeed = 0;
+@@ -22,7 +24,17 @@
+ bool parseOpt(my_args* argp, int argc, char* argv[]) {
+     for (int i = 1; i < argc; ++i) {
+         std::string arg = argv[i];
+-        if (arg == "-h") {
++        if (arg == "--unlimited-samples") { argp->unlimited=true;
++        } else if (arg == "--guidance" && i+1<argc) {
++            std::string mode=argv[++i];
++            if(mode=="a_off_test")argp->guidance_mode=0;
++#ifdef GUIDED_BUILD
++            else if((mode=="observe_trace"||mode=="a_observe_test"))argp->guidance_mode=1;
++            else if((mode=="apply_trace"||mode=="a_only_v2"||mode=="a_apply_test"))argp->guidance_mode=2;
++
++#endif
++            else {std::cerr<<"Unsupported guidance mode\n";return false;}
++        } else if (arg == "-h") {
+             printHelp(argv[0]);
+             return false;
+         } else if (arg == "-i") {
+@@ -89,6 +101,7 @@
+     z3::context ctx;
+     sampler::LiaSampler mySampler(&ctx , arg.smtFilePath, arg.outputDir, arg.maxNumSamples, arg.maxTimeLimit, arg.randomSeed);
+ 
++    mySampler.configure(arg.unlimited,arg.guidance_mode);
+     try {
+         mySampler.sampling();
+     } catch (const std::exception& error) {
+--- a/HighDiv/src/sampler/liasampler.cpp
++++ b/HighDiv/src/sampler/liasampler.cpp
+@@ -42,6 +42,7 @@
+ }
+ 
+ double LiaSampler::TimeElapsed() {
++    if(session)return session->elapsed();
+     std::chrono::steady_clock::time_point finish = std::chrono::steady_clock::now();
+     std::chrono::duration<double> duration = finish - time_sampling_start;
+     return duration.count();
+@@ -84,7 +85,7 @@
+ 
+ void LiaSampler::hybrid_sampling(std::ofstream& samplesFile) {
+     std::cout << "-----------------------HYBRID-SAMPLING MODE-----------------------\n";
+-    if (maxNumSamples == 0 || TimeElapsed() >= maxTimeLimit) return;
++    if (session->stop()) return;
+ 
+     std::uniform_real_distribution<double> dist(0.0, 1.0);
+ 
+@@ -115,28 +116,38 @@
+ 
+     z3::model m_ls(c);
+     z3::check_result res;
+-    while (num_samples < maxNumSamples && TimeElapsed() < maxTimeLimit) {
++    while (!session->stop()&&!session->cdcl_cap_reached()) {
+         // cdcl sampling
+         for (size_t k = 0; k < cdcl_epoch; ++k) {
+-            if (TimeElapsed() >= maxTimeLimit) break;
+-            cdcl_solver.set("timeout", static_cast<unsigned>(std::max(1.0,
+-                std::min(50000.0, (maxTimeLimit - TimeElapsed()) * 1000.0))));
++            if (session->stop()) break;
++
+             // cdcl_solver.push();
+             z3::expr_vector assertions_vector(c);
+             if (num_samples != 0) {
+                 for (size_t j = 0; j < m_ls.size(); ++j) {
+-                    if (m_ls[j].is_const() && m_ls[j].decl_kind() != Z3_OP_TRUE && m_ls[j].decl_kind() != Z3_OP_FALSE && dist(mt) < fixed_var_pct) {
++                    if (session->original_decls.count(m_ls[j].id()) && m_ls[j].is_const() && m_ls[j].decl_kind() != Z3_OP_TRUE && m_ls[j].decl_kind() != Z3_OP_FALSE && dist(mt) < fixed_var_pct) {
+                         // Keep the original declaration and sort (Int or Bool).
+                         assertions_vector.push_back(m_ls[j]() == m_ls.get_const_interp(m_ls[j]));
+                     }
+                 }
+-                res = cdcl_solver.check(assertions_vector);
+-            } else {
+-                res = cdcl_solver.check();
+             }
++            double prepare_start=session->elapsed();
++            if(session->guidance)session->guidance->prepare(cdcl_solver,session->query+1);
++            session->prepare_seconds=session->elapsed()-prepare_start;
++            if(session->stop())break;
++            unsigned grant=static_cast<unsigned>(std::max(1.0,std::min(50000.0,session->remaining()*1000.0)));
++            cdcl_solver.set("timeout",grant);
++            session->begin_query("CDCL",assertions_vector,50000,grant);
++            // Preserve native empty vs nonempty assumptions calls and RNG order.
++            res = num_samples ? cdcl_solver.check(assertions_vector) : cdcl_solver.check();
++            double check_end=session->elapsed();
++            auto guidance_stats=session->guidance?session->guidance->end_check(cdcl_solver):guided::Json::object();
++            session->end_query(cdcl_solver,res,guidance_stats,check_end);
+ 
+             if (z3::sat == res) {
++                double extract_start=session->elapsed();
+                 z3::model cdcl_m = cdcl_solver.get_model();
++                session->extract_seconds=session->elapsed()-extract_start;
+                 record_model(cdcl_m, samplesFile);
+ #ifdef VERBOSE
+                 std::cout << "============Sample from CDCL(T)============\n";
+@@ -148,73 +159,46 @@
+             // cdcl_solver.pop();
+         }
+ 
+-        if (num_samples < maxNumSamples && TimeElapsed() < maxTimeLimit) {
++        if (!session->stop() && !session->cdcl_cap_reached() && session->remaining() >= 1.0) {
+             // ls sampling
+-            ls_solver.set("random_seed", gen_random_seed());
+-            ls_solver.set("ls_timeout", static_cast<unsigned>(
+-                std::max(0.0, std::min(60.0, maxTimeLimit - TimeElapsed()))));
++            session->highdiv_seed=gen_random_seed();
++            ls_solver.set("random_seed", session->highdiv_seed);
++            unsigned grant=static_cast<unsigned>(std::min(60.0,session->remaining()));
++            ls_solver.set("ls_timeout",grant);
++            ls_solver.set("timeout",static_cast<unsigned>(std::max(1.0,session->remaining()*1000.0)));
++            z3::expr_vector empty(c);
++            session->prepare_seconds=0;
++            session->begin_query("CCSS",empty,60,grant);
+             z3::check_result check_res = ls_solver.check();
++            session->end_query(ls_solver,check_res);
+             if (z3::sat != check_res) {
+                 std::cout << "Unsat or unknown case form LS!\n";
+                 continue;
+             }
++            double extract_start=session->elapsed();
+             m_ls = ls_solver.get_model();
+             m_ls = subgoal.convert_model(m_ls);  // test
+ 
++            session->extract_seconds=session->elapsed()-extract_start;
+             record_model(m_ls, samplesFile);
+ #ifdef VERBOSE
+             std::cout << "============Sample from stochastic Local Search============\n";
+ #endif
+         }
+ 
+-        if (TimeElapsed() > maxTimeLimit || num_samples >= maxNumSamples) {
++        if (session->stop()) {
+             break;
+         }
+     }
+ }
+ 
+ void LiaSampler::record_model(z3::model model, std::ofstream& samplesFile) {
+-    // Evaluate in the model, without an additional solver call. In particular,
+-    // reject incorrect reconstruction or finite-arithmetic results at export.
+-    if (!model.eval(original_formula, true).is_true())
+-        throw std::runtime_error("Sampler returned a model that violates the original formula");
+-    curr_sample.clear();
+-    for (unsigned j = 0; j < model.size(); ++j) {
+-        if (model[j].is_const()) {
+-            curr_sample[model[j].name().str()] =
+-                processNegNumber(model.get_const_interp(model[j]).to_string());
+-        }
+-    }
+-    print_unique_sample(samplesFile);
+-}
+-
+-void LiaSampler::print_unique_sample(std::ofstream& samplesFile) {
+-    // Store the exact assignment; hashes alone can collide for different models.
+-    // Length prefixes keep the key unambiguous even for quoted SMT identifiers.
+-    std::string key;
+-    for (const auto& p : curr_sample) {
+-        key += std::to_string(p.first.size()) + ":" + p.first;
+-        key += std::to_string(p.second.size()) + ":" + p.second;
+-    }
+-    if (unique_samples.insert(std::move(key)).second) {
+-        samplesFile << num_samples << ": ";
+-        for (auto p : curr_sample) {
+-            samplesFile << p.first << ":" << p.second << ";";
+-        }
+-        samplesFile << "\n";
+-        num_samples++;
+-#ifdef VERBOSE
+-        std::cout << "The " << num_samples << " sample is being generated ..." << std::endl;
+-#endif
+-    }
+-#ifdef VERBOSE
+-    else {
+-        std::cout << "duplicate samples\n";
+-    }
+-#endif
+-
+-    curr_sample.clear();
+-}
++    if(session->commit(model,original_formula,samplesFile)) {
++        num_samples=session->formal;
++        if(session->source=="CDCL")++num_cdcl_samples;else ++num_ls_samples;
++    }
++}
++void LiaSampler::print_unique_sample(std::ofstream&) {}
+ 
+ unsigned LiaSampler::gen_random_seed() {
+     std::uniform_int_distribution<std::uint64_t> dist(0, UINT64_MAX);
+@@ -222,21 +206,22 @@
+ }
+ 
+ void LiaSampler::sampling() {
+-    time_sampling_start = std::chrono::steady_clock::now();
+-
+-    parseSmtFile();
+-
+-    std::string samplesFileName = samplesFileDir + "/" + extract_filename(smtFilePath) + ".samples";
+-    std::ofstream samplesFile(samplesFileName);
+-    if (!samplesFile) {
+-        std::cerr << "Unable to open file " << samplesFileName << std::endl;
+-        return;
+-    }
+-
+-    hybrid_sampling(samplesFile);
+-
+-    samplesFile.close();
+-
+-    print_statistic();
+-}
+-}  // namespace sampler
++    session=std::make_unique<guided::Session>(c,maxTimeLimit,
++        unlimited?std::nullopt:std::optional<size_t>(maxNumSamples),samplesFileDir);
++    try {
++        parseSmtFile();
++        session->load(original_formula,guidance_mode);
++        std::ofstream samplesFile(samplesFileDir+"/samples.raw");
++        if(!samplesFile)throw std::runtime_error("Cannot create samples.raw");
++        hybrid_sampling(samplesFile);
++        samplesFile.close();
++        session->finish();
++        print_statistic();
++    } catch(z3::exception const&) {
++        if(session->elapsed()>=maxTimeLimit||guided::interrupted)session->status="deadline";
++        else session->status="error";
++        session->finish();
++        if(session->status=="error")throw;
++    } catch(...) {session->status="error";session->finish();throw;}
++}
++} // namespace sampler
+--- a/HighDiv/src/sampler/liasampler.h
++++ b/HighDiv/src/sampler/liasampler.h
+@@ -5,8 +5,9 @@
+ #include <string>
+ #include <unordered_set>
+ #include "sampler.h"
++#include "session.hpp"
+ 
+-#define VERBOSE
++// Routine progress stays in structured session logs.
+ #define DEBUG
+ 
+ namespace sampler {
+@@ -24,6 +25,8 @@
+     static constexpr size_t cdcl_epoch = 1;
+     static constexpr double fixed_var_pct = 0.5;
+ 
++    std::unique_ptr<guided::Session> session;
++    bool unlimited=false; unsigned guidance_mode=0;
+     double TimeElapsed();
+     void print_statistic();
+     void record_model(z3::model model, std::ofstream& samplesFile);
+@@ -35,6 +38,7 @@
+     }
+ 
+ 
++    void configure(bool u,unsigned m){unlimited=u;guidance_mode=m;}
+     z3::tactic mk_preamble_tactic(z3::context& ctx);
+ 
+     void sampling() override;

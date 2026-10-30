@@ -1,0 +1,4 @@
+#include "session.hpp"
+#include <filesystem>
+#include <iostream>
+int main(int argc,char** argv){try{if(argc!=2)return 2;std::filesystem::create_directories(argv[1]);z3::context c;auto x=c.int_const("missing_x"),p=c.bool_const("missing_p");auto f=(x==x)&&(p||!p);z3::model original(c);guided::Session session(c,10,1,argv[1]);session.load(f,0);z3::expr_vector asms(c);session.begin_query("CDCL",asms,0,0);std::ofstream samples(std::string(argv[1])+"/samples.raw");if(!session.commit(original,f,samples))throw std::runtime_error("completed projection not accepted");if(original.eval(x,false).is_numeral()||original.eval(p,false).is_true()||original.eval(p,false).is_false())throw std::runtime_error("completion mutated original model");session.finish();std::cout<<"{\"passed\":true,\"raw_undef_preserved\":true,\"original_completion\":true,\"formal_receipt\":true,\"solver_calls\":0}\n";}catch(std::exception const& e){std::cerr<<e.what()<<'\n';return 1;}}
