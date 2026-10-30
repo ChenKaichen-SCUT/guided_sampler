@@ -1,0 +1,1124 @@
+{
+  "reason": "guidance_exposure_limit",
+  "result": "unknown",
+  "stats": {
+    "actions": [
+      {
+        "actual_var": 5,
+        "assignment_token": 1,
+        "backend_call_id": 1,
+        "canonical_key": "EX:B$5:p_0_4",
+        "context_generation": 1,
+        "context_id": 1,
+        "coverage_version": 1,
+        "decision_id": 1,
+        "effective_phase": true,
+        "final_atom_truth": null,
+        "level": 2,
+        "literal_negated": false,
+        "mapping_kind": "exact_structure",
+        "native_phase": false,
+        "native_var": 5,
+        "phase_changed": true,
+        "query_id": 1,
+        "reassigned_opposite": 3530,
+        "reassigned_same": 838,
+        "suggested_phase": true,
+        "support": [
+          {
+            "desired_one_mask": "1",
+            "desired_zero_mask": "0",
+            "node": 4
+          }
+        ],
+        "trail_index": 1,
+        "trailed_assignment_popped": true,
+        "would_override": true
+      },
+      {
+        "actual_var": 132,
+        "assignment_token": 2,
+        "backend_call_id": 1,
+        "canonical_key": "EX:B$7:p_11_10",
+        "context_generation": 1,
+        "context_id": 1,
+        "coverage_version": 1,
+        "decision_id": 2,
+        "effective_phase": true,
+        "final_atom_truth": null,
+        "level": 3,
+        "literal_negated": false,
+        "mapping_kind": "exact_structure",
+        "native_phase": false,
+        "native_var": 132,
+        "phase_changed": true,
+        "query_id": 1,
+        "reassigned_opposite": 1258,
+        "reassigned_same": 308,
+        "suggested_phase": true,
+        "support": [
+          {
+            "desired_one_mask": "1",
+            "desired_zero_mask": "0",
+            "node": 131
+          }
+        ],
+        "trail_index": 13,
+        "trailed_assignment_popped": true,
+        "would_override": true
+      },
+      {
+        "actual_var": 131,
+        "assignment_token": 3,
+        "backend_call_id": 1,
+        "canonical_key": "EX:B$6:p_11_9",
+        "context_generation": 1,
+        "context_id": 1,
+        "coverage_version": 1,
+        "decision_id": 3,
+        "effective_phase": true,
+        "final_atom_truth": null,
+        "level": 4,
+        "literal_negated": false,
+        "mapping_kind": "exact_structure",
+        "native_phase": false,
+        "native_var": 131,
+        "phase_changed": true,
+        "query_id": 1,
+        "reassigned_opposite": 2519,
+        "reassigned_same": 481,
+        "suggested_phase": true,
+        "support": [
+          {
+            "desired_one_mask": "1",
+            "desired_zero_mask": "0",
+            "node": 130
+          }
+        ],
+        "trail_index": 25,
+        "trailed_assignment_popped": true,
+        "would_override": true
+      },
+      {
+        "actual_var": 130,
+        "assignment_token": 4,
+        "backend_call_id": 1,
+        "canonical_key": "EX:B$6:p_11_8",
+        "context_generation": 1,
+        "context_id": 1,
+        "coverage_version": 1,
+        "decision_id": 4,
+        "effective_phase": true,
+        "final_atom_truth": null,
+        "level": 5,
+        "literal_negated": false,
+        "mapping_kind": "exact_structure",
+        "native_phase": false,
+        "native_var": 130,
+        "phase_changed": true,
+        "query_id": 1,
+        "reassigned_opposite": 1495,
+        "reassigned_same": 472,
+        "suggested_phase": true,
+        "support": [
+          {
+            "desired_one_mask": "1",
+            "desired_zero_mask": "0",
+            "node": 129
+          }
+        ],
+        "trail_index": 37,
+        "trailed_assignment_popped": true,
+        "would_override": true
+      }
+    ],
+    "actual_end": 0.328382599,
+    "b_encoded": 0,
+    "b_internalized": 0,
+    "b_selected": 0,
+    "backend_calls": [
+      {
+        "assertions_after_register": 738,
+        "assertions_before_register": 738,
+        "backend_call_id": 1,
+        "binding_seconds": 0.001167155,
+        "binding_snapshot": [
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_0_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 1
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_0_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 2
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_0_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 3
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_0_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 4
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_0_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 5
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_0_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 6
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_0_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 7
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_0_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 8
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_0_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 9
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_0_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 10
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_1_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 12
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_1_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 13
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_1_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 14
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_1_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 15
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_1_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 16
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_1_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 17
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_1_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 18
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_1_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 19
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_1_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 20
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_1_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 21
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_2_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 23
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_2_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 24
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_2_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 25
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_2_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 26
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_2_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 27
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_2_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 28
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_2_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 29
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_2_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 30
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_2_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 31
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_2_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 32
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_3_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 34
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_3_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 35
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_3_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 36
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_3_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 37
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_3_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 38
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_3_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 39
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_3_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 40
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_3_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 41
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_3_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 42
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_3_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 43
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_4_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 45
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_4_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 46
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_4_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 47
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_4_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 48
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_4_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 49
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_4_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 50
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_4_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 51
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_4_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 52
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_4_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 53
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_4_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 54
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_5_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 56
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_5_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 57
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_5_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 58
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_5_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 59
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_5_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 60
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_5_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 61
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_5_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 62
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_5_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 63
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_5_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 64
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_5_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 65
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_6_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 67
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_6_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 68
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_6_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 69
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_6_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 70
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_6_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 71
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_6_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 72
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_6_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 73
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_6_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 74
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_6_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 75
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_6_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 76
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_7_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 78
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_7_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 79
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_7_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 80
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_7_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 81
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_7_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 82
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_7_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 83
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_7_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 84
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_7_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 85
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_7_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 86
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_7_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 87
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_8_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 89
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_8_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 90
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_8_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 91
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_8_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 92
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_8_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 93
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_8_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 94
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_8_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 95
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_8_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 96
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_8_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 97
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_8_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 98
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_9_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 100
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_9_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 101
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_9_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 102
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_9_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 103
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_9_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 104
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_9_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 105
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_9_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 106
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_9_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 107
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_9_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 108
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_9_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 109
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_0_10",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 11
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_10_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 111
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_10_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 112
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_10_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 113
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_10_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 114
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_10_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 115
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_10_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 116
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_10_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 117
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_10_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 118
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_10_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 119
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_10_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 120
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_11_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 122
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_11_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 123
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_11_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 124
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_11_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 125
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_11_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 126
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_11_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 127
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_11_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 128
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_11_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 129
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_11_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 130
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_11_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 131
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_1_10",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 22
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_2_10",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 33
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_3_10",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 44
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_4_10",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 55
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_5_10",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 66
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_6_10",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 77
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_7_10",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 88
+          }
+        ],
+        "binding_snapshot_limit": 128,
+        "bool_vars_after_register": 1,
+        "bool_vars_before_register": 1,
+        "check_seconds": 0.198299449,
+        "context_generation": 1,
+        "context_id": 1,
+        "end": 0.200008253,
+        "entry_function": "check",
+        "exact_matches": 64,
+        "funnel": {
+          "different_phase_suggestions": 4,
+          "has_current_demand": 64,
+          "has_direct_mapping": 64,
+          "native_ordinary_seen": 16685,
+          "outside_decision_window": 16621,
+          "phase_overrides": 4,
+          "quota_rejected": 60,
+          "within_decision_window": 64
+        },
+        "incomplete_mapping": 0,
+        "ls_sampling": false,
+        "metadata_received": true,
+        "native_context_address": 110518573363216,
+        "normalized_atoms": 48,
+        "normalized_matches": 0,
+        "ordinary_decisions": 16685,
+        "original_reason_unknown": "canceled",
+        "outer_route": "solver2",
+        "parent_call_id": 0,
+        "query_id": 1,
+        "result": "unknown",
+        "route_reason": "native_incremental_mode",
+        "snapshot_native_vars_scanned": 133,
+        "solver_id": 110518572903168,
+        "start": 0.001708804,
+        "tactic_name": "smt_solver",
+        "unmapped": 0,
+        "unsupported_normal_form": 0
+      }
+    ],
+    "binding_seconds": 0.001167155,
+    "coverage_version": 1,
+    "diagnostic_snapshot_seconds": 0.001383195,
+    "direct_seconds": 0.014214297999999986,
+    "explicit_limit": false,
+    "exposure_guard_seconds": 0.006973346,
+    "exposure_limit": true,
+    "exposure_overrun": 0.128382834,
+    "guidance_added_assertions": 0,
+    "guidance_created_bool_vars": 0,
+    "guidance_marked_relevant": 0,
+    "hot_callback_seconds": 0.004690601999999994,
+    "intervened_check": true,
+    "lifecycle": [
+      {
+        "backend_call_id": 1,
+        "context_id": 1,
+        "kind": "attach"
+      },
+      {
+        "backend_call_id": 1,
+        "entry": "check",
+        "kind": "search_entry"
+      },
+      {
+        "backend_call_id": 1,
+        "kind": "detach"
+      },
+      {
+        "kind": "skip_combined_fallback"
+      }
+    ],
+    "mode": 2,
+    "ordinary": 16685,
+    "phase_overrides": 4,
+    "query_id": 1,
+    "requested_exposure_limit": 0.2,
+    "route_metadata_seconds": 0.0,
+    "stages": [],
+    "suggestions": 4
+  }
+}

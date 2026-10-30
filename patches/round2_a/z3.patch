@@ -1,0 +1,851 @@
+--- a/z3/src/api/api_solver.cpp
++++ b/z3/src/api/api_solver.cpp
+@@ -17,6 +17,8 @@
+ 
+ --*/
+ #include<thread>
++#include "api/z3_a_guidance.h"
++#include "util/a_state.h"
+ #include "util/scoped_ctrl_c.h"
+ #include "util/cancel_eh.h"
+ #include "util/file_path.h"
+@@ -161,6 +163,29 @@
+     }
+ 
+ 
++    void Z3_API Z3_solver_set_A_guidance(Z3_context c,Z3_solver s,void const* shared_index,
++        unsigned query,unsigned version,unsigned mode,double exposure,double explicit_cost,unsigned diagnostic) {
++        Z3_TRY;
++        RESET_ERROR_CODE();
++        if(!shared_index||mode<1||mode>2||exposure<0||explicit_cost<0){SET_ERROR_CODE(Z3_INVALID_ARG,nullptr);return;}
++        auto index=*static_cast<std::shared_ptr<a2::Index> const*>(shared_index);
++        if(!index||index->version!=version||index->active){SET_ERROR_CODE(Z3_INVALID_ARG,nullptr);return;}
++        auto run=std::make_shared<a2::Run>(index,query,version,mode,exposure,explicit_cost,diagnostic);
++        run->solver_id=reinterpret_cast<uintptr_t>(to_solver(s));init_solver(c,s);to_solver(s)->m_solver->set_A_guidance(run);
++        Z3_CATCH;
++    }
++    Z3_string Z3_API Z3_solver_get_A_guidance_stats(Z3_context c,Z3_solver s) {
++        Z3_TRY;RESET_ERROR_CODE();
++        auto r=to_solver(s)->m_solver?to_solver(s)->m_solver->m_A:nullptr;
++        return mk_c(c)->mk_external_string(r?r->json().dump():"{}");
++        Z3_CATCH_RETURN("");
++    }
++    void Z3_API Z3_solver_clear_A_guidance(Z3_context c,Z3_solver s) {
++        Z3_TRY;RESET_ERROR_CODE();
++        if(to_solver(s)->m_solver){auto r=to_solver(s)->m_solver->m_A;if(r)r->close();to_solver(s)->m_solver->set_A_guidance(nullptr);}
++        Z3_CATCH;
++    }
++
+     static void init_solver_log(Z3_context c, Z3_solver s) {
+         static std::thread::id g_thread_id = std::this_thread::get_id();
+         static bool g_is_threaded = false;
+--- /dev/null
++++ b/z3/src/api/z3_a_guidance.h
+@@ -0,0 +1,14 @@
++#pragma once
++#include "z3.h"
++#ifdef __cplusplus
++extern "C" {
++#endif
++// shared_index points to std::shared_ptr<a2::Index>; the library takes ownership
++// of a shared reference, never of host stack storage. Index has no AST pointers.
++void Z3_API Z3_solver_set_A_guidance(Z3_context,Z3_solver,void const* shared_index,
++ unsigned query,unsigned version,unsigned mode,double exposure_remaining,double explicit_remaining,unsigned diagnostic);
++Z3_string Z3_API Z3_solver_get_A_guidance_stats(Z3_context,Z3_solver);
++void Z3_API Z3_solver_clear_A_guidance(Z3_context,Z3_solver);
++#ifdef __cplusplus
++}
++#endif
+--- a/z3/src/sat/tactic/sat_tactic.cpp
++++ b/z3/src/sat/tactic/sat_tactic.cpp
+@@ -20,6 +20,7 @@
+ #include "ast/ast_pp.h"
+ #include "model/model_v2_pp.h"
+ #include "tactic/tactical.h"
++#include "util/a_state.h"
+ #include "sat/tactic/goal2sat.h"
+ #include "sat/tactic/sat2goal.h"
+ #include "sat/sat_solver.h"
+@@ -235,10 +236,13 @@
+     
+     void operator()(goal_ref const & g, 
+                     goal_ref_buffer & result) override {
++        tactic_report A_leaf_report("sat.non_smt_leaf",*g);
++        a2::NonSmtLeaf A_leaf(g->m_A,"sat");
+         imp proc(g->m(), m_params, m_var2value);
+         scoped_set_imp set(this, &proc);
+         try {
+             proc(g, result);
++            A_leaf.result(result.size()==1?(result[0]->inconsistent()?"unsat":result[0]->is_decided_sat()?"sat":"unknown"):"unknown");
+             proc.m_solver->collect_statistics(m_stats);
+         }
+         catch (sat::solver_exception & ex) {
+--- /dev/null
++++ b/z3/src/smt/a_context.inc
+@@ -0,0 +1,106 @@
++// Included inside namespace smt. A never mutates the native decision variable.
++void context::attach_A_guidance(std::shared_ptr<a2::Run> run,char const* leaf) {
++    detach_A_guidance();if(!run||run->closed)return;
++    auto attach_start=a2::Clock::now();m_A=std::move(run);std::lock_guard<std::recursive_mutex> lock(m_A->mutex);m_A_data=std::make_unique<a2::ContextCache>(m);m_A_local_disabled=false;m_A_snapshot_done=false;++m_A_generation;m_A_call=m_A->backend(reinterpret_cast<uintptr_t>(this),m_A_generation,m_fparams.m_ls_sampling,leaf);
++    auto& b=m_A->call(m_A_call);b["bool_vars_before_register"]=get_num_bool_vars();b["bool_vars_after_register"]=get_num_bool_vars();
++    b["assertions_before_register"]=get_num_asserted_formulas();b["assertions_after_register"]=get_num_asserted_formulas();
++    m_A->event({{"kind","attach"},{"backend_call_id",m_A_call},{"context_id",m_A_call}});
++    double binding=a2::seconds(attach_start);b["binding_seconds"]=binding;m_A->direct_seconds+=binding;m_A->binding_seconds+=binding;
++    if(m_fparams.m_ls_sampling){b["disabled_reason"]="ccss_rejected";detach_A_guidance();}
++}
++void context::detach_A_guidance() {
++    if(!m_A)return;
++    auto run=m_A;std::lock_guard<std::recursive_mutex> lock(run->mutex);
++    auto& b=m_A->call(m_A_call);b["end"]=a2::seconds(m_A->begin);b["check_seconds"]=b["end"].get<double>()-b["start"].get<double>();
++    b["ordinary_decisions"]=b["funnel"].value("native_ordinary_seen",0ull);
++    if(!b.contains("result"))b["result"]="exception_or_early_return";
++    m_A->event({{"kind","detach"},{"backend_call_id",m_A_call}});
++    m_A_data->tracks.clear();m_A_data->cache.clear();m_A_data->refs.reset();m_A.reset();m_A_call=0;
++}
++void context::prepare_A_search_epoch(char const* entry) {
++    if(!m_A)return;
++    std::lock_guard<std::recursive_mutex> lock(m_A->mutex);
++    m_A->call(m_A_call)["entry_function"]=entry;
++    m_A->event({{"kind","search_entry"},{"backend_call_id",m_A_call},{"entry",entry}});
++    if(m_fparams.m_threads>1){m_A->call(m_A_call)["disabled_reason"]="parallel_smt_unsupported";m_A_local_disabled=true;}
++}
++void context::A_binding_snapshot() {
++    if(!m_A||!m_A->diagnostic||m_A_snapshot_done)return;m_A_snapshot_done=true;auto snapshot_start=a2::Clock::now();
++    std::lock_guard<std::recursive_mutex> lock(m_A->mutex);
++    a2::Json snap=a2::Json::array();a2::InternalView view(m);std::map<std::string,unsigned> selected;
++    for(auto const& kv:m_A->index->entries){if(selected.size()>=128)break;selected[kv.first]=snap.size();snap.push_back({{"key",kv.first},{"state","not_internalized"},{"encountered_in_window",false}});}
++    auto deadline=a2::Clock::now()+std::chrono::milliseconds(10);bool incomplete=false;unsigned scanned=0;
++    for(bool_var v=0;v<get_num_bool_vars();++v){
++        if(scanned>=1024||a2::Clock::now()>=deadline){incomplete=true;break;}++scanned;
++        if(!bool_var2expr(v))continue;a2::Work work;work.deadline=deadline;auto n=a2::canonical(view,bool_var2expr(v),work);
++        if(!n.complete){incomplete=true;continue;}auto it=selected.find(n.key);if(it==selected.end())continue;
++        auto value=get_assignment(v);auto& row=snap[it->second];row["var"]=v;row["state"]=value==l_undef?"bound_unassigned":value==l_true?"bound_assigned_true":"bound_assigned_false";row["reason"]="assigned_reason_unknown";
++    }
++    if(incomplete)for(auto& row:snap)if(row["state"]=="not_internalized")row["state"]="mapping_incomplete";
++    m_A->call(m_A_call)["binding_snapshot"]=snap;m_A->call(m_A_call)["binding_snapshot_limit"]=128;m_A->call(m_A_call)["snapshot_native_vars_scanned"]=scanned;double snapshot_elapsed=a2::seconds(snapshot_start);m_A->snapshot_seconds+=snapshot_elapsed;m_A->direct_seconds+=snapshot_elapsed;
++
++}
++bool context::apply_A_phase_hint(bool_var native_var,bool native_phase,bool& effective_phase) {
++    if(!m_A||m_A_local_disabled||m_A->closed||m_A->direct_disabled)return false;
++    std::lock_guard<std::recursive_mutex> lock(m_A->mutex);auto& r=*m_A;
++    auto start=a2::Clock::now();struct cost {a2::Run& r;a2::Clock::time_point t;~cost(){double elapsed=a2::seconds(t);r.direct_seconds+=elapsed;r.hot_seconds+=elapsed;if(r.direct_seconds>=r.explicit_remaining)r.direct_disabled=true;}} charge{r,start};
++    r.count(m_A_call,"native_ordinary_seen");++r.ordinal;
++    bool outside_window=r.ordinal>64;
++    if(outside_window){r.count(m_A_call,"outside_decision_window");if(!r.diagnostic||r.ordinal>80)return false;}
++    if(!outside_window)r.count(m_A_call,"within_decision_window");
++    if(get_assignment(native_var)!=l_undef){r.count(m_A_call,"already_assigned");return false;}
++    if(r.direct_seconds>=r.explicit_remaining){r.count(m_A_call,"cost_rejected");return false;}
++    expr* e=bool_var2expr(native_var);auto it=m_A_data->cache.find(e);
++    if(it==m_A_data->cache.end()){
++        a2::Work work;work.deadline=std::min(start+std::chrono::milliseconds(10),start+std::chrono::duration_cast<a2::Clock::duration>(std::chrono::duration<double>(std::max(0.0,r.explicit_remaining-r.direct_seconds))));
++        a2::InternalView view(m);auto n=a2::canonical(view,e,work);m_A_data->refs.push_back(e);it=m_A_data->cache.emplace(e,std::move(n)).first;
++        r.call(m_A_call)["normalized_atoms"]=r.call(m_A_call)["normalized_atoms"].get<unsigned>()+1;
++    }
++    auto const& n=it->second;
++    unsigned encounter=0;
++    if(r.diagnostic){auto& rows=r.call(m_A_call)["native_encounters"];if(rows.is_null())rows=a2::Json::array();encounter=rows.size();rows.push_back({{"ordinal",r.ordinal},{"native_var",native_var},{"native_phase",native_phase},{"canonical_key",n.key},{"complete",n.complete},{"reason",n.reason},{"outside_window",outside_window},{"score_false",nullptr},{"score_true",nullptr}});}
++
++    if(!n.complete){r.count(m_A_call,n.reason.c_str());auto key=n.reason=="normalization_incomplete"?"incomplete_mapping":"unsupported_normal_form";auto& x=r.call(m_A_call)[key];x=x.get<unsigned>()+1;return false;}
++    auto found=r.index->entries.find(n.key);
++    if(found==r.index->entries.end()){r.count(m_A_call,"unmapped_reason_unknown");auto& x=r.call(m_A_call)["unmapped"];x=x.get<unsigned>()+1;return false;}
++    if(r.diagnostic&&r.call(m_A_call).contains("binding_snapshot"))for(auto& row:r.call(m_A_call)["binding_snapshot"])if(row["key"]==n.key)row["encountered_in_window"]=true;
++    r.count(m_A_call,"has_direct_mapping");auto const& entry=found->second;bool exact=entry.original_exact==n.exact;
++    auto& match=r.call(m_A_call)[exact?"exact_matches":"normalized_matches"];match=match.get<unsigned>()+1;
++    std::map<unsigned,std::pair<uint64_t,uint64_t>> supports[2];unsigned steps=0;
++    for(auto const& rule:entry.rules){
++        if((++steps&63)==0&&(a2::seconds(start)+r.direct_seconds>=r.explicit_remaining||steps>16384)){r.count(m_A_call,"scoring_incomplete");return false;}
++        auto used=r.attempted.find(rule.node);uint64_t u1=0,u0=0;if(used!=r.attempted.end()){u1=used->second.first;u0=used->second.second;}
++        auto& dest=supports[rule.phase][rule.node];dest.first|=rule.one&rule.want_one&~u1;dest.second|=rule.zero&rule.want_zero&~u0;
++    }
++    unsigned score[2]={0,0};for(unsigned p=0;p<2;++p)for(auto const& kv:supports[p])score[p]+=a2::pop(kv.second.first)+a2::pop(kv.second.second);
++    if(r.diagnostic){auto& row=r.call(m_A_call)["native_encounters"][encounter];row["score_false"]=score[0];row["score_true"]=score[1];a2::Json masks=a2::Json::array();for(unsigned phase=0;phase<2;++phase)for(auto const& kv:supports[phase])if(kv.second.first||kv.second.second)masks.push_back({{"canonical_phase",phase},{"node",kv.first},{"one",std::to_string(kv.second.first)},{"zero",std::to_string(kv.second.second)}});row["supported_demands"]=masks;}
++    if(outside_window){if(score[0]!=score[1])r.count(m_A_call,"outside_window_potential");return false;}
++    if(!(score[0]+score[1])){r.count(m_A_call,"no_active_demand");return false;}r.count(m_A_call,"has_current_demand");
++    if(score[0]==score[1]){r.count(m_A_call,"score_tie");return false;}
++    if(r.suggestions>=4){r.count(m_A_call,"quota_rejected");return false;}
++    bool canonical_phase=score[1]>score[0],suggested=canonical_phase!=n.negated;
++    bool changed=r.mode!=1&&suggested!=native_phase;
++    if(changed&&(r.expired()||a2::seconds(r.begin)>=r.exposure_remaining)){r.count(m_A_call,"exposure_rejected");return false;}
++    if(r.direct_seconds+a2::seconds(start)>=r.explicit_remaining){r.count(m_A_call,"cost_rejected");return false;}
++    unsigned action=r.actions.size();std::vector<a2::Support> masks;
++    for(auto const& kv:supports[canonical_phase])if(kv.second.first||kv.second.second){masks.push_back({kv.first,kv.second.first,kv.second.second});auto& used=r.attempted[kv.first];used.first|=kv.second.first;used.second|=kv.second.second;}
++    ++r.suggestions;r.count(m_A_call,suggested==native_phase?"same_phase_suggestions":"different_phase_suggestions");
++    if(changed){r.changed=true;r.count(m_A_call,"phase_overrides");}
++    effective_phase=r.mode==1?native_phase:suggested;
++    a2::Action event;event.query=r.query;event.backend=m_A_call;event.context=m_A_call;event.generation=m_A_generation;event.decision=r.ordinal;event.level=m_scope_lvl;event.var=native_var;event.version=r.version;
++    event.native_phase=native_phase;event.suggested_phase=suggested;event.effective_phase=effective_phase;event.changed=changed;event.negated=n.negated;
++    event.mapping=exact?"exact_structure":n.kind;event.key=n.key;event.support=std::move(masks);r.actions.push_back(std::move(event));
++    m_A_data->tracks.push_back({native_var,e,action,0,false});return true;
++}
++void context::A_assignment(literal l,bool popped){
++    if(!m_A||m_A_data->tracks.empty())return;
++    std::lock_guard<std::recursive_mutex> lock(m_A->mutex);
++    for(auto& t:m_A_data->tracks)if(t.var==l.var()&&t.e==bool_var2expr(l.var())){
++        auto& a=m_A->actions[t.action];if(popped){if(t.active&&t.token){a.popped=true;t.active=false;}}
++        else {bool value=!l.sign();if(t.token){if(value==a.effective_phase)++a.reassigned_same;else ++a.reassigned_opposite;}else {t.token=++m_A_assignment_serial;a.token=t.token;a.trail_index=m_assigned_literals.size();}t.active=true;}
++    }
++}
++void context::A_finalize(lbool result){
++    if(!m_A)return;std::lock_guard<std::recursive_mutex> lock(m_A->mutex);auto& b=m_A->call(m_A_call);b["result"]=result==l_true?"sat":result==l_false?"unsat":"unknown";b["original_reason_unknown"]=result==l_undef?(m_A_last_exposure?"canceled":last_failure_as_string()):"";
++    for(auto const& t:m_A_data->tracks){auto value=t.var<get_num_bool_vars()&&bool_var2expr(t.var)==t.e?get_assignment(t.var):l_undef;m_A->actions[t.action].final_truth=result==l_true&&value!=l_undef?int(value==l_true):-1;}
++}
+--- /dev/null
++++ b/z3/src/smt/a_internal_view.h
+@@ -0,0 +1,27 @@
++#pragma once
++#include "util/a_shared.hpp"
++#include "ast/arith_decl_plugin.h"
++namespace a2 {
++struct InternalView {
++ using Expr=expr*;ast_manager& m;arith_util arith;
++ explicit InternalView(ast_manager& m):m(m),arith(m){}
++ Op op(Expr e)const {
++  if(!is_app(e))return Other;auto a=to_app(e);auto k=a->get_decl_kind();auto f=a->get_family_id();
++  if(f==null_family_id)return a->get_num_args()==0?Var:Other;
++  if(f==basic_family_id)switch(k){case OP_TRUE:return True;case OP_FALSE:return False;case OP_NOT:return Not;case OP_EQ:return Eq;case OP_AND:return And;case OP_OR:return Or;case OP_ITE:return Ite;default:return Other;}
++  if(f==arith.get_family_id())switch(k){case OP_NUM:return Num;case OP_LE:return Le;case OP_LT:return Lt;case OP_GE:return Ge;case OP_GT:return Gt;case OP_ADD:return Add;case OP_SUB:return Sub;case OP_UMINUS:return Neg;case OP_MUL:return Mul;default:return Other;}
++  return Other;
++ }
++ unsigned size(Expr e)const{return to_app(e)->get_num_args();}Expr child(Expr e,unsigned i)const{return to_app(e)->get_arg(i);}
++ char sort(Expr e)const{return arith.is_int(e)?'I':m.is_bool(e)?'B':'?';}
++ Big number(Expr e)const{rational r;if(!arith.is_numeral(e,r)||!r.is_int())throw std::runtime_error("unsupported_normal_form");return Big(r.to_string());}
++ std::string identity(Expr e)const{auto s=to_app(e)->get_decl()->get_name();std::string name=s.str();return std::string(to_app(e)->get_decl()->is_skolem()?"SKOLEM:":"")+std::string(1,sort(e))+(s.is_numerical()?"#":"$")+std::to_string(name.size())+":"+name;}
++};
++}
++namespace a2 {
++struct ContextCache {
++ struct Track {unsigned var;expr* e;unsigned action;uint64_t token;bool active;};
++ expr_ref_vector refs;std::map<expr*,Norm> cache;std::vector<Track> tracks;
++ explicit ContextCache(ast_manager& m):refs(m){}
++};
++}
+--- a/z3/src/smt/smt_context.cpp
++++ b/z3/src/smt/smt_context.cpp
+@@ -17,6 +17,8 @@
+ 
+ --*/
+ #include "smt/smt_context.h"
++#include "util/a_state.h"
++#include "smt/a_internal_view.h"
+ 
+ #include <math.h>
+ 
+@@ -106,6 +108,7 @@
+ */
+ 
+ bool context::get_cancel_flag() {
++    if(m_A&&m_A->expired()){m_A_last_exposure=true;m_last_search_failure=CANCELED;return true;}
+     if (l_true == m_internal_completed && !m.limit().suspended()) {
+         m_last_search_failure = CANCELED;
+         return true;
+@@ -302,6 +305,7 @@
+     if (m.has_trace_stream())
+         trace_assign(l, j, decision);
+ 
++    if(m_A)A_assignment(l,false);
+     m_case_split_queue->assign_lit_eh(l);
+ }
+ 
+@@ -1799,6 +1803,8 @@
+    \brief Execute next case split, return false if there are no
+    more case splits to be performed.
+ */
++#include "smt/a_context.inc"
++
+ bool context::decide() {
+     if (at_search_level() && !m_tmp_clauses.empty()) {
+         switch (decide_clause()) {
+@@ -1813,6 +1819,7 @@
+     bool_var var;
+     bool is_pos;
+     bool used_queue = false;
++    bool a_ordinary_phase = false;
+ 
+     if (!has_split_candidate(var, is_pos)) {
+         lbool phase = l_undef;
+@@ -1834,6 +1841,7 @@
+                           tout << "\n";);
+                 } });
+ 
++        a_ordinary_phase=phase==l_undef&&!get_bdata(var).try_true_first()&&!get_bdata(var).is_quantifier();
+         is_pos = guess(var, phase);
+     }
+ 
+@@ -1852,11 +1860,27 @@
+         if (used_queue)
+             m_case_split_queue->unassign_var_eh(original_choice);
+         l = literal(var, false);
+-    }
++        if(m_A)m_A->count(m_A_call,"user_propagator_skipped");
++    }
++    else if(used_queue&&a_ordinary_phase&&!m_user_propagator){
++        const bool_var native_var=var;const bool native_phase=is_pos;
++        apply_A_phase_hint(native_var,native_phase,is_pos);
++        SASSERT(var==native_var);
++    }
++    else if(m_A)m_A->count(m_A_call,"special_decision_skipped");
+ 
+     if (!is_pos) l.neg();
+     TRACE("decide", tout << "case split " << l << "\n"
+                          << "activity: " << get_activity(var) << "\n";);
++// Test-only observational trace. Off unless explicitly requested by tests.
++// No RNG use and no solver mutation. Applied identically to both libraries.
++{
++    static const char* path = std::getenv("HIGHDIV_NATIVE_DECISION_TRACE");
++    if (path && *path) {
++        std::ofstream out(path, std::ios::app);
++        out << m_scope_lvl << ' ' << var << ' ' << is_pos << '\n';
++    }
++}
+     assign(l, b_justification::mk_axiom(), true);
+     return true;
+ }
+@@ -2044,6 +2068,7 @@
+         --i;
+         literal l = m_assigned_literals[i];
+         CTRACE("assign_core", l.var() == 13, tout << "unassign " << l << "\n";);
++        if(m_A)A_assignment(l,true);
+         m_assignment[l.index()] = l_undef;
+         m_assignment[(~l).index()] = l_undef;
+         bool_var v = l.var();
+@@ -3416,6 +3441,7 @@
+    Return true if succeeded.
+ */
+ bool context::check_preamble(bool reset_cancel) {
++    m_A_last_exposure=false;
+     if (m.has_trace_stream() && !m_is_auxiliary)
+         m.trace_stream() << "[begin-check] " << m_scope_lvl << "\n";
+ 
+@@ -3446,6 +3472,7 @@
+         m_conflict = null_b_justification;
+         r = l_true;
+     }
++    if(m_A)A_finalize(r);
+     m_internal_completed = l_false;
+     if (r == l_true && gparams::get_value("model_validate") == "true") {
+         recfun::util u(m);
+@@ -3541,6 +3568,7 @@
+    and before internalizing any formulas.
+ */
+ lbool context::setup_and_check(bool reset_cancel) {
++    if(m_A)prepare_A_search_epoch("setup_and_check");
+     if (!check_preamble(reset_cancel)) return l_undef;
+     SASSERT(m_scope_lvl == 0);
+     SASSERT(!m_setup.already_configured());
+@@ -3627,6 +3655,7 @@
+ }
+ 
+ lbool context::check(unsigned num_assumptions, expr* const* assumptions, bool reset_cancel) {
++    if(m_A)prepare_A_search_epoch("check");
+     if (!check_preamble(reset_cancel)) return l_undef;
+     SASSERT(at_base_level());
+     setup_context(false);
+@@ -3684,6 +3713,7 @@
+ }
+ 
+ void context::init_search() {
++    if(m_A)A_binding_snapshot();
+     for (theory* th : m_theory_set) {
+         th->init_search_eh();
+     }
+--- a/z3/src/smt/smt_context.h
++++ b/z3/src/smt/smt_context.h
+@@ -17,6 +17,9 @@
+ 
+ --*/
+ #pragma once
++#include <memory>
++namespace a2 { struct Run; struct ContextCache; }
++
+ #include "ast/quantifier_stat.h"
+ #include "smt/smt_clause.h"
+ #include "smt/smt_setup.h"
+@@ -106,6 +109,15 @@
+         scoped_ptr<quantifier_manager>   m_qmanager;
+         scoped_ptr<model_generator>      m_model_generator;
+         scoped_ptr<relevancy_propagator> m_relevancy_propagator;
++        std::shared_ptr<a2::Run> m_A;
++        std::unique_ptr<a2::ContextCache> m_A_data;
++        unsigned m_A_generation=0,m_A_call=0;uint64_t m_A_assignment_serial=0;
++        bool m_A_local_disabled=false,m_A_snapshot_done=false,m_A_last_exposure=false;
++        void prepare_A_search_epoch(char const*);
++        void A_binding_snapshot();
++        bool apply_A_phase_hint(bool_var native_var,bool native_phase,bool& effective_phase);
++        void A_assignment(literal,bool);
++        void A_finalize(lbool);
+         theory_user_propagator*          m_user_propagator;
+         random_gen                  m_random;
+         bool                        m_flushing; // (debug support) true when flushing
+@@ -725,6 +737,9 @@
+         //
+         // -----------------------------------
+     public:
++        void attach_A_guidance(std::shared_ptr<a2::Run>,char const*);
++        void detach_A_guidance();
++        void mark_A_exposure(){m_A_last_exposure=true;}
+         bool b_internalized(expr const * n) const {
+             return get_bool_var_of_id_option(n->get_id()) != null_bool_var;
+         }
+--- a/z3/src/smt/smt_context_pp.cpp
++++ b/z3/src/smt/smt_context_pp.cpp
+@@ -65,6 +65,7 @@
+ }
+ 
+ std::string context::last_failure_as_string() const {
++    if(m_A_last_exposure)return "guidance_exposure_limit";
+     std::string r;
+     switch (m_last_search_failure) {
+         case UNKNOWN:
+--- a/z3/src/smt/smt_solver.cpp
++++ b/z3/src/smt/smt_solver.cpp
+@@ -23,6 +23,8 @@
+ #include "ast/ast_pp.h"
+ #include "ast/func_decl_dependencies.h"
+ #include "smt/smt_kernel.h"
++#include "smt/smt_context.h"
++#include "util/a_state.h"
+ #include "smt/params/smt_params.h"
+ #include "smt/params/smt_params_helper.hpp"
+ #include "solver/solver_na2as.h"
+@@ -197,7 +199,11 @@
+ 
+         lbool check_sat_core2(unsigned num_assumptions, expr * const * assumptions) override {
+             TRACE("solver_na2as", tout << "smt_solver::check_sat_core: " << num_assumptions << "\n";);
+-            return m_context.check(num_assumptions, assumptions);
++            if(m_A)m_A->start();
++            auto& ctx=m_context.get_context();ctx.attach_A_guidance(m_A,"smt_solver");
++            struct cleanup {smt::context& c;~cleanup(){c.detach_A_guidance();}} guard{ctx};
++            lbool r=m_context.check(num_assumptions, assumptions);
++            if(m_A&&m_A->expired()){ctx.mark_A_exposure();set_reason_unknown("guidance_exposure_limit");return l_undef;}return r;
+         }
+ 
+         lbool check_sat_cc_core(expr_ref_vector const& cube, vector<expr_ref_vector> const& clauses) override {
+--- a/z3/src/smt/tactic/smt_tactic_core.cpp
++++ b/z3/src/smt/tactic/smt_tactic_core.cpp
+@@ -21,6 +21,8 @@
+ #include "ast/ast_util.h"
+ #include "ast/ast_ll_pp.h"
+ #include "smt/smt_kernel.h"
++#include "smt/smt_context.h"
++#include "util/a_state.h"
+ #include "smt/params/smt_params.h"
+ #include "smt/params/smt_params_helper.hpp"
+ #include "smt/smt_solver.h"
+@@ -142,8 +144,7 @@
+             m_owner.m_ctx = nullptr;
+             m_owner.m_user_ctx = nullptr;
+ 
+-            if (d)
+-                dealloc(d);
++            if (d) {d->get_context().detach_A_guidance();dealloc(d);}
+         }
+     };
+ 
+@@ -167,6 +168,7 @@
+             TRACE("smt_tactic_memory", tout << "wasted_size: " << m.get_allocator().get_wasted_size() << "\n";);
+             scoped_init_ctx init(*this, m);
+             SASSERT(m_ctx);
++            m_ctx->get_context().attach_A_guidance(in->m_A,"smt_tactic");
+ 
+             expr_ref_vector clauses(m);
+             expr2expr_map bool2dep;
+@@ -209,6 +211,7 @@
+                 throw;
+             }
+             SASSERT(m_ctx);
++            if(in->m_A&&in->m_A->expired())throw tactic_exception("guidance_exposure_limit");
+             m_ctx->collect_statistics(m_stats);
+             proof_ref pr(m_ctx->get_proof(), m);
+             TRACE("smt_tactic", tout << r << " " << pr << "\n";);
+--- a/z3/src/solver/combined_solver.cpp
++++ b/z3/src/solver/combined_solver.cpp
+@@ -1,3 +1,5 @@
++#include <fstream>
++#include <cstdlib>
+ /*++
+ Copyright (c) 2012 Microsoft Corporation
+ 
+@@ -22,6 +24,7 @@
+ #include "util/common_msgs.h"
+ #include "ast/ast_pp.h"
+ #include "solver/solver.h"
++#include "util/a_state.h"
+ #include "solver/combined_solver_params.hpp"
+ #include <atomic>
+ #define PS_VB_LVL 15
+@@ -44,6 +47,17 @@
+        - parameter ignore_solver1==false
+ */
+ class combined_solver : public solver {
++    unsigned m_round1_route_epoch = 0;
++    void round1_route(char const* backend) {
++        auto path=std::getenv("HIGHDIV_ROUTE_LOG");
++        if (!path || !*path) return;
++        std::ofstream out(path,std::ios::app);
++        out << "{\"check_epoch\":" << m_round1_route_epoch
++            << ",\"solver\":" << reinterpret_cast<uintptr_t>(this)
++            << ",\"backend\":\"" << backend << "\"}\n";
++        out.flush();
++    }
++
+ public:
+     // Behavior when the incremental solver returns unknown.
+     enum inc_unknown_behavior {
+@@ -136,6 +150,7 @@
+         return r;
+     }
+ 
++    void set_A_guidance(std::shared_ptr<a2::Run> r) override { solver::set_A_guidance(r);m_solver1->set_A_guidance(r);m_solver2->set_A_guidance(r); }
+     void set_phase(expr* e) override { m_solver1->set_phase(e); m_solver2->set_phase(e); }
+     solver::phase* get_phase() override { auto* p = m_solver1->get_phase(); if (!p) p = m_solver2->get_phase(); return p; }
+     void set_phase(solver::phase* p) override { m_solver1->set_phase(p); m_solver2->set_phase(p); }
+@@ -209,21 +224,28 @@
+     }
+ 
+     lbool check_sat_core(unsigned num_assumptions, expr * const * assumptions) override {
++        ++m_round1_route_epoch;
++        if(m_A)m_A->start();
+         m_check_sat_executed  = true;        
+         m_use_solver1_results = false;
+ 
+         if (get_num_assumptions() != 0 ||            
+             num_assumptions > 0 ||  // assumptions were provided            
+             m_ignore_solver1)  {
++            if(m_A){m_A->route="solver2";m_A->route_reason="native_assumptions_or_ignore_solver1";}
+             // must use incremental solver
+             switch_inc_mode();
++            round1_route("smt");
+             return m_solver2->check_sat_core(num_assumptions, assumptions);
+         }
+         
+         if (m_inc_mode) {
++            if(m_A){m_A->route="solver2";m_A->route_reason="native_incremental_mode";}
+             if (m_inc_timeout == UINT_MAX) {
+                 IF_VERBOSE(PS_VB_LVL, verbose_stream() << "(combined-solver \"using solver 2 (without a timeout)\")\n";);            
++                round1_route("smt");
+                 lbool r = m_solver2->check_sat_core(num_assumptions, assumptions);
++                if(m_A&&m_A->expired()){set_reason_unknown("guidance_exposure_limit");m_A->event({{"kind","skip_combined_fallback"}});return l_undef;}
+                 if (r != l_undef || !use_solver1_when_undef() || !get_manager().inc()) {
+                     return r;
+                 }
+@@ -234,6 +256,7 @@
+                 lbool r = l_undef;
+                 try {
+                     scoped_timer timer(m_inc_timeout, &eh);
++                    round1_route("smt");
+                     r = m_solver2->check_sat_core(num_assumptions, assumptions);
+                 }
+                 catch (z3_exception&) {
+@@ -241,6 +264,7 @@
+                         throw;
+                     }
+                 }
++                if(m_A&&m_A->expired()){set_reason_unknown("guidance_exposure_limit");m_A->event({{"kind","skip_combined_fallback"}});return l_undef;}
+                 if ((r != l_undef || !use_solver1_when_undef()) && !eh.m_canceled) {
+                     return r;
+                 }
+@@ -249,7 +273,9 @@
+         }
+         
+         IF_VERBOSE(PS_VB_LVL, verbose_stream() << "(combined-solver \"using solver 1\")\n";);
++        if(m_A){if(m_A->expired()){set_reason_unknown("guidance_exposure_limit");return l_undef;}m_A->route="solver1";m_A->route_reason=m_inc_mode?"native_fallback":"native_nonincremental";}
+         m_use_solver1_results = true;
++        round1_route("tactic");
+         return m_solver1->check_sat_core(num_assumptions, assumptions);
+     }
+     
+--- a/z3/src/solver/solver.h
++++ b/z3/src/solver/solver.h
+@@ -22,6 +22,9 @@
+ #include "solver/check_sat_result.h"
+ #include "solver/progress_callback.h"
+ #include "util/params.h"
++#include <memory>
++namespace a2 { struct Run; struct ContextCache; }
++
+ 
+ class solver;
+ class model_converter;
+@@ -53,6 +56,8 @@
+     params_ref  m_params;
+     symbol      m_cancel_backup_file;
+ public:
++    std::shared_ptr<a2::Run> m_A;
++    virtual void set_A_guidance(std::shared_ptr<a2::Run> r) { m_A=std::move(r); }
+     solver(ast_manager& m): check_sat_result(m) {}
+ 
+     /**
+--- a/z3/src/solver/tactic2solver.cpp
++++ b/z3/src/solver/tactic2solver.cpp
+@@ -22,6 +22,7 @@
+ #include "ast/ast_pp.h"
+ #include "tactic/tactic.h"
+ #include "solver/tactic2solver.h"
++#include "util/a_state.h"
+ #include "solver/solver_na2as.h"
+ #include "solver/mus.h"
+ #include "smt/params/smt_params.h"
+@@ -226,6 +227,7 @@
+     m_tactic->updt_params(get_params()); // parameters are allowed to overwrite logic.
+     goal_ref g = alloc(goal, m, m_produce_proofs, m_produce_models, m_produce_unsat_cores);
+ 
++    g->m_A=m_A;if(m_A)m_A->start();
+     for (expr* e : m_assertions) {
+         g->assert_expr(e);
+     }
+@@ -290,6 +292,7 @@
+         m_result->m_core.append(core_elems.size(), core_elems.data());
+     }
+     m_tactic->cleanup();
++    if(m_A&&m_A->expired()){m_result->set_status(l_undef);m_result->m_unknown="guidance_exposure_limit";}
+     return m_result->status();
+ }
+ 
+--- a/z3/src/tactic/goal.cpp
++++ b/z3/src/tactic/goal.cpp
+@@ -87,6 +87,7 @@
+     m_core_enabled(src.unsat_core_enabled()),
+     m_inconsistent(false),
+     m_precision(src.m_precision) {
++    m_A = src.m_A;
+     m_mc = src.m_mc.get();
+     m_pc = src.m_pc.get();
+     m_dc = src.m_dc.get();
+@@ -105,6 +106,7 @@
+     m().copy(m_proofs, target.m_proofs);
+     m().copy(m_dependencies, target.m_dependencies);
+ 
++    target.m_A                    = m_A;
+     target.m_depth                = std::max(m_depth, target.m_depth);
+     SASSERT(target.m_proofs_enabled == m_proofs_enabled);
+     SASSERT(target.m_core_enabled   == m_core_enabled);
+@@ -625,6 +627,7 @@
+             res->m().push_back(res->m_dependencies, dep_translator(m().get(m_dependencies, i)));
+     }
+ 
++    res->m_A = m_A; // canonical IR is manager-independent
+     res->m_inconsistent = m_inconsistent;
+     res->m_depth        = m_depth;
+     res->m_precision    = m_precision;
+--- a/z3/src/tactic/goal.h
++++ b/z3/src/tactic/goal.h
+@@ -26,6 +26,9 @@
+ 
+ --*/
+ #pragma once
++#include <memory>
++namespace a2 { struct Run; struct ContextCache; }
++
+ 
+ #include "ast/ast.h"
+ #include "ast/ast_translation.h"
+@@ -80,6 +83,7 @@
+     bool is_literal(expr* f) const;
+     
+ public:
++    std::shared_ptr<a2::Run> m_A; // query-owned nonlogical sidecar; no AST pointers
+     goal(ast_manager & m, bool models_enabled = true, bool core_enabled = false);
+     goal(ast_manager & m, bool proofs_enabled, bool models_enabled, bool core_enabled);
+     goal(goal const & src);
+--- a/z3/src/tactic/tactic.cpp
++++ b/z3/src/tactic/tactic.cpp
+@@ -18,6 +18,7 @@
+ --*/
+ #include<iomanip>
+ #include "tactic/tactic.h"
++#include "util/a_state.h"
+ #include "tactic/probe.h"
+ #include "util/stopwatch.h"
+ #include "model/model_v2_pp.h"
+@@ -58,6 +59,7 @@
+ };
+ 
+ tactic_report::tactic_report(char const * id, goal const & g) {
++    m_A=g.m_A;if(m_A&&!m_A->closed){if(m_A->expired())throw tactic_exception("guidance_exposure_limit");m_A_stage=m_A->stage_begin(id);}
+     if (get_verbosity_level() >= TACTIC_VERBOSITY_LVL)
+         m_imp = alloc(imp, id, g);
+     else
+@@ -65,6 +67,7 @@
+ }
+ 
+ tactic_report::~tactic_report() {
++    if(m_A_stage)m_A->stage_end(m_A_stage);
+     if (m_imp)
+         dealloc(m_imp);
+ }
+--- a/z3/src/tactic/tactic.h
++++ b/z3/src/tactic/tactic.h
+@@ -106,6 +106,7 @@
+ class tactic_report {
+     struct imp;
+     imp *  m_imp;
++    std::shared_ptr<a2::Run> m_A;unsigned m_A_stage=0;
+ public:
+     tactic_report(char const * id, goal const & g);
+     ~tactic_report();
+--- a/z3/src/tactic/tactical.cpp
++++ b/z3/src/tactic/tactical.cpp
+@@ -20,6 +20,7 @@
+ #include "util/cancel_eh.h"
+ #include "util/scoped_ptr_vector.h"
+ #include "tactic/tactical.h"
++#include "util/a_state.h"
+ #include "tactic/goal_proof_converter.h"
+ #ifndef SINGLE_THREAD
+ #include <thread>
+@@ -344,6 +345,7 @@
+         unsigned sz = m_ts.size();
+         unsigned i;
+         for (i = 0; i < sz; i++) {
++            if(in->m_A&&in->m_A->expired()){in->m_A->event({{"kind","skip_tactic_fallback"},{"next_stage",i}});throw tactic_exception("guidance_exposure_limit");}
+             tactic * t = m_ts[i];
+             SASSERT(sz > 0);
+             if (i < sz - 1) {
+@@ -352,6 +354,7 @@
+                     return;
+                 }
+                 catch (tactic_exception &) {
++                    if(in->m_A&&in->m_A->expired()){in->m_A->event({{"kind","skip_tactic_fallback"},{"next_stage",i+1}});throw;}
+                     result.reset();
+                 }
+                 catch (rewriter_exception&) {
+@@ -1116,6 +1119,7 @@
+         unary_tactical(t), m_name(name) {}
+     
+     void operator()(goal_ref const & in, goal_ref_buffer& result) override {
++        tactic_report A_stage_report(m_name.c_str(),*in);
+         scope _scope(m_name);
+         m_t->operator()(in, result);
+     }
+--- /dev/null
++++ b/z3/src/util/a_shared.hpp
+@@ -0,0 +1,79 @@
++#pragma once
++// Pure owned data shared across the host and its pinned libz3 C++ ABI.
++// No AST pointers, manager-local ids, solver handles or logical constraints.
++#include <boost/multiprecision/cpp_int.hpp>
++#include <map>
++#include <vector>
++#include <string>
++#include <memory>
++#include <chrono>
++#include <stdexcept>
++#include <atomic>
++#include <algorithm>
++#include <functional>
++namespace a2 {
++using Big=boost::multiprecision::cpp_int;
++using Clock=std::chrono::steady_clock;
++inline double seconds(Clock::time_point t){return std::chrono::duration<double>(Clock::now()-t).count();}
++inline unsigned pop(uint64_t x){return __builtin_popcountll(x);}
++inline std::string str(Big const& x){return x.convert_to<std::string>();}
++inline Big absn(Big x){return x<0?-x:x;}
++inline Big gcd(Big a,Big b){a=absn(a);b=absn(b);while(b!=0){Big t=a%b;a=b;b=t;}return a;}
++enum Op {Var,Num,True,False,Not,Eq,Le,Lt,Ge,Gt,Add,Sub,Neg,Mul,And,Or,Ite,Other};
++struct Work {
++ unsigned steps=0,limit=16384; Clock::time_point deadline=Clock::now()+std::chrono::milliseconds(10);
++ void check(){if(++steps>limit || ((steps&63)==0 && Clock::now()>=deadline))throw std::runtime_error("normalization_incomplete");}
++};
++struct Norm {std::string key,exact,reason,kind;bool negated=false,complete=false;};
++struct Linear {
++ std::map<std::string,Big> terms;Big constant=0;
++ void add(Linear const& b,Big const& scale){constant+=b.constant*scale;for(auto const& kv:b.terms){terms[kv.first]+=kv.second*scale;if(terms[kv.first]==0)terms.erase(kv.first);}}
++ void scale(Big const& f){constant*=f;for(auto& kv:terms)kv.second*=f;if(f==0)terms.clear();}
++ std::string key() const {std::string s="C"+str(constant)+";";for(auto const& kv:terms)s+=std::to_string(kv.first.size())+":"+kv.first+"="+str(kv.second)+";";return s;}
++ void primitive(){Big g=absn(constant);for(auto const& kv:terms)g=gcd(g,kv.second);if(g>1){constant/=g;for(auto& kv:terms)kv.second/=g;}}
++};
++// Adapter methods only READ expressions. Normal forms are strings/exact integers.
++template<class View> Norm canonical(View const& v,typename View::Expr root,Work& w){
++ using E=typename View::Expr;
++ std::function<std::string(E,unsigned)> structural=[&](E e,unsigned depth)->std::string{
++  w.check();if(depth>256)throw std::runtime_error("normalization_incomplete");
++  auto op=v.op(e);if(op==Var)return v.identity(e);if(op==Num)return "N"+str(v.number(e))+";";
++  if(op==Other)throw std::runtime_error("unsupported_normal_form");
++  std::vector<std::string> children;for(unsigned i=0;i<v.size(e);++i)children.push_back(structural(v.child(e,i),depth+1));
++  if(op==Eq)std::sort(children.begin(),children.end());
++  std::string s=std::to_string(op)+v.sort(e)+"(";for(auto const& c:children)s+=std::to_string(c.size())+":"+c;return s+")";
++ };
++ std::function<Linear(E,unsigned)> lin=[&](E e,unsigned depth)->Linear{
++  w.check();if(depth>256)throw std::runtime_error("normalization_incomplete");Linear r;auto op=v.op(e);
++  if(op==Num){r.constant=v.number(e);return r;}
++  if(op==Var){r.terms[v.identity(e)]=1;return r;}
++  if(op==Add||op==Sub||op==Neg){for(unsigned i=0;i<v.size(e);++i){auto x=lin(v.child(e,i),depth+1);r.add(x,(op==Neg||(op==Sub&&i>0))?-1:1);}return r;}
++  if(op==Mul){Big factor=1;bool nonconstant=false;for(unsigned i=0;i<v.size(e);++i){auto x=lin(v.child(e,i),depth+1);if(x.terms.empty())factor*=x.constant;else {if(nonconstant)throw std::runtime_error("unsupported_normal_form");r=x;nonconstant=true;}}if(!nonconstant)r.constant=1;r.scale(factor);return r;}
++  // An unchanged integer subterm is a sound opaque basis; no domain inference.
++  r.terms[structural(e,depth+1)]=1;return r;
++ };
++ Norm out;
++ try {
++  while(v.op(root)==Not){w.check();out.negated=!out.negated;root=v.child(root,0);}
++  out.exact=structural(root,0);auto op=v.op(root);
++  if((op==Eq||op==Le||op==Lt||op==Ge||op==Gt)&&v.size(root)==2&&v.sort(v.child(root,0))=='I'){
++   auto l=lin(v.child(root,0),0),r=lin(v.child(root,1),0);l.add(r,-1);
++   if(op==Ge||op==Gt)l.scale(-1);
++   if(op==Lt||op==Gt)++l.constant;
++   if(op==Eq){l.primitive();if(!l.terms.empty()&&l.terms.begin()->second<0)l.scale(-1);out.key="EQ:"+l.key();}
++   else {if(!l.terms.empty()&&l.terms.begin()->second<0){l.scale(-1);++l.constant;out.negated=!out.negated;}l.primitive();out.key="LE:"+l.key();}
++   out.kind="exact_linear_equivalence";
++  }else {out.key="EX:"+out.exact;out.kind="exact_structure";}
++  out.complete=true;
++ }catch(std::runtime_error const& ex){out.reason=ex.what();out.key.clear();out.complete=false;}
++ return out;
++}
++struct Rule {unsigned node;bool phase;uint64_t one,zero;uint64_t want_one=0,want_zero=0;};
++struct Entry {std::vector<Rule> rules;std::string original_exact;};
++struct Index {
++ std::map<std::string,Entry> entries;
++ std::atomic<unsigned> active{0};unsigned version=0;
++ uint64_t mappable_targets=0,single_sided=0;unsigned updates=0;
++};
++struct Support {unsigned node;uint64_t one=0,zero=0;};
++}
+--- /dev/null
++++ b/z3/src/util/a_state.h
+@@ -0,0 +1,47 @@
++#pragma once
++#include "util/a_shared.hpp"
++#include <nlohmann/json.hpp>
++#include <mutex>
++#include <thread>
++namespace a2 {
++using Json=nlohmann::json;
++struct Action {
++ unsigned query,backend,context,generation,decision,level,var,version;
++ bool native_phase,suggested_phase,effective_phase,changed,negated,popped=false;
++ std::string mapping,key;std::vector<Support> support;
++ uint64_t token=0;unsigned trail_index=0,reassigned_same=0,reassigned_opposite=0;
++ int final_truth=-1;
++ Json json()const {Json masks=Json::array();for(auto const& s:support)masks.push_back({{"node",s.node},{"desired_one_mask",std::to_string(s.one)},{"desired_zero_mask",std::to_string(s.zero)}});
++ return {{"query_id",query},{"backend_call_id",backend},{"context_id",context},{"context_generation",generation},{"decision_id",decision},{"level",level},{"native_var",var},{"actual_var",var},{"native_phase",native_phase},{"suggested_phase",suggested_phase},{"effective_phase",effective_phase},{"phase_changed",changed},{"would_override",suggested_phase!=native_phase},{"mapping_kind",mapping},{"canonical_key",key},{"literal_negated",negated},{"support",masks},{"coverage_version",version},{"trailed_assignment_popped",popped},{"reassigned_same",reassigned_same},{"reassigned_opposite",reassigned_opposite},{"assignment_token",token},{"trail_index",trail_index},{"final_atom_truth",final_truth<0?Json(nullptr):Json(final_truth!=0)}};}
++};
++struct Run {
++ std::shared_ptr<const Index> index;unsigned query,version,mode,diagnostic;uintptr_t solver_id=0;
++ Clock::time_point begin=Clock::now();bool started=false,closed=false;
++ std::atomic<bool> changed{false},sticky{false},direct_disabled{false};double exposure_remaining,explicit_remaining,direct_seconds=0,hot_seconds=0,binding_seconds=0,stage_seconds=0,snapshot_seconds=0;std::atomic<uint64_t> guard_nanoseconds{0};
++ std::recursive_mutex mutex;unsigned ordinal=0,suggestions=0,next_id=0;
++ std::map<unsigned,std::pair<uint64_t,uint64_t>> attempted;
++ Json backends=Json::array(),lifecycle=Json::array(),stages=Json::array();std::vector<Action> actions;
++ std::map<std::thread::id,std::vector<unsigned>> parents;
++ std::string route,route_reason;
++ Run(std::shared_ptr<Index> p,unsigned q,unsigned v,unsigned md,double exposure,double explicit_cost,unsigned diag):index(p),query(q),version(v),mode(md),diagnostic(diag),exposure_remaining(exposure),explicit_remaining(explicit_cost){++p->active;}
++ ~Run(){close();}
++ void close(){std::lock_guard<std::recursive_mutex> lock(mutex);if(!closed){closed=true;if(index)--const_cast<Index&>(*index).active;}}
++ void start(){std::lock_guard<std::recursive_mutex> lock(mutex);if(!started){begin=Clock::now();started=true;}}
++ bool expired(){if(sticky)return true;if(!changed)return false;auto t=Clock::now();bool over=std::chrono::duration<double>(t-begin).count()>=exposure_remaining;if(over)sticky=true;guard_nanoseconds.fetch_add(std::chrono::duration_cast<std::chrono::nanoseconds>(Clock::now()-t).count());return over;}
++ unsigned parent(){auto& p=parents[std::this_thread::get_id()];return p.empty()?0:p.back();}
++ unsigned stage_begin(std::string const& name){auto started_at=Clock::now();std::lock_guard<std::recursive_mutex> lock(mutex);if(direct_disabled)return 0;unsigned id=++next_id;stages.push_back({{"backend_call_id",id},{"parent_call_id",parent()},{"tactic_name",name},{"start",seconds(begin)},{"outer_route",route}});parents[std::this_thread::get_id()].push_back(id);double elapsed=seconds(started_at);direct_seconds+=elapsed;stage_seconds+=elapsed;if(direct_seconds>=explicit_remaining)direct_disabled=true;return id;}
++ void stage_end(unsigned id){auto started_at=Clock::now();std::lock_guard<std::recursive_mutex> lock(mutex);for(auto& s:stages)if(s["backend_call_id"]==id){s["end"]=seconds(begin);break;}auto& p=parents[std::this_thread::get_id()];if(!p.empty()&&p.back()==id)p.pop_back();double elapsed=seconds(started_at);direct_seconds+=elapsed;stage_seconds+=elapsed;if(direct_seconds>=explicit_remaining)direct_disabled=true;}
++ unsigned backend(uintptr_t ctx,unsigned gen,bool ls,std::string const& name){std::lock_guard<std::recursive_mutex> lock(mutex);unsigned id=++next_id;backends.push_back({{"query_id",query},{"solver_id",solver_id},{"backend_call_id",id},{"parent_call_id",parent()},{"context_id",id},{"native_context_address",ctx},{"context_generation",gen},{"tactic_name",name},{"outer_route",route},{"route_reason",route_reason},{"ls_sampling",ls},{"metadata_received",!ls},{"start",seconds(begin)},{"entry_function","not_entered"},{"funnel",Json::object()},{"binding_seconds",0.0},{"normalized_atoms",0},{"exact_matches",0},{"normalized_matches",0},{"unmapped",0},{"unsupported_normal_form",0},{"incomplete_mapping",0}});return id;}
++ Json& call(unsigned id){for(auto& b:backends)if(b["backend_call_id"]==id)return b;throw std::logic_error("unknown A backend");}
++ void event(Json e){std::lock_guard<std::recursive_mutex> lock(mutex);lifecycle.push_back(std::move(e));}
++ void count(unsigned id,char const* key){std::lock_guard<std::recursive_mutex> lock(mutex);auto& f=call(id)["funnel"];f[key]=f.value(key,0ull)+1;}
++ Json json(){std::lock_guard<std::recursive_mutex> lock(mutex);Json serialized_actions=Json::array();for(auto const& a:actions)serialized_actions.push_back(a.json());return {{"query_id",query},{"coverage_version",version},{"mode",mode},{"ordinary",ordinal},{"suggestions",suggestions},{"phase_overrides",std::count_if(actions.begin(),actions.end(),[](Action const& e){return e.changed;})},{"exposure_limit",sticky.load()},{"explicit_limit",direct_disabled.load()},{"intervened_check",changed.load()},{"requested_exposure_limit",exposure_remaining},{"actual_end",seconds(begin)},{"exposure_overrun",changed?std::max(0.0,seconds(begin)-exposure_remaining):0.0},{"direct_seconds",direct_seconds+guard_nanoseconds.load()*1e-9},{"hot_callback_seconds",hot_seconds},{"binding_seconds",binding_seconds},{"route_metadata_seconds",stage_seconds},{"diagnostic_snapshot_seconds",snapshot_seconds},{"exposure_guard_seconds",guard_nanoseconds.load()*1e-9},{"backend_calls",backends},{"actions",serialized_actions},{"stages",stages},{"lifecycle",lifecycle},{"b_encoded",0},{"b_internalized",0},{"b_selected",0},{"guidance_created_bool_vars",0},{"guidance_added_assertions",0},{"guidance_marked_relevant",0}};}
++};
++struct NonSmtLeaf {
++ std::shared_ptr<Run> run;unsigned id=0;
++ NonSmtLeaf(std::shared_ptr<Run> r,char const* name):run(std::move(r)){if(!run||run->closed)return;std::lock_guard<std::recursive_mutex> lock(run->mutex);id=run->backend(0,0,false,name);auto& b=run->call(id);b["entry_function"]="sat_tactic::operator";b["disabled_reason"]="non_smt_leaf";b["supports_A"]=false;b["ordinary_decisions"]=0;}
++ void result(char const* value){if(!id)return;std::lock_guard<std::recursive_mutex> lock(run->mutex);run->call(id)["result"]=value;}
++ ~NonSmtLeaf(){if(!id)return;std::lock_guard<std::recursive_mutex> lock(run->mutex);auto& b=run->call(id);b["end"]=seconds(run->begin);b["check_seconds"]=b["end"].get<double>()-b["start"].get<double>();if(!b.contains("result"))b["result"]="exception";}
++};
++
++}

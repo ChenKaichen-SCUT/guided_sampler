@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "release": "release_final/summary.json",
+  "sanitize": "sanitize_final/summary.json",
+  "micro_calls": 36,
+  "micro_rerun": false,
+  "baseline_executions": 0,
+  "leak_suppression": "tests/lsan-upstream.supp",
+  "diagnostic_limitations": [
+    "Bounded binding snapshot does not establish propagation cause or complete elimination proof.",
+    "Snapshot encountered flag may include ordinals65..80; use native_encounters ordinal<=64 in analysis.",
+    "Micro timing overlapped SAN compilation and is not a performance comparison."
+  ]
+}

@@ -6,3 +6,6 @@ __pycache__/
 # Full formal evidence is committed as verified, lossless archive parts.
 /results/baseline_seed0_v1/
 /results/round1/
+/results/round2_a/formal/
+/results/round2_a/micro/runs/
+/results/round2_a/micro/snapshots/

@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round2_release/HighDiv/highdiv",
+    "-i",
+    "/mnt/Space1/SMT_Sampling/guided_sampler/results/correctness/release/host.smt2",
+    "-o",
+    "/mnt/Space1/SMT_Sampling/guided_sampler/results/round2_a/correctness/release_02/a_apply_test",
+    "-n",
+    "8",
+    "-t",
+    "15",
+    "-s",
+    "0",
+    "--guidance",
+    "a_apply_test"
+  ],
+  "exit_code": 0
+}

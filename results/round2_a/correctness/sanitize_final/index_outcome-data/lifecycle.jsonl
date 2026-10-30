@@ -1,0 +1,4 @@
+{"backend_call_id":1,"context_id":1,"kind":"attach","query_id":1}
+{"backend_call_id":1,"entry":"check","kind":"search_entry","query_id":1}
+{"backend_call_id":1,"kind":"detach","query_id":1}
+{"cost":0.013770759000000002,"exposure":0.026821752,"guidance_disabled_but_native_history_retained":true,"kind":"disabled","last_online_version":2,"reason":"test_explicit_disable"}

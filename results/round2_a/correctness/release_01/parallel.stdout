@@ -1,0 +1,256 @@
+{
+  "actions": [
+    {
+      "actual_var": 1,
+      "assignment_token": 1,
+      "backend_call_id": 4,
+      "canonical_key": "EX:B$1:p",
+      "context_generation": 1,
+      "context_id": 4,
+      "coverage_version": 1,
+      "decision_id": 1,
+      "effective_phase": true,
+      "final_atom_truth": true,
+      "level": 1,
+      "literal_negated": false,
+      "mapping_kind": "exact_structure",
+      "native_phase": false,
+      "native_var": 1,
+      "phase_changed": true,
+      "query_id": 1,
+      "reassigned_opposite": 0,
+      "reassigned_same": 0,
+      "suggested_phase": true,
+      "support": [
+        {
+          "desired_one_mask": "1",
+          "desired_zero_mask": "0",
+          "node": 0
+        }
+      ],
+      "trail_index": 1,
+      "trailed_assignment_popped": false,
+      "would_override": true
+    },
+    {
+      "actual_var": 2,
+      "assignment_token": 2,
+      "backend_call_id": 4,
+      "canonical_key": "EX:B$1:q",
+      "context_generation": 1,
+      "context_id": 4,
+      "coverage_version": 1,
+      "decision_id": 2,
+      "effective_phase": true,
+      "final_atom_truth": true,
+      "level": 2,
+      "literal_negated": false,
+      "mapping_kind": "exact_structure",
+      "native_phase": false,
+      "native_var": 2,
+      "phase_changed": true,
+      "query_id": 1,
+      "reassigned_opposite": 0,
+      "reassigned_same": 0,
+      "suggested_phase": true,
+      "support": [
+        {
+          "desired_one_mask": "1",
+          "desired_zero_mask": "0",
+          "node": 1
+        }
+      ],
+      "trail_index": 2,
+      "trailed_assignment_popped": false,
+      "would_override": true
+    }
+  ],
+  "actual_end": 0.088116392,
+  "b_encoded": 0,
+  "b_internalized": 0,
+  "b_selected": 0,
+  "backend_calls": [
+    {
+      "assertions_after_register": 0,
+      "assertions_before_register": 0,
+      "backend_call_id": 3,
+      "binding_seconds": 0.000550402,
+      "binding_snapshot": [
+        {
+          "encountered_in_window": true,
+          "key": "EX:B$1:p",
+          "reason": "assigned_reason_unknown",
+          "state": "bound_unassigned",
+          "var": 1
+        },
+        {
+          "encountered_in_window": false,
+          "key": "EX:B$1:q",
+          "reason": "assigned_reason_unknown",
+          "state": "bound_unassigned",
+          "var": 2
+        }
+      ],
+      "binding_snapshot_limit": 128,
+      "bool_vars_after_register": 1,
+      "bool_vars_before_register": 1,
+      "check_seconds": 0.004320007000000001,
+      "context_generation": 1,
+      "context_id": 3,
+      "end": 0.061162692,
+      "entry_function": "setup_and_check",
+      "exact_matches": 1,
+      "funnel": {
+        "has_direct_mapping": 1,
+        "native_ordinary_seen": 1,
+        "no_active_demand": 1,
+        "within_decision_window": 1
+      },
+      "incomplete_mapping": 0,
+      "ls_sampling": false,
+      "metadata_received": true,
+      "native_context_address": 129319384912112,
+      "normalized_atoms": 1,
+      "normalized_matches": 0,
+      "ordinary_decisions": 1,
+      "original_reason_unknown": "",
+      "outer_route": "",
+      "parent_call_id": 2,
+      "query_id": 1,
+      "result": "sat",
+      "route_reason": "",
+      "snapshot_native_vars_scanned": 3,
+      "solver_id": 107000356784896,
+      "start": 0.056842685,
+      "tactic_name": "smt_tactic",
+      "unmapped": 0,
+      "unsupported_normal_form": 0
+    },
+    {
+      "assertions_after_register": 0,
+      "assertions_before_register": 0,
+      "backend_call_id": 4,
+      "binding_seconds": 0.000577591,
+      "binding_snapshot": [
+        {
+          "encountered_in_window": true,
+          "key": "EX:B$1:p",
+          "reason": "assigned_reason_unknown",
+          "state": "bound_unassigned",
+          "var": 1
+        },
+        {
+          "encountered_in_window": true,
+          "key": "EX:B$1:q",
+          "reason": "assigned_reason_unknown",
+          "state": "bound_unassigned",
+          "var": 2
+        }
+      ],
+      "binding_snapshot_limit": 128,
+      "bool_vars_after_register": 1,
+      "bool_vars_before_register": 1,
+      "check_seconds": 0.003955067999999999,
+      "context_generation": 1,
+      "context_id": 4,
+      "end": 0.061168857,
+      "entry_function": "setup_and_check",
+      "exact_matches": 2,
+      "funnel": {
+        "different_phase_suggestions": 2,
+        "has_current_demand": 2,
+        "has_direct_mapping": 2,
+        "native_ordinary_seen": 2,
+        "phase_overrides": 2,
+        "within_decision_window": 2
+      },
+      "incomplete_mapping": 0,
+      "ls_sampling": false,
+      "metadata_received": true,
+      "native_context_address": 129319519129840,
+      "normalized_atoms": 2,
+      "normalized_matches": 0,
+      "ordinary_decisions": 2,
+      "original_reason_unknown": "",
+      "outer_route": "",
+      "parent_call_id": 1,
+      "query_id": 1,
+      "result": "sat",
+      "route_reason": "",
+      "snapshot_native_vars_scanned": 3,
+      "solver_id": 107000356784896,
+      "start": 0.057213789,
+      "tactic_name": "smt_tactic",
+      "unmapped": 0,
+      "unsupported_normal_form": 0
+    }
+  ],
+  "binding_seconds": 0.0011279929999999999,
+  "coverage_version": 1,
+  "diagnostic_snapshot_seconds": 0.001104652,
+  "direct_seconds": 0.002391948,
+  "explicit_limit": false,
+  "exposure_guard_seconds": 8.410000000000001e-07,
+  "exposure_limit": false,
+  "exposure_overrun": 0.0,
+  "guidance_added_assertions": 0,
+  "guidance_created_bool_vars": 0,
+  "guidance_marked_relevant": 0,
+  "hot_callback_seconds": 4.1588e-05,
+  "intervened_check": true,
+  "lifecycle": [
+    {
+      "backend_call_id": 3,
+      "context_id": 3,
+      "kind": "attach"
+    },
+    {
+      "backend_call_id": 4,
+      "context_id": 4,
+      "kind": "attach"
+    },
+    {
+      "backend_call_id": 4,
+      "entry": "setup_and_check",
+      "kind": "search_entry"
+    },
+    {
+      "backend_call_id": 3,
+      "entry": "setup_and_check",
+      "kind": "search_entry"
+    },
+    {
+      "backend_call_id": 3,
+      "kind": "detach"
+    },
+    {
+      "backend_call_id": 4,
+      "kind": "detach"
+    }
+  ],
+  "mode": 2,
+  "ordinary": 3,
+  "phase_overrides": 2,
+  "query_id": 1,
+  "requested_exposure_limit": 45.0,
+  "route_metadata_seconds": 0.000116874,
+  "stages": [
+    {
+      "backend_call_id": 1,
+      "end": 0.086947031,
+      "outer_route": "",
+      "parent_call_id": 0,
+      "start": 0.042114961,
+      "tactic_name": "smt"
+    },
+    {
+      "backend_call_id": 2,
+      "end": 0.086942361,
+      "outer_route": "",
+      "parent_call_id": 0,
+      "start": 0.042152921,
+      "tactic_name": "smt"
+    }
+  ],
+  "suggestions": 2
+}

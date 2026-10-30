@@ -1,0 +1,18 @@
+{
+  "command": [
+    "g++",
+    "-std=c++20",
+    "-O3",
+    "-g",
+    "-I/mnt/Space1/SMT_Sampling/guided_sampler/include/round2",
+    "-I/mnt/Space1/SMT_Sampling/guided_sampler/include",
+    "-I/mnt/Space1/SMT_Sampling/guided_sampler/deps/round2_release/include",
+    "/mnt/Space1/SMT_Sampling/guided_sampler/tests/round2/canonical.cpp",
+    "-L/mnt/Space1/SMT_Sampling/guided_sampler/deps/round2_release/lib",
+    "-Wl,-rpath,/mnt/Space1/SMT_Sampling/guided_sampler/deps/round2_release/lib",
+    "-lz3",
+    "-o",
+    "/mnt/Space1/SMT_Sampling/guided_sampler/build/round2-canonical-release"
+  ],
+  "exit_code": 0
+}

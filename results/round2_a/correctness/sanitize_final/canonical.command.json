@@ -1,0 +1,7 @@
+{
+  "command": [
+    "/mnt/Space1/SMT_Sampling/guided_sampler/build/round2-canonical-sanitize",
+    "/mnt/Space1/SMT_Sampling/guided_sampler/results/round2_a/correctness/sanitize_final/canonical-data"
+  ],
+  "exit_code": 0
+}

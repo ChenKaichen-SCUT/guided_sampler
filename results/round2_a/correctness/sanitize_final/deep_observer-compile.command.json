@@ -1,0 +1,20 @@
+{
+  "command": [
+    "g++",
+    "-std=c++20",
+    "-O1",
+    "-g",
+    "-I/mnt/Space1/SMT_Sampling/guided_sampler/include/round2",
+    "-I/mnt/Space1/SMT_Sampling/guided_sampler/include",
+    "-I/mnt/Space1/SMT_Sampling/guided_sampler/deps/round2_sanitize/include",
+    "/mnt/Space1/SMT_Sampling/guided_sampler/tests/deep_observer.cpp",
+    "-L/mnt/Space1/SMT_Sampling/guided_sampler/deps/round2_sanitize/lib",
+    "-Wl,-rpath,/mnt/Space1/SMT_Sampling/guided_sampler/deps/round2_sanitize/lib",
+    "-lz3",
+    "-o",
+    "/mnt/Space1/SMT_Sampling/guided_sampler/build/round2-deep_observer-sanitize",
+    "-fsanitize=address,undefined",
+    "-fno-omit-frame-pointer"
+  ],
+  "exit_code": 0
+}

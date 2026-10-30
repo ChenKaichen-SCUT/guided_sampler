@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import argparse,os,subprocess,time
+import argparse,os,subprocess,time,concurrent.futures
 from common import *
 from finalize_samples import finalize
 from evaluate_official import evaluate
@@ -19,12 +19,15 @@ def compile(name,source=None):
  if a.variant=='sanitize':cmd+=['-fsanitize=address,undefined','-fno-omit-frame-pointer']
  run(cmd,name+'-compile',timeout=300);return binary
 checks={}
-for name in ('canonical','kernel','abandon','parallel','index_outcome','exposure'):
- binary=compile(name);run([binary,out/(name+'-data')],name);checks[name]=True
-for name in ('deep_observer','session'):
- binary=compile(name,ROOT/f'tests/{name}.cpp');run([binary,out/(name+'-data')],name);checks[name]=True
+new_names=('canonical','kernel','abandon','parallel','index_outcome','exposure','budgets','demands')
+sources={name:ROOT/f'tests/round2/{name}.cpp' for name in (*new_names,'observer')}
+sources.update({name:ROOT/f'tests/{name}.cpp' for name in ('deep_observer','session')})
+with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+ binaries=dict(zip(sources,pool.map(lambda name:compile(name,sources[name]),sources)))
+for name in (*new_names,'deep_observer','session'):
+ run([binaries[name],out/(name+'-data')],name);checks[name]=True
 run([sys.executable,ROOT/'tests/test_finalization.py'],'finalization');checks['finalization']=True
-observer=compile('observer');source=ROOT/'results/correctness/release';formula=source/'observer.smt2';models=source/'observer.models.json'
+observer=binaries['observer'];source=ROOT/'results/correctness/release';formula=source/'observer.smt2';models=source/'observer.models.json'
 result=run([observer,formula,models],'observer');(out/'observer.json').write_text(result)
 run([python(),ROOT/'tests/compare_observer.py',formula,models,out/'observer.json'],'observer-differential');checks['observer_differential']=True
 # Replay ONLY new-library finite controls; compare to saved first-round native baseline.

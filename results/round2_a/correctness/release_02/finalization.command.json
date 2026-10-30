@@ -1,0 +1,7 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/mnt/Space1/SMT_Sampling/guided_sampler/tests/test_finalization.py"
+  ],
+  "exit_code": 0
+}

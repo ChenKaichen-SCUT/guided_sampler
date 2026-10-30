@@ -1,0 +1,15 @@
++ /usr/bin/python3 /mnt/Space1/SMT_Sampling/guided_sampler/scripts/patch_round2_z3.py /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round2_release
+Traceback (most recent call last):
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/patch_round2_z3.py", line 90, in <module>
+    edit('sat/tactic/sat_tactic.cpp','#include \"tactic/tactic.h\"','#include \"tactic/tactic.h\"\n#include \"util/a_state.h\"')
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/patch_round2_z3.py", line 10, in edit
+    f=z/p;s=f.read_text();assert s.count(a)>=count,(p,a);f.write_text(s.replace(a,b,count))
+AssertionError: ('sat/tactic/sat_tactic.cpp', '#include "tactic/tactic.h"')
+Traceback (most recent call last):
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/build_round2.py", line 20, in <module>
+    run([sys.executable,ROOT/'scripts/patch_round2_z3.py',tree])
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/build_round2.py", line 8, in run
+    def run(c,**kw):print('+',' '.join(map(str,c)),flush=True);subprocess.run(list(map(str,c)),check=True,**kw)
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/usr/bin/python3', '/mnt/Space1/SMT_Sampling/guided_sampler/scripts/patch_round2_z3.py', '/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round2_release']' returned non-zero exit status 1.

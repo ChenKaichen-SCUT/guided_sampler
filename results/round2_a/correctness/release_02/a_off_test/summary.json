@@ -1,0 +1,16 @@
+{
+  "A_disabled": false,
+  "A_disabled_reason": "",
+  "A_exposure": 0.0,
+  "coverage": null,
+  "elapsed": 1.073059869,
+  "formal_count": 1,
+  "guidance_cost": 0.0,
+  "last_online_version": 0,
+  "queries": 20,
+  "raw_count": 19,
+  "sample_limit": 8,
+  "status": "finished",
+  "total": null,
+  "wall_limit": 15.0
+}

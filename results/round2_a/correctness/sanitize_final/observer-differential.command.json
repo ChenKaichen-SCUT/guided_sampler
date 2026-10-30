@@ -1,0 +1,10 @@
+{
+  "command": [
+    "/mnt/Space1/SMT_Sampling/guided_sampler/deps/baseline/bin/python3",
+    "/mnt/Space1/SMT_Sampling/guided_sampler/tests/compare_observer.py",
+    "/mnt/Space1/SMT_Sampling/guided_sampler/results/correctness/release/observer.smt2",
+    "/mnt/Space1/SMT_Sampling/guided_sampler/results/correctness/release/observer.models.json",
+    "/mnt/Space1/SMT_Sampling/guided_sampler/results/round2_a/correctness/sanitize_final/observer.json"
+  ],
+  "exit_code": 0
+}

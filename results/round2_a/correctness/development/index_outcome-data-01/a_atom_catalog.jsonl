@@ -1,0 +1,4 @@
+{"key":"EX:B$1:p","rules":[{"known_one":"1","known_zero":"0","node":3,"phase":true},{"known_one":"0","known_zero":"1","node":3,"phase":false}]}
+{"key":"EX:B$1:q","rules":[{"known_one":"1","known_zero":"0","node":4,"phase":true},{"known_one":"0","known_zero":"1","node":4,"phase":false}]}
+{"key":"LE:C-10;5:I$1:x=1;","rules":[{"known_one":"1","known_zero":"0","node":8,"phase":true},{"known_one":"0","known_zero":"1","node":8,"phase":false}]}
+{"key":"LE:C1;5:I$1:x=1;","rules":[{"known_one":"1","known_zero":"0","node":5,"phase":false},{"known_one":"0","known_zero":"1","node":5,"phase":true}]}

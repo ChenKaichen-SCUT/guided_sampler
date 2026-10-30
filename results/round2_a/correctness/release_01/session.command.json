@@ -1,0 +1,7 @@
+{
+  "command": [
+    "/mnt/Space1/SMT_Sampling/guided_sampler/build/round2-session-release",
+    "/mnt/Space1/SMT_Sampling/guided_sampler/results/round2_a/correctness/release_01/session-data"
+  ],
+  "exit_code": 0
+}

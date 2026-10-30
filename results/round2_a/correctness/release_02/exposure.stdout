@@ -1,0 +1,2647 @@
+{
+  "reason": "guidance_exposure_limit",
+  "result": "unknown",
+  "stats": {
+    "actions": [
+      {
+        "actual_var": 5,
+        "assignment_token": 1,
+        "backend_call_id": 1,
+        "canonical_key": "EX:B$5:p_0_4",
+        "context_generation": 1,
+        "context_id": 1,
+        "coverage_version": 1,
+        "decision_id": 1,
+        "effective_phase": true,
+        "final_atom_truth": null,
+        "level": 2,
+        "literal_negated": false,
+        "mapping_kind": "exact_structure",
+        "native_phase": false,
+        "native_var": 5,
+        "phase_changed": true,
+        "query_id": 1,
+        "reassigned_opposite": 3320,
+        "reassigned_same": 825,
+        "suggested_phase": true,
+        "support": [
+          {
+            "desired_one_mask": "1",
+            "desired_zero_mask": "0",
+            "node": 4
+          }
+        ],
+        "trail_index": 1,
+        "trailed_assignment_popped": true,
+        "would_override": true
+      },
+      {
+        "actual_var": 132,
+        "assignment_token": 2,
+        "backend_call_id": 1,
+        "canonical_key": "EX:B$7:p_11_10",
+        "context_generation": 1,
+        "context_id": 1,
+        "coverage_version": 1,
+        "decision_id": 2,
+        "effective_phase": true,
+        "final_atom_truth": null,
+        "level": 3,
+        "literal_negated": false,
+        "mapping_kind": "exact_structure",
+        "native_phase": false,
+        "native_var": 132,
+        "phase_changed": true,
+        "query_id": 1,
+        "reassigned_opposite": 1256,
+        "reassigned_same": 308,
+        "suggested_phase": true,
+        "support": [
+          {
+            "desired_one_mask": "1",
+            "desired_zero_mask": "0",
+            "node": 131
+          }
+        ],
+        "trail_index": 13,
+        "trailed_assignment_popped": true,
+        "would_override": true
+      },
+      {
+        "actual_var": 131,
+        "assignment_token": 3,
+        "backend_call_id": 1,
+        "canonical_key": "EX:B$6:p_11_9",
+        "context_generation": 1,
+        "context_id": 1,
+        "coverage_version": 1,
+        "decision_id": 3,
+        "effective_phase": true,
+        "final_atom_truth": null,
+        "level": 4,
+        "literal_negated": false,
+        "mapping_kind": "exact_structure",
+        "native_phase": false,
+        "native_var": 131,
+        "phase_changed": true,
+        "query_id": 1,
+        "reassigned_opposite": 2488,
+        "reassigned_same": 481,
+        "suggested_phase": true,
+        "support": [
+          {
+            "desired_one_mask": "1",
+            "desired_zero_mask": "0",
+            "node": 130
+          }
+        ],
+        "trail_index": 25,
+        "trailed_assignment_popped": true,
+        "would_override": true
+      },
+      {
+        "actual_var": 130,
+        "assignment_token": 4,
+        "backend_call_id": 1,
+        "canonical_key": "EX:B$6:p_11_8",
+        "context_generation": 1,
+        "context_id": 1,
+        "coverage_version": 1,
+        "decision_id": 4,
+        "effective_phase": true,
+        "final_atom_truth": null,
+        "level": 5,
+        "literal_negated": false,
+        "mapping_kind": "exact_structure",
+        "native_phase": false,
+        "native_var": 130,
+        "phase_changed": true,
+        "query_id": 1,
+        "reassigned_opposite": 1495,
+        "reassigned_same": 471,
+        "suggested_phase": true,
+        "support": [
+          {
+            "desired_one_mask": "1",
+            "desired_zero_mask": "0",
+            "node": 129
+          }
+        ],
+        "trail_index": 37,
+        "trailed_assignment_popped": true,
+        "would_override": true
+      }
+    ],
+    "actual_end": 0.200089371,
+    "b_encoded": 0,
+    "b_internalized": 0,
+    "b_selected": 0,
+    "backend_calls": [
+      {
+        "assertions_after_register": 738,
+        "assertions_before_register": 738,
+        "backend_call_id": 1,
+        "binding_seconds": 0.00078866,
+        "binding_snapshot": [
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_0_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 1
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_0_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 2
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_0_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 3
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_0_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 4
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_0_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 5
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_0_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 6
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_0_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 7
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_0_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 8
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_0_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 9
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_0_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 10
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_1_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 12
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_1_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 13
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_1_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 14
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_1_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 15
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_1_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 16
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_1_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 17
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_1_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 18
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_1_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 19
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_1_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 20
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_1_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 21
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_2_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 23
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_2_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 24
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_2_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 25
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_2_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 26
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_2_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 27
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_2_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 28
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_2_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 29
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_2_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 30
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_2_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 31
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_2_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 32
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_3_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 34
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_3_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 35
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_3_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 36
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_3_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 37
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_3_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 38
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_3_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 39
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_3_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 40
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_3_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 41
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_3_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 42
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_3_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 43
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_4_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 45
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_4_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 46
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_4_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 47
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_4_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 48
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_4_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 49
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_4_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 50
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_4_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 51
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_4_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 52
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_4_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 53
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_4_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 54
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_5_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 56
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_5_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 57
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_5_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 58
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_5_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 59
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_5_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 60
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_5_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 61
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_5_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 62
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_5_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 63
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_5_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 64
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_5_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 65
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_6_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 67
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_6_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 68
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_6_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 69
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_6_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 70
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_6_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 71
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_6_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 72
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_6_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 73
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_6_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 74
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_6_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 75
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_6_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 76
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_7_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 78
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_7_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 79
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_7_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 80
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_7_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 81
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_7_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 82
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_7_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 83
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_7_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 84
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_7_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 85
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_7_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 86
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_7_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 87
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_8_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 89
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_8_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 90
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_8_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 91
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_8_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 92
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_8_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 93
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_8_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 94
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_8_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 95
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_8_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 96
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_8_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 97
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_8_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 98
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_9_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 100
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_9_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 101
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_9_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 102
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_9_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 103
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_9_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 104
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_9_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 105
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_9_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 106
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$5:p_9_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 107
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_9_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 108
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$5:p_9_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 109
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_0_10",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 11
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_10_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 111
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_10_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 112
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_10_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 113
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_10_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 114
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_10_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 115
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_10_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 116
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_10_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 117
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_10_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 118
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_10_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 119
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_10_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 120
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_11_0",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 122
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_11_1",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 123
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_11_2",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 124
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_11_3",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 125
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_11_4",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 126
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_11_5",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 127
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_11_6",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 128
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_11_7",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 129
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_11_8",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 130
+          },
+          {
+            "encountered_in_window": true,
+            "key": "EX:B$6:p_11_9",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 131
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_1_10",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 22
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_2_10",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 33
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_3_10",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 44
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_4_10",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 55
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_5_10",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 66
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_6_10",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 77
+          },
+          {
+            "encountered_in_window": false,
+            "key": "EX:B$6:p_7_10",
+            "reason": "assigned_reason_unknown",
+            "state": "bound_unassigned",
+            "var": 88
+          }
+        ],
+        "binding_snapshot_limit": 128,
+        "bool_vars_after_register": 1,
+        "bool_vars_before_register": 1,
+        "check_seconds": 0.19947225100000002,
+        "context_generation": 1,
+        "context_id": 1,
+        "end": 0.200004381,
+        "entry_function": "check",
+        "exact_matches": 80,
+        "funnel": {
+          "different_phase_suggestions": 4,
+          "has_current_demand": 64,
+          "has_direct_mapping": 80,
+          "native_ordinary_seen": 16192,
+          "outside_decision_window": 16128,
+          "outside_window_potential": 16,
+          "phase_overrides": 4,
+          "quota_rejected": 60,
+          "within_decision_window": 64
+        },
+        "incomplete_mapping": 0,
+        "ls_sampling": false,
+        "metadata_received": true,
+        "native_context_address": 106672374497296,
+        "native_encounters": [
+          {
+            "canonical_key": "EX:B$5:p_0_4",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 5,
+            "ordinal": 1,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 4,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$7:p_11_10",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 132,
+            "ordinal": 2,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 131,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$6:p_11_9",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 131,
+            "ordinal": 3,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 130,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$6:p_11_8",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 130,
+            "ordinal": 4,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 129,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$6:p_11_7",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 129,
+            "ordinal": 5,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 128,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$6:p_11_6",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 128,
+            "ordinal": 6,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 127,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$6:p_11_5",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 127,
+            "ordinal": 7,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 126,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$6:p_11_3",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 125,
+            "ordinal": 8,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 124,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$6:p_11_2",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 124,
+            "ordinal": 9,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 123,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$6:p_11_1",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 123,
+            "ordinal": 10,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 122,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$6:p_11_0",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 122,
+            "ordinal": 11,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 121,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$6:p_10_7",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 118,
+            "ordinal": 12,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 117,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$6:p_10_6",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 117,
+            "ordinal": 13,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 116,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$6:p_10_5",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 116,
+            "ordinal": 14,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 115,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$6:p_10_3",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 114,
+            "ordinal": 15,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 113,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$6:p_10_2",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 113,
+            "ordinal": 16,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 112,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$6:p_10_1",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 112,
+            "ordinal": 17,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 111,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_9_7",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 107,
+            "ordinal": 18,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 106,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_9_6",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 106,
+            "ordinal": 19,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 105,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_9_5",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 105,
+            "ordinal": 20,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 104,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_9_3",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 103,
+            "ordinal": 21,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 102,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_9_2",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 102,
+            "ordinal": 22,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 101,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_8_7",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 96,
+            "ordinal": 23,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 95,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_8_6",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 95,
+            "ordinal": 24,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 94,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_8_5",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 94,
+            "ordinal": 25,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 93,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_8_3",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 92,
+            "ordinal": 26,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 91,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_7_7",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 85,
+            "ordinal": 27,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 84,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_7_6",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 84,
+            "ordinal": 28,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 83,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_7_5",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 83,
+            "ordinal": 29,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 82,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_6_7",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 74,
+            "ordinal": 30,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 73,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_6_6",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 73,
+            "ordinal": 31,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 72,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_5_7",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 63,
+            "ordinal": 32,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 62,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_2_6",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 29,
+            "ordinal": 33,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 28,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_1_6",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 18,
+            "ordinal": 34,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 17,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_1_7",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 19,
+            "ordinal": 35,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 18,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_2_7",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 30,
+            "ordinal": 36,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 29,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_1_7",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 19,
+            "ordinal": 37,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 18,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_1_6",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 18,
+            "ordinal": 38,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 17,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_1_5",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 17,
+            "ordinal": 39,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 16,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_3_3",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 37,
+            "ordinal": 40,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 36,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_4_3",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 48,
+            "ordinal": 41,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 47,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_1_3",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 15,
+            "ordinal": 42,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 14,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_2_3",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 26,
+            "ordinal": 43,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 25,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_3_5",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 39,
+            "ordinal": 44,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 38,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_3_6",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 40,
+            "ordinal": 45,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 39,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_2_6",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 29,
+            "ordinal": 46,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 28,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_4_5",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 50,
+            "ordinal": 47,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 49,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_4_6",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 51,
+            "ordinal": 48,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 50,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_3_5",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 39,
+            "ordinal": 49,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 38,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_4_7",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 52,
+            "ordinal": 50,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 51,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_4_7",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 52,
+            "ordinal": 51,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 51,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_4_3",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 48,
+            "ordinal": 52,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 47,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_2_6",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 29,
+            "ordinal": 53,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 28,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_4_7",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 52,
+            "ordinal": 54,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 51,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_2_6",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 29,
+            "ordinal": 55,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 28,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_4_3",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 48,
+            "ordinal": 56,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 47,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_3_3",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 37,
+            "ordinal": 57,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 36,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_2_5",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 28,
+            "ordinal": 58,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 27,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_2_3",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 26,
+            "ordinal": 59,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 25,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_4_7",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 52,
+            "ordinal": 60,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 51,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_3_2",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 36,
+            "ordinal": 61,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 35,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_3_3",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 37,
+            "ordinal": 62,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 36,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_2_6",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 29,
+            "ordinal": 63,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 28,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_4_3",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 48,
+            "ordinal": 64,
+            "outside_window": false,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 47,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_4_2",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 47,
+            "ordinal": 65,
+            "outside_window": true,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 46,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_2_2",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 25,
+            "ordinal": 66,
+            "outside_window": true,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 24,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_3_6",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 40,
+            "ordinal": 67,
+            "outside_window": true,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 39,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_2_3",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 26,
+            "ordinal": 68,
+            "outside_window": true,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 25,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_5_3",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 59,
+            "ordinal": 69,
+            "outside_window": true,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 58,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_3_5",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 39,
+            "ordinal": 70,
+            "outside_window": true,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 38,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_4_5",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 50,
+            "ordinal": 71,
+            "outside_window": true,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 49,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_2_5",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 28,
+            "ordinal": 72,
+            "outside_window": true,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 27,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_2_7",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 30,
+            "ordinal": 73,
+            "outside_window": true,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 29,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_3_7",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 41,
+            "ordinal": 74,
+            "outside_window": true,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 40,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_5_2",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 58,
+            "ordinal": 75,
+            "outside_window": true,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 57,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_4_6",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 51,
+            "ordinal": 76,
+            "outside_window": true,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 50,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_4_7",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 52,
+            "ordinal": 77,
+            "outside_window": true,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 51,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_4_6",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 51,
+            "ordinal": 78,
+            "outside_window": true,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 50,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_5_2",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 58,
+            "ordinal": 79,
+            "outside_window": true,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 57,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          },
+          {
+            "canonical_key": "EX:B$5:p_4_5",
+            "complete": true,
+            "native_phase": false,
+            "native_var": 50,
+            "ordinal": 80,
+            "outside_window": true,
+            "reason": "",
+            "score_false": 0,
+            "score_true": 1,
+            "supported_demands": [
+              {
+                "canonical_phase": 1,
+                "node": 49,
+                "one": "1",
+                "zero": "0"
+              }
+            ]
+          }
+        ],
+        "normalized_atoms": 53,
+        "normalized_matches": 0,
+        "ordinary_decisions": 16192,
+        "original_reason_unknown": "canceled",
+        "outer_route": "solver2",
+        "parent_call_id": 0,
+        "query_id": 1,
+        "result": "unknown",
+        "route_reason": "native_incremental_mode",
+        "snapshot_native_vars_scanned": 133,
+        "solver_id": 106672374037248,
+        "start": 0.00053213,
+        "tactic_name": "smt_solver",
+        "unmapped": 0,
+        "unsupported_normal_form": 0
+      }
+    ],
+    "binding_seconds": 0.00078866,
+    "coverage_version": 1,
+    "diagnostic_snapshot_seconds": 0.000526326,
+    "direct_seconds": 0.013466409999999821,
+    "explicit_limit": false,
+    "exposure_guard_seconds": 0.00664127,
+    "exposure_limit": true,
+    "exposure_overrun": 8.951699999998342e-05,
+    "guidance_added_assertions": 0,
+    "guidance_created_bool_vars": 0,
+    "guidance_marked_relevant": 0,
+    "hot_callback_seconds": 0.0055101539999999685,
+    "intervened_check": true,
+    "lifecycle": [
+      {
+        "backend_call_id": 1,
+        "context_id": 1,
+        "kind": "attach"
+      },
+      {
+        "backend_call_id": 1,
+        "entry": "check",
+        "kind": "search_entry"
+      },
+      {
+        "backend_call_id": 1,
+        "kind": "detach"
+      },
+      {
+        "kind": "skip_combined_fallback"
+      }
+    ],
+    "mode": 2,
+    "ordinary": 16192,
+    "phase_overrides": 4,
+    "query_id": 1,
+    "requested_exposure_limit": 0.2,
+    "route_metadata_seconds": 0.0,
+    "stages": [],
+    "suggestions": 4
+  }
+}

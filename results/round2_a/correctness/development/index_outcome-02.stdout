@@ -1,0 +1,205 @@
+{
+  "outcomes": [
+    {
+      "backend_call_id": 1,
+      "decision_id": 1,
+      "phase_changed": true,
+      "targets": [
+        {
+          "desired_one_mask": "1",
+          "desired_zero_mask": "0",
+          "hit_one_mask": "1",
+          "hit_zero_mask": "0",
+          "new_covered_for_targets": 1,
+          "new_one_mask": "1",
+          "new_zero_mask": "0",
+          "node": 5,
+          "reached": true
+        },
+        {
+          "desired_one_mask": "0",
+          "desired_zero_mask": "1",
+          "hit_one_mask": "0",
+          "hit_zero_mask": "0",
+          "new_covered_for_targets": 0,
+          "new_one_mask": "0",
+          "new_zero_mask": "0",
+          "node": 7,
+          "reached": false
+        }
+      ]
+    },
+    {
+      "backend_call_id": 1,
+      "decision_id": 2,
+      "phase_changed": false,
+      "targets": [
+        {
+          "desired_one_mask": "0",
+          "desired_zero_mask": "1",
+          "hit_one_mask": "0",
+          "hit_zero_mask": "1",
+          "new_covered_for_targets": 1,
+          "new_one_mask": "0",
+          "new_zero_mask": "1",
+          "node": 4,
+          "reached": true
+        }
+      ]
+    }
+  ],
+  "passed": true,
+  "stats": {
+    "actions": [
+      {
+        "actual_var": 2,
+        "assignment_token": 1,
+        "backend_call_id": 1,
+        "canonical_key": "EX:B$1:q",
+        "context_generation": 1,
+        "context_id": 1,
+        "coverage_version": 1,
+        "decision_id": 1,
+        "effective_phase": true,
+        "final_atom_truth": true,
+        "level": 2,
+        "literal_negated": false,
+        "mapping_kind": "exact_structure",
+        "native_phase": false,
+        "native_var": 2,
+        "phase_changed": true,
+        "query_id": 1,
+        "reassigned_opposite": 0,
+        "reassigned_same": 0,
+        "suggested_phase": true,
+        "support": [
+          {
+            "desired_one_mask": "1",
+            "desired_zero_mask": "0",
+            "node": 5
+          },
+          {
+            "desired_one_mask": "0",
+            "desired_zero_mask": "1",
+            "node": 7
+          }
+        ],
+        "trail_index": 3,
+        "trailed_assignment_popped": false,
+        "would_override": true
+      },
+      {
+        "actual_var": 1,
+        "assignment_token": 2,
+        "backend_call_id": 1,
+        "canonical_key": "EX:B$1:p",
+        "context_generation": 1,
+        "context_id": 1,
+        "coverage_version": 1,
+        "decision_id": 2,
+        "effective_phase": false,
+        "final_atom_truth": false,
+        "level": 3,
+        "literal_negated": false,
+        "mapping_kind": "exact_structure",
+        "native_phase": false,
+        "native_var": 1,
+        "phase_changed": false,
+        "query_id": 1,
+        "reassigned_opposite": 0,
+        "reassigned_same": 0,
+        "suggested_phase": false,
+        "support": [
+          {
+            "desired_one_mask": "0",
+            "desired_zero_mask": "1",
+            "node": 4
+          }
+        ],
+        "trail_index": 4,
+        "trailed_assignment_popped": false,
+        "would_override": false
+      }
+    ],
+    "actual_end": 0.002504284,
+    "b_encoded": 0,
+    "b_internalized": 0,
+    "b_selected": 0,
+    "backend_calls": [
+      {
+        "assertions_after_register": 3,
+        "assertions_before_register": 3,
+        "backend_call_id": 1,
+        "binding_seconds": 0.000229055,
+        "bool_vars_after_register": 1,
+        "bool_vars_before_register": 1,
+        "check_seconds": 0.002072301,
+        "context_generation": 1,
+        "context_id": 1,
+        "end": 0.002482072,
+        "entry_function": "check",
+        "exact_matches": 2,
+        "funnel": {
+          "different_phase_suggestions": 1,
+          "has_current_demand": 2,
+          "has_direct_mapping": 2,
+          "native_ordinary_seen": 2,
+          "phase_overrides": 1,
+          "same_phase_suggestions": 1,
+          "within_decision_window": 2
+        },
+        "incomplete_mapping": 0,
+        "ls_sampling": false,
+        "metadata_received": true,
+        "native_context_address": 102722748515088,
+        "normalized_atoms": 2,
+        "normalized_matches": 0,
+        "ordinary_decisions": 2,
+        "original_reason_unknown": "",
+        "outer_route": "solver2",
+        "parent_call_id": 0,
+        "query_id": 1,
+        "result": "sat",
+        "route_reason": "native_incremental_mode",
+        "start": 0.000409771,
+        "tactic_name": "smt_solver",
+        "unmapped": 0,
+        "unsupported_normal_form": 0
+      }
+    ],
+    "coverage_version": 1,
+    "direct_seconds": 0.000530049,
+    "explicit_limit": false,
+    "exposure_limit": false,
+    "exposure_overrun": 0.0,
+    "guidance_added_assertions": 0,
+    "guidance_created_bool_vars": 0,
+    "guidance_marked_relevant": 0,
+    "intervened_check": true,
+    "lifecycle": [
+      {
+        "backend_call_id": 1,
+        "context_id": 1,
+        "kind": "attach"
+      },
+      {
+        "backend_call_id": 1,
+        "entry": "check",
+        "kind": "search_entry"
+      },
+      {
+        "backend_call_id": 1,
+        "kind": "detach"
+      }
+    ],
+    "mode": 2,
+    "ordinary": 2,
+    "phase_overrides": 1,
+    "query_id": 1,
+    "requested_exposure_limit": 45.0,
+    "stages": [],
+    "suggestions": 2
+  },
+  "target_new_covered": 2,
+  "whole_model_new_covered": 2
+}

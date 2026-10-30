@@ -1,0 +1,345 @@
+{
+  "calls": 36,
+  "jobs": [
+    {
+      "case_id": "00_first_history",
+      "mode": "a_off_test",
+      "ordinal": 0,
+      "exit_code": 0,
+      "process_seconds": 0.11878293399968243
+    },
+    {
+      "case_id": "00_first_history",
+      "mode": "a_observe_test",
+      "ordinal": 1,
+      "exit_code": 0,
+      "process_seconds": 0.11862540599940985
+    },
+    {
+      "case_id": "00_first_history",
+      "mode": "a_apply_test",
+      "ordinal": 2,
+      "exit_code": 0,
+      "process_seconds": 0.17032116500013217
+    },
+    {
+      "case_id": "00_tenth_history",
+      "mode": "a_observe_test",
+      "ordinal": 3,
+      "exit_code": 0,
+      "process_seconds": 0.16973789800067607
+    },
+    {
+      "case_id": "00_tenth_history",
+      "mode": "a_apply_test",
+      "ordinal": 4,
+      "exit_code": 0,
+      "process_seconds": 0.17044757999974536
+    },
+    {
+      "case_id": "00_tenth_history",
+      "mode": "a_off_test",
+      "ordinal": 5,
+      "exit_code": 0,
+      "process_seconds": 0.11914613299995835
+    },
+    {
+      "case_id": "00_last_complete",
+      "mode": "a_apply_test",
+      "ordinal": 6,
+      "exit_code": 0,
+      "process_seconds": 0.17041576800056646
+    },
+    {
+      "case_id": "00_last_complete",
+      "mode": "a_off_test",
+      "ordinal": 7,
+      "exit_code": 0,
+      "process_seconds": 0.11957127500045317
+    },
+    {
+      "case_id": "00_last_complete",
+      "mode": "a_observe_test",
+      "ordinal": 8,
+      "exit_code": 0,
+      "process_seconds": 0.16998028799935128
+    },
+    {
+      "case_id": "02_first_history",
+      "mode": "a_off_test",
+      "ordinal": 9,
+      "exit_code": 0,
+      "process_seconds": 2.1238229420005155
+    },
+    {
+      "case_id": "02_first_history",
+      "mode": "a_observe_test",
+      "ordinal": 10,
+      "exit_code": 0,
+      "process_seconds": 2.1739575519995924
+    },
+    {
+      "case_id": "02_first_history",
+      "mode": "a_apply_test",
+      "ordinal": 11,
+      "exit_code": 0,
+      "process_seconds": 2.174247732999902
+    },
+    {
+      "case_id": "02_tenth_history",
+      "mode": "a_observe_test",
+      "ordinal": 12,
+      "exit_code": 0,
+      "process_seconds": 2.2744281550003507
+    },
+    {
+      "case_id": "02_tenth_history",
+      "mode": "a_apply_test",
+      "ordinal": 13,
+      "exit_code": 0,
+      "process_seconds": 2.2227338110005803
+    },
+    {
+      "case_id": "02_tenth_history",
+      "mode": "a_off_test",
+      "ordinal": 14,
+      "exit_code": 0,
+      "process_seconds": 2.123804439000196
+    },
+    {
+      "case_id": "02_last_complete",
+      "mode": "a_apply_test",
+      "ordinal": 15,
+      "exit_code": 0,
+      "process_seconds": 2.1731337049996
+    },
+    {
+      "case_id": "02_last_complete",
+      "mode": "a_off_test",
+      "ordinal": 16,
+      "exit_code": 0,
+      "process_seconds": 2.1237418129994694
+    },
+    {
+      "case_id": "02_last_complete",
+      "mode": "a_observe_test",
+      "ordinal": 17,
+      "exit_code": 0,
+      "process_seconds": 2.1741275120002683
+    },
+    {
+      "case_id": "03_first_history",
+      "mode": "a_off_test",
+      "ordinal": 18,
+      "exit_code": 0,
+      "process_seconds": 2.1744523959996513
+    },
+    {
+      "case_id": "03_first_history",
+      "mode": "a_observe_test",
+      "ordinal": 19,
+      "exit_code": 0,
+      "process_seconds": 2.3314881789992796
+    },
+    {
+      "case_id": "03_first_history",
+      "mode": "a_apply_test",
+      "ordinal": 20,
+      "exit_code": 0,
+      "process_seconds": 9.4265366919999
+    },
+    {
+      "case_id": "03_tenth_history",
+      "mode": "a_observe_test",
+      "ordinal": 21,
+      "exit_code": 0,
+      "process_seconds": 2.375189431000763
+    },
+    {
+      "case_id": "03_tenth_history",
+      "mode": "a_apply_test",
+      "ordinal": 22,
+      "exit_code": 0,
+      "process_seconds": 2.231541121999726
+    },
+    {
+      "case_id": "03_tenth_history",
+      "mode": "a_off_test",
+      "ordinal": 23,
+      "exit_code": 0,
+      "process_seconds": 2.2241625020005813
+    },
+    {
+      "case_id": "03_last_complete",
+      "mode": "a_apply_test",
+      "ordinal": 24,
+      "exit_code": 0,
+      "process_seconds": 2.4238987930002622
+    },
+    {
+      "case_id": "03_last_complete",
+      "mode": "a_off_test",
+      "ordinal": 25,
+      "exit_code": 0,
+      "process_seconds": 2.3250115840000944
+    },
+    {
+      "case_id": "03_last_complete",
+      "mode": "a_observe_test",
+      "ordinal": 26,
+      "exit_code": 0,
+      "process_seconds": 2.1751444589999664
+    },
+    {
+      "case_id": "04_first_history",
+      "mode": "a_off_test",
+      "ordinal": 27,
+      "exit_code": 0,
+      "process_seconds": 2.2773266920003152
+    },
+    {
+      "case_id": "04_first_history",
+      "mode": "a_observe_test",
+      "ordinal": 28,
+      "exit_code": 0,
+      "process_seconds": 1.123354043999825
+    },
+    {
+      "case_id": "04_first_history",
+      "mode": "a_apply_test",
+      "ordinal": 29,
+      "exit_code": 0,
+      "process_seconds": 2.6777885150004295
+    },
+    {
+      "case_id": "04_tenth_history",
+      "mode": "a_observe_test",
+      "ordinal": 30,
+      "exit_code": 0,
+      "process_seconds": 1.975401220999629
+    },
+    {
+      "case_id": "04_tenth_history",
+      "mode": "a_apply_test",
+      "ordinal": 31,
+      "exit_code": 0,
+      "process_seconds": 3.0590577579996534
+    },
+    {
+      "case_id": "04_tenth_history",
+      "mode": "a_off_test",
+      "ordinal": 32,
+      "exit_code": 0,
+      "process_seconds": 2.1774048979996223
+    },
+    {
+      "case_id": "04_last_complete",
+      "mode": "a_apply_test",
+      "ordinal": 33,
+      "exit_code": 0,
+      "process_seconds": 4.914880059000097
+    },
+    {
+      "case_id": "04_last_complete",
+      "mode": "a_off_test",
+      "ordinal": 34,
+      "exit_code": 0,
+      "process_seconds": 0.5689793739993547
+    },
+    {
+      "case_id": "04_last_complete",
+      "mode": "a_observe_test",
+      "ordinal": 35,
+      "exit_code": 0,
+      "process_seconds": 0.7198547309999412
+    }
+  ],
+  "off_observe": [
+    {
+      "case_id": "00_first_history",
+      "native_trace_equal": null,
+      "result_equal": true,
+      "projection_equal": true,
+      "timeout_comparison_is_not_invariant": false
+    },
+    {
+      "case_id": "00_tenth_history",
+      "native_trace_equal": null,
+      "result_equal": true,
+      "projection_equal": true,
+      "timeout_comparison_is_not_invariant": false
+    },
+    {
+      "case_id": "00_last_complete",
+      "native_trace_equal": null,
+      "result_equal": true,
+      "projection_equal": true,
+      "timeout_comparison_is_not_invariant": false
+    },
+    {
+      "case_id": "02_first_history",
+      "native_trace_equal": false,
+      "result_equal": true,
+      "projection_equal": true,
+      "timeout_comparison_is_not_invariant": true
+    },
+    {
+      "case_id": "02_tenth_history",
+      "native_trace_equal": false,
+      "result_equal": true,
+      "projection_equal": true,
+      "timeout_comparison_is_not_invariant": true
+    },
+    {
+      "case_id": "02_last_complete",
+      "native_trace_equal": true,
+      "result_equal": true,
+      "projection_equal": true,
+      "timeout_comparison_is_not_invariant": true
+    },
+    {
+      "case_id": "03_first_history",
+      "native_trace_equal": false,
+      "result_equal": true,
+      "projection_equal": true,
+      "timeout_comparison_is_not_invariant": true
+    },
+    {
+      "case_id": "03_tenth_history",
+      "native_trace_equal": false,
+      "result_equal": true,
+      "projection_equal": true,
+      "timeout_comparison_is_not_invariant": true
+    },
+    {
+      "case_id": "03_last_complete",
+      "native_trace_equal": false,
+      "result_equal": true,
+      "projection_equal": true,
+      "timeout_comparison_is_not_invariant": true
+    },
+    {
+      "case_id": "04_first_history",
+      "native_trace_equal": true,
+      "result_equal": true,
+      "projection_equal": true,
+      "timeout_comparison_is_not_invariant": false
+    },
+    {
+      "case_id": "04_tenth_history",
+      "native_trace_equal": true,
+      "result_equal": true,
+      "projection_equal": true,
+      "timeout_comparison_is_not_invariant": false
+    },
+    {
+      "case_id": "04_last_complete",
+      "native_trace_equal": true,
+      "result_equal": true,
+      "projection_equal": true,
+      "timeout_comparison_is_not_invariant": false
+    }
+  ],
+  "learned_state_reconstructed": false,
+  "tuned_on_results": false
+}

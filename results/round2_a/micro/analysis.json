@@ -1,0 +1,2554 @@
+{
+  "rows": [
+    {
+      "case_id": "00_first_history",
+      "mode": "a_off_test",
+      "result": "sat",
+      "reason": "",
+      "check_seconds": 0.015400752,
+      "initialization_seconds": 1.73e-07,
+      "leaves": "",
+      "ordinary": 0,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": null,
+      "binding_bounded_sample": {},
+      "funnel": {},
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          2,
+          6,
+          1
+        ],
+        [
+          2,
+          7,
+          1
+        ],
+        [
+          2,
+          21,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "00_first_history",
+      "mode": "a_observe_test",
+      "result": "sat",
+      "reason": "",
+      "check_seconds": 0.016454715,
+      "initialization_seconds": 0.012413987,
+      "leaves": "smt_solver/check",
+      "ordinary": 0,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0.002015706,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": 110,
+      "binding_bounded_sample": {
+        "bound_assigned_true": 110
+      },
+      "funnel": {},
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          2,
+          6,
+          1
+        ],
+        [
+          2,
+          7,
+          1
+        ],
+        [
+          2,
+          21,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "00_first_history",
+      "mode": "a_apply_test",
+      "result": "sat",
+      "reason": "",
+      "check_seconds": 0.015625661,
+      "initialization_seconds": 0.013016366,
+      "leaves": "smt_solver/check",
+      "ordinary": 0,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0.001778691,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": 110,
+      "binding_bounded_sample": {
+        "bound_assigned_true": 110
+      },
+      "funnel": {},
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          2,
+          6,
+          1
+        ],
+        [
+          2,
+          7,
+          1
+        ],
+        [
+          2,
+          21,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "00_tenth_history",
+      "mode": "a_off_test",
+      "result": "sat",
+      "reason": "",
+      "check_seconds": 0.015181918,
+      "initialization_seconds": 1.01e-07,
+      "leaves": "",
+      "ordinary": 0,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": null,
+      "binding_bounded_sample": {},
+      "funnel": {},
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          6,
+          1
+        ],
+        [
+          2,
+          46,
+          1
+        ],
+        [
+          2,
+          63,
+          1
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          5,
+          1,
+          1
+        ],
+        [
+          5,
+          9,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "00_tenth_history",
+      "mode": "a_observe_test",
+      "result": "sat",
+      "reason": "",
+      "check_seconds": 0.016587848,
+      "initialization_seconds": 0.013047799,
+      "leaves": "smt_solver/check",
+      "ordinary": 0,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0.00182721,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": 110,
+      "binding_bounded_sample": {
+        "bound_assigned_true": 110
+      },
+      "funnel": {},
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          6,
+          1
+        ],
+        [
+          2,
+          46,
+          1
+        ],
+        [
+          2,
+          63,
+          1
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          5,
+          1,
+          1
+        ],
+        [
+          5,
+          9,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "00_tenth_history",
+      "mode": "a_apply_test",
+      "result": "sat",
+      "reason": "",
+      "check_seconds": 0.01818462,
+      "initialization_seconds": 0.013638507,
+      "leaves": "smt_solver/check",
+      "ordinary": 0,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0.001921003,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": 110,
+      "binding_bounded_sample": {
+        "bound_assigned_true": 110
+      },
+      "funnel": {},
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          6,
+          1
+        ],
+        [
+          2,
+          46,
+          1
+        ],
+        [
+          2,
+          63,
+          1
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          5,
+          1,
+          1
+        ],
+        [
+          5,
+          9,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "00_last_complete",
+      "mode": "a_off_test",
+      "result": "sat",
+      "reason": "",
+      "check_seconds": 0.01664339,
+      "initialization_seconds": 9.8e-08,
+      "leaves": "",
+      "ordinary": 0,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": null,
+      "binding_bounded_sample": {},
+      "funnel": {},
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          8,
+          0,
+          0
+        ],
+        [
+          10,
+          0,
+          0
+        ],
+        [
+          12,
+          0,
+          0
+        ],
+        [
+          14,
+          0,
+          0
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "00_last_complete",
+      "mode": "a_observe_test",
+      "result": "sat",
+      "reason": "",
+      "check_seconds": 0.017298829,
+      "initialization_seconds": 0.012673423,
+      "leaves": "smt_solver/check",
+      "ordinary": 0,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0.001964436,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": 110,
+      "binding_bounded_sample": {
+        "bound_assigned_true": 110
+      },
+      "funnel": {},
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          8,
+          0,
+          0
+        ],
+        [
+          10,
+          0,
+          0
+        ],
+        [
+          12,
+          0,
+          0
+        ],
+        [
+          14,
+          0,
+          0
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "00_last_complete",
+      "mode": "a_apply_test",
+      "result": "sat",
+      "reason": "",
+      "check_seconds": 0.017325752,
+      "initialization_seconds": 0.012482014,
+      "leaves": "smt_solver/check",
+      "ordinary": 0,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0.001883453,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": 110,
+      "binding_bounded_sample": {
+        "bound_assigned_true": 110
+      },
+      "funnel": {},
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          8,
+          0,
+          0
+        ],
+        [
+          10,
+          0,
+          0
+        ],
+        [
+          12,
+          0,
+          0
+        ],
+        [
+          14,
+          0,
+          0
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "02_first_history",
+      "mode": "a_off_test",
+      "result": "unknown",
+      "reason": "timeout",
+      "check_seconds": 2.005623112,
+      "initialization_seconds": 1.01e-07,
+      "leaves": "",
+      "ordinary": 0,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": null,
+      "binding_bounded_sample": {},
+      "funnel": {},
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          4,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "02_first_history",
+      "mode": "a_observe_test",
+      "result": "unknown",
+      "reason": "timeout",
+      "check_seconds": 2.008101034,
+      "initialization_seconds": 0.045988171,
+      "leaves": "smt_tactic/setup_and_check",
+      "ordinary": 626,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0.008440893,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": 5024,
+      "binding_bounded_sample": {
+        "mapping_incomplete": 128
+      },
+      "funnel": {
+        "native_ordinary_seen": 626,
+        "outside_decision_window": 562,
+        "unmapped_reason_unknown": 80,
+        "within_decision_window": 64
+      },
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          4,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "02_first_history",
+      "mode": "a_apply_test",
+      "result": "unknown",
+      "reason": "timeout",
+      "check_seconds": 2.005085269,
+      "initialization_seconds": 0.046328996,
+      "leaves": "smt_tactic/setup_and_check",
+      "ordinary": 786,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0.010113096999999984,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": 5024,
+      "binding_bounded_sample": {
+        "mapping_incomplete": 128
+      },
+      "funnel": {
+        "native_ordinary_seen": 786,
+        "outside_decision_window": 722,
+        "unmapped_reason_unknown": 80,
+        "within_decision_window": 64
+      },
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          4,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "02_tenth_history",
+      "mode": "a_off_test",
+      "result": "unknown",
+      "reason": "timeout",
+      "check_seconds": 2.005167031,
+      "initialization_seconds": 9.7e-08,
+      "leaves": "",
+      "ordinary": 0,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": null,
+      "binding_bounded_sample": {},
+      "funnel": {},
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          6,
+          1
+        ],
+        [
+          3,
+          8,
+          1
+        ],
+        [
+          3,
+          10,
+          1
+        ],
+        [
+          3,
+          11,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "02_tenth_history",
+      "mode": "a_observe_test",
+      "result": "unknown",
+      "reason": "timeout",
+      "check_seconds": 2.009569752,
+      "initialization_seconds": 0.13731516,
+      "leaves": "smt_tactic/setup_and_check",
+      "ordinary": 888,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0.008808538000000015,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": 3396,
+      "binding_bounded_sample": {
+        "mapping_incomplete": 128
+      },
+      "funnel": {
+        "native_ordinary_seen": 888,
+        "outside_decision_window": 824,
+        "unmapped_reason_unknown": 80,
+        "within_decision_window": 64
+      },
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          6,
+          1
+        ],
+        [
+          3,
+          8,
+          1
+        ],
+        [
+          3,
+          10,
+          1
+        ],
+        [
+          3,
+          11,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "02_tenth_history",
+      "mode": "a_apply_test",
+      "result": "unknown",
+      "reason": "timeout",
+      "check_seconds": 2.004215888,
+      "initialization_seconds": 0.044994021,
+      "leaves": "smt_tactic/setup_and_check",
+      "ordinary": 950,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0.009226034000000004,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": 3396,
+      "binding_bounded_sample": {
+        "mapping_incomplete": 128
+      },
+      "funnel": {
+        "native_ordinary_seen": 950,
+        "outside_decision_window": 886,
+        "unmapped_reason_unknown": 80,
+        "within_decision_window": 64
+      },
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          6,
+          1
+        ],
+        [
+          3,
+          8,
+          1
+        ],
+        [
+          3,
+          10,
+          1
+        ],
+        [
+          3,
+          11,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "02_last_complete",
+      "mode": "a_off_test",
+      "result": "unknown",
+      "reason": "timeout",
+      "check_seconds": 2.006022437,
+      "initialization_seconds": 9.9e-08,
+      "leaves": "",
+      "ordinary": 0,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": null,
+      "binding_bounded_sample": {},
+      "funnel": {},
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          6,
+          1
+        ],
+        [
+          3,
+          8,
+          1
+        ],
+        [
+          3,
+          10,
+          1
+        ],
+        [
+          3,
+          11,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "02_last_complete",
+      "mode": "a_observe_test",
+      "result": "unknown",
+      "reason": "timeout",
+      "check_seconds": 2.00814061,
+      "initialization_seconds": 0.048064455,
+      "leaves": "smt_tactic/setup_and_check",
+      "ordinary": 921,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0.008312915999999986,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": 3148,
+      "binding_bounded_sample": {
+        "mapping_incomplete": 128
+      },
+      "funnel": {
+        "native_ordinary_seen": 921,
+        "outside_decision_window": 857,
+        "unmapped_reason_unknown": 80,
+        "within_decision_window": 64
+      },
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          6,
+          1
+        ],
+        [
+          3,
+          8,
+          1
+        ],
+        [
+          3,
+          10,
+          1
+        ],
+        [
+          3,
+          11,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "02_last_complete",
+      "mode": "a_apply_test",
+      "result": "unknown",
+      "reason": "timeout",
+      "check_seconds": 2.007671301,
+      "initialization_seconds": 0.047077801,
+      "leaves": "smt_tactic/setup_and_check",
+      "ordinary": 931,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0.008890250000000004,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": 3148,
+      "binding_bounded_sample": {
+        "mapping_incomplete": 128
+      },
+      "funnel": {
+        "native_ordinary_seen": 931,
+        "outside_decision_window": 867,
+        "unmapped_reason_unknown": 80,
+        "within_decision_window": 64
+      },
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          6,
+          1
+        ],
+        [
+          3,
+          8,
+          1
+        ],
+        [
+          3,
+          10,
+          1
+        ],
+        [
+          3,
+          11,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "03_first_history",
+      "mode": "a_off_test",
+      "result": "unknown",
+      "reason": "timeout",
+      "check_seconds": 2.002084037,
+      "initialization_seconds": 8e-08,
+      "leaves": "",
+      "ordinary": 0,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": null,
+      "binding_bounded_sample": {},
+      "funnel": {},
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          4,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "03_first_history",
+      "mode": "a_observe_test",
+      "result": "unknown",
+      "reason": "timeout",
+      "check_seconds": 2.059022558,
+      "initialization_seconds": 0.040492145,
+      "leaves": "smt_tactic/setup_and_check",
+      "ordinary": 627,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0.007861628999999997,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": 3449,
+      "binding_bounded_sample": {
+        "mapping_incomplete": 128
+      },
+      "funnel": {
+        "native_ordinary_seen": 627,
+        "outside_decision_window": 563,
+        "unmapped_reason_unknown": 80,
+        "within_decision_window": 64
+      },
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          4,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "03_first_history",
+      "mode": "a_apply_test",
+      "result": "unknown",
+      "reason": "timeout",
+      "check_seconds": 4.939402743,
+      "initialization_seconds": 0.047229232,
+      "leaves": "",
+      "ordinary": 0,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0.00044661,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": 3449,
+      "binding_bounded_sample": {},
+      "funnel": {},
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          4,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "03_tenth_history",
+      "mode": "a_off_test",
+      "result": "unknown",
+      "reason": "timeout",
+      "check_seconds": 2.060155849,
+      "initialization_seconds": 8.1e-08,
+      "leaves": "",
+      "ordinary": 0,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": null,
+      "binding_bounded_sample": {},
+      "funnel": {},
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          4,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "03_tenth_history",
+      "mode": "a_observe_test",
+      "result": "unknown",
+      "reason": "timeout",
+      "check_seconds": 2.00861414,
+      "initialization_seconds": 0.0533064,
+      "leaves": "smt_tactic/setup_and_check",
+      "ordinary": 735,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0.009958968000000004,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": 2319,
+      "binding_bounded_sample": {
+        "mapping_incomplete": 128
+      },
+      "funnel": {
+        "native_ordinary_seen": 735,
+        "outside_decision_window": 671,
+        "unmapped_reason_unknown": 80,
+        "within_decision_window": 64
+      },
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          4,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "03_tenth_history",
+      "mode": "a_apply_test",
+      "result": "unknown",
+      "reason": "timeout",
+      "check_seconds": 2.008484087,
+      "initialization_seconds": 0.044172505,
+      "leaves": "smt_tactic/setup_and_check",
+      "ordinary": 828,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0.009493083999999985,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": 2319,
+      "binding_bounded_sample": {
+        "mapping_incomplete": 128
+      },
+      "funnel": {
+        "native_ordinary_seen": 828,
+        "outside_decision_window": 764,
+        "unmapped_reason_unknown": 80,
+        "within_decision_window": 64
+      },
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          4,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "03_last_complete",
+      "mode": "a_off_test",
+      "result": "unknown",
+      "reason": "timeout",
+      "check_seconds": 2.043676947,
+      "initialization_seconds": 1.209e-06,
+      "leaves": "",
+      "ordinary": 0,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": null,
+      "binding_bounded_sample": {},
+      "funnel": {},
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          4,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "03_last_complete",
+      "mode": "a_observe_test",
+      "result": "unknown",
+      "reason": "timeout",
+      "check_seconds": 2.012422491,
+      "initialization_seconds": 0.03391301,
+      "leaves": "smt_tactic/setup_and_check",
+      "ordinary": 868,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0.0076741129999999946,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": 2126,
+      "binding_bounded_sample": {
+        "mapping_incomplete": 128
+      },
+      "funnel": {
+        "native_ordinary_seen": 868,
+        "outside_decision_window": 804,
+        "unmapped_reason_unknown": 80,
+        "within_decision_window": 64
+      },
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          4,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "03_last_complete",
+      "mode": "a_apply_test",
+      "result": "unknown",
+      "reason": "timeout",
+      "check_seconds": 2.003842204,
+      "initialization_seconds": 0.043843174,
+      "leaves": "smt_tactic/setup_and_check",
+      "ordinary": 602,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0.00856710200000001,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": 2126,
+      "binding_bounded_sample": {
+        "mapping_incomplete": 128
+      },
+      "funnel": {
+        "native_ordinary_seen": 602,
+        "outside_decision_window": 538,
+        "unmapped_reason_unknown": 80,
+        "within_decision_window": 64
+      },
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          4,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "04_first_history",
+      "mode": "a_off_test",
+      "result": "sat",
+      "reason": "",
+      "check_seconds": 1.687030487,
+      "initialization_seconds": 1.61e-07,
+      "leaves": "",
+      "ordinary": 0,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": null,
+      "binding_bounded_sample": {},
+      "funnel": {},
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          4,
+          3,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "04_first_history",
+      "mode": "a_observe_test",
+      "result": "sat",
+      "reason": "",
+      "check_seconds": 0.486888479,
+      "initialization_seconds": 0.089178091,
+      "leaves": "smt_solver/check",
+      "ordinary": 230,
+      "suggestions": 4,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0.007913115999999994,
+      "potential_demands_first64": 23,
+      "potential_outside_hypothetical_window": 23,
+      "potential_decisions65to80": 9,
+      "mappable_targets": 4019,
+      "binding_bounded_sample": {
+        "bound_assigned_true": 52,
+        "mapping_incomplete": 45,
+        "bound_unassigned": 8,
+        "bound_assigned_false": 23
+      },
+      "funnel": {
+        "different_phase_suggestions": 1,
+        "has_current_demand": 29,
+        "has_direct_mapping": 66,
+        "native_ordinary_seen": 230,
+        "no_active_demand": 24,
+        "outside_decision_window": 166,
+        "outside_window_potential": 2,
+        "quota_rejected": 25,
+        "same_phase_suggestions": 3,
+        "unmapped_reason_unknown": 14,
+        "within_decision_window": 64
+      },
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          4,
+          3,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "04_first_history",
+      "mode": "a_apply_test",
+      "result": "unknown",
+      "reason": "canceled",
+      "check_seconds": 2.007765722,
+      "initialization_seconds": 0.110765217,
+      "leaves": "smt_solver/check",
+      "ordinary": 88,
+      "suggestions": 4,
+      "phase_overrides": 1,
+      "explicit_callback_seconds": 0.007637775999999999,
+      "potential_demands_first64": 23,
+      "potential_outside_hypothetical_window": 23,
+      "potential_decisions65to80": 13,
+      "mappable_targets": 4019,
+      "binding_bounded_sample": {
+        "bound_assigned_true": 52,
+        "mapping_incomplete": 45,
+        "bound_unassigned": 8,
+        "bound_assigned_false": 23
+      },
+      "funnel": {
+        "different_phase_suggestions": 1,
+        "has_current_demand": 33,
+        "has_direct_mapping": 62,
+        "native_ordinary_seen": 88,
+        "no_active_demand": 16,
+        "outside_decision_window": 24,
+        "outside_window_potential": 6,
+        "phase_overrides": 1,
+        "quota_rejected": 29,
+        "same_phase_suggestions": 3,
+        "unmapped_reason_unknown": 18,
+        "within_decision_window": 64
+      },
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          4,
+          3,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "04_tenth_history",
+      "mode": "a_off_test",
+      "result": "sat",
+      "reason": "",
+      "check_seconds": 0.701330213,
+      "initialization_seconds": 8.6e-08,
+      "leaves": "",
+      "ordinary": 0,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": null,
+      "binding_bounded_sample": {},
+      "funnel": {},
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          4,
+          3,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "04_tenth_history",
+      "mode": "a_observe_test",
+      "result": "sat",
+      "reason": "",
+      "check_seconds": 1.285860835,
+      "initialization_seconds": 0.093611993,
+      "leaves": "smt_solver/check",
+      "ordinary": 174,
+      "suggestions": 4,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0.0077953609999999954,
+      "potential_demands_first64": 19,
+      "potential_outside_hypothetical_window": 19,
+      "potential_decisions65to80": 8,
+      "mappable_targets": 4010,
+      "binding_bounded_sample": {
+        "bound_assigned_true": 52,
+        "mapping_incomplete": 45,
+        "bound_unassigned": 8,
+        "bound_assigned_false": 23
+      },
+      "funnel": {
+        "different_phase_suggestions": 1,
+        "has_current_demand": 38,
+        "has_direct_mapping": 61,
+        "native_ordinary_seen": 174,
+        "no_active_demand": 10,
+        "outside_decision_window": 110,
+        "outside_window_potential": 8,
+        "quota_rejected": 34,
+        "same_phase_suggestions": 3,
+        "unmapped_reason_unknown": 19,
+        "within_decision_window": 64
+      },
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          4,
+          3,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "04_tenth_history",
+      "mode": "a_apply_test",
+      "result": "unknown",
+      "reason": "canceled",
+      "check_seconds": 2.129864626,
+      "initialization_seconds": 0.06645369,
+      "leaves": "smt_solver/check",
+      "ordinary": 124,
+      "suggestions": 4,
+      "phase_overrides": 1,
+      "explicit_callback_seconds": 0.0066216109999999995,
+      "potential_demands_first64": 17,
+      "potential_outside_hypothetical_window": 17,
+      "potential_decisions65to80": 5,
+      "mappable_targets": 4010,
+      "binding_bounded_sample": {
+        "bound_assigned_true": 52,
+        "mapping_incomplete": 45,
+        "bound_unassigned": 8,
+        "bound_assigned_false": 23
+      },
+      "funnel": {
+        "different_phase_suggestions": 1,
+        "has_current_demand": 39,
+        "has_direct_mapping": 57,
+        "native_ordinary_seen": 124,
+        "no_active_demand": 5,
+        "outside_decision_window": 60,
+        "outside_window_potential": 6,
+        "phase_overrides": 1,
+        "quota_rejected": 35,
+        "same_phase_suggestions": 3,
+        "unmapped_reason_unknown": 23,
+        "within_decision_window": 64
+      },
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          4,
+          3,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "04_last_complete",
+      "mode": "a_off_test",
+      "result": "sat",
+      "reason": "",
+      "check_seconds": 0.349962438,
+      "initialization_seconds": 1.87e-07,
+      "leaves": "",
+      "ordinary": 0,
+      "suggestions": 0,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0,
+      "potential_demands_first64": 0,
+      "potential_outside_hypothetical_window": 0,
+      "potential_decisions65to80": 0,
+      "mappable_targets": null,
+      "binding_bounded_sample": {},
+      "funnel": {},
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          4,
+          3,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "04_last_complete",
+      "mode": "a_observe_test",
+      "result": "sat",
+      "reason": "",
+      "check_seconds": 0.423680392,
+      "initialization_seconds": 0.065810973,
+      "leaves": "smt_solver/check",
+      "ordinary": 265,
+      "suggestions": 4,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0.006404968000000008,
+      "potential_demands_first64": 18,
+      "potential_outside_hypothetical_window": 18,
+      "potential_decisions65to80": 5,
+      "mappable_targets": 3838,
+      "binding_bounded_sample": {
+        "bound_assigned_true": 52,
+        "mapping_incomplete": 45,
+        "bound_unassigned": 8,
+        "bound_assigned_false": 23
+      },
+      "funnel": {
+        "has_current_demand": 27,
+        "has_direct_mapping": 66,
+        "native_ordinary_seen": 265,
+        "no_active_demand": 25,
+        "outside_decision_window": 201,
+        "outside_window_potential": 5,
+        "quota_rejected": 23,
+        "same_phase_suggestions": 4,
+        "unmapped_reason_unknown": 14,
+        "within_decision_window": 64
+      },
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          4,
+          3,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    },
+    {
+      "case_id": "04_last_complete",
+      "mode": "a_apply_test",
+      "result": "sat",
+      "reason": "",
+      "check_seconds": 1.363082577,
+      "initialization_seconds": 0.071124307,
+      "leaves": "smt_solver/check",
+      "ordinary": 265,
+      "suggestions": 4,
+      "phase_overrides": 0,
+      "explicit_callback_seconds": 0.006106469999999993,
+      "potential_demands_first64": 18,
+      "potential_outside_hypothetical_window": 18,
+      "potential_decisions65to80": 5,
+      "mappable_targets": 3838,
+      "binding_bounded_sample": {
+        "bound_assigned_true": 52,
+        "mapping_incomplete": 45,
+        "bound_unassigned": 8,
+        "bound_assigned_false": 23
+      },
+      "funnel": {
+        "has_current_demand": 27,
+        "has_direct_mapping": 66,
+        "native_ordinary_seen": 265,
+        "no_active_demand": 25,
+        "outside_decision_window": 201,
+        "outside_window_potential": 5,
+        "quota_rejected": 23,
+        "same_phase_suggestions": 4,
+        "unmapped_reason_unknown": 14,
+        "within_decision_window": 64
+      },
+      "hypothetical_old_window": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          4,
+          3,
+          1
+        ]
+      ],
+      "actual_old_cursor": "unrecoverable_not_measured",
+      "binding_encountered_flag_rederived_from_native_ordinal": "use native_encounters ordinal<=64, not snapshot flag (diagnostic flag can also include 65..80)"
+    }
+  ],
+  "off_observe_native_prefixes": [
+    {
+      "case_id": "00_first_history",
+      "off_decisions": 0,
+      "observe_decisions": 0,
+      "common_prefix": 0,
+      "prefix_identical": true
+    },
+    {
+      "case_id": "00_tenth_history",
+      "off_decisions": 0,
+      "observe_decisions": 0,
+      "common_prefix": 0,
+      "prefix_identical": true
+    },
+    {
+      "case_id": "00_last_complete",
+      "off_decisions": 0,
+      "observe_decisions": 0,
+      "common_prefix": 0,
+      "prefix_identical": true
+    },
+    {
+      "case_id": "02_first_history",
+      "off_decisions": 378,
+      "observe_decisions": 626,
+      "common_prefix": 378,
+      "prefix_identical": true
+    },
+    {
+      "case_id": "02_tenth_history",
+      "off_decisions": 940,
+      "observe_decisions": 888,
+      "common_prefix": 888,
+      "prefix_identical": true
+    },
+    {
+      "case_id": "02_last_complete",
+      "off_decisions": 921,
+      "observe_decisions": 921,
+      "common_prefix": 921,
+      "prefix_identical": true
+    },
+    {
+      "case_id": "03_first_history",
+      "off_decisions": 388,
+      "observe_decisions": 627,
+      "common_prefix": 388,
+      "prefix_identical": true
+    },
+    {
+      "case_id": "03_tenth_history",
+      "off_decisions": 403,
+      "observe_decisions": 735,
+      "common_prefix": 403,
+      "prefix_identical": true
+    },
+    {
+      "case_id": "03_last_complete",
+      "off_decisions": 737,
+      "observe_decisions": 868,
+      "common_prefix": 737,
+      "prefix_identical": true
+    },
+    {
+      "case_id": "04_first_history",
+      "off_decisions": 230,
+      "observe_decisions": 230,
+      "common_prefix": 230,
+      "prefix_identical": true
+    },
+    {
+      "case_id": "04_tenth_history",
+      "off_decisions": 174,
+      "observe_decisions": 174,
+      "common_prefix": 174,
+      "prefix_identical": true
+    },
+    {
+      "case_id": "04_last_complete",
+      "off_decisions": 265,
+      "observe_decisions": 265,
+      "common_prefix": 265,
+      "prefix_identical": true
+    }
+  ],
+  "solver_calls_added": 0,
+  "window_comparison": "cursor=0 counterfactual only; historical round1 cursor is unavailable",
+  "formal_outside_window_potential": "NA; formal callbacks do not scan beyond64",
+  "learned_state_reconstructed": false,
+  "timing_limitations": "micro checks overlap SAN compilation; use for mechanism and ledger separation, not performance claims"
+}

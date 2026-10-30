@@ -1,0 +1,10 @@
+{"check_epoch":1,"solver":103789539162624,"backend":"tactic"}
+{"check_epoch":2,"solver":103789539162624,"backend":"tactic"}
+{"check_epoch":3,"solver":103789539162624,"backend":"smt"}
+{"check_epoch":4,"solver":103789539162624,"backend":"smt"}
+{"check_epoch":5,"solver":103789539162624,"backend":"smt"}
+{"check_epoch":6,"solver":103789539162624,"backend":"smt"}
+{"check_epoch":7,"solver":103789539162624,"backend":"smt"}
+{"check_epoch":8,"solver":103789539162624,"backend":"smt"}
+{"check_epoch":9,"solver":103789539162624,"backend":"smt"}
+{"check_epoch":10,"solver":103789539162624,"backend":"smt"}

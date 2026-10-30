@@ -1,0 +1,4010 @@
+{
+  "passed": true,
+  "tests": [
+    {
+      "apply": {
+        "model": "(define-fun x () Int\n  0)\n(define-fun q () Bool\n  true)\n(define-fun p () Bool\n  false)",
+        "stats": {
+          "actions": [
+            {
+              "actual_var": 2,
+              "assignment_token": 1,
+              "backend_call_id": 1,
+              "canonical_key": "EX:B$1:q",
+              "context_generation": 1,
+              "context_id": 1,
+              "coverage_version": 1,
+              "decision_id": 1,
+              "effective_phase": true,
+              "final_atom_truth": true,
+              "level": 2,
+              "literal_negated": false,
+              "mapping_kind": "exact_structure",
+              "native_phase": false,
+              "native_var": 2,
+              "phase_changed": true,
+              "query_id": 1,
+              "reassigned_opposite": 0,
+              "reassigned_same": 0,
+              "suggested_phase": true,
+              "support": [
+                {
+                  "desired_one_mask": "1",
+                  "desired_zero_mask": "0",
+                  "node": 1
+                }
+              ],
+              "trail_index": 4,
+              "trailed_assignment_popped": false,
+              "would_override": true
+            },
+            {
+              "actual_var": 1,
+              "assignment_token": 2,
+              "backend_call_id": 1,
+              "canonical_key": "EX:B$1:p",
+              "context_generation": 1,
+              "context_id": 1,
+              "coverage_version": 1,
+              "decision_id": 2,
+              "effective_phase": true,
+              "final_atom_truth": true,
+              "level": 3,
+              "literal_negated": false,
+              "mapping_kind": "exact_structure",
+              "native_phase": false,
+              "native_var": 1,
+              "phase_changed": true,
+              "query_id": 1,
+              "reassigned_opposite": 0,
+              "reassigned_same": 0,
+              "suggested_phase": true,
+              "support": [
+                {
+                  "desired_one_mask": "1",
+                  "desired_zero_mask": "0",
+                  "node": 0
+                }
+              ],
+              "trail_index": 5,
+              "trailed_assignment_popped": false,
+              "would_override": true
+            }
+          ],
+          "actual_end": 0.002671505,
+          "b_encoded": 0,
+          "b_internalized": 0,
+          "b_selected": 0,
+          "backend_calls": [
+            {
+              "assertions_after_register": 3,
+              "assertions_before_register": 3,
+              "backend_call_id": 1,
+              "binding_seconds": 8.905e-05,
+              "binding_snapshot": [
+                {
+                  "encountered_in_window": true,
+                  "key": "EX:B$1:p",
+                  "reason": "assigned_reason_unknown",
+                  "state": "bound_unassigned",
+                  "var": 1
+                },
+                {
+                  "encountered_in_window": true,
+                  "key": "EX:B$1:q",
+                  "reason": "assigned_reason_unknown",
+                  "state": "bound_unassigned",
+                  "var": 2
+                }
+              ],
+              "binding_snapshot_limit": 128,
+              "bool_vars_after_register": 1,
+              "bool_vars_before_register": 1,
+              "check_seconds": 0.0017040479999999999,
+              "context_generation": 1,
+              "context_id": 1,
+              "end": 0.001737506,
+              "entry_function": "check",
+              "exact_matches": 2,
+              "funnel": {
+                "different_phase_suggestions": 2,
+                "has_current_demand": 2,
+                "has_direct_mapping": 2,
+                "native_ordinary_seen": 2,
+                "phase_overrides": 2,
+                "within_decision_window": 2
+              },
+              "incomplete_mapping": 0,
+              "ls_sampling": false,
+              "metadata_received": true,
+              "native_context_address": 90572270362880,
+              "native_encounters": [
+                {
+                  "canonical_key": "EX:B$1:q",
+                  "complete": true,
+                  "native_phase": false,
+                  "native_var": 2,
+                  "ordinal": 1,
+                  "outside_window": false,
+                  "reason": "",
+                  "score_false": 0,
+                  "score_true": 1,
+                  "supported_demands": [
+                    {
+                      "canonical_phase": 1,
+                      "node": 1,
+                      "one": "1",
+                      "zero": "0"
+                    }
+                  ]
+                },
+                {
+                  "canonical_key": "EX:B$1:p",
+                  "complete": true,
+                  "native_phase": false,
+                  "native_var": 1,
+                  "ordinal": 2,
+                  "outside_window": false,
+                  "reason": "",
+                  "score_false": 0,
+                  "score_true": 1,
+                  "supported_demands": [
+                    {
+                      "canonical_phase": 1,
+                      "node": 0,
+                      "one": "1",
+                      "zero": "0"
+                    }
+                  ]
+                }
+              ],
+              "normalized_atoms": 2,
+              "normalized_matches": 0,
+              "ordinary_decisions": 2,
+              "original_reason_unknown": "",
+              "outer_route": "solver2",
+              "parent_call_id": 0,
+              "query_id": 1,
+              "result": "sat",
+              "route_reason": "native_assumptions_or_ignore_solver1",
+              "snapshot_native_vars_scanned": 6,
+              "solver_id": 88785564053760,
+              "start": 3.3458e-05,
+              "tactic_name": "smt_solver",
+              "unmapped": 0,
+              "unsupported_normal_form": 0
+            }
+          ],
+          "binding_seconds": 8.905e-05,
+          "coverage_version": 1,
+          "diagnostic_snapshot_seconds": 0.000121888,
+          "direct_seconds": 0.000356899,
+          "explicit_limit": false,
+          "exposure_guard_seconds": 1.357e-06,
+          "exposure_limit": false,
+          "exposure_overrun": 0.0,
+          "guidance_added_assertions": 0,
+          "guidance_created_bool_vars": 0,
+          "guidance_marked_relevant": 0,
+          "hot_callback_seconds": 0.000144604,
+          "intervened_check": true,
+          "lifecycle": [
+            {
+              "backend_call_id": 1,
+              "context_id": 1,
+              "kind": "attach"
+            },
+            {
+              "backend_call_id": 1,
+              "entry": "check",
+              "kind": "search_entry"
+            },
+            {
+              "backend_call_id": 1,
+              "kind": "detach"
+            }
+          ],
+          "mode": 2,
+          "ordinary": 2,
+          "phase_overrides": 2,
+          "query_id": 1,
+          "requested_exposure_limit": 45.0,
+          "route_metadata_seconds": 0.0,
+          "stages": [],
+          "suggestions": 2
+        }
+      },
+      "observe": {
+        "model": "(define-fun x () Int\n  0)\n(define-fun p () Bool\n  true)\n(define-fun q () Bool\n  false)",
+        "stats": {
+          "actions": [
+            {
+              "actual_var": 2,
+              "assignment_token": 1,
+              "backend_call_id": 1,
+              "canonical_key": "EX:B$1:q",
+              "context_generation": 1,
+              "context_id": 1,
+              "coverage_version": 1,
+              "decision_id": 1,
+              "effective_phase": false,
+              "final_atom_truth": false,
+              "level": 2,
+              "literal_negated": false,
+              "mapping_kind": "exact_structure",
+              "native_phase": false,
+              "native_var": 2,
+              "phase_changed": false,
+              "query_id": 1,
+              "reassigned_opposite": 0,
+              "reassigned_same": 0,
+              "suggested_phase": true,
+              "support": [
+                {
+                  "desired_one_mask": "1",
+                  "desired_zero_mask": "0",
+                  "node": 1
+                }
+              ],
+              "trail_index": 4,
+              "trailed_assignment_popped": false,
+              "would_override": true
+            }
+          ],
+          "actual_end": 0.00787962,
+          "b_encoded": 0,
+          "b_internalized": 0,
+          "b_selected": 0,
+          "backend_calls": [
+            {
+              "assertions_after_register": 3,
+              "assertions_before_register": 3,
+              "backend_call_id": 1,
+              "binding_seconds": 0.001956263,
+              "binding_snapshot": [
+                {
+                  "encountered_in_window": false,
+                  "key": "EX:B$1:p",
+                  "reason": "assigned_reason_unknown",
+                  "state": "bound_unassigned",
+                  "var": 1
+                },
+                {
+                  "encountered_in_window": true,
+                  "key": "EX:B$1:q",
+                  "reason": "assigned_reason_unknown",
+                  "state": "bound_unassigned",
+                  "var": 2
+                }
+              ],
+              "binding_snapshot_limit": 128,
+              "bool_vars_after_register": 1,
+              "bool_vars_before_register": 1,
+              "check_seconds": 0.005386731,
+              "context_generation": 1,
+              "context_id": 1,
+              "end": 0.006617189,
+              "entry_function": "check",
+              "exact_matches": 1,
+              "funnel": {
+                "different_phase_suggestions": 1,
+                "has_current_demand": 1,
+                "has_direct_mapping": 1,
+                "native_ordinary_seen": 1,
+                "within_decision_window": 1
+              },
+              "incomplete_mapping": 0,
+              "ls_sampling": false,
+              "metadata_received": true,
+              "native_context_address": 90572270350592,
+              "native_encounters": [
+                {
+                  "canonical_key": "EX:B$1:q",
+                  "complete": true,
+                  "native_phase": false,
+                  "native_var": 2,
+                  "ordinal": 1,
+                  "outside_window": false,
+                  "reason": "",
+                  "score_false": 0,
+                  "score_true": 1,
+                  "supported_demands": [
+                    {
+                      "canonical_phase": 1,
+                      "node": 1,
+                      "one": "1",
+                      "zero": "0"
+                    }
+                  ]
+                }
+              ],
+              "normalized_atoms": 1,
+              "normalized_matches": 0,
+              "ordinary_decisions": 1,
+              "original_reason_unknown": "",
+              "outer_route": "solver2",
+              "parent_call_id": 0,
+              "query_id": 1,
+              "result": "sat",
+              "route_reason": "native_assumptions_or_ignore_solver1",
+              "snapshot_native_vars_scanned": 6,
+              "solver_id": 88785564011136,
+              "start": 0.001230458,
+              "tactic_name": "smt_solver",
+              "unmapped": 0,
+              "unsupported_normal_form": 0
+            }
+          ],
+          "binding_seconds": 0.001956263,
+          "coverage_version": 1,
+          "diagnostic_snapshot_seconds": 0.002992335,
+          "direct_seconds": 0.005195659,
+          "explicit_limit": false,
+          "exposure_guard_seconds": 0.0,
+          "exposure_limit": false,
+          "exposure_overrun": 0.0,
+          "guidance_added_assertions": 0,
+          "guidance_created_bool_vars": 0,
+          "guidance_marked_relevant": 0,
+          "hot_callback_seconds": 0.000247061,
+          "intervened_check": false,
+          "lifecycle": [
+            {
+              "backend_call_id": 1,
+              "context_id": 1,
+              "kind": "attach"
+            },
+            {
+              "backend_call_id": 1,
+              "entry": "check",
+              "kind": "search_entry"
+            },
+            {
+              "backend_call_id": 1,
+              "kind": "detach"
+            }
+          ],
+          "mode": 1,
+          "ordinary": 1,
+          "phase_overrides": 0,
+          "query_id": 1,
+          "requested_exposure_limit": 45.0,
+          "route_metadata_seconds": 0.0,
+          "stages": [],
+          "suggestions": 1
+        }
+      },
+      "off": {
+        "model": "(define-fun x () Int\n  0)\n(define-fun p () Bool\n  true)\n(define-fun q () Bool\n  false)",
+        "stats": {}
+      },
+      "test": "choice_persistent"
+    },
+    {
+      "apply": {
+        "model": "(define-fun p () Bool\n  true)\n(define-fun q () Bool\n  true)\n(define-fun x () Int\n  0)",
+        "stats": {
+          "actions": [
+            {
+              "actual_var": 2,
+              "assignment_token": 1,
+              "backend_call_id": 2,
+              "canonical_key": "EX:B$1:q",
+              "context_generation": 1,
+              "context_id": 2,
+              "coverage_version": 1,
+              "decision_id": 1,
+              "effective_phase": true,
+              "final_atom_truth": true,
+              "level": 1,
+              "literal_negated": false,
+              "mapping_kind": "exact_structure",
+              "native_phase": false,
+              "native_var": 2,
+              "phase_changed": true,
+              "query_id": 1,
+              "reassigned_opposite": 0,
+              "reassigned_same": 0,
+              "suggested_phase": true,
+              "support": [
+                {
+                  "desired_one_mask": "1",
+                  "desired_zero_mask": "0",
+                  "node": 1
+                }
+              ],
+              "trail_index": 3,
+              "trailed_assignment_popped": false,
+              "would_override": true
+            },
+            {
+              "actual_var": 1,
+              "assignment_token": 2,
+              "backend_call_id": 2,
+              "canonical_key": "EX:B$1:p",
+              "context_generation": 1,
+              "context_id": 2,
+              "coverage_version": 1,
+              "decision_id": 2,
+              "effective_phase": true,
+              "final_atom_truth": true,
+              "level": 2,
+              "literal_negated": false,
+              "mapping_kind": "exact_structure",
+              "native_phase": false,
+              "native_var": 1,
+              "phase_changed": true,
+              "query_id": 1,
+              "reassigned_opposite": 0,
+              "reassigned_same": 0,
+              "suggested_phase": true,
+              "support": [
+                {
+                  "desired_one_mask": "1",
+                  "desired_zero_mask": "0",
+                  "node": 0
+                }
+              ],
+              "trail_index": 4,
+              "trailed_assignment_popped": false,
+              "would_override": true
+            }
+          ],
+          "actual_end": 0.002773657,
+          "b_encoded": 0,
+          "b_internalized": 0,
+          "b_selected": 0,
+          "backend_calls": [
+            {
+              "assertions_after_register": 0,
+              "assertions_before_register": 0,
+              "backend_call_id": 2,
+              "binding_seconds": 0.000102867,
+              "binding_snapshot": [
+                {
+                  "encountered_in_window": true,
+                  "key": "EX:B$1:p",
+                  "reason": "assigned_reason_unknown",
+                  "state": "bound_unassigned",
+                  "var": 1
+                },
+                {
+                  "encountered_in_window": true,
+                  "key": "EX:B$1:q",
+                  "reason": "assigned_reason_unknown",
+                  "state": "bound_unassigned",
+                  "var": 2
+                }
+              ],
+              "binding_snapshot_limit": 128,
+              "bool_vars_after_register": 1,
+              "bool_vars_before_register": 1,
+              "check_seconds": 0.001223718,
+              "context_generation": 1,
+              "context_id": 2,
+              "end": 0.00211716,
+              "entry_function": "setup_and_check",
+              "exact_matches": 2,
+              "funnel": {
+                "different_phase_suggestions": 2,
+                "has_current_demand": 2,
+                "has_direct_mapping": 2,
+                "native_ordinary_seen": 2,
+                "phase_overrides": 2,
+                "within_decision_window": 2
+              },
+              "incomplete_mapping": 0,
+              "ls_sampling": false,
+              "metadata_received": true,
+              "native_context_address": 90572270399744,
+              "native_encounters": [
+                {
+                  "canonical_key": "EX:B$1:q",
+                  "complete": true,
+                  "native_phase": false,
+                  "native_var": 2,
+                  "ordinal": 1,
+                  "outside_window": false,
+                  "reason": "",
+                  "score_false": 0,
+                  "score_true": 1,
+                  "supported_demands": [
+                    {
+                      "canonical_phase": 1,
+                      "node": 1,
+                      "one": "1",
+                      "zero": "0"
+                    }
+                  ]
+                },
+                {
+                  "canonical_key": "EX:B$1:p",
+                  "complete": true,
+                  "native_phase": false,
+                  "native_var": 1,
+                  "ordinal": 2,
+                  "outside_window": false,
+                  "reason": "",
+                  "score_false": 0,
+                  "score_true": 1,
+                  "supported_demands": [
+                    {
+                      "canonical_phase": 1,
+                      "node": 0,
+                      "one": "1",
+                      "zero": "0"
+                    }
+                  ]
+                }
+              ],
+              "normalized_atoms": 2,
+              "normalized_matches": 0,
+              "ordinary_decisions": 2,
+              "original_reason_unknown": "",
+              "outer_route": "",
+              "parent_call_id": 1,
+              "query_id": 1,
+              "result": "sat",
+              "route_reason": "",
+              "snapshot_native_vars_scanned": 5,
+              "solver_id": 88785564004032,
+              "start": 0.000893442,
+              "tactic_name": "smt_tactic",
+              "unmapped": 0,
+              "unsupported_normal_form": 0
+            }
+          ],
+          "binding_seconds": 0.000102867,
+          "coverage_version": 1,
+          "diagnostic_snapshot_seconds": 0.000126441,
+          "direct_seconds": 0.00045287800000000004,
+          "explicit_limit": false,
+          "exposure_guard_seconds": 1.215e-06,
+          "exposure_limit": false,
+          "exposure_overrun": 0.0,
+          "guidance_added_assertions": 0,
+          "guidance_created_bool_vars": 0,
+          "guidance_marked_relevant": 0,
+          "hot_callback_seconds": 0.000193331,
+          "intervened_check": true,
+          "lifecycle": [
+            {
+              "backend_call_id": 2,
+              "context_id": 2,
+              "kind": "attach"
+            },
+            {
+              "backend_call_id": 2,
+              "entry": "setup_and_check",
+              "kind": "search_entry"
+            },
+            {
+              "backend_call_id": 2,
+              "kind": "detach"
+            }
+          ],
+          "mode": 2,
+          "ordinary": 2,
+          "phase_overrides": 2,
+          "query_id": 1,
+          "requested_exposure_limit": 45.0,
+          "route_metadata_seconds": 2.9024e-05,
+          "stages": [
+            {
+              "backend_call_id": 1,
+              "end": 0.002473684,
+              "outer_route": "",
+              "parent_call_id": 0,
+              "start": 2.3191e-05,
+              "tactic_name": "smt"
+            }
+          ],
+          "suggestions": 2
+        }
+      },
+      "observe": {
+        "model": "(define-fun p () Bool\n  true)\n(define-fun q () Bool\n  false)\n(define-fun x () Int\n  0)",
+        "stats": {
+          "actions": [
+            {
+              "actual_var": 2,
+              "assignment_token": 1,
+              "backend_call_id": 2,
+              "canonical_key": "EX:B$1:q",
+              "context_generation": 1,
+              "context_id": 2,
+              "coverage_version": 1,
+              "decision_id": 1,
+              "effective_phase": false,
+              "final_atom_truth": false,
+              "level": 1,
+              "literal_negated": false,
+              "mapping_kind": "exact_structure",
+              "native_phase": false,
+              "native_var": 2,
+              "phase_changed": false,
+              "query_id": 1,
+              "reassigned_opposite": 0,
+              "reassigned_same": 0,
+              "suggested_phase": true,
+              "support": [
+                {
+                  "desired_one_mask": "1",
+                  "desired_zero_mask": "0",
+                  "node": 1
+                }
+              ],
+              "trail_index": 3,
+              "trailed_assignment_popped": false,
+              "would_override": true
+            }
+          ],
+          "actual_end": 0.002949756,
+          "b_encoded": 0,
+          "b_internalized": 0,
+          "b_selected": 0,
+          "backend_calls": [
+            {
+              "assertions_after_register": 0,
+              "assertions_before_register": 0,
+              "backend_call_id": 2,
+              "binding_seconds": 8.709e-05,
+              "binding_snapshot": [
+                {
+                  "encountered_in_window": false,
+                  "key": "EX:B$1:p",
+                  "reason": "assigned_reason_unknown",
+                  "state": "bound_unassigned",
+                  "var": 1
+                },
+                {
+                  "encountered_in_window": true,
+                  "key": "EX:B$1:q",
+                  "reason": "assigned_reason_unknown",
+                  "state": "bound_unassigned",
+                  "var": 2
+                }
+              ],
+              "binding_snapshot_limit": 128,
+              "bool_vars_after_register": 1,
+              "bool_vars_before_register": 1,
+              "check_seconds": 0.0011215780000000002,
+              "context_generation": 1,
+              "context_id": 2,
+              "end": 0.001972997,
+              "entry_function": "setup_and_check",
+              "exact_matches": 1,
+              "funnel": {
+                "different_phase_suggestions": 1,
+                "has_current_demand": 1,
+                "has_direct_mapping": 1,
+                "native_ordinary_seen": 1,
+                "within_decision_window": 1
+              },
+              "incomplete_mapping": 0,
+              "ls_sampling": false,
+              "metadata_received": true,
+              "native_context_address": 90572270387456,
+              "native_encounters": [
+                {
+                  "canonical_key": "EX:B$1:q",
+                  "complete": true,
+                  "native_phase": false,
+                  "native_var": 2,
+                  "ordinal": 1,
+                  "outside_window": false,
+                  "reason": "",
+                  "score_false": 0,
+                  "score_true": 1,
+                  "supported_demands": [
+                    {
+                      "canonical_phase": 1,
+                      "node": 1,
+                      "one": "1",
+                      "zero": "0"
+                    }
+                  ]
+                }
+              ],
+              "normalized_atoms": 1,
+              "normalized_matches": 0,
+              "ordinary_decisions": 1,
+              "original_reason_unknown": "",
+              "outer_route": "",
+              "parent_call_id": 1,
+              "query_id": 1,
+              "result": "sat",
+              "route_reason": "",
+              "snapshot_native_vars_scanned": 5,
+              "solver_id": 88785564115392,
+              "start": 0.000851419,
+              "tactic_name": "smt_tactic",
+              "unmapped": 0,
+              "unsupported_normal_form": 0
+            }
+          ],
+          "binding_seconds": 8.709e-05,
+          "coverage_version": 1,
+          "diagnostic_snapshot_seconds": 0.000136228,
+          "direct_seconds": 0.000635353,
+          "explicit_limit": false,
+          "exposure_guard_seconds": 0.0,
+          "exposure_limit": false,
+          "exposure_overrun": 0.0,
+          "guidance_added_assertions": 0,
+          "guidance_created_bool_vars": 0,
+          "guidance_marked_relevant": 0,
+          "hot_callback_seconds": 0.000115414,
+          "intervened_check": false,
+          "lifecycle": [
+            {
+              "backend_call_id": 2,
+              "context_id": 2,
+              "kind": "attach"
+            },
+            {
+              "backend_call_id": 2,
+              "entry": "setup_and_check",
+              "kind": "search_entry"
+            },
+            {
+              "backend_call_id": 2,
+              "kind": "detach"
+            }
+          ],
+          "mode": 1,
+          "ordinary": 1,
+          "phase_overrides": 0,
+          "query_id": 1,
+          "requested_exposure_limit": 45.0,
+          "route_metadata_seconds": 0.000296621,
+          "stages": [
+            {
+              "backend_call_id": 1,
+              "end": 0.002614143,
+              "outer_route": "",
+              "parent_call_id": 0,
+              "start": 2.1482e-05,
+              "tactic_name": "smt"
+            }
+          ],
+          "suggestions": 1
+        }
+      },
+      "off": {
+        "model": "(define-fun p () Bool\n  true)\n(define-fun q () Bool\n  false)\n(define-fun x () Int\n  0)",
+        "stats": {}
+      },
+      "test": "choice_temporary"
+    },
+    {
+      "apply": {
+        "model": "(define-fun p () Bool\n  true)\n(define-fun x () Int\n  0)\n(define-fun q () Bool\n  false)",
+        "stats": {
+          "actions": [],
+          "actual_end": 0.012685099,
+          "b_encoded": 0,
+          "b_internalized": 0,
+          "b_selected": 0,
+          "backend_calls": [
+            {
+              "backend_call_id": 24,
+              "binding_seconds": 0.0,
+              "check_seconds": 0.006317742,
+              "context_generation": 0,
+              "context_id": 24,
+              "disabled_reason": "non_smt_leaf",
+              "end": 0.012139389,
+              "entry_function": "sat_tactic::operator",
+              "exact_matches": 0,
+              "funnel": {},
+              "incomplete_mapping": 0,
+              "ls_sampling": false,
+              "metadata_received": true,
+              "native_context_address": 0,
+              "normalized_atoms": 0,
+              "normalized_matches": 0,
+              "ordinary_decisions": 0,
+              "outer_route": "solver1",
+              "parent_call_id": 23,
+              "query_id": 1,
+              "result": "sat",
+              "route_reason": "native_nonincremental",
+              "solver_id": 88785564358080,
+              "start": 0.005821647,
+              "supports_A": false,
+              "tactic_name": "sat",
+              "unmapped": 0,
+              "unsupported_normal_form": 0
+            }
+          ],
+          "binding_seconds": 0.0,
+          "coverage_version": 1,
+          "diagnostic_snapshot_seconds": 0.0,
+          "direct_seconds": 0.000739111,
+          "explicit_limit": false,
+          "exposure_guard_seconds": 0.0,
+          "exposure_limit": false,
+          "exposure_overrun": 0.0,
+          "guidance_added_assertions": 0,
+          "guidance_created_bool_vars": 0,
+          "guidance_marked_relevant": 0,
+          "hot_callback_seconds": 0.0,
+          "intervened_check": false,
+          "lifecycle": [],
+          "mode": 2,
+          "ordinary": 0,
+          "phase_overrides": 0,
+          "query_id": 1,
+          "requested_exposure_limit": 45.0,
+          "route_metadata_seconds": 0.000739111,
+          "stages": [
+            {
+              "backend_call_id": 1,
+              "end": 8.4284e-05,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 4.7813e-05,
+              "tactic_name": "simplifier"
+            },
+            {
+              "backend_call_id": 2,
+              "end": 0.003738096,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 0.003650442,
+              "tactic_name": "simplifier"
+            },
+            {
+              "backend_call_id": 3,
+              "end": 0.003849674,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 0.003820265,
+              "tactic_name": "propagate-values"
+            },
+            {
+              "backend_call_id": 4,
+              "end": 0.003901961,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 0.00386294,
+              "tactic_name": "ctx-simplify"
+            },
+            {
+              "backend_call_id": 5,
+              "end": 0.003953409,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 0.003925551,
+              "tactic_name": "simplifier"
+            },
+            {
+              "backend_call_id": 6,
+              "end": 0.004116423,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 0.004002623,
+              "tactic_name": "solve-eqs"
+            },
+            {
+              "backend_call_id": 7,
+              "end": 0.004171926,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 0.004122759,
+              "tactic_name": "lia2card"
+            },
+            {
+              "backend_call_id": 8,
+              "end": 0.004275478,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 0.00417846,
+              "tactic_name": "elim-uncnstr"
+            },
+            {
+              "backend_call_id": 9,
+              "end": 0.004309466,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 0.004285573,
+              "tactic_name": "simplifier"
+            },
+            {
+              "backend_call_id": 10,
+              "end": 0.004401212,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 0.004364563,
+              "tactic_name": "ilp-model-finder-tactic"
+            },
+            {
+              "backend_call_id": 11,
+              "end": 0.004465238,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 0.004407634,
+              "tactic_name": "pb-tactic"
+            },
+            {
+              "backend_call_id": 12,
+              "end": 0.012153564,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 0.004509946,
+              "tactic_name": "lia2sat-tactic"
+            },
+            {
+              "backend_call_id": 13,
+              "end": 0.004768995,
+              "outer_route": "solver1",
+              "parent_call_id": 12,
+              "start": 0.004625191,
+              "tactic_name": "propagate-ineqs"
+            },
+            {
+              "backend_call_id": 14,
+              "end": 0.004828909,
+              "outer_route": "solver1",
+              "parent_call_id": 12,
+              "start": 0.004776855,
+              "tactic_name": "normalize-bounds"
+            },
+            {
+              "backend_call_id": 15,
+              "end": 0.004994345,
+              "outer_route": "solver1",
+              "parent_call_id": 12,
+              "start": 0.004883266,
+              "tactic_name": "lia2pb"
+            },
+            {
+              "backend_call_id": 16,
+              "end": 0.005203634,
+              "outer_route": "solver1",
+              "parent_call_id": 12,
+              "start": 0.005064498,
+              "tactic_name": "pb2bv"
+            },
+            {
+              "backend_call_id": 17,
+              "end": 0.005311335,
+              "outer_route": "solver1",
+              "parent_call_id": 12,
+              "start": 0.005279864,
+              "tactic_name": "simplifier"
+            },
+            {
+              "backend_call_id": 18,
+              "end": 0.005387359,
+              "outer_route": "solver1",
+              "parent_call_id": 12,
+              "start": 0.005361294,
+              "tactic_name": "propagate-values"
+            },
+            {
+              "backend_call_id": 19,
+              "end": 0.005587002,
+              "outer_route": "solver1",
+              "parent_call_id": 12,
+              "start": 0.00539178,
+              "tactic_name": "solve-eqs"
+            },
+            {
+              "backend_call_id": 20,
+              "end": 0.005631408,
+              "outer_route": "solver1",
+              "parent_call_id": 12,
+              "start": 0.005594807,
+              "tactic_name": "max-bv-sharing"
+            },
+            {
+              "backend_call_id": 21,
+              "end": 0.005679718,
+              "outer_route": "solver1",
+              "parent_call_id": 12,
+              "start": 0.005642922,
+              "tactic_name": "bit-blast"
+            },
+            {
+              "backend_call_id": 22,
+              "end": 0.005792008,
+              "outer_route": "solver1",
+              "parent_call_id": 12,
+              "start": 0.005704784,
+              "tactic_name": "aig"
+            },
+            {
+              "backend_call_id": 23,
+              "end": 0.012148157,
+              "outer_route": "solver1",
+              "parent_call_id": 12,
+              "start": 0.005799695,
+              "tactic_name": "sat.non_smt_leaf"
+            }
+          ],
+          "suggestions": 0
+        }
+      },
+      "observe": {
+        "model": "(define-fun p () Bool\n  true)\n(define-fun x () Int\n  0)\n(define-fun q () Bool\n  false)",
+        "stats": {
+          "actions": [],
+          "actual_end": 0.012243714,
+          "b_encoded": 0,
+          "b_internalized": 0,
+          "b_selected": 0,
+          "backend_calls": [
+            {
+              "backend_call_id": 24,
+              "binding_seconds": 0.0,
+              "check_seconds": 0.006396604,
+              "context_generation": 0,
+              "context_id": 24,
+              "disabled_reason": "non_smt_leaf",
+              "end": 0.01165361,
+              "entry_function": "sat_tactic::operator",
+              "exact_matches": 0,
+              "funnel": {},
+              "incomplete_mapping": 0,
+              "ls_sampling": false,
+              "metadata_received": true,
+              "native_context_address": 0,
+              "normalized_atoms": 0,
+              "normalized_matches": 0,
+              "ordinary_decisions": 0,
+              "outer_route": "solver1",
+              "parent_call_id": 23,
+              "query_id": 1,
+              "result": "sat",
+              "route_reason": "native_nonincremental",
+              "solver_id": 88785564194880,
+              "start": 0.005257006,
+              "supports_A": false,
+              "tactic_name": "sat",
+              "unmapped": 0,
+              "unsupported_normal_form": 0
+            }
+          ],
+          "binding_seconds": 0.0,
+          "coverage_version": 1,
+          "diagnostic_snapshot_seconds": 0.0,
+          "direct_seconds": 0.0006740199999999999,
+          "explicit_limit": false,
+          "exposure_guard_seconds": 0.0,
+          "exposure_limit": false,
+          "exposure_overrun": 0.0,
+          "guidance_added_assertions": 0,
+          "guidance_created_bool_vars": 0,
+          "guidance_marked_relevant": 0,
+          "hot_callback_seconds": 0.0,
+          "intervened_check": false,
+          "lifecycle": [],
+          "mode": 1,
+          "ordinary": 0,
+          "phase_overrides": 0,
+          "query_id": 1,
+          "requested_exposure_limit": 45.0,
+          "route_metadata_seconds": 0.0006740199999999999,
+          "stages": [
+            {
+              "backend_call_id": 1,
+              "end": 0.000107224,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 5.1526e-05,
+              "tactic_name": "simplifier"
+            },
+            {
+              "backend_call_id": 2,
+              "end": 0.003008869,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 0.002976628,
+              "tactic_name": "simplifier"
+            },
+            {
+              "backend_call_id": 3,
+              "end": 0.003105069,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 0.003076664,
+              "tactic_name": "propagate-values"
+            },
+            {
+              "backend_call_id": 4,
+              "end": 0.003172031,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 0.003118148,
+              "tactic_name": "ctx-simplify"
+            },
+            {
+              "backend_call_id": 5,
+              "end": 0.003224579,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 0.003197242,
+              "tactic_name": "simplifier"
+            },
+            {
+              "backend_call_id": 6,
+              "end": 0.003361697,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 0.003276468,
+              "tactic_name": "solve-eqs"
+            },
+            {
+              "backend_call_id": 7,
+              "end": 0.003421701,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 0.00336999,
+              "tactic_name": "lia2card"
+            },
+            {
+              "backend_call_id": 8,
+              "end": 0.003493744,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 0.003429798,
+              "tactic_name": "elim-uncnstr"
+            },
+            {
+              "backend_call_id": 9,
+              "end": 0.003565927,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 0.00350237,
+              "tactic_name": "simplifier"
+            },
+            {
+              "backend_call_id": 10,
+              "end": 0.003670068,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 0.003633819,
+              "tactic_name": "ilp-model-finder-tactic"
+            },
+            {
+              "backend_call_id": 11,
+              "end": 0.003712261,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 0.003677192,
+              "tactic_name": "pb-tactic"
+            },
+            {
+              "backend_call_id": 12,
+              "end": 0.011668058,
+              "outer_route": "solver1",
+              "parent_call_id": 0,
+              "start": 0.003734975,
+              "tactic_name": "lia2sat-tactic"
+            },
+            {
+              "backend_call_id": 13,
+              "end": 0.003919684,
+              "outer_route": "solver1",
+              "parent_call_id": 12,
+              "start": 0.003755205,
+              "tactic_name": "propagate-ineqs"
+            },
+            {
+              "backend_call_id": 14,
+              "end": 0.003950623,
+              "outer_route": "solver1",
+              "parent_call_id": 12,
+              "start": 0.003931525,
+              "tactic_name": "normalize-bounds"
+            },
+            {
+              "backend_call_id": 15,
+              "end": 0.004119659,
+              "outer_route": "solver1",
+              "parent_call_id": 12,
+              "start": 0.004002056,
+              "tactic_name": "lia2pb"
+            },
+            {
+              "backend_call_id": 16,
+              "end": 0.004382826,
+              "outer_route": "solver1",
+              "parent_call_id": 12,
+              "start": 0.004183303,
+              "tactic_name": "pb2bv"
+            },
+            {
+              "backend_call_id": 17,
+              "end": 0.004485479,
+              "outer_route": "solver1",
+              "parent_call_id": 12,
+              "start": 0.004445848,
+              "tactic_name": "simplifier"
+            },
+            {
+              "backend_call_id": 18,
+              "end": 0.004660051,
+              "outer_route": "solver1",
+              "parent_call_id": 12,
+              "start": 0.004585656,
+              "tactic_name": "propagate-values"
+            },
+            {
+              "backend_call_id": 19,
+              "end": 0.004952238,
+              "outer_route": "solver1",
+              "parent_call_id": 12,
+              "start": 0.004668527,
+              "tactic_name": "solve-eqs"
+            },
+            {
+              "backend_call_id": 20,
+              "end": 0.005004681,
+              "outer_route": "solver1",
+              "parent_call_id": 12,
+              "start": 0.004964432,
+              "tactic_name": "max-bv-sharing"
+            },
+            {
+              "backend_call_id": 21,
+              "end": 0.005054984,
+              "outer_route": "solver1",
+              "parent_call_id": 12,
+              "start": 0.00501679,
+              "tactic_name": "bit-blast"
+            },
+            {
+              "backend_call_id": 22,
+              "end": 0.005219606,
+              "outer_route": "solver1",
+              "parent_call_id": 12,
+              "start": 0.005086833,
+              "tactic_name": "aig"
+            },
+            {
+              "backend_call_id": 23,
+              "end": 0.011662794,
+              "outer_route": "solver1",
+              "parent_call_id": 12,
+              "start": 0.005227217,
+              "tactic_name": "sat.non_smt_leaf"
+            }
+          ],
+          "suggestions": 0
+        }
+      },
+      "off": {
+        "model": "(define-fun p () Bool\n  true)\n(define-fun x () Int\n  0)\n(define-fun q () Bool\n  false)",
+        "stats": {}
+      },
+      "test": "choice_default"
+    },
+    {
+      "stats": {
+        "actions": [],
+        "actual_end": 0.006182223,
+        "b_encoded": 0,
+        "b_internalized": 0,
+        "b_selected": 0,
+        "backend_calls": [
+          {
+            "backend_call_id": 2,
+            "binding_seconds": 0.0,
+            "check_seconds": 0.006055408,
+            "context_generation": 0,
+            "context_id": 2,
+            "disabled_reason": "non_smt_leaf",
+            "end": 0.006113646,
+            "entry_function": "sat_tactic::operator",
+            "exact_matches": 0,
+            "funnel": {},
+            "incomplete_mapping": 0,
+            "ls_sampling": false,
+            "metadata_received": true,
+            "native_context_address": 0,
+            "normalized_atoms": 0,
+            "normalized_matches": 0,
+            "ordinary_decisions": 0,
+            "outer_route": "",
+            "parent_call_id": 1,
+            "query_id": 1,
+            "result": "sat",
+            "route_reason": "",
+            "solver_id": 88785564390720,
+            "start": 5.8238e-05,
+            "supports_A": false,
+            "tactic_name": "sat",
+            "unmapped": 0,
+            "unsupported_normal_form": 0
+          }
+        ],
+        "binding_seconds": 0.0,
+        "coverage_version": 1,
+        "diagnostic_snapshot_seconds": 0.0,
+        "direct_seconds": 2.9388e-05,
+        "explicit_limit": false,
+        "exposure_guard_seconds": 0.0,
+        "exposure_limit": false,
+        "exposure_overrun": 0.0,
+        "guidance_added_assertions": 0,
+        "guidance_created_bool_vars": 0,
+        "guidance_marked_relevant": 0,
+        "hot_callback_seconds": 0.0,
+        "intervened_check": false,
+        "lifecycle": [],
+        "mode": 2,
+        "ordinary": 0,
+        "phase_overrides": 0,
+        "query_id": 1,
+        "requested_exposure_limit": 45.0,
+        "route_metadata_seconds": 2.9388e-05,
+        "stages": [
+          {
+            "backend_call_id": 1,
+            "end": 0.006119543,
+            "outer_route": "",
+            "parent_call_id": 0,
+            "start": 1.8347e-05,
+            "tactic_name": "sat.non_smt_leaf"
+          }
+        ],
+        "suggestions": 0
+      },
+      "test": "non_smt_leaf"
+    },
+    {
+      "count": 4,
+      "test": "all_projected_solutions"
+    },
+    {
+      "stats": {
+        "actions": [
+          {
+            "actual_var": 33,
+            "assignment_token": 1,
+            "backend_call_id": 1,
+            "canonical_key": "EX:B$3:b15",
+            "context_generation": 1,
+            "context_id": 1,
+            "coverage_version": 1,
+            "decision_id": 1,
+            "effective_phase": true,
+            "final_atom_truth": true,
+            "level": 2,
+            "literal_negated": false,
+            "mapping_kind": "exact_structure",
+            "native_phase": false,
+            "native_var": 33,
+            "phase_changed": true,
+            "query_id": 1,
+            "reassigned_opposite": 0,
+            "reassigned_same": 0,
+            "suggested_phase": true,
+            "support": [
+              {
+                "desired_one_mask": "1",
+                "desired_zero_mask": "0",
+                "node": 31
+              }
+            ],
+            "trail_index": 3,
+            "trailed_assignment_popped": false,
+            "would_override": true
+          },
+          {
+            "actual_var": 181,
+            "assignment_token": 2,
+            "backend_call_id": 1,
+            "canonical_key": "EX:B$3:b89",
+            "context_generation": 1,
+            "context_id": 1,
+            "coverage_version": 1,
+            "decision_id": 2,
+            "effective_phase": true,
+            "final_atom_truth": true,
+            "level": 3,
+            "literal_negated": false,
+            "mapping_kind": "exact_structure",
+            "native_phase": false,
+            "native_var": 181,
+            "phase_changed": true,
+            "query_id": 1,
+            "reassigned_opposite": 0,
+            "reassigned_same": 0,
+            "suggested_phase": true,
+            "support": [
+              {
+                "desired_one_mask": "1",
+                "desired_zero_mask": "0",
+                "node": 179
+              }
+            ],
+            "trail_index": 4,
+            "trailed_assignment_popped": false,
+            "would_override": true
+          },
+          {
+            "actual_var": 180,
+            "assignment_token": 3,
+            "backend_call_id": 1,
+            "canonical_key": "EX:B$3:a89",
+            "context_generation": 1,
+            "context_id": 1,
+            "coverage_version": 1,
+            "decision_id": 3,
+            "effective_phase": true,
+            "final_atom_truth": true,
+            "level": 4,
+            "literal_negated": false,
+            "mapping_kind": "exact_structure",
+            "native_phase": false,
+            "native_var": 180,
+            "phase_changed": true,
+            "query_id": 1,
+            "reassigned_opposite": 0,
+            "reassigned_same": 0,
+            "suggested_phase": true,
+            "support": [
+              {
+                "desired_one_mask": "1",
+                "desired_zero_mask": "0",
+                "node": 178
+              }
+            ],
+            "trail_index": 5,
+            "trailed_assignment_popped": false,
+            "would_override": true
+          },
+          {
+            "actual_var": 179,
+            "assignment_token": 4,
+            "backend_call_id": 1,
+            "canonical_key": "EX:B$3:b88",
+            "context_generation": 1,
+            "context_id": 1,
+            "coverage_version": 1,
+            "decision_id": 4,
+            "effective_phase": true,
+            "final_atom_truth": true,
+            "level": 5,
+            "literal_negated": false,
+            "mapping_kind": "exact_structure",
+            "native_phase": false,
+            "native_var": 179,
+            "phase_changed": true,
+            "query_id": 1,
+            "reassigned_opposite": 0,
+            "reassigned_same": 0,
+            "suggested_phase": true,
+            "support": [
+              {
+                "desired_one_mask": "1",
+                "desired_zero_mask": "0",
+                "node": 177
+              }
+            ],
+            "trail_index": 6,
+            "trailed_assignment_popped": false,
+            "would_override": true
+          }
+        ],
+        "actual_end": 0.013440804,
+        "b_encoded": 0,
+        "b_internalized": 0,
+        "b_selected": 0,
+        "backend_calls": [
+          {
+            "assertions_after_register": 91,
+            "assertions_before_register": 91,
+            "backend_call_id": 1,
+            "binding_seconds": 0.000107235,
+            "binding_snapshot": [
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$2:a0",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 2
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$2:a1",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 4
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$2:a2",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 6
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$2:a3",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 8
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$2:a4",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 10
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$2:a5",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 12
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$2:a6",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 14
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$2:a7",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 16
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$2:a8",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 18
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$2:a9",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 20
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$2:b0",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 3
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$2:b1",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 5
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$2:b2",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 7
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$2:b3",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 9
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$2:b4",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 11
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$2:b5",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 13
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$2:b6",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 15
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$2:b7",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 17
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$2:b8",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 19
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$2:b9",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 21
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a10",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 22
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a11",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 24
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a12",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 26
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a13",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 28
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a14",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 30
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:a15",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 32
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a16",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 34
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a17",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 36
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a18",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 38
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a19",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 40
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a20",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 42
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a21",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 44
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a22",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 46
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a23",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 48
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a24",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 50
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a25",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 52
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a26",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 54
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a27",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 56
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a28",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 58
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a29",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 60
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a30",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 62
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a31",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 64
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a32",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 66
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a33",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 68
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a34",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 70
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a35",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 72
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a36",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 74
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a37",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 76
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a38",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 78
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a39",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 80
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a40",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 82
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a41",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 84
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a42",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 86
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a43",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 88
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a44",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 90
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a45",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 92
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a46",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 94
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a47",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 96
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a48",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 98
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a49",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 100
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a50",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 102
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a51",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 104
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a52",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 106
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a53",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 108
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a54",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 110
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a55",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 112
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a56",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 114
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a57",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 116
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a58",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 118
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a59",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 120
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a60",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 122
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a61",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 124
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a62",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 126
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a63",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 128
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a64",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 130
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a65",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 132
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a66",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 134
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a67",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 136
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a68",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 138
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a69",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 140
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a70",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 142
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a71",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 144
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a72",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 146
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a73",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 148
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a74",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 150
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a75",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 152
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a76",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 154
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a77",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 156
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a78",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 158
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a79",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 160
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a80",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 162
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a81",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 164
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a82",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 166
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a83",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 168
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a84",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 170
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a85",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 172
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a86",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 174
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:a87",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 176
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:a88",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 178
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:a89",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 180
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:b10",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 23
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:b11",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 25
+              },
+              {
+                "encountered_in_window": false,
+                "key": "EX:B$3:b12",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 27
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b13",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 29
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b14",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 31
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b15",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 33
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b16",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 35
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b17",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 37
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b18",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 39
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b19",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 41
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b20",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 43
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b21",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 45
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b22",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 47
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b23",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 49
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b24",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 51
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b25",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 53
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b26",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 55
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b27",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 57
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b28",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 59
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b29",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 61
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b30",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 63
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b31",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 65
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b32",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 67
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b33",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 69
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b34",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 71
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b35",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 73
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b36",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 75
+              },
+              {
+                "encountered_in_window": true,
+                "key": "EX:B$3:b37",
+                "reason": "assigned_reason_unknown",
+                "state": "bound_unassigned",
+                "var": 77
+              }
+            ],
+            "binding_snapshot_limit": 128,
+            "bool_vars_after_register": 1,
+            "bool_vars_before_register": 1,
+            "check_seconds": 0.013148497,
+            "context_generation": 1,
+            "context_id": 1,
+            "end": 0.013193735,
+            "entry_function": "check",
+            "exact_matches": 80,
+            "funnel": {
+              "different_phase_suggestions": 4,
+              "has_current_demand": 64,
+              "has_direct_mapping": 80,
+              "native_ordinary_seen": 93,
+              "outside_decision_window": 29,
+              "outside_window_potential": 16,
+              "phase_overrides": 4,
+              "quota_rejected": 60,
+              "within_decision_window": 64
+            },
+            "incomplete_mapping": 0,
+            "ls_sampling": false,
+            "metadata_received": true,
+            "native_context_address": 90572270461184,
+            "native_encounters": [
+              {
+                "canonical_key": "EX:B$3:b15",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 33,
+                "ordinal": 1,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 31,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b89",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 181,
+                "ordinal": 2,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 179,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:a89",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 180,
+                "ordinal": 3,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 178,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b88",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 179,
+                "ordinal": 4,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 177,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:a88",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 178,
+                "ordinal": 5,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 176,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b87",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 177,
+                "ordinal": 6,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 175,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b86",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 175,
+                "ordinal": 7,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 173,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b85",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 173,
+                "ordinal": 8,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 171,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b84",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 171,
+                "ordinal": 9,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 169,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b83",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 169,
+                "ordinal": 10,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 167,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b82",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 167,
+                "ordinal": 11,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 165,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b81",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 165,
+                "ordinal": 12,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 163,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b19",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 41,
+                "ordinal": 13,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 39,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b80",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 163,
+                "ordinal": 14,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 161,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b79",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 161,
+                "ordinal": 15,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 159,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b78",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 159,
+                "ordinal": 16,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 157,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b77",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 157,
+                "ordinal": 17,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 155,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b76",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 155,
+                "ordinal": 18,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 153,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b75",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 153,
+                "ordinal": 19,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 151,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b74",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 151,
+                "ordinal": 20,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 149,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b73",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 149,
+                "ordinal": 21,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 147,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b72",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 147,
+                "ordinal": 22,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 145,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b71",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 145,
+                "ordinal": 23,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 143,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b70",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 143,
+                "ordinal": 24,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 141,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b69",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 141,
+                "ordinal": 25,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 139,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b68",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 139,
+                "ordinal": 26,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 137,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b67",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 137,
+                "ordinal": 27,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 135,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b66",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 135,
+                "ordinal": 28,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 133,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b65",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 133,
+                "ordinal": 29,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 131,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b64",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 131,
+                "ordinal": 30,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 129,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b63",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 129,
+                "ordinal": 31,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 127,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b62",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 127,
+                "ordinal": 32,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 125,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b61",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 125,
+                "ordinal": 33,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 123,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b60",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 123,
+                "ordinal": 34,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 121,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b59",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 121,
+                "ordinal": 35,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 119,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b58",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 119,
+                "ordinal": 36,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 117,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b57",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 117,
+                "ordinal": 37,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 115,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b56",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 115,
+                "ordinal": 38,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 113,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b55",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 113,
+                "ordinal": 39,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 111,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b54",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 111,
+                "ordinal": 40,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 109,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b53",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 109,
+                "ordinal": 41,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 107,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b52",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 107,
+                "ordinal": 42,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 105,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b51",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 105,
+                "ordinal": 43,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 103,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b50",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 103,
+                "ordinal": 44,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 101,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b49",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 101,
+                "ordinal": 45,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 99,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b48",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 99,
+                "ordinal": 46,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 97,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b47",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 97,
+                "ordinal": 47,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 95,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b46",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 95,
+                "ordinal": 48,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 93,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b45",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 93,
+                "ordinal": 49,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 91,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b44",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 91,
+                "ordinal": 50,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 89,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b43",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 89,
+                "ordinal": 51,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 87,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b42",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 87,
+                "ordinal": 52,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 85,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b41",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 85,
+                "ordinal": 53,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 83,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b40",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 83,
+                "ordinal": 54,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 81,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b39",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 81,
+                "ordinal": 55,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 79,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b38",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 79,
+                "ordinal": 56,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 77,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b37",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 77,
+                "ordinal": 57,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 75,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b36",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 75,
+                "ordinal": 58,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 73,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b35",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 73,
+                "ordinal": 59,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 71,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b34",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 71,
+                "ordinal": 60,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 69,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b33",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 69,
+                "ordinal": 61,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 67,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b32",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 67,
+                "ordinal": 62,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 65,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b31",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 65,
+                "ordinal": 63,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 63,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b30",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 63,
+                "ordinal": 64,
+                "outside_window": false,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 61,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b29",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 61,
+                "ordinal": 65,
+                "outside_window": true,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 59,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b28",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 59,
+                "ordinal": 66,
+                "outside_window": true,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 57,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b27",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 57,
+                "ordinal": 67,
+                "outside_window": true,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 55,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b26",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 55,
+                "ordinal": 68,
+                "outside_window": true,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 53,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b25",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 53,
+                "ordinal": 69,
+                "outside_window": true,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 51,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b24",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 51,
+                "ordinal": 70,
+                "outside_window": true,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 49,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b23",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 49,
+                "ordinal": 71,
+                "outside_window": true,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 47,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b22",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 47,
+                "ordinal": 72,
+                "outside_window": true,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 45,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b21",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 45,
+                "ordinal": 73,
+                "outside_window": true,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 43,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b20",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 43,
+                "ordinal": 74,
+                "outside_window": true,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 41,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b18",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 39,
+                "ordinal": 75,
+                "outside_window": true,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 37,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b17",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 37,
+                "ordinal": 76,
+                "outside_window": true,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 35,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b16",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 35,
+                "ordinal": 77,
+                "outside_window": true,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 33,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:a15",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 32,
+                "ordinal": 78,
+                "outside_window": true,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 30,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b14",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 31,
+                "ordinal": 79,
+                "outside_window": true,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 29,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              },
+              {
+                "canonical_key": "EX:B$3:b13",
+                "complete": true,
+                "native_phase": false,
+                "native_var": 29,
+                "ordinal": 80,
+                "outside_window": true,
+                "reason": "",
+                "score_false": 0,
+                "score_true": 1,
+                "supported_demands": [
+                  {
+                    "canonical_phase": 1,
+                    "node": 27,
+                    "one": "1",
+                    "zero": "0"
+                  }
+                ]
+              }
+            ],
+            "normalized_atoms": 80,
+            "normalized_matches": 0,
+            "ordinary_decisions": 93,
+            "original_reason_unknown": "",
+            "outer_route": "solver2",
+            "parent_call_id": 0,
+            "query_id": 1,
+            "result": "sat",
+            "route_reason": "native_assumptions_or_ignore_solver1",
+            "snapshot_native_vars_scanned": 183,
+            "solver_id": 88785564533376,
+            "start": 4.5238e-05,
+            "tactic_name": "smt_solver",
+            "unmapped": 0,
+            "unsupported_normal_form": 0
+          }
+        ],
+        "binding_seconds": 0.000107235,
+        "coverage_version": 1,
+        "diagnostic_snapshot_seconds": 0.001456045,
+        "direct_seconds": 0.009040062000000001,
+        "explicit_limit": false,
+        "exposure_guard_seconds": 3.2514e-05,
+        "exposure_limit": false,
+        "exposure_overrun": 0.0,
+        "guidance_added_assertions": 0,
+        "guidance_created_bool_vars": 0,
+        "guidance_marked_relevant": 0,
+        "hot_callback_seconds": 0.0074442679999999995,
+        "intervened_check": true,
+        "lifecycle": [
+          {
+            "backend_call_id": 1,
+            "context_id": 1,
+            "kind": "attach"
+          },
+          {
+            "backend_call_id": 1,
+            "entry": "check",
+            "kind": "search_entry"
+          },
+          {
+            "backend_call_id": 1,
+            "kind": "detach"
+          }
+        ],
+        "mode": 2,
+        "ordinary": 93,
+        "phase_overrides": 4,
+        "query_id": 1,
+        "requested_exposure_limit": 45.0,
+        "route_metadata_seconds": 0.0,
+        "stages": [],
+        "suggestions": 4
+      },
+      "test": "window_quota"
+    },
+    {
+      "passed": true,
+      "test": "ownership_pop_reset_native_cancel"
+    }
+  ]
+}

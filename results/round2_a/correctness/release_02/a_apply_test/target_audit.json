@@ -1,0 +1,129 @@
+{
+  "passed": true,
+  "errors": [],
+  "counts": {
+    "targets": 20,
+    "reached": 15,
+    "desired_value_observed": 11,
+    "was_missing_before_commit": 20,
+    "new_covered_for_targets": 11,
+    "actions_with_formal_model": 11,
+    "not_reached": 5,
+    "actions_without_formal_model": 14
+  },
+  "examples": [
+    {
+      "kind": "positive",
+      "formal_index": 1,
+      "query_id": 3,
+      "action": {
+        "actual_var": 6,
+        "assignment_token": 1,
+        "backend_call_id": 15,
+        "canonical_key": "EQ:C-20;5:I$1:y=1;",
+        "context_generation": 1,
+        "context_id": 15,
+        "coverage_version": 1,
+        "decision_id": 1,
+        "effective_phase": true,
+        "final_atom_truth": true,
+        "level": 1,
+        "literal_negated": false,
+        "mapping_kind": "exact_structure",
+        "native_phase": false,
+        "native_var": 6,
+        "phase_changed": true,
+        "query_id": 3,
+        "reassigned_opposite": 0,
+        "reassigned_same": 0,
+        "suggested_phase": true,
+        "support": [
+          {
+            "desired_one_mask": "20",
+            "desired_zero_mask": "0",
+            "node": 12
+          }
+        ],
+        "trail_index": 1,
+        "trailed_assignment_popped": false,
+        "would_override": true
+      },
+      "outcome": {
+        "decision_id": 1,
+        "backend_call_id": 15,
+        "phase_changed": true,
+        "targets": [
+          {
+            "node": 12,
+            "reached": true,
+            "desired_one_mask": "20",
+            "desired_zero_mask": "0",
+            "hit_one_mask": "20",
+            "hit_zero_mask": "0",
+            "new_one_mask": "20",
+            "new_zero_mask": "0",
+            "new_covered_for_targets": 2
+          }
+        ]
+      }
+    },
+    {
+      "kind": "zero_gain",
+      "formal_index": 1,
+      "query_id": 3,
+      "action": {
+        "actual_var": 5,
+        "assignment_token": 2,
+        "backend_call_id": 15,
+        "canonical_key": "EQ:C-10;5:I$1:y=1;",
+        "context_generation": 1,
+        "context_id": 15,
+        "coverage_version": 1,
+        "decision_id": 2,
+        "effective_phase": true,
+        "final_atom_truth": true,
+        "level": 2,
+        "literal_negated": false,
+        "mapping_kind": "exact_structure",
+        "native_phase": false,
+        "native_var": 5,
+        "phase_changed": true,
+        "query_id": 3,
+        "reassigned_opposite": 0,
+        "reassigned_same": 0,
+        "suggested_phase": true,
+        "support": [
+          {
+            "desired_one_mask": "10",
+            "desired_zero_mask": "0",
+            "node": 12
+          }
+        ],
+        "trail_index": 2,
+        "trailed_assignment_popped": false,
+        "would_override": true
+      },
+      "outcome": {
+        "decision_id": 2,
+        "backend_call_id": 15,
+        "phase_changed": true,
+        "targets": [
+          {
+            "node": 12,
+            "reached": true,
+            "desired_one_mask": "10",
+            "desired_zero_mask": "0",
+            "hit_one_mask": "0",
+            "hit_zero_mask": "0",
+            "new_one_mask": "0",
+            "new_zero_mask": "0",
+            "new_covered_for_targets": 0
+          }
+        ]
+      }
+    }
+  ],
+  "node_count": 15,
+  "method": "unchanged frozen official ManualSatisfiesMetric, intercepted statistics callbacks; no additional solver check",
+  "metric_sha256": "a51cdd069321cd32becf8eeb5e606cb71fbab16ae3e0231f68963eaadf493f04"
+}

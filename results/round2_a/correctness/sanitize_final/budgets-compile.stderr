@@ -1,0 +1,5 @@
+In file included from /mnt/Space1/SMT_Sampling/guided_sampler/tests/round2/budgets.cpp:2:
+/mnt/Space1/SMT_Sampling/guided_sampler/tests/round2/kernel.cpp: In function ‘int kernel_test_main()’:
+/mnt/Space1/SMT_Sampling/guided_sampler/tests/round2/kernel.cpp:21:70: warning: control reaches end of non-void function [-Wreturn-type]
+   21 |  }catch(std::exception const& e){std::cerr<<e.what()<<'\n';return 1;}}
+      |                                                                      ^

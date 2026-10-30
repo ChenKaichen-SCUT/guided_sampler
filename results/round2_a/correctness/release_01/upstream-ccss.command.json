@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "/tmp/guided_sampler_round2_worktrees/release/tests",
+    "-p",
+    "test_partitioned_initialization.py",
+    "-v"
+  ],
+  "exit_code": 0
+}

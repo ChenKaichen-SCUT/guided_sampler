@@ -34,6 +34,7 @@ public:
   }
   for(auto const& kv:index->entries){Json rules=Json::array();for(auto const& r:kv.second.rules)rules.push_back({{"node",r.node},{"phase",r.phase},{"known_one",std::to_string(r.one)},{"known_zero",std::to_string(r.zero)}});catalog<<Json({{"key",kv.first},{"rules",rules}}).dump()<<'\n';}catalog.flush();
   charge("index_build_seconds",seconds(start));
+  std::ofstream summary(dir+"/a_index_summary.json");summary<<Json({{"entries",index->entries.size()},{"normalization",mapping_counts},{"index_build_seconds",costs["index_build_seconds"]},{"disabled",disabled},{"b_constructed",false}}).dump(2)<<'\n';
  }
  static double seconds(Clock::time_point start){return std::chrono::duration<double>(Clock::now()-start).count();}
  void charge(std::string const& category,double x){cost+=x;costs[category]+=x;}

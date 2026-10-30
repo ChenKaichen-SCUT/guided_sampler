@@ -45,8 +45,9 @@ bool context::apply_A_phase_hint(bool_var native_var,bool native_phase,bool& eff
     std::lock_guard<std::recursive_mutex> lock(m_A->mutex);auto& r=*m_A;
     auto start=a2::Clock::now();struct cost {a2::Run& r;a2::Clock::time_point t;~cost(){double elapsed=a2::seconds(t);r.direct_seconds+=elapsed;r.hot_seconds+=elapsed;if(r.direct_seconds>=r.explicit_remaining)r.direct_disabled=true;}} charge{r,start};
     r.count(m_A_call,"native_ordinary_seen");++r.ordinal;
-    if(r.ordinal>64){r.count(m_A_call,"outside_decision_window");return false;}
-    r.count(m_A_call,"within_decision_window");
+    bool outside_window=r.ordinal>64;
+    if(outside_window){r.count(m_A_call,"outside_decision_window");if(!r.diagnostic||r.ordinal>80)return false;}
+    if(!outside_window)r.count(m_A_call,"within_decision_window");
     if(get_assignment(native_var)!=l_undef){r.count(m_A_call,"already_assigned");return false;}
     if(r.direct_seconds>=r.explicit_remaining){r.count(m_A_call,"cost_rejected");return false;}
     expr* e=bool_var2expr(native_var);auto it=m_A_data->cache.find(e);
@@ -56,6 +57,9 @@ bool context::apply_A_phase_hint(bool_var native_var,bool native_phase,bool& eff
         r.call(m_A_call)["normalized_atoms"]=r.call(m_A_call)["normalized_atoms"].get<unsigned>()+1;
     }
     auto const& n=it->second;
+    unsigned encounter=0;
+    if(r.diagnostic){auto& rows=r.call(m_A_call)["native_encounters"];if(rows.is_null())rows=a2::Json::array();encounter=rows.size();rows.push_back({{"ordinal",r.ordinal},{"native_var",native_var},{"native_phase",native_phase},{"canonical_key",n.key},{"complete",n.complete},{"reason",n.reason},{"outside_window",outside_window},{"score_false",nullptr},{"score_true",nullptr}});}
+
     if(!n.complete){r.count(m_A_call,n.reason.c_str());auto key=n.reason=="normalization_incomplete"?"incomplete_mapping":"unsupported_normal_form";auto& x=r.call(m_A_call)[key];x=x.get<unsigned>()+1;return false;}
     auto found=r.index->entries.find(n.key);
     if(found==r.index->entries.end()){r.count(m_A_call,"unmapped_reason_unknown");auto& x=r.call(m_A_call)["unmapped"];x=x.get<unsigned>()+1;return false;}
@@ -69,6 +73,8 @@ bool context::apply_A_phase_hint(bool_var native_var,bool native_phase,bool& eff
         auto& dest=supports[rule.phase][rule.node];dest.first|=rule.one&rule.want_one&~u1;dest.second|=rule.zero&rule.want_zero&~u0;
     }
     unsigned score[2]={0,0};for(unsigned p=0;p<2;++p)for(auto const& kv:supports[p])score[p]+=a2::pop(kv.second.first)+a2::pop(kv.second.second);
+    if(r.diagnostic){auto& row=r.call(m_A_call)["native_encounters"][encounter];row["score_false"]=score[0];row["score_true"]=score[1];a2::Json masks=a2::Json::array();for(unsigned phase=0;phase<2;++phase)for(auto const& kv:supports[phase])if(kv.second.first||kv.second.second)masks.push_back({{"canonical_phase",phase},{"node",kv.first},{"one",std::to_string(kv.second.first)},{"zero",std::to_string(kv.second.second)}});row["supported_demands"]=masks;}
+    if(outside_window){if(score[0]!=score[1])r.count(m_A_call,"outside_window_potential");return false;}
     if(!(score[0]+score[1])){r.count(m_A_call,"no_active_demand");return false;}r.count(m_A_call,"has_current_demand");
     if(score[0]==score[1]){r.count(m_A_call,"score_tie");return false;}
     if(r.suggestions>=4){r.count(m_A_call,"quota_rejected");return false;}

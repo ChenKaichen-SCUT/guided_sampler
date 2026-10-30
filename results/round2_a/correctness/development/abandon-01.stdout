@@ -1,0 +1,131 @@
+{
+  "actions": [
+    {
+      "actual_var": 2,
+      "assignment_token": 1,
+      "backend_call_id": 1,
+      "canonical_key": "EX:B$1:b",
+      "context_generation": 1,
+      "context_id": 1,
+      "coverage_version": 1,
+      "decision_id": 1,
+      "effective_phase": false,
+      "final_atom_truth": true,
+      "level": 2,
+      "literal_negated": false,
+      "mapping_kind": "exact_structure",
+      "native_phase": true,
+      "native_var": 2,
+      "phase_changed": true,
+      "query_id": 1,
+      "reassigned_opposite": 1,
+      "reassigned_same": 0,
+      "suggested_phase": false,
+      "support": [
+        {
+          "desired_one_mask": "0",
+          "desired_zero_mask": "1",
+          "node": 1
+        }
+      ],
+      "trail_index": 1,
+      "trailed_assignment_popped": true,
+      "would_override": true
+    }
+  ],
+  "actual_end": 0.001838102,
+  "b_encoded": 0,
+  "b_internalized": 0,
+  "b_selected": 0,
+  "backend_calls": [
+    {
+      "assertions_after_register": 3,
+      "assertions_before_register": 3,
+      "backend_call_id": 1,
+      "binding_seconds": 1.7184e-05,
+      "binding_snapshot": [
+        {
+          "encountered_in_window": false,
+          "key": "EX:B$1:a",
+          "reason": "assigned_reason_unknown",
+          "state": "bound_unassigned",
+          "var": 1
+        },
+        {
+          "encountered_in_window": true,
+          "key": "EX:B$1:b",
+          "reason": "assigned_reason_unknown",
+          "state": "bound_unassigned",
+          "var": 2
+        }
+      ],
+      "binding_snapshot_limit": 128,
+      "bool_vars_after_register": 1,
+      "bool_vars_before_register": 1,
+      "check_seconds": 0.001492634,
+      "context_generation": 1,
+      "context_id": 1,
+      "end": 0.001820248,
+      "entry_function": "check",
+      "exact_matches": 1,
+      "funnel": {
+        "different_phase_suggestions": 1,
+        "has_current_demand": 1,
+        "has_direct_mapping": 1,
+        "native_ordinary_seen": 1,
+        "phase_overrides": 1,
+        "within_decision_window": 1
+      },
+      "incomplete_mapping": 0,
+      "ls_sampling": false,
+      "metadata_received": true,
+      "native_context_address": 94630249992480,
+      "normalized_atoms": 1,
+      "normalized_matches": 0,
+      "ordinary_decisions": 1,
+      "original_reason_unknown": "",
+      "outer_route": "solver2",
+      "parent_call_id": 0,
+      "query_id": 1,
+      "result": "sat",
+      "route_reason": "native_incremental_mode",
+      "snapshot_native_vars_scanned": 3,
+      "start": 0.000327614,
+      "tactic_name": "smt_solver",
+      "unmapped": 0,
+      "unsupported_normal_form": 0
+    }
+  ],
+  "coverage_version": 1,
+  "direct_seconds": 2.3195e-05,
+  "explicit_limit": false,
+  "exposure_limit": false,
+  "exposure_overrun": 0.0,
+  "guidance_added_assertions": 0,
+  "guidance_created_bool_vars": 0,
+  "guidance_marked_relevant": 0,
+  "intervened_check": true,
+  "lifecycle": [
+    {
+      "backend_call_id": 1,
+      "context_id": 1,
+      "kind": "attach"
+    },
+    {
+      "backend_call_id": 1,
+      "entry": "check",
+      "kind": "search_entry"
+    },
+    {
+      "backend_call_id": 1,
+      "kind": "detach"
+    }
+  ],
+  "mode": 2,
+  "ordinary": 1,
+  "phase_overrides": 1,
+  "query_id": 1,
+  "requested_exposure_limit": 45.0,
+  "stages": [],
+  "suggestions": 1
+}

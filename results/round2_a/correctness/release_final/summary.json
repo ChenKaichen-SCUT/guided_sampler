@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "checks": {
+    "canonical": true,
+    "kernel": true,
+    "abandon": true,
+    "parallel": true,
+    "index_outcome": true,
+    "exposure": true,
+    "budgets": true,
+    "deep_observer": true,
+    "session": true,
+    "finalization": true,
+    "observer_differential": true,
+    "off_vs_saved_native_and_observe": true,
+    "upstream_ccss": true,
+    "demands_and_disabled_tail": true
+  },
+  "binary_sha256": "a66163b85054cffe066341c184fe1ecf2693629cdffb3bbdb1ef22a2cf81eacc",
+  "library_sha256": "e45051d3c752047b11676c37df476b0bfb25113cdae17e58855ba3fe4ba4af05",
+  "baseline_executions": 0,
+  "comparison_to_saved_round1_fixture": true,
+  "known_upstream_leak_exception": null
+}
