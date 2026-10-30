@@ -1,5 +1,5 @@
 #pragma once
-#include <z3.h>
+#include "z3.h"
 #ifdef __cplusplus
 extern "C" {
 #endif
