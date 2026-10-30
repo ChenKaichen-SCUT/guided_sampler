@@ -76,3 +76,16 @@ assignment token、正常unassign钩子和后续重赋值区分原赋值撤销�
 固定设置见`configs/round2_a.json`；旧8位窗口的损失不能由第一轮缺失的日志补造。
 静态exact分类以目录代表表达式的规范结构为准，其他等价原形记为normalized；
 未匹配不冒称已经证明被消元。成本/命中和完整性能须以正式报告为准。
+
+## 第二轮正式审计补充：内部赋值与模型真值
+
+`A_finalize()`中在线字段`final_atom_truth`读取`get_assignment()`，它只表示内核的
+Boolean assignment，不能直接作为返回模型中的原子值。第二轮916条正式建议中，
+716条内部赋值看似保留，但独立原模型核验没有一条保留建议相位。
+不据此猜测逐事件的relevance/理论原因；原始字段保留以便追溯。
+
+`scripts/audit_round2_retention.py`只读取已归档的原变量模型，对目录中的原式等价
+Bool原子做完整替换和化简，恢复literal极性，生成
+`returned_model_atom_truth_via_original_equivalent`与`model_phase_retained`。
+该步骤没有额外solver check，也不改变实验。访问和新增covered仍以官方短路求值器
+的独立目标审计为准；模型中的原子值成立本身也不证明Reach成立。

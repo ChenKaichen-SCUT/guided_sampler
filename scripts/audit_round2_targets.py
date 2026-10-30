@@ -23,10 +23,10 @@ def audit(d,formula):
  online={}
  for line in (d/'a_outcomes.jsonl').read_text().splitlines():
   r=json.loads(line);online[(r['query_id'],r['formal_index'])]=r
- receipts=[json.loads(l) for l in (d/'formal_receipts.jsonl').read_text().splitlines()];done=set();counts=collections.Counter();examples=[];errors=[]
+ receipt_file=(d/'formal_receipts.jsonl').open();receipts=(json.loads(l) for l in receipt_file);done=set();counts=collections.Counter();examples=[];errors=[]
  with (d/'a_outcomes.independent.jsonl').open('x') as out,(d/'samples.formal').open() as inp:
   for i,sample in enumerate(metric.parse_samples(inp)):
-   rec=receipts[i];qa=actions.get(rec['query'],[]) if rec['source']=='CDCL' else []
+   rec=next(receipts);qa=actions.get(rec['query'],[]) if rec['source']=='CDCL' else []
    old={s['node']:stat._storage[nodes[s['node']].get_id()][:2] for a in qa for s in a['support']};stat.current={};assert manual.count_sample(sample)
    if not qa:continue
    done.add(rec['query']);outcomes=[];demands=set()

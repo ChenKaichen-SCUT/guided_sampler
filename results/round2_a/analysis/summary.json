@@ -1,0 +1,40 @@
+{
+  "totals": {
+    "metadata_received": 104275,
+    "supported_SMT_calls": 104275,
+    "suggestions": 916,
+    "phase_overrides": 534,
+    "ordinary": 23823223,
+    "intervened_checks": 414,
+    "exposure_limit_queries": 0,
+    "popped": 393,
+    "reassigned_same": 1053,
+    "reassigned_opposite": 343,
+    "same_phase_suggestions": 382
+  },
+  "target_totals": {
+    "targets": 941,
+    "reached": 320,
+    "was_missing_before_commit": 941,
+    "new_covered_for_targets": 0,
+    "actions_with_formal_model": 916,
+    "popped_with_formal_model": 393,
+    "not_reached": 621
+  },
+  "versus_HighDiv": {
+    "time900": {
+      "higher": 1,
+      "equal": 5,
+      "lower": 2
+    },
+    "n100_t900": {
+      "higher": 3,
+      "equal": 5,
+      "lower": 0
+    }
+  },
+  "runs": 16,
+  "valid": 16,
+  "baseline_rerun": false,
+  "implementation_commit": "688e7d90a97952850a53b33053cd04b76c30fea4"
+}

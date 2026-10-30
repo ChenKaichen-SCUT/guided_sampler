@@ -1,0 +1,17 @@
+id,cost_disabled_requests,registered_without_check_at_deadline,unsupported_leaf,SMT_calls_without_native_ordinary,unmapped_reason_unknown,normalization_incomplete,unsupported_normal_form,already_assigned,no_active_demand,score_tie,quota_rejected,cost_rejected,exposure_rejected,outside_decision_window,assigned_targets_over_full_catalog,unencountered_targets_over_full_catalog,outside_window_potential
+a_only_v2_time900_00,12398,0,0,30858,36,0,0,0,0,0,0,0,0,0,NA,NA,NA
+a_only_v2_time900_01,21214,0,0,3046,406258,0,0,0,0,0,0,0,0,0,NA,NA,NA
+a_only_v2_time900_02,0,0,0,0,19712,0,0,0,0,0,0,0,0,6515701,NA,NA,NA
+a_only_v2_time900_03,0,0,0,0,121024,0,0,0,0,0,0,0,0,8654712,NA,NA,NA
+a_only_v2_time900_04,0,0,0,0,75275,0,0,0,5637,0,41,0,0,3446337,NA,NA,NA
+a_only_v2_time900_05,33239,0,0,24403,257,0,0,0,0,0,0,0,0,0,NA,NA,NA
+a_only_v2_time900_06,0,0,0,39,114679,0,2,0,0,0,0,0,0,318,NA,NA,NA
+a_only_v2_time900_07,35488,0,0,72,1086102,0,0,0,0,0,0,0,0,705855,NA,NA,NA
+a_only_v2_n100_t900_00,0,0,0,50,0,0,0,0,0,0,0,0,0,0,NA,NA,NA
+a_only_v2_n100_t900_01,0,0,0,49,1,0,0,0,0,0,0,0,0,0,NA,NA,NA
+a_only_v2_n100_t900_02,0,0,0,0,6400,0,0,0,0,0,0,0,0,2197114,NA,NA,NA
+a_only_v2_n100_t900_03,0,0,0,0,6400,0,0,0,0,0,0,0,0,447677,NA,NA,NA
+a_only_v2_n100_t900_04,0,0,0,0,2378,0,0,0,704,0,41,0,0,9316,NA,NA,NA
+a_only_v2_n100_t900_05,0,0,0,50,0,0,0,0,0,0,0,0,0,0,NA,NA,NA
+a_only_v2_n100_t900_06,0,0,0,37,322,0,2,0,0,0,0,0,0,0,NA,NA,NA
+a_only_v2_n100_t900_07,0,0,0,44,6,0,0,0,0,0,0,0,0,0,NA,NA,NA

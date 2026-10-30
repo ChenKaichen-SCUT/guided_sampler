@@ -1,0 +1,18 @@
+{
+  "formal_runs": 16,
+  "seed": 0,
+  "formal_models": 404895,
+  "all_formal_audits_passed": true,
+  "HighDiv_baseline_executions": 0,
+  "extra_seeds": 0,
+  "B_enabled": false,
+  "release_and_sanitizers_passed": true,
+  "actual_phase_overrides": 534,
+  "formal_target_new_covered": 0,
+  "archive_parts": 19,
+  "archive_members": 1862,
+  "archive_bytes": 995078228,
+  "archive_manifest_sha256": "0b063bb50cd891311c46ee7caba6a368a804f6b92ddd34996a900aacd5822ff8",
+  "report": "docs/round2_a_results.zh.md",
+  "frozen_implementation": "688e7d90a97952850a53b33053cd04b76c30fea4"
+}

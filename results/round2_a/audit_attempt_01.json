@@ -1,0 +1,7 @@
+{
+  "status": "stopped_for_memory_growth",
+  "formal_experiments_rerun": false,
+  "reason": "legacy finalizer loaded receipts from multiple large runs into memory; reached about19GiB and rising",
+  "replacement": "streaming acceptance with identical rules; completed valid audits retained",
+  "log": "correctness/development/round2-audit-attempt-01.log"
+}

@@ -1,4 +1,22 @@
-# Guided Sampler，第一轮 A/B
+# Guided Sampler，第二轮 A-only
+
+本分支从 `fc19bd22609295ed405e1ac96bf35d695c42832a` 独立开发。
+已完成 Release、ASan/UBSan、36 次固定机制对照和 16 项 seed=0 正式实验，
+404895 个正式模型通过官方计分与独立审计。未重跑 HighDiv、未追加 seed、未开启 B。
+
+[第二轮中文报告](docs/round2_a_results.zh.md)｜[软相位实现说明](docs/A_soft_phase_guidance.zh.md)｜
+[冻结计划](manifests/round2_a_plan.json)｜[原始证据恢复](archives/round2_a/RESTORE.md)
+
+正式 A 实际改相位 534 次，但支持目标新增覆盖为 0。相对完整 HighDiv，
+时间模式 1 胜 / 5 平 / 2 负，独立 100 模型模式 3 胜 / 5 平。
+报告区分内部 Boolean assignment、返回模型真值、实际目标访问及成本，保留全部负结果。
+第一轮历史负载与本轮不同，单 seed 不支持宣称稳定或普遍优势。
+
+第二轮独立构建入口为 `scripts/build_round2.py release|sanitize`；
+正式 `QUEUE_STARTED.json` 已冻结，构建器和执行器会拒绝覆盖本轮。
+请读取或恢复已归档结果，不再次执行正式队列。第一轮归档通过上述固定 SHA 复用。
+
+## 第一轮历史资料
 
 在完整 HighDiv hybrid 流程中实现原子相位 A 与可回溯观察目标 B。
 上游固定为 `laigroup/HighDiv@f2c6e1756b13281d96cbf90a8bd940129e56cce4`。

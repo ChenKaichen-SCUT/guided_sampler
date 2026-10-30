@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from common import *
-from finalize_samples import finalize,records
-from evaluate_official import evaluate
+from finalize_round2_stream import finalize
+from evaluate_round2_official import evaluate
 import collections,concurrent.futures,traceback
 def rows(path):
  if not path.exists():return
@@ -10,9 +10,11 @@ def rows(path):
    try:yield json.loads(line)
    except json.JSONDecodeError:break
 def audit(run):
- d=ROOT/run['output'];r={'id':run['id'],'mode':run['mode'],'input':run['input_name'],'errors':[]}
+ d=ROOT/run['output']
+ if (d/'audit.json').exists() and read(d/'audit.json').get('valid'):return read(d/'audit.json')
+ r={'id':run['id'],'mode':run['mode'],'input':run['input_name'],'errors':[]}
  try:
-  final=finalize(d,900,run['limit']);metrics=evaluate(d,ROOT/run['input']);assert metrics=={'official_exit':0,'exact_exit':0},metrics
+  final=read(d/'finalization.json') if (d/'finalization.json').exists() else finalize(d,900,run['limit']);assert digest(d/'samples.formal')==final['formal_sha256'];metrics=evaluate(d,ROOT/run['input']);assert metrics=={'official_exit':0,'exact_exit':0},metrics
   ex=read(d/'exact.json');assert ex['legal'] and ex['models']==final['formal_count'];assert ex['official_class_result'] in (d/'wire_coverage.stdout').read_text()
   cmd=[python(),ROOT/'scripts/audit_round2_targets.py',d,ROOT/run['input']]
   with (d/'target_audit.stdout').open('x') as out,(d/'target_audit.stderr').open('x') as err:p=subprocess.run(cmd,stdout=out,stderr=err)

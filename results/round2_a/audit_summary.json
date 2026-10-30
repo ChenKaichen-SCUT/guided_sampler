@@ -1,0 +1,2855 @@
+{
+  "count": 16,
+  "passed": true,
+  "runs": [
+    {
+      "id": "a_only_v2_time900_00",
+      "mode": "time900",
+      "input": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+      "errors": [],
+      "valid": true,
+      "models": 86290,
+      "covered": 16330,
+      "total": 16943,
+      "percentage": 96.381986661158,
+      "official": "96.38%",
+      "auc_percentage": 96.36049677889137,
+      "complete100": true,
+      "time100": 1.400427416,
+      "first_model": 0.110871684,
+      "source_models": {
+        "CDCL": 43152,
+        "CCSS": 43138
+      },
+      "status": "deadline",
+      "terminal": {
+        "exit_code": 0,
+        "process_wall_seconds": 900.3819239089989,
+        "cpu": 0,
+        "pid": 85783,
+        "terminated": false,
+        "hard_killed": false,
+        "resource_last": {
+          "cpu_seconds": 659.9,
+          "processor": 0,
+          "rss_kib": 623976,
+          "peak_rss_kib": 623976,
+          "allowed_cpus": "0"
+        },
+        "finished_utc": "2026-10-30T11:37:00.489189+00:00",
+        "cpu_seconds_exact": 660.518502,
+        "peak_rss_kib_exact": 624360
+      },
+      "queries": {
+        "CDCL_sat": 43291,
+        "CCSS_sat": 43138,
+        "CDCL_unknown": 1
+      },
+      "unknown_reasons": {
+        "": 0,
+        "canceled": 1
+      },
+      "requests": 43292,
+      "registered": 30894,
+      "max_mappable": 110,
+      "supported_queries": 30894,
+      "metadata_queries": 30894,
+      "counts": {
+        "metadata_received": 30894,
+        "supported_SMT_calls": 30894,
+        "suggestions": 0,
+        "phase_overrides": 0,
+        "ordinary": 36,
+        "intervened_checks": 0,
+        "exposure_limit_queries": 0
+      },
+      "funnel": {
+        "native_ordinary_seen": 36,
+        "unmapped_reason_unknown": 36,
+        "within_decision_window": 36
+      },
+      "backend": {
+        "smt_tactic/setup_and_check": 1,
+        "smt_solver/check": 30893
+      },
+      "stages": {
+        "simplifier": 4,
+        "propagate-values": 1,
+        "ctx-simplify": 1,
+        "solve-eqs": 1,
+        "lia2card": 1,
+        "elim-uncnstr": 1,
+        "ilp-model-finder-tactic": 1,
+        "propagate-ineqs": 1,
+        "no-cut-smt-tactic": 1,
+        "smt": 1
+      },
+      "mapping": {},
+      "costs": {
+        "CDCL_check_seconds": 119.45058361499409,
+        "CCSS_check_seconds": 419.1755702229962
+      },
+      "ledger": {
+        "categories": {
+          "binding_seconds": 0.5808336449999983,
+          "cost_ledger_log_seconds": 9.964636127000036,
+          "diagnostic_serialization_seconds": 16.904308765000142,
+          "diagnostic_snapshot_seconds": 0.0,
+          "exposure_guard_seconds": 0.0,
+          "hot_callback_seconds": 0.0010827519999999998,
+          "index_build_seconds": 0.00569254,
+          "index_update_seconds": 0.014188830000000046,
+          "observer_initialization_seconds": 0.025761871000000002,
+          "observer_seconds": 8.138044414000047,
+          "outcome_evaluation_seconds": 0.047081733999999986,
+          "outcome_log_seconds": 4.379534595000037,
+          "request_log_seconds": 4.868421045999978,
+          "request_register_seconds": 0.07050632400000058,
+          "route_metadata_seconds": 6.484300000000002e-05
+        },
+        "disabled": true,
+        "disabled_reason": "explicit_budget",
+        "explicit_seconds": 45.00015748600033,
+        "exposure_overrun": 0.0,
+        "exposure_requested_limit": 0.0,
+        "intervened_check_exposure_seconds": 0.0,
+        "query_id": 86430,
+        "source": "CDCL",
+        "tail_ccss_seconds": 117.83710100399821,
+        "tail_cdcl_seconds": 33.41098419899697,
+        "tail_unknown": 1,
+        "this_check_exposure": 0.0
+      },
+      "host": {
+        "A_disabled": true,
+        "A_disabled_reason": "explicit_budget",
+        "A_exposure": 0.0,
+        "coverage": null,
+        "elapsed": 900.241442899,
+        "formal_count": 86290,
+        "guidance_cost": 45.00015748600033,
+        "last_online_version": 61786,
+        "queries": 86430,
+        "raw_count": 86429,
+        "sample_limit": null,
+        "status": "deadline",
+        "total": 16943,
+        "wall_limit": 900.0
+      },
+      "target_audit": {
+        "passed": true,
+        "errors": [],
+        "counts": {},
+        "examples": [],
+        "node_count": 374,
+        "method": "unchanged frozen official ManualSatisfiesMetric, intercepted statistics callbacks; no additional solver check",
+        "metric_sha256": "a51cdd069321cd32becf8eeb5e606cb71fbab16ae3e0231f68963eaadf493f04"
+      },
+      "late": 0,
+      "omitted": {
+        "duplicate": 139
+      },
+      "time_curve": {
+        "1": 16310,
+        "5": 16330,
+        "10": 16330,
+        "30": 16330,
+        "60": 16330,
+        "120": 16330,
+        "300": 16330,
+        "600": 16330,
+        "900": 16330
+      },
+      "sample_curve": {
+        "1": 0,
+        "2": 4760,
+        "5": 8566,
+        "10": 12914,
+        "20": 15570,
+        "50": 16244,
+        "100": 16320
+      }
+    },
+    {
+      "id": "a_only_v2_time900_01",
+      "mode": "time900",
+      "input": "CAV_2009_benchmarks_problem__019.smt2",
+      "errors": [],
+      "valid": true,
+      "models": 90142,
+      "covered": 8960,
+      "total": 11429,
+      "percentage": 78.39706011024586,
+      "official": "78.4%",
+      "auc_percentage": 78.38482081738792,
+      "complete100": true,
+      "time100": 1.277438653,
+      "first_model": 0.11098669,
+      "source_models": {
+        "CDCL": 45079,
+        "CCSS": 45063
+      },
+      "status": "deadline",
+      "terminal": {
+        "exit_code": 0,
+        "process_wall_seconds": 900.3819239089989,
+        "cpu": 2,
+        "pid": 85784,
+        "terminated": false,
+        "hard_killed": false,
+        "resource_last": {
+          "cpu_seconds": 657.85,
+          "processor": 2,
+          "rss_kib": 384436,
+          "peak_rss_kib": 384436,
+          "allowed_cpus": "2"
+        },
+        "finished_utc": "2026-10-30T11:37:00.495430+00:00",
+        "cpu_seconds_exact": 658.294363,
+        "peak_rss_kib_exact": 384692
+      },
+      "queries": {
+        "CDCL_sat": 45209,
+        "CCSS_sat": 45063
+      },
+      "unknown_reasons": {
+        "": 0
+      },
+      "requests": 45209,
+      "registered": 23995,
+      "max_mappable": 35,
+      "supported_queries": 23995,
+      "metadata_queries": 23995,
+      "counts": {
+        "metadata_received": 23995,
+        "supported_SMT_calls": 23995,
+        "suggestions": 0,
+        "phase_overrides": 0,
+        "ordinary": 406258,
+        "intervened_checks": 0,
+        "exposure_limit_queries": 0
+      },
+      "funnel": {
+        "native_ordinary_seen": 406258,
+        "unmapped_reason_unknown": 406258,
+        "within_decision_window": 406258
+      },
+      "backend": {
+        "smt_tactic/setup_and_check": 1,
+        "smt_solver/check": 23994
+      },
+      "stages": {
+        "simplifier": 4,
+        "propagate-values": 1,
+        "ctx-simplify": 1,
+        "solve-eqs": 1,
+        "lia2card": 1,
+        "elim-uncnstr": 1,
+        "ilp-model-finder-tactic": 1,
+        "propagate-ineqs": 1,
+        "no-cut-smt-tactic": 1,
+        "smt": 1
+      },
+      "mapping": {},
+      "costs": {
+        "CDCL_check_seconds": 332.85256942599926,
+        "CCSS_check_seconds": 226.5379864119941
+      },
+      "ledger": {
+        "categories": {
+          "binding_seconds": 0.4508971079999989,
+          "cost_ledger_log_seconds": 9.354399015999954,
+          "diagnostic_serialization_seconds": 18.677110636000023,
+          "diagnostic_snapshot_seconds": 0.0,
+          "exposure_guard_seconds": 0.0,
+          "hot_callback_seconds": 2.2888232029999953,
+          "index_build_seconds": 0.003263931,
+          "index_update_seconds": 0.008849400000000014,
+          "observer_initialization_seconds": 0.027163068,
+          "observer_seconds": 5.393572511999965,
+          "outcome_evaluation_seconds": 0.034663284000000134,
+          "outcome_log_seconds": 4.117309148000004,
+          "request_log_seconds": 4.595602597000004,
+          "request_register_seconds": 0.04900974900000025,
+          "route_metadata_seconds": 0.00024598500000000005
+        },
+        "disabled": true,
+        "disabled_reason": "explicit_budget",
+        "explicit_seconds": 45.0009096369991,
+        "exposure_overrun": 0.0,
+        "exposure_requested_limit": 0.0,
+        "intervened_check_exposure_seconds": 0.0,
+        "query_id": 90272,
+        "source": "CDCL",
+        "tail_ccss_seconds": 104.84355913599165,
+        "tail_cdcl_seconds": 145.3702561990031,
+        "tail_unknown": 0,
+        "this_check_exposure": 0.0
+      },
+      "host": {
+        "A_disabled": true,
+        "A_disabled_reason": "explicit_budget",
+        "A_exposure": 0.0,
+        "coverage": null,
+        "elapsed": 900.135301999,
+        "formal_count": 90142,
+        "guidance_cost": 45.0009096369991,
+        "last_online_version": 47988,
+        "queries": 90272,
+        "raw_count": 90271,
+        "sample_limit": null,
+        "status": "deadline",
+        "total": 11429,
+        "wall_limit": 900.0
+      },
+      "target_audit": {
+        "passed": true,
+        "errors": [],
+        "counts": {},
+        "examples": [],
+        "node_count": 215,
+        "method": "unchanged frozen official ManualSatisfiesMetric, intercepted statistics callbacks; no additional solver check",
+        "metric_sha256": "a51cdd069321cd32becf8eeb5e606cb71fbab16ae3e0231f68963eaadf493f04"
+      },
+      "late": 0,
+      "omitted": {
+        "duplicate": 129
+      },
+      "time_curve": {
+        "1": 8960,
+        "5": 8960,
+        "10": 8960,
+        "30": 8960,
+        "60": 8960,
+        "120": 8960,
+        "300": 8960,
+        "600": 8960,
+        "900": 8960
+      },
+      "sample_curve": {
+        "1": 0,
+        "2": 4362,
+        "5": 7512,
+        "10": 8851,
+        "20": 8960,
+        "50": 8960,
+        "100": 8960
+      }
+    },
+    {
+      "id": "a_only_v2_time900_02",
+      "mode": "time900",
+      "input": "SMT_random_LIA_ex14600_2600_100.smt2",
+      "errors": [],
+      "valid": true,
+      "models": 307,
+      "covered": 13502,
+      "total": 104639,
+      "percentage": 12.903410774185533,
+      "official": "12.9%",
+      "auc_percentage": 12.499770291967591,
+      "complete100": true,
+      "time100": 309.372873102,
+      "first_model": 3.244365223,
+      "source_models": {
+        "CDCL": 307
+      },
+      "status": "deadline",
+      "terminal": {
+        "exit_code": 0,
+        "process_wall_seconds": 900.1665870459983,
+        "cpu": 4,
+        "pid": 85785,
+        "terminated": false,
+        "hard_killed": false,
+        "resource_last": {
+          "cpu_seconds": 897.62,
+          "processor": 4,
+          "rss_kib": 62388,
+          "peak_rss_kib": 62388,
+          "allowed_cpus": "4"
+        },
+        "finished_utc": "2026-10-30T11:37:00.273847+00:00",
+        "cpu_seconds_exact": 898.312393,
+        "peak_rss_kib_exact": 62516
+      },
+      "queries": {
+        "CDCL_sat": 307,
+        "CCSS_unknown": 307,
+        "CDCL_unknown": 1
+      },
+      "unknown_reasons": {
+        "": 0,
+        "smt tactic failed to show goal to be sat/unsat unknown": 307,
+        "timeout": 1
+      },
+      "requests": 308,
+      "registered": 308,
+      "max_mappable": 5022,
+      "supported_queries": 308,
+      "metadata_queries": 308,
+      "counts": {
+        "metadata_received": 308,
+        "supported_SMT_calls": 308,
+        "suggestions": 0,
+        "phase_overrides": 0,
+        "ordinary": 6535413,
+        "intervened_checks": 0,
+        "exposure_limit_queries": 0
+      },
+      "funnel": {
+        "native_ordinary_seen": 6535413,
+        "outside_decision_window": 6515701,
+        "unmapped_reason_unknown": 19712,
+        "within_decision_window": 19712
+      },
+      "backend": {
+        "smt_tactic/setup_and_check": 308
+      },
+      "stages": {
+        "simplifier": 1232,
+        "propagate-values": 308,
+        "ctx-simplify": 308,
+        "solve-eqs": 308,
+        "lia2card": 308,
+        "elim-uncnstr": 308,
+        "ilp-model-finder-tactic": 308,
+        "pb-tactic": 308,
+        "bounded-tactic": 308,
+        "smt": 308
+      },
+      "mapping": {},
+      "costs": {
+        "CDCL_check_seconds": 888.1615589310004,
+        "CCSS_check_seconds": 8.390232513999981
+      },
+      "ledger": {
+        "categories": {
+          "binding_seconds": 0.003346861999999999,
+          "cost_ledger_log_seconds": 0.13707502200000007,
+          "diagnostic_serialization_seconds": 0.3864536909999999,
+          "diagnostic_snapshot_seconds": 0.0,
+          "exposure_guard_seconds": 0.0,
+          "hot_callback_seconds": 3.0892471589999855,
+          "index_build_seconds": 0.04406299,
+          "index_update_seconds": 0.002438453999999999,
+          "observer_initialization_seconds": 0.029029955000000003,
+          "observer_seconds": 0.311409104,
+          "outcome_evaluation_seconds": 0.0005133819999999998,
+          "outcome_log_seconds": 0.06135154299999998,
+          "request_log_seconds": 0.06277170900000001,
+          "request_register_seconds": 0.0005941030000000003,
+          "route_metadata_seconds": 0.024384556000000016
+        },
+        "disabled": false,
+        "disabled_reason": "",
+        "explicit_seconds": 4.15267852999998,
+        "exposure_overrun": 0.0,
+        "exposure_requested_limit": 45.0,
+        "intervened_check_exposure_seconds": 0.0,
+        "query_id": 615,
+        "source": "CDCL",
+        "tail_ccss_seconds": 0.0,
+        "tail_cdcl_seconds": 0.0,
+        "tail_unknown": 0,
+        "this_check_exposure": 0.0
+      },
+      "host": {
+        "A_disabled": false,
+        "A_disabled_reason": "",
+        "A_exposure": 0.0,
+        "coverage": 13502,
+        "elapsed": 900.009203037,
+        "formal_count": 307,
+        "guidance_cost": 4.15284688899998,
+        "last_online_version": 307,
+        "queries": 615,
+        "raw_count": 307,
+        "sample_limit": null,
+        "status": "deadline",
+        "total": 104639,
+        "wall_limit": 900.0
+      },
+      "target_audit": {
+        "passed": true,
+        "errors": [],
+        "counts": {},
+        "examples": [],
+        "node_count": 5792,
+        "method": "unchanged frozen official ManualSatisfiesMetric, intercepted statistics callbacks; no additional solver check",
+        "metric_sha256": "a51cdd069321cd32becf8eeb5e606cb71fbab16ae3e0231f68963eaadf493f04"
+      },
+      "late": 0,
+      "omitted": {},
+      "time_curve": {
+        "1": 0,
+        "5": 0,
+        "10": 4926,
+        "30": 11466,
+        "60": 12342,
+        "120": 12886,
+        "300": 13356,
+        "600": 13457,
+        "900": 13502
+      },
+      "sample_curve": {
+        "1": 0,
+        "2": 4926,
+        "5": 9921,
+        "10": 11637,
+        "20": 12421,
+        "50": 13109,
+        "100": 13378
+      }
+    },
+    {
+      "id": "a_only_v2_time900_03",
+      "mode": "time900",
+      "input": "SMT_real_LIA_ex8500_2400_100.smt2",
+      "errors": [],
+      "valid": true,
+      "models": 1891,
+      "covered": 7637,
+      "total": 66061,
+      "percentage": 11.56052739135042,
+      "official": "11.56%",
+      "auc_percentage": 11.441825359417333,
+      "complete100": true,
+      "time100": 47.04662174,
+      "first_model": 0.507728522,
+      "source_models": {
+        "CDCL": 1891
+      },
+      "status": "deadline",
+      "terminal": {
+        "exit_code": 0,
+        "process_wall_seconds": 900.1665870459983,
+        "cpu": 6,
+        "pid": 85786,
+        "terminated": false,
+        "hard_killed": false,
+        "resource_last": {
+          "cpu_seconds": 890.01,
+          "processor": 6,
+          "rss_kib": 78660,
+          "peak_rss_kib": 79020,
+          "allowed_cpus": "6"
+        },
+        "finished_utc": "2026-10-30T11:37:00.279770+00:00",
+        "cpu_seconds_exact": 890.698289,
+        "peak_rss_kib_exact": 79356
+      },
+      "queries": {
+        "CDCL_sat": 1891,
+        "CCSS_unknown": 1888,
+        "CDCL_unknown": 1
+      },
+      "unknown_reasons": {
+        "": 0,
+        "smt tactic failed to show goal to be sat/unsat unknown": 1888,
+        "timeout": 1
+      },
+      "requests": 1892,
+      "registered": 1892,
+      "max_mappable": 3448,
+      "supported_queries": 1891,
+      "metadata_queries": 1891,
+      "counts": {
+        "metadata_received": 1891,
+        "supported_SMT_calls": 1891,
+        "suggestions": 0,
+        "phase_overrides": 0,
+        "ordinary": 8775736,
+        "intervened_checks": 0,
+        "exposure_limit_queries": 0
+      },
+      "funnel": {
+        "native_ordinary_seen": 8775736,
+        "outside_decision_window": 8654712,
+        "unmapped_reason_unknown": 121024,
+        "within_decision_window": 121024
+      },
+      "backend": {
+        "smt_tactic/setup_and_check": 1891
+      },
+      "stages": {
+        "simplifier": 7567,
+        "propagate-values": 1892,
+        "ctx-simplify": 1892,
+        "solve-eqs": 1892,
+        "lia2card": 1891,
+        "elim-uncnstr": 1891,
+        "ilp-model-finder-tactic": 1891,
+        "pb-tactic": 1891,
+        "bounded-tactic": 1891,
+        "smt": 1891
+      },
+      "mapping": {},
+      "costs": {
+        "CDCL_check_seconds": 853.342566026,
+        "CCSS_check_seconds": 28.9961344459997
+      },
+      "ledger": {
+        "categories": {
+          "binding_seconds": 0.021701053999999977,
+          "cost_ledger_log_seconds": 0.8003307140000018,
+          "diagnostic_serialization_seconds": 1.9640499479999982,
+          "diagnostic_snapshot_seconds": 0.0,
+          "exposure_guard_seconds": 0.0,
+          "hot_callback_seconds": 4.042593261000004,
+          "index_build_seconds": 0.028729833,
+          "index_update_seconds": 0.002055502999999995,
+          "observer_initialization_seconds": 0.024989076000000002,
+          "observer_seconds": 1.3022390889999986,
+          "outcome_evaluation_seconds": 0.003295081,
+          "outcome_log_seconds": 0.31846828699999935,
+          "request_log_seconds": 0.3774720990000004,
+          "request_register_seconds": 0.0035903229999999916,
+          "route_metadata_seconds": 0.13215044700000012
+        },
+        "disabled": false,
+        "disabled_reason": "",
+        "explicit_seconds": 9.021664715000018,
+        "exposure_overrun": 0.0,
+        "exposure_requested_limit": 45.0,
+        "intervened_check_exposure_seconds": 0.0,
+        "query_id": 3780,
+        "source": "CDCL",
+        "tail_ccss_seconds": 0.0,
+        "tail_cdcl_seconds": 0.0,
+        "tail_unknown": 0,
+        "this_check_exposure": 0.0
+      },
+      "host": {
+        "A_disabled": false,
+        "A_disabled_reason": "",
+        "A_exposure": 0.0,
+        "coverage": 7637,
+        "elapsed": 900.009735309,
+        "formal_count": 1891,
+        "guidance_cost": 9.021815374000019,
+        "last_online_version": 1891,
+        "queries": 3780,
+        "raw_count": 1891,
+        "sample_limit": null,
+        "status": "deadline",
+        "total": 66061,
+        "wall_limit": 900.0
+      },
+      "target_audit": {
+        "passed": true,
+        "errors": [],
+        "counts": {},
+        "examples": [],
+        "node_count": 4006,
+        "method": "unchanged frozen official ManualSatisfiesMetric, intercepted statistics callbacks; no additional solver check",
+        "metric_sha256": "a51cdd069321cd32becf8eeb5e606cb71fbab16ae3e0231f68963eaadf493f04"
+      },
+      "late": 0,
+      "omitted": {},
+      "time_curve": {
+        "1": 0,
+        "5": 5771,
+        "10": 6304,
+        "30": 7245,
+        "60": 7447,
+        "120": 7534,
+        "300": 7619,
+        "600": 7634,
+        "900": 7637
+      },
+      "sample_curve": {
+        "1": 0,
+        "2": 2391,
+        "5": 4676,
+        "10": 5771,
+        "20": 6304,
+        "50": 7136,
+        "100": 7386
+      }
+    },
+    {
+      "id": "a_only_v2_time900_04",
+      "mode": "time900",
+      "input": "convert_convert-jpg2gif-query-1459.smt2",
+      "errors": [],
+      "valid": true,
+      "models": 2546,
+      "covered": 47349,
+      "total": 179302,
+      "percentage": 26.407402036787097,
+      "official": "26.41%",
+      "auc_percentage": 24.70217564097981,
+      "complete100": true,
+      "time100": 6.651325718,
+      "first_model": 0.325052027,
+      "source_models": {
+        "CDCL": 1274,
+        "CCSS": 1272
+      },
+      "status": "deadline",
+      "terminal": {
+        "exit_code": 0,
+        "process_wall_seconds": 900.3819239089989,
+        "cpu": 8,
+        "pid": 85787,
+        "terminated": false,
+        "hard_killed": false,
+        "resource_last": {
+          "cpu_seconds": 889.92,
+          "processor": 8,
+          "rss_kib": 294816,
+          "peak_rss_kib": 294816,
+          "allowed_cpus": "8"
+        },
+        "finished_utc": "2026-10-30T11:37:00.499063+00:00",
+        "cpu_seconds_exact": 890.7887000000001,
+        "peak_rss_kib_exact": 294944
+      },
+      "queries": {
+        "CDCL_sat": 1274,
+        "CCSS_sat": 1272,
+        "CDCL_unknown": 4,
+        "CCSS_unknown": 6
+      },
+      "unknown_reasons": {
+        "": 0,
+        "canceled": 4,
+        "smt tactic failed to show goal to be sat/unsat unknown": 5,
+        "timeout": 1
+      },
+      "requests": 1278,
+      "registered": 1278,
+      "max_mappable": 4022,
+      "supported_queries": 1278,
+      "metadata_queries": 1278,
+      "counts": {
+        "metadata_received": 1278,
+        "supported_SMT_calls": 1278,
+        "suggestions": 839,
+        "phase_overrides": 471,
+        "ordinary": 3528129,
+        "intervened_checks": 383,
+        "exposure_limit_queries": 0,
+        "popped": 334,
+        "reassigned_same": 965,
+        "reassigned_opposite": 290,
+        "same_phase_suggestions": 368
+      },
+      "funnel": {
+        "has_direct_mapping": 6517,
+        "native_ordinary_seen": 3528129,
+        "no_active_demand": 5637,
+        "outside_decision_window": 3446337,
+        "unmapped_reason_unknown": 75275,
+        "within_decision_window": 81792,
+        "different_phase_suggestions": 471,
+        "has_current_demand": 880,
+        "phase_overrides": 471,
+        "quota_rejected": 41,
+        "same_phase_suggestions": 368
+      },
+      "backend": {
+        "smt_tactic/setup_and_check": 1,
+        "smt_solver/check": 1277
+      },
+      "stages": {
+        "simplifier": 4,
+        "propagate-values": 1,
+        "ctx-simplify": 1,
+        "solve-eqs": 1,
+        "lia2card": 1,
+        "elim-uncnstr": 1,
+        "ilp-model-finder-tactic": 1,
+        "pb-tactic": 1,
+        "bounded-tactic": 1,
+        "no-cut-smt-tactic": 1,
+        "smt": 1
+      },
+      "mapping": {
+        "exact_linear_equivalence": 91,
+        "exact_structure": 748
+      },
+      "costs": {
+        "CDCL_check_seconds": 421.88282967399954,
+        "CCSS_check_seconds": 429.31118411700095
+      },
+      "ledger": {
+        "categories": {
+          "binding_seconds": 0.03221284500000003,
+          "cost_ledger_log_seconds": 0.5338545910000018,
+          "diagnostic_serialization_seconds": 1.2004222329999996,
+          "diagnostic_snapshot_seconds": 0.0,
+          "exposure_guard_seconds": 0.116557309,
+          "hot_callback_seconds": 1.5865305539998704,
+          "index_build_seconds": 0.057846779,
+          "index_update_seconds": 0.0036499089999999994,
+          "observer_initialization_seconds": 0.035252402,
+          "observer_seconds": 4.548209498000007,
+          "outcome_evaluation_seconds": 0.017084065000000016,
+          "outcome_log_seconds": 0.25161268200000036,
+          "request_log_seconds": 0.4295244450000004,
+          "request_register_seconds": 0.003164900999999996,
+          "route_metadata_seconds": 0.00010253499999999998
+        },
+        "disabled": false,
+        "disabled_reason": "",
+        "explicit_seconds": 8.816024747999887,
+        "exposure_overrun": 0.0,
+        "exposure_requested_limit": 0.0,
+        "intervened_check_exposure_seconds": 16.738408732999606,
+        "query_id": 2556,
+        "source": "CCSS",
+        "tail_ccss_seconds": 0.0,
+        "tail_cdcl_seconds": 0.0,
+        "tail_unknown": 0,
+        "this_check_exposure": 0.0
+      },
+      "host": {
+        "A_disabled": false,
+        "A_disabled_reason": "",
+        "A_exposure": 16.738408732999606,
+        "coverage": 47349,
+        "elapsed": 900.170080822,
+        "formal_count": 2546,
+        "guidance_cost": 8.816172111999887,
+        "last_online_version": 2546,
+        "queries": 2556,
+        "raw_count": 2546,
+        "sample_limit": null,
+        "status": "deadline",
+        "total": 179302,
+        "wall_limit": 900.0
+      },
+      "target_audit": {
+        "passed": true,
+        "errors": [],
+        "counts": {
+          "targets": 856,
+          "reached": 260,
+          "was_missing_before_commit": 856,
+          "new_covered_for_targets": 0,
+          "actions_with_formal_model": 839,
+          "popped_with_formal_model": 334,
+          "not_reached": 596
+        },
+        "examples": [
+          {
+            "kind": "zero_gain",
+            "formal_index": 2,
+            "query_id": 3,
+            "action": {
+              "actual_var": 597,
+              "assignment_token": 1,
+              "backend_call_id": 1,
+              "canonical_key": "LE:C9315;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;",
+              "context_generation": 1,
+              "context_id": 1,
+              "coverage_version": 2,
+              "decision_id": 3,
+              "effective_phase": true,
+              "final_atom_truth": false,
+              "level": 4,
+              "literal_negated": false,
+              "mapping_kind": "exact_linear_equivalence",
+              "native_phase": false,
+              "native_var": 597,
+              "phase_changed": true,
+              "query_id": 3,
+              "reassigned_opposite": 1,
+              "reassigned_same": 0,
+              "suggested_phase": true,
+              "support": [
+                {
+                  "desired_one_mask": "0",
+                  "desired_zero_mask": "1",
+                  "node": 3497
+                },
+                {
+                  "desired_one_mask": "1",
+                  "desired_zero_mask": "0",
+                  "node": 3498
+                }
+              ],
+              "trail_index": 5281,
+              "trailed_assignment_popped": true,
+              "would_override": true
+            },
+            "outcome": {
+              "decision_id": 3,
+              "backend_call_id": 1,
+              "phase_changed": true,
+              "targets": [
+                {
+                  "node": 3497,
+                  "reached": true,
+                  "desired_one_mask": "0",
+                  "desired_zero_mask": "1",
+                  "hit_one_mask": "0",
+                  "hit_zero_mask": "0",
+                  "new_one_mask": "0",
+                  "new_zero_mask": "0",
+                  "new_covered_for_targets": 0
+                },
+                {
+                  "node": 3498,
+                  "reached": true,
+                  "desired_one_mask": "1",
+                  "desired_zero_mask": "0",
+                  "hit_one_mask": "0",
+                  "hit_zero_mask": "0",
+                  "new_one_mask": "0",
+                  "new_zero_mask": "0",
+                  "new_covered_for_targets": 0
+                }
+              ]
+            }
+          }
+        ],
+        "node_count": 9580,
+        "method": "unchanged frozen official ManualSatisfiesMetric, intercepted statistics callbacks; no additional solver check",
+        "metric_sha256": "a51cdd069321cd32becf8eeb5e606cb71fbab16ae3e0231f68963eaadf493f04"
+      },
+      "late": 0,
+      "omitted": {},
+      "time_curve": {
+        "1": 36282,
+        "5": 38323,
+        "10": 38814,
+        "30": 39346,
+        "60": 39346,
+        "120": 40812,
+        "300": 42633,
+        "600": 46544,
+        "900": 47349
+      },
+      "sample_curve": {
+        "1": 0,
+        "2": 26220,
+        "5": 31891,
+        "10": 36036,
+        "20": 37392,
+        "50": 38307,
+        "100": 38564
+      }
+    },
+    {
+      "id": "a_only_v2_time900_05",
+      "mode": "time900",
+      "input": "dillig_40-10.smt2",
+      "errors": [],
+      "valid": true,
+      "models": 115364,
+      "covered": 47593,
+      "total": 50715,
+      "percentage": 93.8440303657695,
+      "official": "93.84%",
+      "auc_percentage": 93.82977824624224,
+      "complete100": true,
+      "time100": 1.088859619,
+      "first_model": 0.110876749,
+      "source_models": {
+        "CDCL": 57698,
+        "CCSS": 57666
+      },
+      "status": "deadline",
+      "terminal": {
+        "exit_code": 0,
+        "process_wall_seconds": 900.3819239089989,
+        "cpu": 10,
+        "pid": 85788,
+        "terminated": false,
+        "hard_killed": false,
+        "resource_last": {
+          "cpu_seconds": 617.86,
+          "processor": 10,
+          "rss_kib": 552328,
+          "peak_rss_kib": 561572,
+          "allowed_cpus": "10"
+        },
+        "finished_utc": "2026-10-30T11:37:00.502556+00:00",
+        "cpu_seconds_exact": 618.379941,
+        "peak_rss_kib_exact": 561572
+      },
+      "queries": {
+        "CDCL_sat": 57815,
+        "CCSS_sat": 57666
+      },
+      "unknown_reasons": {
+        "": 0
+      },
+      "requests": 57815,
+      "registered": 24576,
+      "max_mappable": 25,
+      "supported_queries": 24576,
+      "metadata_queries": 24576,
+      "counts": {
+        "metadata_received": 24576,
+        "supported_SMT_calls": 24576,
+        "suggestions": 0,
+        "phase_overrides": 0,
+        "ordinary": 257,
+        "intervened_checks": 0,
+        "exposure_limit_queries": 0
+      },
+      "funnel": {
+        "native_ordinary_seen": 257,
+        "unmapped_reason_unknown": 257,
+        "within_decision_window": 257
+      },
+      "backend": {
+        "smt_tactic/setup_and_check": 1,
+        "smt_solver/check": 24575
+      },
+      "stages": {
+        "simplifier": 4,
+        "propagate-values": 1,
+        "ctx-simplify": 1,
+        "solve-eqs": 1,
+        "lia2card": 1,
+        "elim-uncnstr": 1,
+        "ilp-model-finder-tactic": 1,
+        "propagate-ineqs": 1,
+        "no-cut-smt-tactic": 1,
+        "smt": 1
+      },
+      "mapping": {},
+      "costs": {
+        "CDCL_check_seconds": 147.98371322699978,
+        "CCSS_check_seconds": 260.29916945000537
+      },
+      "ledger": {
+        "categories": {
+          "binding_seconds": 0.42432511699999736,
+          "cost_ledger_log_seconds": 9.774395793000005,
+          "diagnostic_serialization_seconds": 17.667488661,
+          "diagnostic_snapshot_seconds": 0.0,
+          "exposure_guard_seconds": 0.0,
+          "hot_callback_seconds": 0.005292400000000003,
+          "index_build_seconds": 0.002701892,
+          "index_update_seconds": 0.009883999999999973,
+          "observer_initialization_seconds": 0.026971395999999998,
+          "observer_seconds": 8.103983202999945,
+          "outcome_evaluation_seconds": 0.03513403799999984,
+          "outcome_log_seconds": 4.180139101000019,
+          "request_log_seconds": 4.722838333999987,
+          "request_register_seconds": 0.04662635299999997,
+          "route_metadata_seconds": 0.0007200660000000002
+        },
+        "disabled": true,
+        "disabled_reason": "explicit_budget",
+        "explicit_seconds": 45.00050035400112,
+        "exposure_overrun": 0.0,
+        "exposure_requested_limit": 0.0,
+        "intervened_check_exposure_seconds": 0.0,
+        "query_id": 115481,
+        "source": "CDCL",
+        "tail_ccss_seconds": 147.85224225200602,
+        "tail_cdcl_seconds": 83.06053975499833,
+        "tail_unknown": 0,
+        "this_check_exposure": 0.0
+      },
+      "host": {
+        "A_disabled": true,
+        "A_disabled_reason": "explicit_budget",
+        "A_exposure": 0.0,
+        "coverage": null,
+        "elapsed": 900.16910234,
+        "formal_count": 115364,
+        "guidance_cost": 45.00050035400112,
+        "last_online_version": 49150,
+        "queries": 115481,
+        "raw_count": 115480,
+        "sample_limit": null,
+        "status": "deadline",
+        "total": 50715,
+        "wall_limit": 900.0
+      },
+      "target_audit": {
+        "passed": true,
+        "errors": [],
+        "counts": {},
+        "examples": [],
+        "node_count": 819,
+        "method": "unchanged frozen official ManualSatisfiesMetric, intercepted statistics callbacks; no additional solver check",
+        "metric_sha256": "a51cdd069321cd32becf8eeb5e606cb71fbab16ae3e0231f68963eaadf493f04"
+      },
+      "late": 0,
+      "omitted": {
+        "duplicate": 116
+      },
+      "time_curve": {
+        "1": 47593,
+        "5": 47593,
+        "10": 47593,
+        "30": 47593,
+        "60": 47593,
+        "120": 47593,
+        "300": 47593,
+        "600": 47593,
+        "900": 47593
+      },
+      "sample_curve": {
+        "1": 0,
+        "2": 23659,
+        "5": 42538,
+        "10": 47215,
+        "20": 47589,
+        "50": 47593,
+        "100": 47593
+      }
+    },
+    {
+      "id": "a_only_v2_time900_06",
+      "mode": "time900",
+      "input": "pb2010_normalized-j3048_8-sat.smt2",
+      "errors": [],
+      "valid": true,
+      "models": 1431,
+      "covered": 58452,
+      "total": 1416258,
+      "percentage": 4.127214109293646,
+      "official": "4.13%",
+      "auc_percentage": 4.107121874830775,
+      "complete100": true,
+      "time100": 35.782048073,
+      "first_model": 0.943211014,
+      "source_models": {
+        "CDCL": 512,
+        "CCSS": 919
+      },
+      "status": "deadline",
+      "terminal": {
+        "exit_code": 0,
+        "process_wall_seconds": 900.3819239089989,
+        "cpu": 12,
+        "pid": 85789,
+        "terminated": false,
+        "hard_killed": false,
+        "resource_last": {
+          "cpu_seconds": 874.81,
+          "processor": 12,
+          "rss_kib": 698208,
+          "peak_rss_kib": 888920,
+          "allowed_cpus": "12"
+        },
+        "finished_utc": "2026-10-30T11:37:00.506131+00:00",
+        "cpu_seconds_exact": 875.788158,
+        "peak_rss_kib_exact": 888920
+      },
+      "queries": {
+        "CDCL_sat": 3045,
+        "CCSS_sat": 3034
+      },
+      "unknown_reasons": {
+        "": 0
+      },
+      "requests": 3045,
+      "registered": 3045,
+      "max_mappable": 14849,
+      "supported_queries": 3045,
+      "metadata_queries": 3045,
+      "counts": {
+        "metadata_received": 3045,
+        "supported_SMT_calls": 3045,
+        "suggestions": 0,
+        "phase_overrides": 0,
+        "ordinary": 114999,
+        "intervened_checks": 0,
+        "exposure_limit_queries": 0
+      },
+      "funnel": {
+        "native_ordinary_seen": 114999,
+        "unmapped_reason_unknown": 114679,
+        "unsupported_normal_form": 2,
+        "within_decision_window": 114681,
+        "outside_decision_window": 318
+      },
+      "backend": {
+        "smt_tactic/setup_and_check": 1,
+        "smt_solver/check": 3044
+      },
+      "stages": {
+        "simplifier": 4,
+        "propagate-values": 1,
+        "ctx-simplify": 1,
+        "solve-eqs": 1,
+        "lia2card": 1,
+        "elim-uncnstr": 1,
+        "ilp-model-finder-tactic": 1,
+        "pb-tactic": 1,
+        "pb2bv": 2,
+        "lia2sat-tactic": 1,
+        "propagate-ineqs": 1,
+        "normalize-bounds": 1,
+        "lia2pb": 1,
+        "bounded-tactic": 1,
+        "no-cut-smt-tactic": 1,
+        "smt": 1
+      },
+      "mapping": {},
+      "costs": {
+        "CDCL_check_seconds": 108.20397354600095,
+        "CCSS_check_seconds": 528.3717380019992
+      },
+      "ledger": {
+        "categories": {
+          "binding_seconds": 0.09113296200000019,
+          "cost_ledger_log_seconds": 1.2555600179999977,
+          "diagnostic_serialization_seconds": 2.445972462999993,
+          "diagnostic_snapshot_seconds": 0.0,
+          "exposure_guard_seconds": 0.0,
+          "hot_callback_seconds": 0.3913405489999994,
+          "index_build_seconds": 0.277603471,
+          "index_update_seconds": 0.005864031999999999,
+          "observer_initialization_seconds": 0.06307308700000003,
+          "observer_seconds": 10.492479917999995,
+          "outcome_evaluation_seconds": 0.0014052049999999992,
+          "outcome_log_seconds": 0.086367827,
+          "request_log_seconds": 1.1529256730000008,
+          "request_register_seconds": 0.00754910900000002,
+          "route_metadata_seconds": 0.00013877699999999998
+        },
+        "disabled": false,
+        "disabled_reason": "",
+        "explicit_seconds": 16.271413091000085,
+        "exposure_overrun": 0.0,
+        "exposure_requested_limit": 45.0,
+        "intervened_check_exposure_seconds": 0.0,
+        "query_id": 6079,
+        "source": "CDCL",
+        "tail_ccss_seconds": 0.0,
+        "tail_cdcl_seconds": 0.0,
+        "tail_unknown": 0,
+        "this_check_exposure": 0.0
+      },
+      "host": {
+        "A_disabled": false,
+        "A_disabled_reason": "",
+        "A_exposure": 0.0,
+        "coverage": 58452,
+        "elapsed": 900.315753285,
+        "formal_count": 1431,
+        "guidance_cost": 16.271560451000084,
+        "last_online_version": 1431,
+        "queries": 6079,
+        "raw_count": 6078,
+        "sample_limit": null,
+        "status": "deadline",
+        "total": 1416258,
+        "wall_limit": 900.0
+      },
+      "target_audit": {
+        "passed": true,
+        "errors": [],
+        "counts": {},
+        "examples": [],
+        "node_count": 36747,
+        "method": "unchanged frozen official ManualSatisfiesMetric, intercepted statistics callbacks; no additional solver check",
+        "metric_sha256": "a51cdd069321cd32becf8eeb5e606cb71fbab16ae3e0231f68963eaadf493f04"
+      },
+      "late": 0,
+      "omitted": {
+        "duplicate": 4647
+      },
+      "time_curve": {
+        "1": 0,
+        "5": 54178,
+        "10": 55606,
+        "30": 56528,
+        "60": 57503,
+        "120": 58161,
+        "300": 58444,
+        "600": 58451,
+        "900": 58452
+      },
+      "sample_curve": {
+        "1": 0,
+        "2": 48590,
+        "5": 50756,
+        "10": 52894,
+        "20": 55232,
+        "50": 56203,
+        "100": 56548
+      }
+    },
+    {
+      "id": "a_only_v2_time900_07",
+      "mode": "time900",
+      "input": "prime_cone_sat_14.smt2",
+      "errors": [],
+      "valid": true,
+      "models": 106124,
+      "covered": 14383,
+      "total": 17246,
+      "percentage": 83.3990490548533,
+      "official": "83.4%",
+      "auc_percentage": 83.38629002895,
+      "complete100": true,
+      "time100": 1.053371904,
+      "first_model": 0.110694305,
+      "source_models": {
+        "CDCL": 53045,
+        "CCSS": 53079
+      },
+      "status": "deadline",
+      "terminal": {
+        "exit_code": 0,
+        "process_wall_seconds": 900.1665870459983,
+        "cpu": 14,
+        "pid": 85790,
+        "terminated": false,
+        "hard_killed": false,
+        "resource_last": {
+          "cpu_seconds": 644.39,
+          "processor": 14,
+          "rss_kib": 219212,
+          "peak_rss_kib": 219212,
+          "allowed_cpus": "14"
+        },
+        "finished_utc": "2026-10-30T11:37:00.285039+00:00",
+        "cpu_seconds_exact": 644.931511,
+        "peak_rss_kib_exact": 219468
+      },
+      "queries": {
+        "CDCL_sat": 53212,
+        "CCSS_sat": 53079,
+        "CDCL_unknown": 1
+      },
+      "unknown_reasons": {
+        "": 0,
+        "canceled": 1
+      },
+      "requests": 53213,
+      "registered": 17725,
+      "max_mappable": 29,
+      "supported_queries": 17725,
+      "metadata_queries": 17725,
+      "counts": {
+        "metadata_received": 17725,
+        "supported_SMT_calls": 17725,
+        "suggestions": 0,
+        "phase_overrides": 0,
+        "ordinary": 1791957,
+        "intervened_checks": 0,
+        "exposure_limit_queries": 0
+      },
+      "funnel": {
+        "native_ordinary_seen": 1791957,
+        "unmapped_reason_unknown": 1086102,
+        "within_decision_window": 1086102,
+        "outside_decision_window": 705855
+      },
+      "backend": {
+        "smt_tactic/setup_and_check": 1,
+        "smt_solver/check": 17724
+      },
+      "stages": {
+        "simplifier": 4,
+        "propagate-values": 1,
+        "ctx-simplify": 1,
+        "solve-eqs": 1,
+        "lia2card": 1,
+        "elim-uncnstr": 1,
+        "ilp-model-finder-tactic": 1,
+        "propagate-ineqs": 1,
+        "no-cut-smt-tactic": 1,
+        "smt": 1
+      },
+      "mapping": {},
+      "costs": {
+        "CDCL_check_seconds": 179.56762026499032,
+        "CCSS_check_seconds": 342.9820238839906
+      },
+      "ledger": {
+        "categories": {
+          "binding_seconds": 0.3196828949999995,
+          "cost_ledger_log_seconds": 7.239407304999944,
+          "diagnostic_serialization_seconds": 13.332184933999951,
+          "diagnostic_snapshot_seconds": 0.0,
+          "exposure_guard_seconds": 0.0,
+          "hot_callback_seconds": 14.596085889999996,
+          "index_build_seconds": 0.00085279,
+          "index_update_seconds": 0.007079796999999961,
+          "observer_initialization_seconds": 0.025257934,
+          "observer_seconds": 2.971952895999985,
+          "outcome_evaluation_seconds": 0.02505459899999992,
+          "outcome_log_seconds": 3.009015829999994,
+          "request_log_seconds": 3.464351870000018,
+          "request_register_seconds": 0.03313986299999989,
+          "route_metadata_seconds": 0.0005510210000000001
+        },
+        "disabled": true,
+        "disabled_reason": "explicit_budget",
+        "explicit_seconds": 45.024617624000875,
+        "exposure_overrun": 0.0,
+        "exposure_requested_limit": 0.0,
+        "intervened_check_exposure_seconds": 0.0,
+        "query_id": 106292,
+        "source": "CDCL",
+        "tail_ccss_seconds": 225.34683117899272,
+        "tail_cdcl_seconds": 119.8333089229904,
+        "tail_unknown": 1,
+        "this_check_exposure": 0.0
+      },
+      "host": {
+        "A_disabled": true,
+        "A_disabled_reason": "explicit_budget",
+        "A_exposure": 0.0,
+        "coverage": null,
+        "elapsed": 900.074174533,
+        "formal_count": 106124,
+        "guidance_cost": 45.024617624000875,
+        "last_online_version": 35439,
+        "queries": 106292,
+        "raw_count": 106291,
+        "sample_limit": null,
+        "status": "deadline",
+        "total": 17246,
+        "wall_limit": 900.0
+      },
+      "target_audit": {
+        "passed": true,
+        "errors": [],
+        "counts": {},
+        "examples": [],
+        "node_count": 299,
+        "method": "unchanged frozen official ManualSatisfiesMetric, intercepted statistics callbacks; no additional solver check",
+        "metric_sha256": "a51cdd069321cd32becf8eeb5e606cb71fbab16ae3e0231f68963eaadf493f04"
+      },
+      "late": 0,
+      "omitted": {
+        "duplicate": 167
+      },
+      "time_curve": {
+        "1": 14383,
+        "5": 14383,
+        "10": 14383,
+        "30": 14383,
+        "60": 14383,
+        "120": 14383,
+        "300": 14383,
+        "600": 14383,
+        "900": 14383
+      },
+      "sample_curve": {
+        "1": 0,
+        "2": 7171,
+        "5": 12506,
+        "10": 14226,
+        "20": 14377,
+        "50": 14382,
+        "100": 14383
+      }
+    },
+    {
+      "id": "a_only_v2_n100_t900_00",
+      "mode": "n100_t900",
+      "input": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+      "errors": [],
+      "valid": true,
+      "models": 100,
+      "covered": 16320,
+      "total": 16943,
+      "percentage": 96.32296523638081,
+      "official": "96.32%",
+      "auc_percentage": 96.30233374907056,
+      "complete100": true,
+      "time100": 1.341069215,
+      "first_model": 0.110903677,
+      "source_models": {
+        "CDCL": 50,
+        "CCSS": 50
+      },
+      "status": "complete100",
+      "terminal": {
+        "exit_code": 0,
+        "process_wall_seconds": 1.4878981909987488,
+        "cpu": 1,
+        "pid": 85791,
+        "terminated": false,
+        "hard_killed": false,
+        "resource_last": {
+          "cpu_seconds": 0.65,
+          "processor": 1,
+          "rss_kib": 38144,
+          "peak_rss_kib": 38144,
+          "allowed_cpus": "1"
+        },
+        "finished_utc": "2026-10-30T11:22:01.633443+00:00",
+        "cpu_seconds_exact": 0.879752,
+        "peak_rss_kib_exact": 38520
+      },
+      "queries": {
+        "CDCL_sat": 50,
+        "CCSS_sat": 50
+      },
+      "unknown_reasons": {
+        "": 0
+      },
+      "requests": 50,
+      "registered": 50,
+      "max_mappable": 110,
+      "supported_queries": 50,
+      "metadata_queries": 50,
+      "counts": {
+        "metadata_received": 50,
+        "supported_SMT_calls": 50,
+        "suggestions": 0,
+        "phase_overrides": 0,
+        "ordinary": 0,
+        "intervened_checks": 0,
+        "exposure_limit_queries": 0
+      },
+      "funnel": {},
+      "backend": {
+        "smt_tactic/setup_and_check": 1,
+        "smt_solver/check": 49
+      },
+      "stages": {
+        "simplifier": 4,
+        "propagate-values": 1,
+        "ctx-simplify": 1,
+        "solve-eqs": 1,
+        "lia2card": 1,
+        "elim-uncnstr": 1,
+        "ilp-model-finder-tactic": 1,
+        "propagate-ineqs": 1,
+        "no-cut-smt-tactic": 1,
+        "smt": 1
+      },
+      "mapping": {},
+      "costs": {
+        "CDCL_check_seconds": 0.20852832700000062,
+        "CCSS_check_seconds": 0.5050149749999998
+      },
+      "ledger": {
+        "categories": {
+          "binding_seconds": 0.000970869,
+          "cost_ledger_log_seconds": 0.032292169,
+          "diagnostic_serialization_seconds": 0.041625081999999994,
+          "diagnostic_snapshot_seconds": 0.0,
+          "exposure_guard_seconds": 0.0,
+          "hot_callback_seconds": 0.0,
+          "index_build_seconds": 0.003615463,
+          "index_update_seconds": 0.0006148180000000004,
+          "observer_initialization_seconds": 0.025524896000000002,
+          "observer_seconds": 0.013460030999999994,
+          "outcome_evaluation_seconds": 7.875299999999998e-05,
+          "outcome_log_seconds": 0.013595249000000002,
+          "request_log_seconds": 0.01189522,
+          "request_register_seconds": 0.0006756370000000001,
+          "route_metadata_seconds": 0.000642653
+        },
+        "disabled": false,
+        "disabled_reason": "",
+        "explicit_seconds": 0.14499083999999998,
+        "exposure_overrun": 0.0,
+        "exposure_requested_limit": 0.0,
+        "intervened_check_exposure_seconds": 0.0,
+        "query_id": 100,
+        "source": "CCSS",
+        "tail_ccss_seconds": 0.0,
+        "tail_cdcl_seconds": 0.0,
+        "tail_unknown": 0,
+        "this_check_exposure": 0.0
+      },
+      "host": {
+        "A_disabled": false,
+        "A_disabled_reason": "",
+        "A_exposure": 0.0,
+        "coverage": 16320,
+        "elapsed": 1.349478964,
+        "formal_count": 100,
+        "guidance_cost": 0.145256377,
+        "last_online_version": 100,
+        "queries": 100,
+        "raw_count": 100,
+        "sample_limit": 100,
+        "status": "complete100",
+        "total": 16943,
+        "wall_limit": 900.0
+      },
+      "target_audit": {
+        "passed": true,
+        "errors": [],
+        "counts": {},
+        "examples": [],
+        "node_count": 374,
+        "method": "unchanged frozen official ManualSatisfiesMetric, intercepted statistics callbacks; no additional solver check",
+        "metric_sha256": "a51cdd069321cd32becf8eeb5e606cb71fbab16ae3e0231f68963eaadf493f04"
+      },
+      "late": 0,
+      "omitted": {},
+      "time_curve": {
+        "1": 16312,
+        "5": 16320,
+        "10": 16320,
+        "30": 16320,
+        "60": 16320,
+        "120": 16320,
+        "300": 16320,
+        "600": 16320,
+        "900": 16320
+      },
+      "sample_curve": {
+        "1": 0,
+        "2": 4760,
+        "5": 8566,
+        "10": 12914,
+        "20": 15570,
+        "50": 16244,
+        "100": 16320
+      }
+    },
+    {
+      "id": "a_only_v2_n100_t900_01",
+      "mode": "n100_t900",
+      "input": "CAV_2009_benchmarks_problem__019.smt2",
+      "errors": [],
+      "valid": true,
+      "models": 100,
+      "covered": 8960,
+      "total": 11429,
+      "percentage": 78.39706011024586,
+      "official": "78.4%",
+      "auc_percentage": 78.38482962920537,
+      "complete100": true,
+      "time100": 1.2771253,
+      "first_model": 0.110744281,
+      "source_models": {
+        "CDCL": 50,
+        "CCSS": 50
+      },
+      "status": "complete100",
+      "terminal": {
+        "exit_code": 0,
+        "process_wall_seconds": 1.4878981909987488,
+        "cpu": 3,
+        "pid": 85792,
+        "terminated": false,
+        "hard_killed": false,
+        "resource_last": {
+          "cpu_seconds": 0.65,
+          "processor": 3,
+          "rss_kib": 37376,
+          "peak_rss_kib": 37376,
+          "allowed_cpus": "3"
+        },
+        "finished_utc": "2026-10-30T11:22:01.643243+00:00",
+        "cpu_seconds_exact": 0.828786,
+        "peak_rss_kib_exact": 37888
+      },
+      "queries": {
+        "CDCL_sat": 50,
+        "CCSS_sat": 50
+      },
+      "unknown_reasons": {
+        "": 0
+      },
+      "requests": 50,
+      "registered": 50,
+      "max_mappable": 35,
+      "supported_queries": 50,
+      "metadata_queries": 50,
+      "counts": {
+        "metadata_received": 50,
+        "supported_SMT_calls": 50,
+        "suggestions": 0,
+        "phase_overrides": 0,
+        "ordinary": 1,
+        "intervened_checks": 0,
+        "exposure_limit_queries": 0
+      },
+      "funnel": {
+        "native_ordinary_seen": 1,
+        "unmapped_reason_unknown": 1,
+        "within_decision_window": 1
+      },
+      "backend": {
+        "smt_tactic/setup_and_check": 1,
+        "smt_solver/check": 49
+      },
+      "stages": {
+        "simplifier": 4,
+        "propagate-values": 1,
+        "ctx-simplify": 1,
+        "solve-eqs": 1,
+        "lia2card": 1,
+        "elim-uncnstr": 1,
+        "ilp-model-finder-tactic": 1,
+        "propagate-ineqs": 1,
+        "no-cut-smt-tactic": 1,
+        "smt": 1
+      },
+      "mapping": {},
+      "costs": {
+        "CDCL_check_seconds": 0.4090172409999998,
+        "CCSS_check_seconds": 0.30491377700000033
+      },
+      "ledger": {
+        "categories": {
+          "binding_seconds": 0.0009042089999999998,
+          "cost_ledger_log_seconds": 0.026399276000000006,
+          "diagnostic_serialization_seconds": 0.05002822000000001,
+          "diagnostic_snapshot_seconds": 0.0,
+          "exposure_guard_seconds": 0.0,
+          "hot_callback_seconds": 4.3093e-05,
+          "index_build_seconds": 0.003214711,
+          "index_update_seconds": 0.000251821,
+          "observer_initialization_seconds": 0.02592474,
+          "observer_seconds": 0.012959215,
+          "outcome_evaluation_seconds": 7.747999999999998e-05,
+          "outcome_log_seconds": 0.015662853000000004,
+          "request_log_seconds": 0.014014548000000005,
+          "request_register_seconds": 0.0002787370000000001,
+          "route_metadata_seconds": 0.0005759869999999999
+        },
+        "disabled": false,
+        "disabled_reason": "",
+        "explicit_seconds": 0.15033489,
+        "exposure_overrun": 0.0,
+        "exposure_requested_limit": 0.0,
+        "intervened_check_exposure_seconds": 0.0,
+        "query_id": 100,
+        "source": "CCSS",
+        "tail_ccss_seconds": 0.0,
+        "tail_cdcl_seconds": 0.0,
+        "tail_unknown": 0,
+        "this_check_exposure": 0.0
+      },
+      "host": {
+        "A_disabled": false,
+        "A_disabled_reason": "",
+        "A_exposure": 0.0,
+        "coverage": 8960,
+        "elapsed": 1.283697883,
+        "formal_count": 100,
+        "guidance_cost": 0.15066497700000003,
+        "last_online_version": 100,
+        "queries": 100,
+        "raw_count": 100,
+        "sample_limit": 100,
+        "status": "complete100",
+        "total": 11429,
+        "wall_limit": 900.0
+      },
+      "target_audit": {
+        "passed": true,
+        "errors": [],
+        "counts": {},
+        "examples": [],
+        "node_count": 215,
+        "method": "unchanged frozen official ManualSatisfiesMetric, intercepted statistics callbacks; no additional solver check",
+        "metric_sha256": "a51cdd069321cd32becf8eeb5e606cb71fbab16ae3e0231f68963eaadf493f04"
+      },
+      "late": 0,
+      "omitted": {},
+      "time_curve": {
+        "1": 8960,
+        "5": 8960,
+        "10": 8960,
+        "30": 8960,
+        "60": 8960,
+        "120": 8960,
+        "300": 8960,
+        "600": 8960,
+        "900": 8960
+      },
+      "sample_curve": {
+        "1": 0,
+        "2": 4362,
+        "5": 7512,
+        "10": 8851,
+        "20": 8960,
+        "50": 8960,
+        "100": 8960
+      }
+    },
+    {
+      "id": "a_only_v2_n100_t900_02",
+      "mode": "n100_t900",
+      "input": "SMT_random_LIA_ex14600_2600_100.smt2",
+      "errors": [],
+      "valid": true,
+      "models": 100,
+      "covered": 13378,
+      "total": 104639,
+      "percentage": 12.784908112653982,
+      "official": "12.78%",
+      "auc_percentage": 12.452250500911413,
+      "complete100": true,
+      "time100": 309.438730877,
+      "first_model": 3.28661024,
+      "source_models": {
+        "CDCL": 100
+      },
+      "status": "complete100",
+      "terminal": {
+        "exit_code": 0,
+        "process_wall_seconds": 309.52953241999967,
+        "cpu": 5,
+        "pid": 85793,
+        "terminated": false,
+        "hard_killed": false,
+        "resource_last": {
+          "cpu_seconds": 308.08,
+          "processor": 5,
+          "rss_kib": 58304,
+          "peak_rss_kib": 58304,
+          "allowed_cpus": "5"
+        },
+        "finished_utc": "2026-10-30T11:27:09.653355+00:00",
+        "cpu_seconds_exact": 308.847387,
+        "peak_rss_kib_exact": 58560
+      },
+      "queries": {
+        "CDCL_sat": 100,
+        "CCSS_unknown": 99
+      },
+      "unknown_reasons": {
+        "": 0,
+        "smt tactic failed to show goal to be sat/unsat unknown": 99
+      },
+      "requests": 100,
+      "registered": 100,
+      "max_mappable": 5022,
+      "supported_queries": 100,
+      "metadata_queries": 100,
+      "counts": {
+        "metadata_received": 100,
+        "supported_SMT_calls": 100,
+        "suggestions": 0,
+        "phase_overrides": 0,
+        "ordinary": 2203514,
+        "intervened_checks": 0,
+        "exposure_limit_queries": 0
+      },
+      "funnel": {
+        "native_ordinary_seen": 2203514,
+        "outside_decision_window": 2197114,
+        "unmapped_reason_unknown": 6400,
+        "within_decision_window": 6400
+      },
+      "backend": {
+        "smt_tactic/setup_and_check": 100
+      },
+      "stages": {
+        "simplifier": 400,
+        "propagate-values": 100,
+        "ctx-simplify": 100,
+        "solve-eqs": 100,
+        "lia2card": 100,
+        "elim-uncnstr": 100,
+        "ilp-model-finder-tactic": 100,
+        "pb-tactic": 100,
+        "bounded-tactic": 100,
+        "smt": 100
+      },
+      "mapping": {},
+      "costs": {
+        "CDCL_check_seconds": 305.45017316299976,
+        "CCSS_check_seconds": 2.7540290050001146
+      },
+      "ledger": {
+        "categories": {
+          "binding_seconds": 0.0010556780000000002,
+          "cost_ledger_log_seconds": 0.035295343,
+          "diagnostic_serialization_seconds": 0.109199188,
+          "diagnostic_snapshot_seconds": 0.0,
+          "exposure_guard_seconds": 0.0,
+          "hot_callback_seconds": 1.073172069999998,
+          "index_build_seconds": 0.049068445,
+          "index_update_seconds": 0.002273612,
+          "observer_initialization_seconds": 0.029426645,
+          "observer_seconds": 0.10060154399999999,
+          "outcome_evaluation_seconds": 0.00015776900000000001,
+          "outcome_log_seconds": 0.015782977,
+          "request_log_seconds": 0.019933190999999992,
+          "request_register_seconds": 0.00020958699999999996,
+          "route_metadata_seconds": 0.007617916
+        },
+        "disabled": false,
+        "disabled_reason": "",
+        "explicit_seconds": 1.4437939649999982,
+        "exposure_overrun": 0.0,
+        "exposure_requested_limit": 45.0,
+        "intervened_check_exposure_seconds": 0.0,
+        "query_id": 199,
+        "source": "CDCL",
+        "tail_ccss_seconds": 0.0,
+        "tail_cdcl_seconds": 0.0,
+        "tail_unknown": 0,
+        "this_check_exposure": 0.0
+      },
+      "host": {
+        "A_disabled": false,
+        "A_disabled_reason": "",
+        "A_exposure": 0.0,
+        "coverage": 13378,
+        "elapsed": 309.451646325,
+        "formal_count": 100,
+        "guidance_cost": 1.4449960879999981,
+        "last_online_version": 100,
+        "queries": 199,
+        "raw_count": 100,
+        "sample_limit": 100,
+        "status": "complete100",
+        "total": 104639,
+        "wall_limit": 900.0
+      },
+      "target_audit": {
+        "passed": true,
+        "errors": [],
+        "counts": {},
+        "examples": [],
+        "node_count": 5792,
+        "method": "unchanged frozen official ManualSatisfiesMetric, intercepted statistics callbacks; no additional solver check",
+        "metric_sha256": "a51cdd069321cd32becf8eeb5e606cb71fbab16ae3e0231f68963eaadf493f04"
+      },
+      "late": 0,
+      "omitted": {},
+      "time_curve": {
+        "1": 0,
+        "5": 0,
+        "10": 4926,
+        "30": 11466,
+        "60": 12306,
+        "120": 12886,
+        "300": 13356,
+        "600": 13378,
+        "900": 13378
+      },
+      "sample_curve": {
+        "1": 0,
+        "2": 4926,
+        "5": 9921,
+        "10": 11637,
+        "20": 12421,
+        "50": 13109,
+        "100": 13378
+      }
+    },
+    {
+      "id": "a_only_v2_n100_t900_03",
+      "mode": "n100_t900",
+      "input": "SMT_real_LIA_ex8500_2400_100.smt2",
+      "errors": [],
+      "valid": true,
+      "models": 100,
+      "covered": 7386,
+      "total": 66061,
+      "percentage": 11.18057552867804,
+      "official": "11.18%",
+      "auc_percentage": 11.119667765163612,
+      "complete100": true,
+      "time100": 47.370139922,
+      "first_model": 0.495814693,
+      "source_models": {
+        "CDCL": 100
+      },
+      "status": "complete100",
+      "terminal": {
+        "exit_code": 0,
+        "process_wall_seconds": 47.609751790998416,
+        "cpu": 7,
+        "pid": 85794,
+        "terminated": false,
+        "hard_killed": false,
+        "resource_last": {
+          "cpu_seconds": 46.77,
+          "processor": 7,
+          "rss_kib": 47676,
+          "peak_rss_kib": 47676,
+          "allowed_cpus": "7"
+        },
+        "finished_utc": "2026-10-30T11:22:47.751704+00:00",
+        "cpu_seconds_exact": 46.780248,
+        "peak_rss_kib_exact": 47804
+      },
+      "queries": {
+        "CDCL_sat": 100,
+        "CCSS_unknown": 99
+      },
+      "unknown_reasons": {
+        "": 0,
+        "smt tactic failed to show goal to be sat/unsat unknown": 99
+      },
+      "requests": 100,
+      "registered": 100,
+      "max_mappable": 3448,
+      "supported_queries": 100,
+      "metadata_queries": 100,
+      "counts": {
+        "metadata_received": 100,
+        "supported_SMT_calls": 100,
+        "suggestions": 0,
+        "phase_overrides": 0,
+        "ordinary": 454077,
+        "intervened_checks": 0,
+        "exposure_limit_queries": 0
+      },
+      "funnel": {
+        "native_ordinary_seen": 454077,
+        "outside_decision_window": 447677,
+        "unmapped_reason_unknown": 6400,
+        "within_decision_window": 6400
+      },
+      "backend": {
+        "smt_tactic/setup_and_check": 100
+      },
+      "stages": {
+        "simplifier": 400,
+        "propagate-values": 100,
+        "ctx-simplify": 100,
+        "solve-eqs": 100,
+        "lia2card": 100,
+        "elim-uncnstr": 100,
+        "ilp-model-finder-tactic": 100,
+        "pb-tactic": 100,
+        "bounded-tactic": 100,
+        "smt": 100
+      },
+      "mapping": {},
+      "costs": {
+        "CDCL_check_seconds": 44.716377569,
+        "CCSS_check_seconds": 1.5686872500000058
+      },
+      "ledger": {
+        "categories": {
+          "binding_seconds": 0.001053125,
+          "cost_ledger_log_seconds": 0.040997382,
+          "diagnostic_serialization_seconds": 0.12106174400000004,
+          "diagnostic_snapshot_seconds": 0.0,
+          "exposure_guard_seconds": 0.0,
+          "hot_callback_seconds": 0.21848262600000015,
+          "index_build_seconds": 0.032065032,
+          "index_update_seconds": 0.0014344059999999998,
+          "observer_initialization_seconds": 0.030611870000000006,
+          "observer_seconds": 0.07005729299999996,
+          "outcome_evaluation_seconds": 0.000166879,
+          "outcome_log_seconds": 0.026527747,
+          "request_log_seconds": 0.019624365000000005,
+          "request_register_seconds": 0.00020179100000000005,
+          "route_metadata_seconds": 0.006611782000000002
+        },
+        "disabled": false,
+        "disabled_reason": "",
+        "explicit_seconds": 0.5688960419999995,
+        "exposure_overrun": 0.0,
+        "exposure_requested_limit": 45.0,
+        "intervened_check_exposure_seconds": 0.0,
+        "query_id": 199,
+        "source": "CDCL",
+        "tail_ccss_seconds": 0.0,
+        "tail_cdcl_seconds": 0.0,
+        "tail_unknown": 0,
+        "this_check_exposure": 0.0
+      },
+      "host": {
+        "A_disabled": false,
+        "A_disabled_reason": "",
+        "A_exposure": 0.0,
+        "coverage": 7386,
+        "elapsed": 47.377503785,
+        "formal_count": 100,
+        "guidance_cost": 0.5699762099999995,
+        "last_online_version": 100,
+        "queries": 199,
+        "raw_count": 100,
+        "sample_limit": 100,
+        "status": "complete100",
+        "total": 66061,
+        "wall_limit": 900.0
+      },
+      "target_audit": {
+        "passed": true,
+        "errors": [],
+        "counts": {},
+        "examples": [],
+        "node_count": 4006,
+        "method": "unchanged frozen official ManualSatisfiesMetric, intercepted statistics callbacks; no additional solver check",
+        "metric_sha256": "a51cdd069321cd32becf8eeb5e606cb71fbab16ae3e0231f68963eaadf493f04"
+      },
+      "late": 0,
+      "omitted": {},
+      "time_curve": {
+        "1": 0,
+        "5": 5771,
+        "10": 6304,
+        "30": 7245,
+        "60": 7386,
+        "120": 7386,
+        "300": 7386,
+        "600": 7386,
+        "900": 7386
+      },
+      "sample_curve": {
+        "1": 0,
+        "2": 2391,
+        "5": 4676,
+        "10": 5771,
+        "20": 6304,
+        "50": 7136,
+        "100": 7386
+      }
+    },
+    {
+      "id": "a_only_v2_n100_t900_04",
+      "mode": "n100_t900",
+      "input": "convert_convert-jpg2gif-query-1459.smt2",
+      "errors": [],
+      "valid": true,
+      "models": 100,
+      "covered": 38564,
+      "total": 179302,
+      "percentage": 21.507847095961004,
+      "official": "21.51%",
+      "auc_percentage": 21.494549394365457,
+      "complete100": true,
+      "time100": 6.693496808,
+      "first_model": 0.316406278,
+      "source_models": {
+        "CDCL": 50,
+        "CCSS": 50
+      },
+      "status": "complete100",
+      "terminal": {
+        "exit_code": 0,
+        "process_wall_seconds": 6.932314879999467,
+        "cpu": 9,
+        "pid": 85795,
+        "terminated": false,
+        "hard_killed": false,
+        "resource_last": {
+          "cpu_seconds": 5.66,
+          "processor": 9,
+          "rss_kib": 74868,
+          "peak_rss_kib": 81916,
+          "allowed_cpus": "9"
+        },
+        "finished_utc": "2026-10-30T11:22:07.077823+00:00",
+        "cpu_seconds_exact": 6.247397,
+        "peak_rss_kib_exact": 81916
+      },
+      "queries": {
+        "CDCL_sat": 50,
+        "CCSS_sat": 50
+      },
+      "unknown_reasons": {
+        "": 0
+      },
+      "requests": 50,
+      "registered": 50,
+      "max_mappable": 4022,
+      "supported_queries": 50,
+      "metadata_queries": 50,
+      "counts": {
+        "metadata_received": 50,
+        "supported_SMT_calls": 50,
+        "suggestions": 77,
+        "phase_overrides": 63,
+        "ordinary": 12516,
+        "intervened_checks": 31,
+        "exposure_limit_queries": 0,
+        "popped": 59,
+        "reassigned_same": 88,
+        "reassigned_opposite": 53,
+        "same_phase_suggestions": 14
+      },
+      "funnel": {
+        "has_direct_mapping": 822,
+        "native_ordinary_seen": 12516,
+        "no_active_demand": 704,
+        "outside_decision_window": 9316,
+        "unmapped_reason_unknown": 2378,
+        "within_decision_window": 3200,
+        "different_phase_suggestions": 63,
+        "has_current_demand": 118,
+        "phase_overrides": 63,
+        "quota_rejected": 41,
+        "same_phase_suggestions": 14
+      },
+      "backend": {
+        "smt_tactic/setup_and_check": 1,
+        "smt_solver/check": 49
+      },
+      "stages": {
+        "simplifier": 4,
+        "propagate-values": 1,
+        "ctx-simplify": 1,
+        "solve-eqs": 1,
+        "lia2card": 1,
+        "elim-uncnstr": 1,
+        "ilp-model-finder-tactic": 1,
+        "pb-tactic": 1,
+        "bounded-tactic": 1,
+        "no-cut-smt-tactic": 1,
+        "smt": 1
+      },
+      "mapping": {
+        "exact_linear_equivalence": 29,
+        "exact_structure": 48
+      },
+      "costs": {
+        "CDCL_check_seconds": 1.3961276729999994,
+        "CCSS_check_seconds": 3.067665726999999
+      },
+      "ledger": {
+        "categories": {
+          "binding_seconds": 0.0012264139999999999,
+          "cost_ledger_log_seconds": 0.02219450299999999,
+          "diagnostic_serialization_seconds": 0.06987176499999999,
+          "diagnostic_snapshot_seconds": 0.0,
+          "exposure_guard_seconds": 0.0018682030000000001,
+          "hot_callback_seconds": 0.01643554800000001,
+          "index_build_seconds": 0.064367584,
+          "index_update_seconds": 0.0025699220000000027,
+          "observer_initialization_seconds": 0.030182514999999993,
+          "observer_seconds": 0.17987371999999996,
+          "outcome_evaluation_seconds": 0.0012879909999999998,
+          "outcome_log_seconds": 0.013482315,
+          "request_log_seconds": 0.021389868999999995,
+          "request_register_seconds": 0.000124034,
+          "route_metadata_seconds": 0.00010086800000000001
+        },
+        "disabled": false,
+        "disabled_reason": "",
+        "explicit_seconds": 0.42497525099999994,
+        "exposure_overrun": 0.0,
+        "exposure_requested_limit": 0.0,
+        "intervened_check_exposure_seconds": 0.9161344260000003,
+        "query_id": 100,
+        "source": "CCSS",
+        "tail_ccss_seconds": 0.0,
+        "tail_cdcl_seconds": 0.0,
+        "tail_unknown": 0,
+        "this_check_exposure": 0.0
+      },
+      "host": {
+        "A_disabled": false,
+        "A_disabled_reason": "",
+        "A_exposure": 0.9161344260000003,
+        "coverage": 38564,
+        "elapsed": 6.714138398,
+        "formal_count": 100,
+        "guidance_cost": 0.42677588099999997,
+        "last_online_version": 100,
+        "queries": 100,
+        "raw_count": 100,
+        "sample_limit": 100,
+        "status": "complete100",
+        "total": 179302,
+        "wall_limit": 900.0
+      },
+      "target_audit": {
+        "passed": true,
+        "errors": [],
+        "counts": {
+          "targets": 85,
+          "reached": 60,
+          "was_missing_before_commit": 85,
+          "new_covered_for_targets": 0,
+          "actions_with_formal_model": 77,
+          "popped_with_formal_model": 59,
+          "not_reached": 25
+        },
+        "examples": [
+          {
+            "kind": "zero_gain",
+            "formal_index": 2,
+            "query_id": 3,
+            "action": {
+              "actual_var": 597,
+              "assignment_token": 1,
+              "backend_call_id": 1,
+              "canonical_key": "LE:C9315;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;",
+              "context_generation": 1,
+              "context_id": 1,
+              "coverage_version": 2,
+              "decision_id": 3,
+              "effective_phase": true,
+              "final_atom_truth": false,
+              "level": 4,
+              "literal_negated": false,
+              "mapping_kind": "exact_linear_equivalence",
+              "native_phase": false,
+              "native_var": 597,
+              "phase_changed": true,
+              "query_id": 3,
+              "reassigned_opposite": 1,
+              "reassigned_same": 0,
+              "suggested_phase": true,
+              "support": [
+                {
+                  "desired_one_mask": "0",
+                  "desired_zero_mask": "1",
+                  "node": 3497
+                },
+                {
+                  "desired_one_mask": "1",
+                  "desired_zero_mask": "0",
+                  "node": 3498
+                }
+              ],
+              "trail_index": 5281,
+              "trailed_assignment_popped": true,
+              "would_override": true
+            },
+            "outcome": {
+              "decision_id": 3,
+              "backend_call_id": 1,
+              "phase_changed": true,
+              "targets": [
+                {
+                  "node": 3497,
+                  "reached": true,
+                  "desired_one_mask": "0",
+                  "desired_zero_mask": "1",
+                  "hit_one_mask": "0",
+                  "hit_zero_mask": "0",
+                  "new_one_mask": "0",
+                  "new_zero_mask": "0",
+                  "new_covered_for_targets": 0
+                },
+                {
+                  "node": 3498,
+                  "reached": true,
+                  "desired_one_mask": "1",
+                  "desired_zero_mask": "0",
+                  "hit_one_mask": "0",
+                  "hit_zero_mask": "0",
+                  "new_one_mask": "0",
+                  "new_zero_mask": "0",
+                  "new_covered_for_targets": 0
+                }
+              ]
+            }
+          }
+        ],
+        "node_count": 9580,
+        "method": "unchanged frozen official ManualSatisfiesMetric, intercepted statistics callbacks; no additional solver check",
+        "metric_sha256": "a51cdd069321cd32becf8eeb5e606cb71fbab16ae3e0231f68963eaadf493f04"
+      },
+      "late": 0,
+      "omitted": {},
+      "time_curve": {
+        "1": 36282,
+        "5": 38323,
+        "10": 38564,
+        "30": 38564,
+        "60": 38564,
+        "120": 38564,
+        "300": 38564,
+        "600": 38564,
+        "900": 38564
+      },
+      "sample_curve": {
+        "1": 0,
+        "2": 26220,
+        "5": 31891,
+        "10": 36036,
+        "20": 37392,
+        "50": 38307,
+        "100": 38564
+      }
+    },
+    {
+      "id": "a_only_v2_n100_t900_05",
+      "mode": "n100_t900",
+      "input": "dillig_40-10.smt2",
+      "errors": [],
+      "valid": true,
+      "models": 100,
+      "covered": 47593,
+      "total": 50715,
+      "percentage": 93.8440303657695,
+      "official": "93.84%",
+      "auc_percentage": 93.8300247606933,
+      "complete100": true,
+      "time100": 1.098709296,
+      "first_model": 0.110994483,
+      "source_models": {
+        "CDCL": 50,
+        "CCSS": 50
+      },
+      "status": "complete100",
+      "terminal": {
+        "exit_code": 0,
+        "process_wall_seconds": 1.2742392989985092,
+        "cpu": 11,
+        "pid": 85796,
+        "terminated": false,
+        "hard_killed": false,
+        "resource_last": {
+          "cpu_seconds": 0.58,
+          "processor": 11,
+          "rss_kib": 37632,
+          "peak_rss_kib": 37632,
+          "allowed_cpus": "11"
+        },
+        "finished_utc": "2026-10-30T11:22:01.419817+00:00",
+        "cpu_seconds_exact": 0.638128,
+        "peak_rss_kib_exact": 37888
+      },
+      "queries": {
+        "CDCL_sat": 50,
+        "CCSS_sat": 50
+      },
+      "unknown_reasons": {
+        "": 0
+      },
+      "requests": 50,
+      "registered": 50,
+      "max_mappable": 25,
+      "supported_queries": 50,
+      "metadata_queries": 50,
+      "counts": {
+        "metadata_received": 50,
+        "supported_SMT_calls": 50,
+        "suggestions": 0,
+        "phase_overrides": 0,
+        "ordinary": 0,
+        "intervened_checks": 0,
+        "exposure_limit_queries": 0
+      },
+      "funnel": {},
+      "backend": {
+        "smt_tactic/setup_and_check": 1,
+        "smt_solver/check": 49
+      },
+      "stages": {
+        "simplifier": 4,
+        "propagate-values": 1,
+        "ctx-simplify": 1,
+        "solve-eqs": 1,
+        "lia2card": 1,
+        "elim-uncnstr": 1,
+        "ilp-model-finder-tactic": 1,
+        "propagate-ineqs": 1,
+        "no-cut-smt-tactic": 1,
+        "smt": 1
+      },
+      "mapping": {},
+      "costs": {
+        "CDCL_check_seconds": 0.2170598600000003,
+        "CCSS_check_seconds": 0.2649549479999998
+      },
+      "ledger": {
+        "categories": {
+          "binding_seconds": 0.000840825,
+          "cost_ledger_log_seconds": 0.026918788000000006,
+          "diagnostic_serialization_seconds": 0.06144684399999999,
+          "diagnostic_snapshot_seconds": 0.0,
+          "exposure_guard_seconds": 0.0,
+          "hot_callback_seconds": 0.0,
+          "index_build_seconds": 0.003129619,
+          "index_update_seconds": 0.000962053,
+          "observer_initialization_seconds": 0.024570033,
+          "observer_seconds": 0.019100504,
+          "outcome_evaluation_seconds": 7.375e-05,
+          "outcome_log_seconds": 0.010502148,
+          "request_log_seconds": 0.019636715,
+          "request_register_seconds": 0.0006622330000000004,
+          "route_metadata_seconds": 0.00020441699999999998
+        },
+        "disabled": false,
+        "disabled_reason": "",
+        "explicit_seconds": 0.16804792899999993,
+        "exposure_overrun": 0.0,
+        "exposure_requested_limit": 0.0,
+        "intervened_check_exposure_seconds": 0.0,
+        "query_id": 100,
+        "source": "CCSS",
+        "tail_ccss_seconds": 0.0,
+        "tail_cdcl_seconds": 0.0,
+        "tail_unknown": 0,
+        "this_check_exposure": 0.0
+      },
+      "host": {
+        "A_disabled": false,
+        "A_disabled_reason": "",
+        "A_exposure": 0.0,
+        "coverage": 47593,
+        "elapsed": 1.106716958,
+        "formal_count": 100,
+        "guidance_cost": 0.16837259799999993,
+        "last_online_version": 100,
+        "queries": 100,
+        "raw_count": 100,
+        "sample_limit": 100,
+        "status": "complete100",
+        "total": 50715,
+        "wall_limit": 900.0
+      },
+      "target_audit": {
+        "passed": true,
+        "errors": [],
+        "counts": {},
+        "examples": [],
+        "node_count": 819,
+        "method": "unchanged frozen official ManualSatisfiesMetric, intercepted statistics callbacks; no additional solver check",
+        "metric_sha256": "a51cdd069321cd32becf8eeb5e606cb71fbab16ae3e0231f68963eaadf493f04"
+      },
+      "late": 0,
+      "omitted": {},
+      "time_curve": {
+        "1": 47593,
+        "5": 47593,
+        "10": 47593,
+        "30": 47593,
+        "60": 47593,
+        "120": 47593,
+        "300": 47593,
+        "600": 47593,
+        "900": 47593
+      },
+      "sample_curve": {
+        "1": 0,
+        "2": 23659,
+        "5": 42538,
+        "10": 47215,
+        "20": 47589,
+        "50": 47593,
+        "100": 47593
+      }
+    },
+    {
+      "id": "a_only_v2_n100_t900_06",
+      "mode": "n100_t900",
+      "input": "pb2010_normalized-j3048_8-sat.smt2",
+      "errors": [],
+      "valid": true,
+      "models": 100,
+      "covered": 56548,
+      "total": 1416258,
+      "percentage": 3.992775327659226,
+      "official": "3.99%",
+      "auc_percentage": 3.985743863868105,
+      "complete100": true,
+      "time100": 35.557650711,
+      "first_model": 0.894198523,
+      "source_models": {
+        "CDCL": 21,
+        "CCSS": 79
+      },
+      "status": "complete100",
+      "terminal": {
+        "exit_code": 0,
+        "process_wall_seconds": 35.7357292509987,
+        "cpu": 13,
+        "pid": 85797,
+        "terminated": false,
+        "hard_killed": false,
+        "resource_last": {
+          "cpu_seconds": 34.13,
+          "processor": 13,
+          "rss_kib": 191988,
+          "peak_rss_kib": 191988,
+          "allowed_cpus": "13"
+        },
+        "finished_utc": "2026-10-30T11:22:35.880324+00:00",
+        "cpu_seconds_exact": 34.431684999999995,
+        "peak_rss_kib_exact": 192116
+      },
+      "queries": {
+        "CDCL_sat": 113,
+        "CCSS_sat": 113
+      },
+      "unknown_reasons": {
+        "": 0
+      },
+      "requests": 113,
+      "registered": 113,
+      "max_mappable": 14849,
+      "supported_queries": 113,
+      "metadata_queries": 113,
+      "counts": {
+        "metadata_received": 113,
+        "supported_SMT_calls": 113,
+        "suggestions": 0,
+        "phase_overrides": 0,
+        "ordinary": 324,
+        "intervened_checks": 0,
+        "exposure_limit_queries": 0
+      },
+      "funnel": {
+        "native_ordinary_seen": 324,
+        "unmapped_reason_unknown": 322,
+        "unsupported_normal_form": 2,
+        "within_decision_window": 324
+      },
+      "backend": {
+        "smt_tactic/setup_and_check": 1,
+        "smt_solver/check": 112
+      },
+      "stages": {
+        "simplifier": 4,
+        "propagate-values": 1,
+        "ctx-simplify": 1,
+        "solve-eqs": 1,
+        "lia2card": 1,
+        "elim-uncnstr": 1,
+        "ilp-model-finder-tactic": 1,
+        "pb-tactic": 1,
+        "pb2bv": 2,
+        "lia2sat-tactic": 1,
+        "propagate-ineqs": 1,
+        "normalize-bounds": 1,
+        "lia2pb": 1,
+        "bounded-tactic": 1,
+        "no-cut-smt-tactic": 1,
+        "smt": 1
+      },
+      "mapping": {},
+      "costs": {
+        "CDCL_check_seconds": 4.26760353100002,
+        "CCSS_check_seconds": 20.171571572000005
+      },
+      "ledger": {
+        "categories": {
+          "binding_seconds": 0.0034346600000000004,
+          "cost_ledger_log_seconds": 0.051553015000000015,
+          "diagnostic_serialization_seconds": 0.09623400499999998,
+          "diagnostic_snapshot_seconds": 0.0,
+          "exposure_guard_seconds": 0.0,
+          "hot_callback_seconds": 0.003052400999999999,
+          "index_build_seconds": 0.272361661,
+          "index_update_seconds": 0.0050467340000000015,
+          "observer_initialization_seconds": 0.06021923700000004,
+          "observer_seconds": 0.7450130310000002,
+          "outcome_evaluation_seconds": 5.1413000000000004e-05,
+          "outcome_log_seconds": 0.003983074999999998,
+          "request_log_seconds": 0.042404804000000004,
+          "request_register_seconds": 0.00028299200000000003,
+          "route_metadata_seconds": 0.000142578
+        },
+        "disabled": false,
+        "disabled_reason": "",
+        "explicit_seconds": 1.2837796060000006,
+        "exposure_overrun": 0.0,
+        "exposure_requested_limit": 0.0,
+        "intervened_check_exposure_seconds": 0.0,
+        "query_id": 226,
+        "source": "CCSS",
+        "tail_ccss_seconds": 0.0,
+        "tail_cdcl_seconds": 0.0,
+        "tail_unknown": 0,
+        "this_check_exposure": 0.0
+      },
+      "host": {
+        "A_disabled": false,
+        "A_disabled_reason": "",
+        "A_exposure": 0.0,
+        "coverage": 56548,
+        "elapsed": 35.594924762,
+        "formal_count": 100,
+        "guidance_cost": 1.2918945070000007,
+        "last_online_version": 100,
+        "queries": 226,
+        "raw_count": 226,
+        "sample_limit": 100,
+        "status": "complete100",
+        "total": 1416258,
+        "wall_limit": 900.0
+      },
+      "target_audit": {
+        "passed": true,
+        "errors": [],
+        "counts": {},
+        "examples": [],
+        "node_count": 36747,
+        "method": "unchanged frozen official ManualSatisfiesMetric, intercepted statistics callbacks; no additional solver check",
+        "metric_sha256": "a51cdd069321cd32becf8eeb5e606cb71fbab16ae3e0231f68963eaadf493f04"
+      },
+      "late": 0,
+      "omitted": {
+        "duplicate": 126
+      },
+      "time_curve": {
+        "1": 0,
+        "5": 54178,
+        "10": 55606,
+        "30": 56528,
+        "60": 56548,
+        "120": 56548,
+        "300": 56548,
+        "600": 56548,
+        "900": 56548
+      },
+      "sample_curve": {
+        "1": 0,
+        "2": 48590,
+        "5": 50756,
+        "10": 52894,
+        "20": 55232,
+        "50": 56203,
+        "100": 56548
+      }
+    },
+    {
+      "id": "a_only_v2_n100_t900_07",
+      "mode": "n100_t900",
+      "input": "prime_cone_sat_14.smt2",
+      "errors": [],
+      "valid": true,
+      "models": 100,
+      "covered": 14383,
+      "total": 17246,
+      "percentage": 83.3990490548533,
+      "official": "83.4%",
+      "auc_percentage": 83.38698614058185,
+      "complete100": true,
+      "time100": 1.018505098,
+      "first_model": 0.102971682,
+      "source_models": {
+        "CDCL": 50,
+        "CCSS": 50
+      },
+      "status": "complete100",
+      "terminal": {
+        "exit_code": 0,
+        "process_wall_seconds": 1.2742392989985092,
+        "cpu": 15,
+        "pid": 85798,
+        "terminated": false,
+        "hard_killed": false,
+        "resource_last": {
+          "cpu_seconds": 0.58,
+          "processor": 15,
+          "rss_kib": 0,
+          "peak_rss_kib": 0,
+          "allowed_cpus": "15"
+        },
+        "finished_utc": "2026-10-30T11:22:01.425612+00:00",
+        "cpu_seconds_exact": 0.5932879999999999,
+        "peak_rss_kib_exact": 36736
+      },
+      "queries": {
+        "CDCL_sat": 50,
+        "CCSS_sat": 50
+      },
+      "unknown_reasons": {
+        "": 0
+      },
+      "requests": 50,
+      "registered": 50,
+      "max_mappable": 29,
+      "supported_queries": 50,
+      "metadata_queries": 50,
+      "counts": {
+        "metadata_received": 50,
+        "supported_SMT_calls": 50,
+        "suggestions": 0,
+        "phase_overrides": 0,
+        "ordinary": 6,
+        "intervened_checks": 0,
+        "exposure_limit_queries": 0
+      },
+      "funnel": {
+        "native_ordinary_seen": 6,
+        "unmapped_reason_unknown": 6,
+        "within_decision_window": 6
+      },
+      "backend": {
+        "smt_tactic/setup_and_check": 1,
+        "smt_solver/check": 49
+      },
+      "stages": {
+        "simplifier": 4,
+        "propagate-values": 1,
+        "ctx-simplify": 1,
+        "solve-eqs": 1,
+        "lia2card": 1,
+        "elim-uncnstr": 1,
+        "ilp-model-finder-tactic": 1,
+        "propagate-ineqs": 1,
+        "no-cut-smt-tactic": 1,
+        "smt": 1
+      },
+      "mapping": {},
+      "costs": {
+        "CDCL_check_seconds": 0.14830230399999997,
+        "CCSS_check_seconds": 0.3817974120000002
+      },
+      "ledger": {
+        "categories": {
+          "binding_seconds": 0.0008525090000000001,
+          "cost_ledger_log_seconds": 0.02259056299999999,
+          "diagnostic_serialization_seconds": 0.061188011,
+          "diagnostic_snapshot_seconds": 0.0,
+          "exposure_guard_seconds": 0.0,
+          "hot_callback_seconds": 0.00021531999999999996,
+          "index_build_seconds": 0.002266586,
+          "index_update_seconds": 0.00032368999999999985,
+          "observer_initialization_seconds": 0.023755145,
+          "observer_seconds": 0.009335788000000001,
+          "outcome_evaluation_seconds": 6.9726e-05,
+          "outcome_log_seconds": 0.010518722,
+          "request_log_seconds": 0.011699769000000002,
+          "request_register_seconds": 0.0006523450000000001,
+          "route_metadata_seconds": 0.00020381400000000005
+        },
+        "disabled": false,
+        "disabled_reason": "",
+        "explicit_seconds": 0.1436719879999999,
+        "exposure_overrun": 0.0,
+        "exposure_requested_limit": 0.0,
+        "intervened_check_exposure_seconds": 0.0,
+        "query_id": 100,
+        "source": "CCSS",
+        "tail_ccss_seconds": 0.0,
+        "tail_cdcl_seconds": 0.0,
+        "tail_unknown": 0,
+        "this_check_exposure": 0.0
+      },
+      "host": {
+        "A_disabled": false,
+        "A_disabled_reason": "",
+        "A_exposure": 0.0,
+        "coverage": 14383,
+        "elapsed": 1.021709072,
+        "formal_count": 100,
+        "guidance_cost": 0.1439129589999999,
+        "last_online_version": 100,
+        "queries": 100,
+        "raw_count": 100,
+        "sample_limit": 100,
+        "status": "complete100",
+        "total": 17246,
+        "wall_limit": 900.0
+      },
+      "target_audit": {
+        "passed": true,
+        "errors": [],
+        "counts": {},
+        "examples": [],
+        "node_count": 299,
+        "method": "unchanged frozen official ManualSatisfiesMetric, intercepted statistics callbacks; no additional solver check",
+        "metric_sha256": "a51cdd069321cd32becf8eeb5e606cb71fbab16ae3e0231f68963eaadf493f04"
+      },
+      "late": 0,
+      "omitted": {},
+      "time_curve": {
+        "1": 14383,
+        "5": 14383,
+        "10": 14383,
+        "30": 14383,
+        "60": 14383,
+        "120": 14383,
+        "300": 14383,
+        "600": 14383,
+        "900": 14383
+      },
+      "sample_curve": {
+        "1": 0,
+        "2": 7171,
+        "5": 12506,
+        "10": 14226,
+        "20": 14377,
+        "50": 14382,
+        "100": 14383
+      }
+    }
+  ]
+}

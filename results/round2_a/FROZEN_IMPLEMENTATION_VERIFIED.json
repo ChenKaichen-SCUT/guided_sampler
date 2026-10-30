@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "source_commit": "688e7d90a97952850a53b33053cd04b76c30fea4",
+  "Release_and_SAN_hashes_unchanged": true,
+  "algorithm_sources_and_configuration_unchanged": true,
+  "upstream_2935_files_unchanged": true,
+  "inputs_unchanged": true,
+  "offline_tooling_changes_after_freeze": [
+    "scripts/audit_round2_a.py",
+    "scripts/audit_round2_targets.py",
+    "scripts/report_round2_a.py"
+  ],
+  "new_offline_adapters": [
+    "scripts/finalize_round2_stream.py",
+    "scripts/evaluate_round2_exact.py",
+    "scripts/evaluate_round2_official.py",
+    "scripts/audit_round2_retention.py"
+  ],
+  "formal_attempts": 16
+}

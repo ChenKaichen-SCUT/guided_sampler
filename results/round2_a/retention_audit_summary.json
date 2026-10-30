@@ -1,0 +1,156 @@
+{
+  "a_only_v2_time900_00": {
+    "actions": 0
+  },
+  "a_only_v2_time900_01": {
+    "actions": 0
+  },
+  "a_only_v2_time900_02": {
+    "actions": 0
+  },
+  "a_only_v2_time900_03": {
+    "actions": 0
+  },
+  "a_only_v2_time900_04": {
+    "passed": true,
+    "counts": {
+      "actions": 839,
+      "model_phase_retained": 0,
+      "internal_phase_retained": 685,
+      "internal_vs_model_disagreement": 685,
+      "actions_without_formal_model": 0
+    },
+    "examples": [
+      {
+        "query_id": 5,
+        "formal_index": 4,
+        "backend_call_id": 1,
+        "decision_id": 25,
+        "phase_changed": true,
+        "native_phase": false,
+        "suggested_phase": true,
+        "final_internal_assignment": true,
+        "returned_model_atom_truth_via_original_equivalent": false,
+        "model_phase_retained": false,
+        "trailed_assignment_popped": true,
+        "causal_gain_claimed": false
+      },
+      {
+        "query_id": 7,
+        "formal_index": 6,
+        "backend_call_id": 1,
+        "decision_id": 30,
+        "phase_changed": false,
+        "native_phase": false,
+        "suggested_phase": false,
+        "final_internal_assignment": false,
+        "returned_model_atom_truth_via_original_equivalent": true,
+        "model_phase_retained": false,
+        "trailed_assignment_popped": true,
+        "causal_gain_claimed": false
+      },
+      {
+        "query_id": 11,
+        "formal_index": 10,
+        "backend_call_id": 1,
+        "decision_id": 64,
+        "phase_changed": true,
+        "native_phase": false,
+        "suggested_phase": true,
+        "final_internal_assignment": true,
+        "returned_model_atom_truth_via_original_equivalent": false,
+        "model_phase_retained": false,
+        "trailed_assignment_popped": false,
+        "causal_gain_claimed": false
+      }
+    ],
+    "method": "full substitution in archived original-variable model; no check; catalog equivalence and literal polarity; does not imply official Reach",
+    "limitation": "online final_atom_truth is an internal Boolean assignment and is not necessarily returned model truth for an irrelevant atom; relevance cause was not logged and remains unproven"
+  },
+  "a_only_v2_time900_05": {
+    "actions": 0
+  },
+  "a_only_v2_time900_06": {
+    "actions": 0
+  },
+  "a_only_v2_time900_07": {
+    "actions": 0
+  },
+  "a_only_v2_n100_t900_00": {
+    "actions": 0
+  },
+  "a_only_v2_n100_t900_01": {
+    "actions": 0
+  },
+  "a_only_v2_n100_t900_02": {
+    "actions": 0
+  },
+  "a_only_v2_n100_t900_03": {
+    "actions": 0
+  },
+  "a_only_v2_n100_t900_04": {
+    "passed": true,
+    "counts": {
+      "actions": 77,
+      "model_phase_retained": 0,
+      "internal_phase_retained": 31,
+      "internal_vs_model_disagreement": 31,
+      "actions_without_formal_model": 0
+    },
+    "examples": [
+      {
+        "query_id": 5,
+        "formal_index": 4,
+        "backend_call_id": 1,
+        "decision_id": 25,
+        "phase_changed": true,
+        "native_phase": false,
+        "suggested_phase": true,
+        "final_internal_assignment": true,
+        "returned_model_atom_truth_via_original_equivalent": false,
+        "model_phase_retained": false,
+        "trailed_assignment_popped": true,
+        "causal_gain_claimed": false
+      },
+      {
+        "query_id": 7,
+        "formal_index": 6,
+        "backend_call_id": 1,
+        "decision_id": 30,
+        "phase_changed": false,
+        "native_phase": false,
+        "suggested_phase": false,
+        "final_internal_assignment": false,
+        "returned_model_atom_truth_via_original_equivalent": true,
+        "model_phase_retained": false,
+        "trailed_assignment_popped": true,
+        "causal_gain_claimed": false
+      },
+      {
+        "query_id": 11,
+        "formal_index": 10,
+        "backend_call_id": 1,
+        "decision_id": 64,
+        "phase_changed": true,
+        "native_phase": false,
+        "suggested_phase": true,
+        "final_internal_assignment": true,
+        "returned_model_atom_truth_via_original_equivalent": false,
+        "model_phase_retained": false,
+        "trailed_assignment_popped": false,
+        "causal_gain_claimed": false
+      }
+    ],
+    "method": "full substitution in archived original-variable model; no check; catalog equivalence and literal polarity; does not imply official Reach",
+    "limitation": "online final_atom_truth is an internal Boolean assignment and is not necessarily returned model truth for an irrelevant atom; relevance cause was not logged and remains unproven"
+  },
+  "a_only_v2_n100_t900_05": {
+    "actions": 0
+  },
+  "a_only_v2_n100_t900_06": {
+    "actions": 0
+  },
+  "a_only_v2_n100_t900_07": {
+    "actions": 0
+  }
+}

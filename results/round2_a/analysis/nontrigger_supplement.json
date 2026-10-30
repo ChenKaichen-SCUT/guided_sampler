@@ -1,0 +1,17 @@
+{
+  "run_id": "a_only_v2_time900_03",
+  "query_id": 3780,
+  "registered": true,
+  "outer_check_entered": true,
+  "granted_timeout_ms": 29,
+  "start": 899.970703166,
+  "end": 900.003237517,
+  "result": "unknown",
+  "reason_unknown": "timeout",
+  "last_recorded_tactic": "solve-eqs",
+  "SMT_leaf_entered": false,
+  "classification": "preprocessing_timeout_before_SMT_leaf",
+  "not_a_sidecar_loss_claim": true,
+  "source": "formal/time900/03/queries.jsonl",
+  "added_after_archive": "derived supplement stored directly in Git; source raw query is in the verified archive"
+}
