@@ -3,7 +3,7 @@
 import pathlib,shutil,sys,subprocess,tempfile
 from common import ROOT,UP
 root=pathlib.Path(sys.argv[1]);target_z=root/'z3/src';staging=tempfile.TemporaryDirectory(prefix='round2-patch-');stage=pathlib.Path(staging.name);z=stage/'z3/src'
-paths=['solver/solver.h','solver/combined_solver.cpp','solver/tactic2solver.cpp','tactic/goal.h','tactic/goal.cpp','tactic/tactic.h','tactic/tactic.cpp','tactic/tactical.cpp','smt/smt_context.h','smt/smt_context.cpp','smt/smt_solver.cpp','smt/tactic/smt_tactic_core.cpp','sat/tactic/sat_tactic.cpp','api/api_solver.cpp']
+paths=['solver/solver.h','solver/combined_solver.cpp','solver/tactic2solver.cpp','tactic/goal.h','tactic/goal.cpp','tactic/tactic.h','tactic/tactic.cpp','tactic/tactical.cpp','smt/smt_context.h','smt/smt_context.cpp','smt/smt_context_pp.cpp','smt/smt_solver.cpp','smt/tactic/smt_tactic_core.cpp','sat/tactic/sat_tactic.cpp','api/api_solver.cpp']
 for p in paths:
  (z/p).parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(UP/'z3/src'/p,z/p)
 def edit(p,a,b,count=1):
@@ -35,22 +35,25 @@ edit('tactic/tactic.cpp','#include "tactic/tactic.h"','#include "tactic/tactic.h
 edit('tactic/tactic.cpp','tactic_report::tactic_report(char const * id, goal const & g) {','tactic_report::tactic_report(char const * id, goal const & g) {\n    m_A=g.m_A;if(m_A&&!m_A->closed){if(m_A->expired())throw tactic_exception("guidance_exposure_limit");m_A_stage=m_A->stage_begin(id);}')
 edit('tactic/tactic.cpp','tactic_report::~tactic_report() {','tactic_report::~tactic_report() {\n    if(m_A_stage)m_A->stage_end(m_A_stage);')
 edit('tactic/tactical.cpp','#include "tactic/tactical.h"','#include "tactic/tactical.h"\n#include "util/a_state.h"')
+edit('tactic/tactical.cpp','        scope _scope(m_name);','        tactic_report A_stage_report(m_name.c_str(),*in);\n        scope _scope(m_name);')
 edit('tactic/tactical.cpp','            tactic * t = m_ts[i];','            if(in->m_A&&in->m_A->expired()){in->m_A->event({{"kind","skip_tactic_fallback"},{"next_stage",i}});throw tactic_exception("guidance_exposure_limit");}\n            tactic * t = m_ts[i];')
 edit('tactic/tactical.cpp','                catch (tactic_exception &) {','                catch (tactic_exception &) {\n                    if(in->m_A&&in->m_A->expired()){in->m_A->event({{"kind","skip_tactic_fallback"},{"next_stage",i+1}});throw;}')
 edit('smt/smt_context.h','#pragma once','#pragma once\n'+forward)
 edit('smt/smt_context.h','        theory_user_propagator*          m_user_propagator;', '''        std::shared_ptr<a2::Run> m_A;
         std::unique_ptr<a2::ContextCache> m_A_data;
         unsigned m_A_generation=0,m_A_call=0;uint64_t m_A_assignment_serial=0;
-        bool m_A_local_disabled=false,m_A_snapshot_done=false;
+        bool m_A_local_disabled=false,m_A_snapshot_done=false,m_A_last_exposure=false;
         void prepare_A_search_epoch(char const*);
         void A_binding_snapshot();
         bool apply_A_phase_hint(bool_var native_var,bool native_phase,bool& effective_phase);
         void A_assignment(literal,bool);
         void A_finalize(lbool);
         theory_user_propagator*          m_user_propagator;''')
-edit('smt/smt_context.h','        bool b_internalized(expr const * n) const {','        void attach_A_guidance(std::shared_ptr<a2::Run>,char const*);\n        void detach_A_guidance();\n        bool b_internalized(expr const * n) const {')
+edit('smt/smt_context.h','        bool b_internalized(expr const * n) const {','        void attach_A_guidance(std::shared_ptr<a2::Run>,char const*);\n        void detach_A_guidance();\n        void mark_A_exposure(){m_A_last_exposure=true;}\n        bool b_internalized(expr const * n) const {')
 edit('smt/smt_context.cpp','#include "smt/smt_context.h"','#include "smt/smt_context.h"\n#include "util/a_state.h"\n#include "smt/a_internal_view.h"')
-edit('smt/smt_context.cpp','bool context::get_cancel_flag() {','bool context::get_cancel_flag() {\n    if(m_A&&m_A->expired()){m_last_search_failure=CANCELED;return true;}')
+edit('smt/smt_context.cpp','bool context::get_cancel_flag() {','bool context::get_cancel_flag() {\n    if(m_A&&m_A->expired()){m_A_last_exposure=true;m_last_search_failure=CANCELED;return true;}')
+edit('smt/smt_context_pp.cpp','std::string context::last_failure_as_string() const {','std::string context::last_failure_as_string() const {\n    if(m_A_last_exposure)return \"guidance_exposure_limit\";')
+edit('smt/smt_context.cpp','bool context::check_preamble(bool reset_cancel) {','bool context::check_preamble(bool reset_cancel) {\n    m_A_last_exposure=false;')
 edit('smt/smt_context.cpp','bool context::decide() {','#include "smt/a_context.inc"\n\nbool context::decide() {')
 edit('smt/smt_context.cpp','    bool used_queue = false;','    bool used_queue = false;\n    bool a_ordinary_phase = false;')
 edit('smt/smt_context.cpp','        is_pos = guess(var, phase);','        a_ordinary_phase=phase==l_undef&&!get_bdata(var).try_true_first()&&!get_bdata(var).is_quantifier();\n        is_pos = guess(var, phase);')
@@ -79,12 +82,14 @@ edit('smt/smt_solver.cpp','            return m_context.check(num_assumptions, a
             auto& ctx=m_context.get_context();ctx.attach_A_guidance(m_A,"smt_solver");
             struct cleanup {smt::context& c;~cleanup(){c.detach_A_guidance();}} guard{ctx};
             lbool r=m_context.check(num_assumptions, assumptions);
-            if(m_A&&m_A->expired()){set_reason_unknown("guidance_exposure_limit");return l_undef;}return r;''')
+            if(m_A&&m_A->expired()){ctx.mark_A_exposure();set_reason_unknown("guidance_exposure_limit");return l_undef;}return r;''')
 edit('smt/tactic/smt_tactic_core.cpp','#include "smt/smt_kernel.h"','#include "smt/smt_kernel.h"\n#include "smt/smt_context.h"\n#include "util/a_state.h"')
 edit('smt/tactic/smt_tactic_core.cpp','            if (d)\n                dealloc(d);','            if (d) {d->get_context().detach_A_guidance();dealloc(d);}')
 edit('smt/tactic/smt_tactic_core.cpp','            SASSERT(m_ctx);','            SASSERT(m_ctx);\n            m_ctx->get_context().attach_A_guidance(in->m_A,"smt_tactic");')
 edit('smt/tactic/smt_tactic_core.cpp','            m_ctx->collect_statistics(m_stats);\n            proof_ref','            if(in->m_A&&in->m_A->expired())throw tactic_exception("guidance_exposure_limit");\n            m_ctx->collect_statistics(m_stats);\n            proof_ref')
-edit('sat/tactic/sat_tactic.cpp','        imp proc(g->m(), m_params, m_var2value);','        tactic_report A_leaf_report("sat.non_smt_leaf",*g);\n        imp proc(g->m(), m_params, m_var2value);')
+edit('sat/tactic/sat_tactic.cpp','#include "tactic/tactical.h"','#include "tactic/tactical.h"\n#include "util/a_state.h"')
+edit('sat/tactic/sat_tactic.cpp','        imp proc(g->m(), m_params, m_var2value);','        tactic_report A_leaf_report("sat.non_smt_leaf",*g);\n        a2::NonSmtLeaf A_leaf(g->m_A,"sat");\n        imp proc(g->m(), m_params, m_var2value);')
+edit('sat/tactic/sat_tactic.cpp','            proc(g, result);','            proc(g, result);\n            A_leaf.result(result.size()==1?(result[0]->inconsistent()?\"unsat\":result[0]->is_decided_sat()?\"sat\":\"unknown\"):\"unknown\");')
 edit('api/api_solver.cpp','#include<thread>','#include<thread>\n#include "api/z3_a_guidance.h"\n#include "util/a_state.h"')
 edit('api/api_solver.cpp','    static void init_solver_log(',(ROOT/'src/round2/a_api.inc').read_text()+'\n    static void init_solver_log(')
 subprocess.run([sys.executable,str(ROOT/'scripts/patch_common_z3.py'),str(stage)],check=True)

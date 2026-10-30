@@ -90,7 +90,7 @@ public:
         rec["new_observed"]=ev?Json(ev->observed):Json(nullptr);rec["new_covered"]=ev?Json(ev->covered):Json(nullptr);
         rec["coverage_version"]=ev?Json(guidance->ast.version+1):Json(nullptr);
         rec["covered"]=ev?Json(guidance->ast.covered+ev->covered):Json(nullptr);
-        if(ev&&source=="CDCL")rec["a_outcomes"]=guidance->outcomes(*ev);
+        if(ev&&source=="CDCL"){auto t=Clock::now();guidance->pending_outcomes=guidance->outcomes(*ev);guidance->charge("outcome_evaluation_seconds",std::chrono::duration<double>(Clock::now()-t).count());}
         // Prepare receipt and typed record precede the commit marker. Offline
         // finalizer requires BOTH receipts and a bounded completion interval.
         rec["kind"]="prepare";receipts<<rec.dump()<<'\n';receipts.flush();

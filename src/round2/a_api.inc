@@ -6,7 +6,7 @@
         auto index=*static_cast<std::shared_ptr<a2::Index> const*>(shared_index);
         if(!index||index->version!=version||index->active){SET_ERROR_CODE(Z3_INVALID_ARG,nullptr);return;}
         auto run=std::make_shared<a2::Run>(index,query,version,mode,exposure,explicit_cost,diagnostic);
-        init_solver(c,s);to_solver(s)->m_solver->set_A_guidance(run);
+        run->solver_id=reinterpret_cast<uintptr_t>(to_solver(s));init_solver(c,s);to_solver(s)->m_solver->set_A_guidance(run);
         Z3_CATCH;
     }
     Z3_string Z3_API Z3_solver_get_A_guidance_stats(Z3_context c,Z3_solver s) {

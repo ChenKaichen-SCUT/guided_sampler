@@ -15,7 +15,7 @@ struct InternalView {
  unsigned size(Expr e)const{return to_app(e)->get_num_args();}Expr child(Expr e,unsigned i)const{return to_app(e)->get_arg(i);}
  char sort(Expr e)const{return arith.is_int(e)?'I':m.is_bool(e)?'B':'?';}
  Big number(Expr e)const{rational r;if(!arith.is_numeral(e,r)||!r.is_int())throw std::runtime_error("unsupported_normal_form");return Big(r.to_string());}
- std::string identity(Expr e)const{auto s=to_app(e)->get_decl()->get_name();std::string name=s.str();return std::string(1,sort(e))+(s.is_numerical()?"#":"$")+std::to_string(name.size())+":"+name;}
+ std::string identity(Expr e)const{auto s=to_app(e)->get_decl()->get_name();std::string name=s.str();return std::string(to_app(e)->get_decl()->is_skolem()?"SKOLEM:":"")+std::string(1,sort(e))+(s.is_numerical()?"#":"$")+std::to_string(name.size())+":"+name;}
 };
 }
 namespace a2 {

@@ -11,7 +11,7 @@ public:
  std::map<std::string,double> costs;std::map<std::string,uint64_t> mapping_counts;
  std::vector<std::vector<std::pair<a2::Entry*,unsigned>>> reverse;
  std::vector<std::pair<uint64_t,uint64_t>> known;
- Json current=Json::object();unsigned current_query=0;double last_observer=0,last_update=0;unsigned entries_updated=0;
+ Json current=Json::object(),pending_outcomes=Json::array();unsigned current_query=0;double last_observer=0,last_update=0;unsigned entries_updated=0;
  std::ofstream requests,backends,actions,skips,catalog,outcome_log,ledger,lifecycle;
  uint64_t tail_models=0,tail_unknown=0;double tail_cdcl=0,tail_ccss=0;
  AGuidanceBridge(z3::expr const& formula,unsigned md,double wall,std::string const& dir):ast(formula),mode(md),reverse(ast.nodes.size()),known(ast.nodes.size()),
@@ -53,14 +53,14 @@ public:
   index->version=ast.version;index->updates=entries_updated;last_update=seconds(start);charge("index_update_seconds",last_update);
  }
  void prepare(z3::solver& solver,unsigned query){
-  auto start=Clock::now();current_query=query;current=Json::object();if(!observing()||exposure>=exposure_budget){if(!disabled)disable("exposure_budget");return;}
+  auto start=Clock::now();current_query=query;current=Json::object();pending_outcomes=Json::array();if(!observing()||exposure>=exposure_budget){if(!disabled)disable("exposure_budget");requests<<Json({{"query_id",query},{"coverage_version",ast.version},{"single_sided_bits",nullptr},{"A_mappable_targets",nullptr},{"index_entries",index->entries.size()},{"entries_updated",0},{"request_register_seconds",0},{"request_size_bytes",0},{"has_request",false},{"disabled_reason",disabled_reason}}).dump()<<'\n';requests.flush();return;}
   bool diagnostic=std::getenv("GUIDED_A_DIAGNOSTIC")!=nullptr;
   auto reg=Clock::now();Z3_solver_set_A_guidance(solver.ctx(),solver,&index,query,ast.version,mode,std::max(0.0,exposure_budget-exposure),std::max(0.0,budget-cost),diagnostic);solver.ctx().check_error();double register_time=seconds(reg);charge("request_register_seconds",register_time);
   requests<<Json({{"query_id",query},{"coverage_version",ast.version},{"single_sided_bits",index->single_sided},{"A_mappable_targets",index->mappable_targets},{"index_entries",index->entries.size()},{"entries_updated",entries_updated},{"observer_seconds",last_observer},{"index_build_seconds",costs["index_build_seconds"]},{"index_update_seconds",last_update},{"request_register_seconds",register_time},{"request_size_bytes",sizeof(void*)+4*sizeof(unsigned)+2*sizeof(double)},{"has_request",true},{"disabled_reason",""}}).dump()<<'\n';requests.flush();charge("request_log_seconds",seconds(start)-register_time);
  }
  Json end_check(z3::solver& solver){
   if(disabled)return Json::object();auto start=Clock::now();current=Json::parse(Z3_solver_get_A_guidance_stats(solver.ctx(),solver));Z3_solver_clear_A_guidance(solver.ctx(),solver);solver.ctx().check_error();
-  charge("binding_matching_scoring_seconds",current.value("direct_seconds",0.0));
+  for(auto key:{"binding_seconds","hot_callback_seconds","route_metadata_seconds","diagnostic_snapshot_seconds","exposure_guard_seconds"})charge(key,current.value(key,0.0));
   for(auto b:current.value("backend_calls",Json::array())){backends<<b.dump()<<'\n';skips<<Json({{"query_id",current_query},{"backend_call_id",b["backend_call_id"]},{"funnel",b["funnel"]},{"outside_window_potential",nullptr}}).dump()<<'\n';}
   for(auto e:current.value("actions",Json::array()))actions<<e.dump()<<'\n';
   for(auto e:current.value("lifecycle",Json::array())){e["query_id"]=current_query;lifecycle<<e.dump()<<'\n';}
@@ -69,16 +69,16 @@ public:
   backends.flush();actions.flush();skips.flush();lifecycle.flush();charge("diagnostic_serialization_seconds",seconds(start));return current;
  }
  void query_finished(std::string const& source,unsigned query,double check_time,std::string const& result,Json const& stats){
-  bool was_disabled=disabled;
+  auto log_start=Clock::now();bool was_disabled=disabled;
   if(source=="CDCL"&&stats.value("intervened_check",false))exposure+=check_time;
   if(stats.value("exposure_limit",false)||exposure>=exposure_budget)disable("guidance_exposure_limit");
-  if(cost>=budget)disable("explicit_budget");
+  if(cost>=budget||stats.value("explicit_limit",false))disable("explicit_budget");
   if(was_disabled){if(source=="CDCL")tail_cdcl+=check_time;else tail_ccss+=check_time;if(result=="unknown")++tail_unknown;}
-  ledger<<Json({{"query_id",query},{"source",source},{"explicit_seconds",cost},{"categories",costs},{"intervened_check_exposure_seconds",exposure},{"this_check_exposure",stats.value("intervened_check",false)?check_time:0.0},{"exposure_requested_limit",stats.value("requested_exposure_limit",0.0)},{"exposure_overrun",stats.value("intervened_check",false)?std::max(0.0,check_time-stats.value("requested_exposure_limit",0.0)):0.0},{"disabled",disabled},{"disabled_reason",disabled_reason},{"tail_cdcl_seconds",tail_cdcl},{"tail_ccss_seconds",tail_ccss},{"tail_unknown",tail_unknown}}).dump()<<'\n';ledger.flush();
+  ledger<<Json({{"query_id",query},{"source",source},{"explicit_seconds",cost},{"categories",costs},{"intervened_check_exposure_seconds",exposure},{"this_check_exposure",stats.value("intervened_check",false)?check_time:0.0},{"exposure_requested_limit",stats.value("requested_exposure_limit",0.0)},{"exposure_overrun",stats.value("intervened_check",false)?std::max(0.0,check_time-stats.value("requested_exposure_limit",0.0)):0.0},{"disabled",disabled},{"disabled_reason",disabled_reason},{"tail_cdcl_seconds",tail_cdcl},{"tail_ccss_seconds",tail_ccss},{"tail_unknown",tail_unknown}}).dump()<<'\n';ledger.flush();if(!was_disabled)charge("cost_ledger_log_seconds",seconds(log_start));
  }
  Json outcomes(Evaluation const& ev)const {
   Json result=Json::array();for(auto const& action:current.value("actions",Json::array())){Json targets=Json::array();for(auto const& support:action["support"]){unsigned n=support["node"];uint64_t one=std::stoull(support["desired_one_mask"].get<std::string>()),zero=std::stoull(support["desired_zero_mask"].get<std::string>());bool reached=ev.values[n].has_value();uint64_t v=reached?low64(*ev.values[n]):0;auto const& node=ast.nodes[n];uint64_t hit1=reached?(one&v):0,hit0=reached?(zero&~v):0,new1=hit1&~node.seen1,new0=hit0&~node.seen0;targets.push_back({{"node",n},{"reached",reached},{"desired_one_mask",std::to_string(one)},{"desired_zero_mask",std::to_string(zero)},{"hit_one_mask",std::to_string(hit1)},{"hit_zero_mask",std::to_string(hit0)},{"new_one_mask",std::to_string(new1)},{"new_zero_mask",std::to_string(new0)},{"new_covered_for_targets",std::popcount(new1&node.seen0)+std::popcount(new0&node.seen1)}});}result.push_back({{"decision_id",action["decision_id"]},{"backend_call_id",action["backend_call_id"]},{"phase_changed",action["phase_changed"]},{"targets",targets}});}return result;
  }
- void formal_record(Json const& rec){if(disabled)++tail_models;if(rec["source"]=="CDCL"&&rec["query"]==current_query)outcome_log<<Json({{"query_id",current_query},{"formal_index",rec["formal_index"]},{"formal_model",true},{"outcomes",rec.value("a_outcomes",Json::array())},{"model_new_observed",rec["new_observed"]},{"model_new_covered",rec["new_covered"]}}).dump()<<'\n';outcome_log.flush();}
+ void formal_record(Json const& rec){auto log_start=Clock::now();if(disabled)++tail_models;if(rec["source"]=="CDCL"&&rec["query"]==current_query)outcome_log<<Json({{"query_id",current_query},{"formal_index",rec["formal_index"]},{"formal_model",true},{"outcomes",pending_outcomes},{"model_new_observed",rec["new_observed"]},{"model_new_covered",rec["new_covered"]}}).dump()<<'\n';outcome_log.flush();if(!disabled)charge("outcome_log_seconds",seconds(log_start));}
 };
 }

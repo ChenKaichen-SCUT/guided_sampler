@@ -1,10 +1,11 @@
 // Included inside namespace smt. A never mutates the native decision variable.
 void context::attach_A_guidance(std::shared_ptr<a2::Run> run,char const* leaf) {
     detach_A_guidance();if(!run||run->closed)return;
-    m_A=std::move(run);std::lock_guard<std::recursive_mutex> lock(m_A->mutex);m_A_data=std::make_unique<a2::ContextCache>(m);m_A_local_disabled=false;m_A_snapshot_done=false;++m_A_generation;m_A_call=m_A->backend(reinterpret_cast<uintptr_t>(this),m_A_generation,m_fparams.m_ls_sampling,leaf);
+    auto attach_start=a2::Clock::now();m_A=std::move(run);std::lock_guard<std::recursive_mutex> lock(m_A->mutex);m_A_data=std::make_unique<a2::ContextCache>(m);m_A_local_disabled=false;m_A_snapshot_done=false;++m_A_generation;m_A_call=m_A->backend(reinterpret_cast<uintptr_t>(this),m_A_generation,m_fparams.m_ls_sampling,leaf);
     auto& b=m_A->call(m_A_call);b["bool_vars_before_register"]=get_num_bool_vars();b["bool_vars_after_register"]=get_num_bool_vars();
     b["assertions_before_register"]=get_num_asserted_formulas();b["assertions_after_register"]=get_num_asserted_formulas();
     m_A->event({{"kind","attach"},{"backend_call_id",m_A_call},{"context_id",m_A_call}});
+    double binding=a2::seconds(attach_start);b["binding_seconds"]=binding;m_A->direct_seconds+=binding;m_A->binding_seconds+=binding;
     if(m_fparams.m_ls_sampling){b["disabled_reason"]="ccss_rejected";detach_A_guidance();}
 }
 void context::detach_A_guidance() {
@@ -24,7 +25,7 @@ void context::prepare_A_search_epoch(char const* entry) {
     if(m_fparams.m_threads>1){m_A->call(m_A_call)["disabled_reason"]="parallel_smt_unsupported";m_A_local_disabled=true;}
 }
 void context::A_binding_snapshot() {
-    if(!m_A||!m_A->diagnostic||m_A_snapshot_done)return;m_A_snapshot_done=true;
+    if(!m_A||!m_A->diagnostic||m_A_snapshot_done)return;m_A_snapshot_done=true;auto snapshot_start=a2::Clock::now();
     std::lock_guard<std::recursive_mutex> lock(m_A->mutex);
     a2::Json snap=a2::Json::array();a2::InternalView view(m);std::map<std::string,unsigned> selected;
     for(auto const& kv:m_A->index->entries){if(selected.size()>=128)break;selected[kv.first]=snap.size();snap.push_back({{"key",kv.first},{"state","not_internalized"},{"encountered_in_window",false}});}
@@ -36,15 +37,15 @@ void context::A_binding_snapshot() {
         auto value=get_assignment(v);auto& row=snap[it->second];row["var"]=v;row["state"]=value==l_undef?"bound_unassigned":value==l_true?"bound_assigned_true":"bound_assigned_false";row["reason"]="assigned_reason_unknown";
     }
     if(incomplete)for(auto& row:snap)if(row["state"]=="not_internalized")row["state"]="mapping_incomplete";
-    m_A->call(m_A_call)["binding_snapshot"]=snap;m_A->call(m_A_call)["binding_snapshot_limit"]=128;m_A->call(m_A_call)["snapshot_native_vars_scanned"]=scanned;
+    m_A->call(m_A_call)["binding_snapshot"]=snap;m_A->call(m_A_call)["binding_snapshot_limit"]=128;m_A->call(m_A_call)["snapshot_native_vars_scanned"]=scanned;double snapshot_elapsed=a2::seconds(snapshot_start);m_A->snapshot_seconds+=snapshot_elapsed;m_A->direct_seconds+=snapshot_elapsed;
 
 }
 bool context::apply_A_phase_hint(bool_var native_var,bool native_phase,bool& effective_phase) {
-    if(!m_A||m_A_local_disabled||m_A->closed)return false;
+    if(!m_A||m_A_local_disabled||m_A->closed||m_A->direct_disabled)return false;
     std::lock_guard<std::recursive_mutex> lock(m_A->mutex);auto& r=*m_A;
+    auto start=a2::Clock::now();struct cost {a2::Run& r;a2::Clock::time_point t;~cost(){double elapsed=a2::seconds(t);r.direct_seconds+=elapsed;r.hot_seconds+=elapsed;if(r.direct_seconds>=r.explicit_remaining)r.direct_disabled=true;}} charge{r,start};
     r.count(m_A_call,"native_ordinary_seen");++r.ordinal;
     if(r.ordinal>64){r.count(m_A_call,"outside_decision_window");return false;}
-    auto start=a2::Clock::now();struct cost {a2::Run& r;a2::Clock::time_point t;~cost(){r.direct_seconds+=a2::seconds(t);}} charge{r,start};
     r.count(m_A_call,"within_decision_window");
     if(get_assignment(native_var)!=l_undef){r.count(m_A_call,"already_assigned");return false;}
     if(r.direct_seconds>=r.explicit_remaining){r.count(m_A_call,"cost_rejected");return false;}
@@ -75,23 +76,25 @@ bool context::apply_A_phase_hint(bool_var native_var,bool native_phase,bool& eff
     bool changed=r.mode!=1&&suggested!=native_phase;
     if(changed&&(r.expired()||a2::seconds(r.begin)>=r.exposure_remaining)){r.count(m_A_call,"exposure_rejected");return false;}
     if(r.direct_seconds+a2::seconds(start)>=r.explicit_remaining){r.count(m_A_call,"cost_rejected");return false;}
-    unsigned action=r.actions.size();a2::Json masks=a2::Json::array();
-    for(auto const& kv:supports[canonical_phase])if(kv.second.first||kv.second.second){masks.push_back({{"node",kv.first},{"desired_one_mask",std::to_string(kv.second.first)},{"desired_zero_mask",std::to_string(kv.second.second)}});auto& used=r.attempted[kv.first];used.first|=kv.second.first;used.second|=kv.second.second;}
+    unsigned action=r.actions.size();std::vector<a2::Support> masks;
+    for(auto const& kv:supports[canonical_phase])if(kv.second.first||kv.second.second){masks.push_back({kv.first,kv.second.first,kv.second.second});auto& used=r.attempted[kv.first];used.first|=kv.second.first;used.second|=kv.second.second;}
     ++r.suggestions;r.count(m_A_call,suggested==native_phase?"same_phase_suggestions":"different_phase_suggestions");
     if(changed){r.changed=true;r.count(m_A_call,"phase_overrides");}
     effective_phase=r.mode==1?native_phase:suggested;
-    r.actions.push_back({{"query_id",r.query},{"backend_call_id",m_A_call},{"context_id",m_A_call},{"context_generation",m_A_generation},{"decision_id",r.ordinal},{"level",m_scope_lvl},{"native_var",native_var},{"actual_var",native_var},{"native_phase",native_phase},{"suggested_phase",suggested},{"effective_phase",effective_phase},{"phase_changed",changed},{"would_override",suggested!=native_phase},{"mapping_kind",exact?"exact_structure":n.kind},{"canonical_key",n.key},{"literal_negated",n.negated},{"support",masks},{"coverage_version",r.version},{"trailed_assignment_popped",false},{"reassigned_same",0},{"reassigned_opposite",0},{"final_atom_truth",nullptr}});
+    a2::Action event;event.query=r.query;event.backend=m_A_call;event.context=m_A_call;event.generation=m_A_generation;event.decision=r.ordinal;event.level=m_scope_lvl;event.var=native_var;event.version=r.version;
+    event.native_phase=native_phase;event.suggested_phase=suggested;event.effective_phase=effective_phase;event.changed=changed;event.negated=n.negated;
+    event.mapping=exact?"exact_structure":n.kind;event.key=n.key;event.support=std::move(masks);r.actions.push_back(std::move(event));
     m_A_data->tracks.push_back({native_var,e,action,0,false});return true;
 }
 void context::A_assignment(literal l,bool popped){
     if(!m_A||m_A_data->tracks.empty())return;
     std::lock_guard<std::recursive_mutex> lock(m_A->mutex);
     for(auto& t:m_A_data->tracks)if(t.var==l.var()&&t.e==bool_var2expr(l.var())){
-        auto& a=m_A->actions[t.action];if(popped){if(t.active&&t.token){a["trailed_assignment_popped"]=true;t.active=false;}}
-        else {bool value=!l.sign();if(t.token){auto key=value==a["effective_phase"].get<bool>()?"reassigned_same":"reassigned_opposite";a[key]=a[key].get<unsigned>()+1;}else {t.token=++m_A_assignment_serial;a["assignment_token"]=t.token;a["trail_index"]=m_assigned_literals.size();}t.active=true;}
+        auto& a=m_A->actions[t.action];if(popped){if(t.active&&t.token){a.popped=true;t.active=false;}}
+        else {bool value=!l.sign();if(t.token){if(value==a.effective_phase)++a.reassigned_same;else ++a.reassigned_opposite;}else {t.token=++m_A_assignment_serial;a.token=t.token;a.trail_index=m_assigned_literals.size();}t.active=true;}
     }
 }
 void context::A_finalize(lbool result){
-    if(!m_A)return;std::lock_guard<std::recursive_mutex> lock(m_A->mutex);auto& b=m_A->call(m_A_call);b["result"]=result==l_true?"sat":result==l_false?"unsat":"unknown";b["original_reason_unknown"]=result==l_undef?last_failure_as_string():"";
-    for(auto const& t:m_A_data->tracks){auto value=t.var<get_num_bool_vars()&&bool_var2expr(t.var)==t.e?get_assignment(t.var):l_undef;m_A->actions[t.action]["final_atom_truth"]=result==l_true&&value!=l_undef?a2::Json(value==l_true):a2::Json(nullptr);}
+    if(!m_A)return;std::lock_guard<std::recursive_mutex> lock(m_A->mutex);auto& b=m_A->call(m_A_call);b["result"]=result==l_true?"sat":result==l_false?"unsat":"unknown";b["original_reason_unknown"]=result==l_undef?(m_A_last_exposure?"canceled":last_failure_as_string()):"";
+    for(auto const& t:m_A_data->tracks){auto value=t.var<get_num_bool_vars()&&bool_var2expr(t.var)==t.e?get_assignment(t.var):l_undef;m_A->actions[t.action].final_truth=result==l_true&&value!=l_undef?int(value==l_true):-1;}
 }
