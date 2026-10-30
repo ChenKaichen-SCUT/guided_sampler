@@ -1,0 +1,17 @@
+{
+  "one_factor_only": "preprocessing semantic correspondence for existing native Bool decisions",
+  "evidence": [
+    "All 512 in-window decisions per main instance in observe were unmapped",
+    "Two of the 16 frozen representatives have independently proved original correspondence",
+    "No D1 or D3 target observation hit; local activation did not preserve the requested phase in returned real models"
+  ],
+  "proposed_next_scope": "Restore only independently verified original-expression correspondence through actual converter definitions, then query the current single-sided gap. Keep the native decision variable, phase arbitration, relevance policy, fixed-variable policy, window, quota, CCSS and seed unchanged.",
+  "acceptance": "Require a real-instance verified target -> native action -> theory -> actual model -> official observation chain, or explicitly classify channel inapplicable.",
+  "limitations": [
+    "Two proven gates arose at coverage version zero and do not themselves prove an available demand",
+    "No full-state causal D3 clone",
+    "Historical actual mapping remains unknown; Q5/Q6 are vacuous"
+  ],
+  "implemented_this_round": false,
+  "performance_claim": "No evidence of superiority to complete HighDiv; no new performance matrix authorized"
+}

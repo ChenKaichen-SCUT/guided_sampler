@@ -1,0 +1,212 @@
+[
+  {
+    "run_id": "convert_apply_trace",
+    "input": "../benchmarks/convert_convert-jpg2gif-query-1459.smt2",
+    "query_id": 5,
+    "backend_call_id": 1,
+    "decision_id": 25,
+    "canonical_key": "EQ:C0;16:I$11:z663_31_11_=1;",
+    "actual_atom": {
+      "ast_id": 1312,
+      "declarations": [
+        {
+          "arity": 0,
+          "decl_id": 2147484115,
+          "domain": [],
+          "name": "z663_31_11_",
+          "range": "Int",
+          "skolem": false
+        }
+      ],
+      "expr": "(= z663_31_11_ 0)",
+      "manager_identity": 99463024986576,
+      "sort": "Bool"
+    },
+    "native_phase": false,
+    "suggested_phase": true,
+    "coverage_version": 4,
+    "support": [
+      {
+        "desired_one_mask": "1",
+        "desired_zero_mask": "0",
+        "node": 2736
+      }
+    ],
+    "interpretation": "no direct transmission of final token observed; indirect association incomplete"
+  },
+  {
+    "run_id": "convert_apply_trace",
+    "input": "../benchmarks/convert_convert-jpg2gif-query-1459.smt2",
+    "query_id": 11,
+    "backend_call_id": 1,
+    "decision_id": 64,
+    "canonical_key": "EQ:C0;16:I$11:z448_31_11_=1;",
+    "actual_atom": {
+      "ast_id": 1691,
+      "declarations": [
+        {
+          "arity": 0,
+          "decl_id": 2147484047,
+          "domain": [],
+          "name": "z448_31_11_",
+          "range": "Int",
+          "skolem": false
+        }
+      ],
+      "expr": "(= z448_31_11_ 0)",
+      "manager_identity": 99463024986576,
+      "sort": "Bool"
+    },
+    "native_phase": false,
+    "suggested_phase": true,
+    "coverage_version": 10,
+    "support": [
+      {
+        "desired_one_mask": "1",
+        "desired_zero_mask": "0",
+        "node": 3034
+      }
+    ],
+    "interpretation": "no direct transmission of final token observed; indirect association incomplete"
+  },
+  {
+    "run_id": "convert_apply_trace",
+    "input": "../benchmarks/convert_convert-jpg2gif-query-1459.smt2",
+    "query_id": 13,
+    "backend_call_id": 1,
+    "decision_id": 27,
+    "canonical_key": "EQ:C0;16:I$11:z487_31_11_=1;",
+    "actual_atom": {
+      "ast_id": 1621,
+      "declarations": [
+        {
+          "arity": 0,
+          "decl_id": 2147484059,
+          "domain": [],
+          "name": "z487_31_11_",
+          "range": "Int",
+          "skolem": false
+        }
+      ],
+      "expr": "(= z487_31_11_ 0)",
+      "manager_identity": 99463024986576,
+      "sort": "Bool"
+    },
+    "native_phase": false,
+    "suggested_phase": true,
+    "coverage_version": 12,
+    "support": [
+      {
+        "desired_one_mask": "1",
+        "desired_zero_mask": "0",
+        "node": 2980
+      }
+    ],
+    "interpretation": "no direct transmission of final token observed; indirect association incomplete"
+  },
+  {
+    "run_id": "convert_apply_trace",
+    "input": "../benchmarks/convert_convert-jpg2gif-query-1459.smt2",
+    "query_id": 19,
+    "backend_call_id": 1,
+    "decision_id": 31,
+    "canonical_key": "EQ:C0;16:I$11:z230_31_11_=1;",
+    "actual_atom": {
+      "ast_id": 2045,
+      "declarations": [
+        {
+          "arity": 0,
+          "decl_id": 2147483906,
+          "domain": [],
+          "name": "z230_31_11_",
+          "range": "Int",
+          "skolem": false
+        }
+      ],
+      "expr": "(= z230_31_11_ 0)",
+      "manager_identity": 99463024986576,
+      "sort": "Bool"
+    },
+    "native_phase": false,
+    "suggested_phase": true,
+    "coverage_version": 18,
+    "support": [
+      {
+        "desired_one_mask": "1",
+        "desired_zero_mask": "0",
+        "node": 3321
+      }
+    ],
+    "interpretation": "no direct transmission of final token observed; indirect association incomplete"
+  },
+  {
+    "run_id": "convert_apply_trace",
+    "input": "../benchmarks/convert_convert-jpg2gif-query-1459.smt2",
+    "query_id": 23,
+    "backend_call_id": 1,
+    "decision_id": 44,
+    "canonical_key": "EQ:C0;16:I$11:z754_31_11_=1;",
+    "actual_atom": {
+      "ast_id": 1111,
+      "declarations": [
+        {
+          "arity": 0,
+          "decl_id": 2147484130,
+          "domain": [],
+          "name": "z754_31_11_",
+          "range": "Int",
+          "skolem": false
+        }
+      ],
+      "expr": "(= z754_31_11_ 0)",
+      "manager_identity": 99463024986576,
+      "sort": "Bool"
+    },
+    "native_phase": false,
+    "suggested_phase": true,
+    "coverage_version": 22,
+    "support": [
+      {
+        "desired_one_mask": "1",
+        "desired_zero_mask": "0",
+        "node": 2580
+      }
+    ],
+    "interpretation": "no direct transmission of final token observed; indirect association incomplete"
+  },
+  {
+    "run_id": "convert_apply_trace",
+    "input": "../benchmarks/convert_convert-jpg2gif-query-1459.smt2",
+    "query_id": 27,
+    "backend_call_id": 1,
+    "decision_id": 52,
+    "canonical_key": "EQ:C0;16:I$11:z663_31_11_=1;",
+    "actual_atom": {
+      "ast_id": 1312,
+      "declarations": [
+        {
+          "arity": 0,
+          "decl_id": 2147484115,
+          "domain": [],
+          "name": "z663_31_11_",
+          "range": "Int",
+          "skolem": false
+        }
+      ],
+      "expr": "(= z663_31_11_ 0)",
+      "manager_identity": 99463024986576,
+      "sort": "Bool"
+    },
+    "native_phase": false,
+    "suggested_phase": true,
+    "coverage_version": 26,
+    "support": [
+      {
+        "desired_one_mask": "1",
+        "desired_zero_mask": "0",
+        "node": 2736
+      }
+    ],
+    "interpretation": "no direct transmission of final token observed; indirect association incomplete"
+  }
+]

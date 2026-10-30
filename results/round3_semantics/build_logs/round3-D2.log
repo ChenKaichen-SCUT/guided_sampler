@@ -1,0 +1,36 @@
+case_00 Q1 unsat 0.068
+case_00 Q2 unsat 0.007
+case_00 Q3 unsat 0.007
+case_00 Q4 unsat 0.009
+case_00 Q5 unsat 0.002
+case_00 Q6 unsat 0.007
+case_01 Q1 sat 0.054
+case_01 Q2 sat 0.049
+case_01 Q3 unsat 0.019
+case_01 Q4 unsat 0.018
+case_01 Q5 unsat 0.002
+case_01 Q6 unsat 0.007
+case_02 Q1 sat 0.049
+case_02 Q2 sat 0.05
+case_02 Q3 unsat 0.019
+case_02 Q4 unsat 0.018
+case_02 Q5 unsat 0.002
+case_02 Q6 unsat 0.006
+case_03 Q1 unsat 0.036
+case_03 Q2 unsat 0.006
+case_03 Q3 unsat 0.003
+case_03 Q4 unsat 0.018
+case_03 Q5 unsat 0.002
+case_03 Q6 unsat 0.019
+Traceback (most recent call last):
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/check_target_feasibility.py", line 28, in <module>
+    if __name__=='__main__':main()
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/check_target_feasibility.py", line 10, in main
+    d=OUT/case['case_id'];d.mkdir();p=ROOT/case['input'];assert digest(p)==case['input_sha256'];stat=Witness();manual=metric.ManualSatisfiesMetric(p.read_text(),stat);F=z3.And(manual._solver.assertions());nodes,reaches=reach_all(F);vs=variables(nodes);e=nodes[case['event']['node']];assert e.sexpr()==case['target_expr'];V=value_condition(e,case['event']['bit'],case['event']['desired']);R=reaches[case['event']['node']];A=[parse_expr(a,vs) for a in case['assumptions']];D=parse_expr(case['original_suggested_condition'],vs)
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/semantic_oracle.py", line 24, in reach_all
+    reach[c]=z3.simplify(z3.Or(reach[c],edge));incoming[c]-=1
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/deps/baseline/lib/python3.10/site-packages/z3/z3.py", line 9019, in simplify
+    return _to_expr_ref(Z3_simplify(a.ctx_ref(), a.as_ast()), a.ctx)
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/deps/baseline/lib/python3.10/site-packages/z3/z3core.py", line 3345, in Z3_simplify
+    r = _elems.f(a0, a1)
+KeyboardInterrupt

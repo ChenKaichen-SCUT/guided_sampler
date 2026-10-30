@@ -1,0 +1,749 @@
+run_id,query_id,backend_call_id,generation,decision_id,watch,kind,assignment_token,atom_kind,phase_changed,native_phase,suggested_phase,effective_phase,final_internal_assignment,M_leaf,M_outer,M_original,M_formal,same_original_declarations_proved,final_relevant,final_token_direct_transmission,final_token_enqueued,final_token_consumed,overflow,indirect_euf_association,first_broken_link,first_model_truth_break,initial_assignment_token,original_token_withdrawn,final_token_same_as_initial,canonical_key,atom_expr
+convert_observe_trace,1,15,1,1,0,unmapped,4161,equality,False,,,,False,False,,,,False,False,False,False,False,False,partial_unknown,original_mapping_unknown,original_mapping_unknown,1826,True,False,EQ:C0;42:16I(24:SKOLEM:B$12:z108_2_2_!543:N1;3:N0;)=1;,(= 0 (ite z108_2_2_!54 1 0))
+convert_observe_trace,1,15,1,2,1,unmapped,4265,equality,False,,,,True,True,,,,False,True,True,True,True,False,partial_unknown,original_mapping_unknown,original_mapping_unknown,1831,True,False,EQ:C0;43:16I(25:SKOLEM:B$13:sigma_794_!293:N1;3:N0;)=1;,(= 0 (ite sigma_794_!29 1 0))
+convert_observe_trace,1,15,1,3,2,unmapped,4108,equality,False,,,,True,True,,,,False,True,True,True,True,False,partial_unknown,original_mapping_unknown,original_mapping_unknown,1836,True,False,EQ:C0;44:16I(26:SKOLEM:B$14:z794_31_31_!533:N1;3:N0;)=1;,(= 0 (ite z794_31_31_!53 1 0))
+convert_observe_trace,1,15,1,5,3,unmapped,4106,equality,False,,,,False,False,,,,False,False,False,False,False,False,partial_unknown,original_mapping_unknown,original_mapping_unknown,1860,True,False,EQ:C-1;44:16I(26:SKOLEM:B$14:z794_31_31_!533:N1;3:N0;)=1;,(= 1 (ite z794_31_31_!53 1 0))
+convert_observe_trace,1,15,1,6,4,unmapped,4163,equality,False,,,,True,True,,,,False,True,True,True,True,False,partial_unknown,original_mapping_unknown,original_mapping_unknown,1869,True,False,EQ:C-1;42:16I(24:SKOLEM:B$12:z108_2_2_!543:N1;3:N0;)=1;,(= 1 (ite z108_2_2_!54 1 0))
+convert_observe_trace,1,15,1,8,5,unmapped,4266,equality,False,,,,False,False,,,,False,False,False,False,False,False,partial_unknown,original_mapping_unknown,original_mapping_unknown,1874,True,False,EQ:C-1;43:16I(25:SKOLEM:B$13:sigma_794_!293:N1;3:N0;)=1;,(= 1 (ite sigma_794_!29 1 0))
+convert_observe_trace,1,15,1,9,6,unmapped,4306,equality,False,,,,False,False,,,,False,False,False,False,False,False,partial_unknown,original_mapping_unknown,original_mapping_unknown,1879,True,False,EQ:C0;44:16I(26:SKOLEM:B$14:z754_31_31_!523:N1;3:N0;)=1;,(= 0 (ite z754_31_31_!52 1 0))
+convert_observe_trace,1,15,1,10,7,unmapped,4317,equality,False,,,,False,False,,,,False,False,False,False,False,False,partial_unknown,original_mapping_unknown,original_mapping_unknown,1884,True,False,EQ:C0;44:16I(26:SKOLEM:B$14:z663_31_31_!513:N1;3:N0;)=1;,(= 0 (ite z663_31_31_!51 1 0))
+convert_observe_trace,3,1,1,3,0,suggestion,7035,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,5281,True,False,LE:C9315;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    9315)"
+convert_observe_trace,3,1,1,4,1,suggestion,6745,theory_atom,False,False,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,5356,True,False,LE:C-2147483647;15:I$10:z173_31_0_=1;,(>= z173_31_0_ 2147483648)
+convert_observe_trace,3,1,1,5,2,suggestion,6274,theory_atom,False,False,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,5358,True,False,LE:C-2147483647;15:I$10:z186_31_0_=1;,(>= z186_31_0_ 2147483648)
+convert_observe_trace,3,1,1,6,3,suggestion,5363,theory_atom,False,False,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,5360,True,False,LE:C-2147483647;15:I$10:z191_31_0_=1;,(>= z191_31_0_ 2147483648)
+convert_observe_trace,5,1,2,11,0,suggestion,2136,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2012,True,False,LE:C-2147483647;15:I$10:z445_31_0_=1;,(>= z445_31_0_ 2147483648)
+convert_observe_trace,5,1,2,12,1,suggestion,2138,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2014,True,False,LE:C13878;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    13878)"
+convert_observe_trace,5,1,2,13,2,suggestion,2213,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2089,True,False,LE:C-2147483647;15:I$10:z242_31_0_=1;,(>= z242_31_0_ 2147483648)
+convert_observe_trace,5,1,2,20,3,suggestion,2236,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2103,True,False,LE:C-2147483647;15:I$10:z255_31_0_=1;,(>= z255_31_0_ 2147483648)
+convert_observe_trace,7,1,3,7,0,suggestion,2370,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2004,True,False,LE:C-2147483647;15:I$10:z363_31_0_=1;,(>= z363_31_0_ 2147483648)
+convert_observe_trace,7,1,3,12,1,suggestion,2375,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2011,True,False,LE:C-2147483647;15:I$10:z313_31_0_=1;,(>= z313_31_0_ 2147483648)
+convert_observe_trace,7,1,3,14,2,suggestion,2129,equality,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2016,True,False,EQ:C0;16:I$11:z332_31_11_=1;,(= z332_31_11_ 0)
+convert_observe_trace,7,1,3,17,3,suggestion,2313,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2021,True,False,LE:C1258;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    1258)"
+convert_observe_trace,9,1,4,16,0,suggestion,2203,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1970,True,False,LE:C-2147483647;15:I$10:z255_31_0_=1;,(>= z255_31_0_ 2147483648)
+convert_observe_trace,9,1,4,18,1,suggestion,2174,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1974,True,False,LE:C9315;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    9315)"
+convert_observe_trace,9,1,4,19,2,suggestion,2217,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2049,True,False,LE:C-2147483647;15:I$10:z318_31_0_=1;,(>= z318_31_0_ 2147483648)
+convert_observe_trace,9,1,4,28,3,suggestion,2207,equality,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2064,True,False,EQ:C0;16:I$11:z230_31_11_=1;,(= z230_31_11_ 0)
+convert_observe_trace,11,1,5,10,0,suggestion,2073,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2073,False,True,LE:C2581;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    2581)"
+convert_observe_trace,11,1,5,12,1,suggestion,2149,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2149,False,True,LE:C-2147483647;15:I$10:z324_31_0_=1;,(>= z324_31_0_ 2147483648)
+convert_observe_trace,11,1,5,22,2,suggestion,2163,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2163,False,True,LE:C-2147483647;15:I$10:z313_31_0_=1;,(>= z313_31_0_ 2147483648)
+convert_observe_trace,11,1,5,27,3,suggestion,2174,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2174,False,True,LE:C-2147483647;15:I$10:z304_31_0_=1;,(>= z304_31_0_ 2147483648)
+convert_observe_trace,13,1,6,6,0,suggestion,1921,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1921,False,True,LE:C-2147483647;15:I$10:z158_31_0_=1;,(>= z158_31_0_ 2147483648)
+convert_observe_trace,13,1,6,8,1,suggestion,1925,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1925,False,True,LE:C-2147483647;15:I$10:z177_31_0_=1;,(>= z177_31_0_ 2147483648)
+convert_observe_trace,13,1,6,10,2,suggestion,1928,equality,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1928,False,True,EQ:C0;16:I$11:z332_31_11_=1;,(= z332_31_11_ 0)
+convert_observe_trace,13,1,6,13,3,suggestion,1933,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1933,False,True,LE:C-2147483647;15:I$10:z445_31_0_=1;,(>= z445_31_0_ 2147483648)
+convert_observe_trace,15,1,7,6,0,suggestion,2070,equality,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2070,False,True,EQ:C0;16:I$11:z794_31_11_=1;,(= z794_31_11_ 0)
+convert_observe_trace,15,1,7,12,1,suggestion,2079,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2079,False,True,LE:C-2147483647;15:I$10:z324_31_0_=1;,(>= z324_31_0_ 2147483648)
+convert_observe_trace,15,1,7,15,2,suggestion,2083,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2083,False,True,LE:C8280;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    8280)"
+convert_observe_trace,15,1,7,22,3,suggestion,2211,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2169,True,False,LE:C-2147483647;15:I$10:z158_31_0_=1;,(>= z158_31_0_ 2147483648)
+convert_observe_trace,17,1,8,1,0,suggestion,1989,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1989,False,True,LE:C-2147483647;15:I$10:z207_31_0_=1;,(>= z207_31_0_ 2147483648)
+convert_observe_trace,17,1,8,2,1,suggestion,1991,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1991,False,True,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_observe_trace,17,1,8,18,2,suggestion,2090,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2090,False,True,LE:C-2147483647;15:I$10:z445_31_0_=1;,(>= z445_31_0_ 2147483648)
+convert_observe_trace,17,1,8,19,3,suggestion,2092,equality,False,False,True,False,False,False,False,False,False,True,False,False,False,False,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2092,False,True,EQ:C0;16:I$11:z794_31_11_=1;,(= z794_31_11_ 0)
+convert_observe_trace,19,1,9,1,0,suggestion,2364,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2047,True,False,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_observe_trace,19,1,9,18,1,suggestion,2483,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2148,True,False,LE:C-2147483647;15:I$10:z310_31_0_=1;,(>= z310_31_0_ 2147483648)
+convert_observe_trace,19,1,9,20,2,suggestion,2486,equality,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2151,True,False,EQ:C0;16:I$11:z230_31_11_=1;,(= z230_31_11_ 0)
+convert_observe_trace,19,1,9,32,3,suggestion,2504,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2172,True,False,LE:C-2147483647;15:I$10:z158_31_0_=1;,(>= z158_31_0_ 2147483648)
+convert_observe_trace,21,1,10,1,0,suggestion,2054,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2054,False,True,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_observe_trace,21,1,10,7,1,suggestion,2139,equality,False,False,True,False,False,False,False,False,False,True,False,False,False,False,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2139,False,True,EQ:C0;16:I$11:z794_31_11_=1;,(= z794_31_11_ 0)
+convert_observe_trace,21,1,10,8,2,suggestion,2140,equality,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2140,False,True,EQ:C0;16:I$11:z487_31_11_=1;,(= z487_31_11_ 0)
+convert_observe_trace,21,1,10,9,3,suggestion,2143,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2143,False,True,LE:C-2147483647;15:I$10:z276_31_0_=1;,(>= z276_31_0_ 2147483648)
+convert_observe_trace,23,1,11,1,0,suggestion,2039,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2039,False,True,LE:C-2147483647;15:I$10:z207_31_0_=1;,(>= z207_31_0_ 2147483648)
+convert_observe_trace,23,1,11,2,1,suggestion,2041,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2041,False,True,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_observe_trace,23,1,11,3,2,suggestion,2116,equality,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2116,False,True,EQ:C0;16:I$11:z754_31_11_=1;,(= z754_31_11_ 0)
+convert_observe_trace,23,1,11,12,3,suggestion,2138,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2138,False,True,LE:C-2147483647;15:I$10:z304_31_0_=1;,(>= z304_31_0_ 2147483648)
+convert_observe_trace,25,1,12,1,0,suggestion,1982,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1982,False,True,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_observe_trace,25,1,12,22,1,suggestion,2088,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2088,False,True,LE:C-2147483647;15:I$10:z318_31_0_=1;,(>= z318_31_0_ 2147483648)
+convert_observe_trace,25,1,12,27,2,suggestion,2096,theory_atom,False,True,False,True,True,True,True,True,True,True,False,False,False,False,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2096,False,True,LE:C0;15:I$10:z242_31_0_=1;,(>= z242_31_0_ 1)
+convert_observe_trace,25,1,12,35,3,suggestion,2110,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2110,False,True,LE:C0;16:I$11:z1371_31_0_=1;,(<= z1371_31_0_ 0)
+convert_observe_trace,27,1,13,1,0,suggestion,2232,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2053,True,False,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_observe_trace,27,1,13,14,1,suggestion,2336,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2149,True,False,LE:C-2147483647;15:I$10:z445_31_0_=1;,(>= z445_31_0_ 2147483648)
+convert_observe_trace,27,1,13,15,2,suggestion,2338,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2151,True,False,LE:C-2147483647;15:I$10:z158_31_0_=1;,(>= z158_31_0_ 2147483648)
+convert_observe_trace,27,1,13,19,3,suggestion,2346,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2159,True,False,LE:C-2147483647;15:I$10:z324_31_0_=1;,(>= z324_31_0_ 2147483648)
+convert_observe_trace,29,1,14,1,0,suggestion,2058,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2058,False,True,LE:C-2147483647;15:I$10:z242_31_0_=1;,(>= z242_31_0_ 2147483648)
+convert_observe_trace,29,1,14,3,1,suggestion,2061,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2061,False,True,LE:C-2147483647;15:I$10:z207_31_0_=1;,(>= z207_31_0_ 2147483648)
+convert_observe_trace,29,1,14,4,2,suggestion,2063,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2063,False,True,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_observe_trace,29,1,14,6,3,suggestion,2139,equality,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2139,False,True,EQ:C0;16:I$11:z754_31_11_=1;,(= z754_31_11_ 0)
+convert_observe_trace,31,1,15,1,0,suggestion,2217,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2048,True,False,LE:C-2147483647;15:I$10:z242_31_0_=1;,(>= z242_31_0_ 2147483648)
+convert_observe_trace,31,1,15,4,1,suggestion,2224,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2055,True,False,LE:C-2147483647;15:I$10:z363_31_0_=1;,(>= z363_31_0_ 2147483648)
+convert_observe_trace,31,1,15,5,2,suggestion,2226,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2057,True,False,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_observe_trace,31,1,15,12,3,suggestion,2324,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2145,True,False,LE:C-2147483647;15:I$10:z276_31_0_=1;,(>= z276_31_0_ 2147483648)
+convert_observe_trace,33,1,16,3,0,suggestion,2116,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2116,False,True,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_observe_trace,33,1,16,13,1,suggestion,2205,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2205,False,True,LE:C-2147483647;15:I$10:z318_31_0_=1;,(>= z318_31_0_ 2147483648)
+convert_observe_trace,33,1,16,15,2,suggestion,2209,equality,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2209,False,True,EQ:C0;16:I$11:z623_31_11_=1;,(= z623_31_11_ 0)
+convert_observe_trace,33,1,16,27,3,suggestion,2231,equality,False,False,True,False,False,False,False,False,False,True,False,False,False,False,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2231,False,True,EQ:C0;16:I$11:z448_31_11_=1;,(= z448_31_11_ 0)
+convert_observe_trace,35,1,17,3,0,suggestion,2168,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2168,False,True,LE:C-2147483647;15:I$10:z363_31_0_=1;,(>= z363_31_0_ 2147483648)
+convert_observe_trace,35,1,17,4,1,suggestion,2170,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2170,False,True,LE:C-2147483647;15:I$10:z207_31_0_=1;,(>= z207_31_0_ 2147483648)
+convert_observe_trace,35,1,17,5,2,suggestion,2172,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2172,False,True,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_observe_trace,35,1,17,12,3,suggestion,2259,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2259,False,True,LE:C-2147483647;15:I$10:z255_31_0_=1;,(>= z255_31_0_ 2147483648)
+convert_observe_trace,37,1,18,1,0,suggestion,2086,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2086,False,True,LE:C-2147483647;15:I$10:z242_31_0_=1;,(>= z242_31_0_ 2147483648)
+convert_observe_trace,37,1,18,4,1,suggestion,2093,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2093,False,True,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_observe_trace,37,1,18,16,2,suggestion,2189,equality,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2189,False,True,EQ:C0;16:I$11:z794_31_11_=1;,(= z794_31_11_ 0)
+convert_observe_trace,37,1,18,23,3,suggestion,2199,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2199,False,True,LE:C-2147483647;15:I$10:z313_31_0_=1;,(>= z313_31_0_ 2147483648)
+convert_observe_trace,39,1,19,1,0,suggestion,2052,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2052,False,True,LE:C-2147483647;15:I$10:z242_31_0_=1;,(>= z242_31_0_ 2147483648)
+convert_observe_trace,39,1,19,2,1,suggestion,2054,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2054,False,True,LE:C-2147483647;15:I$10:z363_31_0_=1;,(>= z363_31_0_ 2147483648)
+convert_observe_trace,39,1,19,3,2,suggestion,2056,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2056,False,True,LE:C-2147483647;15:I$10:z207_31_0_=1;,(>= z207_31_0_ 2147483648)
+convert_observe_trace,39,1,19,4,3,suggestion,2058,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2058,False,True,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_observe_trace,41,1,20,1,0,suggestion,1937,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1937,False,True,LE:C-2147483647;15:I$10:z313_31_0_=1;,(>= z313_31_0_ 2147483648)
+convert_observe_trace,41,1,20,3,1,suggestion,1940,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1940,False,True,LE:C-2147483647;15:I$10:z363_31_0_=1;,(>= z363_31_0_ 2147483648)
+convert_observe_trace,41,1,20,4,2,suggestion,1942,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1942,False,True,LE:C-2147483647;15:I$10:z207_31_0_=1;,(>= z207_31_0_ 2147483648)
+convert_observe_trace,41,1,20,5,3,suggestion,1944,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1944,False,True,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_observe_trace,43,1,21,1,0,suggestion,2047,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2047,False,True,LE:C-2147483647;15:I$10:z313_31_0_=1;,(>= z313_31_0_ 2147483648)
+convert_observe_trace,43,1,21,2,1,suggestion,2050,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2050,False,True,LE:C-2147483647;15:I$10:z242_31_0_=1;,(>= z242_31_0_ 2147483648)
+convert_observe_trace,43,1,21,4,2,suggestion,2053,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2053,False,True,LE:C-2147483647;15:I$10:z363_31_0_=1;,(>= z363_31_0_ 2147483648)
+convert_observe_trace,43,1,21,5,3,suggestion,2055,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2055,False,True,LE:C-2147483647;15:I$10:z207_31_0_=1;,(>= z207_31_0_ 2147483648)
+convert_observe_trace,45,1,22,1,0,suggestion,2071,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1969,True,False,LE:C-2147483647;15:I$10:z242_31_0_=1;,(>= z242_31_0_ 2147483648)
+convert_observe_trace,45,1,22,4,1,suggestion,2075,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1973,True,False,LE:C-2147483647;15:I$10:z207_31_0_=1;,(>= z207_31_0_ 2147483648)
+convert_observe_trace,45,1,22,5,2,suggestion,2077,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1975,True,False,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_observe_trace,45,1,22,6,3,suggestion,2152,equality,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2050,True,False,EQ:C0;16:I$11:z754_31_11_=1;,(= z754_31_11_ 0)
+convert_observe_trace,47,1,23,1,0,suggestion,2024,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1932,True,False,LE:C-2147483647;15:I$10:z242_31_0_=1;,(>= z242_31_0_ 2147483648)
+convert_observe_trace,47,1,23,5,1,suggestion,2029,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1937,True,False,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_observe_trace,47,1,23,6,2,suggestion,2104,equality,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2012,True,False,EQ:C0;16:I$11:z754_31_11_=1;,(= z754_31_11_ 0)
+convert_observe_trace,47,1,23,23,3,suggestion,2129,equality,False,False,True,False,False,False,False,False,False,True,False,False,False,False,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2129,False,True,EQ:C0;16:I$11:z663_31_11_=1;,(= z663_31_11_ 0)
+convert_observe_trace,49,1,24,4,0,suggestion,2084,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2084,False,True,LE:C-2147483647;15:I$10:z207_31_0_=1;,(>= z207_31_0_ 2147483648)
+convert_observe_trace,49,1,24,5,1,suggestion,2086,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2086,False,True,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_observe_trace,49,1,24,13,2,suggestion,2174,equality,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2174,False,True,EQ:C0;16:I$11:z230_31_11_=1;,(= z230_31_11_ 0)
+convert_observe_trace,49,1,24,15,3,suggestion,2178,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2178,False,True,LE:C-2147483647;15:I$10:z304_31_0_=1;,(>= z304_31_0_ 2147483648)
+convert_observe_trace,51,1,25,3,0,suggestion,1982,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1982,False,True,LE:C-2147483647;15:I$10:z242_31_0_=1;,(>= z242_31_0_ 2147483648)
+convert_observe_trace,51,1,25,6,1,suggestion,1993,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1993,False,True,LE:C-2147483647;15:I$10:z363_31_0_=1;,(>= z363_31_0_ 2147483648)
+convert_observe_trace,51,1,25,7,2,suggestion,1995,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1995,False,True,LE:C-2147483647;15:I$10:z207_31_0_=1;,(>= z207_31_0_ 2147483648)
+convert_observe_trace,51,1,25,8,3,suggestion,1997,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1997,False,True,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_observe_trace,53,1,26,4,0,suggestion,2076,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2076,False,True,LE:C-2147483647;15:I$10:z242_31_0_=1;,(>= z242_31_0_ 2147483648)
+convert_observe_trace,53,1,26,7,1,suggestion,2080,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2080,False,True,LE:C-2147483647;15:I$10:z363_31_0_=1;,(>= z363_31_0_ 2147483648)
+convert_observe_trace,53,1,26,8,2,suggestion,2082,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2082,False,True,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_observe_trace,53,1,26,18,3,suggestion,2171,equality,False,False,True,False,False,False,False,False,False,True,False,False,False,False,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2171,False,True,EQ:C0;16:I$11:z794_31_11_=1;,(= z794_31_11_ 0)
+convert_observe_trace,55,1,27,4,0,suggestion,2019,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2019,False,True,LE:C-2147483647;15:I$10:z313_31_0_=1;,(>= z313_31_0_ 2147483648)
+convert_observe_trace,55,1,27,5,1,suggestion,2022,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2022,False,True,LE:C-2147483647;15:I$10:z242_31_0_=1;,(>= z242_31_0_ 2147483648)
+convert_observe_trace,55,1,27,9,2,suggestion,2028,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2028,False,True,LE:C-2147483647;15:I$10:z207_31_0_=1;,(>= z207_31_0_ 2147483648)
+convert_observe_trace,55,1,27,10,3,suggestion,2030,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2030,False,True,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_observe_trace,57,1,28,3,0,suggestion,2125,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1960,True,False,LE:C-2147483647;15:I$10:z313_31_0_=1;,(>= z313_31_0_ 2147483648)
+convert_observe_trace,57,1,28,4,1,suggestion,2127,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1962,True,False,LE:C-2147483647;15:I$10:z242_31_0_=1;,(>= z242_31_0_ 2147483648)
+convert_observe_trace,57,1,28,8,2,suggestion,2135,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1970,True,False,LE:C-2147483647;15:I$10:z207_31_0_=1;,(>= z207_31_0_ 2147483648)
+convert_observe_trace,57,1,28,9,3,suggestion,2137,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,1972,True,False,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_observe_trace,59,1,29,4,0,suggestion,2081,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2081,False,True,LE:C-2147483647;15:I$10:z363_31_0_=1;,(>= z363_31_0_ 2147483648)
+convert_observe_trace,59,1,29,5,1,suggestion,2083,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2083,False,True,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_observe_trace,59,1,29,21,2,suggestion,2180,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2180,False,True,LE:C-2147483647;15:I$10:z276_31_0_=1;,(>= z276_31_0_ 2147483648)
+convert_observe_trace,59,1,29,44,3,suggestion,2220,equality,False,False,True,False,False,False,False,False,False,True,False,False,False,False,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2220,False,True,EQ:C0;16:I$11:z448_31_11_=1;,(= z448_31_11_ 0)
+convert_observe_trace,61,1,30,3,0,suggestion,2191,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2014,True,False,LE:C-2147483647;15:I$10:z313_31_0_=1;,(>= z313_31_0_ 2147483648)
+convert_observe_trace,61,1,30,6,1,suggestion,2195,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2018,True,False,LE:C-2147483647;15:I$10:z363_31_0_=1;,(>= z363_31_0_ 2147483648)
+convert_observe_trace,61,1,30,7,2,suggestion,2197,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2020,True,False,LE:C-2147483647;15:I$10:z207_31_0_=1;,(>= z207_31_0_ 2147483648)
+convert_observe_trace,61,1,30,8,3,suggestion,2199,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2022,True,False,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_observe_trace,63,1,31,4,0,suggestion,2266,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2135,True,False,LE:C-2147483647;15:I$10:z363_31_0_=1;,(>= z363_31_0_ 2147483648)
+convert_observe_trace,63,1,31,5,1,suggestion,2268,theory_atom,False,False,True,False,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2137,True,False,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_observe_trace,63,1,31,22,2,suggestion,2371,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2240,True,False,LE:C-2147483647;15:I$10:z255_31_0_=1;,(>= z255_31_0_ 2147483648)
+convert_observe_trace,63,1,31,23,3,suggestion,2373,theory_atom,False,True,False,True,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,observe_native_phase_not_suggested_phase,no_truth_break_observed,2242,True,False,LE:C-2147483647;15:I$10:z324_31_0_=1;,(>= z324_31_0_ 2147483648)
+convert_apply_trace,3,1,1,3,0,suggestion,5357,theory_atom,True,False,True,True,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,5281,True,False,LE:C9315;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    9315)"
+convert_apply_trace,3,1,1,6,1,suggestion,5661,theory_atom,False,False,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,5435,True,False,LE:C-2147483647;15:I$10:z173_31_0_=1;,(>= z173_31_0_ 2147483648)
+convert_apply_trace,3,1,1,7,2,suggestion,5759,theory_atom,False,False,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,5437,True,False,LE:C-2147483647;15:I$10:z186_31_0_=1;,(>= z186_31_0_ 2147483648)
+convert_apply_trace,3,1,1,8,3,suggestion,5442,theory_atom,False,False,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,5439,True,False,LE:C-2147483647;15:I$10:z191_31_0_=1;,(>= z191_31_0_ 2147483648)
+convert_apply_trace,5,1,2,1,0,suggestion,2099,theory_atom,True,False,True,True,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2000,True,False,LE:C516;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;,"(>= (+ z13_31_0_
+       (* (- 4294967296) sigma_45_)
+       z42_31_0_
+       z40_31_0_
+       z38_31_0_
+       z36_31_0_
+       z34_31_0_
+       z32_31_0_
+       z30_31_0_
+       z28_31_0_
+       z26_31_0_
+       z24_31_0_
+       z22_31_0_
+       z20_31_0_
+       z18_31_0_
+       z16_31_0_
+       z14_31_0_)
+    516)"
+convert_apply_trace,5,1,2,4,1,suggestion,2326,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2154,True,False,LE:C-2147483647;15:I$10:z445_31_0_=1;,(>= z445_31_0_ 2147483648)
+convert_apply_trace,5,1,2,14,2,suggestion,2270,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2171,True,False,LE:C-2147483647;15:I$10:z368_31_0_=1;,(>= z368_31_0_ 2147483648)
+convert_apply_trace,5,1,2,25,3,suggestion,2471,equality,True,False,True,True,True,False,False,False,False,True,False,False,False,False,False,partial_unknown,internal_assignment_to_M_leaf,internal_assignment_to_M_leaf,2188,True,False,EQ:C0;16:I$11:z663_31_11_=1;,(= z663_31_11_ 0)
+convert_apply_trace,7,1,3,16,0,suggestion,2295,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2123,True,False,LE:C-2147483647;15:I$10:z304_31_0_=1;,(>= z304_31_0_ 2147483648)
+convert_apply_trace,7,1,3,30,1,suggestion,2404,equality,False,False,False,False,False,True,True,True,True,True,False,False,False,False,False,partial_unknown,internal_assignment_to_M_leaf,internal_assignment_to_M_leaf,2142,True,False,EQ:C-1;16:I$11:z448_31_31_=1;,(= z448_31_31_ 1)
+convert_apply_trace,7,1,3,38,2,suggestion,2157,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2154,True,False,LE:C-2147483647;15:I$10:z242_31_0_=1;,(>= z242_31_0_ 2147483648)
+convert_apply_trace,9,1,4,2,0,suggestion,2517,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,1975,True,False,LE:C0;15:I$10:z242_31_0_=1;,(>= z242_31_0_ 1)
+convert_apply_trace,9,1,4,19,1,suggestion,2079,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2076,True,False,LE:C-2147483647;15:I$10:z310_31_0_=1;,(>= z310_31_0_ 2147483648)
+convert_apply_trace,9,1,4,38,2,suggestion,2190,equality,True,False,True,True,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2183,True,False,EQ:C0;16:I$11:z230_31_11_=1;,(= z230_31_11_ 0)
+convert_apply_trace,11,1,5,16,0,suggestion,2162,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2159,True,False,LE:C-2147483647;15:I$10:z324_31_0_=1;,(>= z324_31_0_ 2147483648)
+convert_apply_trace,11,1,5,37,1,suggestion,2270,equality,True,False,True,True,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2263,True,False,EQ:C0;16:I$11:z623_31_11_=1;,(= z623_31_11_ 0)
+convert_apply_trace,11,1,5,64,2,suggestion,2384,equality,True,False,True,True,True,False,False,False,False,True,False,False,False,False,False,partial_unknown,internal_assignment_to_M_leaf,internal_assignment_to_M_leaf,2384,False,True,EQ:C0;16:I$11:z448_31_11_=1;,(= z448_31_11_ 0)
+convert_apply_trace,13,1,6,1,0,suggestion,1952,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,1950,True,False,LE:C0;15:I$10:z242_31_0_=1;,(>= z242_31_0_ 1)
+convert_apply_trace,13,1,6,21,1,suggestion,2302,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2059,True,False,LE:C-2147483647;15:I$10:z177_31_0_=1;,(>= z177_31_0_ 2147483648)
+convert_apply_trace,13,1,6,22,2,suggestion,2133,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2061,True,False,LE:C-2147483647;15:I$10:z207_31_0_=1;,(>= z207_31_0_ 2147483648)
+convert_apply_trace,13,1,6,27,3,suggestion,2405,equality,True,False,True,True,True,False,False,False,False,True,False,False,False,False,False,partial_unknown,internal_assignment_to_M_leaf,internal_assignment_to_M_leaf,2068,True,False,EQ:C0;16:I$11:z487_31_11_=1;,(= z487_31_11_ 0)
+convert_apply_trace,15,1,7,28,0,suggestion,2414,equality,True,False,True,True,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2202,True,False,EQ:C0;16:I$11:z448_31_11_=1;,(= z448_31_11_ 0)
+convert_apply_trace,15,1,7,50,1,suggestion,2249,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2245,True,False,LE:C-2147483647;15:I$10:z158_31_0_=1;,(>= z158_31_0_ 2147483648)
+convert_apply_trace,19,1,9,31,0,suggestion,6132,equality,True,False,True,True,True,False,False,False,False,True,False,False,False,False,False,partial_unknown,internal_assignment_to_M_leaf,internal_assignment_to_M_leaf,2224,True,False,EQ:C0;16:I$11:z230_31_11_=1;,(= z230_31_11_ 0)
+convert_apply_trace,19,1,9,36,1,suggestion,2396,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2234,True,False,LE:C-2147483647;15:I$10:z313_31_0_=1;,(>= z313_31_0_ 2147483648)
+convert_apply_trace,21,1,10,13,0,suggestion,2130,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2127,True,False,LE:C-2147483647;15:I$10:z368_31_0_=1;,(>= z368_31_0_ 2147483648)
+convert_apply_trace,21,1,10,38,1,suggestion,2256,equality,True,False,True,True,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2245,True,False,EQ:C0;16:I$11:z332_31_11_=1;,(= z332_31_11_ 0)
+convert_apply_trace,23,1,11,7,0,suggestion,2723,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2112,True,False,LE:C-2147483647;15:I$10:z304_31_0_=1;,(>= z304_31_0_ 2147483648)
+convert_apply_trace,23,1,11,40,1,suggestion,2498,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2245,True,False,LE:C-2147483647;15:I$10:z363_31_0_=1;,(>= z363_31_0_ 2147483648)
+convert_apply_trace,23,1,11,44,2,suggestion,2869,equality,True,False,True,True,True,False,False,False,False,True,False,False,False,False,False,partial_unknown,internal_assignment_to_M_leaf,internal_assignment_to_M_leaf,2250,True,False,EQ:C0;16:I$11:z754_31_11_=1;,(= z754_31_11_ 0)
+convert_apply_trace,23,1,11,49,3,suggestion,2271,equality,True,False,True,True,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2264,True,False,EQ:C0;16:I$11:z663_31_11_=1;,(= z663_31_11_ 0)
+convert_apply_trace,25,1,12,11,0,suggestion,2852,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2054,True,False,LE:C-2147483647;15:I$10:z304_31_0_=1;,(>= z304_31_0_ 2147483648)
+convert_apply_trace,25,1,12,22,1,suggestion,2425,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2079,True,False,LE:C-2147483647;15:I$10:z318_31_0_=1;,(>= z318_31_0_ 2147483648)
+convert_apply_trace,25,1,12,55,2,suggestion,2210,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2207,True,False,LE:C-2147483647;15:I$10:z276_31_0_=1;,(>= z276_31_0_ 2147483648)
+convert_apply_trace,27,1,13,52,0,suggestion,2439,equality,True,False,True,True,True,False,False,False,False,True,False,False,False,False,False,partial_unknown,internal_assignment_to_M_leaf,internal_assignment_to_M_leaf,2253,True,False,EQ:C0;16:I$11:z663_31_11_=1;,(= z663_31_11_ 0)
+convert_apply_trace,27,1,13,53,1,suggestion,2475,equality,True,False,True,True,True,False,False,False,False,True,False,False,False,False,False,partial_unknown,internal_assignment_to_M_leaf,internal_assignment_to_M_leaf,2254,True,False,EQ:C0;16:I$11:z754_31_11_=1;,(= z754_31_11_ 0)
+convert_apply_trace,29,1,14,10,0,suggestion,2180,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2174,True,False,LE:C0;15:I$10:z242_31_0_=1;,(>= z242_31_0_ 1)
+convert_apply_trace,31,1,15,40,0,suggestion,2277,equality,True,False,True,True,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2270,True,False,EQ:C0;16:I$11:z332_31_11_=1;,(= z332_31_11_ 0)
+convert_apply_trace,33,1,16,39,0,suggestion,2315,equality,True,False,True,True,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2308,True,False,EQ:C0;16:I$11:z623_31_11_=1;,(= z623_31_11_ 0)
+convert_apply_trace,35,1,17,2,0,suggestion,2245,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2242,True,False,LE:C-2147483647;15:I$10:z255_31_0_=1;,(>= z255_31_0_ 2147483648)
+convert_apply_trace,35,1,17,6,1,suggestion,2422,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2256,True,False,LE:C-2147483647;15:I$10:z445_31_0_=1;,(>= z445_31_0_ 2147483648)
+convert_apply_trace,35,1,17,37,2,suggestion,2566,equality,True,False,True,True,True,False,False,False,False,True,False,False,False,False,False,partial_unknown,internal_assignment_to_M_leaf,internal_assignment_to_M_leaf,2376,True,False,EQ:C0;16:I$11:z448_31_11_=1;,(= z448_31_11_ 0)
+convert_apply_trace,35,1,17,46,3,suggestion,2573,equality,True,False,True,True,True,False,False,False,False,True,False,False,False,False,False,partial_unknown,internal_assignment_to_M_leaf,internal_assignment_to_M_leaf,2388,True,False,EQ:C0;16:I$11:z794_31_11_=1;,(= z794_31_11_ 0)
+convert_apply_trace,39,1,19,28,0,suggestion,2266,equality,True,False,True,True,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2259,True,False,EQ:C0;16:I$11:z487_31_11_=1;,(= z487_31_11_ 0)
+convert_apply_trace,39,1,19,57,1,suggestion,2401,equality,True,False,True,True,True,False,False,False,False,True,False,False,False,False,False,partial_unknown,internal_assignment_to_M_leaf,internal_assignment_to_M_leaf,2401,False,True,EQ:C0;16:I$11:z448_31_11_=1;,(= z448_31_11_ 0)
+convert_apply_trace,43,1,21,7,0,suggestion,2357,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2133,True,False,LE:C-2147483647;15:I$10:z284_31_0_=1;,(>= z284_31_0_ 2147483648)
+convert_apply_trace,45,1,22,14,0,suggestion,2115,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2109,True,False,LE:C0;15:I$10:z242_31_0_=1;,(>= z242_31_0_ 1)
+convert_apply_trace,45,1,22,52,1,suggestion,2264,equality,True,False,True,True,True,False,False,False,False,True,False,False,False,False,False,partial_unknown,internal_assignment_to_M_leaf,internal_assignment_to_M_leaf,2264,False,True,EQ:C0;16:I$11:z448_31_11_=1;,(= z448_31_11_ 0)
+convert_apply_trace,47,1,23,55,0,suggestion,2184,equality,True,False,True,True,True,False,False,False,False,True,False,False,False,False,False,partial_unknown,internal_assignment_to_M_leaf,internal_assignment_to_M_leaf,2184,False,True,EQ:C0;16:I$11:z794_31_11_=1;,(= z794_31_11_ 0)
+convert_apply_trace,49,1,24,46,0,suggestion,2322,equality,True,False,True,True,True,False,False,False,False,True,False,False,False,False,False,partial_unknown,internal_assignment_to_M_leaf,internal_assignment_to_M_leaf,2322,False,True,EQ:C0;16:I$11:z448_31_11_=1;,(= z448_31_11_ 0)
+convert_apply_trace,55,1,27,41,0,suggestion,2497,equality,True,False,True,True,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2257,True,False,EQ:C0;16:I$11:z754_31_11_=1;,(= z754_31_11_ 0)
+convert_apply_trace,55,1,27,53,1,suggestion,2515,equality,True,False,True,True,True,False,False,False,False,True,False,False,False,False,False,partial_unknown,internal_assignment_to_M_leaf,internal_assignment_to_M_leaf,2277,True,False,EQ:C0;16:I$11:z663_31_11_=1;,(= z663_31_11_ 0)
+convert_apply_trace,57,1,28,60,0,suggestion,2299,equality,False,True,True,True,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2221,True,False,EQ:C0;16:I$11:z663_31_11_=1;,(= z663_31_11_ 0)
+convert_apply_trace,61,1,30,7,0,suggestion,2364,equality,True,False,True,True,True,False,False,False,False,True,False,False,False,False,False,partial_unknown,internal_assignment_to_M_leaf,internal_assignment_to_M_leaf,2125,True,False,EQ:C0;16:I$11:z448_31_11_=1;,(= z448_31_11_ 0)
+convert_apply_trace,61,1,30,42,1,suggestion,2339,theory_atom,True,True,False,False,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,suggested_phase_not_retained,no_truth_break_observed,2261,True,False,LE:C0;16:I$11:z1371_31_0_=1;,(<= z1371_31_0_ 0)
+convert_apply_trace,63,1,31,7,0,suggestion,2236,equality,False,True,True,True,True,False,False,False,False,True,False,False,False,False,False,partial_unknown,internal_assignment_to_M_leaf,internal_assignment_to_M_leaf,2236,False,True,EQ:C0;16:I$11:z448_31_11_=1;,(= z448_31_11_ 0)
+SMT_random_observe_trace,1,14,1,1,0,unmapped,1358,theory_atom,False,,,,,True,True,True,True,True,,True,True,True,True,partial_unknown,no_truth_break_observed,no_truth_break_observed,1350,True,False,LE:C1;9:I$5:xH559=1;,(>= xH559 0)
+SMT_random_observe_trace,1,14,1,2,1,unmapped,215920,theory_atom,False,,,,,True,True,True,True,True,,False,False,False,True,partial_unknown,no_truth_break_observed,no_truth_break_observed,1359,True,False,LE:C-966;9:I$5:xH559=1;,(>= xH559 967)
+SMT_random_observe_trace,1,14,1,3,2,unmapped,216402,gate_or_other,False,,,,,False,False,False,False,True,,False,False,False,True,partial_unknown,no_truth_break_observed,no_truth_break_observed,1374,True,False,EX:15B(27:4B(20:6B(9:I$5:xH5193:N0;))27:4B(20:8B(9:I$5:xH5193:N0;))),(or (not (<= xH519 0)) (not (>= xH519 0)))
+SMT_random_observe_trace,1,14,1,4,3,unmapped,216401,gate_or_other,False,,,,,True,True,True,True,True,,False,False,False,True,partial_unknown,no_truth_break_observed,no_truth_break_observed,1379,True,False,EX:15B(27:4B(20:6B(9:I$5:xH5203:N0;))27:4B(20:8B(9:I$5:xH5203:N0;))49:4B(42:6B(27:10I(9:I$5:xH5199:I$5:xH520)6:N4759;))),(or (not (<= xH520 0)) (not (>= xH520 0)) (not (<= (+ xH519 xH520) 4759)))
+SMT_random_observe_trace,1,14,1,5,4,unmapped,215682,gate_or_other,False,,,,,False,False,False,False,True,,False,False,False,True,partial_unknown,no_truth_break_observed,no_truth_break_observed,1395,True,False,EX:15B(27:4B(20:6B(9:I$5:xH5183:N0;))27:4B(20:8B(9:I$5:xH5183:N0;))),(or (not (<= xH518 0)) (not (>= xH518 0)))
+SMT_random_observe_trace,1,14,1,6,5,unmapped,215966,gate_or_other,False,,,,,False,False,False,False,True,,False,False,False,True,partial_unknown,no_truth_break_observed,no_truth_break_observed,1403,True,False,EX:15B(82:4B(75:8B(60:10I(9:I$5:xH7779:I$5:xH5189:I$5:xH7789:I$5:xH5199:I$5:xH520)6:N1758;))82:4B(75:6B(60:10I(9:I$5:xH7779:I$5:xH5189:I$5:xH7789:I$5:xH5199:I$5:xH520)6:N1758;))93:4B(86:6B(71:10I(9:I$5:xH5179:I$5:xH7779:I$5:xH5189:I$5:xH7789:I$5:xH5199:I$5:xH520)6:N6517;))),"(or (not (>= (+ xH777 xH518 xH778 xH519 xH520) 1758))
+    (not (<= (+ xH777 xH518 xH778 xH519 xH520) 1758))
+    (not (<= (+ xH517 xH777 xH518 xH778 xH519 xH520) 6517)))"
+SMT_random_observe_trace,1,14,1,7,6,unmapped,215672,gate_or_other,False,,,,,True,True,True,True,True,,False,False,False,True,partial_unknown,no_truth_break_observed,no_truth_break_observed,1405,True,False,EX:15B(30:4B(23:6B(9:I$5:xH5176:N4759;))30:4B(23:8B(9:I$5:xH5176:N4759;))93:4B(86:8B(71:10I(9:I$5:xH5179:I$5:xH7779:I$5:xH5189:I$5:xH7789:I$5:xH5199:I$5:xH520)6:N6517;))),"(or (not (<= xH517 4759))
+    (not (>= xH517 4759))
+    (not (>= (+ xH517 xH777 xH518 xH778 xH519 xH520) 6517)))"
+SMT_random_observe_trace,1,14,1,8,7,unmapped,216201,gate_or_other,False,,,,,True,True,True,True,True,,False,False,False,True,partial_unknown,no_truth_break_observed,no_truth_break_observed,1418,True,False,EX:15B(140:4B(132:8B(115:10I(9:I$5:xH5159:I$5:xH7759:I$5:xH5169:I$5:xH7769:I$5:xH5179:I$5:xH7779:I$5:xH5189:I$5:xH7789:I$5:xH5199:I$5:xH520)7:N11381;))30:4B(23:8B(9:I$5:xH5156:N4759;))30:4B(23:6B(9:I$5:xH5156:N4759;))),"(or (not (>= (+ xH515 xH775 xH516 xH776 xH517 xH777 xH518 xH778 xH519 xH520)
+             11381))
+    (not (>= xH515 4759))
+    (not (<= xH515 4759)))"
+SMT_real_observe_trace,1,14,1,1,0,unmapped,33244,gate_or_other,False,,,,True,True,True,True,True,True,True,False,False,False,False,partial_unknown,no_truth_break_observed,no_truth_break_observed,736,True,False,EX:15B(128:4B(120:6B(104:10I(9:I$5:xH2119:I$5:xH4039:I$5:xH2129:I$5:xH2139:I$5:xH4059:I$5:xH2149:I$5:xH2159:I$5:xH4079:I$5:xH216)6:N8500;))116:4B(108:6B(93:10I(9:I$5:xH4039:I$5:xH2129:I$5:xH2139:I$5:xH4059:I$5:xH2149:I$5:xH2159:I$5:xH4079:I$5:xH216)6:N6000;))116:4B(108:8B(93:10I(9:I$5:xH4039:I$5:xH2129:I$5:xH2139:I$5:xH4059:I$5:xH2149:I$5:xH2159:I$5:xH4079:I$5:xH216)6:N6000;))),"(or (not (<= (+ xH211 xH403 xH212 xH213 xH405 xH214 xH215 xH407 xH216) 8500))
+    (not (<= (+ xH403 xH212 xH213 xH405 xH214 xH215 xH407 xH216) 6000))
+    (not (>= (+ xH403 xH212 xH213 xH405 xH214 xH215 xH407 xH216) 6000)))"
+SMT_real_observe_trace,1,14,1,2,1,unmapped,33490,gate_or_other,False,,,,True,True,True,True,True,True,True,False,False,False,False,partial_unknown,no_truth_break_observed,no_truth_break_observed,740,True,False,EX:15B(60:4B(53:8B(38:10I(9:I$5:xH3839:I$5:xH5759:I$5:xH384)6:N3250;))30:4B(23:6B(9:I$5:xH3836:N2500;))30:4B(23:8B(9:I$5:xH3836:N2500;))),"(or (not (>= (+ xH383 xH575 xH384) 3250))
+    (not (<= xH383 2500))
+    (not (>= xH383 2500)))"
+SMT_real_observe_trace,1,14,1,3,2,unmapped,33745,gate_or_other,False,,,,True,True,True,True,True,True,True,False,False,False,False,partial_unknown,no_truth_break_observed,no_truth_break_observed,745,True,False,EX:15B(60:4B(53:6B(38:10I(9:I$5:xH3839:I$5:xH5759:I$5:xH384)6:N3250;))48:4B(41:6B(27:10I(9:I$5:xH5759:I$5:xH384)5:N750;))48:4B(41:8B(27:10I(9:I$5:xH5759:I$5:xH384)5:N750;))),"(or (not (<= (+ xH383 xH575 xH384) 3250))
+    (not (<= (+ xH575 xH384) 750))
+    (not (>= (+ xH575 xH384) 750)))"
+SMT_real_observe_trace,1,14,1,4,3,unmapped,33753,gate_or_other,False,,,,False,False,False,False,False,True,True,False,False,False,False,partial_unknown,no_truth_break_observed,no_truth_break_observed,748,True,False,EX:15B(82:4B(75:8B(60:10I(9:I$5:xH3829:I$5:xH5749:I$5:xH3839:I$5:xH5759:I$5:xH384)6:N4000;))30:4B(23:6B(9:I$5:xH3826:N2500;))30:4B(23:8B(9:I$5:xH3826:N2500;))),"(or (not (>= (+ xH382 xH574 xH383 xH575 xH384) 4000))
+    (not (<= xH382 2500))
+    (not (>= xH382 2500)))"
+SMT_real_observe_trace,1,14,1,5,4,unmapped,33739,gate_or_other,False,,,,True,True,True,True,True,True,True,False,False,False,False,partial_unknown,no_truth_break_observed,no_truth_break_observed,753,True,False,EX:15B(82:4B(75:6B(60:10I(9:I$5:xH3829:I$5:xH5749:I$5:xH3839:I$5:xH5759:I$5:xH384)6:N4000;))71:4B(64:6B(49:10I(9:I$5:xH5749:I$5:xH3839:I$5:xH5759:I$5:xH384)6:N1500;))71:4B(64:8B(49:10I(9:I$5:xH5749:I$5:xH3839:I$5:xH5759:I$5:xH384)6:N1500;))),"(or (not (<= (+ xH382 xH574 xH383 xH575 xH384) 4000))
+    (not (<= (+ xH574 xH383 xH575 xH384) 1500))
+    (not (>= (+ xH574 xH383 xH575 xH384) 1500)))"
+SMT_real_observe_trace,1,14,1,6,5,unmapped,766,theory_atom,False,,,,True,True,True,True,True,True,True,True,True,True,False,partial_unknown,no_truth_break_observed,no_truth_break_observed,762,True,False,LE:C1;9:I$5:xH574=1;,(>= xH574 0)
+SMT_real_observe_trace,1,14,1,7,6,unmapped,33694,theory_atom,False,,,,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,no_truth_break_observed,no_truth_break_observed,767,True,False,LE:C-749;9:I$5:xH574=1;,(>= xH574 750)
+SMT_real_observe_trace,1,14,1,8,7,unmapped,33738,theory_atom,False,,,,False,False,False,False,False,True,True,True,True,True,False,partial_unknown,no_truth_break_observed,no_truth_break_observed,770,True,False,LE:C-1500;9:I$5:xH383=1;9:I$5:xH384=1;9:I$5:xH574=1;9:I$5:xH575=1;,(<= (+ xH574 xH383 xH575 xH384) 1500)

@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "errors": [],
+  "base_commit": "2f839861acf0a8cec78e05dac256b98b0dc30099",
+  "implementation_commit": "4712d0e71ab0cd14d3972787d06eeeb8d3253902",
+  "sessions": [
+    {
+      "id": "convert_observe_trace",
+      "cdcl_queries": 32,
+      "total_queries": 63,
+      "formal_count": 63,
+      "status": "cdcl_query_limit",
+      "elapsed": 3.808881033,
+      "process_seconds": 3.8787576539980364
+    },
+    {
+      "id": "convert_apply_trace",
+      "cdcl_queries": 32,
+      "total_queries": 63,
+      "formal_count": 63,
+      "status": "cdcl_query_limit",
+      "elapsed": 4.195789159,
+      "process_seconds": 4.27881988000081
+    },
+    {
+      "id": "SMT_random_observe_trace",
+      "cdcl_queries": 8,
+      "total_queries": 15,
+      "formal_count": 8,
+      "status": "cdcl_query_limit",
+      "elapsed": 24.460827285,
+      "process_seconds": 24.526537436999206
+    },
+    {
+      "id": "SMT_random_apply_trace",
+      "cdcl_queries": 8,
+      "total_queries": 15,
+      "formal_count": 8,
+      "status": "cdcl_query_limit",
+      "elapsed": 22.811983655,
+      "process_seconds": 22.868460460998904
+    },
+    {
+      "id": "SMT_real_observe_trace",
+      "cdcl_queries": 8,
+      "total_queries": 15,
+      "formal_count": 8,
+      "status": "cdcl_query_limit",
+      "elapsed": 4.441914036,
+      "process_seconds": 4.529180241999711
+    },
+    {
+      "id": "SMT_real_apply_trace",
+      "cdcl_queries": 8,
+      "total_queries": 15,
+      "formal_count": 8,
+      "status": "cdcl_query_limit",
+      "elapsed": 4.66296283,
+      "process_seconds": 4.728793302998383
+    }
+  ],
+  "D1_sessions": 6,
+  "D2_calls": 72,
+  "mapping_calls": 2,
+  "D3_runs": 24,
+  "D3_same_state": false,
+  "seed": 0,
+  "HighDiv_executions": 0,
+  "new_900_second_experiments": 0,
+  "B_enabled": false,
+  "baseline_unchanged": {
+    "input_hashes_checked": 8,
+    "upstream_source_hashes_checked": 2935,
+    "passed": true,
+    "old_file_metadata_checked": 3723,
+    "protected_hashes_checked": 5,
+    "D0_consumed_old_hashes_checked": 28,
+    "changed": [],
+    "historical_baseline_executions": 0
+  },
+  "witness_solver_models_counted_as_samples": false,
+  "independent_methods": [
+    "unchanged official visitor callbacks",
+    "exact full integer substitution",
+    "separately parsed raw atom with declaration identity checks",
+    "per-token propagation history",
+    "actual provider and converter chain checks",
+    "offline oracle witness validation"
+  ],
+  "artifact_count": 2125
+}

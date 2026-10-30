@@ -1,0 +1,859 @@
+{
+  "historical": {
+    "actions": 916,
+    "overrides": 534,
+    "unique_legacy_keys": 43,
+    "actual_unique_atoms": "unknown; historical raw AST missing",
+    "target_records": 941,
+    "unique_targets": 53,
+    "queries_with_actions": 709,
+    "records_unreached": 621
+  },
+  "D1_sessions": [
+    {
+      "id": "convert_observe_trace",
+      "A_disabled": false,
+      "A_disabled_reason": "",
+      "A_exposure": 0.0,
+      "cdcl_queries": 32,
+      "cdcl_query_limit": 32,
+      "coverage": 38193,
+      "elapsed": 3.808881033,
+      "formal_count": 63,
+      "guidance_cost": 0.1892611029999997,
+      "last_online_version": 63,
+      "queries": 63,
+      "raw_count": 63,
+      "sample_limit": null,
+      "status": "cdcl_query_limit",
+      "total": 179302,
+      "wall_limit": 60.0,
+      "official_covered": 38193,
+      "official_total": 179302,
+      "formal_legal": true,
+      "process_seconds": 3.8787576539980364,
+      "backend_calls": 32,
+      "metadata_received": 32,
+      "funnel": {
+        "has_direct_mapping": 697,
+        "native_ordinary_seen": 3139,
+        "no_active_demand": 408,
+        "outside_decision_window": 1235,
+        "unmapped_reason_unknown": 1207,
+        "within_decision_window": 1904,
+        "different_phase_suggestions": 121,
+        "has_current_demand": 289,
+        "quota_rejected": 165,
+        "same_phase_suggestions": 3
+      },
+      "cost_categories_cumulative": {
+        "binding_seconds": 0.0008916420000000002,
+        "cost_ledger_log_seconds": 0.006175984999999999,
+        "diagnostic_serialization_seconds": 0.015703034,
+        "diagnostic_snapshot_seconds": 0.0,
+        "exposure_guard_seconds": 0.0,
+        "hot_callback_seconds": 0.012034181000000003,
+        "index_build_seconds": 0.033743711,
+        "index_update_seconds": 0.0016399299999999995,
+        "observer_initialization_seconds": 0.013858157999999995,
+        "observer_seconds": 0.09206392499999998,
+        "outcome_evaluation_seconds": 0.0011174359999999996,
+        "outcome_log_seconds": 0.005147756000000001,
+        "request_log_seconds": 0.004312887999999999,
+        "request_register_seconds": 0.00033849100000000006,
+        "route_metadata_seconds": 0.00017409599999999997
+      },
+      "A_metadata_registration_seconds": 0.0014042290000000001,
+      "semantic_overflows": 0,
+      "raw_model_layers": {
+        "M_leaf": 32,
+        "M_outer": 32
+      }
+    },
+    {
+      "id": "convert_apply_trace",
+      "A_disabled": false,
+      "A_disabled_reason": "",
+      "A_exposure": 0.7168782260000008,
+      "cdcl_queries": 32,
+      "cdcl_query_limit": 32,
+      "coverage": 38318,
+      "elapsed": 4.195789159,
+      "formal_count": 63,
+      "guidance_cost": 0.20932261999999993,
+      "last_online_version": 63,
+      "queries": 63,
+      "raw_count": 63,
+      "sample_limit": null,
+      "status": "cdcl_query_limit",
+      "total": 179302,
+      "wall_limit": 60.0,
+      "official_covered": 38318,
+      "official_total": 179302,
+      "formal_legal": true,
+      "process_seconds": 4.27881988000081,
+      "backend_calls": 32,
+      "metadata_received": 32,
+      "funnel": {
+        "has_direct_mapping": 592,
+        "native_ordinary_seen": 8699,
+        "no_active_demand": 495,
+        "outside_decision_window": 6651,
+        "unmapped_reason_unknown": 1456,
+        "within_decision_window": 2048,
+        "different_phase_suggestions": 50,
+        "has_current_demand": 97,
+        "phase_overrides": 50,
+        "quota_rejected": 41,
+        "same_phase_suggestions": 6
+      },
+      "cost_categories_cumulative": {
+        "binding_seconds": 0.0008695749999999998,
+        "cost_ledger_log_seconds": 0.005953109000000001,
+        "diagnostic_serialization_seconds": 0.040814458,
+        "diagnostic_snapshot_seconds": 0.0,
+        "exposure_guard_seconds": 0.001474624,
+        "hot_callback_seconds": 0.012884807999999998,
+        "index_build_seconds": 0.03200196,
+        "index_update_seconds": 0.0016002000000000004,
+        "observer_initialization_seconds": 0.013186482,
+        "observer_seconds": 0.09037282600000002,
+        "outcome_evaluation_seconds": 0.000584925,
+        "outcome_log_seconds": 0.0033837569999999994,
+        "request_log_seconds": 0.004088728999999999,
+        "request_register_seconds": 0.0003054720000000001,
+        "route_metadata_seconds": 0.000157277
+      },
+      "A_metadata_registration_seconds": 0.0013323239999999997,
+      "semantic_overflows": 0,
+      "raw_model_layers": {
+        "M_leaf": 32,
+        "M_outer": 32
+      }
+    },
+    {
+      "id": "SMT_random_observe_trace",
+      "A_disabled": false,
+      "A_disabled_reason": "",
+      "A_exposure": 0.0,
+      "cdcl_queries": 8,
+      "cdcl_query_limit": 8,
+      "coverage": 11166,
+      "elapsed": 24.460827285,
+      "formal_count": 8,
+      "guidance_cost": 0.12686478699999967,
+      "last_online_version": 8,
+      "queries": 15,
+      "raw_count": 8,
+      "sample_limit": null,
+      "status": "cdcl_query_limit",
+      "total": 104639,
+      "wall_limit": 60.0,
+      "official_covered": 11166,
+      "official_total": 104639,
+      "formal_legal": true,
+      "process_seconds": 24.526537436999206,
+      "backend_calls": 8,
+      "metadata_received": 8,
+      "funnel": {
+        "native_ordinary_seen": 179538,
+        "outside_decision_window": 179026,
+        "unmapped_reason_unknown": 512,
+        "within_decision_window": 512
+      },
+      "cost_categories_cumulative": {
+        "binding_seconds": 0.000464648,
+        "cost_ledger_log_seconds": 0.00123304,
+        "diagnostic_serialization_seconds": 0.009266897999999999,
+        "diagnostic_snapshot_seconds": 0.0,
+        "exposure_guard_seconds": 0.0,
+        "hot_callback_seconds": 0.06725869299999966,
+        "index_build_seconds": 0.023670985,
+        "index_update_seconds": 0.0009589689999999999,
+        "observer_initialization_seconds": 0.009970868,
+        "observer_seconds": 0.0057478320000000005,
+        "outcome_evaluation_seconds": 9.386000000000001e-06,
+        "outcome_log_seconds": 0.005755823,
+        "request_log_seconds": 0.0008463950000000001,
+        "request_register_seconds": 9.944200000000001e-05,
+        "route_metadata_seconds": 0.000587575
+      },
+      "A_metadata_registration_seconds": 0.001151665,
+      "semantic_overflows": 1,
+      "raw_model_layers": {
+        "M_leaf": 8,
+        "M_outer": 8
+      }
+    },
+    {
+      "id": "SMT_random_apply_trace",
+      "A_disabled": false,
+      "A_disabled_reason": "",
+      "A_exposure": 0.0,
+      "cdcl_queries": 8,
+      "cdcl_query_limit": 8,
+      "coverage": 11259,
+      "elapsed": 22.811983655,
+      "formal_count": 8,
+      "guidance_cost": 0.11980347099999959,
+      "last_online_version": 8,
+      "queries": 15,
+      "raw_count": 8,
+      "sample_limit": null,
+      "status": "cdcl_query_limit",
+      "total": 104639,
+      "wall_limit": 60.0,
+      "official_covered": 11259,
+      "official_total": 104639,
+      "formal_legal": true,
+      "process_seconds": 22.868460460998904,
+      "backend_calls": 8,
+      "metadata_received": 8,
+      "funnel": {
+        "native_ordinary_seen": 179062,
+        "outside_decision_window": 178550,
+        "unmapped_reason_unknown": 512,
+        "within_decision_window": 512
+      },
+      "cost_categories_cumulative": {
+        "binding_seconds": 0.00044641299999999994,
+        "cost_ledger_log_seconds": 0.001182752,
+        "diagnostic_serialization_seconds": 0.008837696,
+        "diagnostic_snapshot_seconds": 0.0,
+        "exposure_guard_seconds": 0.0,
+        "hot_callback_seconds": 0.06473239099999964,
+        "index_build_seconds": 0.023773221,
+        "index_update_seconds": 0.001046524,
+        "observer_initialization_seconds": 0.010849841000000002,
+        "observer_seconds": 0.005641694,
+        "outcome_evaluation_seconds": 9.210999999999999e-06,
+        "outcome_log_seconds": 0.00062771,
+        "request_log_seconds": 0.000774089,
+        "request_register_seconds": 9.434e-05,
+        "route_metadata_seconds": 0.000566972
+      },
+      "A_metadata_registration_seconds": 0.001107725,
+      "semantic_overflows": 0,
+      "raw_model_layers": {
+        "M_leaf": 8,
+        "M_outer": 8
+      }
+    },
+    {
+      "id": "SMT_real_observe_trace",
+      "A_disabled": false,
+      "A_disabled_reason": "",
+      "A_exposure": 0.0,
+      "cdcl_queries": 8,
+      "cdcl_query_limit": 8,
+      "coverage": 5667,
+      "elapsed": 4.441914036,
+      "formal_count": 8,
+      "guidance_cost": 0.06334333100000006,
+      "last_online_version": 8,
+      "queries": 15,
+      "raw_count": 8,
+      "sample_limit": null,
+      "status": "cdcl_query_limit",
+      "total": 66061,
+      "wall_limit": 60.0,
+      "official_covered": 5667,
+      "official_total": 66061,
+      "formal_legal": true,
+      "process_seconds": 4.529180241999711,
+      "backend_calls": 8,
+      "metadata_received": 8,
+      "funnel": {
+        "native_ordinary_seen": 35777,
+        "outside_decision_window": 35265,
+        "unmapped_reason_unknown": 512,
+        "within_decision_window": 512
+      },
+      "cost_categories_cumulative": {
+        "binding_seconds": 0.00038630800000000003,
+        "cost_ledger_log_seconds": 0.0013456249999999998,
+        "diagnostic_serialization_seconds": 0.004672503,
+        "diagnostic_snapshot_seconds": 0.0,
+        "exposure_guard_seconds": 0.0,
+        "hot_callback_seconds": 0.013967202000000036,
+        "index_build_seconds": 0.020072785,
+        "index_update_seconds": 0.0006278389999999999,
+        "observer_initialization_seconds": 0.009928914,
+        "observer_seconds": 0.004295839,
+        "outcome_evaluation_seconds": 8.813e-06,
+        "outcome_log_seconds": 0.005730668,
+        "request_log_seconds": 0.000879237,
+        "request_register_seconds": 9.0042e-05,
+        "route_metadata_seconds": 0.0005348
+      },
+      "A_metadata_registration_seconds": 0.0010111500000000002,
+      "semantic_overflows": 0,
+      "raw_model_layers": {
+        "M_leaf": 8,
+        "M_outer": 8
+      }
+    },
+    {
+      "id": "SMT_real_apply_trace",
+      "A_disabled": false,
+      "A_disabled_reason": "",
+      "A_exposure": 0.0,
+      "cdcl_queries": 8,
+      "cdcl_query_limit": 8,
+      "coverage": 5614,
+      "elapsed": 4.66296283,
+      "formal_count": 8,
+      "guidance_cost": 0.05652308,
+      "last_online_version": 8,
+      "queries": 15,
+      "raw_count": 8,
+      "sample_limit": null,
+      "status": "cdcl_query_limit",
+      "total": 66061,
+      "wall_limit": 60.0,
+      "official_covered": 5614,
+      "official_total": 66061,
+      "formal_legal": true,
+      "process_seconds": 4.728793302998383,
+      "backend_calls": 8,
+      "metadata_received": 8,
+      "funnel": {
+        "native_ordinary_seen": 34813,
+        "outside_decision_window": 34301,
+        "unmapped_reason_unknown": 512,
+        "within_decision_window": 512
+      },
+      "cost_categories_cumulative": {
+        "binding_seconds": 0.0003588950000000001,
+        "cost_ledger_log_seconds": 0.00110291,
+        "diagnostic_serialization_seconds": 0.003894204000000001,
+        "diagnostic_snapshot_seconds": 0.0,
+        "exposure_guard_seconds": 0.0,
+        "hot_callback_seconds": 0.013587901999999997,
+        "index_build_seconds": 0.016897568,
+        "index_update_seconds": 0.0005621259999999999,
+        "observer_initialization_seconds": 0.008260799999999999,
+        "observer_seconds": 0.003987916,
+        "outcome_evaluation_seconds": 9.033e-06,
+        "outcome_log_seconds": 0.005675592,
+        "request_log_seconds": 0.0008891280000000001,
+        "request_register_seconds": 9.5484e-05,
+        "route_metadata_seconds": 0.0005032050000000001
+      },
+      "A_metadata_registration_seconds": 0.0009575840000000001,
+      "semantic_overflows": 0,
+      "raw_model_layers": {
+        "M_leaf": 8,
+        "M_outer": 8
+      }
+    }
+  ],
+  "D1_chain": {
+    "passed": true,
+    "errors": [],
+    "runs": [
+      {
+        "run_id": "convert_observe_trace",
+        "counts": {
+          "snapshots": 32,
+          "original_mapping_unknown": 8,
+          "observe_native_phase_not_suggested_phase": 121,
+          "actions": 124,
+          "overrides": 0,
+          "target_records": 155,
+          "value_hit": 0,
+          "metric_reached": 152,
+          "observation_hit": 0,
+          "new_covered": 0,
+          "suggested_phase_not_retained": 3
+        },
+        "unique_atoms": 32,
+        "unique_targets": 40,
+        "action_queries": 31,
+        "formal_models": 63
+      },
+      {
+        "run_id": "convert_apply_trace",
+        "counts": {
+          "snapshots": 32,
+          "suggested_phase_not_retained": 39,
+          "actions": 56,
+          "overrides": 50,
+          "target_records": 64,
+          "value_hit": 0,
+          "metric_reached": 50,
+          "observation_hit": 0,
+          "new_covered": 0,
+          "internal_assignment_to_M_leaf": 17
+        },
+        "unique_atoms": 31,
+        "unique_targets": 36,
+        "action_queries": 25,
+        "formal_models": 63
+      },
+      {
+        "run_id": "SMT_random_observe_trace",
+        "counts": {
+          "snapshots": 8,
+          "UNKNOWN_EVENT_OVERFLOW": 8
+        },
+        "unique_atoms": 0,
+        "unique_targets": 0,
+        "action_queries": 0,
+        "formal_models": 8
+      },
+      {
+        "run_id": "SMT_random_apply_trace",
+        "counts": {
+          "snapshots": 8
+        },
+        "unique_atoms": 0,
+        "unique_targets": 0,
+        "action_queries": 0,
+        "formal_models": 8
+      },
+      {
+        "run_id": "SMT_real_observe_trace",
+        "counts": {
+          "snapshots": 8,
+          "no_truth_break_observed": 8
+        },
+        "unique_atoms": 0,
+        "unique_targets": 0,
+        "action_queries": 0,
+        "formal_models": 8
+      },
+      {
+        "run_id": "SMT_real_apply_trace",
+        "counts": {
+          "snapshots": 8
+        },
+        "unique_atoms": 0,
+        "unique_targets": 0,
+        "action_queries": 0,
+        "formal_models": 8
+      }
+    ],
+    "conditional_checkpoints": 6,
+    "oracle_calls": 0,
+    "old_cases_not_rewritten": true
+  },
+  "apply_initial_tokens_withdrawn": 50,
+  "apply_overflow_events": 0,
+  "apply_internal_to_leaf_without_direct": 17,
+  "D2_queries": {
+    "Q1": {
+      "unsat": 5,
+      "sat": 7
+    },
+    "Q2": {
+      "unsat": 8,
+      "sat": 4
+    },
+    "Q3": {
+      "unsat": 12
+    },
+    "Q4": {
+      "unsat": 12
+    },
+    "Q5": {
+      "unsat": 12
+    },
+    "Q6": {
+      "unsat": 12
+    }
+  },
+  "D2_total_check_seconds": 1.2957342739937303,
+  "D2_max_check_seconds": 0.06815074699989054,
+  "D3": {
+    "passed": true,
+    "errors": [],
+    "real_runs": 24,
+    "checkpoint_seen": 17,
+    "not_reproduced": 4,
+    "checkpoint_unknown_missing_boundary": 3,
+    "actual_phase_changes": 9,
+    "local_activations": 7,
+    "value_hits": 0,
+    "observation_hits": 0,
+    "max_deadline_overrun": 0.008629901996755507,
+    "counter_scope": "actual changes and activation counts are lower bounds over cells with a completed boundary record",
+    "same_state": false,
+    "results": {
+      "sat": 15,
+      "unknown": 9
+    }
+  },
+  "D3_groups": [
+    {
+      "checkpoint_id": "checkpoint_00",
+      "historical_query": 5,
+      "historical_decision": 25,
+      "cells": {
+        "N0": {
+          "result": "sat",
+          "checkpoint_status": "observed",
+          "process_seconds": "2.8738314019974496",
+          "final_internal_assignment": "False",
+          "M_leaf": "False",
+          "actual_atom_truth": "False",
+          "value_hits": "0",
+          "observation_hits": "0",
+          "final_token_direct_transmission": "True",
+          "initial_token_withdrawn": "True",
+          "comparison_limit": "historical state not cloned"
+        },
+        "A0": {
+          "result": "sat",
+          "checkpoint_status": "observed",
+          "process_seconds": "4.326747478997277",
+          "final_internal_assignment": "True",
+          "M_leaf": "False",
+          "actual_atom_truth": "False",
+          "value_hits": "0",
+          "observation_hits": "0",
+          "final_token_direct_transmission": "False",
+          "initial_token_withdrawn": "True",
+          "comparison_limit": "historical state not cloned"
+        },
+        "N1": {
+          "result": "sat",
+          "checkpoint_status": "observed",
+          "process_seconds": "1.8706574339994404",
+          "final_internal_assignment": "False",
+          "M_leaf": "False",
+          "actual_atom_truth": "False",
+          "value_hits": "0",
+          "observation_hits": "0",
+          "final_token_direct_transmission": "True",
+          "initial_token_withdrawn": "True",
+          "comparison_limit": "historical state not cloned"
+        },
+        "A1": {
+          "result": "sat",
+          "checkpoint_status": "observed",
+          "process_seconds": "2.271601248998195",
+          "final_internal_assignment": "False",
+          "M_leaf": "False",
+          "actual_atom_truth": "False",
+          "value_hits": "0",
+          "observation_hits": "0",
+          "final_token_direct_transmission": "True",
+          "initial_token_withdrawn": "True",
+          "comparison_limit": "historical state not cloned"
+        }
+      }
+    },
+    {
+      "checkpoint_id": "checkpoint_01",
+      "historical_query": 11,
+      "historical_decision": 64,
+      "cells": {
+        "N0": {
+          "result": "sat",
+          "checkpoint_status": "observed",
+          "process_seconds": "4.4769992510009615",
+          "final_internal_assignment": "False",
+          "M_leaf": "False",
+          "actual_atom_truth": "False",
+          "value_hits": "0",
+          "observation_hits": "0",
+          "final_token_direct_transmission": "False",
+          "initial_token_withdrawn": "True",
+          "comparison_limit": "historical state not cloned"
+        },
+        "A0": {
+          "result": "sat",
+          "checkpoint_status": "observed",
+          "process_seconds": "3.5746849089991883",
+          "final_internal_assignment": "True",
+          "M_leaf": "False",
+          "actual_atom_truth": "False",
+          "value_hits": "0",
+          "observation_hits": "0",
+          "final_token_direct_transmission": "False",
+          "initial_token_withdrawn": "True",
+          "comparison_limit": "historical state not cloned"
+        },
+        "N1": {
+          "result": "unknown",
+          "checkpoint_status": "unknown_missing_boundary_record",
+          "process_seconds": "5.0080731859998195",
+          "final_internal_assignment": "",
+          "M_leaf": "",
+          "actual_atom_truth": "",
+          "value_hits": "",
+          "observation_hits": "",
+          "final_token_direct_transmission": "",
+          "initial_token_withdrawn": "",
+          "comparison_limit": "historical state not cloned"
+        },
+        "A1": {
+          "result": "unknown",
+          "checkpoint_status": "unknown_missing_boundary_record",
+          "process_seconds": "5.007892664998508",
+          "final_internal_assignment": "",
+          "M_leaf": "",
+          "actual_atom_truth": "",
+          "value_hits": "",
+          "observation_hits": "",
+          "final_token_direct_transmission": "",
+          "initial_token_withdrawn": "",
+          "comparison_limit": "historical state not cloned"
+        }
+      }
+    },
+    {
+      "checkpoint_id": "checkpoint_02",
+      "historical_query": 13,
+      "historical_decision": 27,
+      "cells": {
+        "N0": {
+          "result": "sat",
+          "checkpoint_status": "not_encountered_in_completed_run",
+          "process_seconds": "2.622013189000427",
+          "final_internal_assignment": "",
+          "M_leaf": "",
+          "actual_atom_truth": "False",
+          "value_hits": "0",
+          "observation_hits": "0",
+          "final_token_direct_transmission": "",
+          "initial_token_withdrawn": "",
+          "comparison_limit": "historical state not cloned"
+        },
+        "A0": {
+          "result": "sat",
+          "checkpoint_status": "not_encountered_in_completed_run",
+          "process_seconds": "1.8704942620024667",
+          "final_internal_assignment": "",
+          "M_leaf": "",
+          "actual_atom_truth": "False",
+          "value_hits": "0",
+          "observation_hits": "0",
+          "final_token_direct_transmission": "",
+          "initial_token_withdrawn": "",
+          "comparison_limit": "historical state not cloned"
+        },
+        "N1": {
+          "result": "sat",
+          "checkpoint_status": "not_encountered_in_completed_run",
+          "process_seconds": "1.7704883459991834",
+          "final_internal_assignment": "",
+          "M_leaf": "",
+          "actual_atom_truth": "False",
+          "value_hits": "0",
+          "observation_hits": "0",
+          "final_token_direct_transmission": "",
+          "initial_token_withdrawn": "",
+          "comparison_limit": "historical state not cloned"
+        },
+        "A1": {
+          "result": "sat",
+          "checkpoint_status": "not_encountered_in_completed_run",
+          "process_seconds": "1.8223391400024411",
+          "final_internal_assignment": "",
+          "M_leaf": "",
+          "actual_atom_truth": "False",
+          "value_hits": "0",
+          "observation_hits": "0",
+          "final_token_direct_transmission": "",
+          "initial_token_withdrawn": "",
+          "comparison_limit": "historical state not cloned"
+        }
+      }
+    },
+    {
+      "checkpoint_id": "checkpoint_03",
+      "historical_query": 19,
+      "historical_decision": 31,
+      "cells": {
+        "N0": {
+          "result": "unknown",
+          "checkpoint_status": "observed",
+          "process_seconds": "5.0086299019967555",
+          "final_internal_assignment": "False",
+          "M_leaf": "",
+          "actual_atom_truth": "",
+          "value_hits": "",
+          "observation_hits": "",
+          "final_token_direct_transmission": "True",
+          "initial_token_withdrawn": "True",
+          "comparison_limit": "historical state not cloned"
+        },
+        "A0": {
+          "result": "sat",
+          "checkpoint_status": "observed",
+          "process_seconds": "3.7301188450001064",
+          "final_internal_assignment": "True",
+          "M_leaf": "False",
+          "actual_atom_truth": "False",
+          "value_hits": "0",
+          "observation_hits": "0",
+          "final_token_direct_transmission": "False",
+          "initial_token_withdrawn": "True",
+          "comparison_limit": "historical state not cloned"
+        },
+        "N1": {
+          "result": "unknown",
+          "checkpoint_status": "observed",
+          "process_seconds": "5.003110729001492",
+          "final_internal_assignment": "",
+          "M_leaf": "",
+          "actual_atom_truth": "",
+          "value_hits": "",
+          "observation_hits": "",
+          "final_token_direct_transmission": "True",
+          "initial_token_withdrawn": "True",
+          "comparison_limit": "historical state not cloned"
+        },
+        "A1": {
+          "result": "sat",
+          "checkpoint_status": "observed",
+          "process_seconds": "4.3772945040000195",
+          "final_internal_assignment": "False",
+          "M_leaf": "False",
+          "actual_atom_truth": "False",
+          "value_hits": "0",
+          "observation_hits": "0",
+          "final_token_direct_transmission": "True",
+          "initial_token_withdrawn": "True",
+          "comparison_limit": "historical state not cloned"
+        }
+      }
+    },
+    {
+      "checkpoint_id": "checkpoint_04",
+      "historical_query": 23,
+      "historical_decision": 44,
+      "cells": {
+        "N0": {
+          "result": "sat",
+          "checkpoint_status": "observed",
+          "process_seconds": "4.327137580999988",
+          "final_internal_assignment": "False",
+          "M_leaf": "False",
+          "actual_atom_truth": "False",
+          "value_hits": "0",
+          "observation_hits": "0",
+          "final_token_direct_transmission": "True",
+          "initial_token_withdrawn": "True",
+          "comparison_limit": "historical state not cloned"
+        },
+        "A0": {
+          "result": "sat",
+          "checkpoint_status": "observed",
+          "process_seconds": "2.42276714000036",
+          "final_internal_assignment": "True",
+          "M_leaf": "False",
+          "actual_atom_truth": "False",
+          "value_hits": "0",
+          "observation_hits": "0",
+          "final_token_direct_transmission": "False",
+          "initial_token_withdrawn": "True",
+          "comparison_limit": "historical state not cloned"
+        },
+        "N1": {
+          "result": "sat",
+          "checkpoint_status": "observed",
+          "process_seconds": "3.6752711340013775",
+          "final_internal_assignment": "False",
+          "M_leaf": "False",
+          "actual_atom_truth": "False",
+          "value_hits": "0",
+          "observation_hits": "0",
+          "final_token_direct_transmission": "True",
+          "initial_token_withdrawn": "True",
+          "comparison_limit": "historical state not cloned"
+        },
+        "A1": {
+          "result": "unknown",
+          "checkpoint_status": "observed",
+          "process_seconds": "5.002790192000248",
+          "final_internal_assignment": "False",
+          "M_leaf": "",
+          "actual_atom_truth": "",
+          "value_hits": "",
+          "observation_hits": "",
+          "final_token_direct_transmission": "True",
+          "initial_token_withdrawn": "True",
+          "comparison_limit": "historical state not cloned"
+        }
+      }
+    },
+    {
+      "checkpoint_id": "checkpoint_05",
+      "historical_query": 27,
+      "historical_decision": 52,
+      "cells": {
+        "N0": {
+          "result": "unknown",
+          "checkpoint_status": "observed",
+          "process_seconds": "5.003168750998157",
+          "final_internal_assignment": "False",
+          "M_leaf": "",
+          "actual_atom_truth": "",
+          "value_hits": "",
+          "observation_hits": "",
+          "final_token_direct_transmission": "False",
+          "initial_token_withdrawn": "True",
+          "comparison_limit": "historical state not cloned"
+        },
+        "A0": {
+          "result": "unknown",
+          "checkpoint_status": "observed",
+          "process_seconds": "5.003466049001872",
+          "final_internal_assignment": "True",
+          "M_leaf": "",
+          "actual_atom_truth": "",
+          "value_hits": "",
+          "observation_hits": "",
+          "final_token_direct_transmission": "False",
+          "initial_token_withdrawn": "True",
+          "comparison_limit": "historical state not cloned"
+        },
+        "N1": {
+          "result": "unknown",
+          "checkpoint_status": "unknown_missing_boundary_record",
+          "process_seconds": "5.008252330000687",
+          "final_internal_assignment": "",
+          "M_leaf": "",
+          "actual_atom_truth": "",
+          "value_hits": "",
+          "observation_hits": "",
+          "final_token_direct_transmission": "",
+          "initial_token_withdrawn": "",
+          "comparison_limit": "historical state not cloned"
+        },
+        "A1": {
+          "result": "unknown",
+          "checkpoint_status": "observed",
+          "process_seconds": "5.006814485001087",
+          "final_internal_assignment": "False",
+          "M_leaf": "",
+          "actual_atom_truth": "",
+          "value_hits": "",
+          "observation_hits": "",
+          "final_token_direct_transmission": "True",
+          "initial_token_withdrawn": "True",
+          "comparison_limit": "historical state not cloned"
+        }
+      }
+    }
+  ],
+  "D3_total_parent_seconds": 91.0646441539975,
+  "mapping": {
+    "representatives": 16,
+    "solver_calls": 2,
+    "initial_pass_calls": 0,
+    "maximum_calls": 16,
+    "classes": {
+      "derived_arithmetic_bound_origin_not_proved": 5,
+      "Boolean_gate_after_actual_preprocessing": 2,
+      "defined_Boolean_gate_without_proved_original_correspondence": 9
+    },
+    "native_gates": 11,
+    "native_arithmetic_atoms": 5,
+    "selection_changed": false,
+    "all_solver_calls_preserved": true
+  }
+}

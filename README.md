@@ -1,3 +1,18 @@
+# Guided Sampler，第三轮有限语义诊断
+
+本分支 `round3-a-semantic-diagnosis` 从 `2f839861acf0a8cec78e05dac256b98b0dc30099` 建立。
+已完成 6 次短会话、72 次可达性查询、2 次映射核验及 24 次有条件干预；
+Release、ASan/UBSan 和独立审计通过。没有新增 900 秒矩阵、重跑 HighDiv、追加 seed 或启用 B。
+
+[第三轮中文报告](docs/round3_semantic_diagnosis.zh.md)｜[追踪钩子](docs/round3_hook_map.zh.md)｜
+[冻结计划](manifests/round3_semantic_cases.json)｜[原始证据恢复](archives/round3_semantics/RESTORE.md)
+
+D1 实际改相位 50 次，指定目标仍零命中；12 个冻结见证分别出现全局值不可行、
+观察不可行和当前固定条件阻塞。D3 的 15 个 SAT 模型也没有目标命中，9 个 Unknown 保留。
+这些有限诊断不支持优于完整 HighDiv 的性能结论。历史阶段说明如下。
+
+---
+
 # Guided Sampler，第二轮 A-only
 
 本分支从 `fc19bd22609295ed405e1ac96bf35d695c42832a` 独立开发。

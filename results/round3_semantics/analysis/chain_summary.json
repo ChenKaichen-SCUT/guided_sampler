@@ -45,7 +45,7 @@
       "run_id": "SMT_random_observe_trace",
       "counts": {
         "snapshots": 8,
-        "no_truth_break_observed": 8
+        "UNKNOWN_EVENT_OVERFLOW": 8
       },
       "unique_atoms": 0,
       "unique_targets": 0,

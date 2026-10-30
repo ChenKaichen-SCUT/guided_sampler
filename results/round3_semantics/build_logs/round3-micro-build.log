@@ -1,0 +1,13 @@
++ make -C /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round3_micro/z3/build -j 12
+make: Entering directory '/tmp/guided_sampler_round3_worktrees/micro/z3/build'
+Z3 was successfully built.
+Z3Py scripts can already be executed in the 'build/python' directory.
+Z3Py scripts stored in arbitrary directories can be executed if the 'build/python' directory is added to the PYTHONPATH environment variable and the 'build' directory is added to the LD_LIBRARY_PATH environment variable.
+Use the following command to install Z3 at prefix /mnt/Space1/SMT_Sampling/guided_sampler/deps/round3_micro.
+    sudo make install
+make: Leaving directory '/tmp/guided_sampler_round3_worktrees/micro/z3/build'
++ make -C /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round3_micro/z3/build install
+make: Entering directory '/tmp/guided_sampler_round3_worktrees/micro/z3/build'
+Z3 was successfully installed.
+make: Leaving directory '/tmp/guided_sampler_round3_worktrees/micro/z3/build'
++ g++ -std=c++20 -O3 -I/mnt/Space1/SMT_Sampling/guided_sampler/include/round2 -I/mnt/Space1/SMT_Sampling/guided_sampler/include -I/mnt/Space1/SMT_Sampling/guided_sampler/deps/round3_micro/include /mnt/Space1/SMT_Sampling/guided_sampler/tests/round3/micro.cpp -L/mnt/Space1/SMT_Sampling/guided_sampler/deps/round3_micro/lib -Wl,-rpath,/mnt/Space1/SMT_Sampling/guided_sampler/deps/round3_micro/lib -lz3 -o /mnt/Space1/SMT_Sampling/guided_sampler/build/round3-micro

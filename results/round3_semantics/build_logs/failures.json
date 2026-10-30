@@ -10,5 +10,14 @@
     }
   ],
   "runtime_correctness_failures_so_far": 0,
-  "D1_experiment_retries": 0
+  "D1_experiment_retries": 0,
+  "runtime_correctness_failures": 0,
+  "D3_real_experiment_retries": 0,
+  "D2_solver_calls_repeated": 0,
+  "D2_construction_resume": "oracle/CONSTRUCTION_RESUME.json",
+  "offline_reader_corrections": [
+    "separate phase abandonment from model-layer mismatch",
+    "downgrade truncated event histories to UNKNOWN_EVENT_OVERFLOW",
+    "distinguish missing D3 boundary from checkpoint not encountered"
+  ]
 }

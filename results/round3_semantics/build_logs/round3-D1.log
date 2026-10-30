@@ -1,0 +1,6 @@
+convert_observe_trace 0
+convert_apply_trace 0
+SMT_random_observe_trace 0
+SMT_random_apply_trace 0
+SMT_real_observe_trace 0
+SMT_real_apply_trace 0

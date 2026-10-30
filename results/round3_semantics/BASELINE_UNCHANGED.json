@@ -1,0 +1,10 @@
+{
+  "input_hashes_checked": 8,
+  "upstream_source_hashes_checked": 2935,
+  "passed": true,
+  "old_file_metadata_checked": 3723,
+  "protected_hashes_checked": 5,
+  "D0_consumed_old_hashes_checked": 28,
+  "changed": [],
+  "historical_baseline_executions": 0
+}
