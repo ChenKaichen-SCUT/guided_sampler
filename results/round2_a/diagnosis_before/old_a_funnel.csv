@@ -1,0 +1,17 @@
+id,input,mode,selected_distinct_targets,window_occurrences,static_matching_window_occurrences,binding_occurrences,suggestions,overrides,unsupported_checks,explicit_seconds,assigned,unassigned,native_not_selected,outside_window_potential,normalization_loss,within_window_native_matches,quota_rejected
+a_only_time900_00,20180326-Bromberger_v45_problem__003.smt2.slack.smt2,time900,500,260088,80123,65563,0,0,0,35.775554615999546,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded
+a_only_time900_01,CAV_2009_benchmarks_problem__019.smt2,time900,2362,273192,4062,0,0,0,0,38.00321551799979,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded
+a_only_time900_02,SMT_random_LIA_ex14600_2600_100.smt2,time900,1976,1976,11,0,0,0,247,0.57681561,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded
+a_only_time900_03,SMT_real_LIA_ex8500_2400_100.smt2,time900,11648,11648,204,0,0,0,1456,2.6292322059999944,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded
+a_only_time900_04,convert_convert-jpg2gif-query-1459.smt2,time900,11488,11488,207,132,0,0,0,8.117251388999971,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded
+a_only_time900_05,dillig_40-10.smt2,time900,2826,303400,2701,0,0,0,0,48.30589169099909,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded
+a_only_time900_06,pb2010_normalized-j3048_8-sat.smt2,time900,17992,17992,191,0,0,0,0,12.661237998000031,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded
+a_only_time900_07,prime_cone_sat_14.smt2,time900,976,330824,10175,5264,0,0,0,35.296264392999554,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded
+a_only_n100_t900_00,20180326-Bromberger_v45_problem__003.smt2.slack.smt2,n100_t900,392,392,96,90,0,0,0,0.04805564100000003,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded
+a_only_n100_t900_01,CAV_2009_benchmarks_problem__019.smt2,n100_t900,392,392,1,0,0,0,0,0.055993179000000004,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded
+a_only_n100_t900_02,SMT_random_LIA_ex14600_2600_100.smt2,n100_t900,792,792,8,0,0,0,99,0.2215513059999999,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded
+a_only_n100_t900_03,SMT_real_LIA_ex8500_2400_100.smt2,n100_t900,792,792,17,0,0,0,99,0.15706780700000006,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded
+a_only_n100_t900_04,convert_convert-jpg2gif-query-1459.smt2,n100_t900,392,392,11,6,0,0,0,0.28377167100000006,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded
+a_only_n100_t900_05,dillig_40-10.smt2,n100_t900,392,392,1,0,0,0,0,0.061612803,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded
+a_only_n100_t900_06,pb2010_normalized-j3048_8-sat.smt2,n100_t900,896,896,11,0,0,0,0,1.0622576379999995,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded
+a_only_n100_t900_07,prime_cone_sat_14.smt2,n100_t900,392,392,20,14,0,0,0,0.037996774000000025,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded,not_recorded

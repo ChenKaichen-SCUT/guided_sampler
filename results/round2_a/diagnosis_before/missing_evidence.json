@@ -1,0 +1,15 @@
+{
+  "frozen_commit": "fc19bd22609295ed405e1ac96bf35d695c42832a",
+  "not_recorded": [
+    "assignment-state snapshots",
+    "actual tactic leaf and setup_and_check entry",
+    "native atom encounters and canonicalization",
+    "per-target backtrack tokens",
+    "window versus quota opportunity loss"
+  ],
+  "prohibitions": [
+    "No inference of assignment from a_live",
+    "No inference of decision from final SAT",
+    "No rerun of round-one sampling"
+  ]
+}

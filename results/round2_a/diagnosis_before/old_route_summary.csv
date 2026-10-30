@@ -1,0 +1,17 @@
+id,checks,fallback,tactic,smt,suggestions,CDCL_models,CCSS_models,actual_tactic_leaf
+a_only_time900_00,32512,0,1,32511,0,32411,32394,not_recorded
+a_only_time900_01,34150,0,1,34149,0,34042,34033,not_recorded
+a_only_time900_02,248,0,248,,0,247,0,not_recorded
+a_only_time900_03,1457,0,1457,,0,1456,0,not_recorded
+a_only_time900_04,1437,0,1,1436,0,1427,1434,not_recorded
+a_only_time900_05,42045,0,1,42044,0,41925,41911,not_recorded
+a_only_time900_06,2250,0,1,2249,0,384,725,not_recorded
+a_only_time900_07,41354,0,1,41353,0,41208,41228,not_recorded
+a_only_n100_t900_00,50,0,1,49,0,50,50,not_recorded
+a_only_n100_t900_01,50,0,1,49,0,50,50,not_recorded
+a_only_n100_t900_02,100,0,100,,0,100,0,not_recorded
+a_only_n100_t900_03,100,0,100,,0,100,0,not_recorded
+a_only_n100_t900_04,50,0,1,49,0,50,50,not_recorded
+a_only_n100_t900_05,50,0,1,49,0,50,50,not_recorded
+a_only_n100_t900_06,113,0,1,112,0,21,79,not_recorded
+a_only_n100_t900_07,50,0,1,49,0,50,50,not_recorded
