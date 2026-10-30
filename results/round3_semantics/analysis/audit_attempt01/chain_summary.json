@@ -1,0 +1,89 @@
+{
+  "passed": true,
+  "errors": [],
+  "runs": [
+    {
+      "run_id": "convert_observe_trace",
+      "counts": {
+        "snapshots": 32,
+        "original_mapping_unknown": 8,
+        "no_truth_break_observed": 124,
+        "actions": 124,
+        "overrides": 0,
+        "target_records": 155,
+        "value_hit": 0,
+        "metric_reached": 152,
+        "observation_hit": 0,
+        "new_covered": 0
+      },
+      "unique_atoms": 32,
+      "unique_targets": 40,
+      "action_queries": 31,
+      "formal_models": 63
+    },
+    {
+      "run_id": "convert_apply_trace",
+      "counts": {
+        "snapshots": 32,
+        "no_truth_break_observed": 39,
+        "actions": 56,
+        "overrides": 50,
+        "target_records": 64,
+        "value_hit": 0,
+        "metric_reached": 50,
+        "observation_hit": 0,
+        "new_covered": 0,
+        "internal_assignment_to_M_leaf": 17
+      },
+      "unique_atoms": 31,
+      "unique_targets": 36,
+      "action_queries": 25,
+      "formal_models": 63
+    },
+    {
+      "run_id": "SMT_random_observe_trace",
+      "counts": {
+        "snapshots": 8,
+        "no_truth_break_observed": 8
+      },
+      "unique_atoms": 0,
+      "unique_targets": 0,
+      "action_queries": 0,
+      "formal_models": 8
+    },
+    {
+      "run_id": "SMT_random_apply_trace",
+      "counts": {
+        "snapshots": 8
+      },
+      "unique_atoms": 0,
+      "unique_targets": 0,
+      "action_queries": 0,
+      "formal_models": 8
+    },
+    {
+      "run_id": "SMT_real_observe_trace",
+      "counts": {
+        "snapshots": 8,
+        "no_truth_break_observed": 8
+      },
+      "unique_atoms": 0,
+      "unique_targets": 0,
+      "action_queries": 0,
+      "formal_models": 8
+    },
+    {
+      "run_id": "SMT_real_apply_trace",
+      "counts": {
+        "snapshots": 8
+      },
+      "unique_atoms": 0,
+      "unique_targets": 0,
+      "action_queries": 0,
+      "formal_models": 8
+    }
+  ],
+  "conditional_checkpoints": 6,
+  "oracle_calls": 0,
+  "old_cases_not_rewritten": true
+}

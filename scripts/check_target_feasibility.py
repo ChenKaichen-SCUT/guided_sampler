@@ -4,10 +4,16 @@ from semantic_oracle import *
 import time
 OUT=ROOT/'results/round3_semantics/oracle'
 def main():
- plan=read(ROOT/'manifests/round3_semantic_cases.json');OUT.mkdir(parents=True,exist_ok=False);summary=[];calls=0
- exclusive(OUT/'STARTED.json',{'plan_sha256':digest(ROOT/'manifests/round3_semantic_cases.json'),'max_calls':96,'timeout_ms':2000,'Q7_choice':'mapping XOR only with recovered actual declarations; old actual atoms absent => skip'})
+ plan=read(ROOT/'manifests/round3_semantic_cases.json');OUT.mkdir(parents=True,exist_ok=True);summary=[];calls=0;contexts={}
+ if not (OUT/'STARTED.json').exists():exclusive(OUT/'STARTED.json',{'plan_sha256':digest(ROOT/'manifests/round3_semantic_cases.json'),'max_calls':96,'timeout_ms':2000,'Q7_choice':'mapping XOR only with recovered actual declarations; old actual atoms absent => skip'})
  for case in plan['cases']:
-  d=OUT/case['case_id'];d.mkdir();p=ROOT/case['input'];assert digest(p)==case['input_sha256'];stat=Witness();manual=metric.ManualSatisfiesMetric(p.read_text(),stat);F=z3.And(manual._solver.assertions());nodes,reaches=reach_all(F);vs=variables(nodes);e=nodes[case['event']['node']];assert e.sexpr()==case['target_expr'];V=value_condition(e,case['event']['bit'],case['event']['desired']);R=reaches[case['event']['node']];A=[parse_expr(a,vs) for a in case['assumptions']];D=parse_expr(case['original_suggested_condition'],vs)
+  d=OUT/case['case_id'];d.mkdir(exist_ok=True)
+  if all((d/(q+'.result.json')).exists() for q in ['Q0','Q1','Q2','Q3','Q4','Q5','Q6','Q7']):
+   summary.extend(read(d/(q+'.result.json')) for q in ['Q1','Q2','Q3','Q4','Q5','Q6']);calls+=6;continue
+  p=ROOT/case['input'];assert digest(p)==case['input_sha256']
+  if case['input'] not in contexts:
+   stat=Witness();manual=metric.ManualSatisfiesMetric(p.read_text(),stat);F=z3.And(manual._solver.assertions());nodes,reaches=reach_all(F);vs=variables(nodes);contexts[case['input']]=(stat,manual,F,nodes,reaches,vs)
+  stat,manual,F,nodes,reaches,vs=contexts[case['input']];e=nodes[case['event']['node']];assert e.sexpr()==case['target_expr'];V=value_condition(e,case['event']['bit'],case['event']['desired']);R=reaches[case['event']['node']];A=[parse_expr(a,vs) for a in case['assumptions']];D=parse_expr(case['original_suggested_condition'],vs)
   source=ROOT/case['source_output'];index=case['source_receipt']['formal_index'];saved=None
   with (source/'samples.formal').open() as f:
    for i,sample in enumerate(metric.parse_samples(f)):
@@ -16,6 +22,10 @@ def main():
   write(d/'Q0.result.json',{'status':'sat_existing_model_verified','solver_call':False,'formal_index':index,'F_and_assumptions_verified':True});write(d/'Q0.model.json',saved)
   checks={'Q1':[V],'Q2':[R,V],'Q3':A+[R,V],'Q4':A+[D],'Q5':A+[D,z3.Not(V)],'Q6':A+[D,z3.Not(R)]};answers={}
   for label,cs in checks.items():
+   if (d/(label+'.result.json')).exists():
+    old=read(d/(label+'.result.json'));summary.append(old);answers[label]=old['result'];calls+=int(old['solver_call']);continue
+   if (d/(label+'.attempt.json')).exists():raise RuntimeError('Uncompleted prior solver attempt cannot be repeated')
+   exclusive(d/(label+'.attempt.json'),{'timeout_ms':2000,'attempt':1,'case_id':case['case_id'],'query':label})
    solver=z3.Solver(ctx=metric.CTX);solver.set(timeout=2000,random_seed=0);solver.add(F,*cs);(d/(label+'.smt2')).write_text(solver.to_smt2());start=time.monotonic();answer=solver.check();elapsed=time.monotonic()-start;calls+=1;assert calls<=96
    row={'case_id':case['case_id'],'query':label,'result':str(answer),'solver_call':True,'seconds':elapsed,'timeout_ms':2000,'timeout_overrun':max(0,elapsed-2),'reason_unknown':solver.reason_unknown() if answer==z3.unknown else '', 'D_provenance':case['D_provenance'],'actual_mapping_proved':False};answers[label]=str(answer)
    if answer==z3.sat:

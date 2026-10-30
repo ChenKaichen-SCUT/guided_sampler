@@ -1,0 +1,24 @@
+{
+  "D1_implementation_commit": "4712d0e71ab0cd14d3972787d06eeeb8d3253902",
+  "binary_sha256": "c61e2e912475091beda1616a59343ee4ab97461f8e33f04d5a8198578ae18b05",
+  "library_sha256": "c6ef7a145ccddf569161cdd4924258ef216a1c4f24bb4307c2129d18ba95c656",
+  "plan_sha256": "9b29c576d887b612225bb648a611293bc36e7e8b693329824ebd9481fbb669e0",
+  "controlled_validation_sha256": "1efe0106ef76ce352feb6e810baf4e5e69a5ed3b95175caff0156c92af0c6f24",
+  "controlled_validation_passed": true,
+  "source_files": {
+    "z3/src/smt/smt_context.cpp": {
+      "new_sha256": "8a69310a096484eb6f1037bdcd6d6fae904045542871e56aa4016e1704ad4478",
+      "D1_sha256": "ad31c7bdbaa7cb86e79ba2ec902daf6234940033c6cf8e0a70996f97fa6cfa66"
+    },
+    "z3/src/smt/a_context.inc": {
+      "new_sha256": "40545235d9f5f88c97ad2873aa69252c017c0b7ceeae6190658517b9039b3c19",
+      "D1_sha256": "2e7b896fc700dafac60a7e08917e7692682d727e75728f5d457218c0b4d69fcf"
+    },
+    "z3/src/smt/semantic_intervention.inc": {
+      "new_sha256": "88f22900eb08a182cd22988d09c99e8a50ec78b491b1e2cbcf777b322f7afdf5",
+      "D1_sha256": null
+    }
+  },
+  "same_state": false,
+  "real_runs_before_freeze": 0
+}
