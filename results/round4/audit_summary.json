@@ -1,0 +1,477 @@
+{
+  "passed": true,
+  "base_commit": "fa68a9996a48cc2251ab2b8d9315da44606825af",
+  "stages": {
+    "M": {
+      "freeze_sha256": "0c23fb7da6b88131a512314499e2e1b9c1b7c0de8fb7f806457ccfbb2e871ae8",
+      "implementation_commit": "5df5eec0a9ba4cc6716e6af1e15d3cbc4060c517",
+      "validation": {
+        "release": {
+          "passed": true,
+          "checks": {
+            "canonical": true,
+            "kernel": true,
+            "abandon": true,
+            "parallel": true,
+            "index_outcome": true,
+            "exposure": true,
+            "budgets": true,
+            "demands": true,
+            "semantic_cases": true,
+            "semantic_correspondence": true,
+            "exact_official_reach_and_high_bits": true,
+            "a_off_test_trace_off_on": true,
+            "observe_trace_trace_off_on": true,
+            "apply_trace_trace_off_on": true,
+            "off_matches_saved_frozen_baseline": true,
+            "assignment_tokens_relevance_and_provider": true,
+            "mapping_disabled_matches_saved_R3_native_RNG_and_models": true
+          },
+          "token_events": 1330,
+          "withdrawals": 1292,
+          "relevance_changes": 1139,
+          "baseline_executions": 0,
+          "binary_sha256": "a7e937efa99c81a3e85c74349c81afe27d01107e80d4fd206e6a61de0db83e54",
+          "library_sha256": "a5e5478fe634de295bfb0f23fedeb268240dff0018347c49e4840624aa7c8403",
+          "sole_leak_suppression": null,
+          "completion": {
+            "passed": true,
+            "original_source_model_unchanged": true,
+            "raw_undef_explicit": true,
+            "formal_projection_completed": true,
+            "solver_calls": 0,
+            "library_sha256": "a5e5478fe634de295bfb0f23fedeb268240dff0018347c49e4840624aa7c8403",
+            "command": [
+              "g++",
+              "-std=c++20",
+              "-O1",
+              "-g",
+              "-I/mnt/Space1/SMT_Sampling/guided_sampler/include/round4",
+              "-I/mnt/Space1/SMT_Sampling/guided_sampler/include/round2",
+              "-I/mnt/Space1/SMT_Sampling/guided_sampler/include",
+              "-I/mnt/Space1/SMT_Sampling/guided_sampler/deps/round4_M_release/include",
+              "/mnt/Space1/SMT_Sampling/guided_sampler/tests/round3/completion.cpp",
+              "-L/mnt/Space1/SMT_Sampling/guided_sampler/deps/round4_M_release/lib",
+              "-Wl,-rpath,/mnt/Space1/SMT_Sampling/guided_sampler/deps/round4_M_release/lib",
+              "-lz3",
+              "-o",
+              "/mnt/Space1/SMT_Sampling/guided_sampler/build/round4-completion-M_release"
+            ]
+          }
+        },
+        "sanitize": {
+          "passed": true,
+          "checks": {
+            "canonical": true,
+            "kernel": true,
+            "abandon": true,
+            "parallel": true,
+            "index_outcome": true,
+            "exposure": true,
+            "budgets": true,
+            "demands": true,
+            "semantic_cases": true,
+            "semantic_correspondence": true,
+            "exact_official_reach_and_high_bits": true,
+            "a_off_test_trace_off_on": true,
+            "observe_trace_trace_off_on": true,
+            "apply_trace_trace_off_on": true,
+            "off_matches_saved_frozen_baseline": true,
+            "assignment_tokens_relevance_and_provider": true,
+            "mapping_disabled_matches_saved_R3_native_RNG_and_models": true
+          },
+          "token_events": 902,
+          "withdrawals": 866,
+          "relevance_changes": 790,
+          "baseline_executions": 0,
+          "binary_sha256": "3918b2451c38fdba3dfc40f7a5f9975f1025463563d575016d2c0fb8502b5f48",
+          "library_sha256": "41100bf4fe4658f43590acd45fc5b4d83f70347246545a4ae7f0cb1b1b661021",
+          "sole_leak_suppression": "ae26b6ceec0af7a3ec1ac375b47b4f1f7ab065b1ec071d582222e4f04d367032",
+          "completion": {
+            "passed": true,
+            "original_source_model_unchanged": true,
+            "raw_undef_explicit": true,
+            "formal_projection_completed": true,
+            "solver_calls": 0,
+            "library_sha256": "41100bf4fe4658f43590acd45fc5b4d83f70347246545a4ae7f0cb1b1b661021",
+            "command": [
+              "g++",
+              "-std=c++20",
+              "-O1",
+              "-g",
+              "-I/mnt/Space1/SMT_Sampling/guided_sampler/include/round4",
+              "-I/mnt/Space1/SMT_Sampling/guided_sampler/include/round2",
+              "-I/mnt/Space1/SMT_Sampling/guided_sampler/include",
+              "-I/mnt/Space1/SMT_Sampling/guided_sampler/deps/round4_M_sanitize/include",
+              "/mnt/Space1/SMT_Sampling/guided_sampler/tests/round3/completion.cpp",
+              "-L/mnt/Space1/SMT_Sampling/guided_sampler/deps/round4_M_sanitize/lib",
+              "-Wl,-rpath,/mnt/Space1/SMT_Sampling/guided_sampler/deps/round4_M_sanitize/lib",
+              "-lz3",
+              "-o",
+              "/mnt/Space1/SMT_Sampling/guided_sampler/build/round4-completion-M_sanitize",
+              "-fsanitize=address,undefined",
+              "-fno-omit-frame-pointer"
+            ]
+          }
+        }
+      }
+    },
+    "S": {
+      "freeze_sha256": "ef6fec10fbd299c848ec7fa8cd67f7b651acadfbdc8363ba89895a5f8ab628e5",
+      "implementation_commit": "b635ce9095884512516e7a764e2daf65a400a6d9",
+      "validation": {
+        "release": {
+          "passed": true,
+          "checks": {
+            "canonical": true,
+            "kernel": true,
+            "abandon": true,
+            "parallel": true,
+            "index_outcome": true,
+            "exposure": true,
+            "budgets": true,
+            "demands": true,
+            "semantic_cases": true,
+            "semantic_correspondence": true,
+            "soft_reference": true,
+            "soft_lifecycle": true,
+            "exact_official_reach_and_high_bits": true,
+            "a_off_test_trace_off_on": true,
+            "observe_trace_trace_off_on": true,
+            "apply_trace_trace_off_on": true,
+            "off_matches_saved_frozen_baseline": true,
+            "assignment_tokens_relevance_and_provider": true,
+            "mapping_disabled_matches_saved_R3_native_RNG_and_models": true
+          },
+          "token_events": 2649,
+          "withdrawals": 2433,
+          "relevance_changes": 2080,
+          "baseline_executions": 0,
+          "binary_sha256": "f5179337891e05e467df05887a3323ac1203457a4a05e1e44f289e1c465f6023",
+          "library_sha256": "fd33762a3386eb9b787430e6870580c125823176db672d39a3f11e83e99e9963",
+          "sole_leak_suppression": null,
+          "completion": {
+            "passed": true,
+            "original_source_model_unchanged": true,
+            "raw_undef_explicit": true,
+            "formal_projection_completed": true,
+            "solver_calls": 0,
+            "library_sha256": "fd33762a3386eb9b787430e6870580c125823176db672d39a3f11e83e99e9963",
+            "command": [
+              "g++",
+              "-std=c++20",
+              "-O1",
+              "-g",
+              "-I/mnt/Space1/SMT_Sampling/guided_sampler/include/round4/soft_reference",
+              "-I/mnt/Space1/SMT_Sampling/guided_sampler/include/round2",
+              "-I/mnt/Space1/SMT_Sampling/guided_sampler/include",
+              "-I/mnt/Space1/SMT_Sampling/guided_sampler/deps/round4_S_release/include",
+              "/mnt/Space1/SMT_Sampling/guided_sampler/tests/round3/completion.cpp",
+              "-L/mnt/Space1/SMT_Sampling/guided_sampler/deps/round4_S_release/lib",
+              "-Wl,-rpath,/mnt/Space1/SMT_Sampling/guided_sampler/deps/round4_S_release/lib",
+              "-lz3",
+              "-o",
+              "/mnt/Space1/SMT_Sampling/guided_sampler/build/round4-completion-S_release"
+            ]
+          },
+          "soft_host": {
+            "passed": true,
+            "variant": "release",
+            "results": {
+              "S_ref": {
+                "query_count": 20,
+                "reference_checks": 6,
+                "rng_replay": {
+                  "CCSS_seed_draws": 10,
+                  "passed": true,
+                  "selection_draws": 18,
+                  "solver_calls": 0
+                },
+                "first_model": "0: x:0;y:0;",
+                "first_route": "solver1"
+              },
+              "S_cov": {
+                "query_count": 20,
+                "reference_checks": 6,
+                "rng_replay": {
+                  "CCSS_seed_draws": 10,
+                  "passed": true,
+                  "selection_draws": 18,
+                  "solver_calls": 0
+                },
+                "first_model": "0: x:0;y:0;",
+                "first_route": "solver1"
+              }
+            },
+            "binary_sha256": "f5179337891e05e467df05887a3323ac1203457a4a05e1e44f289e1c465f6023",
+            "library_sha256": "fd33762a3386eb9b787430e6870580c125823176db672d39a3f11e83e99e9963",
+            "benchmark_runs": 0
+          }
+        },
+        "sanitize": {
+          "passed": true,
+          "checks": {
+            "canonical": true,
+            "kernel": true,
+            "abandon": true,
+            "parallel": true,
+            "index_outcome": true,
+            "exposure": true,
+            "budgets": true,
+            "demands": true,
+            "semantic_cases": true,
+            "semantic_correspondence": true,
+            "soft_reference": true,
+            "soft_lifecycle": true,
+            "exact_official_reach_and_high_bits": true,
+            "a_off_test_trace_off_on": true,
+            "observe_trace_trace_off_on": true,
+            "apply_trace_trace_off_on": true,
+            "off_matches_saved_frozen_baseline": true,
+            "assignment_tokens_relevance_and_provider": true,
+            "mapping_disabled_matches_saved_R3_native_RNG_and_models": true
+          },
+          "token_events": 2031,
+          "withdrawals": 1815,
+          "relevance_changes": 1573,
+          "baseline_executions": 0,
+          "binary_sha256": "ecf92ef7d9eca93ac7ff9add50814a5530f47a1905435f543b777321decb0864",
+          "library_sha256": "5541aa14dd53370edde6281183d41ff6294975fecdeea350dcca543682005ae3",
+          "sole_leak_suppression": "ae26b6ceec0af7a3ec1ac375b47b4f1f7ab065b1ec071d582222e4f04d367032",
+          "completion": {
+            "passed": true,
+            "original_source_model_unchanged": true,
+            "raw_undef_explicit": true,
+            "formal_projection_completed": true,
+            "solver_calls": 0,
+            "library_sha256": "5541aa14dd53370edde6281183d41ff6294975fecdeea350dcca543682005ae3",
+            "command": [
+              "g++",
+              "-std=c++20",
+              "-O1",
+              "-g",
+              "-I/mnt/Space1/SMT_Sampling/guided_sampler/include/round4/soft_reference",
+              "-I/mnt/Space1/SMT_Sampling/guided_sampler/include/round2",
+              "-I/mnt/Space1/SMT_Sampling/guided_sampler/include",
+              "-I/mnt/Space1/SMT_Sampling/guided_sampler/deps/round4_S_sanitize/include",
+              "/mnt/Space1/SMT_Sampling/guided_sampler/tests/round3/completion.cpp",
+              "-L/mnt/Space1/SMT_Sampling/guided_sampler/deps/round4_S_sanitize/lib",
+              "-Wl,-rpath,/mnt/Space1/SMT_Sampling/guided_sampler/deps/round4_S_sanitize/lib",
+              "-lz3",
+              "-o",
+              "/mnt/Space1/SMT_Sampling/guided_sampler/build/round4-completion-S_sanitize",
+              "-fsanitize=address,undefined",
+              "-fno-omit-frame-pointer"
+            ]
+          },
+          "soft_host": {
+            "passed": true,
+            "variant": "sanitize",
+            "results": {
+              "S_ref": {
+                "query_count": 20,
+                "reference_checks": 6,
+                "rng_replay": {
+                  "CCSS_seed_draws": 10,
+                  "passed": true,
+                  "selection_draws": 18,
+                  "solver_calls": 0
+                },
+                "first_model": "0: x:0;y:0;",
+                "first_route": "solver1"
+              },
+              "S_cov": {
+                "query_count": 20,
+                "reference_checks": 6,
+                "rng_replay": {
+                  "CCSS_seed_draws": 10,
+                  "passed": true,
+                  "selection_draws": 18,
+                  "solver_calls": 0
+                },
+                "first_model": "0: x:0;y:0;",
+                "first_route": "solver1"
+              }
+            },
+            "binary_sha256": "ecf92ef7d9eca93ac7ff9add50814a5530f47a1905435f543b777321decb0864",
+            "library_sha256": "5541aa14dd53370edde6281183d41ff6294975fecdeea350dcca543682005ae3",
+            "benchmark_runs": 0
+          }
+        }
+      }
+    }
+  },
+  "sessions": [
+    {
+      "id": "convert_M_observe",
+      "cdcl": 32,
+      "formal": 63,
+      "covered": 38193,
+      "total": 179302,
+      "seconds": 3.744425732,
+      "status": "cdcl_query_limit",
+      "raw": 63,
+      "explicit": 0.20075827099999993,
+      "exposure": 0.0
+    },
+    {
+      "id": "convert_M_apply",
+      "cdcl": 32,
+      "formal": 63,
+      "covered": 38318,
+      "total": 179302,
+      "seconds": 4.080800308,
+      "status": "cdcl_query_limit",
+      "raw": 63,
+      "explicit": 0.1994601400000003,
+      "exposure": 0.7030739189999997
+    },
+    {
+      "id": "SMT_random_M_observe",
+      "cdcl": 8,
+      "formal": 8,
+      "covered": 11012,
+      "total": 104639,
+      "seconds": 24.679085126,
+      "status": "cdcl_query_limit",
+      "raw": 8,
+      "explicit": 0.13942490599999946,
+      "exposure": 0.0
+    },
+    {
+      "id": "SMT_random_M_apply",
+      "cdcl": 8,
+      "formal": 8,
+      "covered": 11155,
+      "total": 104639,
+      "seconds": 22.050557159,
+      "status": "cdcl_query_limit",
+      "raw": 8,
+      "explicit": 0.18010408999999927,
+      "exposure": 12.17731731
+    },
+    {
+      "id": "SMT_real_M_observe",
+      "cdcl": 8,
+      "formal": 8,
+      "covered": 5766,
+      "total": 66061,
+      "seconds": 4.543242274,
+      "status": "cdcl_query_limit",
+      "raw": 8,
+      "explicit": 0.0631052190000001,
+      "exposure": 0.0
+    },
+    {
+      "id": "SMT_real_M_apply",
+      "cdcl": 8,
+      "formal": 8,
+      "covered": 5809,
+      "total": 66061,
+      "seconds": 4.788090303,
+      "status": "cdcl_query_limit",
+      "raw": 8,
+      "explicit": 0.06451586399999998,
+      "exposure": 0.5996150290000001
+    },
+    {
+      "id": "convert_S_ref",
+      "cdcl": 32,
+      "formal": 37,
+      "covered": 36556,
+      "total": 179302,
+      "seconds": 12.420673154,
+      "status": "cdcl_query_limit",
+      "raw": 63,
+      "explicit": 0.5872152870000028,
+      "exposure": 0.5379044909999999
+    },
+    {
+      "id": "convert_S_cov",
+      "cdcl": 4,
+      "formal": 5,
+      "covered": 28308,
+      "total": 179302,
+      "seconds": 60.007899198,
+      "status": "deadline",
+      "raw": 5,
+      "explicit": 0.13065499599999844,
+      "exposure": 0.4057305000000091
+    },
+    {
+      "id": "SMT_random_S_ref",
+      "cdcl": 8,
+      "formal": 8,
+      "covered": 11230,
+      "total": 104639,
+      "seconds": 23.433746433,
+      "status": "cdcl_query_limit",
+      "raw": 8,
+      "explicit": 0.1618814559999974,
+      "exposure": 0.0
+    },
+    {
+      "id": "SMT_random_S_cov",
+      "cdcl": 8,
+      "formal": 8,
+      "covered": 11136,
+      "total": 104639,
+      "seconds": 21.059311279,
+      "status": "cdcl_query_limit",
+      "raw": 8,
+      "explicit": 0.23405537300000157,
+      "exposure": 17.872659763999994
+    },
+    {
+      "id": "SMT_real_S_ref",
+      "cdcl": 8,
+      "formal": 8,
+      "covered": 5961,
+      "total": 66061,
+      "seconds": 5.077873714,
+      "status": "cdcl_query_limit",
+      "raw": 8,
+      "explicit": 0.08409719799999976,
+      "exposure": 0.0
+    },
+    {
+      "id": "SMT_real_S_cov",
+      "cdcl": 8,
+      "formal": 8,
+      "covered": 5697,
+      "total": 66061,
+      "seconds": 5.439332364,
+      "status": "cdcl_query_limit",
+      "raw": 8,
+      "explicit": 0.1006087189999999,
+      "exposure": 3.864416897999998
+    }
+  ],
+  "planned_short_runs": 12,
+  "seed": 0,
+  "extra_seeds": 0,
+  "new_900_second_runs": 0,
+  "HighDiv_reruns": 0,
+  "B_enabled": false,
+  "relevance_interventions": 0,
+  "extra_LIA_value_moves": 0,
+  "controlled_template_XOR_calls": 192,
+  "M_mapping_XOR_calls": 16,
+  "M_target_feasibility_calls": 12,
+  "S_oracle_calls": 0,
+  "baseline_unchanged": {
+    "passed": true,
+    "changed": [],
+    "old_file_metadata_checked": 5854,
+    "protected_sha256_checked": 7,
+    "input_hashes_checked": 8,
+    "upstream_source_hashes_checked": 2935,
+    "historical_baseline_executions": 0
+  },
+  "artifact_count": 2657,
+  "limitations": [
+    "bounded short mechanism experiment, not full HighDiv performance comparison",
+    "policy-dependent trajectories, not same-state causal samples",
+    "buffer overflow and missing model/theory evidence remain Unknown"
+  ]
+}

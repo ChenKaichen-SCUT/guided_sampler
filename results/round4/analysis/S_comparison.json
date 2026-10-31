@@ -1,0 +1,137 @@
+{
+  "passed": true,
+  "plan_sha256": "1f207825dd41484b4ff556addca9682ccae8da6453dc4efb314e9efe803bf10b",
+  "instances": [
+    {
+      "instance": "convert",
+      "first_formal_assignment_equal": true,
+      "shared_initial_mappable_demands": 24244,
+      "S_cov_selected_target_pool": 5,
+      "modes": {
+        "S_ref": {
+          "shared_initial": {
+            "targets": 24244,
+            "pure_value_hits": 174,
+            "official_observation_hits": 173,
+            "newly_covered": 173
+          },
+          "cov_selected": {
+            "targets": 5,
+            "pure_value_hits": 0,
+            "official_observation_hits": 0,
+            "newly_covered": 0
+          },
+          "first_hit_sources": {
+            "CCSS": 152,
+            "CDCL": 21
+          }
+        },
+        "S_cov": {
+          "shared_initial": {
+            "targets": 24244,
+            "pure_value_hits": 314,
+            "official_observation_hits": 313,
+            "newly_covered": 313
+          },
+          "cov_selected": {
+            "targets": 5,
+            "pure_value_hits": 4,
+            "official_observation_hits": 4,
+            "newly_covered": 4
+          },
+          "first_hit_sources": {
+            "CCSS": 137,
+            "CDCL": 176
+          }
+        }
+      }
+    },
+    {
+      "instance": "SMT_random",
+      "first_formal_assignment_equal": true,
+      "shared_initial_mappable_demands": 36623,
+      "S_cov_selected_target_pool": 405,
+      "modes": {
+        "S_ref": {
+          "shared_initial": {
+            "targets": 36623,
+            "pure_value_hits": 2575,
+            "official_observation_hits": 2390,
+            "newly_covered": 2390
+          },
+          "cov_selected": {
+            "targets": 405,
+            "pure_value_hits": 15,
+            "official_observation_hits": 15,
+            "newly_covered": 15
+          },
+          "first_hit_sources": {
+            "CDCL": 2390
+          }
+        },
+        "S_cov": {
+          "shared_initial": {
+            "targets": 36623,
+            "pure_value_hits": 2649,
+            "official_observation_hits": 2468,
+            "newly_covered": 2468
+          },
+          "cov_selected": {
+            "targets": 405,
+            "pure_value_hits": 22,
+            "official_observation_hits": 22,
+            "newly_covered": 22
+          },
+          "first_hit_sources": {
+            "CDCL": 2468
+          }
+        }
+      }
+    },
+    {
+      "instance": "SMT_real",
+      "first_formal_assignment_equal": true,
+      "shared_initial_mappable_demands": 27216,
+      "S_cov_selected_target_pool": 481,
+      "modes": {
+        "S_ref": {
+          "shared_initial": {
+            "targets": 27216,
+            "pure_value_hits": 1558,
+            "official_observation_hits": 1414,
+            "newly_covered": 1414
+          },
+          "cov_selected": {
+            "targets": 481,
+            "pure_value_hits": 17,
+            "official_observation_hits": 17,
+            "newly_covered": 17
+          },
+          "first_hit_sources": {
+            "CDCL": 1414
+          }
+        },
+        "S_cov": {
+          "shared_initial": {
+            "targets": 27216,
+            "pure_value_hits": 1506,
+            "official_observation_hits": 1377,
+            "newly_covered": 1377
+          },
+          "cov_selected": {
+            "targets": 481,
+            "pure_value_hits": 19,
+            "official_observation_hits": 19,
+            "newly_covered": 19
+          },
+          "first_hit_sources": {
+            "CDCL": 1377
+          }
+        }
+      }
+    }
+  ],
+  "solver_calls": 0,
+  "same_internal_state": false,
+  "cov_selected_pool_is_policy_selected": true
+}

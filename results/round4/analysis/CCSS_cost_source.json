@@ -1,0 +1,39 @@
+{
+  "actual_frozen_sources": {
+    "z3/src/smt/smt_model_generator.cpp": {
+      "sha256": "28012e33881552959c1cdac60b05b7ad3085a4fb9b8077d611d68a0769bd9002",
+      "first_line": 386,
+      "source": "        // send model\n        for (enode * n : m_context->enodes()) {\n            if (is_uninterp_const(n->get_expr()) && m_context->is_relevant(n)) {\n                func_decl * d = n->get_expr()->get_decl();\n                TRACE(\"mg_top_sort\", tout << d->get_name() << \" \" << (m_hidden_ufs.contains(d)?\"hidden\":\"visible\") << \"\\n\";);\n                if (m_hidden_ufs.contains(d)) continue;\n                expr * val    = get_value(n);\n                m_model->register_decl(d, val);\n\n                std::stringstream var_val_stream;\n                var_val_stream << mk_pp(val, m);\n                m.last_CDCL_model[d->get_name().str()] = var_val_stream.str();\n                // std::cout << \"model value: \" << d->get_name() << \" = \" << mk_pp(val, m) << \"\\n\";\n            }"
+    },
+    "z3/src/smt/smt_context.cpp": {
+      "sha256": "ad31c7bdbaa7cb86e79ba2ec902daf6234940033c6cf8e0a70996f97fa6cfa66",
+      "first_line": 3619,
+      "source": "        if (m_fparams.m_ls_sampling) {  // sampling flag\n            if (inconsistent()) return check_finalize(l_false);\n            try {\n                expr_bool_var_map(m_ls_sampler);\n                m_ls_sampler->build_instance(clauses_vec, m.last_CDCL_model);\n                if (m_ls_sampler->ls_sampling()) {\n                    m_model_generator->reset();\n                    m_proto_model = m_model_generator->mk_model_sampling(m_ls_sampler);\n                    return check_finalize(l_true);\n                }"
+    },
+    "z3/src/sampler/sampler.cpp": {
+      "sha256": "5cecad602d14924f50ca3ea02ea5e120f32cef61e3b5d007efed051313efcaa7",
+      "first_line": 274,
+      "source": "void ls_sampler::calc_var_intervals() {\n    // Section 5.1: model-feasible intervals for high-frequency variables,\n    // their complements for general variables. Equality variables start at zero.\n    _vars_initialization_intervals.assign(_vars.size(), Interval(1, 0));\n    std::vector<__int128_t> cdcl_solution(_vars.size(), 0);\n    std::vector<bool> has_model_value(_vars.size(), false);\n    auto model_value = [&](const std::string& name, __int128_t& value) {\n        auto found = last_cdcl_model.find(name);\n        if (found == last_cdcl_model.end()) return false;\n        try {\n            value = string_to_int128(processNegNumber(found->second));\n            return true;\n        } catch (const std::exception&) {\n            return false;\n        }\n    };\n    for (size_t v_idx = 0; v_idx < _vars.size(); ++v_idx) {\n        const auto& var = _vars[v_idx];"
+    }
+  },
+  "observed": {
+    "S_ref": {
+      "query_3_model_hash": "355e50b6615e4279",
+      "query_4_seed": 1573007388,
+      "query_4_seconds": 0.04528655300000006,
+      "query_4_result": "sat",
+      "query_4_reason": ""
+    },
+    "S_cov": {
+      "query_3_model_hash": "c49f1604cdda9197",
+      "query_4_seed": 1573007388,
+      "query_4_seconds": 59.057641755,
+      "query_4_result": "unknown",
+      "query_4_reason": "smt tactic failed to show goal to be sat/unsat unknown"
+    }
+  },
+  "proved": "retained native CDCL-model to CCSS-initialization path; different preceding formal models and equal logged next CCSS seeds",
+  "inference": "same seed does not establish identical CCSS starting state; altered CDCL history can affect the retained initialization path",
+  "not_proved": "no full last_CDCL_model snapshot or identical-state replay; exact cause of the 59-second unknown is not isolated",
+  "additional_runs": 0
+}

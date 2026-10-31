@@ -1,0 +1,348 @@
+[
+  {
+    "run": "SMT_random_M_apply",
+    "routes": {
+      "solver1": 8
+    },
+    "CDCL_check_seconds": 21.617067093,
+    "CCSS_check_seconds": 0.15696103999999833,
+    "explicit_total": 0.18010408999999927,
+    "last_completed_query_categories": {
+      "binding_seconds": 0.00033808299999999993,
+      "cost_ledger_log_seconds": 0.0014003580000000002,
+      "diagnostic_serialization_seconds": 0.004958628,
+      "diagnostic_snapshot_seconds": 0.0,
+      "exposure_guard_seconds": 0.050272919000000006,
+      "hot_callback_seconds": 0.06910955799999932,
+      "index_build_seconds": 0.033628704,
+      "index_update_seconds": 0.001002235,
+      "observer_initialization_seconds": 0.009730691,
+      "observer_seconds": 0.005712475999999999,
+      "outcome_evaluation_seconds": 9.790700000000001e-05,
+      "outcome_log_seconds": 0.000766625,
+      "request_log_seconds": 0.001098471,
+      "request_register_seconds": 0.00036241800000000004,
+      "route_metadata_seconds": 0.000531372
+    },
+    "uncategorized_tail_included_in_total": 0.0010936450000000042,
+    "exposure_overruns": []
+  },
+  {
+    "run": "SMT_random_M_observe",
+    "routes": {
+      "solver1": 8
+    },
+    "CDCL_check_seconds": 24.219070564,
+    "CCSS_check_seconds": 0.16045030400000115,
+    "explicit_total": 0.13942490599999946,
+    "last_completed_query_categories": {
+      "binding_seconds": 0.000407635,
+      "cost_ledger_log_seconds": 0.001426605,
+      "diagnostic_serialization_seconds": 0.006149001000000001,
+      "diagnostic_snapshot_seconds": 0.0,
+      "exposure_guard_seconds": 0.0,
+      "hot_callback_seconds": 0.07554357199999939,
+      "index_build_seconds": 0.033616411,
+      "index_update_seconds": 0.001047954,
+      "observer_initialization_seconds": 0.011155285000000001,
+      "observer_seconds": 0.0059432190000000005,
+      "outcome_evaluation_seconds": 0.00015692100000000002,
+      "outcome_log_seconds": 0.000916479,
+      "request_log_seconds": 0.001098324,
+      "request_register_seconds": 0.00035996499999999996,
+      "route_metadata_seconds": 0.0005449360000000001
+    },
+    "uncategorized_tail_included_in_total": 0.0010585990000000212,
+    "exposure_overruns": []
+  },
+  {
+    "run": "SMT_random_S_cov",
+    "routes": {
+      "solver1": 8
+    },
+    "CDCL_check_seconds": 20.578636287999995,
+    "CCSS_check_seconds": 0.16385508099999857,
+    "explicit_total": 0.23405537300000157,
+    "last_completed_query_categories": {
+      "binding_seconds": 0.00037290299999999995,
+      "cost_ledger_log_seconds": 0.0015249249999999997,
+      "diagnostic_serialization_seconds": 0.007815948999999999,
+      "diagnostic_snapshot_seconds": 0.0,
+      "exposure_guard_seconds": 0.081195596,
+      "hot_callback_seconds": 0.07913956999999926,
+      "index_build_seconds": 0.0364891,
+      "index_update_seconds": 0.001052182,
+      "observer_initialization_seconds": 0.010875034000000006,
+      "observer_seconds": 0.005889757000000001,
+      "outcome_evaluation_seconds": 0.00019766800000000002,
+      "outcome_log_seconds": 0.001042634,
+      "reference_collection_and_inputs_log_seconds": 0.005576088000002338,
+      "request_log_seconds": 0.000957271,
+      "request_register_seconds": 0.000269463,
+      "route_metadata_seconds": 0.00051256
+    },
+    "uncategorized_tail_included_in_total": 0.001144672999999985,
+    "exposure_overruns": []
+  },
+  {
+    "run": "SMT_random_S_ref",
+    "routes": {
+      "solver1": 8
+    },
+    "CDCL_check_seconds": 22.977682229,
+    "CCSS_check_seconds": 0.1568287400000017,
+    "explicit_total": 0.1618814559999974,
+    "last_completed_query_categories": {
+      "binding_seconds": 0.000405454,
+      "cost_ledger_log_seconds": 0.003448206,
+      "diagnostic_serialization_seconds": 0.012846366,
+      "diagnostic_snapshot_seconds": 0.0,
+      "exposure_guard_seconds": 0.0,
+      "hot_callback_seconds": 0.07854654499999911,
+      "index_build_seconds": 0.035211893,
+      "index_update_seconds": 0.0010786679999999999,
+      "observer_initialization_seconds": 0.014472907,
+      "observer_seconds": 0.006174386000000001,
+      "outcome_evaluation_seconds": 9.975e-06,
+      "outcome_log_seconds": 0.000728275,
+      "reference_collection_and_inputs_log_seconds": 0.0061937529999982754,
+      "request_log_seconds": 0.000974517,
+      "request_register_seconds": 0.00021927400000000002,
+      "route_metadata_seconds": 0.00048392
+    },
+    "uncategorized_tail_included_in_total": 0.0010873170000000043,
+    "exposure_overruns": []
+  },
+  {
+    "run": "SMT_real_M_apply",
+    "routes": {
+      "solver1": 8
+    },
+    "CDCL_check_seconds": 4.467336222,
+    "CCSS_check_seconds": 0.09007836400000013,
+    "explicit_total": 0.06451586399999998,
+    "last_completed_query_categories": {
+      "binding_seconds": 0.000419542,
+      "cost_ledger_log_seconds": 0.001403629,
+      "diagnostic_serialization_seconds": 0.006005793000000001,
+      "diagnostic_snapshot_seconds": 0.0,
+      "exposure_guard_seconds": 0.002250611,
+      "hot_callback_seconds": 0.015018606000000032,
+      "index_build_seconds": 0.022962427,
+      "index_update_seconds": 0.000674138,
+      "observer_initialization_seconds": 0.008459622,
+      "observer_seconds": 0.0039058749999999996,
+      "outcome_evaluation_seconds": 8.869399999999999e-05,
+      "outcome_log_seconds": 0.000728885,
+      "request_log_seconds": 0.001047236,
+      "request_register_seconds": 0.00035459199999999993,
+      "route_metadata_seconds": 0.0004263600000000001
+    },
+    "uncategorized_tail_included_in_total": 0.0007698540000000004,
+    "exposure_overruns": []
+  },
+  {
+    "run": "SMT_real_M_observe",
+    "routes": {
+      "solver1": 8
+    },
+    "CDCL_check_seconds": 4.226431972,
+    "CCSS_check_seconds": 0.09044274300000021,
+    "explicit_total": 0.0631052190000001,
+    "last_completed_query_categories": {
+      "binding_seconds": 0.000375587,
+      "cost_ledger_log_seconds": 0.0011924429999999998,
+      "diagnostic_serialization_seconds": 0.005667971999999999,
+      "diagnostic_snapshot_seconds": 0.0,
+      "exposure_guard_seconds": 0.0,
+      "hot_callback_seconds": 0.01525587800000005,
+      "index_build_seconds": 0.024416428,
+      "index_update_seconds": 0.0006256999999999999,
+      "observer_initialization_seconds": 0.008215888000000001,
+      "observer_seconds": 0.0038709389999999995,
+      "outcome_evaluation_seconds": 0.00013336400000000002,
+      "outcome_log_seconds": 0.0007093919999999999,
+      "request_log_seconds": 0.0009728790000000001,
+      "request_register_seconds": 0.000408278,
+      "route_metadata_seconds": 0.000504995
+    },
+    "uncategorized_tail_included_in_total": 0.000755475999999998,
+    "exposure_overruns": []
+  },
+  {
+    "run": "SMT_real_S_cov",
+    "routes": {
+      "solver1": 8
+    },
+    "CDCL_check_seconds": 5.096772624999998,
+    "CCSS_check_seconds": 0.09464604300000068,
+    "explicit_total": 0.1006087189999999,
+    "last_completed_query_categories": {
+      "binding_seconds": 0.00040071600000000007,
+      "cost_ledger_log_seconds": 0.0015878920000000003,
+      "diagnostic_serialization_seconds": 0.008484772,
+      "diagnostic_snapshot_seconds": 0.0,
+      "exposure_guard_seconds": 0.015319137000000002,
+      "hot_callback_seconds": 0.02488507899999995,
+      "index_build_seconds": 0.024343975,
+      "index_update_seconds": 0.000599136,
+      "observer_initialization_seconds": 0.009899103000000003,
+      "observer_seconds": 0.004286222,
+      "outcome_evaluation_seconds": 0.000233034,
+      "outcome_log_seconds": 0.001678603,
+      "reference_collection_and_inputs_log_seconds": 0.006158607999999996,
+      "request_log_seconds": 0.001068481,
+      "request_register_seconds": 0.00029212600000000003,
+      "route_metadata_seconds": 0.00047472
+    },
+    "uncategorized_tail_included_in_total": 0.0008971150000000039,
+    "exposure_overruns": []
+  },
+  {
+    "run": "SMT_real_S_ref",
+    "routes": {
+      "solver1": 8
+    },
+    "CDCL_check_seconds": 4.719814144,
+    "CCSS_check_seconds": 0.09400141200000023,
+    "explicit_total": 0.08409719799999976,
+    "last_completed_query_categories": {
+      "binding_seconds": 0.0004165959999999999,
+      "cost_ledger_log_seconds": 0.00227384,
+      "diagnostic_serialization_seconds": 0.005501656000000001,
+      "diagnostic_snapshot_seconds": 0.0,
+      "exposure_guard_seconds": 0.0,
+      "hot_callback_seconds": 0.02273913799999999,
+      "index_build_seconds": 0.027516613,
+      "index_update_seconds": 0.000693076,
+      "observer_initialization_seconds": 0.011655019999999999,
+      "observer_seconds": 0.004135400000000001,
+      "outcome_evaluation_seconds": 1.0194000000000001e-05,
+      "outcome_log_seconds": 0.0008689529999999999,
+      "reference_collection_and_inputs_log_seconds": 0.005839661999999732,
+      "request_log_seconds": 0.0009749750000000001,
+      "request_register_seconds": 0.00025329,
+      "route_metadata_seconds": 0.000429281
+    },
+    "uncategorized_tail_included_in_total": 0.0007895040000000103,
+    "exposure_overruns": []
+  },
+  {
+    "run": "convert_M_apply",
+    "routes": {
+      "solver1": 1,
+      "solver2": 31
+    },
+    "CDCL_check_seconds": 1.0432152169999998,
+    "CCSS_check_seconds": 1.4061246050000005,
+    "explicit_total": 0.1994601400000003,
+    "last_completed_query_categories": {
+      "binding_seconds": 0.0009558349999999996,
+      "cost_ledger_log_seconds": 0.006422901999999999,
+      "diagnostic_serialization_seconds": 0.014472713,
+      "diagnostic_snapshot_seconds": 0.0,
+      "exposure_guard_seconds": 0.001345949,
+      "hot_callback_seconds": 0.012923747999999994,
+      "index_build_seconds": 0.050012105,
+      "index_update_seconds": 0.0016388099999999999,
+      "observer_initialization_seconds": 0.012452283000000001,
+      "observer_seconds": 0.09001455799999997,
+      "outcome_evaluation_seconds": 0.0006106400000000001,
+      "outcome_log_seconds": 0.0027982910000000014,
+      "request_log_seconds": 0.0036126679999999994,
+      "request_register_seconds": 0.000553195,
+      "route_metadata_seconds": 6.1851e-05
+    },
+    "uncategorized_tail_included_in_total": 0.0015845919999999958,
+    "exposure_overruns": []
+  },
+  {
+    "run": "convert_M_observe",
+    "routes": {
+      "solver1": 1,
+      "solver2": 31
+    },
+    "CDCL_check_seconds": 0.6726019919999999,
+    "CCSS_check_seconds": 1.416427446999999,
+    "explicit_total": 0.20075827099999993,
+    "last_completed_query_categories": {
+      "binding_seconds": 0.000996342,
+      "cost_ledger_log_seconds": 0.006155782,
+      "diagnostic_serialization_seconds": 0.018824073999999996,
+      "diagnostic_snapshot_seconds": 0.0,
+      "exposure_guard_seconds": 0.0,
+      "hot_callback_seconds": 0.012374340000000003,
+      "index_build_seconds": 0.046408021,
+      "index_update_seconds": 0.0016108350000000003,
+      "observer_initialization_seconds": 0.012971490000000002,
+      "observer_seconds": 0.089087501,
+      "outcome_evaluation_seconds": 0.00114995,
+      "outcome_log_seconds": 0.004977535000000001,
+      "request_log_seconds": 0.0038587210000000007,
+      "request_register_seconds": 0.000607547,
+      "route_metadata_seconds": 7.545399999999997e-05
+    },
+    "uncategorized_tail_included_in_total": 0.0016606789999999982,
+    "exposure_overruns": []
+  },
+  {
+    "run": "convert_S_cov",
+    "routes": {
+      "solver1": 4
+    },
+    "CDCL_check_seconds": 0.5608437840000091,
+    "CCSS_check_seconds": 59.102637334,
+    "explicit_total": 0.13065499599999844,
+    "last_completed_query_categories": {
+      "binding_seconds": 0.000390349,
+      "cost_ledger_log_seconds": 0.0007356820000000001,
+      "diagnostic_serialization_seconds": 0.008481603,
+      "diagnostic_snapshot_seconds": 0.0,
+      "exposure_guard_seconds": 0.0006003320000000001,
+      "hot_callback_seconds": 0.006000172000000005,
+      "index_build_seconds": 0.055481191,
+      "index_update_seconds": 0.0011914010000000001,
+      "observer_initialization_seconds": 0.015600014999999995,
+      "observer_seconds": 0.005791132,
+      "outcome_evaluation_seconds": 6.3862e-05,
+      "outcome_log_seconds": 0.000538689,
+      "reference_collection_and_inputs_log_seconds": 0.01921823900000294,
+      "reference_source_log_seconds": 0.005260312,
+      "request_log_seconds": 0.000668984,
+      "request_register_seconds": 0.000250572,
+      "route_metadata_seconds": 0.00021269599999999998
+    },
+    "uncategorized_tail_included_in_total": 0.010169764999995501,
+    "exposure_overruns": []
+  },
+  {
+    "run": "convert_S_ref",
+    "routes": {
+      "solver1": 32
+    },
+    "CDCL_check_seconds": 4.409793749,
+    "CCSS_check_seconds": 6.323468863999997,
+    "explicit_total": 0.5872152870000028,
+    "last_completed_query_categories": {
+      "binding_seconds": 0.0007050819999999998,
+      "cost_ledger_log_seconds": 0.018745115999999996,
+      "diagnostic_serialization_seconds": 0.023634012000000003,
+      "diagnostic_snapshot_seconds": 0.0,
+      "exposure_guard_seconds": 0.000914993,
+      "hot_callback_seconds": 0.04262767400000003,
+      "index_build_seconds": 0.053371697,
+      "index_update_seconds": 0.001522733,
+      "observer_initialization_seconds": 0.015744139999999997,
+      "observer_seconds": 0.05816274099999998,
+      "outcome_evaluation_seconds": 6.200699999999999e-05,
+      "outcome_log_seconds": 0.0008386740000000001,
+      "reference_collection_and_inputs_log_seconds": 0.19414997800000372,
+      "reference_source_log_seconds": 0.16976154999999998,
+      "request_log_seconds": 0.004031726,
+      "request_register_seconds": 0.000859251,
+      "route_metadata_seconds": 0.0018690340000000003
+    },
+    "uncategorized_tail_included_in_total": 0.00021487899999994564,
+    "exposure_overruns": []
+  }
+]

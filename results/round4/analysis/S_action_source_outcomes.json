@@ -1,0 +1,67 @@
+[
+  {
+    "run": "SMT_random_S_cov",
+    "by_source": {
+      "coverage_support": {
+        "actions": 6,
+        "actual_overrides": 4,
+        "coverage_overrode_defined_reference": 0,
+        "target_records": 13,
+        "new_covered_records": 3,
+        "value_hits": 3,
+        "reached": 13
+      },
+      "avoid_direct_blocker": {
+        "actions": 10,
+        "actual_overrides": 10,
+        "coverage_overrode_defined_reference": 0,
+        "target_records": 556,
+        "new_covered_records": 0,
+        "value_hits": 0,
+        "reached": 556
+      }
+    }
+  },
+  {
+    "run": "SMT_real_S_cov",
+    "by_source": {
+      "coverage_support": {
+        "actions": 7,
+        "actual_overrides": 3,
+        "coverage_overrode_defined_reference": 0,
+        "target_records": 17,
+        "new_covered_records": 13,
+        "value_hits": 13,
+        "reached": 17
+      },
+      "avoid_direct_blocker": {
+        "actions": 17,
+        "actual_overrides": 15,
+        "coverage_overrode_defined_reference": 0,
+        "target_records": 986,
+        "new_covered_records": 5,
+        "value_hits": 5,
+        "reached": 986
+      }
+    }
+  },
+  {
+    "run": "convert_S_cov",
+    "by_source": {
+      "coverage_support": {
+        "actions": 5,
+        "actual_overrides": 4,
+        "coverage_overrode_defined_reference": 1,
+        "target_records": 7,
+        "new_covered_records": 4,
+        "value_hits": 4,
+        "reached": 4
+      },
+      "inherited_reference": {
+        "actions": 1,
+        "actual_overrides": 0,
+        "coverage_overrode_defined_reference": 0
+      }
+    }
+  }
+]

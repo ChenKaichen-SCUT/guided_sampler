@@ -1,0 +1,100 @@
+{
+  "passed": true,
+  "errors": [],
+  "runs": [
+    {
+      "run_id": "convert_S_ref",
+      "counts": {
+        "snapshots": 32,
+        "no_truth_break_observed": 27,
+        "actions": 27,
+        "overrides": 4
+      },
+      "unique_atoms": 6,
+      "unique_targets": 0,
+      "action_queries": 19,
+      "formal_models": 37
+    },
+    {
+      "run_id": "convert_S_cov",
+      "counts": {
+        "snapshots": 4,
+        "no_truth_break_observed": 3,
+        "actions": 6,
+        "overrides": 4,
+        "target_records": 7,
+        "value_hit": 4,
+        "metric_reached": 4,
+        "observation_hit": 4,
+        "new_covered": 4,
+        "internal_assignment_to_M_leaf": 3
+      },
+      "unique_atoms": 4,
+      "unique_targets": 5,
+      "action_queries": 3,
+      "formal_models": 5
+    },
+    {
+      "run_id": "SMT_random_S_ref",
+      "counts": {
+        "snapshots": 8
+      },
+      "unique_atoms": 0,
+      "unique_targets": 0,
+      "action_queries": 0,
+      "formal_models": 8
+    },
+    {
+      "run_id": "SMT_random_S_cov",
+      "counts": {
+        "snapshots": 8,
+        "no_truth_break_observed": 6,
+        "actions": 16,
+        "overrides": 14,
+        "target_records": 569,
+        "value_hit": 3,
+        "metric_reached": 569,
+        "observation_hit": 3,
+        "new_covered": 3,
+        "suggested_phase_not_retained": 7,
+        "UNKNOWN_EVENT_OVERFLOW": 3
+      },
+      "unique_atoms": 10,
+      "unique_targets": 405,
+      "action_queries": 7,
+      "formal_models": 8
+    },
+    {
+      "run_id": "SMT_real_S_ref",
+      "counts": {
+        "snapshots": 8
+      },
+      "unique_atoms": 0,
+      "unique_targets": 0,
+      "action_queries": 0,
+      "formal_models": 8
+    },
+    {
+      "run_id": "SMT_real_S_cov",
+      "counts": {
+        "snapshots": 8,
+        "suggested_phase_not_retained": 6,
+        "actions": 24,
+        "overrides": 18,
+        "target_records": 1003,
+        "value_hit": 18,
+        "metric_reached": 1003,
+        "observation_hit": 18,
+        "new_covered": 18,
+        "no_truth_break_observed": 18
+      },
+      "unique_atoms": 10,
+      "unique_targets": 481,
+      "action_queries": 7,
+      "formal_models": 8
+    }
+  ],
+  "conditional_checkpoints": 0,
+  "oracle_calls": 0,
+  "old_cases_not_rewritten": true
+}

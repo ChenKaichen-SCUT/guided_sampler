@@ -1,0 +1,7 @@
+{
+  "reason": "convert S_cov collected query 7 inputs then the deadline prevented check entry; independently replay and validate this preparation too",
+  "sampling_implementation_changed": false,
+  "experiment_reruns": 0,
+  "official_scores_changed": false,
+  "additional_solver_calls": 0
+}

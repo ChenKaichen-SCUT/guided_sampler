@@ -1,0 +1,10 @@
+{
+  "frozen_plan_label": "Q2=SAT/Q4=UNSAT",
+  "correct_observation_blocker": "Q3 = F + inherited A + Reach + desired value; Q4 = F + A + legacy suggested condition D",
+  "reason": "checked actual frozen oracle construction, not just result labels",
+  "plan_preserved": true,
+  "selected_case_set_changed": false,
+  "experiment_runs_repeated": 0,
+  "official_scores_changed": false,
+  "additional_solver_calls": 0
+}
