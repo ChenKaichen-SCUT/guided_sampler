@@ -1,0 +1,124 @@
+{
+  "passed": true,
+  "errors": [],
+  "runs": [
+    {
+      "run_id": "convert_M_observe",
+      "counts": {
+        "snapshots": 32,
+        "observe_native_phase_not_suggested_phase": 121,
+        "actions": 124,
+        "overrides": 0,
+        "target_records": 155,
+        "value_hit": 0,
+        "metric_reached": 152,
+        "observation_hit": 0,
+        "new_covered": 0,
+        "suggested_phase_not_retained": 3
+      },
+      "unique_atoms": 32,
+      "unique_targets": 40,
+      "action_queries": 31,
+      "formal_models": 63
+    },
+    {
+      "run_id": "convert_M_apply",
+      "counts": {
+        "snapshots": 32,
+        "suggested_phase_not_retained": 39,
+        "actions": 56,
+        "overrides": 50,
+        "target_records": 64,
+        "value_hit": 0,
+        "metric_reached": 50,
+        "observation_hit": 0,
+        "new_covered": 0,
+        "internal_assignment_to_M_leaf": 17
+      },
+      "unique_atoms": 31,
+      "unique_targets": 36,
+      "action_queries": 25,
+      "formal_models": 63
+    },
+    {
+      "run_id": "SMT_random_M_observe",
+      "counts": {
+        "snapshots": 8,
+        "observe_native_phase_not_suggested_phase": 7,
+        "actions": 9,
+        "overrides": 0,
+        "target_records": 20,
+        "value_hit": 15,
+        "metric_reached": 20,
+        "observation_hit": 15,
+        "new_covered": 15,
+        "no_truth_break_observed": 1,
+        "suggested_phase_not_retained": 1
+      },
+      "unique_atoms": 9,
+      "unique_targets": 20,
+      "action_queries": 4,
+      "formal_models": 8
+    },
+    {
+      "run_id": "SMT_random_M_apply",
+      "counts": {
+        "snapshots": 8,
+        "UNKNOWN_EVENT_OVERFLOW": 4,
+        "actions": 7,
+        "overrides": 6,
+        "target_records": 15,
+        "value_hit": 10,
+        "metric_reached": 15,
+        "observation_hit": 10,
+        "new_covered": 10,
+        "suggested_phase_not_retained": 3
+      },
+      "unique_atoms": 5,
+      "unique_targets": 13,
+      "action_queries": 4,
+      "formal_models": 8
+    },
+    {
+      "run_id": "SMT_real_M_observe",
+      "counts": {
+        "snapshots": 8,
+        "suggested_phase_not_retained": 2,
+        "actions": 14,
+        "overrides": 0,
+        "target_records": 37,
+        "value_hit": 23,
+        "metric_reached": 37,
+        "observation_hit": 23,
+        "new_covered": 23,
+        "observe_native_phase_not_suggested_phase": 7,
+        "no_truth_break_observed": 5
+      },
+      "unique_atoms": 7,
+      "unique_targets": 25,
+      "action_queries": 6,
+      "formal_models": 8
+    },
+    {
+      "run_id": "SMT_real_M_apply",
+      "counts": {
+        "snapshots": 8,
+        "no_truth_break_observed": 7,
+        "actions": 7,
+        "overrides": 2,
+        "target_records": 34,
+        "value_hit": 34,
+        "metric_reached": 34,
+        "observation_hit": 34,
+        "new_covered": 34
+      },
+      "unique_atoms": 7,
+      "unique_targets": 34,
+      "action_queries": 3,
+      "formal_models": 8
+    }
+  ],
+  "conditional_checkpoints": 0,
+  "oracle_calls": 0,
+  "old_cases_not_rewritten": true
+}

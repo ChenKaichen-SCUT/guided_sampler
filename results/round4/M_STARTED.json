@@ -1,0 +1,78 @@
+{
+  "implementation_commit": "5df5eec0a9ba4cc6716e6af1e15d3cbc4060c517",
+  "freeze_sha256": "0c23fb7da6b88131a512314499e2e1b9c1b7c0de8fb7f806457ccfbb2e871ae8",
+  "jobs": [
+    {
+      "id": "convert_M_observe",
+      "stage": "M",
+      "instance": "convert",
+      "mode": "M_observe",
+      "input": "../benchmarks/convert_convert-jpg2gif-query-1459.smt2",
+      "input_sha256": "0ea6c3119acb120f7655fae65cc9c743358f1914111e7cf2ab5290951d896f32",
+      "seed": 0,
+      "cpu": 0,
+      "wall_seconds": 60,
+      "cdcl_cap": 32
+    },
+    {
+      "id": "convert_M_apply",
+      "stage": "M",
+      "instance": "convert",
+      "mode": "M_apply",
+      "input": "../benchmarks/convert_convert-jpg2gif-query-1459.smt2",
+      "input_sha256": "0ea6c3119acb120f7655fae65cc9c743358f1914111e7cf2ab5290951d896f32",
+      "seed": 0,
+      "cpu": 0,
+      "wall_seconds": 60,
+      "cdcl_cap": 32
+    },
+    {
+      "id": "SMT_random_M_observe",
+      "stage": "M",
+      "instance": "SMT_random",
+      "mode": "M_observe",
+      "input": "../benchmarks/SMT_random_LIA_ex14600_2600_100.smt2",
+      "input_sha256": "114fb8ac7228c36cc6124bd9f2d95fd16a3bf2d330c39e185e8145d56821de1f",
+      "seed": 0,
+      "cpu": 0,
+      "wall_seconds": 60,
+      "cdcl_cap": 8
+    },
+    {
+      "id": "SMT_random_M_apply",
+      "stage": "M",
+      "instance": "SMT_random",
+      "mode": "M_apply",
+      "input": "../benchmarks/SMT_random_LIA_ex14600_2600_100.smt2",
+      "input_sha256": "114fb8ac7228c36cc6124bd9f2d95fd16a3bf2d330c39e185e8145d56821de1f",
+      "seed": 0,
+      "cpu": 0,
+      "wall_seconds": 60,
+      "cdcl_cap": 8
+    },
+    {
+      "id": "SMT_real_M_observe",
+      "stage": "M",
+      "instance": "SMT_real",
+      "mode": "M_observe",
+      "input": "../benchmarks/SMT_real_LIA_ex8500_2400_100.smt2",
+      "input_sha256": "9ff3c643c1756057b1f127c5818bf38c468761ad3d2dd742cf34e3511e0690ec",
+      "seed": 0,
+      "cpu": 0,
+      "wall_seconds": 60,
+      "cdcl_cap": 8
+    },
+    {
+      "id": "SMT_real_M_apply",
+      "stage": "M",
+      "instance": "SMT_real",
+      "mode": "M_apply",
+      "input": "../benchmarks/SMT_real_LIA_ex8500_2400_100.smt2",
+      "input_sha256": "9ff3c643c1756057b1f127c5818bf38c468761ad3d2dd742cf34e3511e0690ec",
+      "seed": 0,
+      "cpu": 0,
+      "wall_seconds": 60,
+      "cdcl_cap": 8
+    }
+  ]
+}
