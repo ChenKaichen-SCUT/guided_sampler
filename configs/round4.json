@@ -1,0 +1,39 @@
+{
+  "base_commit": "fa68a9996a48cc2251ab2b8d9315da44606825af",
+  "seed": 0,
+  "window": 64,
+  "coverage_quota": 4,
+  "explicit_seconds": 45,
+  "intervened_query_exposure_seconds": 45,
+  "inherited_selection_rate": 0.5,
+  "wall_seconds": 60,
+  "CDCL_caps": {
+    "convert": 32,
+    "SMT_random": 8,
+    "SMT_real": 8
+  },
+  "M_modes": [
+    "M_observe",
+    "M_apply"
+  ],
+  "S_modes": [
+    "S_ref",
+    "S_cov"
+  ],
+  "mapping_rules": [
+    "complementary_closed_bounds_to_equality",
+    "negated_closed_bounds_to_disequality"
+  ],
+  "S_cov_priority": [
+    "support_count",
+    "negative_block_count",
+    "reference_phase",
+    "native_phase"
+  ],
+  "B_enabled": false,
+  "HighDiv_reruns": 0,
+  "new_900_second_runs": 0,
+  "relevance_changes": 0,
+  "raw_unmapped_representatives_per_session": 0,
+  "oracle_answers_online": false
+}
