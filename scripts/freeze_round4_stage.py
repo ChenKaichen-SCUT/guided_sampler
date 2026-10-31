@@ -17,6 +17,9 @@ validation={}
 for v in ['release','sanitize']:
  lib=ROOT/f'deps/round4_{stage}_{v}/lib/libz3.so';checks=[read(p) for p in (BASE/'correctness').glob(stage+'_'+v+'_*/summary.json') if read(p).get('passed') and read(p)['library_sha256']==digest(lib)];assert checks,v;validation[v]=checks[-1];completion=read(BASE/f'correctness/completion_{stage}_{v}/summary.json');assert completion['passed'] and completion['library_sha256']==digest(lib);validation[v]['completion']=completion
 header=ROOT/'include/round4' if stage=='M' else ROOT/'include/round4/soft_reference'
+if stage=='S':
+ for v in ['release','sanitize']:
+  host_check=read(BASE/f'correctness/soft_host_{v}/summary.json');assert host_check['passed'] and host_check['library_sha256']==validation[v]['library_sha256'] and host_check['binary_sha256']==validation[v]['binary_sha256'];validation[v]['soft_host']=host_check
 exclusive(ROOT/f'manifests/round4_{stage}_implementation.json',{'stage':stage,'binary_sha256':digest(source/'HighDiv/highdiv'),'library_sha256':digest(ROOT/f'deps/round4_{stage}_release/lib/libz3.so'),'validation':validation,'sources':files,'header_hashes':{str(p.relative_to(ROOT)):digest(p) for p in header.glob('*.hpp')},'short_plan_sha256':digest(ROOT/'manifests/round4_short_plan.json'),'config_sha256':digest(ROOT/'configs/round4.json'),'parent_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()})
 (ROOT/'src/round4'/('mapping_a_context.inc' if stage=='M' else 'a_context.inc')).write_bytes((source/'z3/src/smt/a_context.inc').read_bytes())
 print('Frozen R4',stage,len(files),'source files')

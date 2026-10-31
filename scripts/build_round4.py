@@ -13,7 +13,7 @@ if not tree.exists():
  temp=pathlib.Path('/tmp/guided_sampler_round4_worktrees')/(a.stage+'_'+a.variant);temp.mkdir(parents=True,exist_ok=False);tree.symlink_to(temp,target_is_directory=True)
  for part in ('z3','HighDiv','tests'):shutil.copytree(UP/part,temp/part)
  # Independent copies of previously compiled unchanged objects; no hardlinks.
- old=ROOT/'worktrees'/('round3_'+a.variant)/'z3/build'
+ old=ROOT/'worktrees'/('round4_M_'+a.variant if a.stage=='S' else 'round3_'+a.variant)/'z3/build'
  if old.exists():run(['cp','-a','--reflink=auto',str(old),str(temp/'z3/build')])
 prefix.mkdir(exist_ok=True)
 if not (prefix/'bin/python3').exists():run([sys.executable,'-m','venv',prefix])
@@ -21,9 +21,9 @@ env=os.environ.copy();env['CXXFLAGS']='-O3 -DNDEBUG' if a.variant=='release' els
 if a.variant=='sanitize':env['LDFLAGS']='-fsanitize=address,undefined'
 if not a.host_only:
  run([sys.executable,ROOT/'scripts/patch_round4_z3.py',a.stage,tree])
- if not (tree/'z3/build/.round4_configured').exists():
+ if not (tree/('z3/build/.round4_'+a.stage+'_configured')).exists():
   run([prefix/'bin/python3','scripts/mk_make.py','--python',f'--prefix={prefix}',f'--pypkgdir={prefix}/lib/python{sys.version_info.major}.{sys.version_info.minor}/site-packages']+(['--debug'] if a.variant=='sanitize' else []),cwd=tree/'z3',env=env)
-  (tree/'z3/build/.round4_configured').touch()
+  (tree/('z3/build/.round4_'+a.stage+'_configured')).touch()
  if a.variant=='sanitize':
   config=tree/'z3/build/config.mk';config.write_text(config.read_text().replace('-O3','-O1').replace('-O0','-O1'))
  run(['make','-C',tree/'z3/build','-j',a.jobs],env=env)

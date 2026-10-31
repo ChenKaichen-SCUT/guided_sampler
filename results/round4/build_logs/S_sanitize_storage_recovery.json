@@ -1,0 +1,370 @@
+{
+  "invalid_objects_removed": [
+    [
+      "ast/occurs.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/occurs.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/func_decl_dependencies.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/func_decl_dependencies.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/value_generator.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/value_generator.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/pp.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/pp.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/expr_functors.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/expr_functors.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/expr_map.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/expr_map.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/array_peq.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/array_peq.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/display_dimacs.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/display_dimacs.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/expr_stat.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/expr_stat.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/has_free_vars.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/has_free_vars.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/ast_ll_pp.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/ast_ll_pp.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/used_vars.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/used_vars.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/for_each_expr.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/for_each_expr.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/special_relations_decl_plugin.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/special_relations_decl_plugin.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/ast_lt.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/ast_lt.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/cost_evaluator.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/cost_evaluator.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/quantifier_stat.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/quantifier_stat.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/for_each_ast.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/for_each_ast.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/num_occurs.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/num_occurs.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/macro_substitution.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/macro_substitution.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/act_cache.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/act_cache.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/format.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/format.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/euf/euf_justification.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/euf/euf_justification.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/rewriter/dl_rewriter.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/rewriter/dl_rewriter.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/rewriter/mk_extract_proc.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/rewriter/mk_extract_proc.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/rewriter/func_decl_replace.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/rewriter/func_decl_replace.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/rewriter/datatype_rewriter.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/rewriter/datatype_rewriter.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/rewriter/char_rewriter.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/rewriter/char_rewriter.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/sls/sls_bv_valuation.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ast/sls/sls_bv_valuation.o: Failed to read file's magic number\n"
+    ],
+    [
+      "nlsat/nlsat_types.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/nlsat/nlsat_types.o: Failed to read file's magic number\n"
+    ],
+    [
+      "nlsat/nlsat_clause.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/nlsat/nlsat_clause.o: Failed to read file's magic number\n"
+    ],
+    [
+      "nlsat/nlsat_evaluator.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/nlsat/nlsat_evaluator.o: Failed to read file's magic number\n"
+    ],
+    [
+      "nlsat/nlsat_interval_set.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/nlsat/nlsat_interval_set.o: Failed to read file's magic number\n"
+    ],
+    [
+      "nlsat/nlsat_simple_checker.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/nlsat/nlsat_simple_checker.o: Failed to read file's magic number\n"
+    ],
+    [
+      "shell/gparams_register_modules.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/shell/gparams_register_modules.o: Failed to read file's magic number\n"
+    ],
+    [
+      "shell/main.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/shell/main.o: Failed to read file's magic number\n"
+    ],
+    [
+      "api/dll/gparams_register_modules.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/api/dll/gparams_register_modules.o: Failed to read file's magic number\n"
+    ],
+    [
+      "model/struct_factory.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/model/struct_factory.o: Failed to read file's magic number\n"
+    ],
+    [
+      "sat/sat_clause_use_list.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/sat/sat_clause_use_list.o: Failed to read file's magic number\n"
+    ],
+    [
+      "sat/sat_clause_set.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/sat/sat_clause_set.o: Failed to read file's magic number\n"
+    ],
+    [
+      "sat/sat_watched.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/sat/sat_watched.o: Failed to read file's magic number\n"
+    ],
+    [
+      "sat/sat_clause.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/sat/sat_clause.o: Failed to read file's magic number\n"
+    ],
+    [
+      "params/context_params.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/params/context_params.o: Failed to read file's magic number\n"
+    ],
+    [
+      "muz/base/bind_variables.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/muz/base/bind_variables.o: Failed to read file's magic number\n"
+    ],
+    [
+      "muz/spacer/spacer_matrix.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/muz/spacer/spacer_matrix.o: Failed to read file's magic number\n"
+    ],
+    [
+      "math/interval/dep_intervals.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/math/interval/dep_intervals.o: Failed to read file's magic number\n"
+    ],
+    [
+      "math/grobner/pdd_simplifier.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/math/grobner/pdd_simplifier.o: Failed to read file's magic number\n"
+    ],
+    [
+      "math/grobner/pdd_solver.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/math/grobner/pdd_solver.o: Failed to read file's magic number\n"
+    ],
+    [
+      "math/subpaving/subpaving.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/math/subpaving/subpaving.o: Failed to read file's magic number\n"
+    ],
+    [
+      "math/subpaving/subpaving_mpq.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/math/subpaving/subpaving_mpq.o: Failed to read file's magic number\n"
+    ],
+    [
+      "math/subpaving/subpaving_hwf.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/math/subpaving/subpaving_hwf.o: Failed to read file's magic number\n"
+    ],
+    [
+      "math/subpaving/subpaving_mpf.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/math/subpaving/subpaving_mpf.o: Failed to read file's magic number\n"
+    ],
+    [
+      "math/subpaving/subpaving_mpff.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/math/subpaving/subpaving_mpff.o: Failed to read file's magic number\n"
+    ],
+    [
+      "math/subpaving/subpaving_mpfx.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/math/subpaving/subpaving_mpfx.o: Failed to read file's magic number\n"
+    ],
+    [
+      "math/hilbert/hilbert_basis.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/math/hilbert/hilbert_basis.o: Failed to read file's magic number\n"
+    ],
+    [
+      "math/dd/dd_fdd.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/math/dd/dd_fdd.o: Failed to read file's magic number\n"
+    ],
+    [
+      "math/dd/dd_pdd.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/math/dd/dd_pdd.o: Failed to read file's magic number\n"
+    ],
+    [
+      "math/realclosure/realclosure.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/math/realclosure/realclosure.o: Failed to read file's magic number\n"
+    ],
+    [
+      "math/simplex/simplex.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/math/simplex/simplex.o: Failed to read file's magic number\n"
+    ],
+    [
+      "math/lp/lp_settings.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/math/lp/lp_settings.o: Failed to read file's magic number\n"
+    ],
+    [
+      "math/polynomial/polynomial_cache.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/math/polynomial/polynomial_cache.o: Failed to read file's magic number\n"
+    ],
+    [
+      "math/polynomial/rpolynomial.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/math/polynomial/rpolynomial.o: Failed to read file's magic number\n"
+    ],
+    [
+      "math/polynomial/sexpr2upolynomial.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/math/polynomial/sexpr2upolynomial.o: Failed to read file's magic number\n"
+    ],
+    [
+      "util/sexpr.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/util/sexpr.o: Failed to read file's magic number\n"
+    ],
+    [
+      "util/zstring.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/util/zstring.o: Failed to read file's magic number\n"
+    ],
+    [
+      "util/inf_rational.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/util/inf_rational.o: Failed to read file's magic number\n"
+    ],
+    [
+      "util/inf_s_integer.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/util/inf_s_integer.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/smt_value_sort.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/smt/smt_value_sort.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/uses_theory.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/smt/uses_theory.o: Failed to read file's magic number\n"
+    ],
+    [
+      "parsers/util/cost_parser.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/parsers/util/cost_parser.o: Failed to read file's magic number\n"
+    ],
+    [
+      "parsers/util/scanner.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/parsers/util/scanner.o: Failed to read file's magic number\n"
+    ],
+    [
+      "parsers/util/simple_parser.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/parsers/util/simple_parser.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ackermannization/ackr_helper.o",
+      "readelf: Error: worktrees/round4_S_sanitize/z3/build/ackermannization/ackr_helper.o: Failed to read file's magic number\n"
+    ]
+  ],
+  "archives_rebuilt_to_restore_indices": [
+    "qe/qe.a",
+    "qe/mbp/mbp.a",
+    "qe/lite/qe_lite.a",
+    "ast/ast.a",
+    "ast/macros/macros.a",
+    "ast/euf/euf.a",
+    "ast/rewriter/rewriter.a",
+    "ast/rewriter/bit_blaster/bit_blaster.a",
+    "ast/simplifiers/simplifiers.a",
+    "ast/proofs/proofs.a",
+    "ast/converters/converters.a",
+    "ast/sls/ast_sls.a",
+    "ast/normal_forms/normal_forms.a",
+    "ast/fpa/fpa.a",
+    "ast/pattern/pattern.a",
+    "ast/substitution/substitution.a",
+    "nlsat/nlsat.a",
+    "nlsat/tactic/nlsat_tactic.a",
+    "tactic/tactic.a",
+    "tactic/sls/sls_tactic.a",
+    "tactic/ufbv/ufbv_tactic.a",
+    "tactic/aig/aig_tactic.a",
+    "tactic/fpa/fpa_tactics.a",
+    "tactic/bv/bv_tactics.a",
+    "tactic/core/core_tactics.a",
+    "tactic/arith/arith_tactics.a",
+    "tactic/smtlogics/smtlogic_tactics.a",
+    "tactic/portfolio/portfolio.a",
+    "tactic/fd_solver/fd_solver.a",
+    "api/api.a",
+    "model/model.a",
+    "sat/sat.a",
+    "sat/sat_solver/sat_solver.a",
+    "sat/tactic/sat_tactic.a",
+    "sat/smt/sat_smt.a",
+    "params/params.a",
+    "sampler/sampler.a",
+    "cmd_context/cmd_context.a",
+    "cmd_context/extra_cmds/extra_cmds.a",
+    "muz/bmc/bmc.a",
+    "muz/dataflow/dataflow.a",
+    "muz/base/muz.a",
+    "muz/ddnf/ddnf.a",
+    "muz/rel/rel.a",
+    "muz/fp/fp.a",
+    "muz/tab/tab.a",
+    "muz/spacer/spacer.a",
+    "muz/transforms/transforms.a",
+    "muz/clp/clp.a",
+    "opt/opt.a",
+    "math/interval/interval.a",
+    "math/grobner/grobner.a",
+    "math/subpaving/subpaving.a",
+    "math/subpaving/tactic/subpaving_tactic.a",
+    "math/hilbert/hilbert.a",
+    "math/dd/dd.a",
+    "math/realclosure/realclosure.a",
+    "math/simplex/simplex.a",
+    "math/automata/automata.a",
+    "math/lp/lp.a",
+    "math/polynomial/polynomial.a",
+    "solver/solver.a",
+    "solver/assertions/solver_assertions.a",
+    "util/util.a",
+    "smt/smt.a",
+    "smt/tactic/smt_tactic.a",
+    "smt/params/smt_params.a",
+    "smt/proto_model/proto_model.a",
+    "parsers/smt2/smt2parser.a",
+    "parsers/util/parser_util.a",
+    "ackermannization/ackermannization.a"
+  ],
+  "historical_files_touched": false
+}

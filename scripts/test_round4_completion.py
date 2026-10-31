@@ -4,7 +4,7 @@ from finalize_samples import finalize
 stage=sys.argv[1]
 for variant in (sys.argv[2:] or ['release','sanitize']):
  assert variant in ['release','sanitize']
- prefix=ROOT/('deps/round4_'+stage+'_'+variant);out=ROOT/('results/round4/correctness/completion_'+stage+'_'+variant);out.mkdir(exist_ok=False);binary=ROOT/('build/round4-completion-'+stage+'_'+variant);cmd=['g++','-std=c++20','-O1','-g','-I'+str(ROOT/'include/round4'),'-I'+str(ROOT/'include/round2'),'-I'+str(ROOT/'include'),'-I'+str(prefix/'include'),str(ROOT/'tests/round3/completion.cpp'),'-L'+str(prefix/'lib'),'-Wl,-rpath,'+str(prefix/'lib'),'-lz3','-o',str(binary)]
+ prefix=ROOT/('deps/round4_'+stage+'_'+variant);out=ROOT/('results/round4/correctness/completion_'+stage+'_'+variant);out.mkdir(exist_ok=False);binary=ROOT/('build/round4-completion-'+stage+'_'+variant);cmd=['g++','-std=c++20','-O1','-g','-I'+str(ROOT/('include/round4/soft_reference' if stage=='S' else 'include/round4')),'-I'+str(ROOT/'include/round2'),'-I'+str(ROOT/'include'),'-I'+str(prefix/'include'),str(ROOT/'tests/round3/completion.cpp'),'-L'+str(prefix/'lib'),'-Wl,-rpath,'+str(prefix/'lib'),'-lz3','-o',str(binary)]
  if variant=='sanitize':cmd+=['-fsanitize=address,undefined','-fno-omit-frame-pointer']
  r=subprocess.run(cmd,capture_output=True,text=True);(out/'compile.stdout').write_text(r.stdout);(out/'compile.stderr').write_text(r.stderr);assert r.returncode==0,r.stderr
  env=os.environ.copy();env.update(GUIDED_SEMANTIC_TRACE_DIR=str(out),GUIDED_SEMANTIC_RUN_ID='completion_'+variant)

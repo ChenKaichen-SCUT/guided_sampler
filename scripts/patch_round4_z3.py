@@ -24,6 +24,13 @@ with tempfile.TemporaryDirectory(prefix='round4-patch-') as tmp:
  p.write_text(s)
  p=z/'util/a_state.h';s=p.read_text().replace(' int final_truth=-1;', ' Json extra=Json::object();\n int final_truth=-1;');s=s.replace(' return {{"query_id",query}', ' Json result={{"query_id",query}',1);s=s.replace('Json(final_truth!=0)}};}','Json(final_truth!=0)}};result.update(extra);return result;}');p.write_text(s)
  p=z/'model/semantic_trace.h';s=p.read_text().replace('row["encounters"]=encounters;', 'row["encounters"]=encounters;for(auto& rec:row["encounters"])if(rec.contains("mapping_atom_slot"))rec["actual_atom"]=ast(refs.get(rec["mapping_atom_slot"].get<unsigned>()));');p.write_text(s)
+ if stage=='S':
+  headers=ROOT/'include/round4/soft_reference'
+  for name in ['a_shared.hpp','semantic_correspondence.hpp','declaration_identity.hpp','preference_types.hpp','reference_evaluation.hpp','phase_evidence.hpp']:shutil.copyfile(headers/name,z/'util'/name)
+  p=z/'util/a_state.h';s=p.read_text().replace(' std::shared_ptr<const Index> index;', ' std::shared_ptr<const r4::QueryPreferences> preferences;std::set<std::string> preference_attempted,reference_attempted;\n std::shared_ptr<const Index> index;');s=s.replace(':index(p),query(q)',':preferences(p->preferences),index(p),query(q)');p.write_text(s)
+  p=z/'smt/smt_context.h';s=p.read_text().replace('bool apply_A_phase_hint(', 'bool apply_S_phase_hint(bool_var native_var,bool native_phase,bool& effective_phase);\n    bool apply_A_phase_hint(');p.write_text(s)
+  p=z/'smt/a_context.inc';s=p.read_text();marker='bool context::apply_A_phase_hint(bool_var native_var,bool native_phase,bool& effective_phase) {';s=s.replace(marker,(ROOT/'src/round4/soft_phase.inc').read_text()+'\n'+marker+'\n    if(m_A&&m_A->preferences&&m_A->preferences->policy!=a2::r4::Policy::Legacy)return apply_S_phase_hint(native_var,native_phase,effective_phase);');p.write_text(s)
+  p=z/'smt/semantic_context.inc';s=p.read_text().replace('m_S->watches.size()>=12','m_S->watches.size()>=(m_A&&m_A->preferences?64u:12u)');p.write_text(s)
  # Preserve concrete M sources as reviewable R4 copies; later S patch has its own file.
  for f in z.rglob('*'):
   if f.is_file():

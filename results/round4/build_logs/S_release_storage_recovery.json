@@ -1,0 +1,399 @@
+{
+  "checked_ELF_objects": 841,
+  "invalid_objects_removed": [
+    [
+      "qe/qe.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/qe/qe.o: Failed to read file's magic number\n"
+    ],
+    [
+      "qe/lite/qe_lite_tactic.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/qe/lite/qe_lite_tactic.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/simplifiers/propagate_values.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/ast/simplifiers/propagate_values.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/simplifiers/bv_slice.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/ast/simplifiers/bv_slice.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/simplifiers/model_reconstruction_trail.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/ast/simplifiers/model_reconstruction_trail.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/simplifiers/distribute_forall.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/ast/simplifiers/distribute_forall.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/simplifiers/eliminate_predicates.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/ast/simplifiers/eliminate_predicates.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/simplifiers/dependent_expr_state.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/ast/simplifiers/dependent_expr_state.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/simplifiers/bv_bounds_simplifier.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/ast/simplifiers/bv_bounds_simplifier.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/simplifiers/card2bv.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/ast/simplifiers/card2bv.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/simplifiers/extract_eqs.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/ast/simplifiers/extract_eqs.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/simplifiers/euf_completion.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/ast/simplifiers/euf_completion.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/simplifiers/demodulator_simplifier.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/ast/simplifiers/demodulator_simplifier.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/simplifiers/elim_unconstrained.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/ast/simplifiers/elim_unconstrained.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/simplifiers/reduce_args_simplifier.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/ast/simplifiers/reduce_args_simplifier.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/simplifiers/bound_simplifier.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/ast/simplifiers/bound_simplifier.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/simplifiers/bit_blaster.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/ast/simplifiers/bit_blaster.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/simplifiers/max_bv_sharing.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/ast/simplifiers/max_bv_sharing.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ast/simplifiers/dominator_simplifier.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/ast/simplifiers/dominator_simplifier.o: Failed to read file's magic number\n"
+    ],
+    [
+      "tactic/probe.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/tactic/probe.o: Failed to read file's magic number\n"
+    ],
+    [
+      "tactic/tactical.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/tactic/tactical.o: Failed to read file's magic number\n"
+    ],
+    [
+      "tactic/tactic.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/tactic/tactic.o: Failed to read file's magic number\n"
+    ],
+    [
+      "tactic/fpa/qffp_tactic.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/tactic/fpa/qffp_tactic.o: Failed to read file's magic number\n"
+    ],
+    [
+      "tactic/bv/bv_bounds_tactic.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/tactic/bv/bv_bounds_tactic.o: Failed to read file's magic number\n"
+    ],
+    [
+      "tactic/core/euf_completion_tactic.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/tactic/core/euf_completion_tactic.o: Failed to read file's magic number\n"
+    ],
+    [
+      "sat/sat_solver/sat_smt_solver.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/sat/sat_solver/sat_smt_solver.o: Failed to read file's magic number\n"
+    ],
+    [
+      "sat/sat_solver/inc_sat_solver.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/sat/sat_solver/inc_sat_solver.o: Failed to read file's magic number\n"
+    ],
+    [
+      "sat/smt/fpa_solver.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/sat/smt/fpa_solver.o: Failed to read file's magic number\n"
+    ],
+    [
+      "sat/smt/pb_solver.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/sat/smt/pb_solver.o: Failed to read file's magic number\n"
+    ],
+    [
+      "sat/smt/pb_card.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/sat/smt/pb_card.o: Failed to read file's magic number\n"
+    ],
+    [
+      "sat/smt/xor_solver.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/sat/smt/xor_solver.o: Failed to read file's magic number\n"
+    ],
+    [
+      "muz/spacer/spacer_util.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/muz/spacer/spacer_util.o: Failed to read file's magic number\n"
+    ],
+    [
+      "muz/spacer/spacer_cluster.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/muz/spacer/spacer_cluster.o: Failed to read file's magic number\n"
+    ],
+    [
+      "math/lp/core_solver_pretty_printer.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/math/lp/core_solver_pretty_printer.o: Failed to read file's magic number\n"
+    ],
+    [
+      "math/lp/lp_core_solver_base.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/math/lp/lp_core_solver_base.o: Failed to read file's magic number\n"
+    ],
+    [
+      "solver/tactic2solver.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/solver/tactic2solver.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/smt_relevancy.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/smt_relevancy.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/dyn_ack.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/dyn_ack.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/theory_fpa.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/theory_fpa.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/smt_clause_proof.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/smt_clause_proof.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/smt_context_inv.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/smt_context_inv.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/theory_dummy.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/theory_dummy.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/smt_parallel.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/smt_parallel.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/theory_wmaxsat.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/theory_wmaxsat.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/smt_kernel.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/smt_kernel.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/theory_datatype.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/theory_datatype.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/theory_array_base.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/theory_array_base.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/theory_dl.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/theory_dl.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/smt_for_each_relevant_expr.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/smt_for_each_relevant_expr.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/smt_quick_checker.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/smt_quick_checker.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/theory_user_propagator.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/theory_user_propagator.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/theory_array.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/theory_array.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/seq_axioms.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/seq_axioms.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/smt_enode.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/smt_enode.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/smt_context_pp.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/smt_context_pp.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/smt_consequences.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/smt_consequences.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/theory_bv.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/theory_bv.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/smt_justification.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/smt_justification.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/theory_array_full.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/theory_array_full.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/arith_eq_adapter.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/arith_eq_adapter.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/theory_sls.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/theory_sls.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/seq_offset_eq.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/seq_offset_eq.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/smt_solver.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/smt_solver.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/smt_quantifier.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/smt_quantifier.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/theory_char.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/theory_char.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/smt_case_split_queue.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/smt_case_split_queue.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/smt_internalizer.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/smt_internalizer.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/smt_model_finder.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/smt_model_finder.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/smt_model_generator.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/smt_model_generator.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/mam.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/mam.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/smt_model_checker.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/smt_model_checker.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/smt_theory.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/smt_theory.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/smt_context_stat.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/smt_context_stat.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/theory_intblast.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/theory_intblast.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/smt_checker.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/smt_checker.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/qi_queue.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/qi_queue.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/smt_lookahead.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/smt_lookahead.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/tactic/smt_tactic_core.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/tactic/smt_tactic_core.o: Failed to read file's magic number\n"
+    ],
+    [
+      "smt/tactic/unit_subsumption_tactic.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/smt/tactic/unit_subsumption_tactic.o: Failed to read file's magic number\n"
+    ],
+    [
+      "ackermannization/ackermannize_bv_tactic.o",
+      "readelf: Error: worktrees/round4_S_release/z3/build/ackermannization/ackermannize_bv_tactic.o: Failed to read file's magic number\n"
+    ]
+  ],
+  "archives_rebuilt_to_restore_indices": [
+    "qe/qe.a",
+    "qe/mbp/mbp.a",
+    "qe/lite/qe_lite.a",
+    "ast/ast.a",
+    "ast/macros/macros.a",
+    "ast/euf/euf.a",
+    "ast/rewriter/rewriter.a",
+    "ast/rewriter/bit_blaster/bit_blaster.a",
+    "ast/simplifiers/simplifiers.a",
+    "ast/proofs/proofs.a",
+    "ast/converters/converters.a",
+    "ast/sls/ast_sls.a",
+    "ast/normal_forms/normal_forms.a",
+    "ast/fpa/fpa.a",
+    "ast/pattern/pattern.a",
+    "ast/substitution/substitution.a",
+    "nlsat/nlsat.a",
+    "nlsat/tactic/nlsat_tactic.a",
+    "tactic/tactic.a",
+    "tactic/sls/sls_tactic.a",
+    "tactic/ufbv/ufbv_tactic.a",
+    "tactic/aig/aig_tactic.a",
+    "tactic/fpa/fpa_tactics.a",
+    "tactic/bv/bv_tactics.a",
+    "tactic/core/core_tactics.a",
+    "tactic/arith/arith_tactics.a",
+    "tactic/smtlogics/smtlogic_tactics.a",
+    "tactic/portfolio/portfolio.a",
+    "tactic/fd_solver/fd_solver.a",
+    "api/api.a",
+    "model/model.a",
+    "sat/sat.a",
+    "sat/sat_solver/sat_solver.a",
+    "sat/tactic/sat_tactic.a",
+    "sat/smt/sat_smt.a",
+    "params/params.a",
+    "sampler/sampler.a",
+    "cmd_context/cmd_context.a",
+    "cmd_context/extra_cmds/extra_cmds.a",
+    "muz/bmc/bmc.a",
+    "muz/dataflow/dataflow.a",
+    "muz/base/muz.a",
+    "muz/ddnf/ddnf.a",
+    "muz/rel/rel.a",
+    "muz/fp/fp.a",
+    "muz/tab/tab.a",
+    "muz/spacer/spacer.a",
+    "muz/transforms/transforms.a",
+    "muz/clp/clp.a",
+    "opt/opt.a",
+    "math/interval/interval.a",
+    "math/grobner/grobner.a",
+    "math/subpaving/subpaving.a",
+    "math/subpaving/tactic/subpaving_tactic.a",
+    "math/hilbert/hilbert.a",
+    "math/dd/dd.a",
+    "math/realclosure/realclosure.a",
+    "math/simplex/simplex.a",
+    "math/automata/automata.a",
+    "math/lp/lp.a",
+    "math/polynomial/polynomial.a",
+    "solver/solver.a",
+    "solver/assertions/solver_assertions.a",
+    "util/util.a",
+    "smt/smt.a",
+    "smt/tactic/smt_tactic.a",
+    "smt/params/smt_params.a",
+    "smt/proto_model/proto_model.a",
+    "parsers/smt2/smt2parser.a",
+    "parsers/util/parser_util.a",
+    "ackermannization/ackermannization.a"
+  ],
+  "historical_files_touched": false
+}

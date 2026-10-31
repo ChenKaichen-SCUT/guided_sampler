@@ -1,0 +1,26 @@
+{
+  "formal_retries": 0,
+  "storage_failures_and_recovery": [
+    "S_storage_failure.json",
+    "S_release_storage_recovery.json",
+    "S_sanitize_ELF_check.json",
+    "S_sanitize_link_termination.json",
+    "S_sanitize_storage_recovery.json",
+    "S_ELF_recovery_verified.json"
+  ],
+  "test_fixture_failure": "../correctness/S_release_01/failure_explanation.json",
+  "offline_RNG_auditor_failure": {
+    "reason": "nlohmann stream extraction throws at EOF; changed to getline and parse one JSON record per line",
+    "sampling_implementation_changed": false,
+    "controlled_host_runs_repeated": false,
+    "negative_logs": "../correctness/soft_host_*/S_ref/rng_audit.stderr.prior_failed"
+  },
+  "final_validation_attempts": {
+    "release": "S_release_02",
+    "sanitize": "S_sanitize_01",
+    "end_to_end": [
+      "soft_host_release",
+      "soft_host_sanitize"
+    ]
+  }
+}

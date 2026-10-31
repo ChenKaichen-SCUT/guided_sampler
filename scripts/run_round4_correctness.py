@@ -11,9 +11,10 @@ def run(cmd,name,ee=None,timeout=300):
  write(out/(name+'.command.json'),{'command':list(map(str,cmd)),'exit_code':r.returncode,'seconds':time.monotonic()-start});assert r.returncode==0,(name,r.stderr[-3000:]);assert 'runtime error:' not in r.stderr and 'ERROR: AddressSanitizer' not in r.stderr;return r.stdout
 checks={}
 names=['canonical','kernel','abandon','parallel','index_outcome','exposure','budgets','demands','semantic_cases','semantic_correspondence']
+if a.stage=='S':names+=['soft_reference','soft_lifecycle']
 def compile_one(name):
- binary=ROOT/'build'/f'round4-{a.stage}-{name}-{a.variant}';source=ROOT/('tests/round4/test_semantic_correspondence.cpp' if name=='semantic_correspondence' else 'tests/round3/semantic_cases.cpp' if name=='semantic_cases' else f'tests/round2/{name}.cpp')
- cmd=['g++','-std=c++20','-O1' if a.variant=='sanitize' else '-O3','-g','-I'+str(ROOT/'include/round4'),'-I'+str(ROOT/'include/round2'),'-I'+str(ROOT/'include'),'-I'+str(prefix/'include'),str(source),'-L'+str(prefix/'lib'),'-Wl,-rpath,'+str(prefix/'lib'),'-lz3','-o',str(binary)]
+ binary=ROOT/'build'/f'round4-{a.stage}-{name}-{a.variant}';source=ROOT/('tests/round4/test_soft_lifecycle.cpp' if name=='soft_lifecycle' else 'tests/round4/test_soft_reference.cpp' if name=='soft_reference' else 'tests/round4/test_semantic_correspondence.cpp' if name=='semantic_correspondence' else 'tests/round3/semantic_cases.cpp' if name=='semantic_cases' else f'tests/round2/{name}.cpp')
+ cmd=['g++','-std=c++20','-O1' if a.variant=='sanitize' else '-O3','-g','-I'+str(ROOT/('include/round4/soft_reference' if a.stage=='S' else 'include/round4')),'-I'+str(ROOT/'include/round2'),'-I'+str(ROOT/'include'),'-I'+str(prefix/'include'),str(source),'-L'+str(prefix/'lib'),'-Wl,-rpath,'+str(prefix/'lib'),'-lz3','-o',str(binary)]
  if a.variant=='sanitize':cmd+=['-fsanitize=address,undefined','-fno-omit-frame-pointer']
  run(cmd,name+'-compile');return binary
 with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:binaries=dict(zip(names,pool.map(compile_one,names)))

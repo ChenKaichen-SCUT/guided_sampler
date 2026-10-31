@@ -1,0 +1,7 @@
+{
+  "reason": "link already reports undefined references; independent ELF scan proves 73 damaged objects from prior storage failure",
+  "terminated_linker_pids": [
+    14626
+  ],
+  "formal_runs": 0
+}

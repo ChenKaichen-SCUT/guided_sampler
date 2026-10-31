@@ -1,0 +1,33 @@
+[
+  {
+    "variant": "release",
+    "attempt": "01",
+    "failure": "filesystem full / I/O failure during compilation",
+    "failed_targets_removed": [
+      "muz/spacer/spacer_global_generalizer.h.node",
+      "muz/spacer/spacer_callback.o",
+      "muz/spacer/spacer_conjecture.o",
+      "tactic/smtlogics/qflia_tactic.o"
+    ],
+    "formal_experiment_runs": 0,
+    "continuation_log": "S_release_02.log"
+  },
+  {
+    "variant": "sanitize",
+    "attempt": "01",
+    "failure": "filesystem full / I/O failure during compilation",
+    "failed_targets_removed": [
+      "smt/qi_queue.h.node",
+      "math/lp/nex_creator.o",
+      "qe/qe_bool_plugin.o",
+      "qe/qe_array_plugin.o",
+      "qe/qe_datatype_plugin.o",
+      "math/simplex/model_based_opt.o",
+      "qe/nlarith_util.o",
+      "math/polynomial/upolynomial.o",
+      "muz/spacer/spacer_antiunify.o"
+    ],
+    "formal_experiment_runs": 0,
+    "continuation_log": "S_sanitize_02.log"
+  }
+]

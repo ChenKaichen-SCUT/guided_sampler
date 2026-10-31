@@ -1,0 +1,12 @@
+{
+  "release": {
+    "objects_checked": 841,
+    "invalid_objects": [],
+    "passed": true
+  },
+  "sanitize": {
+    "objects_checked": 841,
+    "invalid_objects": [],
+    "passed": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "frozen_before_S_runs": true,
+  "primary_common_checklist": "all four Round3 Q2=SAT/Q4=UNSAT cases; no additional oracle",
+  "shared_initial_demand_pool": "intersection of one-sided targets observed in each mode first formal model, restricted to any known-one/known-zero catalog rule; record first-model equality",
+  "secondary_cov_selected_pool": "union of S_cov action targets, evaluated in both modes; policy-selected descriptive denominator, not causal estimator",
+  "outcomes": [
+    "pure value",
+    "official reached and desired value",
+    "new covered after opposite previously observed"
+  ],
+  "solver_calls": 0,
+  "answers_used_online": false,
+  "same_internal_state_claim": false
+}
