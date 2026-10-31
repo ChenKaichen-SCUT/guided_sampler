@@ -1,0 +1,305 @@
++ /usr/bin/python3 /mnt/Space1/SMT_Sampling/guided_sampler/scripts/patch_round4_z3.py M /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round4_M_sanitize
+A-only patch applied; old B patch was never applied: /tmp/round3-patch-bz22mfo3
+Round3 read-only hooks applied: /tmp/round4-patch-vy8tj224
+R4 M patch generated /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round4_M_sanitize
++ make -C /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round4_M_sanitize/z3/build -j 12
+make: Entering directory '/tmp/guided_sampler_round4_worktrees/M_sanitize/z3/build'
+src/shell/install_tactic.cpp
+src/api/api_fpa.cpp
+src/api/api_ast_vector.cpp
+src/api/api_parsers.cpp
+src/api/api_rcf.cpp
+src/api/api_params.cpp
+src/api/api_special_relations.cpp
+src/api/api_qe.cpp
+src/api/api_model.cpp
+src/api/api_pb.cpp
+src/api/api_bv.cpp
+src/api/api_array.cpp
+src/api/api_datatype.cpp
+src/api/api_seq.cpp
+src/api/api_tactic.cpp
+src/api/api_numeral.cpp
+src/api/api_ast_map.cpp
+src/api/api_arith.cpp
+src/api/api_quant.cpp
+src/api/api_config_params.cpp
+src/api/api_goal.cpp
+src/api/api_stats.cpp
+src/api/api_context.cpp
+src/api/api_ast.cpp
+src/api/api_algebraic.cpp
+src/api/api_polynomial.cpp
+src/opt/maxsmt.cpp
+src/opt/wmax.cpp
+src/opt/maxcore.cpp
+src/opt/opt_cmds.cpp
+src/opt/optsmt.cpp
+src/opt/maxlex.cpp
+src/opt/opt_context.cpp
+src/opt/opt_parse.cpp
+src/opt/sortmax.cpp
+src/tactic/portfolio/smt_strategic_solver.cpp
+src/muz/fp/horn_tactic.cpp
+src/muz/tab/tab_context.cpp
+src/muz/spacer/spacer_generalizers.cpp
+src/muz/spacer/spacer_legacy_frames.cpp
+src/muz/spacer/spacer_context.cpp
+src/muz/rel/dl_external_relation.cpp
+src/muz/transforms/dl_transforms.cpp
+src/muz/transforms/dl_mk_slice.cpp
+src/muz/transforms/dl_mk_unfold.cpp
+src/muz/transforms/dl_mk_rule_inliner.cpp
+src/muz/transforms/dl_mk_interp_tail_simplifier.cpp
+src/muz/transforms/dl_mk_subsumption_checker.cpp
+src/muz/transforms/dl_mk_coalesce.cpp
+src/muz/base/dl_rule_subsumption_index.cpp
+src/muz/base/dl_costs.cpp
+src/muz/base/dl_rule_transformer.cpp
+src/muz/base/rule_properties.cpp
+src/muz/base/dl_rule_set.cpp
+src/qe/qe_cmd.cpp
+src/sat/smt/q_model_fixer.cpp
+src/sat/smt/q_eval.cpp
+src/sat/smt/q_solver.cpp
+src/sat/smt/q_ematch.cpp
+src/sat/smt/q_mbi.cpp
+src/smt/seq_ne_solver.cpp
+src/smt/seq_eq_solver.cpp
+src/smt/theory_dense_diff_logic.cpp
+src/smt/smt2_extra_cmds.cpp
+src/smt/theory_arith.cpp
+src/ast/pattern/expr_pattern_match.cpp
+src/parsers/smt2/marshal.cpp
+src/cmd_context/simplify_cmd.cpp
+src/cmd_context/cmd_util.cpp
+src/cmd_context/tactic_cmds.cpp
+src/cmd_context/eval_cmd.cpp
+src/cmd_context/echo_tactic.cpp
+src/cmd_context/basic_cmds.cpp
+src/cmd_context/simplifier_cmds.cpp
+src/cmd_context/cmd_context_to_goal.cpp
+src/cmd_context/cmd_context.cpp
+src/cmd_context/parametric_cmd.cpp
+src/tactic/tactic.cpp
+src/math/lp/gomory.cpp
+src/math/lp/int_gcd_test.cpp
+src/math/lp/dioph_eq.cpp
+src/math/lp/lar_solver.cpp
+src/math/lp/static_matrix.cpp
+src/math/lp/lp_primal_core_solver.cpp
+src/math/lp/hnf_cutter.cpp
+src/math/lp/int_cube.cpp
+src/ast/converters/generic_model_converter.cpp
+src/api/dll/install_tactic.cpp
+src/shell/opt_frontend.cpp
+src/shell/smtlib_frontend.cpp
+src/api/api_opt.cpp
+src/api/api_datalog.cpp
+src/api/api_solver.cpp
+src/muz/fp/dl_register_engine.cpp
+src/muz/bmc/dl_bmc_engine.cpp
+src/muz/spacer/spacer_dl_interface.cpp
+src/muz/rel/dl_instruction.cpp
+../src/api/api_solver.cpp: In function ‘void Z3_solver_pop(Z3_context, Z3_solver, unsigned int)’:
+../src/api/api_solver.cpp:527:13: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  527 |             if(to_solver_ref(s)->m_semantic_last)to_solver_ref(s)->m_semantic_last->semantic_snapshots.clear();to_solver_ref(s)->m_semantic_last.reset();
+      |             ^~
+../src/api/api_solver.cpp:527:112: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  527 |             if(to_solver_ref(s)->m_semantic_last)to_solver_ref(s)->m_semantic_last->semantic_snapshots.clear();to_solver_ref(s)->m_semantic_last.reset();
+      |                                                                                                                ^~~~~~~~~~~~~
+src/muz/rel/dl_table_relation.cpp
+src/muz/rel/dl_table.cpp
+src/muz/rel/dl_lazy_table.cpp
+src/muz/rel/dl_interval_relation.cpp
+src/muz/rel/udoc_relation.cpp
+src/muz/rel/dl_base.cpp
+src/muz/rel/dl_product_relation.cpp
+src/muz/rel/dl_mk_simple_joins.cpp
+src/muz/rel/dl_mk_similarity_compressor.cpp
+src/muz/rel/dl_sparse_table.cpp
+src/muz/rel/aig_exporter.cpp
+src/muz/rel/check_relation.cpp
+src/muz/rel/karr_relation.cpp
+src/muz/transforms/dl_mk_synchronize.cpp
+src/sat/smt/q_theory_checker.cpp
+src/smt/smt_context.cpp
+src/parsers/smt2/smt2scanner.cpp
+src/parsers/smt2/smt2parser.cpp
+src/math/lp/int_branch.cpp
+src/math/lp/mon_eq.cpp
+src/math/lp/random_updater.cpp
+src/math/lp/int_solver.cpp
+In file included from ../src/smt/smt_context.cpp:21:
+../src/smt/a_internal_view.h: In member function ‘a2::Op a2::InternalView::op(a2::InternalView::Expr) const’:
+../src/smt/a_internal_view.h:9:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+    9 |   if(!is_app(e))return Other;auto a=to_app(e);auto k=a->get_decl_kind();auto f=a->get_family_id();
+      |   ^~
+../src/smt/a_internal_view.h:9:30: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+    9 |   if(!is_app(e))return Other;auto a=to_app(e);auto k=a->get_decl_kind();auto f=a->get_family_id();
+      |                              ^~~~
+../src/smt/smt_context.cpp: In destructor ‘virtual smt::context::~context()’:
+../src/smt/smt_context.cpp:197:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  197 |     if(m_S)m_S->flush();m_S.reset();m_S_pending.reset();
+      |     ^~
+../src/smt/smt_context.cpp:197:25: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  197 |     if(m_S)m_S->flush();m_S.reset();m_S_pending.reset();
+      |                         ^~~
+src/muz/fp/dl_cmds.cpp
+In file included from ../src/smt/smt_context.cpp:1824:
+../src/smt/a_context.inc: In member function ‘void smt::context::A_binding_snapshot()’:
+../src/smt/a_context.inc:30:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |     if(!m_A||!m_A->diagnostic||m_A_snapshot_done)return;m_A_snapshot_done=true;auto snapshot_start=a2::Clock::now();
+      |     ^~
+../src/smt/a_context.inc:30:57: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |     if(!m_A||!m_A->diagnostic||m_A_snapshot_done)return;m_A_snapshot_done=true;auto snapshot_start=a2::Clock::now();
+      |                                                         ^~~~~~~~~~~~~~~~~
+../src/smt/a_context.inc:37:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   37 |         if(!bool_var2expr(v))continue;a2::Work work;work.deadline=deadline;auto n=a2::canonical(view,bool_var2expr(v),work);
+      |         ^~
+../src/smt/a_context.inc:37:39: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   37 |         if(!bool_var2expr(v))continue;a2::Work work;work.deadline=deadline;auto n=a2::canonical(view,bool_var2expr(v),work);
+      |                                       ^~
+In file included from ../src/smt/smt_context.cpp:1824:
+../src/smt/a_context.inc: In member function ‘void smt::context::A_finalize(lbool)’:
+../src/smt/a_context.inc:120:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  120 |     if(!m_A)return;std::lock_guard<std::recursive_mutex> lock(m_A->mutex);auto& b=m_A->call(m_A_call);b["result"]=result==l_true?"sat":result==l_false?"unsat":"unknown";b["original_reason_unknown"]=result==l_undef?(m_A_last_exposure?"canceled":last_failure_as_string()):"";
+      |     ^~
+../src/smt/a_context.inc:120:20: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  120 |     if(!m_A)return;std::lock_guard<std::recursive_mutex> lock(m_A->mutex);auto& b=m_A->call(m_A_call);b["result"]=result==l_true?"sat":result==l_false?"unsat":"unknown";b["original_reason_unknown"]=result==l_undef?(m_A_last_exposure?"canceled":last_failure_as_string()):"";
+      |                    ^~~
+src/muz/rel/dl_compiler.cpp
+src/muz/rel/dl_sieve_relation.cpp
+src/muz/rel/rel_context.cpp
+src/muz/rel/dl_finite_product_relation.cpp
+src/muz/rel/dl_relation_manager.cpp
+src/muz/rel/dl_check_table.cpp
+src/muz/rel/dl_mk_explanations.cpp
+src/math/lp/factorization.cpp
+src/shell/datalog_frontend.cpp
+src/muz/rel/dl_bound_relation.cpp
+src/math/lp/nla_monotone_lemmas.cpp
+src/math/lp/nla_divisions.cpp
+src/math/lp/nla_core.cpp
+src/math/lp/nra_solver.cpp
+src/math/lp/nla_tangent_lemmas.cpp
+src/math/lp/monomial_bounds.cpp
+src/math/lp/horner.cpp
+src/math/lp/nla_order_lemmas.cpp
+src/math/lp/nla_common.cpp
+src/math/lp/nla_grobner.cpp
+src/math/lp/factorization_factory_imp.cpp
+src/math/lp/nla_solver.cpp
+src/math/lp/nla_intervals.cpp
+src/math/lp/nla_basics_lemmas.cpp
+src/math/lp/nla_powers.cpp
+src/math/lp/emonics.cpp
+src/smt/theory_lra.cpp
+src/sat/smt/arith_solver.cpp
+src/sat/smt/arith_value.cpp
+src/sat/smt/arith_axioms.cpp
+src/sat/smt/arith_diagnostics.cpp
+src/sat/smt/euf_solver.cpp
+src/sat/smt/arith_internalize.cpp
+g++  -o z3  shell/drat_frontend.o shell/install_tactic.o shell/opt_frontend.o shell/dimacs_frontend.o shell/gparams_register_modules.o shell/mem_initializer.o shell/main.o shell/smtlib_frontend.o shell/z3_log_frontend.o shell/datalog_frontend.o api/api.a cmd_context/extra_cmds/extra_cmds.a opt/opt.a tactic/portfolio/portfolio.a tactic/fpa/fpa_tactics.a tactic/ufbv/ufbv_tactic.a tactic/smtlogics/smtlogic_tactics.a muz/fp/fp.a muz/bmc/bmc.a muz/ddnf/ddnf.a muz/tab/tab.a muz/clp/clp.a muz/spacer/spacer.a muz/rel/rel.a muz/transforms/transforms.a muz/dataflow/dataflow.a muz/base/muz.a tactic/fd_solver/fd_solver.a sat/sat_solver/sat_solver.a qe/qe.a tactic/sls/sls_tactic.a smt/tactic/smt_tactic.a tactic/bv/bv_tactics.a nlsat/tactic/nlsat_tactic.a sat/tactic/sat_tactic.a sat/smt/sat_smt.a smt/smt.a sampler/sampler.a smt/proto_model/proto_model.a math/subpaving/tactic/subpaving_tactic.a solver/assertions/solver_assertions.a tactic/arith/arith_tactics.a tactic/core/core_tactics.a ast/fpa/fpa.a ackermannization/ackermannization.a tactic/aig/aig_tactic.a ast/pattern/pattern.a parsers/smt2/smt2parser.a cmd_context/cmd_context.a solver/solver.a qe/lite/qe_lite.a qe/mbp/mbp.a tactic/tactic.a ast/simplifiers/simplifiers.a ast/proofs/proofs.a ast/substitution/substitution.a ast/rewriter/bit_blaster/bit_blaster.a math/lp/lp.a nlsat/nlsat.a sat/sat.a ast/sls/ast_sls.a ast/converters/converters.a model/model.a ast/macros/macros.a ast/normal_forms/normal_forms.a ast/rewriter/rewriter.a math/grobner/grobner.a ast/euf/euf.a parsers/util/parser_util.a smt/params/smt_params.a ast/ast.a math/subpaving/subpaving.a math/realclosure/realclosure.a params/params.a math/automata/automata.a math/hilbert/hilbert.a math/simplex/simplex.a math/dd/dd.a math/interval/interval.a math/polynomial/polynomial.a util/util.a -lpthread -fsanitize=address,undefined
+g++ -o libz3.so -shared api/dll/install_tactic.o api/dll/dll.o api/dll/gparams_register_modules.o api/dll/mem_initializer.o api/api_commands.o api/api_opt.o api/api_fpa.o api/api_ast_vector.o api/api_parsers.o api/api_rcf.o api/api_params.o api/api_datalog.o api/api_special_relations.o api/api_qe.o api/z3_replayer.o api/api_model.o api/api_bv.o api/api_pb.o api/api_array.o api/api_datatype.o api/api_seq.o api/api_tactic.o api/api_numeral.o api/api_log_macros.o api/api_ast_map.o api/api_arith.o api/api_quant.o api/api_config_params.o api/api_solver.o api/api_goal.o api/api_stats.o api/api_context.o api/api_log.o api/api_ast.o api/api_algebraic.o api/api_polynomial.o cmd_context/extra_cmds/extra_cmds.a opt/opt.a tactic/portfolio/portfolio.a tactic/fpa/fpa_tactics.a tactic/ufbv/ufbv_tactic.a tactic/smtlogics/smtlogic_tactics.a muz/fp/fp.a muz/bmc/bmc.a muz/ddnf/ddnf.a muz/tab/tab.a muz/clp/clp.a muz/spacer/spacer.a muz/rel/rel.a muz/transforms/transforms.a muz/dataflow/dataflow.a muz/base/muz.a tactic/fd_solver/fd_solver.a sat/sat_solver/sat_solver.a qe/qe.a tactic/sls/sls_tactic.a smt/tactic/smt_tactic.a tactic/bv/bv_tactics.a nlsat/tactic/nlsat_tactic.a sat/tactic/sat_tactic.a sat/smt/sat_smt.a smt/smt.a sampler/sampler.a smt/proto_model/proto_model.a math/subpaving/tactic/subpaving_tactic.a solver/assertions/solver_assertions.a tactic/arith/arith_tactics.a tactic/core/core_tactics.a ast/fpa/fpa.a ackermannization/ackermannization.a tactic/aig/aig_tactic.a ast/pattern/pattern.a parsers/smt2/smt2parser.a cmd_context/cmd_context.a solver/solver.a qe/lite/qe_lite.a qe/mbp/mbp.a tactic/tactic.a ast/simplifiers/simplifiers.a ast/proofs/proofs.a ast/substitution/substitution.a ast/rewriter/bit_blaster/bit_blaster.a math/lp/lp.a nlsat/nlsat.a sat/sat.a ast/sls/ast_sls.a ast/converters/converters.a model/model.a ast/macros/macros.a ast/normal_forms/normal_forms.a ast/rewriter/rewriter.a math/grobner/grobner.a ast/euf/euf.a parsers/util/parser_util.a smt/params/smt_params.a ast/ast.a math/subpaving/subpaving.a math/realclosure/realclosure.a params/params.a math/automata/automata.a math/hilbert/hilbert.a math/simplex/simplex.a math/dd/dd.a math/interval/interval.a math/polynomial/polynomial.a util/util.a -lpthread  -Wl,-soname,libz3.so
+ln -f -s ../libz3.so python
+Z3 was successfully built.
+Z3Py scripts can already be executed in the 'build/python' directory.
+Z3Py scripts stored in arbitrary directories can be executed if the 'build/python' directory is added to the PYTHONPATH environment variable and the 'build' directory is added to the LD_LIBRARY_PATH environment variable.
+Use the following command to install Z3 at prefix /mnt/Space1/SMT_Sampling/guided_sampler/deps/round4_M_sanitize.
+    sudo make install
+make: Leaving directory '/tmp/guided_sampler_round4_worktrees/M_sanitize/z3/build'
++ make -C /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round4_M_sanitize/z3/build -j 12 install
+make: Entering directory '/tmp/guided_sampler_round4_worktrees/M_sanitize/z3/build'
+Z3 was successfully installed.
+make: Leaving directory '/tmp/guided_sampler_round4_worktrees/M_sanitize/z3/build'
++ /usr/bin/python3 /mnt/Space1/SMT_Sampling/guided_sampler/scripts/patch_round4_host.py M /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round4_M_sanitize
+Prepared guided host (common measurement + optional metadata bridge)
++ make -C /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round4_M_sanitize/HighDiv -j 12 Z3_PREFIX=/mnt/Space1/SMT_Sampling/guided_sampler/deps/round4_M_sanitize CXXFLAGS=-O1 -g -std=c++20 -Wall -fsanitize=address,undefined -fno-omit-frame-pointer
+make: Entering directory '/tmp/guided_sampler_round4_worktrees/M_sanitize/HighDiv'
+g++ -I/mnt/Space1/SMT_Sampling/guided_sampler/deps/round4_M_sanitize/include -I/mnt/Space1/SMT_Sampling/guided_sampler/include/round4 -I/mnt/Space1/SMT_Sampling/guided_sampler/include/round2 -I/mnt/Space1/SMT_Sampling/guided_sampler/include -DGUIDED_BUILD -O1 -g -std=c++20 -Wall -fsanitize=address,undefined -fno-omit-frame-pointer -MMD -MP -c src/main/main.cpp -o build/main/main.o
+g++ -I/mnt/Space1/SMT_Sampling/guided_sampler/deps/round4_M_sanitize/include -I/mnt/Space1/SMT_Sampling/guided_sampler/include/round4 -I/mnt/Space1/SMT_Sampling/guided_sampler/include/round2 -I/mnt/Space1/SMT_Sampling/guided_sampler/include -DGUIDED_BUILD -O1 -g -std=c++20 -Wall -fsanitize=address,undefined -fno-omit-frame-pointer -MMD -MP -c src/sampler/liasampler.cpp -o build/sampler/liasampler.o
+g++ -I/mnt/Space1/SMT_Sampling/guided_sampler/deps/round4_M_sanitize/include -I/mnt/Space1/SMT_Sampling/guided_sampler/include/round4 -I/mnt/Space1/SMT_Sampling/guided_sampler/include/round2 -I/mnt/Space1/SMT_Sampling/guided_sampler/include -DGUIDED_BUILD -O1 -g -std=c++20 -Wall -fsanitize=address,undefined -fno-omit-frame-pointer -MMD -MP -c src/sampler/sampler.cpp -o build/sampler/sampler.o
+In file included from src/sampler/sampler.cpp:1:
+src/sampler/sampler.h: In constructor ‘sampler::Sampler::Sampler(z3::context*, std::string, std::string, size_t, double)’:
+src/sampler/sampler.h:21:18: warning: ‘sampler::Sampler::c’ will be initialized after [-Wreorder]
+   21 |     z3::context& c;
+      |                  ^
+src/sampler/sampler.h:14:17: warning:   ‘std::string sampler::Sampler::smtFilePath’ [-Wreorder]
+   14 |     std::string smtFilePath;
+      |                 ^~~~~~~~~~~
+In file included from src/sampler/sampler.cpp:1:
+src/sampler/sampler.h:44:5: warning:   when initialized here [-Wreorder]
+   44 |     Sampler(z3::context* _c, std::string _smtFilePath, std::string _samplesFileDir, size_t _maxNumSamples, double _maxTimeLimit)
+      |     ^~~~~~~
+In file included from src/main/../sampler/liasampler.h:7,
+                 from src/main/main.cpp:1:
+src/main/../sampler/sampler.h: In constructor ‘sampler::Sampler::Sampler(z3::context*, std::string, std::string, size_t, double)’:
+src/main/../sampler/sampler.h:21:18: warning: ‘sampler::Sampler::c’ will be initialized after [-Wreorder]
+   21 |     z3::context& c;
+      |                  ^
+src/main/../sampler/sampler.h:14:17: warning:   ‘std::string sampler::Sampler::smtFilePath’ [-Wreorder]
+   14 |     std::string smtFilePath;
+      |                 ^~~~~~~~~~~
+In file included from src/main/../sampler/liasampler.h:7,
+                 from src/main/main.cpp:1:
+src/main/../sampler/sampler.h:44:5: warning:   when initialized here [-Wreorder]
+   44 |     Sampler(z3::context* _c, std::string _smtFilePath, std::string _samplesFileDir, size_t _maxNumSamples, double _maxTimeLimit)
+      |     ^~~~~~~
+In file included from src/sampler/liasampler.h:7,
+                 from src/sampler/liasampler.cpp:1:
+src/sampler/sampler.h: In constructor ‘sampler::Sampler::Sampler(z3::context*, std::string, std::string, size_t, double)’:
+src/sampler/sampler.h:21:18: warning: ‘sampler::Sampler::c’ will be initialized after [-Wreorder]
+   21 |     z3::context& c;
+      |                  ^
+src/sampler/sampler.h:14:17: warning:   ‘std::string sampler::Sampler::smtFilePath’ [-Wreorder]
+   14 |     std::string smtFilePath;
+      |                 ^~~~~~~~~~~
+In file included from src/sampler/liasampler.h:7,
+                 from src/sampler/liasampler.cpp:1:
+src/sampler/sampler.h:44:5: warning:   when initialized here [-Wreorder]
+   44 |     Sampler(z3::context* _c, std::string _smtFilePath, std::string _samplesFileDir, size_t _maxNumSamples, double _maxTimeLimit)
+      |     ^~~~~~~
+In file included from /mnt/Space1/SMT_Sampling/guided_sampler/include/round4/session.hpp:2,
+                 from src/main/../sampler/liasampler.h:8,
+                 from src/main/main.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/include/round4/a_guidance_bridge.hpp: In member function ‘void guided::AGuidanceBridge::commit(const guided::Evaluation&)’:
+/mnt/Space1/SMT_Sampling/guided_sampler/include/round4/a_guidance_bridge.hpp:47:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   47 |   if(disabled)return;auto start=Clock::now();if(index->active)throw std::runtime_error("A index modified during active check");
+      |   ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/include/round4/a_guidance_bridge.hpp:47:22: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   47 |   if(disabled)return;auto start=Clock::now();if(index->active)throw std::runtime_error("A index modified during active check");
+      |                      ^~~~
+In file included from /mnt/Space1/SMT_Sampling/guided_sampler/include/round4/session.hpp:2,
+                 from src/main/../sampler/liasampler.h:8,
+                 from src/main/main.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/include/round4/a_guidance_bridge.hpp: In member function ‘guided::Json guided::AGuidanceBridge::end_check(z3::solver&)’:
+/mnt/Space1/SMT_Sampling/guided_sampler/include/round4/a_guidance_bridge.hpp:66:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   66 |   if(disabled)return Json::object();auto start=Clock::now();current=Json::parse(Z3_solver_get_A_guidance_stats(solver.ctx(),solver));Z3_solver_clear_A_guidance(solver.ctx(),solver);solver.ctx().check_error();
+      |   ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/include/round4/a_guidance_bridge.hpp:66:37: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   66 |   if(disabled)return Json::object();auto start=Clock::now();current=Json::parse(Z3_solver_get_A_guidance_stats(solver.ctx(),solver));Z3_solver_clear_A_guidance(solver.ctx(),solver);solver.ctx().check_error();
+      |                                     ^~~~
+In file included from /mnt/Space1/SMT_Sampling/guided_sampler/include/round4/session.hpp:2,
+                 from src/sampler/liasampler.h:8,
+                 from src/sampler/liasampler.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/include/round4/a_guidance_bridge.hpp: In member function ‘void guided::AGuidanceBridge::commit(const guided::Evaluation&)’:
+/mnt/Space1/SMT_Sampling/guided_sampler/include/round4/a_guidance_bridge.hpp:47:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   47 |   if(disabled)return;auto start=Clock::now();if(index->active)throw std::runtime_error("A index modified during active check");
+      |   ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/include/round4/a_guidance_bridge.hpp:47:22: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   47 |   if(disabled)return;auto start=Clock::now();if(index->active)throw std::runtime_error("A index modified during active check");
+      |                      ^~~~
+In file included from /mnt/Space1/SMT_Sampling/guided_sampler/include/round4/session.hpp:2,
+                 from src/sampler/liasampler.h:8,
+                 from src/sampler/liasampler.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/include/round4/a_guidance_bridge.hpp: In member function ‘guided::Json guided::AGuidanceBridge::end_check(z3::solver&)’:
+/mnt/Space1/SMT_Sampling/guided_sampler/include/round4/a_guidance_bridge.hpp:66:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   66 |   if(disabled)return Json::object();auto start=Clock::now();current=Json::parse(Z3_solver_get_A_guidance_stats(solver.ctx(),solver));Z3_solver_clear_A_guidance(solver.ctx(),solver);solver.ctx().check_error();
+      |   ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/include/round4/a_guidance_bridge.hpp:66:37: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   66 |   if(disabled)return Json::object();auto start=Clock::now();current=Json::parse(Z3_solver_get_A_guidance_stats(solver.ctx(),solver));Z3_solver_clear_A_guidance(solver.ctx(),solver);solver.ctx().check_error();
+      |                                     ^~~~
+g++ -O1 -g -std=c++20 -Wall -fsanitize=address,undefined -fno-omit-frame-pointer build/main/main.o build/sampler/liasampler.o build/sampler/sampler.o -fsanitize=address,undefined -L/mnt/Space1/SMT_Sampling/guided_sampler/deps/round4_M_sanitize/lib -Wl,-rpath,/mnt/Space1/SMT_Sampling/guided_sampler/deps/round4_M_sanitize/lib -lz3 -o highdiv
+make: Leaving directory '/tmp/guided_sampler_round4_worktrees/M_sanitize/HighDiv'

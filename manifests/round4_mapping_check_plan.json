@@ -1,0 +1,19 @@
+{
+  "maximum_real_mapping_XOR_checks": 16,
+  "seconds_each": 2,
+  "selection": "first distinct native expression / first original node in fixed M run, query, decision order; declaration identity required; freeze selection before answers",
+  "unrestricted_original_declaration_space": true,
+  "oracle_answers_online": false,
+  "M_tests_template_XOR_checks_per_variant": 32,
+  "demand_feasibility": {
+    "max_cases": 6,
+    "queries_per_case": 2,
+    "timeout_ms": 2000,
+    "selection": "first six distinct instance/node/bit/desired tuples with post-first-model new mapping and unequal raw positive support; fixed run/query/decision order, lowest sorted target first",
+    "queries": [
+      "F+G",
+      "F+inherited_assumptions+G"
+    ],
+    "answers_online": false
+  }
+}

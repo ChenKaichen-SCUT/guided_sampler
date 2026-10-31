@@ -1,0 +1,25 @@
+{
+  "build_failures": [
+    {
+      "file": "round4-M-release-build02.log",
+      "reason": "Bounded raw-expression export used the mutable ref_vector element proxy where expr* was required; corrected to refs.get(index) before any experiment."
+    }
+  ],
+  "formal_retries": 0,
+  "S_started_before_M_audit": false,
+  "notes": "Initial M builds preceded the added raw-expression boundary export; final source and library hashes must match both Release and sanitizer validation.",
+  "build_continuations": [
+    {
+      "file": "round4-M-sanitize-build01.log",
+      "signal": "SIGINT",
+      "reason": "Release build/test has finished. Resume sanitizer with 12 jobs and the final bounded-expression export fix; no experiment had started.",
+      "new_log": "round4-M-sanitize-build02.log"
+    }
+  ],
+  "runtime_correctness_failures": 0,
+  "final_validation_attempts": {
+    "release": "M_release_02",
+    "sanitize": "M_sanitize_01"
+  },
+  "initial_release_attempt": "M_release_01 passed before shared declaration identity consolidation; retained"
+}

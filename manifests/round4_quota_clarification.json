@@ -1,0 +1,8 @@
+{
+  "source": "explicit user answer to quota ambiguity before S implementation",
+  "coverage_advice_limit_per_external_check": 4,
+  "reference_advice_ordinary_decision_window": 64,
+  "reference_uses_coverage_quota": false,
+  "both_actual_overrides_charge_explicit_and_whole_query_exposure": true,
+  "reference_repeated_key_phase": "suppress repeated identical native key/reference phase in one check; no target marked achieved"
+}

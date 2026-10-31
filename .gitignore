@@ -15,3 +15,7 @@ __pycache__/
 /results/round3_semantics/oracle/
 /results/round3_semantics/micro/
 /results/round3_semantics/mapping/
+# Round 4 raw evidence is preserved in a verified lossless archive.
+/results/round4/runs/
+/results/round4/correctness/
+/results/round4/mapping_checks/

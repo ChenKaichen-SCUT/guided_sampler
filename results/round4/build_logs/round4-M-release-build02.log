@@ -1,0 +1,42 @@
++ /usr/bin/python3 /mnt/Space1/SMT_Sampling/guided_sampler/scripts/patch_round4_z3.py M /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round4_M_release
+A-only patch applied; old B patch was never applied: /tmp/round3-patch-dw65zz4n
+Round3 read-only hooks applied: /tmp/round4-patch-kpfaluia
+R4 M patch generated /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round4_M_release
++ make -C /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round4_M_release/z3/build -j 12
+make: Entering directory '/tmp/guided_sampler_round4_worktrees/M_release/z3/build'
+src/tactic/tactic.cpp
+src/ast/converters/generic_model_converter.cpp
+In file included from ../src/tactic/tactic.cpp:22:
+../src/model/semantic_trace.h: In member function ‘void s3::PendingSemanticSnapshot::flush()’:
+../src/model/semantic_trace.h:28:285: error: cannot convert ‘ref_vector<expr, ast_manager>::element_ref’ to ‘expr*’
+   28 |  void flush(){if(flushed)return;flushed=true;Json row=base();row["kind"]="semantic_snapshot";row["overflow"]=overflow;row["encounters"]=encounters;for(auto& rec:row["encounters"])if(rec.contains("mapping_atom_slot"))rec["actual_atom"]=ast(refs[rec["mapping_atom_slot"].get<unsigned>()]);row["events"]=events;row["watches"]=Json::array();for(unsigned i=0;i<watches.size();++i){auto const& w=watches[i];Json a=w.action;a["watch"]=i;a["decision_id"]=w.decision;a["native_var"]=w.var;a["actual_atom"]=ast(w.atom);a["last_assignment_token"]=w.token;a["token_active"]=w.active;row["watches"].push_back(a);}row["direct_entry_hooks_complete"]=true;row["indirect_euf_causal_association"]="only_synchronously_originating_queue_entries";write(row);}
+      |                                                                                                                                                                                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                                                                                                                                                                                                                                                             |
+      |                                                                                                                                                                                                                                                                                             ref_vector<expr, ast_manager>::element_ref
+In file included from ../src/tactic/tactic.cpp:22:
+../src/model/semantic_trace.h:27:17: note:   initializing argument 1 of ‘s3::Json s3::PendingSemanticSnapshot::ast(expr*)’
+   27 |  Json ast(expr* e){Json ds=Json::array();std::set<unsigned> seen,decls;std::vector<expr*> todo{e};while(!todo.empty()){expr* n=todo.back();todo.pop_back();if(!seen.insert(n->get_id()).second||!is_app(n))continue;auto* a=to_app(n);auto* f=a->get_decl();if(f->get_family_id()==null_family_id&&decls.insert(f->get_id()).second){Json dom=Json::array();for(unsigned j=0;j<f->get_arity();++j)dom.push_back(sort_text(f->get_domain(j),m));ds.push_back({{"decl_id",f->get_id()},{"name",f->get_name().str()},{"skolem",f->is_skolem()},{"arity",f->get_arity()},{"domain",dom},{"range",sort_text(f->get_range(),m)}});}for(expr* c:*a)todo.push_back(c);}return {{"expr",text(e,m)},{"sort",sort_text(e->get_sort(),m)},{"ast_id",e->get_id()},{"manager_identity",reinterpret_cast<uintptr_t>(&m)},{"declarations",ds}};}
+      |           ~~~~~~^
+In file included from ../src/ast/converters/generic_model_converter.cpp:31:
+../src/model/semantic_trace.h: In member function ‘void s3::PendingSemanticSnapshot::flush()’:
+../src/model/semantic_trace.h:28:285: error: cannot convert ‘ref_vector<expr, ast_manager>::element_ref’ to ‘expr*’
+   28 |  void flush(){if(flushed)return;flushed=true;Json row=base();row["kind"]="semantic_snapshot";row["overflow"]=overflow;row["encounters"]=encounters;for(auto& rec:row["encounters"])if(rec.contains("mapping_atom_slot"))rec["actual_atom"]=ast(refs[rec["mapping_atom_slot"].get<unsigned>()]);row["events"]=events;row["watches"]=Json::array();for(unsigned i=0;i<watches.size();++i){auto const& w=watches[i];Json a=w.action;a["watch"]=i;a["decision_id"]=w.decision;a["native_var"]=w.var;a["actual_atom"]=ast(w.atom);a["last_assignment_token"]=w.token;a["token_active"]=w.active;row["watches"].push_back(a);}row["direct_entry_hooks_complete"]=true;row["indirect_euf_causal_association"]="only_synchronously_originating_queue_entries";write(row);}
+      |                                                                                                                                                                                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+      |                                                                                                                                                                                                                                                                                             |
+      |                                                                                                                                                                                                                                                                                             ref_vector<expr, ast_manager>::element_ref
+In file included from ../src/ast/converters/generic_model_converter.cpp:31:
+../src/model/semantic_trace.h:27:17: note:   initializing argument 1 of ‘s3::Json s3::PendingSemanticSnapshot::ast(expr*)’
+   27 |  Json ast(expr* e){Json ds=Json::array();std::set<unsigned> seen,decls;std::vector<expr*> todo{e};while(!todo.empty()){expr* n=todo.back();todo.pop_back();if(!seen.insert(n->get_id()).second||!is_app(n))continue;auto* a=to_app(n);auto* f=a->get_decl();if(f->get_family_id()==null_family_id&&decls.insert(f->get_id()).second){Json dom=Json::array();for(unsigned j=0;j<f->get_arity();++j)dom.push_back(sort_text(f->get_domain(j),m));ds.push_back({{"decl_id",f->get_id()},{"name",f->get_name().str()},{"skolem",f->is_skolem()},{"arity",f->get_arity()},{"domain",dom},{"range",sort_text(f->get_range(),m)}});}for(expr* c:*a)todo.push_back(c);}return {{"expr",text(e,m)},{"sort",sort_text(e->get_sort(),m)},{"ast_id",e->get_id()},{"manager_identity",reinterpret_cast<uintptr_t>(&m)},{"declarations",ds}};}
+      |           ~~~~~~^
+make: *** [Makefile:2398: tactic/tactic.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Makefile:1472: ast/converters/generic_model_converter.o] Error 1
+make: Leaving directory '/tmp/guided_sampler_round4_worktrees/M_release/z3/build'
+Traceback (most recent call last):
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/build_round4.py", line 26, in <module>
+    run(['make','-C',tree/'z3/build','-j',a.jobs],env=env)
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/build_round4.py", line 8, in run
+    def run(c,**kw):print('+',' '.join(map(str,c)),flush=True);subprocess.run(list(map(str,c)),check=True,**kw)
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['make', '-C', '/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round4_M_release/z3/build', '-j', '12']' returned non-zero exit status 2.
