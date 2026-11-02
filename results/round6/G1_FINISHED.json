@@ -1,0 +1,60 @@
+{
+  "count": 6,
+  "no_retries": true,
+  "results": [
+    {
+      "exit_code": 0,
+      "user_cpu": 0.14457699999999998,
+      "system_cpu": 0.032128,
+      "max_rss_kb": 37852,
+      "wall_from_batch_release": 0.24393300799420103,
+      "completed_monotonic": 185040.550588049,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 0.166068,
+      "system_cpu": 0.015448,
+      "max_rss_kb": 37772,
+      "wall_from_batch_release": 0.24809277500025928,
+      "completed_monotonic": 185040.554747819,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 1.729341,
+      "system_cpu": 0.011953,
+      "max_rss_kb": 36556,
+      "wall_from_batch_release": 1.8113343489822,
+      "completed_monotonic": 185042.117989726,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 1.746489,
+      "system_cpu": 0.012017,
+      "max_rss_kb": 36556,
+      "wall_from_batch_release": 1.823021723976126,
+      "completed_monotonic": 185042.129677673,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 1.8587449999999999,
+      "system_cpu": 0.008022,
+      "max_rss_kb": 34452,
+      "wall_from_batch_release": 1.928079451987287,
+      "completed_monotonic": 185042.234734771,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 1.795014,
+      "system_cpu": 0.020123,
+      "max_rss_kb": 34328,
+      "wall_from_batch_release": 1.8780643289792351,
+      "completed_monotonic": 185042.184719731,
+      "no_retry": true
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+id,H,M,passed,errors,reason,initial_unsat,best,last_improvement_step,exit_step_exact,search_wall,search_cpu,process_wall,initialization_count,R0_R3_match,progress_match,old_recorded_search_wall,local_wall_difference_not_end_to_end,trace_dropped
+G_rr,ref,ref,True,[],sat_ccss_solution_only,147,0,218,219,0.034956804,0.026922822,0.24393300799420103,1,True,True,0.038553927,0.0035971230000000007,0
+G_cr,full,ref,True,[],sat_ccss_solution_only,147,0,218,219,0.031301959,0.025941045000000024,0.24809277500025928,1,True,True,0.042367415,0.011065456000000001,0
+G_rc,ref,full,True,[],ccss_stagnation_yield,147,25,115,65651,1.628223009,1.616905105,1.8113343489822,1,True,True,52.004691863,50.376468853999995,0
+G_cc,full,full,True,[],ccss_stagnation_yield,147,25,115,65651,1.635122345,1.627648384,1.823021723976126,1,True,True,52.011552174,50.376429829,0
+G_r0,ref,empty,True,[],ccss_stagnation_yield,279,38,153,65689,1.795999206,1.7796820599999998,1.928079451987287,1,True,True,52.013987686,50.21798848,0
+G_c0,full,empty,True,[],ccss_stagnation_yield,279,38,153,65689,1.745331352,1.7290737379999999,1.8780643289792351,1,True,True,52.0170457,50.271714347999996,0

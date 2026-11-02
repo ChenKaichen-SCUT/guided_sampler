@@ -1,0 +1,31 @@
+{
+  "id": "G_cc",
+  "H": "full",
+  "M": "full",
+  "cpu": 6,
+  "cutoff": 52,
+  "parent_seconds": 65,
+  "directory": "/mnt/Space1/SMT_Sampling/guided_sampler/results/round6/replay_guard/G_cc",
+  "command": [
+    "/mnt/Space1/SMT_Sampling/guided_sampler/build/round6-ccss-replay-release",
+    "/mnt/Space1/SMT_Sampling/guided_sampler/results/round5/capture/full/recipe.json",
+    "/mnt/Space1/SMT_Sampling/guided_sampler/results/round5/capture/full/map.json",
+    "/mnt/Space1/SMT_Sampling/guided_sampler/results/round6/replay_guard/G_cc",
+    "G_cc",
+    "0"
+  ],
+  "environment": {
+    "PATH": "/root/.elan/bin:/root/.codex/tmp/arg0-linux/codex-arg0RJuUWT:/root/.elan/bin:/root/.elan/bin:/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.vscode-server/extensions/openai.chatgpt-26.1021.22027-linux-x64/bin/linux-x86_64",
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "GUIDED_CCSS_STAGNATION_GUARD": "1"
+  },
+  "recipe": "results/round5/capture/full/recipe.json",
+  "recipe_sha256": "2c00cd77450197b5264a7aa8567c056c8e909735a45b5a56d55b54a1cfb191ff",
+  "map": "results/round5/capture/full/map.json",
+  "map_sha256": "0e74f60e3cac961a6fe40797d82ea4f1fe7098d2866bbbdcf7410819db129492",
+  "binary_sha256": "30a4bb036606d47cf07bf10be721e6acc2034c96a88215b61fb149a24cf1d058",
+  "ready": "/mnt/Space1/SMT_Sampling/guided_sampler/results/round6/replay_guard_batch/G_cc.ready.json",
+  "gate": "/mnt/Space1/SMT_Sampling/guided_sampler/results/round6/replay_guard_batch/RELEASE.json",
+  "cwd": "/mnt/Space1/SMT_Sampling/guided_sampler/results/round6/replay_guard/G_cc"
+}
