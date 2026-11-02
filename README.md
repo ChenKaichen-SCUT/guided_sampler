@@ -1,3 +1,21 @@
+# Guided Sampler，第五轮弱目标与 CCSS 交换成本诊断
+
+本分支 `round5-weak-target-ccss-diagnosis` 从 `ec5b2ab415a38a4e89b76ec5b427ce23f0fb0550` 建立。
+完成 9 次 W 短会话、2 个原生初始化重建和 8 次固定交叉重放；Release、ASan/UBSan 与独立审计通过。
+未重跑 HighDiv、追加 seed、启动 900 秒矩阵或启用 B；已有正式会话不得重新执行。
+
+[第五轮中文报告](docs/round5_weak_targets_and_ccss_results.zh.md)｜[执行指引](docs/round5/execution_guide.zh.md)｜
+[实现冻结](manifests/round5_implementation.json)｜[审计](results/round5/audit_summary.json)｜[完整原始证据恢复](archives/round5/RESTORE.md)
+
+avoid 占用额度，但没有挤掉去重后可执行 support 的证据；support-only 未提高三个实例的全式覆盖。
+convert 的慢搜索在可信重放中稳定跟随实际 M_full；M_ref 在 219 步成功，M_full 与空 map 到 52 秒截止。
+81 个 W 正式模型合法；3 个重放 SAT 仅验证约简 CCSS，不进入正式样本。
+三次 convert 会话有退出尾部延迟，正式计分仍截止 60 秒；未据此宣称优于完整 HighDiv。
+
+第四轮资料：[语义映射与软参考报告](docs/round4_mapping_and_soft_reference_results.zh.md)。以下保留历史轮次说明。
+
+---
+
 # Guided Sampler，第三轮有限语义诊断
 
 本分支 `round3-a-semantic-diagnosis` 从 `2f839861acf0a8cec78e05dac256b98b0dc30099` 建立。
