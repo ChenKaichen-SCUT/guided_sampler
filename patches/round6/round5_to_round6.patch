@@ -1,0 +1,281 @@
+--- a/z3/src/sampler/guard_bridge.inc
++++ b/z3/src/sampler/guard_bridge.inc
+@@ -0,0 +1,2 @@
++void ls_sampler::r6_begin(std::unordered_map<std::string,std::string> const& map){m_r6.begin(map,mt,_cutoff);}
++void ls_sampler::r6_finish(std::string const& reason,bool produced){m_r6.finish(mt,reason,produced);}
+--- a/z3/src/sampler/sampler.cpp
++++ b/z3/src/sampler/sampler.cpp
+@@ -6,6 +6,7 @@
+ 
+ namespace sampler {
+ #include "ccss_probe.inc"
++#include "guard_bridge.inc"
+ 
+ std::string processNegNumber(const std::string& input) {
+     std::regex pattern(R"(\(\s*(-\s*\d+)\s*\))");
+@@ -282,6 +283,7 @@
+     std::vector<bool> has_model_value(_vars.size(), false);
+     auto model_value = [&](const std::string& name, __int128_t& value) {
+         auto found = last_cdcl_model.find(name);
++        if(m_r6.active)m_r6.read(name,found==last_cdcl_model.end()?r6::J(nullptr):r6::J(found->second));
+         if (found == last_cdcl_model.end()){if(m_r5)m_r5->read(name,"missing",nullptr);return false;}
+         try {
+             value = string_to_int128(processNegNumber(found->second));
+@@ -388,6 +390,7 @@
+ }
+ 
+ void ls_sampler::initialize() {
++    ++m_r6.guard.initialization_count;
+     r5::PhaseTimer initialize_timer(m_r5.get(),"initialize_nested_in_search");
+     clear_prev_data();
+     construct_solution_score();  // Initializing a variable to take a value
+@@ -480,6 +483,7 @@
+         improve = true;
+         _best_found_cost = _unsat_clauses->size();
+     }
++    m_r6.guard.observe(_best_found_cost);
+     if(improve&&m_r5&&m_r5->active&&m_r5->first_initialized)r5_point("best_improved");
+     return improve;
+ }
+@@ -1373,6 +1377,7 @@
+ }
+ 
+ bool ls_sampler::ls_sampling() {
++    r6::SearchTimer r6_search_timer(m_r6,mt);
+     r5::PhaseTimer search_timer(m_r5.get(),"ls_sampling_inclusive");
+     _total_start = std::chrono::steady_clock::now();
+ 
+@@ -1383,6 +1388,7 @@
+     for (variable v : _tmp_vars) {
+         if (v.low_bound > v.upper_bound) {
+             _best_found_cost = std::max(1, _best_found_cost);
++            m_r6.reason="arith_unknown";
+             return false;
+         }
+     }
+@@ -1397,6 +1403,8 @@
+         print_interal_data_strcture(tout););
+ 
+     const bool found = search();
++    if(found)m_r6.reason="sat";
++    else if(m_r6.reason=="unknown")m_r6.reason=is_overflow?"arith_unknown":"native_exhausted";
+     if (!found) _best_found_cost = std::max(1, _best_found_cost);
+ 
+ #ifdef DEBUG
+@@ -1423,8 +1431,9 @@
+     __int128_t change_value = 0;
+     _outer_layer_step = 1;
+     for (_step = 1; _step < _max_step; ++_step) {
++        m_r6.guard.tick(_step);
+         if(m_r5&&m_r5->active&&(_step&(_step-1))==0)r5_point("power_of_two_step");
+-        if (_step % 1000 == 0 && TimeElapsed_total() > _cutoff){if(m_r5)m_r5->exit="native_cutoff";break;}
++        if (_step % 1000 == 0 && TimeElapsed_total() > _cutoff){m_r6.reason="native_cutoff";if(m_r5)m_r5->exit="native_cutoff";break;}
+         if (_overflow_cnt > 10 && _use_interval_move) {
+ #ifdef VERBOSE
+             std::cout << "restart(overflow)...\n";
+@@ -1446,7 +1455,7 @@
+             no_improve_cnt = 0;
+             // A recovery initialization can itself overflow. Its wrapped
+             // clause deltas cannot establish a satisfying assignment.
+-            if (is_overflow) continue;
++            if (is_overflow) {if(m_r6.guard.should_yield(_unsat_clauses->size())){m_r6.reason="ccss_stagnation_yield";if(m_r5)m_r5->exit=m_r6.reason;return false;}continue;}
+         }
+ 
+         if (0 == _unsat_clauses->size()) {
+@@ -1506,6 +1515,7 @@
+             swap_from_small_weight_clause();
+         }
+         no_improve_cnt = (update_best_solution()) ? 0 : (no_improve_cnt + 1);
++        if(m_r6.guard.should_yield(_unsat_clauses->size())){m_r6.reason="ccss_stagnation_yield";if(m_r5)m_r5->exit=m_r6.reason;return false;}
+     }
+     return false;
+ }
+--- a/z3/src/sampler/sampler.h
++++ b/z3/src/sampler/sampler.h
+@@ -1,3 +1,4 @@
++#include "util/r6_guard_trace.hpp"
+ #include "util/r5_replay_recipe.hpp"
+ #pragma once
+ #include <signal.h>
+@@ -90,6 +91,9 @@
+ 
+ class ls_sampler {
+    public:
++    r6::GuardTrace m_r6;
++    void r6_begin(std::unordered_map<std::string,std::string> const&);
++    void r6_finish(std::string const&,bool);
+     std::unique_ptr<r5::Probe> m_r5;
+     r5::J r5_state(bool initialized)const;
+     void r5_begin_replay(r5::J const&,std::string const&,bool);
+@@ -220,6 +224,7 @@
+           smooth_probability(3),
+           _cutoff(timeout) {
+         mt.seed(seed);
++        m_r6.seed=seed;
+         if(r5::enabled())m_r5.reset(new r5::Probe(seed,timeout,mt));
+     }
+     ls_sampler(const ls_sampler&) = delete;
+--- a/z3/src/util/r6_stagnation_guard.hpp
++++ b/z3/src/util/r6_stagnation_guard.hpp
+@@ -0,0 +1,26 @@
++#pragma once
++#include <algorithm>
++#include <climits>
++#include <cstdint>
++namespace r6 {
++struct StagnationGuard {
++    static constexpr uint64_t limit=65536;
++    bool enabled=false,valid=false,yielded=false;
++    uint64_t step=0,last_global_improvement_step=0,max_stagnation_steps=0;
++    int initial_global_best=INT_MAX,best_global_cost=INT_MAX;
++    unsigned initialization_count=0;
++    void reset(bool on){*this=StagnationGuard();enabled=on;}
++    void tick(uint64_t s){step=s;update_span();}
++    void update_span(){if(valid)max_stagnation_steps=std::max(max_stagnation_steps,step-last_global_improvement_step);}
++    void observe(int cost){
++        update_span();
++        if(!valid){valid=true;initial_global_best=cost;best_global_cost=cost;last_global_improvement_step=step;}
++        else if(cost<best_global_cost){best_global_cost=cost;last_global_improvement_step=step;}
++    }
++    bool should_yield(unsigned unsat){
++        update_span();
++        if(enabled&&valid&&unsat!=0&&best_global_cost>0&&step-last_global_improvement_step>=limit){yielded=true;return true;}
++        return false;
++    }
++};
++}
+--- a/z3/src/util/r6_sha256.hpp
++++ b/z3/src/util/r6_sha256.hpp
+@@ -0,0 +1,23 @@
++#pragma once
++#include <array>
++#include <cstdint>
++#include <iomanip>
++#include <sstream>
++#include <string>
++#include <vector>
++namespace r6 {
++inline std::string sha256(std::string const& input){
++    static constexpr uint32_t k[]={0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2};
++    std::array<uint32_t,8> h={0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19};
++    auto rr=[](uint32_t x,unsigned n){return (x>>n)|(x<<(32-n));};
++    std::vector<uint8_t> data(input.begin(),input.end());uint64_t bits=uint64_t(data.size())*8;data.push_back(0x80);while(data.size()%64!=56)data.push_back(0);for(int i=7;i>=0;--i)data.push_back(uint8_t(bits>>(8*i)));
++    for(size_t offset=0;offset<data.size();offset+=64){
++        uint32_t w[64];for(unsigned i=0;i<16;++i){w[i]=0;for(unsigned j=0;j<4;++j)w[i]=(w[i]<<8)|data[offset+4*i+j];}
++        for(unsigned i=16;i<64;++i){auto a=w[i-15],b=w[i-2];w[i]=w[i-16]+(rr(a,7)^rr(a,18)^(a>>3))+w[i-7]+(rr(b,17)^rr(b,19)^(b>>10));}
++        auto a=h[0],b=h[1],c=h[2],d=h[3],e=h[4],f=h[5],g=h[6],z=h[7];
++        for(unsigned i=0;i<64;++i){uint32_t t1=z+(rr(e,6)^rr(e,11)^rr(e,25))+((e&f)^((~e)&g))+k[i]+w[i];uint32_t t2=(rr(a,2)^rr(a,13)^rr(a,22))+((a&b)^(a&c)^(b&c));z=g;g=f;f=e;e=d+t1;d=c;c=b;b=a;a=t1+t2;}
++        h[0]+=a;h[1]+=b;h[2]+=c;h[3]+=d;h[4]+=e;h[5]+=f;h[6]+=g;h[7]+=z;
++    }
++    std::ostringstream s;s<<std::hex<<std::setfill('0');for(auto x:h)s<<std::setw(8)<<x;return s.str();
++}
++}
+--- a/z3/src/util/r6_guard_trace.hpp
++++ b/z3/src/util/r6_guard_trace.hpp
+@@ -0,0 +1,42 @@
++#pragma once
++#include "r6_stagnation_guard.hpp"
++#include "r6_sha256.hpp"
++#include <nlohmann/json.hpp>
++#include <chrono>
++#include <ctime>
++#include <cstdlib>
++#include <fstream>
++#include <random>
++#include <atomic>
++namespace r6 {
++using J=nlohmann::json;using Clock=std::chrono::steady_clock;
++inline bool on(){auto p=std::getenv("GUIDED_CCSS_STAGNATION_GUARD");return p&&std::string(p)=="1";}
++inline bool trace_on(){return std::getenv("GUIDED_R6_TRACE_DIR")!=nullptr;}
++inline double cpu(){timespec ts;clock_gettime(CLOCK_THREAD_CPUTIME_ID,&ts);return ts.tv_sec+ts.tv_nsec*1e-9;}
++inline double wall(Clock::time_point t){return std::chrono::duration<double>(Clock::now()-t).count();}
++inline std::string rng_hash(std::mt19937 const& mt){std::ostringstream s;s<<mt;return sha256(s.str());}
++struct GuardTrace {
++    StagnationGuard guard;
++    bool active=false,begun=false,emitted=false,search_started=false;
++    uint64_t call_id=0,query=0,seed=0;double cutoff=0,search_cpu=0,search_wall=0;
++    std::string reason="unknown",error,map_sha,rng_before,rng_search_before;
++    J consumed=J::object();Clock::time_point whole_start;
++    template<class Map>void begin(Map const& original,std::mt19937 const& mt,double native_cutoff){
++        active=trace_on();begun=true;emitted=false;search_started=false;reason="unknown";error.clear();consumed=J::object();cutoff=native_cutoff;guard.reset(on());whole_start=Clock::now();
++        if(active){static std::atomic<uint64_t> next{0};call_id=++next;auto q=std::getenv("GUIDED_R6_QUERY");query=q?std::stoull(q):0;Map copy=original;J map=copy;map_sha=sha256(map.dump());rng_before=rng_hash(mt);setenv("GUIDED_R6_LAST_CALL_ID",std::to_string(call_id).c_str(),1);}
++    }
++    void read(std::string const& name,J raw){if(active)consumed[name]=std::move(raw);}
++    void finish(std::mt19937 const& mt,std::string const& why,bool produced){
++        if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
++        if(!active)return;
++        setenv("GUIDED_R6_LAST_REASON",reason.c_str(),1);
++        J j={{"call_id",call_id},{"source_query_id",query},{"guard_enabled",guard.enabled},{"stagnation_limit",StagnationGuard::limit},{"map_sha256",map_sha},{"consumed_map_sha256",sha256(consumed.dump())},{"consumed_map",consumed},{"initial_global_best",guard.valid?J(guard.initial_global_best):J(nullptr)},{"last_global_best",guard.valid?J(guard.best_global_cost):J(nullptr)},{"last_improvement_step",guard.valid?J(guard.last_global_improvement_step):J(nullptr)},{"exit_step_exact",search_started?J(guard.step):J(nullptr)},{"max_stagnation_steps",search_started?J(guard.max_stagnation_steps):J(nullptr)},{"initialization_count",guard.initialization_count},{"restart_count",guard.initialization_count?guard.initialization_count-1:0},{"exit_reason",reason},{"exception_text",error},{"search_cpu_seconds",search_started?J(search_cpu):J(nullptr)},{"search_wall_seconds",search_started?J(search_wall):J(nullptr)},{"whole_ccss_wall_seconds",wall(whole_start)},{"rng_before_sha256",rng_before},{"rng_search_before_sha256",rng_search_before.empty()?J(nullptr):J(rng_search_before)},{"rng_after_sha256",rng_hash(mt)},{"model_produced",produced},{"native_cutoff_seconds",cutoff},{"seed",seed},{"search_started",search_started},{"map_hash_encoding","SHA256 of sorted UTF8 compact JSON; absent consumed key = null"}};
++        std::ofstream f(std::string(std::getenv("GUIDED_R6_TRACE_DIR"))+"/ccss_guard.jsonl",std::ios::app);f<<j.dump()<<'\n';if(!f)throw std::runtime_error("round6 guard log write failure");
++    }
++};
++struct SearchTimer {
++    GuardTrace& t;Clock::time_point started=Clock::now();double started_cpu=0;
++    SearchTimer(GuardTrace& t,std::mt19937 const& mt):t(t){t.guard.reset(on());t.search_started=true;started_cpu=cpu();if(t.active)t.rng_search_before=rng_hash(mt);}
++    ~SearchTimer(){t.search_wall=wall(started);t.search_cpu=cpu()-started_cpu;t.guard.update_span();}
++};
++}
+--- a/z3/src/smt/smt_context.cpp
++++ b/z3/src/smt/smt_context.cpp
+@@ -3618,6 +3618,7 @@
+ 
+         if (m_fparams.m_ls_sampling) {  // sampling flag
+             if (inconsistent()) return check_finalize(l_false);
++            m_ls_sampler->r6_begin(m.last_CDCL_model);
+             try {
+                 if(m_ls_sampler->m_r5){m_ls_sampler->m_r5->activate(r5::snapshot(&m,m.last_CDCL_model));if(m_ls_sampler->m_r5->active){auto rem=std::getenv("GUIDED_R5_REMAINING");m_ls_sampler->m_r5->recipe["session_remaining_at_host_entry"]=rem?rem:"not_recorded";}}
+                 {r5::PhaseTimer literal_timer(m_ls_sampler->m_r5.get(),"expr_bool_var_map");expr_bool_var_map(m_ls_sampler);}
+@@ -3626,15 +3627,19 @@
+                     m_model_generator->reset();
+                     m_proto_model = m_model_generator->mk_model_sampling(m_ls_sampler);
+                     if(m_ls_sampler->m_r5){m_ls_sampler->m_r5->exit="sat_delivered";m_ls_sampler->m_r5->flush();}
++                    m_ls_sampler->r6_finish("sat",true);
+                     return check_finalize(l_true);
+                 }
+             } catch (const std::exception& error) {
++                m_ls_sampler->m_r6.error=error.what();
++                m_ls_sampler->r6_finish(dynamic_cast<std::out_of_range const*>(&error)?"arith_unknown":"exception",false);
+                 if(m_ls_sampler->m_r5){m_ls_sampler->m_r5->exit=std::string("exception:")+error.what();m_ls_sampler->m_r5->flush();}
+                 // Inputs outside the sampler's finite arithmetic domain remain
+                 // available to CDCL(T); they are not local-search models.
+                 return check_finalize(l_undef);
+             }
+             if(m_ls_sampler->m_r5)m_ls_sampler->m_r5->flush();
++            m_ls_sampler->r6_finish(m_ls_sampler->m_r6.reason,false);
+             return check_finalize(l_undef);
+         } else {
+             return check_finalize(search());
+--- a/round6_include/session.hpp
++++ b/round6_include/session.hpp
+@@ -67,15 +67,19 @@
+     }
+     void begin_query(std::string const& phase,z3::expr_vector const& asms,unsigned request,unsigned grant) {
+         source=phase;if(phase=="CDCL")++cdcl_count;++query;requested=request;granted=grant;assumptions=Json::array();for(auto e:asms)assumptions.push_back(e.to_string());query_begin=elapsed();
++        if(std::getenv("GUIDED_R6_TRACE_DIR")){setenv("GUIDED_R6_QUERY",std::to_string(query).c_str(),1);setenv("GUIDED_R6_LAST_REASON","not_entered",1);unsetenv("GUIDED_R6_LAST_CALL_ID");}
+         if(std::getenv("GUIDED_R5_EXCHANGE_DIR")){setenv("GUIDED_R5_QUERY",std::to_string(query).c_str(),1);setenv("GUIDED_R5_ROLE",phase.c_str(),1);setenv("GUIDED_R5_REMAINING",std::to_string(std::max(0.0,wall-elapsed())).c_str(),1);}
+         if(semantic&&guidance&&phase=="CDCL") {Json masks=Json::array();for(auto const& n:guidance->ast.nodes)masks.push_back({std::to_string(n.seen0),std::to_string(n.seen1)});std::ofstream f(dir+"/coverage_snapshots.jsonl",std::ios::app);f<<Json({{"query_id",query},{"coverage_version",guidance->ast.version},{"seen_masks",masks}}).dump()<<'\n';}
+     }
+     void end_query(z3::solver& solver,z3::check_result result,Json stats=Json::object(),double check_end=-1) {
+         double end=check_end<0?elapsed():check_end;std::ostringstream ss;ss<<solver.statistics();
++        std::string r6_raw=std::getenv("GUIDED_R6_LAST_REASON")?std::getenv("GUIDED_R6_LAST_REASON"):"not_recorded";
++        std::string r6_reason=end>=wall?"host_deadline":interrupted?"host_cancelled":result==z3::sat?"sat":result==z3::unsat?"unsat":r6_raw;
++        if(source=="CCSS"&&std::getenv("GUIDED_R6_TRACE_DIR")){std::ofstream f(dir+"/ccss_guard_host.jsonl",std::ios::app);f<<Json({{"source_query_id",query},{"native_call_id",std::getenv("GUIDED_R6_LAST_CALL_ID")?Json(std::stoull(std::getenv("GUIDED_R6_LAST_CALL_ID"))):Json(nullptr)},{"start",query_begin},{"host_end",end},{"whole_host_ccss_wall_seconds",end-query_begin},{"exit_reason",r6_reason},{"native_exit_reason",r6_raw},{"host_result",result==z3::sat?"sat":result==z3::unsat?"unsat":"unknown"},{"host_deadline_reached",end>=wall},{"host_cancelled",bool(interrupted)},{"model_produced_by_check",result==z3::sat},{"guard_enabled",std::getenv("GUIDED_CCSS_STAGNATION_GUARD")&&std::string(std::getenv("GUIDED_CCSS_STAGNATION_GUARD"))=="1"}}).dump()<<'\n';}
+         queries<<Json({{"query",query},{"source",source},{"start",query_begin},{"end",end},{"check_seconds",end-query_begin},{"guidance_prepare_seconds",prepare_seconds},
+             {"requested_timeout",requested},{"granted_timeout",granted},{"timeout_unit",source=="CDCL"?"milliseconds":"seconds"},
+             {"assumptions",assumptions},{"highdiv_ls_seed",source=="CCSS"?Json(highdiv_seed):Json(nullptr)},{"result",result==z3::sat?"sat":result==z3::unsat?"unsat":"unknown"},
+-            {"reason_unknown",result==z3::unknown?solver.reason_unknown():""},{"statistics_cumulative",ss.str()},{"guidance",stats}}).dump()<<'\n';queries.flush();last_guidance=stats;
++            {"ccss_exit_reason",source=="CCSS"?Json(r6_reason):Json(nullptr)},{"ccss_native_exit_reason",source=="CCSS"?Json(r6_raw):Json(nullptr)},{"reason_unknown",result==z3::unknown?solver.reason_unknown():""},{"statistics_cumulative",ss.str()},{"guidance",stats}}).dump()<<'\n';queries.flush();last_guidance=stats;
+         if(guidance)guidance->query_finished(source,query,end-query_begin,result==z3::sat?"sat":result==z3::unsat?"unsat":"unknown",stats);
+     }
+     bool commit(z3::model const& m,z3::expr const& formula,std::ofstream& samples) {
+--- a/HighDiv/makefile
++++ b/HighDiv/makefile
+@@ -3,7 +3,7 @@
+ 
+ CXX ?= g++
+ Z3_PREFIX ?= $(abspath ../venv)
+-CPPFLAGS += -I$(Z3_PREFIX)/include -I/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round5_release/round5_include -I/mnt/Space1/SMT_Sampling/guided_sampler/include/round4 -I/mnt/Space1/SMT_Sampling/guided_sampler/include/round2 -I/mnt/Space1/SMT_Sampling/guided_sampler/include -DGUIDED_BUILD
++CPPFLAGS += -I$(Z3_PREFIX)/include -I/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include -I/mnt/Space1/SMT_Sampling/guided_sampler/include/round4 -I/mnt/Space1/SMT_Sampling/guided_sampler/include/round2 -I/mnt/Space1/SMT_Sampling/guided_sampler/include -DGUIDED_BUILD
+ # Preserve the original artifact's HighDiv optimization level.
+ CXXFLAGS ?= -g -O0 -Wall -std=c++20
+ LDFLAGS += -L$(Z3_PREFIX)/lib -Wl,-rpath,$(Z3_PREFIX)/lib

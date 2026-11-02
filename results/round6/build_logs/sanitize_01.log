@@ -1,0 +1,2412 @@
++ cp -a --reflink=auto /tmp/guided_sampler_round5_worktrees/sanitize/z3 /tmp/guided_sampler_round6_worktrees/sanitize/z3
++ cp -a --reflink=auto /tmp/guided_sampler_round5_worktrees/sanitize/HighDiv /tmp/guided_sampler_round6_worktrees/sanitize/HighDiv
++ /usr/bin/python3 -m venv /mnt/Space1/SMT_Sampling/guided_sampler/deps/round6_sanitize
++ /usr/bin/python3 /mnt/Space1/SMT_Sampling/guided_sampler/scripts/round6/patch_sources.py /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize sanitize
+Generated Round6 guard overlay /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize
++ /mnt/Space1/SMT_Sampling/guided_sampler/deps/round6_sanitize/bin/python3 scripts/mk_make.py --python --prefix=/mnt/Space1/SMT_Sampling/guided_sampler/deps/round6_sanitize --pypkgdir=/mnt/Space1/SMT_Sampling/guided_sampler/deps/round6_sanitize/lib/python3.10/site-packages --debug
+opt = --python, arg = 
+opt = --prefix, arg = /mnt/Space1/SMT_Sampling/guided_sampler/deps/round6_sanitize
+opt = --pypkgdir, arg = /mnt/Space1/SMT_Sampling/guided_sampler/deps/round6_sanitize/lib/python3.10/site-packages
+opt = --debug, arg = 
+Set Assembly Version (DEFAULT): 4 14 2 0
+New component: 'util'
+New component: 'polynomial'
+New component: 'interval'
+New component: 'dd'
+New component: 'simplex'
+New component: 'hilbert'
+New component: 'automata'
+New component: 'params'
+New component: 'realclosure'
+New component: 'subpaving'
+New component: 'ast'
+New component: 'smt_params'
+New component: 'parser_util'
+New component: 'euf'
+New component: 'grobner'
+New component: 'rewriter'
+New component: 'normal_forms'
+New component: 'macros'
+New component: 'model'
+New component: 'converters'
+New component: 'ast_sls'
+New component: 'sat'
+New component: 'nlsat'
+New component: 'lp'
+New component: 'bit_blaster'
+New component: 'substitution'
+New component: 'proofs'
+New component: 'simplifiers'
+New component: 'tactic'
+New component: 'mbp'
+New component: 'qe_lite'
+New component: 'solver'
+New component: 'cmd_context'
+New component: 'smt2parser'
+New component: 'pattern'
+New component: 'aig_tactic'
+New component: 'ackermannization'
+New component: 'fpa'
+New component: 'core_tactics'
+New component: 'arith_tactics'
+New component: 'solver_assertions'
+New component: 'subpaving_tactic'
+New component: 'proto_model'
+New component: 'sampler'
+New component: 'smt'
+New component: 'sat_smt'
+New component: 'sat_tactic'
+New component: 'nlsat_tactic'
+New component: 'bv_tactics'
+New component: 'fuzzing'
+New component: 'smt_tactic'
+New component: 'sls_tactic'
+New component: 'qe'
+New component: 'sat_solver'
+New component: 'fd_solver'
+New component: 'muz'
+New component: 'dataflow'
+New component: 'transforms'
+New component: 'rel'
+New component: 'spacer'
+New component: 'clp'
+New component: 'tab'
+New component: 'ddnf'
+New component: 'bmc'
+New component: 'fp'
+New component: 'smtlogic_tactics'
+New component: 'ufbv_tactic'
+New component: 'fpa_tactics'
+New component: 'portfolio'
+New component: 'opt'
+New component: 'extra_cmds'
+New component: 'api'
+New component: 'shell'
+New component: 'test'
+New component: 'api_dll'
+New component: 'dotnet'
+New component: 'java'
+New component: 'ml'
+New component: 'cpp'
+Python bindings directory was detected.
+New component: 'python'
+New component: 'python_install'
+New component: 'js'
+New component: 'cpp_example'
+New component: 'z3_tptp'
+New component: 'c_example'
+New component: 'maxsat'
+New component: 'dotnet_example'
+New component: 'java_example'
+New component: 'ml_example'
+New component: 'py_example'
+UpdateVersion: "Z3 4.14.2.0"
+Generating src/util/z3_version.h from src/util/z3_version.h.in
+Generated 'src/util/z3_version.h'
+Generated 'src/ast/pp_params.hpp'
+Generated 'src/ast/normal_forms/nnf_params.hpp'
+Generated 'src/nlsat/nlsat_params.hpp'
+Generated 'src/tactic/smtlogics/qfufbv_tactic_params.hpp'
+Generated 'src/model/model_params.hpp'
+Generated 'src/model/model_evaluator_params.hpp'
+Generated 'src/sat/sat_asymm_branch_params.hpp'
+Generated 'src/sat/sat_scc_params.hpp'
+Generated 'src/sat/sat_simplifier_params.hpp'
+Generated 'src/params/fpa_rewriter_params.hpp'
+Generated 'src/params/seq_rewriter_params.hpp'
+Generated 'src/params/solver_params.hpp'
+Generated 'src/params/bool_rewriter_params.hpp'
+Generated 'src/params/poly_rewriter_params.hpp'
+Generated 'src/params/array_rewriter_params.hpp'
+Generated 'src/params/pattern_inference_params_helper.hpp'
+Generated 'src/params/sls_params.hpp'
+Generated 'src/params/rewriter_params.hpp'
+Generated 'src/params/sat_params.hpp'
+Generated 'src/params/bv_rewriter_params.hpp'
+Generated 'src/params/fpa2bv_rewriter_params.hpp'
+Generated 'src/params/arith_rewriter_params.hpp'
+Generated 'src/params/tactic_params.hpp'
+Generated 'src/muz/base/fp_params.hpp'
+Generated 'src/opt/opt_params.hpp'
+Generated 'src/math/realclosure/rcf_params.hpp'
+Generated 'src/math/polynomial/algebraic_params.hpp'
+Generated 'src/solver/combined_solver_params.hpp'
+Generated 'src/solver/parallel_params.hpp'
+Generated 'src/smt/params/smt_params_helper.hpp'
+Generated 'src/parsers/util/parser_params.hpp'
+Generated 'src/ackermannization/ackermannization_params.hpp'
+Generated 'src/ackermannization/ackermannize_bv_tactic_params.hpp'
+Generated 'src/ast/pattern/database.h'
+Component api
+Component portfolio
+Component smtlogic_tactics
+Component ackermannization
+Component model
+Component macros
+Component rewriter
+Component ast
+Component util
+Component polynomial
+Component interval
+Component automata
+Component params
+Component solver
+Component smt_params
+Component tactic
+Component simplifiers
+Component euf
+Component normal_forms
+Component bit_blaster
+Component converters
+Component substitution
+Component qe_lite
+Component mbp
+Component simplex
+Component proofs
+Component sat_solver
+Component core_tactics
+Component pattern
+Component smt2parser
+Component cmd_context
+Component parser_util
+Component aig_tactic
+Component bv_tactics
+Component arith_tactics
+Component sat
+Component dd
+Component ast_sls
+Component grobner
+Component sat_tactic
+Component sat_smt
+Component smt
+Component proto_model
+Component solver_assertions
+Component sampler
+Component fpa
+Component lp
+Component nlsat
+Component nlsat_tactic
+Component smt_tactic
+Component fp
+Component muz
+Component qe
+Component clp
+Component transforms
+Component hilbert
+Component dataflow
+Component tab
+Component rel
+Component bmc
+Component fd_solver
+Component ddnf
+Component spacer
+Component ufbv_tactic
+Component fpa_tactics
+Component sls_tactic
+Component subpaving_tactic
+Component subpaving
+Component realclosure
+Component opt
+Component extra_cmds
+Component shell
+Generated 'src/shell/install_tactic.cpp'
+Component api
+Component portfolio
+Component smtlogic_tactics
+Component ackermannization
+Component model
+Component macros
+Component rewriter
+Component ast
+Component util
+Component polynomial
+Component interval
+Component automata
+Component params
+Component solver
+Component smt_params
+Component tactic
+Component simplifiers
+Component euf
+Component normal_forms
+Component bit_blaster
+Component converters
+Component substitution
+Component qe_lite
+Component mbp
+Component simplex
+Component proofs
+Component sat_solver
+Component core_tactics
+Component pattern
+Component smt2parser
+Component cmd_context
+Component parser_util
+Component aig_tactic
+Component bv_tactics
+Component arith_tactics
+Component sat
+Component dd
+Component ast_sls
+Component grobner
+Component sat_tactic
+Component sat_smt
+Component smt
+Component proto_model
+Component solver_assertions
+Component sampler
+Component fpa
+Component lp
+Component nlsat
+Component nlsat_tactic
+Component smt_tactic
+Component fp
+Component muz
+Component qe
+Component clp
+Component transforms
+Component hilbert
+Component dataflow
+Component tab
+Component rel
+Component bmc
+Component fd_solver
+Component ddnf
+Component spacer
+Component ufbv_tactic
+Component fpa_tactics
+Component sls_tactic
+Component subpaving_tactic
+Component subpaving
+Component realclosure
+Component opt
+Component extra_cmds
+Component fuzzing
+Component test
+Generated 'src/test/install_tactic.cpp'
+Component api
+Component portfolio
+Component smtlogic_tactics
+Component ackermannization
+Component model
+Component macros
+Component rewriter
+Component ast
+Component util
+Component polynomial
+Component interval
+Component automata
+Component params
+Component solver
+Component smt_params
+Component tactic
+Component simplifiers
+Component euf
+Component normal_forms
+Component bit_blaster
+Component converters
+Component substitution
+Component qe_lite
+Component mbp
+Component simplex
+Component proofs
+Component sat_solver
+Component core_tactics
+Component pattern
+Component smt2parser
+Component cmd_context
+Component parser_util
+Component aig_tactic
+Component bv_tactics
+Component arith_tactics
+Component sat
+Component dd
+Component ast_sls
+Component grobner
+Component sat_tactic
+Component sat_smt
+Component smt
+Component proto_model
+Component solver_assertions
+Component sampler
+Component fpa
+Component lp
+Component nlsat
+Component nlsat_tactic
+Component smt_tactic
+Component fp
+Component muz
+Component qe
+Component clp
+Component transforms
+Component hilbert
+Component dataflow
+Component tab
+Component rel
+Component bmc
+Component fd_solver
+Component ddnf
+Component spacer
+Component ufbv_tactic
+Component fpa_tactics
+Component sls_tactic
+Component subpaving_tactic
+Component subpaving
+Component realclosure
+Component opt
+Component extra_cmds
+Component api_dll
+Generated 'src/api/dll/install_tactic.cpp'
+Generated 'src/shell/mem_initializer.cpp'
+Generated 'src/test/mem_initializer.cpp'
+Generated 'src/api/dll/mem_initializer.cpp'
+Generated 'src/shell/gparams_register_modules.cpp'
+Generated 'src/test/gparams_register_modules.cpp'
+Generated 'src/api/dll/gparams_register_modules.cpp'
+Generated 'src/api/python/z3/z3consts.py
+Generated 'src/api/api_log_macros.h'
+Generated 'src/api/api_log_macros.cpp'
+Generated 'src/api/api_commands.cpp'
+Generated 'src/api/python/z3/z3core.py'
+Listing 'src/api/python/z3'...
+Compiling 'src/api/python/z3/__init__.py'...
+Compiling 'src/api/python/z3/z3.py'...
+Compiling 'src/api/python/z3/z3consts.py'...
+Compiling 'src/api/python/z3/z3core.py'...
+Compiling 'src/api/python/z3/z3num.py'...
+Compiling 'src/api/python/z3/z3poly.py'...
+Compiling 'src/api/python/z3/z3printer.py'...
+Compiling 'src/api/python/z3/z3rcf.py'...
+Compiling 'src/api/python/z3/z3types.py'...
+Compiling 'src/api/python/z3/z3util.py'...
+Generated python bytecode
+Copied 'z3core.py'
+Copied 'z3rcf.py'
+Copied 'z3consts.py'
+Copied 'z3types.py'
+Copied 'z3num.py'
+Copied 'z3util.py'
+Copied 'z3.py'
+Copied 'z3poly.py'
+Copied '__init__.py'
+Copied 'z3printer.py'
+Copied 'z3consts.cpython-310.pyc'
+Copied 'z3.cpython-310.pyc'
+Copied 'z3printer.cpython-310.pyc'
+Copied '__init__.cpython-310.pyc'
+Copied 'z3num.cpython-310.pyc'
+Copied 'z3rcf.cpython-310.pyc'
+Copied 'z3util.cpython-310.pyc'
+Copied 'z3core.cpython-310.pyc'
+Copied 'z3types.cpython-310.pyc'
+Copied 'z3poly.cpython-310.pyc'
+Testing ar...
+Testing g++...
+Testing gcc...
+Testing floating point support...
+Host platform:  Linux
+C++ Compiler:   g++
+C Compiler  :   gcc
+Archive Tool:   ar
+Arithmetic:     internal
+Prefix:         /mnt/Space1/SMT_Sampling/guided_sampler/deps/round6_sanitize
+64-bit:         True
+FP math:        SSE2-GCC
+libatomic:      not required
+Python pkg dir: /mnt/Space1/SMT_Sampling/guided_sampler/deps/round6_sanitize/lib/python3.10/site-packages
+Python version: 3.10
+Writing build/Makefile
+Copied Z3Py example 'proofreplay.py' to 'build/python'
+Copied Z3Py example 'mini_quip.py' to 'build/python'
+Copied Z3Py example 'trafficjam.py' to 'build/python'
+Copied Z3Py example 'hs.py' to 'build/python'
+Copied Z3Py example 'visitor.py' to 'build/python'
+Copied Z3Py example 'bincover.py' to 'build/python'
+Copied Z3Py example 'efsmt.py' to 'build/python'
+Copied Z3Py example 'rc2.py' to 'build/python'
+Copied Z3Py example 'prooflogs.py' to 'build/python'
+Copied Z3Py example 'parallel.py' to 'build/python'
+Copied Z3Py example 'all_interval_series.py' to 'build/python'
+Copied Z3Py example 'mini_ic3.py' to 'build/python'
+Copied Z3Py example 'simplify_formula.py' to 'build/python'
+Copied Z3Py example 'example.py' to 'build/python'
+Copied Z3Py example 'socrates.py' to 'build/python'
+Copied Z3Py example 'union_sort.py' to 'build/python'
+Makefile was successfully generated.
+  compilation mode: Debug
+Type 'cd build; make' to build Z3
++ make -C /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/z3/build -j 8
+make: Entering directory '/tmp/guided_sampler_round6_worktrees/sanitize/z3/build'
+src/shell/install_tactic.cpp
+src/shell/mem_initializer.cpp
+src/api/api_commands.cpp
+src/cmd_context/extra_cmds/proof_cmds.cpp
+src/cmd_context/extra_cmds/polynomial_cmds.cpp
+src/tactic/portfolio/smt_strategic_solver.cpp
+src/tactic/smtlogics/qfufbv_tactic.cpp
+src/tactic/smtlogics/smt_tactic.cpp
+src/muz/spacer/spacer_mev_array.cpp
+src/muz/spacer/spacer_ind_lemma_generalizer.cpp
+src/muz/spacer/spacer_cluster.cpp
+src/tactic/fd_solver/fd_solver.cpp
+src/tactic/bv/bv_bound_chk_tactic.cpp
+src/sat/tactic/sat_tactic.cpp
+src/sat/smt/euf_proof_checker.cpp
+src/smt/proto_model/proto_model.cpp
+src/tactic/arith/lia2card_tactic.cpp
+src/tactic/core/blast_term_ite_tactic.cpp
+In file included from ../src/util/a_shared.hpp:78,
+                 from ../src/util/a_state.h:2,
+                 from ../src/sat/tactic/sat_tactic.cpp:23:
+../src/util/reference_evaluation.hpp: In lambda function:
+../src/util/reference_evaluation.hpp:10:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   10 |   if(op==Num)return v.number(e);if(op==True)return 1;if(op==False)return 0;
+      |   ^~
+../src/util/reference_evaluation.hpp:10:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   10 |   if(op==Num)return v.number(e);if(op==True)return 1;if(op==False)return 0;
+      |                                 ^~
+../src/util/reference_evaluation.hpp:28:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   28 |   if(r!=0&&boost::multiprecision::msb(absn(r))>65536)throw std::runtime_error("reference_value_size_limit");return r;
+      |   ^~
+../src/util/reference_evaluation.hpp:28:109: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   28 |   if(r!=0&&boost::multiprecision::msb(absn(r))>65536)throw std::runtime_error("reference_value_size_limit");return r;
+      |                                                                                                             ^~~~~~
+In file included from ../src/util/a_shared.hpp:89,
+                 from ../src/util/a_state.h:2,
+                 from ../src/sat/tactic/sat_tactic.cpp:23:
+../src/util/phase_evidence.hpp: In function ‘a2::r4::Masks a2::r4::advice_targets(const a2::r4::PhaseEvidence&, bool, bool)’:
+../src/util/phase_evidence.hpp:21:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   21 |  if(!avoid)return ev.supports[phase];Masks out;
+      |  ^~
+../src/util/phase_evidence.hpp:21:38: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   21 |  if(!avoid)return ev.supports[phase];Masks out;
+      |                                      ^~~~~
+src/tactic/core/propagate_values_tactic.cpp
+src/ast/fpa/fpa2bv_rewriter.cpp
+src/ackermannization/lackr.cpp
+src/ackermannization/ackermannize_bv_tactic.cpp
+src/parsers/smt2/smt2scanner.cpp
+src/parsers/smt2/smt2parser.cpp
+src/cmd_context/basic_cmds.cpp
+src/cmd_context/cmd_context.cpp
+src/solver/solver.cpp
+src/solver/slice_solver.cpp
+src/solver/parallel_tactical.cpp
+src/solver/combined_solver.cpp
+src/ast/simplifiers/solve_eqs.cpp
+In file included from ../src/util/a_shared.hpp:78,
+                 from ../src/util/a_state.h:2,
+                 from ../src/solver/combined_solver.cpp:27:
+../src/util/reference_evaluation.hpp: In lambda function:
+../src/util/reference_evaluation.hpp:10:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   10 |   if(op==Num)return v.number(e);if(op==True)return 1;if(op==False)return 0;
+      |   ^~
+../src/util/reference_evaluation.hpp:10:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   10 |   if(op==Num)return v.number(e);if(op==True)return 1;if(op==False)return 0;
+      |                                 ^~
+../src/util/reference_evaluation.hpp:28:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   28 |   if(r!=0&&boost::multiprecision::msb(absn(r))>65536)throw std::runtime_error("reference_value_size_limit");return r;
+      |   ^~
+../src/util/reference_evaluation.hpp:28:109: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   28 |   if(r!=0&&boost::multiprecision::msb(absn(r))>65536)throw std::runtime_error("reference_value_size_limit");return r;
+      |                                                                                                             ^~~~~~
+In file included from ../src/util/a_shared.hpp:89,
+                 from ../src/util/a_state.h:2,
+                 from ../src/solver/combined_solver.cpp:27:
+../src/util/phase_evidence.hpp: In function ‘a2::r4::Masks a2::r4::advice_targets(const a2::r4::PhaseEvidence&, bool, bool)’:
+../src/util/phase_evidence.hpp:21:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   21 |  if(!avoid)return ev.supports[phase];Masks out;
+      |  ^~
+../src/util/phase_evidence.hpp:21:38: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   21 |  if(!avoid)return ev.supports[phase];Masks out;
+      |                                      ^~~~~
+src/ast/simplifiers/propagate_values.cpp
+src/ast/simplifiers/extract_eqs.cpp
+src/math/lp/nla_monotone_lemmas.cpp
+src/math/lp/nla_divisions.cpp
+src/math/lp/nla_core.cpp
+src/math/lp/lp_settings.cpp
+src/math/lp/nra_solver.cpp
+src/math/lp/nla_tangent_lemmas.cpp
+src/math/lp/monomial_bounds.cpp
+src/math/lp/horner.cpp
+src/math/lp/nla_order_lemmas.cpp
+src/math/lp/nla_common.cpp
+src/math/lp/nla_grobner.cpp
+src/math/lp/factorization_factory_imp.cpp
+src/math/lp/nla_intervals.cpp
+src/math/lp/nla_basics_lemmas.cpp
+src/math/lp/lar_solver.cpp
+src/math/lp/nla_powers.cpp
+src/math/lp/emonics.cpp
+src/nlsat/nlsat_solver.cpp
+src/sat/sat_scc.cpp
+src/sat/sat_simplifier.cpp
+src/sat/sat_config.cpp
+src/sat/sat_local_search.cpp
+src/sat/sat_probing.cpp
+src/sat/sat_asymm_branch.cpp
+src/ast/sls/sls_bv_lookahead.cpp
+src/ast/sls/sls_context.cpp
+src/ast/sls/sls_euf_plugin.cpp
+src/ast/sls/sls_smt_plugin.cpp
+src/ast/sls/sls_seq_plugin.cpp
+src/ast/sls/sls_datatype_plugin.cpp
+src/ast/sls/sls_arith_base.cpp
+src/ast/sls/sat_ddfw.cpp
+src/model/model_evaluator.cpp
+src/model/model.cpp
+src/ast/normal_forms/nnf.cpp
+src/ast/rewriter/th_rewriter.cpp
+src/ast/rewriter/array_rewriter.cpp
+src/ast/rewriter/fpa_rewriter.cpp
+src/ast/rewriter/bv_rewriter.cpp
+src/ast/rewriter/bool_rewriter.cpp
+src/ast/rewriter/arith_rewriter.cpp
+src/ast/rewriter/seq_rewriter.cpp
+src/smt/params/qi_params.cpp
+src/smt/params/theory_pb_params.cpp
+src/smt/params/theory_str_params.cpp
+src/smt/params/theory_seq_params.cpp
+src/smt/params/preprocessor_params.cpp
+src/smt/params/theory_array_params.cpp
+src/smt/params/dyn_ack_params.cpp
+src/smt/params/theory_bv_params.cpp
+src/smt/params/theory_arith_params.cpp
+src/ast/ast_smt_pp.cpp
+src/ast/pp.cpp
+src/ast/ast.cpp
+src/ast/ast_smt2_pp.cpp
+src/math/realclosure/realclosure.cpp
+src/params/pattern_inference_params.cpp
+src/math/polynomial/algebraic_numbers.cpp
+src/util/debug.cpp
+src/api/dll/install_tactic.cpp
+src/api/dll/gparams_register_modules.cpp
+src/api/dll/mem_initializer.cpp
+src/shell/dimacs_frontend.cpp
+src/shell/gparams_register_modules.cpp
+src/shell/main.cpp
+src/api/api_log_macros.cpp
+src/api/api_log.cpp
+src/muz/spacer/spacer_conjecture.cpp
+src/muz/spacer/spacer_callback.cpp
+src/muz/spacer/spacer_global_generalizer.cpp
+src/muz/spacer/spacer_expand_bnd_generalizer.cpp
+src/ast/pattern/pattern_inference.cpp
+src/math/lp/nla_solver.cpp
+src/model/model_implicant.cpp
+src/api/api_special_relations.cpp
+src/api/api_qe.cpp
+src/api/api_model.cpp
+src/api/api_bv.cpp
+src/api/api_pb.cpp
+src/api/api_array.cpp
+src/api/api_datatype.cpp
+src/api/api_seq.cpp
+src/api/api_tactic.cpp
+src/api/api_numeral.cpp
+src/api/api_ast_map.cpp
+src/api/api_arith.cpp
+src/api/api_quant.cpp
+src/api/api_config_params.cpp
+src/api/api_solver.cpp
+src/api/api_goal.cpp
+src/api/api_stats.cpp
+src/api/api_context.cpp
+src/api/api_ast.cpp
+src/api/api_algebraic.cpp
+In file included from ../src/util/a_shared.hpp:78,
+                 from ../src/util/a_state.h:2,
+                 from ../src/api/api_solver.cpp:21:
+../src/util/reference_evaluation.hpp: In lambda function:
+../src/util/reference_evaluation.hpp:10:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   10 |   if(op==Num)return v.number(e);if(op==True)return 1;if(op==False)return 0;
+      |   ^~
+../src/util/reference_evaluation.hpp:10:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   10 |   if(op==Num)return v.number(e);if(op==True)return 1;if(op==False)return 0;
+      |                                 ^~
+../src/util/reference_evaluation.hpp:28:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   28 |   if(r!=0&&boost::multiprecision::msb(absn(r))>65536)throw std::runtime_error("reference_value_size_limit");return r;
+      |   ^~
+../src/util/reference_evaluation.hpp:28:109: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   28 |   if(r!=0&&boost::multiprecision::msb(absn(r))>65536)throw std::runtime_error("reference_value_size_limit");return r;
+      |                                                                                                             ^~~~~~
+In file included from ../src/util/a_shared.hpp:89,
+                 from ../src/util/a_state.h:2,
+                 from ../src/api/api_solver.cpp:21:
+../src/util/phase_evidence.hpp: In function ‘a2::r4::Masks a2::r4::advice_targets(const a2::r4::PhaseEvidence&, bool, bool)’:
+../src/util/phase_evidence.hpp:21:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   21 |  if(!avoid)return ev.supports[phase];Masks out;
+      |  ^~
+../src/util/phase_evidence.hpp:21:38: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   21 |  if(!avoid)return ev.supports[phase];Masks out;
+      |                                      ^~~~~
+src/api/api_polynomial.cpp
+src/muz/ddnf/ddnf.cpp
+src/muz/clp/clp_context.cpp
+../src/api/api_solver.cpp: In function ‘void Z3_solver_pop(Z3_context, Z3_solver, unsigned int)’:
+../src/api/api_solver.cpp:527:13: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  527 |             if(to_solver_ref(s)->m_semantic_last)to_solver_ref(s)->m_semantic_last->semantic_snapshots.clear();to_solver_ref(s)->m_semantic_last.reset();
+      |             ^~
+../src/api/api_solver.cpp:527:112: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  527 |             if(to_solver_ref(s)->m_semantic_last)to_solver_ref(s)->m_semantic_last->semantic_snapshots.clear();to_solver_ref(s)->m_semantic_last.reset();
+      |                                                                                                                ^~~~~~~~~~~~~
+src/muz/spacer/spacer_legacy_mev.cpp
+src/muz/spacer/spacer_sat_answer.cpp
+src/muz/spacer/spacer_pdr.cpp
+src/muz/spacer/spacer_legacy_mbp.cpp
+src/muz/spacer/spacer_concretize.cpp
+src/muz/spacer/spacer_quant_generalizer.cpp
+src/muz/spacer/spacer_util.cpp
+src/muz/spacer/spacer_prop_solver.cpp
+src/muz/spacer/spacer_arith_generalizers.cpp
+src/muz/rel/doc.cpp
+src/muz/transforms/dl_mk_unbound_compressor.cpp
+src/muz/transforms/dl_mk_array_eq_rewrite.cpp
+src/muz/transforms/dl_mk_backwards.cpp
+src/muz/transforms/dl_mk_separate_negated_tails.cpp
+src/muz/transforms/dl_mk_loop_counter.cpp
+src/muz/transforms/dl_mk_coi_filter.cpp
+src/muz/transforms/dl_mk_array_blast.cpp
+src/muz/transforms/dl_mk_elim_term_ite.cpp
+src/muz/transforms/dl_mk_magic_sets.cpp
+src/muz/transforms/dl_mk_array_instantiation.cpp
+src/muz/transforms/dl_mk_magic_symbolic.cpp
+src/muz/transforms/dl_mk_scale.cpp
+src/muz/transforms/dl_mk_quantifier_instantiation.cpp
+src/muz/transforms/dl_mk_quantifier_abstraction.cpp
+src/muz/transforms/dl_mk_karr_invariants.cpp
+src/muz/transforms/dl_mk_filter_rules.cpp
+src/muz/transforms/dl_mk_bit_blast.cpp
+src/muz/base/dl_context.cpp
+src/muz/base/dl_rule.cpp
+src/muz/base/dl_util.cpp
+src/muz/base/dl_rule_subsumption_index.cpp
+src/muz/base/dl_costs.cpp
+src/muz/base/dl_rule_transformer.cpp
+src/muz/base/rule_properties.cpp
+src/muz/base/dl_rule_set.cpp
+src/qe/qe_bv_plugin.cpp
+src/qe/qe_datatype_plugin.cpp
+src/qe/qsat.cpp
+src/qe/qe_dl_plugin.cpp
+src/qe/qe_array_plugin.cpp
+src/qe/qe_arith_plugin.cpp
+src/qe/nlarith_util.cpp
+src/qe/qe_tactic.cpp
+src/qe/qe_cmd.cpp
+src/qe/qe_bool_plugin.cpp
+src/smt/tactic/ctx_solver_simplify_tactic.cpp
+src/sat/smt/pb_card.cpp
+src/sampler/sampler.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/sampler/sampler.cpp:1:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/solver/solver_preprocess.cpp
+In file included from ../src/sampler/sampler.cpp:8:
+../src/sampler/ccss_probe.inc: In function ‘r5::J sampler::r5_variable(const sampler::variable&, bool)’:
+../src/sampler/ccss_probe.inc:6:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+    6 |  if(initialized&&!v.is_lia)j["score"]=r5::decimal(v.score);return j;
+      |  ^~
+../src/sampler/ccss_probe.inc:6:60: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+    6 |  if(initialized&&!v.is_lia)j["score"]=r5::decimal(v.score);return j;
+      |                                                            ^~~~~~
+In file included from ../src/sampler/sampler.cpp:8:
+../src/sampler/ccss_probe.inc: In member function ‘void sampler::ls_sampler::r5_begin_replay(const J&, const string&, bool)’:
+../src/sampler/ccss_probe.inc:24:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   24 |  if(!m_r5)m_r5.reset(new r5::Probe(recipe.at("seed"),recipe.at("cutoff_seconds"),mt));m_r5->begin_replay(id,initialize_only);
+      |  ^~
+../src/sampler/ccss_probe.inc:24:87: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   24 |  if(!m_r5)m_r5.reset(new r5::Probe(recipe.at("seed"),recipe.at("cutoff_seconds"),mt));m_r5->begin_replay(id,initialize_only);
+      |                                                                                       ^~~~
+../src/sampler/ccss_probe.inc: In member function ‘void sampler::ls_sampler::r5_first_initialize()’:
+../src/sampler/ccss_probe.inc:29:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   29 |  if(!m_r5||!m_r5->active)return;++m_r5->init_count;
+      |  ^~
+../src/sampler/ccss_probe.inc:29:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   29 |  if(!m_r5||!m_r5->active)return;++m_r5->init_count;
+      |                                 ^~
+../src/sampler/sampler.cpp: In member function ‘void sampler::ls_sampler::build_lits(std::string&)’:
+../src/sampler/sampler.cpp:196:24: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<std::__cxx11::basic_string<char> >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  196 |             for (; idx < vec.size(); idx++) {
+      |                    ~~~~^~~~~~~~~~~~
+../src/sampler/sampler.cpp: In lambda function:
+../src/sampler/sampler.cpp:290:13: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  290 |             if(m_r5)m_r5->read(name,"present",found->second,r5::decimal(value));return true;
+      |             ^~
+../src/sampler/sampler.cpp:290:81: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  290 |             if(m_r5)m_r5->read(name,"present",found->second,r5::decimal(value));return true;
+      |                                                                                 ^~~~~~
+../src/sampler/sampler.cpp:292:13: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  292 |             if(m_r5)m_r5->read(name,dynamic_cast<std::out_of_range const*>(&error)?"128bit_overflow":"parse_error",found->second,error.what());return false;
+      |             ^~
+../src/sampler/sampler.cpp:292:144: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  292 |             if(m_r5)m_r5->read(name,dynamic_cast<std::out_of_range const*>(&error)?"128bit_overflow":"parse_error",found->second,error.what());return false;
+      |                                                                                                                                                ^~~~~~
+../src/sampler/sampler.cpp: In member function ‘void sampler::ls_sampler::initialize_clause_datas()’:
+../src/sampler/sampler.cpp:540:48: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  540 |         if (cl->sat_count > 0 && cl->sat_count < cl->literals.size()) {
+      |                                  ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp: In member function ‘__int128 sampler::ls_sampler::delta_lit(sampler::lit&)’:
+../src/sampler/sampler.cpp:556:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  556 |     for (int i = 0; i < l.pos_coff.size(); i++) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:560:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  560 |     for (int i = 0; i < l.neg_coff.size(); i++) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp: In member function ‘void sampler::ls_sampler::shrinkSampleInterval(sampler::lit*)’:
+../src/sampler/sampler.cpp:575:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  575 |     for (int i = 0; i < l->pos_coff.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:596:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  596 |     for (int i = 0; i < l->neg_coff.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp: In member function ‘void sampler::ls_sampler::resolution()’:
+../src/sampler/sampler.cpp:717:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<long unsigned int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  717 |             for (int i = 0; i < _resolution_vars[bool_var_idx].clause_idxs.size(); i++) {  // record the clauses in which the var has a positive/negative occurrence.
+      |                             ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:738:39: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  738 |                     for (int k = 0; k < _clauses[neg_clause_idx].literals.size(); k++) {
+      |                                     ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:787:39: warning: comparison of integer expressions of different signedness: ‘int’ and ‘uint64_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+  787 |                     for (int k = 0; k < pos_lit_size; k++) {
+      |                                     ~~^~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:794:39: warning: comparison of integer expressions of different signedness: ‘int’ and ‘uint64_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+  794 |                     for (int k = 0; k < neg_lit_size; k++) {  // non-equivalence transformation.
+      |                                     ~~^~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:830:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  830 |                 for (int j = 0; j < pos_cl.literals.size(); j++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:843:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  843 |                 for (int j = 0; j < neg_cl.literals.size(); j++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp: In member function ‘void sampler::ls_sampler::reduce_clause()’:
+../src/sampler/sampler.cpp:864:14: warning: comparison of integer expressions of different signedness: ‘int’ and ‘uint64_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+  864 |     for (; i < _num_clauses; i++) {  // Remove already deleted clauses in _clause
+      |            ~~^~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:872:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<sampler::lit>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  872 |     for (int l_idx = 0; l_idx < _lits.size(); l_idx++) {
+      |                         ~~~~~~^~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:889:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  889 |         for (int k = 0; k < _clauses[clause_idx].literals.size(); k++) {  // constructor variable set
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:894:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  894 |                 for (int j = 0; j < l->neg_coff.size(); j++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:903:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  903 |                 for (int j = 0; j < l->pos_coff.size(); j++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:932:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  932 |         for (int i = 0; i < v.literal_clause.size(); i++) {
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:945:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘uint64_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+  945 |     for (int var_idx = 0; var_idx < _num_vars; var_idx++) {
+      |                           ~~~~~~~~^~~~~~~~~~~
+../src/sampler/sampler.cpp:954:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<sampler::lit>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  954 |     for (int lit_idx = 0; lit_idx < _lits.size(); lit_idx++) {
+      |                           ~~~~~~~~^~~~~~~~~~~~~~
+../src/sampler/sampler.cpp: In member function ‘void sampler::ls_sampler::build_instance(std::vector<std::vector<int> >&, const std::unordered_map<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >&)’:
+../src/sampler/sampler.cpp:1021:41: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<std::vector<int> >::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1021 |     for (int clause_idx = 0; clause_idx < clause_vec.size(); clause_idx++) {
+      |                              ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:1100:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘uint64_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1100 |     for (int i = 0; i < _num_vars; ++i) {
+      |                     ~~^~~~~~~~~~~
+../src/sampler/sampler.cpp:1133:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘uint64_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1133 |     for (int var_idx = 0; var_idx < _num_vars; var_idx++) {
+      |                           ~~~~~~~~^~~~~~~~~~~
+In file included from ../src/sampler/sampler.h:29,
+                 from ../src/sampler/sampler.cpp:1:
+../src/sampler/sampler.cpp: In member function ‘void sampler::ls_sampler::reduce_vars()’:
+../src/sampler/sampler.cpp:1181:50: warning: comparison of integer expressions of different signedness: ‘int’ and ‘const uint64_t’ {aka ‘const long unsigned int’} [-Wsign-compare]
+ 1181 |     TRACE("bound", for (int var_idx = 0; var_idx < tmp_vars_size; var_idx++) {
+      |                                          ~~~~~~~~^~~~~~~~~~~~~~~
+../src/util/trace.h:53:28: note: in definition of macro ‘TRACE_CODE’
+   53 | #define TRACE_CODE(CODE) { CODE } ((void) 0 )
+      |                            ^~~~
+../src/util/trace.h:45:48: note: in expansion of macro ‘LOCK_CODE’
+   45 | #define THREAD_LOCK(CODE) if (is_threaded()) { LOCK_CODE(CODE); } else { CODE; }
+      |                                                ^~~~~~~~~
+../src/util/trace.h:83:66: note: in expansion of macro ‘THREAD_LOCK’
+   83 | #define TRACE(TAG, CODE) TRACE_CODE(if (is_trace_enabled(TAG)) { THREAD_LOCK(TRACEBODY(TAG, CODE)); })
+      |                                                                  ^~~~~~~~~~~
+../src/util/trace.h:83:78: note: in expansion of macro ‘TRACEBODY’
+   83 | #define TRACE(TAG, CODE) TRACE_CODE(if (is_trace_enabled(TAG)) { THREAD_LOCK(TRACEBODY(TAG, CODE)); })
+      |                                                                              ^~~~~~~~~
+../src/sampler/sampler.cpp:1181:5: note: in expansion of macro ‘TRACE’
+ 1181 |     TRACE("bound", for (int var_idx = 0; var_idx < tmp_vars_size; var_idx++) {
+      |     ^~~~~
+../src/sampler/sampler.cpp:1181:50: warning: comparison of integer expressions of different signedness: ‘int’ and ‘const uint64_t’ {aka ‘const long unsigned int’} [-Wsign-compare]
+ 1181 |     TRACE("bound", for (int var_idx = 0; var_idx < tmp_vars_size; var_idx++) {
+      |                                          ~~~~~~~~^~~~~~~~~~~~~~~
+../src/util/trace.h:53:28: note: in definition of macro ‘TRACE_CODE’
+   53 | #define TRACE_CODE(CODE) { CODE } ((void) 0 )
+      |                            ^~~~
+../src/util/trace.h:83:66: note: in expansion of macro ‘THREAD_LOCK’
+   83 | #define TRACE(TAG, CODE) TRACE_CODE(if (is_trace_enabled(TAG)) { THREAD_LOCK(TRACEBODY(TAG, CODE)); })
+      |                                                                  ^~~~~~~~~~~
+../src/util/trace.h:83:78: note: in expansion of macro ‘TRACEBODY’
+   83 | #define TRACE(TAG, CODE) TRACE_CODE(if (is_trace_enabled(TAG)) { THREAD_LOCK(TRACEBODY(TAG, CODE)); })
+      |                                                                              ^~~~~~~~~
+../src/sampler/sampler.cpp:1181:5: note: in expansion of macro ‘TRACE’
+ 1181 |     TRACE("bound", for (int var_idx = 0; var_idx < tmp_vars_size; var_idx++) {
+      |     ^~~~~
+../src/sampler/sampler.cpp:1191:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘const uint64_t’ {aka ‘const long unsigned int’} [-Wsign-compare]
+ 1191 |     for (int var_idx = 0; var_idx < tmp_vars_size; var_idx++) {
+      |                           ~~~~~~~~^~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:1211:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1211 |             for (int i = 0; i < l->pos_coff.size(); i++) {
+      |                             ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:1213:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1213 |                 for (int j = 0; j < l->neg_coff.size(); j++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:1235:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1235 |             for (int i = 0; i < l->pos_coff.size(); i++) {
+      |                             ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:1238:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1238 |             for (int i = 0; i < l->neg_coff.size(); i++) {
+      |                             ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:1244:39: warning: comparison of integer expressions of different signedness: ‘int’ and ‘long unsigned int’ [-Wsign-compare]
+ 1244 |         for (int pre_idx = 0; pre_idx < tmp_vars_size - 1; pre_idx++) {
+      |                               ~~~~~~~~^~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:1248:53: warning: comparison of integer expressions of different signedness: ‘int’ and ‘const uint64_t’ {aka ‘const long unsigned int’} [-Wsign-compare]
+ 1248 |             for (int pos_idx = pre_idx + 1; pos_idx < tmp_vars_size; pos_idx++) {
+      |                                             ~~~~~~~~^~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:1282:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1282 |             for (int i = 0; i < l->pos_coff.size(); i++) {  // iterate over all positive coeff variables
+      |                             ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:1299:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1299 |             for (int i = 0; i < l->neg_coff.size(); i++) {  // iterate over all negative coeff variables
+      |                             ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:1311:53: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<sampler::variable>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1311 |         for (original_var_idx = 0; original_var_idx < _tmp_vars.size(); original_var_idx++) {
+      |                                    ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:1346:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<sampler::variable>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1346 |     for (int var_idx = 0; var_idx < _resolution_vars.size(); var_idx++) {
+      |                           ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp: In member function ‘void sampler::ls_sampler::up_bool_vars()’:
+../src/sampler/sampler.cpp:1535:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<sampler::lit>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1535 |     for (int lit_idx = 0; lit_idx < _lits.size(); lit_idx++) {
+      |                           ~~~~~~~~^~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:1539:43: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1539 |             for (int var_idx = 0; var_idx < l->pos_coff_var_idx.size(); var_idx++) {
+      |                                   ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:1543:43: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1543 |             for (int var_idx = 0; var_idx < l->neg_coff_var_idx.size(); var_idx++) {
+      |                                   ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:1551:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<sampler::variable>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1551 |     for (int i = 0; i < _resolution_vars.size(); i++) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp: In member function ‘void sampler::ls_sampler::critical_score_subscore(uint64_t, __int128)’:
+../src/sampler/sampler.cpp:1674:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1674 |     for (int i = 0; i < var->literals.size(); i++) {  // literals contained the var
+      |                     ~~^~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:1705:16: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1705 |         if ((i != (var->literals.size() - 1) && l_clause_idx != var->literal_clause[i + 1]) || i == (var->literals.size() - 1)) {
+      |              ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:1705:98: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1705 |         if ((i != (var->literals.size() - 1) && l_clause_idx != var->literal_clause[i + 1]) || i == (var->literals.size() - 1)) {
+      |                                                                                                ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:1720:52: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1720 |             if (cp->sat_count > 0 && cp->sat_count < cp->literals.size()) {
+      |                                      ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:1778:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1778 |     for (int i = 0; i < var->literals.size(); i++) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:1792:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1792 |     for (int i = 0; i < var->literals.size(); i++) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp: In member function ‘void sampler::ls_sampler::critical_score_subscore(uint64_t)’:
+../src/sampler/sampler.cpp:1806:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1806 |     for (int i = 0; i < var->literals.size(); i++) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:1831:48: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1831 |         if (cp->sat_count > 0 && cp->sat_count < cp->literals.size()) {
+      |                                  ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp: In member function ‘__int128 sampler::ls_sampler::critical_score(uint64_t, __int128)’:
+../src/sampler/sampler.cpp:1891:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1891 |     for (int i = 0; i < var->literals.size(); i++) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:1907:16: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1907 |         if ((i != (var->literals.size() - 1) && l_clause_idx != var->literal_clause[i + 1]) || i == (var->literals.size() - 1)) {
+      |              ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:1907:98: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 1907 |         if ((i != (var->literals.size() - 1) && l_clause_idx != var->literal_clause[i + 1]) || i == (var->literals.size() - 1)) {
+      |                                                                                                ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp: In member function ‘int sampler::ls_sampler::pick_critical_move(__int128&)’:
+../src/sampler/sampler.cpp:2129:39: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2129 |                     for (int j = 0; j < l->pos_coff.size(); j++) {
+      |                                     ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:2139:39: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2139 |                     for (int j = 0; j < l->neg_coff.size(); j++) {
+      |                                     ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:2153:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2153 |             for (int i = 0; i < l->pos_coff.size(); i++) {
+      |                             ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:2173:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2173 |             for (int i = 0; i < l->neg_coff.size(); i++) {
+      |                             ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp: In member function ‘void sampler::ls_sampler::interval_move(uint64_t, __int128&)’:
+../src/sampler/sampler.cpp:2275:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2275 |         for (int i = 0; i < var->literals.size(); ++i) {
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:2296:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2296 |         for (int i = 0; i < var->literals.size(); ++i) {
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp: In member function ‘void sampler::ls_sampler::smooth_clause_weight()’:
+../src/sampler/sampler.cpp:2338:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘uint64_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2338 |     for (int i = 0; i < _num_clauses; i++) {
+      |                     ~~^~~~~~~~~~~~~~
+../src/sampler/sampler.cpp: In member function ‘void sampler::ls_sampler::random_walk()’:
+../src/sampler/sampler.cpp:2387:39: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2387 |                     for (int j = 0; j < l->pos_coff.size(); j++) {
+      |                                     ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:2394:39: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2394 |                     for (int j = 0; j < l->neg_coff.size(); j++) {
+      |                                     ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:2405:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2405 |             for (int k = 0; k < l->pos_coff.size(); k++) {
+      |                             ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:2410:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2410 |             for (int k = 0; k < l->neg_coff.size(); k++) {
+      |                             ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp: In member function ‘__int128 sampler::ls_sampler::critical_subscore(uint64_t, __int128)’:
+../src/sampler/sampler.cpp:2478:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2478 |     for (int i = 0; i < var->literals.size(); i++) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:2497:16: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2497 |         if ((i != (var->literals.size() - 1) && l_clause_idx != var->literal_clause[i + 1]) || i == (var->literals.size() - 1)) {
+      |              ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:2497:98: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2497 |         if ((i != (var->literals.size() - 1) && l_clause_idx != var->literal_clause[i + 1]) || i == (var->literals.size() - 1)) {
+      |                                                                                                ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp: In member function ‘void sampler::ls_sampler::add_swap_operation(int&)’:
+../src/sampler/sampler.cpp:2569:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2569 |                 for (int j = 0; j < l->pos_coff.size(); j++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:2576:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2576 |                 for (int j = 0; j < l->neg_coff.size(); j++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:2585:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2585 |             for (int i = 0; i < l->neg_coff.size(); i++) {
+      |                             ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:2595:31: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2595 |             for (int i = 0; i < l->pos_coff.size(); i++) {
+      |                             ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp: In member function ‘void sampler::ls_sampler::swap_from_small_weight_clause()’:
+../src/sampler/sampler.cpp:2621:41: warning: comparison of integer expressions of different signedness: ‘int’ and ‘uint64_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2621 |         if (_clauses[clause_idx].weight < min_weight) {
+../src/sampler/sampler.cpp:2672:39: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2672 |                     for (int j = 0; j < l->pos_coff.size(); j++) {
+      |                                     ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:2687:39: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2687 |                     for (int j = 0; j < l->neg_coff.size(); j++) {
+      |                                     ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:2706:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2706 |                 for (int i = 0; i < l->neg_coff.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:2723:35: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2723 |                 for (int i = 0; i < l->pos_coff.size(); i++) {
+      |                                 ~~^~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp: In member function ‘void sampler::ls_sampler::print_interal_data_strcture(std::ostream&)’:
+../src/sampler/sampler.cpp:2853:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<sampler::clause>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2853 |     for (int i = 0; i < _clauses.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:2855:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<int>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2855 |         for (int j = 0; j < _clauses[i].lia_literals.size(); ++j) {
+      |                         ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:2865:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<sampler::lit>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2865 |     for (int i = 0; i < _lits.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:2873:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘uint64_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2873 |     for (int i = 0; i < _num_vars; ++i) {
+      |                     ~~^~~~~~~~~~~
+../src/sampler/sampler.cpp:2878:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<sampler::variable>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2878 |     for (int i = 0; i < _tmp_vars.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:2883:23: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<sampler::variable>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2883 |     for (int i = 0; i < _resolution_vars.size(); ++i) {
+      |                     ~~^~~~~~~~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp: In member function ‘void sampler::ls_sampler::print_literal(std::ostream&, sampler::lit&)’:
+../src/sampler/sampler.cpp:2927:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2927 |         for (int i = 0; i < l.pos_coff.size(); i++) {
+      |                         ~~^~~~~~~~~~~~~~~~~~~
+../src/sampler/sampler.cpp:2930:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<__int128>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+ 2930 |         for (int i = 0; i < l.neg_coff.size(); i++) {
+      |                         ~~^~~~~~~~~~~~~~~~~~~
+src/solver/tactic2solver.cpp
+src/ast/sls/sls_bv_engine.cpp
+In file included from ../src/util/a_shared.hpp:78,
+                 from ../src/util/a_state.h:2,
+                 from ../src/solver/tactic2solver.cpp:25:
+../src/util/reference_evaluation.hpp: In lambda function:
+../src/util/reference_evaluation.hpp:10:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   10 |   if(op==Num)return v.number(e);if(op==True)return 1;if(op==False)return 0;
+      |   ^~
+../src/util/reference_evaluation.hpp:10:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   10 |   if(op==Num)return v.number(e);if(op==True)return 1;if(op==False)return 0;
+      |                                 ^~
+../src/util/reference_evaluation.hpp:28:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   28 |   if(r!=0&&boost::multiprecision::msb(absn(r))>65536)throw std::runtime_error("reference_value_size_limit");return r;
+      |   ^~
+../src/util/reference_evaluation.hpp:28:109: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   28 |   if(r!=0&&boost::multiprecision::msb(absn(r))>65536)throw std::runtime_error("reference_value_size_limit");return r;
+      |                                                                                                             ^~~~~~
+In file included from ../src/util/a_shared.hpp:89,
+                 from ../src/util/a_state.h:2,
+                 from ../src/solver/tactic2solver.cpp:25:
+../src/util/phase_evidence.hpp: In function ‘a2::r4::Masks a2::r4::advice_targets(const a2::r4::PhaseEvidence&, bool, bool)’:
+../src/util/phase_evidence.hpp:21:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   21 |  if(!avoid)return ev.supports[phase];Masks out;
+      |  ^~
+../src/util/phase_evidence.hpp:21:38: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   21 |  if(!avoid)return ev.supports[phase];Masks out;
+      |                                      ^~~~~
+src/smt/params/smt_params.cpp
+src/api/api_fpa.cpp
+src/api/api_ast_vector.cpp
+src/api/api_rcf.cpp
+src/api/api_params.cpp
+src/muz/fp/datalog_parser.cpp
+src/muz/fp/horn_tactic.cpp
+src/muz/tab/tab_context.cpp
+src/muz/spacer/spacer_generalizers.cpp
+src/muz/spacer/spacer_qe_project.cpp
+src/muz/spacer/spacer_legacy_frames.cpp
+src/muz/spacer/spacer_context.cpp
+src/muz/rel/dl_external_relation.cpp
+src/muz/transforms/dl_transforms.cpp
+src/muz/transforms/dl_mk_slice.cpp
+src/muz/transforms/dl_mk_unfold.cpp
+src/muz/transforms/dl_mk_rule_inliner.cpp
+src/muz/transforms/dl_mk_interp_tail_simplifier.cpp
+src/muz/transforms/dl_mk_subsumption_checker.cpp
+src/muz/transforms/dl_mk_coalesce.cpp
+src/tactic/sls/sls_tactic.cpp
+src/smt/expr_context_simplifier.cpp
+src/solver/assertions/asserted_formulas.cpp
+src/ast/sls/bvsls_opt_engine.cpp
+src/muz/fp/dl_register_engine.cpp
+src/muz/bmc/dl_bmc_engine.cpp
+src/muz/spacer/spacer_dl_interface.cpp
+src/muz/rel/dl_instruction.cpp
+src/muz/rel/dl_table_relation.cpp
+src/muz/rel/dl_table.cpp
+src/muz/rel/dl_lazy_table.cpp
+src/muz/rel/dl_interval_relation.cpp
+src/muz/rel/udoc_relation.cpp
+src/muz/rel/dl_base.cpp
+src/muz/rel/dl_product_relation.cpp
+src/muz/rel/dl_mk_simple_joins.cpp
+src/muz/rel/dl_mk_similarity_compressor.cpp
+src/muz/rel/dl_sparse_table.cpp
+src/muz/rel/aig_exporter.cpp
+src/muz/rel/check_relation.cpp
+src/muz/rel/karr_relation.cpp
+src/muz/transforms/dl_mk_synchronize.cpp
+src/qe/qe.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/qe/qe.cpp:24:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/tactic/unit_subsumption_tactic.cpp
+src/smt/tactic/smt_tactic_core.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/tactic/unit_subsumption_tactic.cpp:20:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/sat/tactic/sat2goal.cpp
+src/sat/tactic/goal2sat.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/tactic/smt_tactic_core.cpp:24:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/sat/smt/pb_internalize.cpp
+In file included from ../src/util/a_shared.hpp:78,
+                 from ../src/util/a_state.h:2,
+                 from ../src/smt/tactic/smt_tactic_core.cpp:25:
+../src/util/reference_evaluation.hpp: In lambda function:
+../src/util/reference_evaluation.hpp:10:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   10 |   if(op==Num)return v.number(e);if(op==True)return 1;if(op==False)return 0;
+      |   ^~
+../src/util/reference_evaluation.hpp:10:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   10 |   if(op==Num)return v.number(e);if(op==True)return 1;if(op==False)return 0;
+      |                                 ^~
+../src/util/reference_evaluation.hpp:28:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   28 |   if(r!=0&&boost::multiprecision::msb(absn(r))>65536)throw std::runtime_error("reference_value_size_limit");return r;
+      |   ^~
+../src/util/reference_evaluation.hpp:28:109: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   28 |   if(r!=0&&boost::multiprecision::msb(absn(r))>65536)throw std::runtime_error("reference_value_size_limit");return r;
+      |                                                                                                             ^~~~~~
+In file included from ../src/util/a_shared.hpp:89,
+                 from ../src/util/a_state.h:2,
+                 from ../src/smt/tactic/smt_tactic_core.cpp:25:
+../src/util/phase_evidence.hpp: In function ‘a2::r4::Masks a2::r4::advice_targets(const a2::r4::PhaseEvidence&, bool, bool)’:
+../src/util/phase_evidence.hpp:21:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   21 |  if(!avoid)return ev.supports[phase];Masks out;
+      |  ^~
+../src/util/phase_evidence.hpp:21:38: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   21 |  if(!avoid)return ev.supports[phase];Masks out;
+      |                                      ^~~~~
+src/sat/smt/sat_th.cpp
+src/sat/smt/arith_solver.cpp
+src/sat/smt/pb_solver.cpp
+src/sat/smt/euf_relevancy.cpp
+src/sat/smt/array_diagnostics.cpp
+src/sat/smt/bv_ackerman.cpp
+src/sat/smt/bv_internalize.cpp
+src/sat/smt/euf_model.cpp
+src/sat/smt/arith_value.cpp
+src/sat/smt/euf_invariant.cpp
+src/sat/smt/intblast_solver.cpp
+src/sat/smt/recfun_solver.cpp
+src/sat/smt/bv_solver.cpp
+src/sat/smt/sls_solver.cpp
+src/sat/smt/arith_axioms.cpp
+src/sat/smt/array_axioms.cpp
+src/sat/smt/specrel_solver.cpp
+src/sat/smt/dt_solver.cpp
+src/sat/smt/bv_theory_checker.cpp
+src/sat/smt/user_solver.cpp
+src/sat/smt/bv_delay_internalize.cpp
+src/sat/smt/arith_diagnostics.cpp
+src/sat/smt/q_clause.cpp
+src/sat/smt/array_solver.cpp
+src/sat/smt/euf_internalize.cpp
+src/sat/smt/array_internalize.cpp
+src/sat/smt/bv_invariant.cpp
+src/sat/smt/array_model.cpp
+src/sat/smt/euf_ackerman.cpp
+src/sat/smt/euf_proof.cpp
+src/sat/smt/arith_internalize.cpp
+src/smt/mam.cpp
+src/smt/smt_consequences.cpp
+src/smt/seq_axioms.cpp
+src/smt/smt_lookahead.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/mam.cpp:28:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/theory_array_full.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_consequences.cpp:25:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/seq_axioms.cpp:25:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_lookahead.cpp:24:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/theory_special_relations.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/theory_array_full.cpp:25:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/theory_special_relations.cpp:28:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/theory_lra.cpp
+src/smt/theory_dummy.cpp
+src/smt/smt_clause_proof.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/theory_lra.cpp:38:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/theory_dummy.cpp:20:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_clause_proof.cpp:16:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/theory_fpa.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/theory_fpa.cpp:20:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/theory_str_regex.cpp
+src/smt/theory_intblast.cpp
+src/smt/qi_queue.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_model_generator.h:35,
+                 from ../src/smt/theory_str.h:31,
+                 from ../src/smt/theory_str_regex.cpp:18:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/theory_intblast.cpp:14:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/qi_queue.cpp:24:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/smt_quantifier.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_quantifier.cpp:23:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/theory_datatype.cpp
+src/smt/theory_wmaxsat.cpp
+src/smt/theory_bv.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/theory_datatype.cpp:24:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/smt_case_split_queue.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/theory_wmaxsat.cpp:21:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/theory_bv.cpp:19:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_case_split_queue.cpp:19:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/theory_user_propagator.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/theory_user_propagator.cpp:22:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/smt_arith_value.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_arith_value.h:23,
+                 from ../src/smt/smt_arith_value.cpp:21:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/smt_justification.cpp
+src/smt/smt_enode.cpp
+src/smt/theory_sls.cpp
+src/smt/theory_array_bapa.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_justification.cpp:19:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/theory_array_base.cpp
+src/smt/smt_internalizer.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_enode.cpp:20:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/theory_sls.cpp:19:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/theory_array_bapa.cpp:83:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/theory_array_base.cpp:19:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_internalizer.cpp:19:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+../src/smt/smt_internalizer.cpp: In member function ‘void smt::context::mk_root_clause(unsigned int, smt::literal*, proof*)’:
+../src/smt/smt_internalizer.cpp:1663:26: warning: comparison of integer expressions of different signedness: ‘int’ and ‘unsigned int’ [-Wsign-compare]
+ 1663 |             for(int i=0;i<num_lits;i++){
+      |                         ~^~~~~~~~~
+src/smt/smt_context_pp.cpp
+src/smt/theory_dl.cpp
+src/smt/dyn_ack.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_model_generator.h:35,
+                 from ../src/smt/theory_dl.cpp:30:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_context_pp.cpp:20:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+../src/smt/smt_context_pp.cpp: In member function ‘void smt::context::expr_bool_var_map(sampler::ls_sampler*)’:
+../src/smt/smt_context_pp.cpp:360:35: warning: unused variable ‘c’ [-Wunused-variable]
+  360 |                 bool_var A, a, b, c;
+      |                                   ^
+../src/smt/smt_context_pp.cpp:351:22: warning: unused variable ‘v’ [-Wunused-variable]
+  351 |             bool_var v = get_bool_var_of_id(n->get_id());
+      |                      ^
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/dyn_ack.cpp:19:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/arith_eq_adapter.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/arith_eq_adapter.cpp:20:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/smt_kernel.cpp
+src/smt/smt_model_finder.cpp
+src/smt/seq_offset_eq.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_kernel.cpp:20:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_model_finder.cpp:37:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/seq_offset_eq.cpp:21:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/smt_solver.cpp
+src/smt/theory_str_mc.cpp
+src/smt/smt_model_checker.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_solver.cpp:26:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/smt_for_each_relevant_expr.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/theory_str_mc.cpp:18:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/smt_model_generator.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_model_checker.cpp:34:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/smt_relevancy.cpp
+In file included from ../src/util/a_shared.hpp:78,
+                 from ../src/util/a_state.h:2,
+                 from ../src/smt/smt_solver.cpp:27:
+../src/util/reference_evaluation.hpp: In lambda function:
+../src/util/reference_evaluation.hpp:10:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   10 |   if(op==Num)return v.number(e);if(op==True)return 1;if(op==False)return 0;
+      |   ^~
+../src/util/reference_evaluation.hpp:10:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   10 |   if(op==Num)return v.number(e);if(op==True)return 1;if(op==False)return 0;
+      |                                 ^~
+../src/util/reference_evaluation.hpp:28:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   28 |   if(r!=0&&boost::multiprecision::msb(absn(r))>65536)throw std::runtime_error("reference_value_size_limit");return r;
+      |   ^~
+../src/util/reference_evaluation.hpp:28:109: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   28 |   if(r!=0&&boost::multiprecision::msb(absn(r))>65536)throw std::runtime_error("reference_value_size_limit");return r;
+      |                                                                                                             ^~~~~~
+In file included from ../src/util/a_shared.hpp:89,
+                 from ../src/util/a_state.h:2,
+                 from ../src/smt/smt_solver.cpp:27:
+../src/util/phase_evidence.hpp: In function ‘a2::r4::Masks a2::r4::advice_targets(const a2::r4::PhaseEvidence&, bool, bool)’:
+../src/util/phase_evidence.hpp:21:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   21 |  if(!avoid)return ev.supports[phase];Masks out;
+      |  ^~
+../src/util/phase_evidence.hpp:21:38: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   21 |  if(!avoid)return ev.supports[phase];Masks out;
+      |                                      ^~~~~
+src/smt/smt_checker.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_for_each_relevant_expr.cpp:19:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_model_generator.cpp:26:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_relevancy.cpp:19:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_checker.cpp:19:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/theory_array.cpp
+src/smt/theory_pb.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/theory_array.cpp:19:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/smt_parallel.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/theory_pb.cpp:23:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_parallel.h:21,
+                 from ../src/smt/smt_parallel.cpp:24:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/smt_theory.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_theory.cpp:19:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/smt_quick_checker.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_quick_checker.cpp:19:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/theory_char.cpp
+src/smt/smt_context_stat.cpp
+src/smt/smt_context_inv.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/theory_char.cpp:21:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_context_stat.cpp:19:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_context_inv.cpp:19:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/smt_conflict_resolution.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_conflict_resolution.cpp:22:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/api/api_datalog.cpp
+src/opt/opt_lns.cpp
+src/opt/opt_cores.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/opt/maxsmt.h:25,
+                 from ../src/opt/opt_lns.cpp:21:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/opt/maxsmt.h:25,
+                 from ../src/opt/opt_cores.cpp:30:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/muz/fp/dl_cmds.cpp
+src/muz/rel/dl_compiler.cpp
+src/muz/rel/dl_sieve_relation.cpp
+src/muz/rel/rel_context.cpp
+src/muz/rel/dl_finite_product_relation.cpp
+src/muz/rel/dl_relation_manager.cpp
+src/muz/rel/dl_check_table.cpp
+src/muz/rel/dl_mk_explanations.cpp
+src/sat/sat_solver/sat_smt_solver.cpp
+src/sat/sat_solver/inc_sat_solver.cpp
+src/sat/smt/fpa_solver.cpp
+src/sat/smt/xor_solver.cpp
+src/smt/theory_recfun.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/theory_recfun.h:23,
+                 from ../src/smt/theory_recfun.cpp:24:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/smt_context.cpp
+src/smt/theory_str.cpp
+src/smt/seq_regex.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_context.cpp:19:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/util/a_shared.hpp:78,
+                 from ../src/util/a_state.h:2,
+                 from ../src/smt/smt_context.cpp:20:
+../src/util/reference_evaluation.hpp: In lambda function:
+../src/util/reference_evaluation.hpp:10:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   10 |   if(op==Num)return v.number(e);if(op==True)return 1;if(op==False)return 0;
+      |   ^~
+../src/util/reference_evaluation.hpp:10:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   10 |   if(op==Num)return v.number(e);if(op==True)return 1;if(op==False)return 0;
+      |                                 ^~
+../src/util/reference_evaluation.hpp:28:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   28 |   if(r!=0&&boost::multiprecision::msb(absn(r))>65536)throw std::runtime_error("reference_value_size_limit");return r;
+      |   ^~
+../src/util/reference_evaluation.hpp:28:109: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   28 |   if(r!=0&&boost::multiprecision::msb(absn(r))>65536)throw std::runtime_error("reference_value_size_limit");return r;
+      |                                                                                                             ^~~~~~
+In file included from ../src/util/a_shared.hpp:89,
+                 from ../src/util/a_state.h:2,
+                 from ../src/smt/smt_context.cpp:20:
+../src/util/phase_evidence.hpp: In function ‘a2::r4::Masks a2::r4::advice_targets(const a2::r4::PhaseEvidence&, bool, bool)’:
+../src/util/phase_evidence.hpp:21:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   21 |  if(!avoid)return ev.supports[phase];Masks out;
+      |  ^~
+../src/util/phase_evidence.hpp:21:38: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   21 |  if(!avoid)return ev.supports[phase];Masks out;
+      |                                      ^~~~~
+In file included from ../src/smt/smt_context.cpp:21:
+../src/smt/a_internal_view.h: In member function ‘a2::Op a2::InternalView::op(a2::InternalView::Expr) const’:
+../src/smt/a_internal_view.h:10:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   10 |   if(!is_app(e))return Other;auto a=to_app(e);auto k=a->get_decl_kind();auto f=a->get_family_id();
+      |   ^~
+../src/smt/a_internal_view.h:10:30: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   10 |   if(!is_app(e))return Other;auto a=to_app(e);auto k=a->get_decl_kind();auto f=a->get_family_id();
+      |                              ^~~~
+src/smt/theory_utvpi.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/theory_str.cpp:18:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/seq_regex.h:24,
+                 from ../src/smt/seq_regex.cpp:19:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/theory_diff_logic.cpp
+../src/smt/smt_context.cpp: In destructor ‘virtual smt::context::~context()’:
+../src/smt/smt_context.cpp:197:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  197 |     if(m_S)m_S->flush();m_S.reset();m_S_pending.reset();
+      |     ^~
+../src/smt/smt_context.cpp:197:25: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  197 |     if(m_S)m_S->flush();m_S.reset();m_S_pending.reset();
+      |                         ^~~
+In file included from ../src/smt/smt_context.cpp:1824:
+../src/smt/a_context.inc: In member function ‘void smt::context::A_binding_snapshot()’:
+../src/smt/a_context.inc:30:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |     if(!m_A||!m_A->diagnostic||m_A_snapshot_done)return;m_A_snapshot_done=true;auto snapshot_start=a2::Clock::now();
+      |     ^~
+../src/smt/a_context.inc:30:57: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |     if(!m_A||!m_A->diagnostic||m_A_snapshot_done)return;m_A_snapshot_done=true;auto snapshot_start=a2::Clock::now();
+      |                                                         ^~~~~~~~~~~~~~~~~
+../src/smt/a_context.inc:37:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   37 |         if(!bool_var2expr(v))continue;a2::Work work;work.deadline=deadline;auto n=a2::canonical(view,bool_var2expr(v),work);
+      |         ^~
+../src/smt/a_context.inc:37:39: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   37 |         if(!bool_var2expr(v))continue;a2::Work work;work.deadline=deadline;auto n=a2::canonical(view,bool_var2expr(v),work);
+      |                                       ^~
+In file included from ../src/smt/smt_context.cpp:1824:
+../src/smt/a_context.inc: In member function ‘void smt::context::A_finalize(lbool)’:
+../src/smt/a_context.inc:193:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  193 |     if(!m_A)return;std::lock_guard<std::recursive_mutex> lock(m_A->mutex);auto& b=m_A->call(m_A_call);b["result"]=result==l_true?"sat":result==l_false?"unsat":"unknown";b["original_reason_unknown"]=result==l_undef?(m_A_last_exposure?"canceled":last_failure_as_string()):"";
+      |     ^~
+../src/smt/a_context.inc:193:20: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  193 |     if(!m_A)return;std::lock_guard<std::recursive_mutex> lock(m_A->mutex);auto& b=m_A->call(m_A_call);b["result"]=result==l_true?"sat":result==l_false?"unsat":"unknown";b["original_reason_unknown"]=result==l_undef?(m_A_last_exposure?"canceled":last_failure_as_string()):"";
+      |                    ^~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_model_generator.h:35,
+                 from ../src/smt/theory_diff_logic.h:37,
+                 from ../src/smt/theory_utvpi.h:24,
+                 from ../src/smt/theory_utvpi.cpp:17:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/theory_seq.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_model_generator.h:35,
+                 from ../src/smt/theory_diff_logic.h:37,
+                 from ../src/smt/theory_diff_logic.cpp:20:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/theory_seq.cpp:105:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/smt_setup.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/smt_setup.cpp:19:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/shell/datalog_frontend.cpp
+src/opt/maxsmt.cpp
+src/opt/opt_preprocess.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/opt/maxsmt.h:25,
+                 from ../src/opt/maxsmt.cpp:25:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/opt/maxsmt.h:25,
+                 from ../src/opt/opt_preprocess.h:22,
+                 from ../src/opt/opt_preprocess.cpp:34:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/opt/wmax.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/opt/maxsmt.h:25,
+                 from ../src/opt/wmax.h:22,
+                 from ../src/opt/wmax.cpp:19:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/opt/maxcore.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/opt/maxsmt.h:25,
+                 from ../src/opt/opt_context.h:29,
+                 from ../src/opt/maxcore.cpp:70:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/opt/opt_solver.cpp
+src/opt/optsmt.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/opt/opt_solver.cpp:24:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/opt/maxsmt.h:25,
+                 from ../src/opt/opt_context.h:29,
+                 from ../src/opt/optsmt.cpp:34:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/opt/maxlex.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/opt/maxsmt.h:25,
+                 from ../src/opt/opt_context.h:29,
+                 from ../src/opt/maxlex.cpp:23:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/opt/opt_context.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/opt/maxsmt.h:25,
+                 from ../src/opt/opt_context.h:29,
+                 from ../src/opt/opt_context.cpp:46:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/opt/opt_parse.cpp
+src/opt/sortmax.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/opt/maxsmt.h:25,
+                 from ../src/opt/opt_context.h:29,
+                 from ../src/opt/opt_parse.cpp:19:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/opt/maxsmt.h:25,
+                 from ../src/opt/sortmax.cpp:19:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/muz/rel/dl_bound_relation.cpp
+src/smt/seq_ne_solver.cpp
+src/smt/seq_eq_solver.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/seq_ne_solver.cpp:22:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/seq_eq_solver.cpp:23:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/smt/theory_dense_diff_logic.cpp
+src/smt/theory_arith.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/theory_dense_diff_logic_def.h:21,
+                 from ../src/smt/theory_dense_diff_logic.cpp:19:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/smt/theory_arith.h:35,
+                 from ../src/smt/theory_arith_def.h:21,
+                 from ../src/smt/theory_arith.cpp:20:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/shell/opt_frontend.cpp
+src/sat/smt/q_queue.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/opt/maxsmt.h:25,
+                 from ../src/opt/opt_context.h:29,
+                 from ../src/shell/opt_frontend.cpp:20:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/sat/smt/q_mam.cpp
+src/sat/smt/q_mbi.cpp
+src/shell/smtlib_frontend.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/opt/maxsmt.h:25,
+                 from ../src/opt/opt_context.h:29,
+                 from ../src/opt/opt_cmds.h:21,
+                 from ../src/shell/smtlib_frontend.cpp:30:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/api/api_opt.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/opt/maxsmt.h:25,
+                 from ../src/opt/opt_context.h:29,
+                 from ../src/api/api_opt.cpp:24:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/api/api_parsers.cpp
+src/opt/opt_cmds.cpp
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/opt/maxsmt.h:25,
+                 from ../src/opt/opt_context.h:29,
+                 from ../src/opt/opt_cmds.h:21,
+                 from ../src/api/api_parsers.cpp:29:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+In file included from ../src/sampler/sampler.h:1,
+                 from ../src/smt/smt_context.h:57,
+                 from ../src/opt/maxsmt.h:25,
+                 from ../src/opt/opt_context.h:29,
+                 from ../src/opt/opt_cmds.h:21,
+                 from ../src/opt/opt_cmds.cpp:24:
+../src/util/r6_guard_trace.hpp: In member function ‘void r6::GuardTrace::finish(const mt19937&, const string&, bool)’:
+../src/util/r6_guard_trace.hpp:30:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |         ^~
+../src/util/r6_guard_trace.hpp:30:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   30 |         if(!begun||emitted)return;reason=why;guard.update_span();emitted=true;
+      |                                   ^~~~~~
+src/sat/smt/q_theory_checker.cpp
+src/sat/smt/q_model_fixer.cpp
+src/sat/smt/q_eval.cpp
+src/sat/smt/q_solver.cpp
+src/sat/smt/euf_solver.cpp
+src/sat/smt/q_ematch.cpp
+g++  -o z3  shell/drat_frontend.o shell/install_tactic.o shell/opt_frontend.o shell/dimacs_frontend.o shell/gparams_register_modules.o shell/mem_initializer.o shell/main.o shell/smtlib_frontend.o shell/z3_log_frontend.o shell/datalog_frontend.o api/api.a cmd_context/extra_cmds/extra_cmds.a opt/opt.a tactic/portfolio/portfolio.a tactic/fpa/fpa_tactics.a tactic/ufbv/ufbv_tactic.a tactic/smtlogics/smtlogic_tactics.a muz/fp/fp.a muz/bmc/bmc.a muz/ddnf/ddnf.a muz/tab/tab.a muz/clp/clp.a muz/spacer/spacer.a muz/rel/rel.a muz/transforms/transforms.a muz/dataflow/dataflow.a muz/base/muz.a tactic/fd_solver/fd_solver.a sat/sat_solver/sat_solver.a qe/qe.a tactic/sls/sls_tactic.a smt/tactic/smt_tactic.a tactic/bv/bv_tactics.a nlsat/tactic/nlsat_tactic.a sat/tactic/sat_tactic.a sat/smt/sat_smt.a smt/smt.a sampler/sampler.a smt/proto_model/proto_model.a math/subpaving/tactic/subpaving_tactic.a solver/assertions/solver_assertions.a tactic/arith/arith_tactics.a tactic/core/core_tactics.a ast/fpa/fpa.a ackermannization/ackermannization.a tactic/aig/aig_tactic.a ast/pattern/pattern.a parsers/smt2/smt2parser.a cmd_context/cmd_context.a solver/solver.a qe/lite/qe_lite.a qe/mbp/mbp.a tactic/tactic.a ast/simplifiers/simplifiers.a ast/proofs/proofs.a ast/substitution/substitution.a ast/rewriter/bit_blaster/bit_blaster.a math/lp/lp.a nlsat/nlsat.a sat/sat.a ast/sls/ast_sls.a ast/converters/converters.a model/model.a ast/macros/macros.a ast/normal_forms/normal_forms.a ast/rewriter/rewriter.a math/grobner/grobner.a ast/euf/euf.a parsers/util/parser_util.a smt/params/smt_params.a ast/ast.a math/subpaving/subpaving.a math/realclosure/realclosure.a params/params.a math/automata/automata.a math/hilbert/hilbert.a math/simplex/simplex.a math/dd/dd.a math/interval/interval.a math/polynomial/polynomial.a util/util.a -lpthread -fsanitize=address,undefined
+g++ -o libz3.so -shared api/dll/install_tactic.o api/dll/dll.o api/dll/gparams_register_modules.o api/dll/mem_initializer.o api/api_commands.o api/api_opt.o api/api_fpa.o api/api_ast_vector.o api/api_parsers.o api/api_rcf.o api/api_params.o api/api_datalog.o api/api_special_relations.o api/api_qe.o api/z3_replayer.o api/api_model.o api/api_bv.o api/api_pb.o api/api_array.o api/api_datatype.o api/api_seq.o api/api_tactic.o api/api_numeral.o api/api_log_macros.o api/api_ast_map.o api/api_arith.o api/api_quant.o api/api_config_params.o api/api_solver.o api/api_goal.o api/api_stats.o api/api_context.o api/api_log.o api/api_ast.o api/api_algebraic.o api/api_polynomial.o cmd_context/extra_cmds/extra_cmds.a opt/opt.a tactic/portfolio/portfolio.a tactic/fpa/fpa_tactics.a tactic/ufbv/ufbv_tactic.a tactic/smtlogics/smtlogic_tactics.a muz/fp/fp.a muz/bmc/bmc.a muz/ddnf/ddnf.a muz/tab/tab.a muz/clp/clp.a muz/spacer/spacer.a muz/rel/rel.a muz/transforms/transforms.a muz/dataflow/dataflow.a muz/base/muz.a tactic/fd_solver/fd_solver.a sat/sat_solver/sat_solver.a qe/qe.a tactic/sls/sls_tactic.a smt/tactic/smt_tactic.a tactic/bv/bv_tactics.a nlsat/tactic/nlsat_tactic.a sat/tactic/sat_tactic.a sat/smt/sat_smt.a smt/smt.a sampler/sampler.a smt/proto_model/proto_model.a math/subpaving/tactic/subpaving_tactic.a solver/assertions/solver_assertions.a tactic/arith/arith_tactics.a tactic/core/core_tactics.a ast/fpa/fpa.a ackermannization/ackermannization.a tactic/aig/aig_tactic.a ast/pattern/pattern.a parsers/smt2/smt2parser.a cmd_context/cmd_context.a solver/solver.a qe/lite/qe_lite.a qe/mbp/mbp.a tactic/tactic.a ast/simplifiers/simplifiers.a ast/proofs/proofs.a ast/substitution/substitution.a ast/rewriter/bit_blaster/bit_blaster.a math/lp/lp.a nlsat/nlsat.a sat/sat.a ast/sls/ast_sls.a ast/converters/converters.a model/model.a ast/macros/macros.a ast/normal_forms/normal_forms.a ast/rewriter/rewriter.a math/grobner/grobner.a ast/euf/euf.a parsers/util/parser_util.a smt/params/smt_params.a ast/ast.a math/subpaving/subpaving.a math/realclosure/realclosure.a params/params.a math/automata/automata.a math/hilbert/hilbert.a math/simplex/simplex.a math/dd/dd.a math/interval/interval.a math/polynomial/polynomial.a util/util.a -lpthread  -Wl,-soname,libz3.so
+ln -f -s ../libz3.so python
+Z3 was successfully built.
+Z3Py scripts can already be executed in the 'build/python' directory.
+Z3Py scripts stored in arbitrary directories can be executed if the 'build/python' directory is added to the PYTHONPATH environment variable and the 'build' directory is added to the LD_LIBRARY_PATH environment variable.
+Use the following command to install Z3 at prefix /mnt/Space1/SMT_Sampling/guided_sampler/deps/round6_sanitize.
+    sudo make install
+make: Leaving directory '/tmp/guided_sampler_round6_worktrees/sanitize/z3/build'
++ make -C /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/z3/build -j 8 install
+make: Entering directory '/tmp/guided_sampler_round6_worktrees/sanitize/z3/build'
+Z3 was successfully installed.
+make: Leaving directory '/tmp/guided_sampler_round6_worktrees/sanitize/z3/build'
++ make -C /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/HighDiv -j 8 Z3_PREFIX=/mnt/Space1/SMT_Sampling/guided_sampler/deps/round6_sanitize CXXFLAGS=-O1 -g -std=c++20 -Wall -fsanitize=address,undefined -fno-omit-frame-pointer
+make: Entering directory '/tmp/guided_sampler_round6_worktrees/sanitize/HighDiv'
+g++ -I/mnt/Space1/SMT_Sampling/guided_sampler/deps/round6_sanitize/include -I/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include -I/mnt/Space1/SMT_Sampling/guided_sampler/include/round4 -I/mnt/Space1/SMT_Sampling/guided_sampler/include/round2 -I/mnt/Space1/SMT_Sampling/guided_sampler/include -DGUIDED_BUILD -O1 -g -std=c++20 -Wall -fsanitize=address,undefined -fno-omit-frame-pointer -MMD -MP -c src/main/main.cpp -o build/main/main.o
+g++ -I/mnt/Space1/SMT_Sampling/guided_sampler/deps/round6_sanitize/include -I/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include -I/mnt/Space1/SMT_Sampling/guided_sampler/include/round4 -I/mnt/Space1/SMT_Sampling/guided_sampler/include/round2 -I/mnt/Space1/SMT_Sampling/guided_sampler/include -DGUIDED_BUILD -O1 -g -std=c++20 -Wall -fsanitize=address,undefined -fno-omit-frame-pointer -MMD -MP -c src/sampler/liasampler.cpp -o build/sampler/liasampler.o
+g++ -I/mnt/Space1/SMT_Sampling/guided_sampler/deps/round6_sanitize/include -I/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include -I/mnt/Space1/SMT_Sampling/guided_sampler/include/round4 -I/mnt/Space1/SMT_Sampling/guided_sampler/include/round2 -I/mnt/Space1/SMT_Sampling/guided_sampler/include -DGUIDED_BUILD -O1 -g -std=c++20 -Wall -fsanitize=address,undefined -fno-omit-frame-pointer -MMD -MP -c src/sampler/sampler.cpp -o build/sampler/sampler.o
+In file included from src/sampler/sampler.cpp:1:
+src/sampler/sampler.h: In constructor ‘sampler::Sampler::Sampler(z3::context*, std::string, std::string, size_t, double)’:
+src/sampler/sampler.h:21:18: warning: ‘sampler::Sampler::c’ will be initialized after [-Wreorder]
+   21 |     z3::context& c;
+      |                  ^
+src/sampler/sampler.h:14:17: warning:   ‘std::string sampler::Sampler::smtFilePath’ [-Wreorder]
+   14 |     std::string smtFilePath;
+      |                 ^~~~~~~~~~~
+In file included from src/sampler/sampler.cpp:1:
+src/sampler/sampler.h:44:5: warning:   when initialized here [-Wreorder]
+   44 |     Sampler(z3::context* _c, std::string _smtFilePath, std::string _samplesFileDir, size_t _maxNumSamples, double _maxTimeLimit)
+      |     ^~~~~~~
+In file included from src/main/../sampler/liasampler.h:7,
+                 from src/main/main.cpp:1:
+src/main/../sampler/sampler.h: In constructor ‘sampler::Sampler::Sampler(z3::context*, std::string, std::string, size_t, double)’:
+src/main/../sampler/sampler.h:21:18: warning: ‘sampler::Sampler::c’ will be initialized after [-Wreorder]
+   21 |     z3::context& c;
+      |                  ^
+src/main/../sampler/sampler.h:14:17: warning:   ‘std::string sampler::Sampler::smtFilePath’ [-Wreorder]
+   14 |     std::string smtFilePath;
+      |                 ^~~~~~~~~~~
+In file included from src/main/../sampler/liasampler.h:7,
+                 from src/main/main.cpp:1:
+src/main/../sampler/sampler.h:44:5: warning:   when initialized here [-Wreorder]
+   44 |     Sampler(z3::context* _c, std::string _smtFilePath, std::string _samplesFileDir, size_t _maxNumSamples, double _maxTimeLimit)
+      |     ^~~~~~~
+In file included from src/sampler/liasampler.h:7,
+                 from src/sampler/liasampler.cpp:1:
+src/sampler/sampler.h: In constructor ‘sampler::Sampler::Sampler(z3::context*, std::string, std::string, size_t, double)’:
+src/sampler/sampler.h:21:18: warning: ‘sampler::Sampler::c’ will be initialized after [-Wreorder]
+   21 |     z3::context& c;
+      |                  ^
+src/sampler/sampler.h:14:17: warning:   ‘std::string sampler::Sampler::smtFilePath’ [-Wreorder]
+   14 |     std::string smtFilePath;
+      |                 ^~~~~~~~~~~
+In file included from src/sampler/liasampler.h:7,
+                 from src/sampler/liasampler.cpp:1:
+src/sampler/sampler.h:44:5: warning:   when initialized here [-Wreorder]
+   44 |     Sampler(z3::context* _c, std::string _smtFilePath, std::string _samplesFileDir, size_t _maxNumSamples, double _maxTimeLimit)
+      |     ^~~~~~~
+In file included from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_shared.hpp:78,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_host_view.hpp:2,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_guidance_bridge.hpp:3,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/session.hpp:2,
+                 from src/sampler/liasampler.h:8,
+                 from src/sampler/liasampler.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/reference_evaluation.hpp: In lambda function:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/reference_evaluation.hpp:10:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   10 |   if(op==Num)return v.number(e);if(op==True)return 1;if(op==False)return 0;
+      |   ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/reference_evaluation.hpp:10:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   10 |   if(op==Num)return v.number(e);if(op==True)return 1;if(op==False)return 0;
+      |                                 ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/reference_evaluation.hpp:28:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   28 |   if(r!=0&&boost::multiprecision::msb(absn(r))>65536)throw std::runtime_error("reference_value_size_limit");return r;
+      |   ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/reference_evaluation.hpp:28:109: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   28 |   if(r!=0&&boost::multiprecision::msb(absn(r))>65536)throw std::runtime_error("reference_value_size_limit");return r;
+      |                                                                                                             ^~~~~~
+In file included from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_shared.hpp:89,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_host_view.hpp:2,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_guidance_bridge.hpp:3,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/session.hpp:2,
+                 from src/sampler/liasampler.h:8,
+                 from src/sampler/liasampler.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/phase_evidence.hpp: In function ‘a2::r4::Masks a2::r4::advice_targets(const a2::r4::PhaseEvidence&, bool, bool)’:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/phase_evidence.hpp:21:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   21 |  if(!avoid)return ev.supports[phase];Masks out;
+      |  ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/phase_evidence.hpp:21:38: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   21 |  if(!avoid)return ev.supports[phase];Masks out;
+      |                                      ^~~~~
+In file included from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_shared.hpp:78,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_host_view.hpp:2,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_guidance_bridge.hpp:3,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/session.hpp:2,
+                 from src/main/../sampler/liasampler.h:8,
+                 from src/main/main.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/reference_evaluation.hpp: In lambda function:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/reference_evaluation.hpp:10:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   10 |   if(op==Num)return v.number(e);if(op==True)return 1;if(op==False)return 0;
+      |   ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/reference_evaluation.hpp:10:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   10 |   if(op==Num)return v.number(e);if(op==True)return 1;if(op==False)return 0;
+      |                                 ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/reference_evaluation.hpp:28:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   28 |   if(r!=0&&boost::multiprecision::msb(absn(r))>65536)throw std::runtime_error("reference_value_size_limit");return r;
+      |   ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/reference_evaluation.hpp:28:109: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   28 |   if(r!=0&&boost::multiprecision::msb(absn(r))>65536)throw std::runtime_error("reference_value_size_limit");return r;
+      |                                                                                                             ^~~~~~
+In file included from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/session.hpp:2,
+                 from src/sampler/liasampler.h:8,
+                 from src/sampler/liasampler.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_guidance_bridge.hpp: In member function ‘void guided::AGuidanceBridge::commit(const guided::Evaluation&)’:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_guidance_bridge.hpp:47:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   47 |   if(disabled)return;auto start=Clock::now();if(index->active)throw std::runtime_error("A index modified during active check");
+      |   ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_guidance_bridge.hpp:47:22: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   47 |   if(disabled)return;auto start=Clock::now();if(index->active)throw std::runtime_error("A index modified during active check");
+      |                      ^~~~
+In file included from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_shared.hpp:89,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_host_view.hpp:2,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_guidance_bridge.hpp:3,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/session.hpp:2,
+                 from src/main/../sampler/liasampler.h:8,
+                 from src/main/main.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/phase_evidence.hpp: In function ‘a2::r4::Masks a2::r4::advice_targets(const a2::r4::PhaseEvidence&, bool, bool)’:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/phase_evidence.hpp:21:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   21 |  if(!avoid)return ev.supports[phase];Masks out;
+      |  ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/phase_evidence.hpp:21:38: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   21 |  if(!avoid)return ev.supports[phase];Masks out;
+      |                                      ^~~~~
+In file included from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/session.hpp:2,
+                 from src/sampler/liasampler.h:8,
+                 from src/sampler/liasampler.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_guidance_bridge.hpp: In member function ‘guided::Json guided::AGuidanceBridge::end_check(z3::solver&)’:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_guidance_bridge.hpp:66:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   66 |   if(disabled)return Json::object();auto start=Clock::now();current=Json::parse(Z3_solver_get_A_guidance_stats(solver.ctx(),solver));Z3_solver_clear_A_guidance(solver.ctx(),solver);solver.ctx().check_error();
+      |   ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_guidance_bridge.hpp:66:37: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   66 |   if(disabled)return Json::object();auto start=Clock::now();current=Json::parse(Z3_solver_get_A_guidance_stats(solver.ctx(),solver));Z3_solver_clear_A_guidance(solver.ctx(),solver);solver.ctx().check_error();
+      |                                     ^~~~
+In file included from src/sampler/liasampler.h:8,
+                 from src/sampler/liasampler.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/session.hpp: In member function ‘void guided::Session::register_inputs(const guided::QueryInputs&)’:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/session.hpp:19:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   19 |         if(!guidance)return;if(guidance->index->active)throw std::runtime_error("reference updated during active check");
+      |         ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/session.hpp:19:29: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   19 |         if(!guidance)return;if(guidance->index->active)throw std::runtime_error("reference updated during active check");
+      |                             ^~
+In file included from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/session.hpp:2,
+                 from src/main/../sampler/liasampler.h:8,
+                 from src/main/main.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_guidance_bridge.hpp: In member function ‘void guided::AGuidanceBridge::commit(const guided::Evaluation&)’:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_guidance_bridge.hpp:47:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   47 |   if(disabled)return;auto start=Clock::now();if(index->active)throw std::runtime_error("A index modified during active check");
+      |   ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_guidance_bridge.hpp:47:22: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   47 |   if(disabled)return;auto start=Clock::now();if(index->active)throw std::runtime_error("A index modified during active check");
+      |                      ^~~~
+In file included from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/session.hpp:2,
+                 from src/main/../sampler/liasampler.h:8,
+                 from src/main/main.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_guidance_bridge.hpp: In member function ‘guided::Json guided::AGuidanceBridge::end_check(z3::solver&)’:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_guidance_bridge.hpp:66:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   66 |   if(disabled)return Json::object();auto start=Clock::now();current=Json::parse(Z3_solver_get_A_guidance_stats(solver.ctx(),solver));Z3_solver_clear_A_guidance(solver.ctx(),solver);solver.ctx().check_error();
+      |   ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/a_guidance_bridge.hpp:66:37: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   66 |   if(disabled)return Json::object();auto start=Clock::now();current=Json::parse(Z3_solver_get_A_guidance_stats(solver.ctx(),solver));Z3_solver_clear_A_guidance(solver.ctx(),solver);solver.ctx().check_error();
+      |                                     ^~~~
+In file included from src/main/../sampler/liasampler.h:8,
+                 from src/main/main.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/session.hpp: In member function ‘void guided::Session::register_inputs(const guided::QueryInputs&)’:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/session.hpp:19:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   19 |         if(!guidance)return;if(guidance->index->active)throw std::runtime_error("reference updated during active check");
+      |         ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_sanitize/round6_include/session.hpp:19:29: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   19 |         if(!guidance)return;if(guidance->index->active)throw std::runtime_error("reference updated during active check");
+      |                             ^~
+g++ -O1 -g -std=c++20 -Wall -fsanitize=address,undefined -fno-omit-frame-pointer build/main/main.o build/sampler/liasampler.o build/sampler/sampler.o -fsanitize=address,undefined -L/mnt/Space1/SMT_Sampling/guided_sampler/deps/round6_sanitize/lib -Wl,-rpath,/mnt/Space1/SMT_Sampling/guided_sampler/deps/round6_sanitize/lib -lz3 -o highdiv
+make: Leaving directory '/tmp/guided_sampler_round6_worktrees/sanitize/HighDiv'

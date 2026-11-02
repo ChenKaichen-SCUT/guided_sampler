@@ -1,0 +1,6 @@
+(set-logic QF_LIA)
+(declare-const x Int)
+(declare-const y Int)
+(assert (<= (+ (* 2147483629 x) (* 2147483587 y)) 1))
+(assert (>= (+ (* 2147483629 x) (* 2147483587 y)) 1))
+(check-sat)

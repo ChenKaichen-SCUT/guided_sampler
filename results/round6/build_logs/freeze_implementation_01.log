@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/round6/freeze_implementation.py", line 18, in <module>
+    lines=difflib.unified_diff(previous.decode().splitlines(True),data.decode().splitlines(True),fromfile='a/'+rel,tofile='b/'+rel);patch.extend(lines)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x81 in position 8: invalid start byte

@@ -1,0 +1,155 @@
+make: Entering directory '/tmp/guided_sampler_round6_worktrees/release/HighDiv'
+g++ -I/mnt/Space1/SMT_Sampling/guided_sampler/deps/round6_release/include -I/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include -I/mnt/Space1/SMT_Sampling/guided_sampler/include/round4 -I/mnt/Space1/SMT_Sampling/guided_sampler/include/round2 -I/mnt/Space1/SMT_Sampling/guided_sampler/include -DGUIDED_BUILD -O3 -DNDEBUG -std=c++20 -Wall -MMD -MP -c src/main/main.cpp -o build/main/main.o
+g++ -I/mnt/Space1/SMT_Sampling/guided_sampler/deps/round6_release/include -I/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include -I/mnt/Space1/SMT_Sampling/guided_sampler/include/round4 -I/mnt/Space1/SMT_Sampling/guided_sampler/include/round2 -I/mnt/Space1/SMT_Sampling/guided_sampler/include -DGUIDED_BUILD -O3 -DNDEBUG -std=c++20 -Wall -MMD -MP -c src/sampler/liasampler.cpp -o build/sampler/liasampler.o
+In file included from src/sampler/liasampler.h:7,
+                 from src/sampler/liasampler.cpp:1:
+src/sampler/sampler.h: In constructor ‘sampler::Sampler::Sampler(z3::context*, std::string, std::string, size_t, double)’:
+src/sampler/sampler.h:21:18: warning: ‘sampler::Sampler::c’ will be initialized after [-Wreorder]
+   21 |     z3::context& c;
+      |                  ^
+src/sampler/sampler.h:14:17: warning:   ‘std::string sampler::Sampler::smtFilePath’ [-Wreorder]
+   14 |     std::string smtFilePath;
+      |                 ^~~~~~~~~~~
+In file included from src/sampler/liasampler.h:7,
+                 from src/sampler/liasampler.cpp:1:
+src/sampler/sampler.h:44:5: warning:   when initialized here [-Wreorder]
+   44 |     Sampler(z3::context* _c, std::string _smtFilePath, std::string _samplesFileDir, size_t _maxNumSamples, double _maxTimeLimit)
+      |     ^~~~~~~
+In file included from src/main/../sampler/liasampler.h:7,
+                 from src/main/main.cpp:1:
+src/main/../sampler/sampler.h: In constructor ‘sampler::Sampler::Sampler(z3::context*, std::string, std::string, size_t, double)’:
+src/main/../sampler/sampler.h:21:18: warning: ‘sampler::Sampler::c’ will be initialized after [-Wreorder]
+   21 |     z3::context& c;
+      |                  ^
+src/main/../sampler/sampler.h:14:17: warning:   ‘std::string sampler::Sampler::smtFilePath’ [-Wreorder]
+   14 |     std::string smtFilePath;
+      |                 ^~~~~~~~~~~
+In file included from src/main/../sampler/liasampler.h:7,
+                 from src/main/main.cpp:1:
+src/main/../sampler/sampler.h:44:5: warning:   when initialized here [-Wreorder]
+   44 |     Sampler(z3::context* _c, std::string _smtFilePath, std::string _samplesFileDir, size_t _maxNumSamples, double _maxTimeLimit)
+      |     ^~~~~~~
+In file included from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_shared.hpp:78,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_host_view.hpp:2,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_guidance_bridge.hpp:3,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/session.hpp:2,
+                 from src/main/../sampler/liasampler.h:8,
+                 from src/main/main.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/reference_evaluation.hpp: In lambda function:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/reference_evaluation.hpp:10:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   10 |   if(op==Num)return v.number(e);if(op==True)return 1;if(op==False)return 0;
+      |   ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/reference_evaluation.hpp:10:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   10 |   if(op==Num)return v.number(e);if(op==True)return 1;if(op==False)return 0;
+      |                                 ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/reference_evaluation.hpp:28:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   28 |   if(r!=0&&boost::multiprecision::msb(absn(r))>65536)throw std::runtime_error("reference_value_size_limit");return r;
+      |   ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/reference_evaluation.hpp:28:109: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   28 |   if(r!=0&&boost::multiprecision::msb(absn(r))>65536)throw std::runtime_error("reference_value_size_limit");return r;
+      |                                                                                                             ^~~~~~
+In file included from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_shared.hpp:89,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_host_view.hpp:2,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_guidance_bridge.hpp:3,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/session.hpp:2,
+                 from src/main/../sampler/liasampler.h:8,
+                 from src/main/main.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/phase_evidence.hpp: In function ‘a2::r4::Masks a2::r4::advice_targets(const a2::r4::PhaseEvidence&, bool, bool)’:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/phase_evidence.hpp:21:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   21 |  if(!avoid)return ev.supports[phase];Masks out;
+      |  ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/phase_evidence.hpp:21:38: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   21 |  if(!avoid)return ev.supports[phase];Masks out;
+      |                                      ^~~~~
+In file included from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_shared.hpp:78,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_host_view.hpp:2,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_guidance_bridge.hpp:3,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/session.hpp:2,
+                 from src/sampler/liasampler.h:8,
+                 from src/sampler/liasampler.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/reference_evaluation.hpp: In lambda function:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/reference_evaluation.hpp:10:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   10 |   if(op==Num)return v.number(e);if(op==True)return 1;if(op==False)return 0;
+      |   ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/reference_evaluation.hpp:10:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   10 |   if(op==Num)return v.number(e);if(op==True)return 1;if(op==False)return 0;
+      |                                 ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/reference_evaluation.hpp:28:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   28 |   if(r!=0&&boost::multiprecision::msb(absn(r))>65536)throw std::runtime_error("reference_value_size_limit");return r;
+      |   ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/reference_evaluation.hpp:28:109: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   28 |   if(r!=0&&boost::multiprecision::msb(absn(r))>65536)throw std::runtime_error("reference_value_size_limit");return r;
+      |                                                                                                             ^~~~~~
+In file included from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_shared.hpp:89,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_host_view.hpp:2,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_guidance_bridge.hpp:3,
+                 from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/session.hpp:2,
+                 from src/sampler/liasampler.h:8,
+                 from src/sampler/liasampler.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/phase_evidence.hpp: In function ‘a2::r4::Masks a2::r4::advice_targets(const a2::r4::PhaseEvidence&, bool, bool)’:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/phase_evidence.hpp:21:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   21 |  if(!avoid)return ev.supports[phase];Masks out;
+      |  ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/phase_evidence.hpp:21:38: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   21 |  if(!avoid)return ev.supports[phase];Masks out;
+      |                                      ^~~~~
+In file included from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/session.hpp:2,
+                 from src/main/../sampler/liasampler.h:8,
+                 from src/main/main.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_guidance_bridge.hpp: In member function ‘void guided::AGuidanceBridge::commit(const guided::Evaluation&)’:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_guidance_bridge.hpp:47:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   47 |   if(disabled)return;auto start=Clock::now();if(index->active)throw std::runtime_error("A index modified during active check");
+      |   ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_guidance_bridge.hpp:47:22: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   47 |   if(disabled)return;auto start=Clock::now();if(index->active)throw std::runtime_error("A index modified during active check");
+      |                      ^~~~
+In file included from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/session.hpp:2,
+                 from src/main/../sampler/liasampler.h:8,
+                 from src/main/main.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_guidance_bridge.hpp: In member function ‘guided::Json guided::AGuidanceBridge::end_check(z3::solver&)’:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_guidance_bridge.hpp:66:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   66 |   if(disabled)return Json::object();auto start=Clock::now();current=Json::parse(Z3_solver_get_A_guidance_stats(solver.ctx(),solver));Z3_solver_clear_A_guidance(solver.ctx(),solver);solver.ctx().check_error();
+      |   ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_guidance_bridge.hpp:66:37: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   66 |   if(disabled)return Json::object();auto start=Clock::now();current=Json::parse(Z3_solver_get_A_guidance_stats(solver.ctx(),solver));Z3_solver_clear_A_guidance(solver.ctx(),solver);solver.ctx().check_error();
+      |                                     ^~~~
+In file included from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/session.hpp:2,
+                 from src/sampler/liasampler.h:8,
+                 from src/sampler/liasampler.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_guidance_bridge.hpp: In member function ‘void guided::AGuidanceBridge::commit(const guided::Evaluation&)’:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_guidance_bridge.hpp:47:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   47 |   if(disabled)return;auto start=Clock::now();if(index->active)throw std::runtime_error("A index modified during active check");
+      |   ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_guidance_bridge.hpp:47:22: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   47 |   if(disabled)return;auto start=Clock::now();if(index->active)throw std::runtime_error("A index modified during active check");
+      |                      ^~~~
+In file included from /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/session.hpp:2,
+                 from src/sampler/liasampler.h:8,
+                 from src/sampler/liasampler.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_guidance_bridge.hpp: In member function ‘guided::Json guided::AGuidanceBridge::end_check(z3::solver&)’:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_guidance_bridge.hpp:66:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   66 |   if(disabled)return Json::object();auto start=Clock::now();current=Json::parse(Z3_solver_get_A_guidance_stats(solver.ctx(),solver));Z3_solver_clear_A_guidance(solver.ctx(),solver);solver.ctx().check_error();
+      |   ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/a_guidance_bridge.hpp:66:37: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   66 |   if(disabled)return Json::object();auto start=Clock::now();current=Json::parse(Z3_solver_get_A_guidance_stats(solver.ctx(),solver));Z3_solver_clear_A_guidance(solver.ctx(),solver);solver.ctx().check_error();
+      |                                     ^~~~
+In file included from src/main/../sampler/liasampler.h:8,
+                 from src/main/main.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/session.hpp: In member function ‘void guided::Session::register_inputs(const guided::QueryInputs&)’:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/session.hpp:19:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   19 |         if(!guidance)return;if(guidance->index->active)throw std::runtime_error("reference updated during active check");
+      |         ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/session.hpp:19:29: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   19 |         if(!guidance)return;if(guidance->index->active)throw std::runtime_error("reference updated during active check");
+      |                             ^~
+In file included from src/sampler/liasampler.h:8,
+                 from src/sampler/liasampler.cpp:1:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/session.hpp: In member function ‘void guided::Session::register_inputs(const guided::QueryInputs&)’:
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/session.hpp:19:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   19 |         if(!guidance)return;if(guidance->index->active)throw std::runtime_error("reference updated during active check");
+      |         ^~
+/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round6_release/round6_include/session.hpp:19:29: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   19 |         if(!guidance)return;if(guidance->index->active)throw std::runtime_error("reference updated during active check");
+      |                             ^~
+g++ -O3 -DNDEBUG -std=c++20 -Wall build/main/main.o build/sampler/liasampler.o build/sampler/sampler.o -L/mnt/Space1/SMT_Sampling/guided_sampler/deps/round6_release/lib -Wl,-rpath,/mnt/Space1/SMT_Sampling/guided_sampler/deps/round6_release/lib -lz3 -o highdiv
+make: Leaving directory '/tmp/guided_sampler_round6_worktrees/release/HighDiv'

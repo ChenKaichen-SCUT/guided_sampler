@@ -1,0 +1,173 @@
+{
+  "base_commit": "ae85956068154207a442c0e2c8387c573dc32411",
+  "parent_commit": "1383529b65c4cae000d4142f345a3bd91b7aa110",
+  "config_sha256": "666995abaaa086a97b0fff7ca8393e26b79f46b4915bc46bd33eed6c11baf5e6",
+  "guide_sha256": "590fb1d20ee4d84f10d43cbf2f197e24a7ccc109faea868123194e8ae531874e",
+  "sources": {
+    "release": {
+      "z3/src/sampler/guard_bridge.inc": {
+        "sha256": "c53dd4e231df08b26b15583b34c55eb39c3c206a0c25a4a99f53a276ec4f491b",
+        "normalized_sha256": "c53dd4e231df08b26b15583b34c55eb39c3c206a0c25a4a99f53a276ec4f491b",
+        "base_relative": "z3/src/sampler/guard_bridge.inc",
+        "base_sha256": null
+      },
+      "z3/src/sampler/sampler.cpp": {
+        "sha256": "3f91fd220b48f83e813344e228da4954f40fa536b0a9d19e3a21136a34beb641",
+        "normalized_sha256": "3f91fd220b48f83e813344e228da4954f40fa536b0a9d19e3a21136a34beb641",
+        "base_relative": "z3/src/sampler/sampler.cpp",
+        "base_sha256": "b23e6d0af528e446eb857b159a6d518cc0447be2ea3461ef9a486d493c6e16a9"
+      },
+      "z3/src/sampler/sampler.h": {
+        "sha256": "97b855b616e6fd0e0fdf76e6019d6118c23ff44693cca999a12c824e9e5c08e6",
+        "normalized_sha256": "97b855b616e6fd0e0fdf76e6019d6118c23ff44693cca999a12c824e9e5c08e6",
+        "base_relative": "z3/src/sampler/sampler.h",
+        "base_sha256": "27d02e4aad80d659eab46d2162be30acd80c95b7654ea26b6c633b53e971d73d"
+      },
+      "z3/src/util/r6_stagnation_guard.hpp": {
+        "sha256": "872f1d93539286cec81f9c3b33b4729eddc8d149d8e75046b0b5b0083c8d4f4f",
+        "normalized_sha256": "872f1d93539286cec81f9c3b33b4729eddc8d149d8e75046b0b5b0083c8d4f4f",
+        "base_relative": "z3/src/util/r6_stagnation_guard.hpp",
+        "base_sha256": null
+      },
+      "z3/src/util/r6_sha256.hpp": {
+        "sha256": "6efbf0089d0b99a28e8ee0944d2d72dabd7a9c2bdd23ea658caec32206215b8a",
+        "normalized_sha256": "6efbf0089d0b99a28e8ee0944d2d72dabd7a9c2bdd23ea658caec32206215b8a",
+        "base_relative": "z3/src/util/r6_sha256.hpp",
+        "base_sha256": null
+      },
+      "z3/src/util/r6_guard_trace.hpp": {
+        "sha256": "40286f00e81a9625c466de31ae607852ddf4d0948fdb80764fff934cae294813",
+        "normalized_sha256": "40286f00e81a9625c466de31ae607852ddf4d0948fdb80764fff934cae294813",
+        "base_relative": "z3/src/util/r6_guard_trace.hpp",
+        "base_sha256": null
+      },
+      "z3/src/smt/smt_context.cpp": {
+        "sha256": "6fde01edc3b68435c8aa4c0ccad21342328eab7d76c84af99f8aee44e0530705",
+        "normalized_sha256": "6fde01edc3b68435c8aa4c0ccad21342328eab7d76c84af99f8aee44e0530705",
+        "base_relative": "z3/src/smt/smt_context.cpp",
+        "base_sha256": "6951977b5851d01ad2d98f9939f5181021f7c6432d40d4bca0cd77178fc463aa"
+      },
+      "round6_include/session.hpp": {
+        "sha256": "047a057d6683da509151f8728695b88ed3320c3a5f25b06afa97c005553099f2",
+        "normalized_sha256": "047a057d6683da509151f8728695b88ed3320c3a5f25b06afa97c005553099f2",
+        "base_relative": "round5_include/session.hpp",
+        "base_sha256": "cda637b34e841aa27993c226aadb44920111abeb5ca956dc4ee3bd0f052eb8a6"
+      },
+      "HighDiv/makefile": {
+        "sha256": "a9218bada01db839e5c773e00e651924a0523c548b31a4a0fb36dc08fe0b21ea",
+        "normalized_sha256": "03da1e66c36ec75b1d72e91bf61cd2d5d400a81e4d9e09d171ff4d011273671c",
+        "base_relative": "HighDiv/makefile",
+        "base_sha256": "61990db4df0e3ddbec17c6cc9c9280021fe46261b74bcfbc9c02dfa738a879e1"
+      }
+    },
+    "sanitize": {
+      "z3/src/sampler/guard_bridge.inc": {
+        "sha256": "c53dd4e231df08b26b15583b34c55eb39c3c206a0c25a4a99f53a276ec4f491b",
+        "normalized_sha256": "c53dd4e231df08b26b15583b34c55eb39c3c206a0c25a4a99f53a276ec4f491b",
+        "base_relative": "z3/src/sampler/guard_bridge.inc",
+        "base_sha256": null
+      },
+      "z3/src/sampler/sampler.cpp": {
+        "sha256": "3f91fd220b48f83e813344e228da4954f40fa536b0a9d19e3a21136a34beb641",
+        "normalized_sha256": "3f91fd220b48f83e813344e228da4954f40fa536b0a9d19e3a21136a34beb641",
+        "base_relative": "z3/src/sampler/sampler.cpp",
+        "base_sha256": "b23e6d0af528e446eb857b159a6d518cc0447be2ea3461ef9a486d493c6e16a9"
+      },
+      "z3/src/sampler/sampler.h": {
+        "sha256": "97b855b616e6fd0e0fdf76e6019d6118c23ff44693cca999a12c824e9e5c08e6",
+        "normalized_sha256": "97b855b616e6fd0e0fdf76e6019d6118c23ff44693cca999a12c824e9e5c08e6",
+        "base_relative": "z3/src/sampler/sampler.h",
+        "base_sha256": "27d02e4aad80d659eab46d2162be30acd80c95b7654ea26b6c633b53e971d73d"
+      },
+      "z3/src/util/r6_stagnation_guard.hpp": {
+        "sha256": "872f1d93539286cec81f9c3b33b4729eddc8d149d8e75046b0b5b0083c8d4f4f",
+        "normalized_sha256": "872f1d93539286cec81f9c3b33b4729eddc8d149d8e75046b0b5b0083c8d4f4f",
+        "base_relative": "z3/src/util/r6_stagnation_guard.hpp",
+        "base_sha256": null
+      },
+      "z3/src/util/r6_sha256.hpp": {
+        "sha256": "6efbf0089d0b99a28e8ee0944d2d72dabd7a9c2bdd23ea658caec32206215b8a",
+        "normalized_sha256": "6efbf0089d0b99a28e8ee0944d2d72dabd7a9c2bdd23ea658caec32206215b8a",
+        "base_relative": "z3/src/util/r6_sha256.hpp",
+        "base_sha256": null
+      },
+      "z3/src/util/r6_guard_trace.hpp": {
+        "sha256": "40286f00e81a9625c466de31ae607852ddf4d0948fdb80764fff934cae294813",
+        "normalized_sha256": "40286f00e81a9625c466de31ae607852ddf4d0948fdb80764fff934cae294813",
+        "base_relative": "z3/src/util/r6_guard_trace.hpp",
+        "base_sha256": null
+      },
+      "z3/src/smt/smt_context.cpp": {
+        "sha256": "6fde01edc3b68435c8aa4c0ccad21342328eab7d76c84af99f8aee44e0530705",
+        "normalized_sha256": "6fde01edc3b68435c8aa4c0ccad21342328eab7d76c84af99f8aee44e0530705",
+        "base_relative": "z3/src/smt/smt_context.cpp",
+        "base_sha256": "6951977b5851d01ad2d98f9939f5181021f7c6432d40d4bca0cd77178fc463aa"
+      },
+      "round6_include/session.hpp": {
+        "sha256": "047a057d6683da509151f8728695b88ed3320c3a5f25b06afa97c005553099f2",
+        "normalized_sha256": "047a057d6683da509151f8728695b88ed3320c3a5f25b06afa97c005553099f2",
+        "base_relative": "round5_include/session.hpp",
+        "base_sha256": "cda637b34e841aa27993c226aadb44920111abeb5ca956dc4ee3bd0f052eb8a6"
+      },
+      "HighDiv/makefile": {
+        "sha256": "42a9aa023fa2b5fcf33eceaadfc947824ae6da56989180ff9566fc7515f1ca96",
+        "normalized_sha256": "03da1e66c36ec75b1d72e91bf61cd2d5d400a81e4d9e09d171ff4d011273671c",
+        "base_relative": "HighDiv/makefile",
+        "base_sha256": "ba7d79fd3b6162137a51abde23a05a36143ffc3bc14996f896610e9db0fad4f7"
+      }
+    }
+  },
+  "code_files": {
+    "include/round6/guard_trace.hpp": "40286f00e81a9625c466de31ae607852ddf4d0948fdb80764fff934cae294813",
+    "include/round6/sha256.hpp": "6efbf0089d0b99a28e8ee0944d2d72dabd7a9c2bdd23ea658caec32206215b8a",
+    "include/round6/stagnation_guard.hpp": "872f1d93539286cec81f9c3b33b4729eddc8d149d8e75046b0b5b0083c8d4f4f",
+    "src/round6/ccss_replay_main.cpp": "d61998c479cddf2221c6d2d29f77d6dd1e0183411122ae1047a3206087bf226b",
+    "src/round6/guard_bridge.inc": "c53dd4e231df08b26b15583b34c55eb39c3c206a0c25a4a99f53a276ec4f491b",
+    "scripts/round6/patch_sources.py": "5d409fddcfcbcd20d8fc12a7ba72eb171c966b067e35ecbb437a9eb7fc18d24b",
+    "scripts/round6/run_guard_replay.py": "77def401c830a54392c6a534233d97d467e6658cc2bcd9741b57fb4d3f628217",
+    "scripts/round6/run_short.py": "749e0325524d02c738ca20d934f1c4c55abe68d91ee51430d58c13a5d99db38b"
+  },
+  "validation": {
+    "release": {
+      "passed": true,
+      "inherited_checks": 29,
+      "guard_checks": 14,
+      "generic_exception": {
+        "passed": true,
+        "expected_process_exit": 1,
+        "exit_reason": "exception",
+        "error": "Input string is not a valid number",
+        "replay_sha256": "30a4bb036606d47cf07bf10be721e6acc2034c96a88215b61fb149a24cf1d058"
+      },
+      "binary_sha256": "d7e54ed62eb385f903fedda25cb68d38ee8180ed8bd4fc52fcdcc7da15b63cb2",
+      "library_sha256": "8dbf39f6a5412325e72f8d6c12b19a7804ef75cdf7149b793968c72c85667aab",
+      "replay_sha256": "30a4bb036606d47cf07bf10be721e6acc2034c96a88215b61fb149a24cf1d058",
+      "sampler_archive_sha256": "5911eb066fee1429abaefc8074651a2e7bac4ce196d9dce1a182ab746c0e9c55",
+      "build_config_sha256": "2b359ecea5677d73c8f0df379802e28549f80e9c4359d4d0d2acea2d9507b9ee",
+      "ldd": "\tlinux-vdso.so.1 (0x00007ffdf17b5000)\n\tlibz3.so => /mnt/Space1/SMT_Sampling/guided_sampler/deps/round6_release/lib/libz3.so (0x0000784e925f3000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x0000784e923bd000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x0000784e9239d000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000784e92174000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x0000784e9208d000)\n\t/lib64/ld-linux-x86-64.so.2 (0x0000784e94437000)\n",
+      "sole_leak_suppression_sha256": "ae26b6ceec0af7a3ec1ac375b47b4f1f7ab065b1ec071d582222e4f04d367032"
+    },
+    "sanitize": {
+      "passed": true,
+      "inherited_checks": 29,
+      "guard_checks": 14,
+      "generic_exception": {
+        "passed": true,
+        "expected_process_exit": 1,
+        "exit_reason": "exception",
+        "error": "Input string is not a valid number",
+        "replay_sha256": "d22a27ed219f4c96d6ccabd29282bfa56c9332d832304ea2220c8ee216a9054c"
+      },
+      "binary_sha256": "ce65a7ac62ce4fcfa70dfea2234d27308a625d007a4937cb0a714b0cd0a3e46c",
+      "library_sha256": "4de9aa84690b379433d24400c712eaf0c6da15540af40386d09f5e2b3e8426ae",
+      "replay_sha256": "d22a27ed219f4c96d6ccabd29282bfa56c9332d832304ea2220c8ee216a9054c",
+      "sampler_archive_sha256": "0bb535db18e0c55123c04547b1c79ef9ec83b7c8db18b1fe3ef1993f76f6072e",
+      "build_config_sha256": "0ef23d7137981d5f2a0ee8ffa1ac77cd5b641291c86578b6e19b26cdbad8b38b",
+      "ldd": "\tlinux-vdso.so.1 (0x00007ffc903ad000)\n\tlibasan.so.6 => /lib/x86_64-linux-gnu/libasan.so.6 (0x0000739be1945000)\n\tlibz3.so => /mnt/Space1/SMT_Sampling/guided_sampler/deps/round6_sanitize/lib/libz3.so (0x0000739b817b7000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x0000739b8158b000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x0000739b814a4000)\n\tlibubsan.so.1 => /lib/x86_64-linux-gnu/libubsan.so.1 (0x0000739b80e6f000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x0000739b80e4d000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000739b80c24000)\n\t/lib64/ld-linux-x86-64.so.2 (0x0000739be3bae000)\n",
+      "sole_leak_suppression_sha256": "ae26b6ceec0af7a3ec1ac375b47b4f1f7ab065b1ec071d582222e4f04d367032"
+    }
+  },
+  "patch_sha256": "c4a552b20a761305a82bf4c283c53932a30a725f56a8ac2011ed57df78bd6f18",
+  "guard_limit": 65536,
+  "G1_and_G2_not_started": true
+}

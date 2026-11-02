@@ -27,3 +27,10 @@ __pycache__/
 /results/round5/readonly/coverage_bit_*.csv
 /results/round5/analysis/W_coverage_partition.csv
 /results/round5/analysis/W_bit_differences.csv
+/results/round6/correctness/
+/results/round6/replay_guard/
+/results/round6/guard_short/
+/results/round6/candidate_short/
+/results/round6/formal/
+/results/round6/guard_analysis/*bit_details*.csv
+/results/round6/candidate_analysis/*bit_details*.csv

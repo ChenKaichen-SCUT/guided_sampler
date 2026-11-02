@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/round6/test_guard.py", line 25, in <module>
+    d=out/'arith';d.mkdir();cmd=[str(exe),str(out/'domain_recipe.json'),str(out/'map.json'),str(d),'arith','0'];exclusive(d/'attempt.json',{'command':cmd,'synthetic_only':True});r=subprocess.run(cmd,cwd=d,env=ee,capture_output=True,text=True,timeout=30);(d/'stdout.log').write_text(r.stdout);(d/'stderr.log').write_text(r.stderr);write(d/'terminal.json',{'exit_code':r.returncode});ar=rows(d/'ccss_guard.jsonl')[-1];assert ar['exit_reason']=='arith_unknown' and not ar['model_produced']
+AssertionError
