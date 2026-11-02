@@ -1,0 +1,148 @@
+{
+  "passed": true,
+  "sources": {
+    "S_ref": {
+      "provenance_passed": true,
+      "map_entries": 593,
+      "read_keys": 503,
+      "current_generation": 544,
+      "prior_generation_consumed": 0,
+      "numeric_formal_disagreements": 0,
+      "original_variables_missing_from_map": 505,
+      "arithmetic": {
+        "passed": true,
+        "counts": {
+          "reads": 503,
+          "variables": 503,
+          "valid_inequalities": 595,
+          "invalid_inequalities": 228,
+          "literal_division_bounds": 2003
+        },
+        "new_solver_calls": 0,
+        "new_search_steps": 0,
+        "files": {
+          "results/round5/W/convert_S_ref/ccss_2_R1.json": "18f2f0e407e14d766e460c6cc9b8e8a344860813fcfc54b3df7c179670e792be",
+          "results/round5/W/convert_S_ref/ccss_2_R3.json": "dbbf1d92597ae3644f036b0abcb316b3255de1a5982e13866fd734a2b985e5a6",
+          "results/round5/W/convert_S_ref/ccss_2_intervals.json": "8f9581a52c357e9392b14b50246576c003dd79efc7673888ef05942712a5e7c5"
+        }
+      },
+      "exchange_events_sha256": "24277d042b71c4df5aa2ec82b3c68aef8c71ff24c64d818507f40aa0898a2ba0"
+    },
+    "S_full": {
+      "provenance_passed": true,
+      "map_entries": 593,
+      "read_keys": 503,
+      "current_generation": 544,
+      "prior_generation_consumed": 0,
+      "numeric_formal_disagreements": 0,
+      "original_variables_missing_from_map": 505,
+      "arithmetic": {
+        "passed": true,
+        "counts": {
+          "reads": 503,
+          "variables": 503,
+          "valid_inequalities": 595,
+          "invalid_inequalities": 228,
+          "literal_division_bounds": 2003
+        },
+        "new_solver_calls": 0,
+        "new_search_steps": 0,
+        "files": {
+          "results/round5/W/convert_S_full/ccss_2_R1.json": "ca09c92d72960596ab4878588f18322312a3c794e8013e75750563f2cb448b96",
+          "results/round5/W/convert_S_full/ccss_2_R3.json": "001a8e9744416640020495673f84f177f3fd0181d0632750ca0ff5972680ee78",
+          "results/round5/W/convert_S_full/ccss_2_intervals.json": "0f9436da531686a2e2e9d87295b31ff6a9a0eaacbf27b942f910c77123ddfa4e"
+        }
+      },
+      "exchange_events_sha256": "0a572b8fba8af7cd05d8746075e99dc5c7be3906fae3fcb77e34deeacae3171e"
+    },
+    "S_support": {
+      "provenance_passed": true,
+      "map_entries": 593,
+      "read_keys": 503,
+      "current_generation": 544,
+      "prior_generation_consumed": 0,
+      "numeric_formal_disagreements": 0,
+      "original_variables_missing_from_map": 505,
+      "arithmetic": {
+        "passed": true,
+        "counts": {
+          "reads": 503,
+          "variables": 503,
+          "valid_inequalities": 595,
+          "invalid_inequalities": 228,
+          "literal_division_bounds": 2003
+        },
+        "new_solver_calls": 0,
+        "new_search_steps": 0,
+        "files": {
+          "results/round5/W/convert_S_support/ccss_2_R1.json": "ca09c92d72960596ab4878588f18322312a3c794e8013e75750563f2cb448b96",
+          "results/round5/W/convert_S_support/ccss_2_R3.json": "001a8e9744416640020495673f84f177f3fd0181d0632750ca0ff5972680ee78",
+          "results/round5/W/convert_S_support/ccss_2_intervals.json": "0f9436da531686a2e2e9d87295b31ff6a9a0eaacbf27b942f910c77123ddfa4e"
+        }
+      },
+      "exchange_events_sha256": "0a572b8fba8af7cd05d8746075e99dc5c7be3906fae3fcb77e34deeacae3171e"
+    }
+  },
+  "history": [
+    {
+      "new_mode": "S_ref",
+      "old_mode": "S_ref",
+      "q3_model_hash_equal": true,
+      "old_q3_hash": "355e50b6615e4279",
+      "new_q3_hash": "355e50b6615e4279",
+      "q3_reference_equal": true,
+      "q3_reference_hash_equal": true,
+      "q3_host_rng_before_equal": true,
+      "q3_host_rng_after_equal": true,
+      "q4_seed_equal": true,
+      "old_q4_seed": 1573007388,
+      "new_q4_seed": 1573007388,
+      "old_q4_result": "sat",
+      "new_q4_result": "sat",
+      "old_q4_seconds": 0.04528655300000006,
+      "new_q4_seconds": 0.18954284600000015,
+      "old_q4_cutoff": 59,
+      "new_q4_cutoff": 52,
+      "historical_internal_map_or_RNG_available": false,
+      "raw_hashes": {
+        "results/round4/runs/convert_S_ref/formal_receipts.jsonl": "dc35cc7800abdd45753a806bab8615dee3b8b511357005633690ad73ff5f8400",
+        "results/round4/runs/convert_S_ref/queries.jsonl": "a114462257b0b5238bf7d53046226c4f8bedc51dd1f8adaf25ff3f9996d0b5e8",
+        "results/round4/runs/convert_S_ref/query_inputs.jsonl": "57da3801da54db52d0f75b04b8e4a4f05ab86378314afe6d5eee08a9b12ec159",
+        "results/round5/W/convert_S_ref/formal_receipts.jsonl": "385daa79dd7e3a1ce4b52073d78cf83cbbf162b97d9d6b2114dc316d9de41c60",
+        "results/round5/W/convert_S_ref/queries.jsonl": "59baf85a132ac9e62eacda3bcf34f8d50cde4954d737fb2e1e6d5fd6455e5566",
+        "results/round5/W/convert_S_ref/query_inputs.jsonl": "0d9a329dbc6c188de91a01c809d777a8c90ead04e141d56b4f4886452fbbcb3f"
+      }
+    },
+    {
+      "new_mode": "S_full",
+      "old_mode": "S_cov",
+      "q3_model_hash_equal": true,
+      "old_q3_hash": "c49f1604cdda9197",
+      "new_q3_hash": "c49f1604cdda9197",
+      "q3_reference_equal": true,
+      "q3_reference_hash_equal": true,
+      "q3_host_rng_before_equal": true,
+      "q3_host_rng_after_equal": true,
+      "q4_seed_equal": true,
+      "old_q4_seed": 1573007388,
+      "new_q4_seed": 1573007388,
+      "old_q4_result": "unknown",
+      "new_q4_result": "unknown",
+      "old_q4_seconds": 59.057641755,
+      "new_q4_seconds": 52.168545458,
+      "old_q4_cutoff": 59,
+      "new_q4_cutoff": 52,
+      "historical_internal_map_or_RNG_available": false,
+      "raw_hashes": {
+        "results/round4/runs/convert_S_cov/formal_receipts.jsonl": "06c4027cd195888fd6d22fed0b055b131a91b652d5fbb5aa5f8a5bce5419a19a",
+        "results/round4/runs/convert_S_cov/queries.jsonl": "4734cf6f7caa17bf97809f6eac435242f9ecbd5d6eacf92f02bdf97d5229d0b6",
+        "results/round4/runs/convert_S_cov/query_inputs.jsonl": "d718eee7744a664483e6cee730f82bf0831a24f70a6d1d541f9b0df1e6b8e4ec",
+        "results/round5/W/convert_S_full/formal_receipts.jsonl": "a4466955a07c70c6f8d2cf642e773e7fef18852dc9457ee4f57ed59b610c5ca3",
+        "results/round5/W/convert_S_full/queries.jsonl": "606f6a77918bdadd540f82dd61456dd06c0691d1f214501759ea70da4cbb057a",
+        "results/round5/W/convert_S_full/query_inputs.jsonl": "864220994f38f7aa4bdea7e0f9c701d2c1b156e6e395213237d056a55a78deea"
+      }
+    }
+  ],
+  "arbitrary_precision": true,
+  "solver_calls": 0
+}

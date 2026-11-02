@@ -1,0 +1,15 @@
+{
+  "implementation_commit": "65efdd75ab1972e3098f7c9599a87765a4f2b664",
+  "freeze_sha256": "8fdef10bf96fb1c589d6ddd340e0d3372199e6698f6065f5bdeca4cb2d4301ac",
+  "jobs": [
+    "convert_S_ref",
+    "convert_S_full",
+    "convert_S_support",
+    "SMT_random_S_ref",
+    "SMT_random_S_full",
+    "SMT_random_S_support",
+    "SMT_real_S_ref",
+    "SMT_real_S_full",
+    "SMT_real_S_support"
+  ]
+}

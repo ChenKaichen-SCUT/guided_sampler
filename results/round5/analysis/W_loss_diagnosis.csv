@@ -1,0 +1,92 @@
+instance,pair,group,covered_only,other_visited,missing_value_available_without_reach,covered_source,bits
+SMT_random,S_full_vs_S_support,G1,cov,True,[False],CDCL,354
+SMT_random,S_full_vs_S_support,G1,cov,True,[True],CDCL,3
+SMT_random,S_full_vs_S_support,G1,ref,True,[False],CDCL,359
+SMT_random,S_full_vs_S_support,G1,ref,True,[True],CDCL,3
+SMT_random,S_full_vs_S_support,G2,cov,True,[False],CDCL,693
+SMT_random,S_full_vs_S_support,G2,cov,True,[True],CDCL,3
+SMT_random,S_full_vs_S_support,G2,ref,True,[False],CDCL,739
+SMT_random,S_full_vs_S_support,G2,ref,True,[True],CDCL,3
+SMT_random,S_full_vs_S_support,G3,cov,False,"[True, False]",CDCL,8
+SMT_random,S_full_vs_S_support,G3,cov,True,[False],CDCL,26
+SMT_random,S_full_vs_S_support,G3,cov,True,[True],CDCL,10
+SMT_random,S_full_vs_S_support,G3,ref,False,"[True, False]",CDCL,2
+SMT_random,S_full_vs_S_support,G3,ref,True,[False],CDCL,16
+SMT_random,S_full_vs_S_support,G3,ref,True,[True],CDCL,10
+SMT_random,S_ref_vs_S_full,G1,cov,True,[False],CDCL,429
+SMT_random,S_ref_vs_S_full,G1,cov,True,[True],CDCL,7
+SMT_random,S_ref_vs_S_full,G1,ref,True,[False],CDCL,351
+SMT_random,S_ref_vs_S_full,G1,ref,True,[True],CDCL,7
+SMT_random,S_ref_vs_S_full,G2,cov,True,[False],CDCL,643
+SMT_random,S_ref_vs_S_full,G2,cov,True,[True],CDCL,7
+SMT_random,S_ref_vs_S_full,G2,ref,True,[False],CDCL,803
+SMT_random,S_ref_vs_S_full,G2,ref,True,[True],CDCL,7
+SMT_random,S_ref_vs_S_full,G3,cov,False,"[True, False]",CDCL,4
+SMT_random,S_ref_vs_S_full,G3,cov,True,[False],CDCL,12
+SMT_random,S_ref_vs_S_full,G3,cov,True,[True],CDCL,10
+SMT_random,S_ref_vs_S_full,G3,ref,False,"[True, False]",CDCL,2
+SMT_random,S_ref_vs_S_full,G3,ref,True,[False],CDCL,22
+SMT_random,S_ref_vs_S_full,G3,ref,True,[True],CDCL,14
+SMT_random,S_ref_vs_S_support,G1,cov,True,[False],CDCL,381
+SMT_random,S_ref_vs_S_support,G1,cov,True,[True],CDCL,7
+SMT_random,S_ref_vs_S_support,G1,ref,True,[False],CDCL,308
+SMT_random,S_ref_vs_S_support,G1,ref,True,[True],CDCL,7
+SMT_random,S_ref_vs_S_support,G2,cov,True,[False],CDCL,549
+SMT_random,S_ref_vs_S_support,G2,cov,True,[True],CDCL,7
+SMT_random,S_ref_vs_S_support,G2,ref,True,[False],CDCL,755
+SMT_random,S_ref_vs_S_support,G2,ref,True,[True],CDCL,7
+SMT_random,S_ref_vs_S_support,G3,cov,False,"[True, False]",CDCL,6
+SMT_random,S_ref_vs_S_support,G3,cov,True,[False],CDCL,14
+SMT_random,S_ref_vs_S_support,G3,cov,True,[True],CDCL,16
+SMT_random,S_ref_vs_S_support,G3,ref,False,"[True, False]",CDCL,2
+SMT_random,S_ref_vs_S_support,G3,ref,True,[False],CDCL,14
+SMT_random,S_ref_vs_S_support,G3,ref,True,[True],CDCL,16
+SMT_real,S_full_vs_S_support,G1,cov,True,[False],CDCL,209
+SMT_real,S_full_vs_S_support,G1,cov,True,[True],CDCL,5
+SMT_real,S_full_vs_S_support,G1,ref,True,[False],CDCL,198
+SMT_real,S_full_vs_S_support,G1,ref,True,[True],CDCL,5
+SMT_real,S_full_vs_S_support,G2,cov,True,[False],CDCL,353
+SMT_real,S_full_vs_S_support,G2,cov,True,[True],CDCL,5
+SMT_real,S_full_vs_S_support,G2,ref,True,[False],CDCL,382
+SMT_real,S_full_vs_S_support,G2,ref,True,[True],CDCL,5
+SMT_real,S_full_vs_S_support,G3,cov,False,"[True, False]",CDCL,2
+SMT_real,S_full_vs_S_support,G3,cov,True,[False],CDCL,2
+SMT_real,S_full_vs_S_support,G3,cov,True,[True],CDCL,14
+SMT_real,S_full_vs_S_support,G3,ref,False,"[True, False]",CDCL,4
+SMT_real,S_full_vs_S_support,G3,ref,True,[True],CDCL,6
+SMT_real,S_ref_vs_S_full,G1,cov,True,[False],CDCL,195
+SMT_real,S_ref_vs_S_full,G1,cov,True,[True],CDCL,4
+SMT_real,S_ref_vs_S_full,G1,ref,True,[False],CDCL,229
+SMT_real,S_ref_vs_S_full,G1,ref,True,[True],CDCL,7
+SMT_real,S_ref_vs_S_full,G2,cov,True,[False],CDCL,217
+SMT_real,S_ref_vs_S_full,G2,cov,True,[True],CDCL,4
+SMT_real,S_ref_vs_S_full,G2,ref,True,[False],CDCL,433
+SMT_real,S_ref_vs_S_full,G2,ref,True,[True],CDCL,7
+SMT_real,S_ref_vs_S_full,G3,cov,False,"[True, False]",CDCL,4
+SMT_real,S_ref_vs_S_full,G3,cov,True,[True],CDCL,4
+SMT_real,S_ref_vs_S_full,G3,ref,True,[False],CDCL,2
+SMT_real,S_ref_vs_S_full,G3,ref,True,[True],CDCL,14
+SMT_real,S_ref_vs_S_support,G1,cov,True,[False],CDCL,195
+SMT_real,S_ref_vs_S_support,G1,cov,True,[True],CDCL,5
+SMT_real,S_ref_vs_S_support,G1,ref,True,[False],CDCL,218
+SMT_real,S_ref_vs_S_support,G1,ref,True,[True],CDCL,8
+SMT_real,S_ref_vs_S_support,G2,cov,True,[False],CDCL,218
+SMT_real,S_ref_vs_S_support,G2,cov,True,[True],CDCL,5
+SMT_real,S_ref_vs_S_support,G2,ref,True,[False],CDCL,463
+SMT_real,S_ref_vs_S_support,G2,ref,True,[True],CDCL,8
+SMT_real,S_ref_vs_S_support,G3,cov,True,[False],CDCL,2
+SMT_real,S_ref_vs_S_support,G3,cov,True,[True],CDCL,6
+SMT_real,S_ref_vs_S_support,G3,ref,True,[False],CDCL,2
+SMT_real,S_ref_vs_S_support,G3,ref,True,[True],CDCL,6
+convert,S_ref_vs_S_full,G1,cov,True,[False],CDCL,148
+convert,S_ref_vs_S_full,G1,ref,True,[False],CCSS,10
+convert,S_ref_vs_S_full,G1,ref,True,[False],CDCL,13
+convert,S_ref_vs_S_full,G2,cov,True,[False],CDCL,371
+convert,S_ref_vs_S_full,G2,ref,True,[False],CCSS,8385
+convert,S_ref_vs_S_full,G2,ref,True,[False],CDCL,900
+convert,S_ref_vs_S_support,G1,cov,True,[False],CDCL,148
+convert,S_ref_vs_S_support,G1,ref,True,[False],CCSS,10
+convert,S_ref_vs_S_support,G1,ref,True,[False],CDCL,13
+convert,S_ref_vs_S_support,G2,cov,True,[False],CDCL,371
+convert,S_ref_vs_S_support,G2,ref,True,[False],CCSS,8385
+convert,S_ref_vs_S_support,G2,ref,True,[False],CDCL,900

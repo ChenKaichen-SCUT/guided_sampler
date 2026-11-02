@@ -1,0 +1,87 @@
+{
+  "attempts": 9,
+  "results": [
+    {
+      "exit_code": 0,
+      "user_cpu": 10.579307,
+      "system_cpu": 0.6549659999999999,
+      "max_rss_kb": 95256,
+      "wall_from_batch_release": 60.05536183400545,
+      "completed_monotonic": 149554.33497215,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 53.011789,
+      "system_cpu": 0.172337,
+      "max_rss_kb": 95508,
+      "wall_from_batch_release": 62.674391492008,
+      "completed_monotonic": 149556.954001122,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 53.014155,
+      "system_cpu": 0.168209,
+      "max_rss_kb": 94824,
+      "wall_from_batch_release": 62.51487455400638,
+      "completed_monotonic": 149556.794484558,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 24.659912,
+      "system_cpu": 0.044007,
+      "max_rss_kb": 59384,
+      "wall_from_batch_release": 24.988292955007637,
+      "completed_monotonic": 149519.267902602,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 21.85246,
+      "system_cpu": 0.063954,
+      "max_rss_kb": 75632,
+      "wall_from_batch_release": 22.22282848600298,
+      "completed_monotonic": 149516.502438584,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 25.164683,
+      "system_cpu": 0.06394999999999999,
+      "max_rss_kb": 64840,
+      "wall_from_batch_release": 25.517940445017302,
+      "completed_monotonic": 149519.797550253,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 5.257231,
+      "system_cpu": 0.028048999999999998,
+      "max_rss_kb": 49884,
+      "wall_from_batch_release": 5.585971367021557,
+      "completed_monotonic": 149499.865580778,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 5.745494,
+      "system_cpu": 0.059517999999999995,
+      "max_rss_kb": 54568,
+      "wall_from_batch_release": 6.147657719004201,
+      "completed_monotonic": 149500.427267367,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 5.424623,
+      "system_cpu": 0.028086,
+      "max_rss_kb": 51552,
+      "wall_from_batch_release": 5.776945492019877,
+      "completed_monotonic": 149500.056555933,
+      "no_retry": true
+    }
+  ],
+  "no_retries": true
+}
