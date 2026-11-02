@@ -1,0 +1,5 @@
+{
+  "plan_sha256": "b998c8c740ba135ad62a95a234a4cd3601b3c8f066d468c59b6063e13f8f0a8c",
+  "expected_attempts": 32,
+  "commit": "33146b4c77b3b6881496cb62732ae6ff7182d543"
+}

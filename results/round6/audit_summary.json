@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "meaning_of_passed": "artifact integrity, declared validation scope and bounded experiments; not performance superiority or total guidance-cost conformance",
+  "base_commit": "ae85956068154207a442c0e2c8387c573dc32411",
+  "G1_attempts": 6,
+  "G2_attempts": 24,
+  "candidate_attempts": 0,
+  "formal_attempts": 32,
+  "selected": "FullG",
+  "promotion_passed": true,
+  "new_HighDiv_runs": 0,
+  "additional_seeds": 0,
+  "B_enabled": false,
+  "native_guard_threshold": 65536,
+  "baseline_unchanged": {
+    "passed": true,
+    "changed": [],
+    "old_file_metadata_checked": 12087,
+    "protected_sha256_checked": 34,
+    "input_hashes_checked": 8,
+    "upstream_source_hashes_checked": 2935,
+    "historical_baseline_executions": 0
+  },
+  "G0_validation": {
+    "release": {
+      "passed": true,
+      "inherited_checks": 29,
+      "guard_checks": 14,
+      "generic_exception": {
+        "passed": true,
+        "expected_process_exit": 1,
+        "exit_reason": "exception",
+        "error": "Input string is not a valid number",
+        "replay_sha256": "30a4bb036606d47cf07bf10be721e6acc2034c96a88215b61fb149a24cf1d058"
+      },
+      "binary_sha256": "d7e54ed62eb385f903fedda25cb68d38ee8180ed8bd4fc52fcdcc7da15b63cb2",
+      "library_sha256": "8dbf39f6a5412325e72f8d6c12b19a7804ef75cdf7149b793968c72c85667aab",
+      "replay_sha256": "30a4bb036606d47cf07bf10be721e6acc2034c96a88215b61fb149a24cf1d058",
+      "sampler_archive_sha256": "5911eb066fee1429abaefc8074651a2e7bac4ce196d9dce1a182ab746c0e9c55",
+      "build_config_sha256": "2b359ecea5677d73c8f0df379802e28549f80e9c4359d4d0d2acea2d9507b9ee",
+      "ldd": "\tlinux-vdso.so.1 (0x00007ffdf17b5000)\n\tlibz3.so => /mnt/Space1/SMT_Sampling/guided_sampler/deps/round6_release/lib/libz3.so (0x0000784e925f3000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x0000784e923bd000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x0000784e9239d000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000784e92174000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x0000784e9208d000)\n\t/lib64/ld-linux-x86-64.so.2 (0x0000784e94437000)\n",
+      "sole_leak_suppression_sha256": "ae26b6ceec0af7a3ec1ac375b47b4f1f7ab065b1ec071d582222e4f04d367032"
+    },
+    "sanitize": {
+      "passed": true,
+      "inherited_checks": 29,
+      "guard_checks": 14,
+      "generic_exception": {
+        "passed": true,
+        "expected_process_exit": 1,
+        "exit_reason": "exception",
+        "error": "Input string is not a valid number",
+        "replay_sha256": "d22a27ed219f4c96d6ccabd29282bfa56c9332d832304ea2220c8ee216a9054c"
+      },
+      "binary_sha256": "ce65a7ac62ce4fcfa70dfea2234d27308a625d007a4937cb0a714b0cd0a3e46c",
+      "library_sha256": "4de9aa84690b379433d24400c712eaf0c6da15540af40386d09f5e2b3e8426ae",
+      "replay_sha256": "d22a27ed219f4c96d6ccabd29282bfa56c9332d832304ea2220c8ee216a9054c",
+      "sampler_archive_sha256": "0bb535db18e0c55123c04547b1c79ef9ec83b7c8db18b1fe3ef1993f76f6072e",
+      "build_config_sha256": "0ef23d7137981d5f2a0ee8ffa1ac77cd5b641291c86578b6e19b26cdbad8b38b",
+      "ldd": "\tlinux-vdso.so.1 (0x00007ffc903ad000)\n\tlibasan.so.6 => /lib/x86_64-linux-gnu/libasan.so.6 (0x0000739be1945000)\n\tlibz3.so => /mnt/Space1/SMT_Sampling/guided_sampler/deps/round6_sanitize/lib/libz3.so (0x0000739b817b7000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x0000739b8158b000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x0000739b814a4000)\n\tlibubsan.so.1 => /lib/x86_64-linux-gnu/libubsan.so.1 (0x0000739b80e6f000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x0000739b80e4d000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000739b80c24000)\n\t/lib64/ld-linux-x86-64.so.2 (0x0000739be3bae000)\n",
+      "sole_leak_suppression_sha256": "ae26b6ceec0af7a3ec1ac375b47b4f1f7ab065b1ec071d582222e4f04d367032"
+    }
+  },
+  "artifact_count": 4955,
+  "pre_freeze_failed_checks_retained": [
+    "guard_release_01 arithmetic expectation",
+    "guard_sanitize_01 pure Boolean direct-construction leak"
+  ],
+  "new_leak_suppressions": 0,
+  "total_guidance_cost_bounded_by45": false,
+  "guidance_counter_over45_runs": 12,
+  "active_phase_actions_after_disabled": 0,
+  "stages": {
+    "G2": {
+      "attempts": 24,
+      "formal_models": 2777,
+      "yield_calls": 10
+    },
+    "formal": {
+      "attempts": 32,
+      "formal_models": 103225,
+      "yield_calls": 23
+    }
+  },
+  "known_missing": [
+    "last global improvement wall timestamp: deliberately absent from integer-only search hot path",
+    "no exact same-internal-state causal saving from divergent complete sessions",
+    "existing pure-Boolean direct-construction preprocessing defect retained",
+    "inherited reference construction/logging costs continue after guidance shutdown; observed and not fixed in frozen implementation"
+  ],
+  "single_seed": true
+}

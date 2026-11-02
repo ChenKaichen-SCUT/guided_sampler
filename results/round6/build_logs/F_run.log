@@ -1,0 +1,34 @@
+F started16 time900 sessions
+F completed 00_RefG_time900 exit 0 formal 9559 done 1
+F completed 00_Chosen_time900 exit 0 formal 10822 done 2
+F completed 01_RefG_time900 exit 0 formal 12123 done 3
+F completed 01_Chosen_time900 exit 0 formal 12228 done 4
+F completed 02_RefG_time900 exit 0 formal 151 done 5
+F completed 02_Chosen_time900 exit 0 formal 178 done 6
+F completed 03_RefG_time900 exit 0 formal 684 done 7
+F completed 03_Chosen_time900 exit 0 formal 1043 done 8
+F completed 04_RefG_time900 exit 0 formal 1556 done 9
+F completed 04_Chosen_time900 exit 0 formal 1761 done 10
+F completed 05_RefG_time900 exit 0 formal 12429 done 11
+F completed 05_Chosen_time900 exit 0 formal 12505 done 12
+F completed 07_RefG_time900 exit 0 formal 12897 done 13
+F completed 07_Chosen_time900 exit 0 formal 12903 done 14
+F completed 06_RefG_time900 exit 0 formal 393 done 15
+F completed 06_Chosen_time900 exit 0 formal 393 done 16
+F completed 05_RefG_n100_t900 exit 0 formal 100 done 17
+F completed 05_Chosen_n100_t900 exit 0 formal 100 done 18
+F completed 07_RefG_n100_t900 exit 0 formal 100 done 19
+F completed 07_Chosen_n100_t900 exit 0 formal 100 done 20
+F completed 01_RefG_n100_t900 exit 0 formal 100 done 21
+F completed 01_Chosen_n100_t900 exit 0 formal 100 done 22
+F completed 00_RefG_n100_t900 exit 0 formal 100 done 23
+F completed 00_Chosen_n100_t900 exit 0 formal 100 done 24
+F completed 04_Chosen_n100_t900 exit 0 formal 100 done 25
+F completed 04_RefG_n100_t900 exit 0 formal 100 done 26
+F completed 03_Chosen_n100_t900 exit 0 formal 100 done 27
+F completed 03_RefG_n100_t900 exit 0 formal 100 done 28
+F completed 06_RefG_n100_t900 exit 0 formal 100 done 29
+F completed 06_Chosen_n100_t900 exit 0 formal 100 done 30
+F completed 02_Chosen_n100_t900 exit 0 formal 100 done 31
+F completed 02_RefG_n100_t900 exit 0 formal 100 done 32
+F completed32 once only

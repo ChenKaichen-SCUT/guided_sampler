@@ -1,0 +1,5 @@
+run,mode,budget,yields,search_wall,search_cpu,post_yield_models_nonoverlap,post_yield_covered_nonoverlap,no_later_formal
+04_RefG_time900,RefG,time900,9,12.318935825999997,12.298085609000001,1529,851,0
+04_Chosen_time900,Chosen,time900,11,16.637264657,16.60803667700005,1758,10287,0
+04_RefG_n100_t900,RefG,n100_t900,1,0.837435885,0.819983671000001,73,87,0
+04_Chosen_n100_t900,Chosen,n100_t900,2,4.120822848,4.1139992340000004,97,9829,0

@@ -34,3 +34,6 @@ __pycache__/
 /results/round6/formal/
 /results/round6/guard_analysis/*bit_details*.csv
 /results/round6/candidate_analysis/*bit_details*.csv
+
+# Full F prefix curves are retained in the verified lossless archive.
+/results/round6/formal_analysis/curves.csv

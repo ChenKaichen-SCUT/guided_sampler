@@ -1,0 +1,16 @@
+input_index,instance,budget,pair,alignment,group,partition_size,left_models,right_models,left_covered,right_covered,left_only,right_only,net
+2,SMT_random_LIA_ex14600_2600_100.smt2,n100_t900,RefG_vs_Chosen,strict100_independent,G0,0,100,100,13377,13298,0,0,0
+2,SMT_random_LIA_ex14600_2600_100.smt2,n100_t900,RefG_vs_Chosen,strict100_independent,G1,36623,100,100,13377,13298,98,62,-36
+2,SMT_random_LIA_ex14600_2600_100.smt2,n100_t900,RefG_vs_Chosen,strict100_independent,G2,66644,100,100,13377,13298,79,36,-43
+2,SMT_random_LIA_ex14600_2600_100.smt2,n100_t900,RefG_vs_Chosen,strict100_independent,G3,1372,100,100,13377,13298,6,6,0
+2,SMT_random_LIA_ex14600_2600_100.smt2,n100_t900,RefG_vs_Chosen,strict100_independent,G4_initial_difference,0,100,100,13377,13298,0,0,0
+3,SMT_real_LIA_ex8500_2400_100.smt2,n100_t900,RefG_vs_Chosen,strict100_independent,G0,0,100,100,7442,7369,0,0,0
+3,SMT_real_LIA_ex8500_2400_100.smt2,n100_t900,RefG_vs_Chosen,strict100_independent,G1,27216,100,100,7442,7369,95,44,-51
+3,SMT_real_LIA_ex8500_2400_100.smt2,n100_t900,RefG_vs_Chosen,strict100_independent,G2,37918,100,100,7442,7369,42,30,-12
+3,SMT_real_LIA_ex8500_2400_100.smt2,n100_t900,RefG_vs_Chosen,strict100_independent,G3,927,100,100,7442,7369,18,8,-10
+3,SMT_real_LIA_ex8500_2400_100.smt2,n100_t900,RefG_vs_Chosen,strict100_independent,G4_initial_difference,0,100,100,7442,7369,0,0,0
+4,convert_convert-jpg2gif-query-1459.smt2,n100_t900,RefG_vs_Chosen,strict100_independent,G0,0,100,100,36637,37590,0,0,0
+4,convert_convert-jpg2gif-query-1459.smt2,n100_t900,RefG_vs_Chosen,strict100_independent,G1,24244,100,100,36637,37590,0,181,181
+4,convert_convert-jpg2gif-query-1459.smt2,n100_t900,RefG_vs_Chosen,strict100_independent,G2,154958,100,100,36637,37590,13,785,772
+4,convert_convert-jpg2gif-query-1459.smt2,n100_t900,RefG_vs_Chosen,strict100_independent,G3,100,100,100,36637,37590,0,0,0
+4,convert_convert-jpg2gif-query-1459.smt2,n100_t900,RefG_vs_Chosen,strict100_independent,G4_initial_difference,0,100,100,36637,37590,0,0,0

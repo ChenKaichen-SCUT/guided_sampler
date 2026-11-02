@@ -1,0 +1,15 @@
+{
+  "overall_vs_HighDiv_endpoint_condition": false,
+  "formal_models": 103225,
+  "raw": 206373,
+  "duplicates": 103148,
+  "invalid": 0,
+  "guard_yields": 23,
+  "native_failures_retained": 2454,
+  "max_process_exit_delay": 2.8359319560113363,
+  "G3": "FullG",
+  "candidate_attempts": 0,
+  "guidance_counter_over45_runs": 12,
+  "total_guidance_cost_bounded_by45": false,
+  "report_sha256": "f4a07ce9786dec6d300c6cd75b6a7c8ae9663e9aa600db3d99f00142de974c32"
+}

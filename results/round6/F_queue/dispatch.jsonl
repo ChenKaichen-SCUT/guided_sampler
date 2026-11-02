@@ -1,0 +1,32 @@
+{"id": "00_RefG_time900", "cpu": 0, "released": 186510.177648033}
+{"id": "00_Chosen_time900", "cpu": 1, "released": 186510.177648033}
+{"id": "01_RefG_time900", "cpu": 2, "released": 186510.177648033}
+{"id": "01_Chosen_time900", "cpu": 3, "released": 186510.177648033}
+{"id": "02_RefG_time900", "cpu": 4, "released": 186510.177648033}
+{"id": "02_Chosen_time900", "cpu": 5, "released": 186510.177648033}
+{"id": "03_RefG_time900", "cpu": 6, "released": 186510.177648033}
+{"id": "03_Chosen_time900", "cpu": 7, "released": 186510.177648033}
+{"id": "04_RefG_time900", "cpu": 8, "released": 186510.177648033}
+{"id": "04_Chosen_time900", "cpu": 9, "released": 186510.177648033}
+{"id": "05_RefG_time900", "cpu": 10, "released": 186510.177648033}
+{"id": "05_Chosen_time900", "cpu": 11, "released": 186510.177648033}
+{"id": "06_RefG_time900", "cpu": 12, "released": 186510.177648033}
+{"id": "06_Chosen_time900", "cpu": 13, "released": 186510.177648033}
+{"id": "07_RefG_time900", "cpu": 14, "released": 186510.177648033}
+{"id": "07_Chosen_time900", "cpu": 15, "released": 186510.177648033}
+{"id": "04_RefG_n100_t900", "cpu": 0, "released": 187410.801786996, "previous": "00_RefG_time900"}
+{"id": "04_Chosen_n100_t900", "cpu": 1, "released": 187410.873077832, "previous": "00_Chosen_time900"}
+{"id": "05_RefG_n100_t900", "cpu": 2, "released": 187410.93644461, "previous": "01_RefG_time900"}
+{"id": "05_Chosen_n100_t900", "cpu": 3, "released": 187411.002326352, "previous": "01_Chosen_time900"}
+{"id": "06_RefG_n100_t900", "cpu": 4, "released": 187411.084464508, "previous": "02_RefG_time900"}
+{"id": "06_Chosen_n100_t900", "cpu": 5, "released": 187411.170119779, "previous": "02_Chosen_time900"}
+{"id": "07_RefG_n100_t900", "cpu": 6, "released": 187411.249484446, "previous": "03_RefG_time900"}
+{"id": "07_Chosen_n100_t900", "cpu": 7, "released": 187411.351829612, "previous": "03_Chosen_time900"}
+{"id": "00_RefG_n100_t900", "cpu": 8, "released": 187411.505988469, "previous": "04_RefG_time900"}
+{"id": "00_Chosen_n100_t900", "cpu": 9, "released": 187411.630977837, "previous": "04_Chosen_time900"}
+{"id": "01_RefG_n100_t900", "cpu": 10, "released": 187411.767718615, "previous": "05_RefG_time900"}
+{"id": "01_Chosen_n100_t900", "cpu": 11, "released": 187411.954123998, "previous": "05_Chosen_time900"}
+{"id": "03_RefG_n100_t900", "cpu": 14, "released": 187412.151889754, "previous": "07_RefG_time900"}
+{"id": "03_Chosen_n100_t900", "cpu": 15, "released": 187412.309771617, "previous": "07_Chosen_time900"}
+{"id": "02_RefG_n100_t900", "cpu": 12, "released": 187413.005155947, "previous": "06_RefG_time900"}
+{"id": "02_Chosen_n100_t900", "cpu": 13, "released": 187413.19274175, "previous": "06_Chosen_time900"}

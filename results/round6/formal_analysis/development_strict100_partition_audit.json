@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "sessions_read": 6,
+  "sampler_executions": 0,
+  "solver_checks": 0,
+  "all_totals_equal_frozen_official": true,
+  "files": {
+    "development_strict100_partitions.csv": "47c093a6d9cc64b6ea5272302451c49aa8bdca983ecf8e34ea7d0fc10d5edcf3",
+    "development_strict100_bit_details.csv": "43de461f591c0268a27c8fb2bc826428aba2966b68efffe6619262084aadd236"
+  }
+}

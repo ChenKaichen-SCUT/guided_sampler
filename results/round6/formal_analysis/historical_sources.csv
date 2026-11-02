@@ -1,0 +1,17 @@
+input_index,instance,budget,formal_sources,receipt_sha256,new_baseline_runs
+0,20180326-Bromberger_v45_problem__003.smt2.slack.smt2,time900,"{'CDCL': 31721, 'CCSS': 31711}",e158675ce102634b41814cdf49cd369df68d23f982ac9954928af9dea019f297,0
+0,20180326-Bromberger_v45_problem__003.smt2.slack.smt2,n100_t900,"{'CDCL': 50, 'CCSS': 50}",a4a2c9ff6936bc035d85c6d6ca701008a118da31a155444a053040ae60cf38b2,0
+1,CAV_2009_benchmarks_problem__019.smt2,time900,"{'CDCL': 35619, 'CCSS': 35596}",72e645502c85cafb3a5f9e9affe87407a96af7af7a060421eb043f88d9f44218,0
+1,CAV_2009_benchmarks_problem__019.smt2,n100_t900,"{'CDCL': 50, 'CCSS': 50}",3fc495919511ebcc75c6919d70251612c2d965c80d7180e27e5c7828bfe09b63,0
+2,SMT_random_LIA_ex14600_2600_100.smt2,time900,{'CDCL': 235},2f820bd4e7bbbf337422142b6008d852cfa9cfebb4e4273ba684abaeaf84b97c,0
+2,SMT_random_LIA_ex14600_2600_100.smt2,n100_t900,{'CDCL': 100},a1dfb931b3ef547002a11ae9d5d665fa9ae5c2415db32442bf536c18e52fa97e,0
+3,SMT_real_LIA_ex8500_2400_100.smt2,time900,{'CDCL': 1432},55105376a4cbd019af95b35277862ea2a3c22e4e0cf2dacc0fb0ce96dd8a4177,0
+3,SMT_real_LIA_ex8500_2400_100.smt2,n100_t900,{'CDCL': 100},5a63a34c41bde5f463d3f9831f6d83e435f4f34a03b61ad973e3d4f598779eab,0
+4,convert_convert-jpg2gif-query-1459.smt2,time900,"{'CDCL': 2383, 'CCSS': 2384}",9a608be230df52f11319929fd32cde99533a73e12cf509bd77a8990cebc4e600,0
+4,convert_convert-jpg2gif-query-1459.smt2,n100_t900,"{'CDCL': 50, 'CCSS': 50}",05a11562a2ece761f2b9bd738221a21e58567d0adf17ccfb8053b1530495fc75,0
+5,dillig_40-10.smt2,time900,"{'CDCL': 45075, 'CCSS': 45056}",06b082887768b455680e7e4a258c395cda5bdee02d32df8325ccb9941fc318ef,0
+5,dillig_40-10.smt2,n100_t900,"{'CDCL': 50, 'CCSS': 50}",4db095ecfbab89579b31fb964cd4fc0c62206142a51442c3ec1f47e26410de12,0
+6,pb2010_normalized-j3048_8-sat.smt2,time900,"{'CDCL': 397, 'CCSS': 745}",9a0aaeb043eced2da6a2f3af270f4d63b0fef26a13f33166e9e9e4925fc76879,0
+6,pb2010_normalized-j3048_8-sat.smt2,n100_t900,"{'CDCL': 21, 'CCSS': 79}",27d27e197ba0bc17eff78c4b35f661916438b07e85a51c72adc5c3c2ca590753,0
+7,prime_cone_sat_14.smt2,time900,"{'CDCL': 41006, 'CCSS': 41026}",eff4385bb01f7eb6a057b0f1151209563ca84a87bb6a54898b4a805a51ad6457,0
+7,prime_cone_sat_14.smt2,n100_t900,"{'CDCL': 50, 'CCSS': 50}",fe6510680926a74dfab4edbe6e77174b42775d2448b59cbbdad5260ca5d5cbb4,0

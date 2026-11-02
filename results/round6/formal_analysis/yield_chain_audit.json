@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "events": 23,
+  "rows": [
+    {
+      "run": "04_RefG_time900",
+      "mode": "RefG",
+      "budget": "time900",
+      "yields": 9,
+      "search_wall": 12.318935825999997,
+      "search_cpu": 12.298085609000001,
+      "post_yield_models_nonoverlap": 1529,
+      "post_yield_covered_nonoverlap": 851,
+      "no_later_formal": 0
+    },
+    {
+      "run": "04_Chosen_time900",
+      "mode": "Chosen",
+      "budget": "time900",
+      "yields": 11,
+      "search_wall": 16.637264657,
+      "search_cpu": 16.60803667700005,
+      "post_yield_models_nonoverlap": 1758,
+      "post_yield_covered_nonoverlap": 10287,
+      "no_later_formal": 0
+    },
+    {
+      "run": "04_RefG_n100_t900",
+      "mode": "RefG",
+      "budget": "n100_t900",
+      "yields": 1,
+      "search_wall": 0.837435885,
+      "search_cpu": 0.819983671000001,
+      "post_yield_models_nonoverlap": 73,
+      "post_yield_covered_nonoverlap": 87,
+      "no_later_formal": 0
+    },
+    {
+      "run": "04_Chosen_n100_t900",
+      "mode": "Chosen",
+      "budget": "n100_t900",
+      "yields": 2,
+      "search_wall": 4.120822848,
+      "search_cpu": 4.1139992340000004,
+      "post_yield_models_nonoverlap": 97,
+      "post_yield_covered_nonoverlap": 9829,
+      "no_later_formal": 0
+    }
+  ],
+  "sampler_executions": 0,
+  "solver_checks": 0,
+  "interpretation": "Temporal suffixes, not counterfactual causal gains; disjoint segments can be summed only within a run.",
+  "last_global_improvement_wall": "not measured",
+  "files": {
+    "yield_chains.csv": "9a9ad34a708209027f2df2586455c0a0a43a78aae071ba5d877da6603b6d09be",
+    "repeated_maps.csv": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "yield_summary.csv": "c6c8fa8d0044726764ed2891de17921db10d9bc30efa3d720023a49032a6db53"
+  }
+}
