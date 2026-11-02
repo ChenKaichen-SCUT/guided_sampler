@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "R5_archive_members": 2673,
+  "frozen_captures_verified": true,
+  "historical_binary_executions": 0,
+  "new_solver_calls": 0,
+  "report_sha256": "4f3cdacc4144128804bd33e90cf93215dab82c8103cf39ab0fc64e9a82302e2a",
+  "decision_sha256": "82ec4af60078cb68d7bb17e1df28e1679e7a8d323e71994bfcc3955423547dbe"
+}
