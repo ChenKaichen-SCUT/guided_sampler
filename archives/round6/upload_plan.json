@@ -1,0 +1,50 @@
+{
+  "branch": "round6-guarded-coverage-validation",
+  "batches": [
+    [
+      "results.tar.gz.part0000",
+      "results.tar.gz.part0001",
+      "results.tar.gz.part0002",
+      "results.tar.gz.part0003",
+      "results.tar.gz.part0004",
+      "results.tar.gz.part0005",
+      "results.tar.gz.part0006",
+      "results.tar.gz.part0007",
+      "results.tar.gz.part0008",
+      "results.tar.gz.part0009",
+      "results.tar.gz.part0010",
+      "results.tar.gz.part0011"
+    ],
+    [
+      "results.tar.gz.part0012",
+      "results.tar.gz.part0013",
+      "results.tar.gz.part0014",
+      "results.tar.gz.part0015",
+      "results.tar.gz.part0016",
+      "results.tar.gz.part0017",
+      "results.tar.gz.part0018",
+      "results.tar.gz.part0019",
+      "results.tar.gz.part0020",
+      "results.tar.gz.part0021",
+      "results.tar.gz.part0022",
+      "results.tar.gz.part0023"
+    ],
+    [
+      "results.tar.gz.part0024",
+      "results.tar.gz.part0025",
+      "results.tar.gz.part0026",
+      "results.tar.gz.part0027",
+      "results.tar.gz.part0028",
+      "results.tar.gz.part0029",
+      "results.tar.gz.part0030",
+      "results.tar.gz.part0031",
+      "results.tar.gz.part0032",
+      "results.tar.gz.part0033",
+      "results.tar.gz.part0034",
+      "results.tar.gz.part0035"
+    ]
+  ],
+  "max_parts_per_push": 12,
+  "reason": "Keep each Git pack below remote size limits; final branch contains every verified archive part",
+  "non_force": true
+}

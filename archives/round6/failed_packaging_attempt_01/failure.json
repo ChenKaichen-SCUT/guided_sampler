@@ -1,0 +1,11 @@
+{
+  "stage": "postprocessing_archive",
+  "command": "python3 -u scripts/round6/archive_publish.py archive",
+  "attempt": 1,
+  "exit_code": 1,
+  "error": "TypeError: TarFile.__init__() got an unexpected keyword argument 'compresslevel'",
+  "cause": "Python3.10 tarfile stream mode does not accept compresslevel; use gzip.GzipFile wrapper",
+  "partial_stream_bytes": 21,
+  "partial_stream_sha256": "5d073fd03d7f87649dff335f079cb89c49726f2aaba78fb16ea9b39145d3d0e8",
+  "sampling_or_scoring_repeated": false
+}

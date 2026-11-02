@@ -1,0 +1,6 @@
+{
+  "first_attempt": "failed_packaging_attempt_01/failure.json",
+  "retry_scope": "archive packaging only; all audited results immutable",
+  "generated_SVG_whitespace": "git diff --check reported trailing whitespace in Matplotlib-generated SVG path data; preserved generated evidence bytes and their SHA256",
+  "source_and_document_whitespace_check": "passed"
+}
