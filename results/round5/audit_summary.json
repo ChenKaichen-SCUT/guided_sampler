@@ -1,0 +1,265 @@
+{
+  "passed": true,
+  "meaning_of_passed": "evidence integrity, legality in the stated validation scope, frozen implementation and bounded attempt counts; not performance success or perfect wall-clock conformance",
+  "base_commit": "ec5b2ab415a38a4e89b76ec5b427ce23f0fb0550",
+  "W_attempts": 9,
+  "X_attempts": 8,
+  "X_skipped": 0,
+  "new_HighDiv_runs": 0,
+  "new_seeds": 0,
+  "new_900_second_runs": 0,
+  "B_enabled": false,
+  "validation": {
+    "release": {
+      "passed": true,
+      "checks": {
+        "canonical": true,
+        "kernel": true,
+        "abandon": true,
+        "parallel": true,
+        "index_outcome": true,
+        "exposure": true,
+        "budgets": true,
+        "demands": true,
+        "semantic_cases": true,
+        "semantic_correspondence": true,
+        "soft_reference": true,
+        "soft_lifecycle": true,
+        "coverage_policy": true,
+        "official_high_bit_signed_short_circuit": true,
+        "a_off_test_instrumentation_behavior": true,
+        "S_ref_instrumentation_behavior": true,
+        "S_ref_saved_R4_regression": true,
+        "S_full_instrumentation_behavior": true,
+        "S_full_saved_R4_regression": true,
+        "S_support_instrumentation_behavior": true,
+        "hard_soft_provenance_and_zero_new_guidance_constraints": true,
+        "exchange_numeric_RNG_and_buffer_tests": true,
+        "S_ref_native_recipe_RNG_rebuild": true,
+        "S_ref_probe_off_initialization_RNG": true,
+        "S_full_native_recipe_RNG_rebuild": true,
+        "S_full_probe_off_initialization_RNG": true,
+        "S_support_native_recipe_RNG_rebuild": true,
+        "S_support_probe_off_initialization_RNG": true,
+        "truncated_recipe_explicit_error": true
+      },
+      "binary_sha256": "75b947afd6e9305748c8c1c2a0f02dea1d1632341b857ba62dddd699aa4b2dd4",
+      "library_sha256": "080743b240f79114e8726d87c95b4acde82e588e1d560be7ede18a740de623cc",
+      "replay_sha256": "ceb4d11d771aa726ebf28823a4bf1ac5c6490a51faf9ab1b250cc3d3494d2b65",
+      "real_benchmark_runs": 0,
+      "old_binary_executions": 0,
+      "sole_leak_suppression": null,
+      "exchange_edges": {
+        "passed": true,
+        "cases": {
+          "negative": {
+            "read_statuses": [
+              "present",
+              "present"
+            ],
+            "difference_model_valid": true,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          },
+          "empty": {
+            "read_statuses": [
+              "missing"
+            ],
+            "difference_model_valid": false,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          },
+          "missing_y": {
+            "read_statuses": [
+              "present",
+              "missing"
+            ],
+            "difference_model_valid": false,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          },
+          "parse_error": {
+            "read_statuses": [
+              "parse_error"
+            ],
+            "difference_model_valid": false,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          },
+          "overflow128": {
+            "read_statuses": [
+              "128bit_overflow"
+            ],
+            "difference_model_valid": false,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          },
+          "difference_overflow": {
+            "read_statuses": [
+              "present",
+              "present"
+            ],
+            "difference_model_valid": false,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          }
+        },
+        "replay_sha256": "ceb4d11d771aa726ebf28823a4bf1ac5c6490a51faf9ab1b250cc3d3494d2b65",
+        "library_sha256": "080743b240f79114e8726d87c95b4acde82e588e1d560be7ede18a740de623cc",
+        "synthetic_only": true,
+        "SMT_calls": 0
+      },
+      "ldd": "\tlinux-vdso.so.1 (0x00007ffde85e4000)\n\tlibz3.so => /mnt/Space1/SMT_Sampling/guided_sampler/deps/round5_release/lib/libz3.so (0x00007e504bf9d000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007e504bd67000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007e504bd47000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007e504bb1e000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007e504ba37000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007e504ddd8000)\n",
+      "config_sha256": "95dfd1489744614b76b2d19a17abb7720bcbdc1ce0e39ac60547f9db725058aa",
+      "sampler_archive_sha256": "ff1d2204f51529e4896feb33de9446a238e806f6f1ef0dbf0c56cf8ac0a29d95"
+    },
+    "sanitize": {
+      "passed": true,
+      "checks": {
+        "canonical": true,
+        "kernel": true,
+        "abandon": true,
+        "parallel": true,
+        "index_outcome": true,
+        "exposure": true,
+        "budgets": true,
+        "demands": true,
+        "semantic_cases": true,
+        "semantic_correspondence": true,
+        "soft_reference": true,
+        "soft_lifecycle": true,
+        "coverage_policy": true,
+        "official_high_bit_signed_short_circuit": true,
+        "a_off_test_instrumentation_behavior": true,
+        "S_ref_instrumentation_behavior": true,
+        "S_ref_saved_R4_regression": true,
+        "S_full_instrumentation_behavior": true,
+        "S_full_saved_R4_regression": true,
+        "S_support_instrumentation_behavior": true,
+        "hard_soft_provenance_and_zero_new_guidance_constraints": true,
+        "exchange_numeric_RNG_and_buffer_tests": true,
+        "S_ref_native_recipe_RNG_rebuild": true,
+        "S_ref_probe_off_initialization_RNG": true,
+        "S_full_native_recipe_RNG_rebuild": true,
+        "S_full_probe_off_initialization_RNG": true,
+        "S_support_native_recipe_RNG_rebuild": true,
+        "S_support_probe_off_initialization_RNG": true,
+        "truncated_recipe_explicit_error": true
+      },
+      "binary_sha256": "1cc0c4744396fe5e02f6b366f85ffeb55b568ceb5e7f0fd5c612ebdeb8a1c801",
+      "library_sha256": "8ddafde97b11321ed949c933c6baa434220c33be3cbf85be48b50644a9d4bbb6",
+      "replay_sha256": "96ae8cf8d1a3be590e3fce7627429f28ae8de3c100ccaec2e2553721b3a89354",
+      "real_benchmark_runs": 0,
+      "old_binary_executions": 0,
+      "sole_leak_suppression": "ae26b6ceec0af7a3ec1ac375b47b4f1f7ab065b1ec071d582222e4f04d367032",
+      "exchange_edges": {
+        "passed": true,
+        "cases": {
+          "negative": {
+            "read_statuses": [
+              "present",
+              "present"
+            ],
+            "difference_model_valid": true,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          },
+          "empty": {
+            "read_statuses": [
+              "missing"
+            ],
+            "difference_model_valid": false,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          },
+          "missing_y": {
+            "read_statuses": [
+              "present",
+              "missing"
+            ],
+            "difference_model_valid": false,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          },
+          "parse_error": {
+            "read_statuses": [
+              "parse_error"
+            ],
+            "difference_model_valid": false,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          },
+          "overflow128": {
+            "read_statuses": [
+              "128bit_overflow"
+            ],
+            "difference_model_valid": false,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          },
+          "difference_overflow": {
+            "read_statuses": [
+              "present",
+              "present"
+            ],
+            "difference_model_valid": false,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          }
+        },
+        "replay_sha256": "96ae8cf8d1a3be590e3fce7627429f28ae8de3c100ccaec2e2553721b3a89354",
+        "library_sha256": "8ddafde97b11321ed949c933c6baa434220c33be3cbf85be48b50644a9d4bbb6",
+        "synthetic_only": true,
+        "SMT_calls": 0
+      },
+      "ldd": "\tlinux-vdso.so.1 (0x00007ffccd992000)\n\tlibasan.so.6 => /lib/x86_64-linux-gnu/libasan.so.6 (0x0000734e5cafc000)\n\tlibz3.so => /mnt/Space1/SMT_Sampling/guided_sampler/deps/round5_sanitize/lib/libz3.so (0x0000734dfca09000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x0000734dfc7dd000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x0000734dfc6f6000)\n\tlibubsan.so.1 => /lib/x86_64-linux-gnu/libubsan.so.1 (0x0000734dfc0c1000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x0000734dfc09f000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000734dfbe76000)\n\t/lib64/ld-linux-x86-64.so.2 (0x0000734e5ed53000)\n",
+      "config_sha256": "f44fd7d162b6a007eddbf8e067c9a9ec75f73b0919a3eaeb960fc71482309882",
+      "sampler_archive_sha256": "fefa5fdd160225ee0a364f473e94e59d9eea579aee0dab823f95ac6a06a5cc49"
+    }
+  },
+  "baseline_unchanged": {
+    "passed": true,
+    "changed": [],
+    "old_file_metadata_checked": 9410,
+    "protected_sha256_checked": 43,
+    "input_hashes_checked": 8,
+    "upstream_source_hashes_checked": 2935,
+    "historical_baseline_executions": 0
+  },
+  "artifact_count": 2671,
+  "official_and_independent_score_verified": true,
+  "W_formal": 81,
+  "W_raw": 97,
+  "W_duplicates": 16,
+  "W_invalid": 0,
+  "W_CDCL_unknown": 2,
+  "W_CCSS_unknown": 45,
+  "W_nonzero_process_exits": 0,
+  "X_reduced_SAT": 3,
+  "X_native_cutoff": 5,
+  "X_nonzero_process_exits": 0,
+  "wall_limit_exit_overrun_runs": 3,
+  "strict_process_wall_conformance": false,
+  "missing_and_limits": {
+    "missing": [
+      "cutoff时精确最终_step未单独保存；使用最后进度点下界，不当作最终步数",
+      "历史R4内部map、生产者与RNG不可恢复",
+      "未可靠恢复独立重放候选的原model converter，因此不能声称原始F合法",
+      "交换生产者每次日志CPU未单列；计入进程CPU和查询墙钟",
+      "random/real未安装完整CCSS捕获，42个CCSS Unknown原生内部原因未细分",
+      "未记录复合目标完整间接理论赋值链；最终访问与bit观察已独立验证"
+    ],
+    "trace_overflow": 0,
+    "W_protocol_exit_tail_overrun_runs": 3,
+    "formal_budget_seconds": 60,
+    "no_extra_formal_samples_after_budget": true,
+    "historical_exact_59_seconds_reproduced": false,
+    "long_call_phenomenon_reproduced_at_recorded_52_second_cutoff": true
+  },
+  "limitations": [
+    "single-seed bounded diagnostics",
+    "policy-dependent trajectories",
+    "CCSS reconstruction only within recorded input/initialization boundary",
+    "replay candidates do not enter formal samples"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "missing": [
+    "cutoff时精确最终_step未单独保存；使用最后进度点下界，不当作最终步数",
+    "历史R4内部map、生产者与RNG不可恢复",
+    "未可靠恢复独立重放候选的原model converter，因此不能声称原始F合法",
+    "交换生产者每次日志CPU未单列；计入进程CPU和查询墙钟",
+    "random/real未安装完整CCSS捕获，42个CCSS Unknown原生内部原因未细分",
+    "未记录复合目标完整间接理论赋值链；最终访问与bit观察已独立验证"
+  ],
+  "trace_overflow": 0,
+  "W_protocol_exit_tail_overrun_runs": 3,
+  "formal_budget_seconds": 60,
+  "no_extra_formal_samples_after_budget": true,
+  "historical_exact_59_seconds_reproduced": false,
+  "long_call_phenomenon_reproduced_at_recorded_52_second_cutoff": true
+}

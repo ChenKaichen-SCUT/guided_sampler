@@ -1,0 +1,32 @@
+{
+  "id": "X_r0",
+  "H": "ref",
+  "M": "empty",
+  "cpu": 8,
+  "execute": true,
+  "skip_reason": null,
+  "recipe": "results/round5/capture/ref/recipe.json",
+  "map": "results/round5/capture/ref/empty_map.json",
+  "recipe_sha256": "dd48dca572f069d86cb134bc05874587c431575d8f6e9bfd4cd41e910cd41fd8",
+  "map_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+  "native_cutoff_seconds": 52,
+  "parent_seconds": 65,
+  "directory": "/mnt/Space1/SMT_Sampling/guided_sampler/results/round5/replay/X_r0",
+  "command": [
+    "/mnt/Space1/SMT_Sampling/guided_sampler/build/round5-ccss-replay-release",
+    "/mnt/Space1/SMT_Sampling/guided_sampler/results/round5/capture/ref/recipe.json",
+    "/mnt/Space1/SMT_Sampling/guided_sampler/results/round5/capture/ref/empty_map.json",
+    "/mnt/Space1/SMT_Sampling/guided_sampler/results/round5/replay/X_r0",
+    "X_r0",
+    "0"
+  ],
+  "environment": {
+    "PATH": "/root/.elan/bin:/root/.codex/tmp/arg0-linux/codex-arg0RJuUWT:/root/.elan/bin:/root/.elan/bin:/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.vscode-server/extensions/openai.chatgpt-26.1021.22027-linux-x64/bin/linux-x86_64",
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8"
+  },
+  "binary_sha256": "ceb4d11d771aa726ebf28823a4bf1ac5c6490a51faf9ab1b250cc3d3494d2b65",
+  "ready": "/mnt/Space1/SMT_Sampling/guided_sampler/results/round5/X_batch/X_r0.ready.json",
+  "gate": "/mnt/Space1/SMT_Sampling/guided_sampler/results/round5/X_batch/RELEASE.json",
+  "cwd": "/mnt/Space1/SMT_Sampling/guided_sampler/results/round5/replay/X_r0"
+}

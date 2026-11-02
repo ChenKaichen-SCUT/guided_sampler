@@ -1,0 +1,9 @@
+convert_S_ref 36550 27
+convert_S_full 27761 3
+convert_S_support 27761 3
+SMT_random_S_ref 11230 8
+SMT_random_S_full 11136 8
+SMT_random_S_support 11101 8
+SMT_real_S_ref 5961 8
+SMT_real_S_full 5697 8
+SMT_real_S_support 5687 8

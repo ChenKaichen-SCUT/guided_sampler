@@ -1,0 +1,79 @@
+{
+  "executed": 8,
+  "skipped": 0,
+  "results": [
+    {
+      "exit_code": 0,
+      "user_cpu": 0.161828,
+      "system_cpu": 0.0234,
+      "max_rss_kb": 38536,
+      "wall_from_batch_release": 0.2617229259922169,
+      "completed_monotonic": 149901.671280993,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 52.070541,
+      "system_cpu": 0.040011,
+      "max_rss_kb": 37380,
+      "wall_from_batch_release": 52.20328645998961,
+      "completed_monotonic": 149953.612844694,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 0.14053,
+      "system_cpu": 0.034068,
+      "max_rss_kb": 38408,
+      "wall_from_batch_release": 0.27239148499211296,
+      "completed_monotonic": 149901.681950087,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 52.108653,
+      "system_cpu": 0.01729,
+      "max_rss_kb": 37272,
+      "wall_from_batch_release": 52.21364058498875,
+      "completed_monotonic": 149953.623198667,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 52.066734,
+      "system_cpu": 0.02001,
+      "max_rss_kb": 34192,
+      "wall_from_batch_release": 52.16768614799366,
+      "completed_monotonic": 149953.577244312,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 52.064753,
+      "system_cpu": 0.012103,
+      "max_rss_kb": 34200,
+      "wall_from_batch_release": 52.164563993981574,
+      "completed_monotonic": 149953.574122192,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 0.149552,
+      "system_cpu": 0.02991,
+      "max_rss_kb": 38404,
+      "wall_from_batch_release": 0.27579622698249295,
+      "completed_monotonic": 149901.685354248,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 52.079347,
+      "system_cpu": 0.032036,
+      "max_rss_kb": 37508,
+      "wall_from_batch_release": 52.18616087498958,
+      "completed_monotonic": 149953.595719215,
+      "no_retry": true
+    }
+  ],
+  "no_retries": true
+}

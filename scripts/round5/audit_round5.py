@@ -30,7 +30,15 @@ def main():
             for act in g['actions']:
                 assert act['decision_id']<=64 and act['native_var']==act['actual_var']
                 if j['mode']=='S_support':assert act['preference_source']!='avoid_direct_blocker'
-    cap=read(ROOT/'manifests/round5_capture.json')
+    evidence=read(ROOT/'manifests/round5_W_evidence.json')
+    for p,h in evidence['files'].items():assert digest(ROOT/p)==h,('frozen_W_capture_modified',p)
+    assert read(BASE/'analysis/X_capture_details.json')['passed']
+    assert read(BASE/'analysis/X_independent_arithmetic_audit.json')['passed']
+    for d in (BASE/'W').iterdir():
+        assert not any(x.get('target_buffer_overflow',False) for x in rows(d/'lifecycle.jsonl'))
+        assert not any(x.get('kind')=='trace_overflow' for x in rows(d/'exchange_events.jsonl'))
+        assert all(r['output_complete']<=60 for r in rows(d/'formal_receipts.jsonl'))
+    cap=read(ROOT/'manifests/round5_capture.json');assert cap['audit_sha256']==digest(BASE/'analysis/X_capture_fidelity.json')
     for p,h in cap['files'].items():assert digest(ROOT/p)==h,p
     xp=read(ROOT/'manifests/round5_X_plan.json');assert len(xp['rows'])==8;assert len(list((BASE/'replay').glob('*/attempt.json')))==sum(x['execute'] for x in xp['rows'])<=8
     for r in xp['rows']:
@@ -40,6 +48,7 @@ def main():
     for f in required:assert (BASE/'analysis'/f).exists(),f
     decision=read(BASE/'analysis/next_change_decision.json');assert len(decision['priority_changes'])<=1
     hashes={str(p.relative_to(ROOT)):digest(p) for p in sorted(BASE.rglob('*')) if p.is_file() and p.name not in ['audit_summary.json','artifact_hashes.json']};write(BASE/'artifact_hashes.json',hashes)
-    write(BASE/'audit_summary.json',{'passed':True,'base_commit':cfg['base_commit'],'W_attempts':9,'X_attempts':sum(r['execute'] for r in xp['rows']),'X_skipped':sum(not r['execute'] for r in xp['rows']),'new_HighDiv_runs':0,'new_seeds':0,'new_900_second_runs':0,'B_enabled':False,'validation':freeze['validation'],'baseline_unchanged':unchanged,'artifact_count':len(hashes),'official_and_independent_score_verified':True,'limitations':['single-seed bounded diagnostics','policy-dependent trajectories','CCSS reconstruction only within recorded input/initialization boundary','replay candidates do not enter formal samples']})
+    perf=read(BASE/'analysis/W_summary.json')['sessions'];xs=read(BASE/'analysis/X_summary.json')['results'];limits=read(BASE/'analysis/known_limits_and_missing.json')
+    write(BASE/'audit_summary.json',{'passed':True,'meaning_of_passed':'evidence integrity, legality in the stated validation scope, frozen implementation and bounded attempt counts; not performance success or perfect wall-clock conformance','base_commit':cfg['base_commit'],'W_attempts':9,'X_attempts':sum(r['execute'] for r in xp['rows']),'X_skipped':sum(not r['execute'] for r in xp['rows']),'new_HighDiv_runs':0,'new_seeds':0,'new_900_second_runs':0,'B_enabled':False,'validation':freeze['validation'],'baseline_unchanged':unchanged,'artifact_count':len(hashes),'official_and_independent_score_verified':True,'W_formal':sum(r['formal'] for r in perf),'W_raw':sum(r['raw'] for r in perf),'W_duplicates':sum(r['duplicates'] for r in perf),'W_invalid':sum(r['invalid'] for r in perf),'W_CDCL_unknown':sum(r['CDCL_unknown'] for r in perf),'W_CCSS_unknown':sum(r['CCSS_unknown'] for r in perf),'W_nonzero_process_exits':sum(r['exit_code']!=0 for r in perf),'X_reduced_SAT':sum(r.get('SAT') is True for r in xs),'X_native_cutoff':sum(r.get('result')=='native_cutoff' for r in xs),'X_nonzero_process_exits':sum(r.get('process_exit')!=0 for r in xs if r['execute']),'wall_limit_exit_overrun_runs':sum(r['wall_seconds']>60 for r in perf),'strict_process_wall_conformance':not any(r['wall_seconds']>60 for r in perf),'missing_and_limits':limits,'limitations':['single-seed bounded diagnostics','policy-dependent trajectories','CCSS reconstruction only within recorded input/initialization boundary','replay candidates do not enter formal samples']})
     print('Round5 final audit passed',len(hashes),'artifacts')
 if __name__=='__main__':main()

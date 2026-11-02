@@ -1,0 +1,38 @@
+{
+  "priority_changes": [
+    {
+      "name": "原生CCSS连续无全局best改善的提前交还守卫",
+      "factor": "只加一个固定步数停滞守卫，建议阈值65536；保持map、初始化规则、随机流、move规则、原cutoff、A评分和宿主路由不变，触发时正常返回Unknown",
+      "basis": [
+        "X_rr/X_cr/X_rr_repeat均219步成功，已记录最长无全局改善段20步",
+        "M_full三次cutoff，已记录无全局改善段至少1096794步；空map两次至少565196步",
+        "W convert Full/Support的CCSS占用约52.4秒，各仅3正式模型；Ref有27正式模型",
+        "avoid没有挤占去重后有效support的证据，support-only全式覆盖未改善；清空map也未改善"
+      ],
+      "expected_metrics": [
+        "先降低失败CCSS的原生步数、CPU与宿主阻塞时间",
+        "在相同会话预算下观察正式模型供给与官方全式覆盖，不以提前Unknown当作采样成功"
+      ],
+      "controls": [
+        "保持本轮冻结原生版、同一实际捕获H/M和R0",
+        "随后仅比较原版与单守卫版；A策略和所有其他因素固定",
+        "继续保留成功M_ref、失败M_full与空map，不能挑慢例或追加seed补救"
+      ],
+      "failure_criteria": [
+        "打断本来219步成功的M_ref",
+        "未显著减少本次慢状态的资源占用",
+        "相同预算下官方全式覆盖或合法模型供给净下降",
+        "出现非法候选、RNG或构造输入非预期变化"
+      ],
+      "limitations": "仅是成本保护的下一项待检验修改；不能声称修复了CCSS搜索能力，也未证明全局性能收益。阈值由当前有限证据提出，尚未执行。"
+    }
+  ],
+  "not_prioritized": [
+    "继续调整avoid或扩大support配额",
+    "清空交换map或改为正式模型",
+    "同时更换初始化分布、LIA move或目标池"
+  ],
+  "implemented_this_round": false,
+  "new_experiments_triggered": 0,
+  "evidence_sha256": "7a607edbf996cef4ed4548dbb5a8efa7212a3b64ad4e3d16087c6a64f0e0d5d2"
+}
