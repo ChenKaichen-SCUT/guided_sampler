@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "run": "convert_Ref_n20_t120",
+  "models": 20,
+  "all_prefix_covered_equal_frozen_exact": true,
+  "implementation": "Per-node 64-bit words assembled once per model; same semantics as original whole-DAG integer updates",
+  "sampler_executions": 0,
+  "solver_checks": 0,
+  "source_sha256": "7c8659ba38e1e5f254d7f5ae6427d052e19cf6ffab0f28153dcf4c43de00b827"
+}
