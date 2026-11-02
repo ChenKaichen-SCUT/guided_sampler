@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/round6/audit_short.py", line 74, in <module>
+    if __name__=='__main__':main()
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/round6/audit_short.py", line 58, in main
+    assert n['exit_reason'] not in ['exception','arith_unknown'],'Native failure requires explicit No-Go review'
+AssertionError: Native failure requires explicit No-Go review

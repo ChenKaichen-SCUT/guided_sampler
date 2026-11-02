@@ -13,25 +13,31 @@ def load_bits(formula,d):
         if n.get_id() in witness._storage:universe|=((1 if z3.is_bool(n) else (1<<64)-1)<<(64*i))
     for a in rows(d/'a_atom_catalog.jsonl'):
         for r in a['rules']:known|=(int(r['known_one'])|int(r['known_zero']))<<(64*r['node'])
-    seen0=seen1=0;prefix=[];receipts=rows(d/'formal_receipts.jsonl')
+    seen0=seen1=0;zero_by_node=[0]*len(nodes);one_by_node=[0]*len(nodes);prefix=[];receipts=rows(d/'formal_receipts.jsonl');exact=read(d/'exact.json');assert universe.bit_count()==exact['total']
     with (d/'samples.formal').open() as f:
         for i,sample in enumerate(metric.parse_samples(f)):
             witness.current={};assert m.count_sample(sample)
             for astid,value in witness.current.items():
-                n=ids[astid];mask=1 if z3.is_bool(nodes[n]) else (1<<64)-1;v=int(value)&mask;seen0|=(mask^v)<<(64*n);seen1|=v<<(64*n)
+                n=ids[astid];mask=1 if z3.is_bool(nodes[n]) else (1<<64)-1;v=int(value)&mask;zero_by_node[n]|=mask^v;one_by_node[n]|=v
+            # Assemble once per model, avoiding a whole-DAG big-int copy per node.
+            seen0=int.from_bytes(b''.join(v.to_bytes(8,'little') for v in zero_by_node),'little');seen1=int.from_bytes(b''.join(v.to_bytes(8,'little') for v in one_by_node),'little')
             covered=seen0&seen1
+            assert covered.bit_count()==exact['prefixes'][i]['covered']
             if receipts[i]['covered'] is not None:assert covered.bit_count()==receipts[i]['covered']
             prefix.append((seen0,seen1,covered))
+    assert len(prefix)==len(receipts)==exact['models']
     return {'prefix':prefix,'universe':universe,'known':known,'receipts':receipts,'fingerprints':[sha_text(n.sexpr()) for n in nodes],'sha':digest(formula)}
 def at(r,n):return r['prefix'][n-1] if n else (0,0,0)
 def partition(l,r):
     assert l['universe']==r['universe'];u=l['universe'];L=at(l,1) if l['prefix'] else (0,0,0);R=at(r,1) if r['prefix'] else (0,0,0);diff=((L[0]^R[0])|(L[1]^R[1]))&u;g0=L[2]&~diff;g3=u&~(L[0]|L[1])&~diff;g1=l['known']&r['known']&(L[0]^L[1])&(R[0]^R[1])&~diff&u;g2=u&~(diff|g0|g1|g3);groups={'G0':g0,'G1':g1,'G2':g2,'G3':g3,'G4_initial_difference':diff};assert sum(x.bit_count() for x in groups.values())==u.bit_count();return groups
 def compare(l,r,identity):
+    assert l['sha']==r['sha'] and l['fingerprints']==r['fingerprints']
     groups=partition(l,r);out=[];details=[];n=min(len(l['prefix']),len(r['prefix']));align=[('full_session',len(l['prefix']),len(r['prefix'])),('common_prefix',n,n)]
     for k in [1,3,10,20]:
         if k<=n:align.append(('strict_prefix_'+str(k),k,k))
     for name,ln,rn in align:
         lc=at(l,ln)[2];rc=at(r,rn)[2]
+        assert sum((rc&~lc&m).bit_count()-(lc&~rc&m).bit_count() for m in groups.values())==rc.bit_count()-lc.bit_count()
         for g,mask in groups.items():
             gain=rc&~lc&mask;loss=lc&~rc&mask;out.append({**identity,'alignment':name,'group':g,'partition_size':mask.bit_count(),'left_models':ln,'right_models':rn,'left_covered':lc.bit_count(),'right_covered':rc.bit_count(),'left_only':loss.bit_count(),'right_only':gain.bit_count(),'net':gain.bit_count()-loss.bit_count()})
             if name=='full_session':
@@ -51,7 +57,9 @@ def yield_chains(d,id,exact):
             middle=[z for z in raw if l['source_query_id']<z['query']<r['source_query_id']];repeat.append({'run':id,'left_query':l['source_query_id'],'right_query':r['source_query_id'],'same_consumed_map':True,'intervening_legal_CDCL_raw':len(middle),'eligible_cooldown_evidence':not middle})
     return events,repeat
 def main():
-    stage=sys.argv[1];assert stage in ['G2','candidate'];root=BASE/('guard_short' if stage=='G2' else 'candidate_short');out=BASE/('guard_analysis' if stage=='G2' else 'candidate_analysis');out.mkdir(exist_ok=True);jobs=read(ROOT/'configs/round6_guard.json')[stage];perf=[];curves=[];chains=[];repeat=[];funnel=[];groups=[];details=[];comparisons=[]
+    loaded=sorted({line.split()[-1] for line in pathlib.Path('/proc/self/maps').read_text().splitlines() if 'libz3.so' in line})
+    assert loaded and all(digest(p)==digest(ROOT/'deps/baseline/lib/libz3.so') for p in loaded),'Use frozen deps/baseline/bin/python3 for scoring'
+    stage=sys.argv[1];assert stage in ['G2','candidate'];root=BASE/('guard_short' if stage=='G2' else 'candidate_short');out=BASE/('guard_analysis' if stage=='G2' else 'candidate_analysis');out.mkdir(exist_ok=True);jobs=read(ROOT/'configs/round6_guard.json')[stage];perf=[];curves=[];chains=[];repeat=[];funnel=[];groups=[];details=[];comparisons=[];call_table=[]
     for inst in ['convert','SMT_random','SMT_real']:
         for budget in ['time120','n20_t120']:
             data={};current={}
@@ -63,7 +71,11 @@ def main():
                 x=read(d/'exact.json');s=read(d/'summary.json');t=read(d/'terminal.json');q=rows(d/'queries.jsonl');raw=rows(d/'sample_receipts.jsonl');native=rows(d/'ccss_guard.jsonl');ec,er=yield_chains(d,j['id'],x);chains+=ec;repeat+=er;ps=x['prefixes'];auc=0;last_time=0;last_cov=0;end=120 if budget=='time120' else min(120,s['elapsed'])
                 for p in ps:
                     moment=p['commit_complete'];auc+=last_cov*(moment-last_time);last_time=moment;last_cov=p['covered'];curves.append({'run':j['id'],**p})
-                auc+=last_cov*max(0,end-last_time);r={'run':j['id'],'instance':inst,'budget':budget,'mode':j['mode'],'formal':x['models'],'raw':s['raw_count'],'duplicates':sum(z.get('status')=='duplicate' for z in raw),'invalid':sum(z.get('status')=='invalid' for z in raw),'covered':x['covered'],'total':x['total'],'coverage_percent':100*x['covered']/x['total'],'covered_first10':ps[9]['covered'] if len(ps)>=10 else None,'covered_first20':ps[19]['covered'] if len(ps)>=20 else None,'strict20_completed':len(ps)>=20,'seconds_to20':ps[19]['commit_complete'] if len(ps)>=20 else None,'covered_bit_seconds_AUC':auc,'normalized_coverage_AUC_percent':100*auc/x['total']/end if end else None,'AUC_interval_seconds':end,'wall':s['elapsed'],'exit_delay':max(0,s['elapsed']-120),'user_cpu':t['user_cpu'],'system_cpu':t['system_cpu'],'max_rss_kb':t['max_rss_kb'],'process_exit':t['exit_code'],'raw_status':s['status'],'formal_CDCL':sum(p['source']=='CDCL' for p in ps),'formal_CCSS':sum(p['source']=='CCSS' for p in ps),'CDCL_checks':sum(z['source']=='CDCL' for z in q),'CCSS_checks':sum(z['source']=='CCSS' for z in q),'CDCL_unknown':sum(z['source']=='CDCL' and z['result']=='unknown' for z in q),'CCSS_unknown':sum(z['source']=='CCSS' and z['result']=='unknown' for z in q),'CCSS_yields':len(ec),'yield_search_wall':sum(z['guard_search_wall'] for z in ec),'yield_search_cpu':sum(z['guard_search_cpu'] for z in ec),'post_yield_formal_nonoverlap':sum(z['nonoverlapping_post_yield_models'] for z in ec),'post_yield_covered_nonoverlap':sum(z['nonoverlapping_post_yield_new_covered'] for z in ec),'yields_without_later_formal':sum(z['no_later_formal'] for z in ec),'native_exit_reasons':dict(collections.Counter(z['exit_reason'] for z in native)),'guidance_explicit_seconds':s['guidance_cost'],'guidance_exposure_seconds':s['A_exposure'],'official_legal':x['legal']};perf.append(r);current[j['mode']]=r
+                auc+=last_cov*max(0,end-last_time);r={'run':j['id'],'instance':inst,'budget':budget,'mode':j['mode'],'formal':x['models'],'raw':s['raw_count'],'duplicates':sum(z.get('status')=='duplicate' for z in raw),'invalid':sum(z.get('status')=='invalid' for z in raw),'covered':x['covered'],'total':x['total'],'coverage_percent':100*x['covered']/x['total'],'covered_first10':ps[9]['covered'] if len(ps)>=10 else None,'covered_first20':ps[19]['covered'] if len(ps)>=20 else None,'strict20_completed':len(ps)>=20,'seconds_to20':ps[19]['commit_complete'] if len(ps)>=20 else None,'covered_bit_seconds_AUC':auc,'normalized_coverage_AUC_percent':100*auc/x['total']/end if end else None,'AUC_interval_seconds':end,'wall':s['elapsed'],'process_wall_from_batch_release':t['wall_from_batch_release'],'process_exit_delay':max(0,t['wall_from_batch_release']-120),'exit_delay':max(0,s['elapsed']-120),'user_cpu':t['user_cpu'],'system_cpu':t['system_cpu'],'max_rss_kb':t['max_rss_kb'],'process_exit':t['exit_code'],'raw_status':s['status'],'formal_CDCL':sum(p['source']=='CDCL' for p in ps),'formal_CCSS':sum(p['source']=='CCSS' for p in ps),'CDCL_checks':sum(z['source']=='CDCL' for z in q),'CCSS_checks':sum(z['source']=='CCSS' for z in q),'CDCL_unknown':sum(z['source']=='CDCL' and z['result']=='unknown' for z in q),'CCSS_unknown':sum(z['source']=='CCSS' and z['result']=='unknown' for z in q),'CCSS_yields':len(ec),'yield_search_wall':sum(z['guard_search_wall'] for z in ec),'yield_search_cpu':sum(z['guard_search_cpu'] for z in ec),'post_yield_formal_nonoverlap':sum(z['nonoverlapping_post_yield_models'] for z in ec),'post_yield_covered_nonoverlap':sum(z['nonoverlapping_post_yield_new_covered'] for z in ec),'yields_without_later_formal':sum(z['no_later_formal'] for z in ec),'native_exit_reasons':dict(collections.Counter(z['exit_reason'] for z in native)),'guidance_explicit_seconds':s['guidance_cost'],'guidance_exposure_seconds':s['A_exposure'],'official_legal':x['legal']};perf.append(r);current[j['mode']]=r
+                hcalls={h['source_query_id']:h for h in rows(d/'ccss_guard_host.jsonl')};by_query=collections.defaultdict(list)
+                for native_call in native:by_query[native_call['source_query_id']].append(native_call)
+                for host_id,h in hcalls.items():
+                    for n in by_query.get(host_id,[{}]):call_table.append({'run':j['id'],'instance':inst,'budget':budget,'mode':j['mode'],**h,**{k:v for k,v in n.items() if k!='consumed_map'},'host_exit_reason':h['exit_reason'],'native_kernels_in_host_query':len(by_query[host_id]),'native_last_in_host':bool(n) and n is by_query[host_id][-1]})
                 acts=rows(d/'a_actions.jsonl');outcomes={(z['query_id'],a['backend_call_id'],a['decision_id']):a for z in rows(d/'a_outcomes.independent.jsonl') for a in z.get('outcomes',[])}
                 for source in ['coverage_support','avoid_direct_blocker','inherited_reference']:
                     aa=[a for a in acts if a['preference_source']==source];unique=set();hit=set()
@@ -79,6 +91,6 @@ def main():
             for left,right in pairs:
                 ident={'instance':inst,'budget':budget,'pair':left+'_vs_'+right};a,b=compare(data[left],data[right],ident);groups+=a;details+=b;l=current[left];r=current[right];strict=budget=='n20_t120' and l['formal']==r['formal']==20
                 comparisons.append({**ident,'left_models':l['formal'],'right_models':r['formal'],'covered_delta':r['covered']-l['covered'],'coverage_pp_delta':r['coverage_percent']-l['coverage_percent'],'strict20_eligible':strict,'strict20_pp_delta':r['coverage_percent']-l['coverage_percent'] if strict else None,'extra_formal':r['formal']-l['formal'],'extra_CDCL':r['CDCL_checks']-l['CDCL_checks'],'extra_CCSS':r['CCSS_checks']-l['CCSS_checks'],'duplicates_delta':r['duplicates']-l['duplicates'],'wall_delta':r['wall']-l['wall'],'CPU_delta':r['user_cpu']+r['system_cpu']-l['user_cpu']-l['system_cpu'],'AUC_percent_delta':r['normalized_coverage_AUC_percent']-l['normalized_coverage_AUC_percent'],'paired_same_state_causal_claim':False})
-    for name,data_ in [('performance',perf),('curves',curves),('yield_chains',chains),('repeated_maps',repeat),('target_funnel',funnel),('coverage_partitions',groups),('bit_details',details),('matched_comparisons',comparisons)]:csvwrite(out/(name+'.csv'),data_)
+    for name,data_ in [('performance',perf),('curves',curves),('yield_chains',chains),('repeated_maps',repeat),('target_funnel',funnel),('coverage_partitions',groups),('bit_details',details),('matched_comparisons',comparisons),('ccss_calls',call_table)]:csvwrite(out/(name+'.csv'),data_)
     write(out/'summary.json',{'passed':True,'stage':stage,'sessions':perf,'comparisons':comparisons,'yield_events':len(chains),'eligible_repeat_map_pairs':sum(r['eligible_cooldown_evidence'] for r in repeat),'official_metric_unchanged':True,'solver_checks_added':0,'last_improvement_wall_not_recorded':True});print(stage,'analysis complete',len(perf),flush=True)
 if __name__=='__main__':main()

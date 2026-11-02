@@ -1,0 +1,13 @@
+Starting G2 batch 0 [('convert_Ref_time120', 0), ('convert_RefG_time120', 2), ('convert_Full_time120', 4), ('convert_FullG_time120', 6)]
+Completed G2 batch 0 attempts 4
+Starting G2 batch 1 [('SMT_random_Ref_time120', 2), ('SMT_random_RefG_time120', 4), ('SMT_random_Full_time120', 6), ('SMT_random_FullG_time120', 0)]
+Completed G2 batch 1 attempts 4
+Starting G2 batch 2 [('SMT_real_Ref_time120', 4), ('SMT_real_RefG_time120', 6), ('SMT_real_Full_time120', 0), ('SMT_real_FullG_time120', 2)]
+Completed G2 batch 2 attempts 4
+Starting G2 batch 3 [('convert_Ref_n20_t120', 6), ('convert_RefG_n20_t120', 0), ('convert_Full_n20_t120', 2), ('convert_FullG_n20_t120', 4)]
+Completed G2 batch 3 attempts 4
+Starting G2 batch 4 [('SMT_random_Ref_n20_t120', 0), ('SMT_random_RefG_n20_t120', 2), ('SMT_random_Full_n20_t120', 4), ('SMT_random_FullG_n20_t120', 6)]
+Completed G2 batch 4 attempts 4
+Starting G2 batch 5 [('SMT_real_Ref_n20_t120', 2), ('SMT_real_RefG_n20_t120', 4), ('SMT_real_Full_n20_t120', 6), ('SMT_real_FullG_n20_t120', 0)]
+Completed G2 batch 5 attempts 4
+Completed G2 24

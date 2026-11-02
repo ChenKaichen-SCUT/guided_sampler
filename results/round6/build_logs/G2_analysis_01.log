@@ -1,0 +1,25 @@
+G2 convert_Ref_time120 384 37027 0
+G2 convert_RefG_time120 457 37114 4
+G2 convert_Full_time120 227 37694 0
+G2 convert_FullG_time120 451 37819 5
+G2 convert_Ref_n20_t120 20 36530 0
+G2 convert_RefG_n20_t120 20 36530 0
+G2 convert_Full_n20_t120 20 37359 0
+G2 convert_FullG_n20_t120 20 37359 1
+G2 SMT_random_Ref_time120 39 13047 0
+G2 SMT_random_RefG_time120 39 13047 0
+G2 SMT_random_Full_time120 46 12968 0
+G2 SMT_random_FullG_time120 46 12968 0
+G2 SMT_random_Ref_n20_t120 20 12538 0
+G2 SMT_random_RefG_n20_t120 20 12538 0
+G2 SMT_random_Full_n20_t120 20 12418 0
+G2 SMT_random_FullG_n20_t120 20 12418 0
+G2 SMT_real_Ref_time120 183 7516 0
+G2 SMT_real_RefG_time120 183 7516 0
+G2 SMT_real_Full_time120 242 7477 0
+G2 SMT_real_FullG_time120 240 7532 0
+G2 SMT_real_Ref_n20_t120 20 6642 0
+G2 SMT_real_RefG_n20_t120 20 6642 0
+G2 SMT_real_Full_n20_t120 20 6644 0
+G2 SMT_real_FullG_n20_t120 20 6644 0
+G2 analysis complete 24

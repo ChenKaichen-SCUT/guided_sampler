@@ -1,0 +1,9 @@
+instance,budget,pair,unguarded_exception_calls,guarded_exception_calls,same_query_map_RNG_seed_exception_matches,first_matched_query
+SMT_random,time120,Ref_vs_RefG,39,39,39,2
+SMT_random,time120,Full_vs_FullG,47,47,47,2
+SMT_random,n20_t120,Ref_vs_RefG,19,19,19,2
+SMT_random,n20_t120,Full_vs_FullG,20,20,20,2
+SMT_real,time120,Ref_vs_RefG,181,182,181,2
+SMT_real,time120,Full_vs_FullG,242,239,70,2
+SMT_real,n20_t120,Ref_vs_RefG,19,19,19,2
+SMT_real,n20_t120,Full_vs_FullG,19,19,19,2

@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "calls": 1170,
+  "pairs": [
+    {
+      "instance": "SMT_random",
+      "budget": "time120",
+      "pair": "Ref_vs_RefG",
+      "unguarded_exception_calls": 39,
+      "guarded_exception_calls": 39,
+      "same_query_map_RNG_seed_exception_matches": 39,
+      "first_matched_query": 2
+    },
+    {
+      "instance": "SMT_random",
+      "budget": "time120",
+      "pair": "Full_vs_FullG",
+      "unguarded_exception_calls": 47,
+      "guarded_exception_calls": 47,
+      "same_query_map_RNG_seed_exception_matches": 47,
+      "first_matched_query": 2
+    },
+    {
+      "instance": "SMT_random",
+      "budget": "n20_t120",
+      "pair": "Ref_vs_RefG",
+      "unguarded_exception_calls": 19,
+      "guarded_exception_calls": 19,
+      "same_query_map_RNG_seed_exception_matches": 19,
+      "first_matched_query": 2
+    },
+    {
+      "instance": "SMT_random",
+      "budget": "n20_t120",
+      "pair": "Full_vs_FullG",
+      "unguarded_exception_calls": 20,
+      "guarded_exception_calls": 20,
+      "same_query_map_RNG_seed_exception_matches": 20,
+      "first_matched_query": 2
+    },
+    {
+      "instance": "SMT_real",
+      "budget": "time120",
+      "pair": "Ref_vs_RefG",
+      "unguarded_exception_calls": 181,
+      "guarded_exception_calls": 182,
+      "same_query_map_RNG_seed_exception_matches": 181,
+      "first_matched_query": 2
+    },
+    {
+      "instance": "SMT_real",
+      "budget": "time120",
+      "pair": "Full_vs_FullG",
+      "unguarded_exception_calls": 242,
+      "guarded_exception_calls": 239,
+      "same_query_map_RNG_seed_exception_matches": 70,
+      "first_matched_query": 2
+    },
+    {
+      "instance": "SMT_real",
+      "budget": "n20_t120",
+      "pair": "Ref_vs_RefG",
+      "unguarded_exception_calls": 19,
+      "guarded_exception_calls": 19,
+      "same_query_map_RNG_seed_exception_matches": 19,
+      "first_matched_query": 2
+    },
+    {
+      "instance": "SMT_real",
+      "budget": "n20_t120",
+      "pair": "Full_vs_FullG",
+      "unguarded_exception_calls": 19,
+      "guarded_exception_calls": 19,
+      "same_query_map_RNG_seed_exception_matches": 19,
+      "first_matched_query": 2
+    }
+  ],
+  "parser_context_identical_to_R5": true,
+  "guard_reached_in_these_calls": false,
+  "models_from_these_calls": 0,
+  "interpretation": "Construction failure exists with guard disabled and matching map/constructor RNG/seed; it is not a new guard-induced state failure. All calls remain exception/Unknown, never yield or SAT.",
+  "unknown": "Exact offending numeric token and historical R5 internal cause were not recorded; no claim of reconstructing that token.",
+  "new_solver_calls": 0,
+  "exception_log_suppression": false
+}

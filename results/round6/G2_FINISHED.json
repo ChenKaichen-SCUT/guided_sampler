@@ -1,0 +1,222 @@
+{
+  "attempts": 24,
+  "no_retries": true,
+  "results": [
+    {
+      "exit_code": 0,
+      "user_cpu": 106.209361,
+      "system_cpu": 2.112786,
+      "max_rss_kb": 132656,
+      "wall_from_batch_release": 120.09662140201544,
+      "completed_monotonic": 185179.211655979,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 106.199328,
+      "system_cpu": 0.648195,
+      "max_rss_kb": 204932,
+      "wall_from_batch_release": 120.11097228201106,
+      "completed_monotonic": 185179.22600633,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 113.689609,
+      "system_cpu": 0.384627,
+      "max_rss_kb": 128324,
+      "wall_from_batch_release": 120.07059378901613,
+      "completed_monotonic": 185179.185627255,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 106.790025,
+      "system_cpu": 0.7155509999999999,
+      "max_rss_kb": 204748,
+      "wall_from_batch_release": 120.09729142001015,
+      "completed_monotonic": 185179.21232529,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 118.830814,
+      "system_cpu": 0.152116,
+      "max_rss_kb": 59512,
+      "wall_from_batch_release": 120.06938290200196,
+      "completed_monotonic": 185299.829946835,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 118.829445,
+      "system_cpu": 0.15201199999999998,
+      "max_rss_kb": 60028,
+      "wall_from_batch_release": 120.07703148401924,
+      "completed_monotonic": 185299.837594979,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 119.051921,
+      "system_cpu": 0.15615199999999999,
+      "max_rss_kb": 76104,
+      "wall_from_batch_release": 120.06225042699953,
+      "completed_monotonic": 185299.822814773,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 118.689939,
+      "system_cpu": 0.344168,
+      "max_rss_kb": 75844,
+      "wall_from_batch_release": 120.06298332900042,
+      "completed_monotonic": 185299.823547206,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 114.864587,
+      "system_cpu": 0.400406,
+      "max_rss_kb": 52148,
+      "wall_from_batch_release": 120.05487484802143,
+      "completed_monotonic": 185420.543307029,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 114.936032,
+      "system_cpu": 0.28818,
+      "max_rss_kb": 53132,
+      "wall_from_batch_release": 120.22433316201204,
+      "completed_monotonic": 185420.712764911,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 114.432088,
+      "system_cpu": 0.82449,
+      "max_rss_kb": 54212,
+      "wall_from_batch_release": 120.04380812201998,
+      "completed_monotonic": 185420.532240319,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 115.660687,
+      "system_cpu": 0.268456,
+      "max_rss_kb": 54468,
+      "wall_from_batch_release": 120.04440920200432,
+      "completed_monotonic": 185420.532841279,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 3.333744,
+      "system_cpu": 0.036236,
+      "max_rss_kb": 70992,
+      "wall_from_batch_release": 3.93449974199757,
+      "completed_monotonic": 185425.37454022,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 3.336923,
+      "system_cpu": 0.059586999999999994,
+      "max_rss_kb": 70604,
+      "wall_from_batch_release": 3.9328227780060843,
+      "completed_monotonic": 185425.372863708,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 63.125438,
+      "system_cpu": 0.068044,
+      "max_rss_kb": 70864,
+      "wall_from_batch_release": 63.72057113199844,
+      "completed_monotonic": 185485.160611805,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 4.922184,
+      "system_cpu": 0.036310999999999996,
+      "max_rss_kb": 70608,
+      "wall_from_batch_release": 5.532953568006633,
+      "completed_monotonic": 185426.972994295,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 60.387475,
+      "system_cpu": 0.18040399999999998,
+      "max_rss_kb": 59128,
+      "wall_from_batch_release": 61.18478645099094,
+      "completed_monotonic": 185547.092411584,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 60.236276,
+      "system_cpu": 0.11209699999999999,
+      "max_rss_kb": 59384,
+      "wall_from_batch_release": 60.8871107060113,
+      "completed_monotonic": 185546.794735965,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 57.121825,
+      "system_cpu": 0.060059999999999995,
+      "max_rss_kb": 76096,
+      "wall_from_batch_release": 57.646884863992454,
+      "completed_monotonic": 185543.55450983,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 56.897796,
+      "system_cpu": 0.072073,
+      "max_rss_kb": 75840,
+      "wall_from_batch_release": 57.45827043798636,
+      "completed_monotonic": 185543.365895537,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 12.08203,
+      "system_cpu": 0.067943,
+      "max_rss_kb": 49476,
+      "wall_from_batch_release": 12.713287171995034,
+      "completed_monotonic": 185560.359992152,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 12.13525,
+      "system_cpu": 0.032114,
+      "max_rss_kb": 49844,
+      "wall_from_batch_release": 12.728206141007831,
+      "completed_monotonic": 185560.374910908,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 12.530711,
+      "system_cpu": 0.052244,
+      "max_rss_kb": 54336,
+      "wall_from_batch_release": 13.18304278299911,
+      "completed_monotonic": 185560.829747594,
+      "no_retry": true
+    },
+    {
+      "exit_code": 0,
+      "user_cpu": 12.591352,
+      "system_cpu": 0.116141,
+      "max_rss_kb": 53952,
+      "wall_from_batch_release": 13.32432018101099,
+      "completed_monotonic": 185560.97102495,
+      "no_retry": true
+    }
+  ]
+}

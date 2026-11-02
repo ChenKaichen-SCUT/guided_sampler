@@ -1,0 +1,6 @@
+{
+  "config_sha256": "666995abaaa086a97b0fff7ca8393e26b79f46b4915bc46bd33eed6c11baf5e6",
+  "freeze_sha256": "8270d0f26ec67f0637cc9270c4bd9e14a379c70cd27c5a1a1f50ca5fc5d7728b",
+  "commit": "422488b512e3df4c63a66395f55ca03d5c3c1304",
+  "expected_attempts": 24
+}

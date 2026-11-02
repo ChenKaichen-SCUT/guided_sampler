@@ -11,6 +11,8 @@ def main():
     for v,files in f['sources'].items():
         tree=ROOT/f'worktrees/round6_{v}' if stage=='G2' else ROOT/f'worktrees/round6_candidate_{v}'
         assert digest(tree/'HighDiv/highdiv')==f['validation'][v]['binary_sha256']
+        lib=ROOT/f'deps/round6_{v}/lib/libz3.so' if stage=='G2' else ROOT/f'deps/round6_candidate_{v}/lib/libz3.so'
+        assert digest(lib)==f['validation'][v]['library_sha256']
         for p,h in files.items():assert digest(tree/p)==h['sha256'],(v,p)
     summary=read(out/'summary.json');assert summary['passed'] and len(summary['sessions'])==len(jobs)
     evidence=[];total_calls=total_yields=total_formal=0
@@ -20,6 +22,9 @@ def main():
         assert a['binary_sha256']==f['validation']['release']['binary_sha256'] and a['library_sha256']==f['validation']['release']['library_sha256']
         assert digest(ROOT/j['input'])==j['input_sha256'];assert t['exit_code']==0
         worker=read(BASE/(stage+'_batches')/str(j['batch'])/(j['id']+'.worker.json'))
+        ready=read(BASE/(stage+'_batches')/str(j['batch'])/(j['id']+'.ready.json'));gate=read(BASE/(stage+'_batches')/str(j['batch'])/'RELEASE.json')
+        assert ready['affinity']==[j['cpu']] and ready['monotonic_ready']<=gate['monotonic']
+        assert len(set(gate['cpu_slots']))==len(gate['cpu_slots'])==(4 if stage=='G2' else 3)
         assert not any('MAX_QUERIES' in k or 'QUERY_CAP' in k or 'MAX_CDCL' in k for k in worker['environment'])
         assert s['wall_limit']==120 and s['cdcl_query_limit']==0
         assert s['sample_limit']==j['model_limit']
@@ -33,10 +38,12 @@ def main():
         native=rows(d/'ccss_guard.jsonl');host=rows(d/'ccss_guard_host.jsonl');queries=rows(d/'queries.jsonl');qmap={q['query']:q for q in queries};hostmap={r['source_query_id']:r for r in host}
         assert len(hostmap)==len(host)==sum(q['source']=='CCSS' for q in queries)
         assert len({n['call_id'] for n in native})==len(native)
+        final_native={n['source_query_id']:n for n in native}
         guarded=stage=='candidate' or j['mode'].endswith('G')
         for n in native:
             h=hostmap[n['source_query_id']];q=qmap[n['source_query_id']]
-            assert h['native_call_id']==n['call_id'] and h['native_exit_reason']==n['exit_reason'] and q['source']=='CCSS'
+            assert q['source']=='CCSS'
+            assert h['native_call_id']==final_native[n['source_query_id']]['call_id'] and h['native_exit_reason']==final_native[n['source_query_id']]['exit_reason']
             assert n['guard_enabled']==guarded and n['stagnation_limit']==65536
             assert n['consumed_map_sha256']==sha_text(json.dumps(n['consumed_map'],sort_keys=True,separators=(',',':'),ensure_ascii=False))
             assert all(len(n[k])==64 for k in ['map_sha256','rng_before_sha256','rng_after_sha256'])
@@ -46,9 +53,13 @@ def main():
             if n['exit_reason']=='ccss_stagnation_yield':
                 assert guarded and n['last_global_best']>0 and not n['model_produced']
                 assert n['exit_step_exact']-n['last_improvement_step']==65536
-                assert q['result']=='unknown' and not any(r['query']==q['query'] for r in rr)
+                if n is final_native[n['source_query_id']]:assert q['result']=='unknown' and not any(r['query']==q['query'] for r in rr)
             if n['exit_reason']=='sat':assert n['last_global_best']==0 and n['model_produced']
-            assert n['exit_reason'] not in ['exception','arith_unknown'],'Native failure requires explicit No-Go review'
+            if n['exit_reason'] in ['exception','arith_unknown']:
+                review=read(BASE/'guard_analysis/presearch_exception_review.json');assert review['passed']
+                assert n['exit_reason']=='exception' and n['exception_text']=='Input string is not a valid number'
+                assert not n['search_started'] and not n['model_produced'] and q['result']=='unknown'
+                assert not any(r['query']==q['query'] for r in rr)
         for q in queries:
             if q['source']=='CDCL':assert q['assumptions']==[]
             g=q['guidance']

@@ -1,0 +1,24 @@
+{
+  "rows": [
+    {
+      "mode": "Full",
+      "A_disabled_reason": "guidance_exposure_limit",
+      "A_exposure": 45.010625399999974,
+      "exposure_limit_queries": [
+        141
+      ],
+      "guard_yields": 0
+    },
+    {
+      "mode": "FullG",
+      "A_disabled_reason": "guidance_exposure_limit",
+      "A_exposure": 45.014900264999994,
+      "exposure_limit_queries": [
+        143
+      ],
+      "guard_yields": 0
+    }
+  ],
+  "conclusion": "Both configurations had no search-entry or guard yield on SMT_real. Exposure protection crossed the fixed45-second boundary at q141 vs q143. Their final coverage difference must not be attributed causally to a guard trigger.",
+  "interpretation": "Direct logged threshold boundaries; detailed causal decomposition of subsequent model divergence remains untested."
+}
