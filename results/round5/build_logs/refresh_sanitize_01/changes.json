@@ -1,0 +1,5 @@
+[
+  "z3/src/sampler/sampler.cpp",
+  "z3/src/sampler/ccss_probe.inc",
+  "z3/src/smt/a_context.inc"
+]

@@ -1,0 +1,678 @@
+--- a/z3/src/ast/ast.cpp
++++ b/z3/src/ast/ast.cpp
+@@ -1,3 +1,4 @@
++#include "util/r5_exchange_trace.hpp"
+ /*++
+ Copyright (c) 2006 Microsoft Corporation
+ 
+@@ -1370,6 +1371,7 @@
+ 
+ 
+ ast_manager::~ast_manager() {
++    r5::destroy(this);
+     SASSERT(is_format_manager() || !m_family_manager.has_family(symbol("format")));
+ 
+     dec_ref(m_bool_sort);
+--- /dev/null
++++ b/z3/src/sampler/ccss_probe.inc
+@@ -0,0 +1,40 @@
++// Definitions compiled into the actual native sampler translation unit.
++static r5::J r5_array(Array const* a){r5::J j=r5::J::array();if(a)for(int i=0;i<a->size();++i)j.push_back(a->element_at(i));return j;}
++static r5::J r5_numbers(std::vector<__int128_t> const& xs){r5::J j=r5::J::array();for(auto x:xs)j.push_back(r5::decimal(x));return j;}
++static r5::J r5_variable(variable const& v,bool initialized){
++ r5::J j={{"name",v.var_name},{"is_lia",v.is_lia},{"deleted",v.is_delete},{"low",r5::decimal(v.low_bound)},{"upper",r5::decimal(v.upper_bound)},{"s_low",std::to_string(v.s_lower_bound)},{"s_upper",std::to_string(v.s_upper_bound)},{"in_equal",v.is_in_equal},{"equal_closure",v.in_equal_closure},{"occs_closure",v.in_occs_closure},{"occs",v.occs},{"literals",v.literals},{"literal_clause",v.literal_clause},{"literal_coff",r5_numbers(v.literal_coff)},{"clause_idxs",v.clause_idxs},{"up_bool",v.up_bool}};
++ if(initialized&&!v.is_lia)j["score"]=r5::decimal(v.score);return j;
++}
++static r5::J r5_clause(clause const& c,bool initialized){r5::J j={{"literals",c.literals},{"lia",c.lia_literals},{"bool",c.bool_literals},{"weight",c.weight},{"deleted",c.is_delete}};if(initialized){j["sat_count"]=c.sat_count;}return j;}
++r5::J ls_sampler::r5_state(bool initialized)const {
++ r5::J vars=r5::J::array(),tmp=r5::J::array(),resolution=r5::J::array(),lits=r5::J::array(),clauses=r5::J::array(),stack=r5::J::array(),intervals=r5::J::array();
++ for(auto const& v:_vars)vars.push_back(r5_variable(v,initialized));
++ for(auto const& v:_tmp_vars)tmp.push_back(r5_variable(v,false));
++ for(auto const& v:_resolution_vars)resolution.push_back(r5_variable(v,false));
++ for(auto const& l:_lits){r5::J j={{"index",l.lits_index},{"lia",l.is_lia_lit},{"equal",l.is_equal},{"equal_pair",l.equal_pair}};if(l.lits_index!=0){j["key"]=r5::decimal(l.key);j["pos_var"]=l.pos_coff_var_idx;j["neg_var"]=l.neg_coff_var_idx;j["pos"]=r5_numbers(l.pos_coff);j["neg"]=r5_numbers(l.neg_coff);if(initialized||!l.is_lia_lit)j["delta"]=r5::decimal(l.delta);}lits.push_back(j);}
++ for(auto const& c:_clauses)clauses.push_back(r5_clause(c,initialized));
++ auto copy=_reconstruct_stack;while(!copy.empty()){stack.push_back(r5_clause(copy.top(),false));copy.pop();}
++ for(auto const& i:_vars_initialization_intervals)intervals.push_back({std::to_string(i.start),std::to_string(i.end)});
++ r5::J j={{"vars",vars},{"tmp_vars",tmp},{"resolution_vars",resolution},{"lits",lits},{"clauses",clauses},{"reconstruct_stack",stack},{"intervals",intervals},{"pair_x",r5_array(pair_x)},{"pair_y",r5_array(pair_y)},{"pair_x_value",r5_numbers(pair_x_value)},{"pair_y_value",r5_numbers(pair_y_value)},{"bound_lits",_bound_lits},{"lit_appear",_lit_appear},{"bool_var_vec",_bool_var_vec},{"pre_value1",_pre_value_1},{"pre_value2",_pre_value_2},{"name2var",_name2var},{"name2tmp",_name2tmp_var},{"name2resolution",_name2resolution_var},{"num_vars",_num_vars},{"num_lits",_num_lits},{"num_clauses",_num_clauses},{"num_opt",_num_opt},{"use_interval_move",_use_interval_move},{"use_pbs",use_pbs},{"is_pb",is_pb},{"is_idl",is_idl},{"use_swap_small_weight",use_swap_from_from_small_weight},{"best_cost",_best_found_cost},{"rng",r5::rng(mt)}};
++ j["max_step"]=_max_step;j["smooth_probability"]=smooth_probability;j["additional_len"]=_additional_len;j["num_bool_lits"]=_num_bool_lits;bool has_lia_literals=false;for(auto const& v:_vars)has_lia_literals|=v.is_lia&&!v.literals.empty();j["lia_var_with_most_lits"]=has_lia_literals?r5::J(_lia_var_idx_with_most_lits):r5::J("not_initialized_not_used");j["consumed_map_copy"]=last_cdcl_model;
++ if(initialized){j["solution"]=r5_numbers(_solution);j["unsat"]=r5_array(_unsat_clauses);j["unsat_with_bool"]=r5_array(_contain_bool_unsat_clauses);j["sat_with_false"]=r5_array(_sat_clause_with_false_literal);j["tabulist"]=_tabulist;j["last_move"]=_last_move;j["is_overflow"]=is_overflow;j["lit_unsat"]=_lit_in_unsat_clause_num;j["bool_lit_unsat"]=_bool_lit_in_unsat_clause_num;j["operation_var_indices"]=_operation_var_idx_vec;j["operation_bool_indices"]=_operation_var_idx_bool_vec;j["operation_changes"]=r5_numbers(_operation_change_value_vec);j["updated_literals"]=_updated_literals;j["chosen_bool_vars"]=_is_chosen_bool_var;j["no_improve_bool"]=_no_improve_cnt_bool;j["no_improve_lia"]=_no_improve_cnt_lia;j["best_restart"]=best_found_this_restart;}
++ return j;
++}
++void ls_sampler::r5_begin_replay(r5::J const& recipe,std::string const& id,bool initialize_only){
++ if(!m_r5)m_r5.reset(new r5::Probe(recipe.at("seed"),recipe.at("cutoff_seconds"),mt));m_r5->begin_replay(id,initialize_only);
++ if(r5::rng(mt)!=recipe.at("R0").get<std::string>())throw std::runtime_error("R0 constructor mismatch");
++ _use_interval_move=recipe.at("use_interval_move").get<bool>();
++}
++void ls_sampler::r5_first_initialize(){
++ if(!m_r5||!m_r5->active)return;++m_r5->init_count;
++ if(!m_r5->first_initialized){m_r5->first_initialized=true;m_r5->save("initial_values",m_r5->recipe.value("initial_values",r5::J::array()));m_r5->save("R3",r5_state(true));if(m_r5->initialize_only){m_r5->exit="initialization_only";throw r5::InitializationOnly();}}
++}
++void ls_sampler::r5_point(char const* kind){
++ if(!m_r5||!m_r5->active)return;
++ m_r5->point({{"kind",kind},{"step",_step},{"outer_step",_outer_layer_step},{"unsat",_unsat_clauses->size()},{"bool_unsat",_contain_bool_unsat_clauses->size()},{"best",_best_found_cost},{"bool_mode",is_in_bool_search},{"overflow_count",_overflow_cnt}});
++}
++r5::J ls_sampler::r5_solution(){
++ r5::J values=r5::J::object();
++ for(auto const& kv:_name2tmp_var){std::string name=kv.first,value;print_var_solution(name,value);values[name]=value;}
++ return {{"native_check_solution",check_solution()},{"unsat_count",_unsat_clauses->size()},{"overflow",is_overflow},{"tmp_variable_values",values},{"state",r5_state(true)},{"validation_scope","ccss_solution_only_until_saved_converter_restoration_validated"}};
++}
+--- a/z3/src/sampler/sampler.cpp
++++ b/z3/src/sampler/sampler.cpp
+@@ -5,6 +5,7 @@
+ #include <sstream>
+ 
+ namespace sampler {
++#include "ccss_probe.inc"
+ 
+ std::string processNegNumber(const std::string& input) {
+     std::regex pattern(R"(\(\s*(-\s*\d+)\s*\))");
+@@ -156,6 +157,7 @@
+     \brief build lit to _lits[lit_index]; build var to _tmp_vars[]
+ */
+ void ls_sampler::build_lits(std::string& in_string) {
++    if(m_r5&&m_r5->active)m_r5->recipe["build_lits"].push_back(in_string);
+     auto numeral = [](const std::string& text) {
+         const auto value = string_to_int128(text);
+         // max_int is also the sentinel used by bound preprocessing. Values
+@@ -272,6 +274,7 @@
+ }
+ 
+ void ls_sampler::calc_var_intervals() {
++    r5::PhaseTimer interval_timer(m_r5.get(),"calc_var_intervals_nested_in_build");
+     // Section 5.1: model-feasible intervals for high-frequency variables,
+     // their complements for general variables. Equality variables start at zero.
+     _vars_initialization_intervals.assign(_vars.size(), Interval(1, 0));
+@@ -279,12 +282,12 @@
+     std::vector<bool> has_model_value(_vars.size(), false);
+     auto model_value = [&](const std::string& name, __int128_t& value) {
+         auto found = last_cdcl_model.find(name);
+-        if (found == last_cdcl_model.end()) return false;
++        if (found == last_cdcl_model.end()){if(m_r5)m_r5->read(name,"missing",nullptr);return false;}
+         try {
+             value = string_to_int128(processNegNumber(found->second));
+-            return true;
+-        } catch (const std::exception&) {
+-            return false;
++            if(m_r5)m_r5->read(name,"present",found->second,r5::decimal(value));return true;
++        } catch (const std::exception& error) {
++            if(m_r5)m_r5->read(name,dynamic_cast<std::out_of_range const*>(&error)?"128bit_overflow":"parse_error",found->second,error.what());return false;
+         }
+     };
+     for (size_t v_idx = 0; v_idx < _vars.size(); ++v_idx) {
+@@ -305,6 +308,7 @@
+         }
+     }
+ 
++    if(m_r5&&m_r5->active){m_r5->interval_rows=r5::J::array();for(size_t i=0;i<_vars.size();++i){auto j=r5_variable(_vars[i],false);j["index"]=i;j["has_model_value"]=bool(has_model_value[i]);j["model_value"]=has_model_value[i]?r5::J(r5::decimal(cdcl_solution[i])):r5::J(nullptr);j["branch"]="not_processed";j["literal_intervals"]=r5::J::array();m_r5->interval_rows.push_back(j);}}
+     // Evaluate each inequality once. Missing or overflowing models cannot guide
+     // initialization; in particular, missing integers are not invented as zeros.
+     std::vector<__int128_t> deltas(_lits.size());
+@@ -324,11 +328,13 @@
+         for (size_t j = 0; j < l.neg_coff.size(); ++j) add_term(l.neg_coff_var_idx[j], -l.neg_coff[j]);
+         deltas[l_idx] = delta;
+         valid[l_idx] = known;
++        if(m_r5&&m_r5->active)m_r5->recipe["inequality_evaluation"].push_back({{"literal",l_idx},{"valid",known},{"computed_delta",r5::decimal(delta)}});
+     }
+ 
+     for (size_t v_idx = 0; v_idx < _vars.size(); ++v_idx) {
+         const auto& var = _vars[v_idx];
+-        if (!var.is_lia || var.in_equal_closure || !has_model_value[v_idx]) continue;
++        if(m_r5&&m_r5->active){unsigned ok=0,unknown=0;for(auto lit:var.literals){auto idx=std::abs(lit);if(_lits[idx].is_lia_lit&&!_lits[idx].is_equal){ok+=bool(valid[idx]);unknown+=!valid[idx];}}m_r5->interval_rows[v_idx]["valid_inequality_occurrences"]=ok;m_r5->interval_rows[v_idx]["unknown_or_overflow_inequality_occurrences"]=unknown;}
++        if (!var.is_lia || var.in_equal_closure || !has_model_value[v_idx]) {if(m_r5&&m_r5->active)m_r5->interval_rows[v_idx]["branch"]=!var.is_lia?"bool":var.in_equal_closure?"equal_closure":"missing_or_invalid_model";continue;}
+         const Interval domain = initialization_domain(var);
+         if (domain.start > domain.end) continue;
+         std::map<int, Interval> clause_intervals;
+@@ -352,6 +358,7 @@
+                 interval = bound > INT64_MAX ? Interval(1, 0) :
+                     Interval(static_cast<int64_t>(std::max<__int128_t>(bound, INT64_MIN)), INT64_MAX);
+             }
++            if(m_r5&&m_r5->active)m_r5->interval_rows[v_idx]["literal_intervals"].push_back({{"signed_literal",signed_idx},{"clause",var.literal_clause[i]},{"coefficient",r5::decimal(coefficient)},{"numerator",r5::decimal(numerator)},{"delta",r5::decimal(deltas[l_idx])},{"interval",{std::to_string(interval.start),std::to_string(interval.end)}}});
+             auto inserted = clause_intervals.emplace(var.literal_clause[i], interval);
+             if (!inserted.second) {
+                 // All retained literals are true at the same model value, so
+@@ -364,7 +371,7 @@
+                 }
+             }
+         }
+-        if (clause_intervals.empty()) continue;
++        if (clause_intervals.empty()){if(m_r5&&m_r5->active)m_r5->interval_rows[v_idx]["branch"]="no_usable_inequality";continue;}
+         Interval feasible;
+         for (const auto& entry : clause_intervals) {
+             feasible.start = std::max(feasible.start, entry.second.start);
+@@ -376,16 +383,19 @@
+         } else {
+             _vars_initialization_intervals[v_idx] = random_complement(feasible, mt, domain);
+         }
++        if(m_r5&&m_r5->active){auto& j=m_r5->interval_rows[v_idx];j["branch"]=var.in_occs_closure?"feasible":"complement";j["domain"]={std::to_string(domain.start),std::to_string(domain.end)};j["feasible"]={std::to_string(feasible.start),std::to_string(feasible.end)};j["result"]={std::to_string(_vars_initialization_intervals[v_idx].start),std::to_string(_vars_initialization_intervals[v_idx].end)};j["clause_intervals"]=r5::J::array();for(auto const& kv:clause_intervals)j["clause_intervals"].push_back({kv.first,std::to_string(kv.second.start),std::to_string(kv.second.end)});}
+     }
+ }
+ 
+ void ls_sampler::initialize() {
++    r5::PhaseTimer initialize_timer(m_r5.get(),"initialize_nested_in_search");
+     clear_prev_data();
+     construct_solution_score();  // Initializing a variable to take a value
+     initialize_lit_datas();
+     initialize_clause_datas();
+     best_found_this_restart = _unsat_clauses->size();
+     update_best_solution();
++    r5_first_initialize();
+ }
+ 
+ void ls_sampler::clear_prev_data() {
+@@ -417,10 +427,13 @@
+ 
+ // construction
+ void ls_sampler::construct_solution_score() {
++    r5::PhaseTimer value_timer(m_r5.get(),"value_generation_nested_in_initialize");
++    if(m_r5&&m_r5->active&&!m_r5->first_initialized)m_r5->recipe["initial_values"]=r5::J::array();
+     for (size_t i = 0; i < _num_vars; ++i) {
+         auto& var = _vars[i];
+         if (!var.is_lia) {
+             _solution[i] = (mt() % 2 == 1) ? 1 : -1;
++            if(m_r5&&m_r5->active&&!m_r5->first_initialized)m_r5->recipe["initial_values"].push_back({{"index",i},{"branch","bool"},{"value",r5::decimal(_solution[i])}});
+             continue;
+         }
+         const Interval domain = initialization_domain(var);
+@@ -431,6 +444,7 @@
+         if (var.in_equal_closure) {
+             // Project zero onto hard bounds when preprocessing has excluded it.
+             _solution[i] = std::max(var.low_bound, std::min<__int128_t>(0, var.upper_bound));
++            if(m_r5&&m_r5->active&&!m_r5->first_initialized)m_r5->recipe["initial_values"].push_back({{"index",i},{"branch","equal_closure_projected_zero"},{"value",r5::decimal(_solution[i])}});
+             continue;
+         }
+         if (domain.start > domain.end)
+@@ -438,8 +452,10 @@
+         const auto& guided = _vars_initialization_intervals[i];
+         Interval initial(std::max(domain.start, guided.start), std::min(domain.end, guided.end));
+         // No CDCL(T) model, no usable inequality, or no legal reverse region.
++        bool r5_fallback=initial.start>initial.end;
+         if (initial.start > initial.end) initial = domain;
+         _solution[i] = random_int64_in_range(initial.start, initial.end);
++        if(m_r5&&m_r5->active&&!m_r5->first_initialized)m_r5->recipe["initial_values"].push_back({{"index",i},{"branch",r5_fallback?"empty_guided_intersection_fallback_domain":"guided_interval"},{"domain",{std::to_string(domain.start),std::to_string(domain.end)}},{"initial",{std::to_string(initial.start),std::to_string(initial.end)}},{"value",r5::decimal(_solution[i])}});
+         TRACE("sampler",
+               tout << "is occs closure var: " << var.in_occs_closure << "\n";
+               tout << "initialization interval: [" << initial.start << ", " << initial.end << "]\n";
+@@ -464,11 +480,13 @@
+         improve = true;
+         _best_found_cost = _unsat_clauses->size();
+     }
++    if(improve&&m_r5&&m_r5->active&&m_r5->first_initialized)r5_point("best_improved");
+     return improve;
+ }
+ 
+ // initialize the delta of each literal by delta_lit operation
+ void ls_sampler::initialize_lit_datas() {
++    r5::PhaseTimer literal_timer(m_r5.get(),"literal_statistics_nested_in_initialize");
+     for (uint64_t i = 0; i < _num_lits; i++) {
+         if (_lits[i].lits_index != 0 && _lits[i].is_lia_lit) {
+             _lits[i].delta = delta_lit(_lits[i]);
+@@ -478,6 +496,7 @@
+ 
+ // set the sat num of each clause, and sat/unsat a clause
+ void ls_sampler::initialize_clause_datas() {
++    r5::PhaseTimer clause_timer(m_r5.get(),"clause_statistics_nested_in_initialize");
+     _lit_in_unsat_clause_num = 0;
+     _bool_lit_in_unsat_clause_num = 0;
+     __int128_t pos_delta;
+@@ -990,6 +1009,8 @@
+ 
+ // Constructing constraint instances
+ void ls_sampler::build_instance(std::vector<std::vector<int>>& clause_vec, const std::unordered_map<std::string, std::string>& model) {
++    r5::PhaseTimer build_timer(m_r5.get(),"build_instance_inclusive");
++    if(m_r5&&m_r5->active){m_r5->recipe["clause_vec"]=clause_vec;m_r5->recipe["use_interval_move"]=_use_interval_move;m_r5->save("recipe",m_r5->recipe);}
+     last_cdcl_model = model;
+ 
+     // iterate over all clauses
+@@ -1128,7 +1149,9 @@
+ 
+     build_occs_closures();
+ 
++    if(m_r5&&m_r5->active)m_r5->save("R1",r5_state(false));
+     calc_var_intervals();
++    if(m_r5&&m_r5->active){m_r5->save("R2",r5_state(false));m_r5->save("intervals",{{"reads",m_r5->reads},{"variables",m_r5->interval_rows},{"inequalities",m_r5->recipe.value("inequality_evaluation",r5::J::array())}});}
+ 
+ #ifdef VERBOSE
+     std::cout << "num euqal_cnt(==): " << _eq_form_cnt << "\n";
+@@ -1350,6 +1373,7 @@
+ }
+ 
+ bool ls_sampler::ls_sampling() {
++    r5::PhaseTimer search_timer(m_r5.get(),"ls_sampling_inclusive");
+     _total_start = std::chrono::steady_clock::now();
+ 
+     SAMPLER_TRACE(
+@@ -1382,6 +1406,7 @@
+ }
+ 
+ bool ls_sampler::search() {
++    if(m_r5&&m_r5->active)m_r5->search_started=!m_r5->initialize_only;
+     initialize();
+ 
+ #ifdef DEBUG
+@@ -1398,7 +1423,8 @@
+     __int128_t change_value = 0;
+     _outer_layer_step = 1;
+     for (_step = 1; _step < _max_step; ++_step) {
+-        if (_step % 1000 == 0 && TimeElapsed_total() > _cutoff) break;
++        if(m_r5&&m_r5->active&&(_step&(_step-1))==0)r5_point("power_of_two_step");
++        if (_step % 1000 == 0 && TimeElapsed_total() > _cutoff){if(m_r5)m_r5->exit="native_cutoff";break;}
+         if (_overflow_cnt > 10 && _use_interval_move) {
+ #ifdef VERBOSE
+             std::cout << "restart(overflow)...\n";
+@@ -1428,6 +1454,9 @@
+ #ifdef VERBOSE
+             std::cout << "_overflow_cnt = " << _overflow_cnt << "\n";
+ #endif
++            r5::PhaseTimer reconstruction_timer(m_r5.get(),"reconstruction_nested_in_search");
++            if(m_r5)m_r5->exit="first_satisfying_assignment";
++            r5_point("first_solution_before_reconstruction");
+             choose_value_for_pair();
+             up_bool_vars();
+             return !is_overflow;
+@@ -1605,12 +1634,14 @@
+ }
+ 
+ void ls_sampler::enter_lia_mode() {
++    if(m_r5)m_r5->count("enter_lia_mode");
+     _best_found_hard_cost_this_lia = _unsat_clauses->size();
+     _no_improve_cnt_lia = 0;
+     is_in_bool_search = false;
+ }
+ 
+ void ls_sampler::enter_bool_mode() {
++    if(m_r5)m_r5->count("enter_bool_mode");
+     _best_found_hard_cost_this_bool = _unsat_clauses->size();
+     _no_improve_cnt_bool = 0;
+     is_in_bool_search = true;
+@@ -2283,6 +2314,7 @@
+ 
+ // random walk
+ void ls_sampler::update_clause_weight() {
++    if(m_r5)m_r5->count("update_clause_weight");
+     for (int i = 0; i < _unsat_clauses->size(); i++) {
+         clause* unsat_cl = &(_clauses[_unsat_clauses->element_at(i)]);
+         unsat_cl->weight++;
+@@ -2305,6 +2337,7 @@
+ }
+ 
+ void ls_sampler::random_walk() {
++    if(m_r5)m_r5->count("random_walk");
+     int clause_idx, operation_idx, var_idx, operation_direction;
+     __int128_t change_value;  // measure of change
+     __int128_t best_subscore = max_int;
+--- a/z3/src/sampler/sampler.h
++++ b/z3/src/sampler/sampler.h
+@@ -1,3 +1,4 @@
++#include "util/r5_replay_recipe.hpp"
+ #pragma once
+ #include <signal.h>
+ #include <string.h>
+@@ -89,6 +90,12 @@
+ 
+ class ls_sampler {
+    public:
++    std::unique_ptr<r5::Probe> m_r5;
++    r5::J r5_state(bool initialized)const;
++    void r5_begin_replay(r5::J const&,std::string const&,bool);
++    void r5_first_initialize();
++    void r5_point(char const*);
++    r5::J r5_solution();
+     // debug
+     size_t _num_equal_closure_vars = 0;
+     size_t _num_occs_closure_vars = 0;
+@@ -213,6 +220,7 @@
+           smooth_probability(3),
+           _cutoff(timeout) {
+         mt.seed(seed);
++        if(r5::enabled())m_r5.reset(new r5::Probe(seed,timeout,mt));
+     }
+     ls_sampler(const ls_sampler&) = delete;
+     ls_sampler& operator=(const ls_sampler&) = delete;
+@@ -226,6 +234,7 @@
+     }
+     void make_space();
+     void make_lits_space(uint64_t num_lits) {
++        if(m_r5&&m_r5->active)m_r5->recipe["make_lits_space"]=num_lits;
+         _num_lits = num_lits;
+         _lits.resize(num_lits + _additional_len);
+     };
+--- a/z3/src/smt/a_context.inc
++++ b/z3/src/smt/a_context.inc
+@@ -49,13 +49,14 @@
+  auto start=a2::Clock::now();struct cost {a2::Run& r;a2::Clock::time_point t;~cost(){double x=a2::seconds(t);r.direct_seconds+=x;r.hot_seconds+=x;if(r.direct_seconds>=r.explicit_remaining)r.direct_disabled=true;}} charge{r,start};
+  r.count(m_A_call,"native_ordinary_seen");++r.ordinal;
+  if(r.ordinal>64){r.count(m_A_call,"outside_decision_window");return false;}r.count(m_A_call,"within_decision_window");
+- if(get_assignment(native_var)!=l_undef){r.count(m_A_call,"already_propagated");return false;}
+- if(r.direct_seconds>=r.explicit_remaining){r.count(m_A_call,"cost_rejected");return false;}
++ a2::r5::DecisionAudit audit(r,m_A_call,native_var,native_phase);
++ if(get_assignment(native_var)!=l_undef){r.count(m_A_call,"already_propagated");audit.reason("already_propagated");return false;}
++ if(r.direct_seconds>=r.explicit_remaining){r.count(m_A_call,"cost_rejected");audit.reason("cost_rejected");return false;}
+  a2::Work work;work.deadline=std::min(start+std::chrono::milliseconds(10),start+std::chrono::duration_cast<a2::Clock::duration>(std::chrono::duration<double>(std::max(0.0,r.explicit_remaining-r.direct_seconds))));
+  expr* e=bool_var2expr(native_var);a2::InternalView view(m);auto it=m_A_data->cache.find(e);
+  if(it==m_A_data->cache.end()){auto n=a2::canonical(view,e,work);m_A_data->refs.push_back(e);it=m_A_data->cache.emplace(e,std::move(n)).first;auto& c=r.call(m_A_call)["normalized_atoms"];c=c.get<unsigned>()+1;}
+  auto const& n=it->second;
+- if(!n.complete){r.count(m_A_call,"unsupported_mapping");return false;}
++ if(!n.complete){r.count(m_A_call,"unsupported_mapping");audit.reason("unsupported_mapping");return false;}
+  std::string ref_reason;auto ref=a2::r4::evaluate_reference_phase(view,e,q,work,ref_reason);
+  if(!ref)r.count(m_A_call,ref_reason.c_str());else r.count(m_A_call,"reference_available");
+  a2::r4::PhaseEvidence evidence;auto found=r.index->entries.find(n.key);bool mapped=found!=r.index->entries.end(),exact=mapped&&found->second.original_exact==n.exact;
+@@ -65,9 +66,12 @@
+  if(!evidence.complete)r.count(m_A_call,"scoring_incomplete");
+  bool active=evidence.support[0]||evidence.support[1]||evidence.block[0]||evidence.block[1];r.count(m_A_call,active?"has_current_demand":"no_active_demand");
+  if(mapped&&!n.mapping_rule.empty()){r.count(m_A_call,"new_rule_matched");r.count(m_A_call,r.version?"new_rule_after_first_model":"new_rule_version_zero");if(active)r.count(m_A_call,"new_rule_single_sided_demand");}
+- auto best=evidence.best();std::optional<bool> coverage_phase=best?std::optional<bool>(*best!=n.negated):std::nullopt;
++ auto raw_best=evidence.best();
++ auto policy=q.policy==a2::r4::Policy::Coverage?a2::r5::CoveragePolicy::Full:q.policy==a2::r4::Policy::SupportOnly?a2::r5::CoveragePolicy::SupportOnly:a2::r5::CoveragePolicy::ReferenceOnly;
++ auto choice=a2::r5::choose_coverage(evidence,policy);
++ auto best=choice?std::optional<bool>(choice->phase):std::nullopt;std::optional<bool> coverage_phase=raw_best?std::optional<bool>(*raw_best!=n.negated):std::nullopt;
+  char const* source="native";bool suggested=native_phase,coverage=false;std::vector<a2::Support> masks;std::vector<std::string> new_dedup;
+- if(q.policy==a2::r4::Policy::Coverage&&best){
++ if(best){
+   if(r.suggestions>=4)r.count(m_A_call,"quota_exhausted");
+   else {
+    bool avoid=evidence.support[0]==evidence.support[1];source=avoid?"avoid_direct_blocker":"coverage_support";
+@@ -77,6 +81,16 @@
+   }
+  }
+  std::string reference_key=std::to_string(n.key.size())+":"+n.key+":"+std::to_string(ref.value_or(false)!=n.negated);
++
++ if(audit.enabled){
++  auto candidate=raw_best?a2::r4::advice_targets(evidence,*raw_best,evidence.support[0]==evidence.support[1]):a2::r4::Masks{};unsigned untried=0;auto raw_source=evidence.support[0]==evidence.support[1]?"avoid_direct_blocker":"coverage_support";a2::Json audit_targets=a2::Json::array();
++  for(auto const& kv:candidate)for(unsigned d=0;d<2;++d){uint64_t bits=d?kv.second.first:kv.second.second;while(bits){unsigned bit=__builtin_ctzll(bits);bits&=bits-1;auto key=a2::r4::advice_identity(n.key,*raw_best,raw_source,kv.first,bit,d);bool seen=r.preference_attempted.count(key);untried+=!seen;if(audit_targets.size()<4096)audit_targets.push_back({{"node",kv.first},{"bit",bit},{"desired",d},{"already_attempted",seen}});else audit.data["target_buffer_overflow"]=true;}}
++  bool fallback=ref&&!r.reference_attempted.count(reference_key)?*ref:native_phase;
++  bool would_change=raw_best&&((*raw_best!=n.negated)!=native_phase);
++  bool exposure_ok=!would_change||!(r.sticky.load()||a2::seconds(r.begin)>=r.exposure_remaining);
++  audit.data.update({{"canonical_key",n.key},{"negated",n.negated},{"support_false",evidence.support[n.negated]},{"support_true",evidence.support[!n.negated]},{"block_false",evidence.block[n.negated]},{"block_true",evidence.block[!n.negated]},{"evidence_complete",evidence.complete},{"reference_phase",ref?a2::Json(*ref):a2::Json(nullptr)},{"raw_preferred_kind",raw_best?a2::Json(raw_source):a2::Json(nullptr)},{"raw_preferred_phase",raw_best?a2::Json(*raw_best!=n.negated):a2::Json(nullptr)},{"unattempted_demand_count",untried},{"local_fallback_phase",fallback},{"unassigned",true},{"exposure_guard_at_audit",exposure_ok},{"cost_guard_at_audit",r.direct_seconds+a2::seconds(start)<r.explicit_remaining},{"targets",audit_targets},{"policy_suppressed_avoid",policy==a2::r5::CoveragePolicy::SupportOnly&&raw_best&&!best}});
++  audit.reason(r.suggestions>=4&&best?"quota_exhausted":raw_best&&!untried?"all_targets_attempted":!best?"policy_or_tie_fallback":"candidate");
++ }
+  if(!coverage&&ref){if(!r.reference_attempted.count(reference_key)){source="inherited_reference";suggested=*ref;}else r.count(m_A_call,"duplicate_reference_advice");}
+  a2::Json meta={{"preference_source",source},{"hard_assumptions_hash",q.hard_hash},{"reference_hash",q.reference_hash},{"hard_assumptions_count",q.hard_count},{"reference_count",q.reference_count},{"reference_source_query",q.source_query},
+   {"support_true",evidence.support[!n.negated]},{"support_false",evidence.support[n.negated]},{"block_true",evidence.block[!n.negated]},{"block_false",evidence.block[n.negated]},{"evidence_complete",evidence.complete},
+@@ -85,12 +99,13 @@
+  if(m_S){auto rec=meta;rec.update({{"decision_id",r.ordinal},{"native_var",native_var},{"native_phase",native_phase},{"canonical_key",n.key},{"canonical_negated",n.negated},{"complete",true},{"reason",ref_reason},{"mapping_atom_slot",m_S->refs.size()}});m_S->refs.push_back(e);m_S->encounters.push_back(std::move(rec));}
+  if(std::string(source)=="native")return false;
+  bool changed=suggested!=native_phase;
+- if(changed&&(r.expired()||a2::seconds(r.begin)>=r.exposure_remaining)){r.count(m_A_call,"exposure_rejected");return false;}
+- if(r.direct_seconds+a2::seconds(start)>=r.explicit_remaining){r.count(m_A_call,"cost_rejected");return false;}
++ if(changed&&(r.expired()||a2::seconds(r.begin)>=r.exposure_remaining)){r.count(m_A_call,"exposure_rejected");audit.reason("exposure_rejected");return false;}
++ if(r.direct_seconds+a2::seconds(start)>=r.explicit_remaining){r.count(m_A_call,"cost_rejected");audit.reason("cost_rejected");return false;}
+  if(coverage){++r.suggestions;for(auto const& k:new_dedup)r.preference_attempted.insert(k);r.count(m_A_call,source);}else {r.reference_attempted.insert(reference_key);r.count(m_A_call,"inherited_reference");}
+  r.count(m_A_call,suggested==native_phase?"same_phase_suggestions":"different_phase_suggestions");
+  if(changed){r.changed=true;r.count(m_A_call,"phase_overrides");r.count(m_A_call,coverage?"coverage_phase_overrides":"reference_phase_overrides");}
+  if(coverage&&!n.mapping_rule.empty()){r.count(m_A_call,"new_rule_advice");if(changed)r.count(m_A_call,"new_rule_override");}
++ if(audit.enabled){audit.data.update({{"actual_source",source},{"actual_phase",suggested},{"changed_vs_native",changed},{"changed_vs_local_fallback",suggested!=audit.data["local_fallback_phase"].get<bool>()}});audit.reason("applied");}
+  effective_phase=suggested;unsigned action=r.actions.size();a2::Action event;
+  event.query=r.query;event.backend=m_A_call;event.context=m_A_call;event.generation=m_A_generation;event.decision=r.ordinal;event.level=m_scope_lvl;event.var=native_var;event.version=r.version;
+  event.native_phase=native_phase;event.suggested_phase=suggested;event.effective_phase=suggested;event.changed=changed;event.negated=n.negated;event.extra=std::move(meta);
+--- a/z3/src/smt/smt_context.cpp
++++ b/z3/src/smt/smt_context.cpp
+@@ -3619,18 +3619,22 @@
+         if (m_fparams.m_ls_sampling) {  // sampling flag
+             if (inconsistent()) return check_finalize(l_false);
+             try {
+-                expr_bool_var_map(m_ls_sampler);
++                if(m_ls_sampler->m_r5){m_ls_sampler->m_r5->activate(r5::snapshot(&m,m.last_CDCL_model));if(m_ls_sampler->m_r5->active){auto rem=std::getenv("GUIDED_R5_REMAINING");m_ls_sampler->m_r5->recipe["session_remaining_at_host_entry"]=rem?rem:"not_recorded";}}
++                {r5::PhaseTimer literal_timer(m_ls_sampler->m_r5.get(),"expr_bool_var_map");expr_bool_var_map(m_ls_sampler);}
+                 m_ls_sampler->build_instance(clauses_vec, m.last_CDCL_model);
+                 if (m_ls_sampler->ls_sampling()) {
+                     m_model_generator->reset();
+                     m_proto_model = m_model_generator->mk_model_sampling(m_ls_sampler);
++                    if(m_ls_sampler->m_r5){m_ls_sampler->m_r5->exit="sat_delivered";m_ls_sampler->m_r5->flush();}
+                     return check_finalize(l_true);
+                 }
+-            } catch (const std::exception&) {
++            } catch (const std::exception& error) {
++                if(m_ls_sampler->m_r5){m_ls_sampler->m_r5->exit=std::string("exception:")+error.what();m_ls_sampler->m_r5->flush();}
+                 // Inputs outside the sampler's finite arithmetic domain remain
+                 // available to CDCL(T); they are not local-search models.
+                 return check_finalize(l_undef);
+             }
++            if(m_ls_sampler->m_r5)m_ls_sampler->m_r5->flush();
+             return check_finalize(l_undef);
+         } else {
+             return check_finalize(search());
+--- a/z3/src/smt/smt_context.h
++++ b/z3/src/smt/smt_context.h
+@@ -125,7 +125,9 @@
+         bool m_A_local_disabled=false,m_A_snapshot_done=false,m_A_last_exposure=false;
+         void prepare_A_search_epoch(char const*);
+         void A_binding_snapshot();
+-        bool apply_S_phase_hint(bool_var native_var,bool native_phase,bool& effective_phase);
++    public:
++    unsigned get_A_provider_id()const{return m_A_call;}
++    bool apply_S_phase_hint(bool_var native_var,bool native_phase,bool& effective_phase);
+     bool apply_A_phase_hint(bool_var native_var,bool native_phase,bool& effective_phase);
+         void A_assignment(literal,bool);
+         void A_finalize(lbool);
+--- a/z3/src/smt/smt_context_pp.cpp
++++ b/z3/src/smt/smt_context_pp.cpp
+@@ -1,3 +1,4 @@
++#include "ast/ast_smt2_pp.h"
+ /*++
+ Copyright (c) 2006 Microsoft Corporation
+ 
+@@ -460,6 +461,7 @@
+                 smt::display(ss, l_curr, m, m_bool_var2expr.data());
+             }
+             myString = ss.str();
++            if(sampler->m_r5&&sampler->m_r5->active){std::ostringstream expr;expr<<mk_ismt2_pp(n,m);sampler->m_r5->recipe["literal_identity"].push_back({{"build_order",i},{"native_bool_var",l_curr.var()},{"native_negated",l_curr.sign()},{"expression",expr.str()}});}
+             sampler->build_lits(myString);
+         }
+     }
+--- a/z3/src/smt/smt_model_generator.cpp
++++ b/z3/src/smt/smt_model_generator.cpp
+@@ -1,3 +1,4 @@
++#include "util/r5_exchange_trace.hpp"
+ /*++
+ Copyright (c) 2006 Microsoft Corporation
+ 
+@@ -384,6 +385,7 @@
+             }
+         }        
+         // send model
++        r5::batch(&m,m_context->get_A_provider_id());
+         for (enode * n : m_context->enodes()) {
+             if (is_uninterp_const(n->get_expr()) && m_context->is_relevant(n)) {
+                 func_decl * d = n->get_expr()->get_decl();
+@@ -395,6 +397,7 @@
+                 std::stringstream var_val_stream;
+                 var_val_stream << mk_pp(val, m);
+                 m.last_CDCL_model[d->get_name().str()] = var_val_stream.str();
++                if(r5::enabled()){std::ostringstream sort;sort<<mk_pp(d->get_range(),m);r5::write(&m,d->get_name().str(),var_val_stream.str(),{{"name",d->get_name().str()},{"sort",sort.str()},{"decl_id",d->get_id()},{"skolem",d->is_skolem()},{"arity",d->get_arity()},{"hidden",false},{"relevant",true}},m_context->get_A_provider_id());}
+                 // std::cout << "model value: " << d->get_name() << " = " << mk_pp(val, m) << "\n";
+             }
+         }
+--- a/z3/src/util/a_shared.hpp
++++ b/z3/src/util/a_shared.hpp
+@@ -87,4 +87,5 @@
+ };
+ struct Support {unsigned node;uint64_t one=0,zero=0;};
+ #include "phase_evidence.hpp"
++#include "coverage_policy.hpp"
+ }
+--- a/z3/src/util/a_state.h
++++ b/z3/src/util/a_state.h
+@@ -40,6 +40,7 @@
+  void count(unsigned id,char const* key){std::lock_guard<std::recursive_mutex> lock(mutex);auto& f=call(id)["funnel"];f[key]=f.value(key,0ull)+1;}
+  Json json(){std::lock_guard<std::recursive_mutex> lock(mutex);Json serialized_actions=Json::array();for(auto const& a:actions)serialized_actions.push_back(a.json());return {{"query_id",query},{"coverage_version",version},{"mode",mode},{"ordinary",ordinal},{"suggestions",suggestions},{"phase_overrides",std::count_if(actions.begin(),actions.end(),[](Action const& e){return e.changed;})},{"exposure_limit",sticky.load()},{"explicit_limit",direct_disabled.load()},{"intervened_check",changed.load()},{"requested_exposure_limit",exposure_remaining},{"actual_end",seconds(begin)},{"exposure_overrun",changed?std::max(0.0,seconds(begin)-exposure_remaining):0.0},{"direct_seconds",direct_seconds+guard_nanoseconds.load()*1e-9},{"hot_callback_seconds",hot_seconds},{"binding_seconds",binding_seconds},{"route_metadata_seconds",stage_seconds},{"diagnostic_snapshot_seconds",snapshot_seconds},{"exposure_guard_seconds",guard_nanoseconds.load()*1e-9},{"backend_calls",backends},{"actions",serialized_actions},{"stages",stages},{"lifecycle",lifecycle},{"b_encoded",0},{"b_internalized",0},{"b_selected",0},{"guidance_created_bool_vars",0},{"guidance_added_assertions",0},{"guidance_marked_relevant",0}};}
+ };
++#include "r5_decision_audit.hpp"
+ struct NonSmtLeaf {
+  std::shared_ptr<Run> run;unsigned id=0;
+  NonSmtLeaf(std::shared_ptr<Run> r,char const* name):run(std::move(r)){if(!run||run->closed)return;std::lock_guard<std::recursive_mutex> lock(run->mutex);id=run->backend(0,0,false,name);auto& b=run->call(id);b["entry_function"]="sat_tactic::operator";b["disabled_reason"]="non_smt_leaf";b["supports_A"]=false;b["ordinary_decisions"]=0;}
+--- /dev/null
++++ b/z3/src/util/coverage_policy.hpp
+@@ -0,0 +1,12 @@
++#pragma once
++// Included within a2 after PhaseEvidence. Pure policy, no state or RNG effects.
++namespace r5 {
++enum class CoveragePolicy { ReferenceOnly, Full, SupportOnly };
++struct CoverageChoice {bool phase;bool avoid;};
++inline std::optional<CoverageChoice> choose_coverage(r4::PhaseEvidence const& e,CoveragePolicy p){
++ if(p==CoveragePolicy::ReferenceOnly||!e.complete)return std::nullopt;
++ if(e.support[0]!=e.support[1])return CoverageChoice{e.support[1]>e.support[0],false};
++ if(p==CoveragePolicy::Full&&e.block[0]!=e.block[1])return CoverageChoice{e.block[1]<e.block[0],true};
++ return std::nullopt;
++}
++}
+--- a/z3/src/util/preference_types.hpp
++++ b/z3/src/util/preference_types.hpp
+@@ -1,7 +1,7 @@
+ #pragma once
+ // Included inside a2. Owned typed values only; no solver/AST objects.
+ namespace r4 {
+-enum class Policy { Legacy, Reference, Coverage };
++enum class Policy { Legacy, Reference, Coverage, SupportOnly };
+ struct QueryPreferences {
+  Policy policy=Policy::Legacy;
+  std::map<std::string,Big> reference;
+--- /dev/null
++++ b/z3/src/util/r5_decision_audit.hpp
+@@ -0,0 +1,14 @@
++#pragma once
++// Included after Run, within a2. Only bounded first-window records, no solver work.
++namespace r5 {
++struct DecisionAudit {
++ Run& run;bool enabled;Json data;
++ DecisionAudit(Run& r,unsigned backend,unsigned var,bool native):run(r),enabled(std::getenv("GUIDED_R5_DECISION_AUDIT")!=nullptr){
++  if(!enabled)return;
++  unsigned support=0,avoid=0;for(auto const& a:r.actions){auto s=a.extra.value("preference_source","");support+=s=="coverage_support";avoid+=s=="avoid_direct_blocker";}
++  data={{"kind","round5_decision_audit"},{"query_id",r.query},{"backend_call_id",backend},{"decision_id",r.ordinal},{"coverage_version",r.version},{"native_var",var},{"native_phase",native},{"quota_before",r.suggestions},{"prior_support",support},{"prior_avoid",avoid},{"reason","early_exit"},{"actual_source","native"},{"actual_phase",native},{"changed_vs_native",false},{"evidence_complete",nullptr},{"unattempted_demand_count",nullptr},{"local_fallback_phase",native}};
++ }
++ void reason(char const* s){if(enabled)data["reason"]=s;}
++ ~DecisionAudit(){if(enabled){data["quota_after"]=run.suggestions;run.event(std::move(data));}}
++};
++}
+--- /dev/null
++++ b/z3/src/util/r5_exchange_trace.hpp
+@@ -0,0 +1,35 @@
++#pragma once
++#include <nlohmann/json.hpp>
++#include <mutex>
++#include <map>
++#include <fstream>
++#include <sstream>
++#include <chrono>
++#include <cstdlib>
++#include <random>
++#include <algorithm>
++namespace r5 {
++using J=nlohmann::json;using Clock=std::chrono::steady_clock;
++inline bool enabled(){return std::getenv("GUIDED_R5_EXCHANGE_DIR")!=nullptr;}
++inline std::string directory(){auto p=std::getenv("GUIDED_R5_EXCHANGE_DIR");return p?p:"";}
++inline unsigned query(){auto p=std::getenv("GUIDED_R5_QUERY");return p?std::stoul(p):0;}
++inline std::string role(){auto p=std::getenv("GUIDED_R5_ROLE");return p?p:"unknown";}
++inline double seconds(Clock::time_point t){return std::chrono::duration<double>(Clock::now()-t).count();}
++inline std::string decimal(__int128_t v){bool neg=v<0;__uint128_t n=neg?-(__uint128_t)v:(__uint128_t)v;std::string s;do{s.push_back('0'+n%10);n/=10;}while(n);if(neg)s.push_back('-');std::reverse(s.begin(),s.end());return s;}
++inline std::string rng(std::mt19937 const& mt){std::ostringstream s;s<<mt;return s.str();}
++inline void file(std::string const& name,J const& j){if(!enabled())return;std::ofstream f(directory()+"/"+name);f<<j.dump()<<'\n';if(!f)throw std::runtime_error("round5 trace write failed");}
++inline void event(J j){if(!enabled())return;static std::mutex m;static unsigned count=0;std::lock_guard<std::mutex> lock(m);if(count>200000)return;if(count++==200000)j={{"kind","trace_overflow"}};j["external_query"]=query();j["role"]=role();std::ofstream f(directory()+"/exchange_events.jsonl",std::ios::app);f<<j.dump()<<'\n';}
++struct ManagerState {unsigned generation=0,batch=0;std::map<std::string,J> producers;};
++inline std::map<void const*,ManagerState>& managers(){static std::map<void const*,ManagerState> m;return m;}
++inline ManagerState& manager(void const* ptr){auto& s=managers()[ptr];if(!s.generation){static unsigned next=0;s.generation=++next;}return s;}
++inline void destroy(void const* ptr){if(enabled())managers().erase(ptr);}
++inline unsigned batch(void const* ptr,unsigned provider){if(!enabled())return 0;auto& s=manager(ptr);++s.batch;event({{"kind","producer_batch"},{"manager",s.generation},{"batch",s.batch},{"provider",provider}});return s.batch;}
++inline void write(void const* ptr,std::string const& name,std::string const& raw,J identity,unsigned provider){if(!enabled())return;auto& s=manager(ptr);J j={{"kind","exchange_write"},{"manager",s.generation},{"batch",s.batch},{"provider",provider},{"query",query()},{"role",role()},{"name",name},{"raw",raw},{"identity",identity},{"overwrites_recorded_key",s.producers.count(name)!=0}};s.producers[name]=j;event(j);}
++template<class Map> inline J snapshot(void const* ptr,Map const& original){
++ Map copy=original;J out={{"map",J::object()},{"iteration",J::array()},{"producers",J::object()}};
++ auto& s=manager(ptr);out["manager"]=s.generation;out["latest_batch"]=s.batch;
++ for(auto const& kv:copy){out["map"][kv.first]=kv.second;out["iteration"].push_back(kv.first);auto it=s.producers.find(kv.first);out["producers"][kv.first]=it==s.producers.end()?J(nullptr):it->second;}
++ return out;
++}
++struct Timer {double& dest;Clock::time_point t=Clock::now();explicit Timer(double& d):dest(d){}~Timer(){dest+=seconds(t);}};
++}
+--- /dev/null
++++ b/z3/src/util/r5_replay_recipe.hpp
+@@ -0,0 +1,21 @@
++#pragma once
++#include "r5_exchange_trace.hpp"
++#include <memory>
++namespace r5 {
++struct Probe {
++ bool active=false,initialize_only=false,first_initialized=false;unsigned ordinal=0,init_count=0;std::string prefix;
++ J recipe,interval_rows=J::array(),reads=J::array(),progress=J::array(),counters=J::object();
++ std::map<std::string,double> times;std::string stage="constructor",exit="not_finished";Clock::time_point entry=Clock::now();
++ unsigned long long rows_dropped=0;bool search_started=false;
++ Probe(unsigned seed,unsigned cutoff,std::mt19937 const& mt):recipe{{"format",1},{"seed",seed},{"cutoff_seconds",cutoff},{"R0",rng(mt)},{"build_lits",J::array()},{"compiler",__VERSION__},{"stdlib",__GLIBCXX__}}{}
++ void activate(J const& exchange){static unsigned sequence=0;ordinal=++sequence;active=ordinal<=2;if(!active)return;prefix="ccss_"+std::to_string(ordinal);recipe["exchange"]=exchange;recipe["query"]=query();recipe["ordinal"]=ordinal;recipe["role"]=role();entry=Clock::now();event({{"kind","consumer_entry"},{"ordinal",ordinal},{"manager",exchange.value("manager",0)}});}
++ void begin_replay(std::string const& id,bool init_only){active=true;prefix=id;initialize_only=init_only;entry=Clock::now();}
++ void save(std::string const& name,J const& data){if(!active)return;auto t=Clock::now();file(prefix+"_"+name+".json",data);times["log_output"]+=seconds(t);}
++ void count(char const* name){if(active)counters[name]=counters.value(name,0ull)+1;}
++ void read(std::string const& name,std::string const& status,J raw,J parsed=nullptr){if(active)reads.push_back({{"name",name},{"status",status},{"raw",raw},{"parsed",parsed}});}
++ void point(J p){if(!active)return;if(progress.size()>=8192){++rows_dropped;return;}p["elapsed"]=seconds(entry);progress.push_back(std::move(p));}
++ void flush(){if(!active)return;save("progress",{{"points",progress},{"dropped",rows_dropped}});save("terminal",{{"exit",exit},{"last_stage",stage},{"parent_elapsed",seconds(entry)},{"phase_seconds",times},{"counters",counters},{"initialize_count",init_count},{"time_fields","log_output is nested in phase walls; do not sum it again"},{"search_started",search_started}});}
++};
++struct PhaseTimer {Probe* p;std::string name;Clock::time_point start=Clock::now();explicit PhaseTimer(Probe* p,char const* s):p(p),name(s){if(p&&p->active)p->stage=s;}~PhaseTimer(){if(p&&p->active)p->times[name]+=seconds(start);}};
++struct InitializationOnly:std::exception {char const* what()const noexcept override{return "round5_initialize_only";}};
++}
+--- a/HighDiv/src/main/main.cpp
++++ b/HighDiv/src/main/main.cpp
+@@ -27,7 +27,7 @@
+         if (arg == "--unlimited-samples") { argp->unlimited=true;
+         } else if (arg == "--guidance" && i+1<argc) {
+             std::string mode=argv[++i];
+-            if(mode=="S_ref")argp->guidance_mode=3; else if(mode=="S_cov")argp->guidance_mode=4; else if(mode=="a_off_test")argp->guidance_mode=0;
++            if(mode=="S_ref")argp->guidance_mode=3; else if(mode=="S_cov"||mode=="S_full")argp->guidance_mode=4;else if(mode=="S_support")argp->guidance_mode=5; else if(mode=="a_off_test")argp->guidance_mode=0;
+ #ifdef GUIDED_BUILD
+             else if((mode=="M_observe"||mode=="observe_trace"||mode=="a_observe_test"))argp->guidance_mode=1;
+             else if((mode=="M_apply"||mode=="apply_trace"||mode=="a_only_v2"||mode=="a_apply_test"))argp->guidance_mode=2;
+--- a/round5_include/a_shared.hpp
++++ b/round5_include/a_shared.hpp
+@@ -87,4 +87,5 @@
+ };
+ struct Support {unsigned node;uint64_t one=0,zero=0;};
+ #include "phase_evidence.hpp"
++#include "coverage_policy.hpp"
+ }
+--- /dev/null
++++ b/round5_include/coverage_policy.hpp
+@@ -0,0 +1,12 @@
++#pragma once
++// Included within a2 after PhaseEvidence. Pure policy, no state or RNG effects.
++namespace r5 {
++enum class CoveragePolicy { ReferenceOnly, Full, SupportOnly };
++struct CoverageChoice {bool phase;bool avoid;};
++inline std::optional<CoverageChoice> choose_coverage(r4::PhaseEvidence const& e,CoveragePolicy p){
++ if(p==CoveragePolicy::ReferenceOnly||!e.complete)return std::nullopt;
++ if(e.support[0]!=e.support[1])return CoverageChoice{e.support[1]>e.support[0],false};
++ if(p==CoveragePolicy::Full&&e.block[0]!=e.block[1])return CoverageChoice{e.block[1]<e.block[0],true};
++ return std::nullopt;
++}
++}
+--- a/round5_include/preference_types.hpp
++++ b/round5_include/preference_types.hpp
+@@ -1,7 +1,7 @@
+ #pragma once
+ // Included inside a2. Owned typed values only; no solver/AST objects.
+ namespace r4 {
+-enum class Policy { Legacy, Reference, Coverage };
++enum class Policy { Legacy, Reference, Coverage, SupportOnly };
+ struct QueryPreferences {
+  Policy policy=Policy::Legacy;
+  std::map<std::string,Big> reference;
+--- a/round5_include/session.hpp
++++ b/round5_include/session.hpp
+@@ -14,12 +14,12 @@
+ class Session {
+ public:
+     unsigned host_mode=0,last_ls_query=0;OriginalDeclarations original_expressions;
+-    bool soft_reference()const{return host_mode==3||host_mode==4;}
++    bool soft_reference()const{return host_mode==3||host_mode==4||host_mode==5;}
+     void register_inputs(QueryInputs const& inputs){
+         if(!guidance)return;if(guidance->index->active)throw std::runtime_error("reference updated during active check");
+-        auto q=std::make_shared<a2::r4::QueryPreferences>();q->policy=host_mode==4?a2::r4::Policy::Coverage:a2::r4::Policy::Reference;q->reference=inputs.reference.values;q->source_query=last_ls_query;
++        auto q=std::make_shared<a2::r4::QueryPreferences>();q->policy=host_mode==5?a2::r4::Policy::SupportOnly:host_mode==4?a2::r4::Policy::Coverage:a2::r4::Policy::Reference;q->reference=inputs.reference.values;q->source_query=last_ls_query;
+         Json hard=Json::array();for(auto e:inputs.user_hard)hard.push_back(e.to_string());q->hard_count=hard.size();q->reference_count=inputs.reference.selected.size();q->hard_hash=reference_digest(hard.dump());q->reference_hash=reference_digest(inputs.reference.selected.dump());
+-        guidance->index->preferences=q;std::ofstream f(dir+"/query_inputs.jsonl",std::ios::app);f<<Json({{"query_id",query+1},{"policy",host_mode==4?"S_cov":"S_ref"},{"hard_assumptions",hard},{"hard_assumptions_count",q->hard_count},{"hard_assumptions_hash",q->hard_hash},{"reference",inputs.reference.selected},{"reference_count",q->reference_count},{"reference_defined_count",q->reference.size()},{"reference_hash",q->reference_hash},{"reference_source_query",last_ls_query},{"history_hard_blocker_removed",q->reference_count},{"selection_rate",0.5},{"selection_draws",inputs.reference.draws},{"rng_before",inputs.reference.rng_before},{"rng_after",inputs.reference.rng_after},{"rng_hash_algorithm","fnv1a64_stream_mt19937"}}).dump()<<'\n';
++        guidance->index->preferences=q;std::ofstream f(dir+"/query_inputs.jsonl",std::ios::app);f<<Json({{"query_id",query+1},{"policy",host_mode==5?"S_support":host_mode==4?"S_full":"S_ref"},{"hard_assumptions",hard},{"hard_assumptions_count",q->hard_count},{"hard_assumptions_hash",q->hard_hash},{"reference",inputs.reference.selected},{"reference_count",q->reference_count},{"reference_defined_count",q->reference.size()},{"reference_hash",q->reference_hash},{"reference_source_query",last_ls_query},{"history_hard_blocker_removed",q->reference_count},{"selection_rate",0.5},{"selection_draws",inputs.reference.draws},{"rng_before",inputs.reference.rng_before},{"rng_after",inputs.reference.rng_after},{"rng_hash_algorithm","fnv1a64_stream_mt19937"}}).dump()<<'\n';
+     }
+     void ls_reference_source(z3::model const& model){
+         last_ls_query=query;if(!soft_reference())return;auto started=Clock::now();Json entries=Json::array();for(unsigned j=0;j<model.size();++j){auto d=model[j];entries.push_back({{"model_index",j},{"decl_id",d.id()},{"name",d.name().str()},{"original",bool(original_decls.count(d.id()))},{"constant",d.is_const()},{"value",d.is_const()?Json(model.get_const_interp(d).to_string()):Json(nullptr)}});}
+@@ -67,6 +67,7 @@
+     }
+     void begin_query(std::string const& phase,z3::expr_vector const& asms,unsigned request,unsigned grant) {
+         source=phase;if(phase=="CDCL")++cdcl_count;++query;requested=request;granted=grant;assumptions=Json::array();for(auto e:asms)assumptions.push_back(e.to_string());query_begin=elapsed();
++        if(std::getenv("GUIDED_R5_EXCHANGE_DIR")){setenv("GUIDED_R5_QUERY",std::to_string(query).c_str(),1);setenv("GUIDED_R5_ROLE",phase.c_str(),1);setenv("GUIDED_R5_REMAINING",std::to_string(std::max(0.0,wall-elapsed())).c_str(),1);}
+         if(semantic&&guidance&&phase=="CDCL") {Json masks=Json::array();for(auto const& n:guidance->ast.nodes)masks.push_back({std::to_string(n.seen0),std::to_string(n.seen1)});std::ofstream f(dir+"/coverage_snapshots.jsonl",std::ios::app);f<<Json({{"query_id",query},{"coverage_version",guidance->ast.version},{"seen_masks",masks}}).dump()<<'\n';}
+     }
+     void end_query(z3::solver& solver,z3::check_result result,Json stats=Json::object(),double check_end=-1) {

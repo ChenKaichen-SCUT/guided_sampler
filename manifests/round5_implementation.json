@@ -1,0 +1,308 @@
+{
+  "sources": {
+    "z3/src/ast/ast.cpp": {
+      "sha256": "20a629fa6c7b1f8023e5616368117541926417db42cd73fbb8501a6533c78295",
+      "base_sha256": "3d6b53f20e43e488a9fa4150a87d0f3f7db01d30c30e453b97621c1fd5af7865"
+    },
+    "z3/src/sampler/ccss_probe.inc": {
+      "sha256": "9ff440971dd56181173549dee6dd67b18213bd4a479c3cc5b1f98774055145fd",
+      "base_sha256": null
+    },
+    "z3/src/sampler/sampler.cpp": {
+      "sha256": "b23e6d0af528e446eb857b159a6d518cc0447be2ea3461ef9a486d493c6e16a9",
+      "base_sha256": "5cecad602d14924f50ca3ea02ea5e120f32cef61e3b5d007efed051313efcaa7"
+    },
+    "z3/src/sampler/sampler.h": {
+      "sha256": "27d02e4aad80d659eab46d2162be30acd80c95b7654ea26b6c633b53e971d73d",
+      "base_sha256": "85df7c852e2962ebbc89d9f617828143a81c078eecdb8de9e1c6f332d0d6fb83"
+    },
+    "z3/src/smt/a_context.inc": {
+      "sha256": "1f640acd2717f9d537d11f86ad5b145c1d1f672fa51582aae68077f12206dfb2",
+      "base_sha256": "3c5dbb705764ec19baec649066bf3df647e813d76d6628ff510c213888dc1801"
+    },
+    "z3/src/smt/smt_context.cpp": {
+      "sha256": "6951977b5851d01ad2d98f9939f5181021f7c6432d40d4bca0cd77178fc463aa",
+      "base_sha256": "ad31c7bdbaa7cb86e79ba2ec902daf6234940033c6cf8e0a70996f97fa6cfa66"
+    },
+    "z3/src/smt/smt_context.h": {
+      "sha256": "f0d95a08c23e0816365d9b2c60e799121ed6c77ecdbf35932cc73bc481219abb",
+      "base_sha256": "f0b9aedea4ca1a98e4839dd2d895703b255f9dd4f3657c95da851c70753aa4b9"
+    },
+    "z3/src/smt/smt_context_pp.cpp": {
+      "sha256": "9732b3dfcfcc90a6981215ca514c30a7cd423dca0467f391bc79cdf5af0b8f9f",
+      "base_sha256": "282aaabc9a828de74711e38b946a117143a121ff050de0dc4925d1527b780b67"
+    },
+    "z3/src/smt/smt_model_generator.cpp": {
+      "sha256": "39976d87f3bf7f94a41471f3e055ad40b422a233d6c5d6f6dc7229a3394a6298",
+      "base_sha256": "28012e33881552959c1cdac60b05b7ad3085a4fb9b8077d611d68a0769bd9002"
+    },
+    "z3/src/util/a_shared.hpp": {
+      "sha256": "7a72e0c6b84b2681713d30f85eaf6ada0027f44c03998d480e4ff726f250b487",
+      "base_sha256": "e55a3f1abe33a4ed98dab0d58fa57f05c038c58a30091e8a84083421d10bd423"
+    },
+    "z3/src/util/a_state.h": {
+      "sha256": "4d5aa47c23cd47901d4d92925d4034b7f7bb320b5cca56e8a233bb48de19b268",
+      "base_sha256": "b816b64a35e89ec69336b36af54b15b55270bf7231eb4845a193f4d85bfa5672"
+    },
+    "z3/src/util/coverage_policy.hpp": {
+      "sha256": "2b876f60a16504de35c428636f0139b6a80554e076d4f2a2e2e66172ff941772",
+      "base_sha256": null
+    },
+    "z3/src/util/preference_types.hpp": {
+      "sha256": "529e8794108ca84364f1b869cf338d7a4a8c396dde99f3c0534611d88b75e90a",
+      "base_sha256": "a11e72becec0faf3974e0b77f1b7d6cae835dd36a51ba7a290baa1c0eee6123d"
+    },
+    "z3/src/util/r5_decision_audit.hpp": {
+      "sha256": "bffda8847e8d444105737e6045d90fee99073e577fc938d5daa4ae0ee10bbc59",
+      "base_sha256": null
+    },
+    "z3/src/util/r5_exchange_trace.hpp": {
+      "sha256": "6fc97663564248d2f8c8babdad37ce6f01363841717edcdd4ae6dfdffe57fe43",
+      "base_sha256": null
+    },
+    "z3/src/util/r5_replay_recipe.hpp": {
+      "sha256": "3102a6382b70273bd823c9dd589b43424f7f4fa2110b977542baef5ea462fe2b",
+      "base_sha256": null
+    },
+    "HighDiv/src/main/main.cpp": {
+      "sha256": "93753960a16a30d6cdd438772551f324ae8713dc14923a68ef974e97aeab8006",
+      "base_sha256": "60e0d70c1020b8428da32004b8b17de0b509dd95ba3d86bf2f14753169bee2f2"
+    },
+    "round5_include/a_shared.hpp": {
+      "sha256": "7a72e0c6b84b2681713d30f85eaf6ada0027f44c03998d480e4ff726f250b487",
+      "base_sha256": "e55a3f1abe33a4ed98dab0d58fa57f05c038c58a30091e8a84083421d10bd423"
+    },
+    "round5_include/coverage_policy.hpp": {
+      "sha256": "2b876f60a16504de35c428636f0139b6a80554e076d4f2a2e2e66172ff941772",
+      "base_sha256": null
+    },
+    "round5_include/preference_types.hpp": {
+      "sha256": "529e8794108ca84364f1b869cf338d7a4a8c396dde99f3c0534611d88b75e90a",
+      "base_sha256": "a11e72becec0faf3974e0b77f1b7d6cae835dd36a51ba7a290baa1c0eee6123d"
+    },
+    "round5_include/session.hpp": {
+      "sha256": "cda637b34e841aa27993c226aadb44920111abeb5ca956dc4ee3bd0f052eb8a6",
+      "base_sha256": "e2008640d932e79fd4aab14681febfc6f4e981d4477470bdc5c5d9d3d2a31564"
+    }
+  },
+  "validation": {
+    "release": {
+      "passed": true,
+      "checks": {
+        "canonical": true,
+        "kernel": true,
+        "abandon": true,
+        "parallel": true,
+        "index_outcome": true,
+        "exposure": true,
+        "budgets": true,
+        "demands": true,
+        "semantic_cases": true,
+        "semantic_correspondence": true,
+        "soft_reference": true,
+        "soft_lifecycle": true,
+        "coverage_policy": true,
+        "official_high_bit_signed_short_circuit": true,
+        "a_off_test_instrumentation_behavior": true,
+        "S_ref_instrumentation_behavior": true,
+        "S_ref_saved_R4_regression": true,
+        "S_full_instrumentation_behavior": true,
+        "S_full_saved_R4_regression": true,
+        "S_support_instrumentation_behavior": true,
+        "hard_soft_provenance_and_zero_new_guidance_constraints": true,
+        "exchange_numeric_RNG_and_buffer_tests": true,
+        "S_ref_native_recipe_RNG_rebuild": true,
+        "S_ref_probe_off_initialization_RNG": true,
+        "S_full_native_recipe_RNG_rebuild": true,
+        "S_full_probe_off_initialization_RNG": true,
+        "S_support_native_recipe_RNG_rebuild": true,
+        "S_support_probe_off_initialization_RNG": true,
+        "truncated_recipe_explicit_error": true
+      },
+      "binary_sha256": "75b947afd6e9305748c8c1c2a0f02dea1d1632341b857ba62dddd699aa4b2dd4",
+      "library_sha256": "080743b240f79114e8726d87c95b4acde82e588e1d560be7ede18a740de623cc",
+      "replay_sha256": "ceb4d11d771aa726ebf28823a4bf1ac5c6490a51faf9ab1b250cc3d3494d2b65",
+      "real_benchmark_runs": 0,
+      "old_binary_executions": 0,
+      "sole_leak_suppression": null,
+      "exchange_edges": {
+        "passed": true,
+        "cases": {
+          "negative": {
+            "read_statuses": [
+              "present",
+              "present"
+            ],
+            "difference_model_valid": true,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          },
+          "empty": {
+            "read_statuses": [
+              "missing"
+            ],
+            "difference_model_valid": false,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          },
+          "missing_y": {
+            "read_statuses": [
+              "present",
+              "missing"
+            ],
+            "difference_model_valid": false,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          },
+          "parse_error": {
+            "read_statuses": [
+              "parse_error"
+            ],
+            "difference_model_valid": false,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          },
+          "overflow128": {
+            "read_statuses": [
+              "128bit_overflow"
+            ],
+            "difference_model_valid": false,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          },
+          "difference_overflow": {
+            "read_statuses": [
+              "present",
+              "present"
+            ],
+            "difference_model_valid": false,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          }
+        },
+        "replay_sha256": "ceb4d11d771aa726ebf28823a4bf1ac5c6490a51faf9ab1b250cc3d3494d2b65",
+        "library_sha256": "080743b240f79114e8726d87c95b4acde82e588e1d560be7ede18a740de623cc",
+        "synthetic_only": true,
+        "SMT_calls": 0
+      },
+      "ldd": "\tlinux-vdso.so.1 (0x00007ffde85e4000)\n\tlibz3.so => /mnt/Space1/SMT_Sampling/guided_sampler/deps/round5_release/lib/libz3.so (0x00007e504bf9d000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007e504bd67000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007e504bd47000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007e504bb1e000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007e504ba37000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007e504ddd8000)\n",
+      "config_sha256": "95dfd1489744614b76b2d19a17abb7720bcbdc1ce0e39ac60547f9db725058aa",
+      "sampler_archive_sha256": "ff1d2204f51529e4896feb33de9446a238e806f6f1ef0dbf0c56cf8ac0a29d95"
+    },
+    "sanitize": {
+      "passed": true,
+      "checks": {
+        "canonical": true,
+        "kernel": true,
+        "abandon": true,
+        "parallel": true,
+        "index_outcome": true,
+        "exposure": true,
+        "budgets": true,
+        "demands": true,
+        "semantic_cases": true,
+        "semantic_correspondence": true,
+        "soft_reference": true,
+        "soft_lifecycle": true,
+        "coverage_policy": true,
+        "official_high_bit_signed_short_circuit": true,
+        "a_off_test_instrumentation_behavior": true,
+        "S_ref_instrumentation_behavior": true,
+        "S_ref_saved_R4_regression": true,
+        "S_full_instrumentation_behavior": true,
+        "S_full_saved_R4_regression": true,
+        "S_support_instrumentation_behavior": true,
+        "hard_soft_provenance_and_zero_new_guidance_constraints": true,
+        "exchange_numeric_RNG_and_buffer_tests": true,
+        "S_ref_native_recipe_RNG_rebuild": true,
+        "S_ref_probe_off_initialization_RNG": true,
+        "S_full_native_recipe_RNG_rebuild": true,
+        "S_full_probe_off_initialization_RNG": true,
+        "S_support_native_recipe_RNG_rebuild": true,
+        "S_support_probe_off_initialization_RNG": true,
+        "truncated_recipe_explicit_error": true
+      },
+      "binary_sha256": "1cc0c4744396fe5e02f6b366f85ffeb55b568ceb5e7f0fd5c612ebdeb8a1c801",
+      "library_sha256": "8ddafde97b11321ed949c933c6baa434220c33be3cbf85be48b50644a9d4bbb6",
+      "replay_sha256": "96ae8cf8d1a3be590e3fce7627429f28ae8de3c100ccaec2e2553721b3a89354",
+      "real_benchmark_runs": 0,
+      "old_binary_executions": 0,
+      "sole_leak_suppression": "ae26b6ceec0af7a3ec1ac375b47b4f1f7ab065b1ec071d582222e4f04d367032",
+      "exchange_edges": {
+        "passed": true,
+        "cases": {
+          "negative": {
+            "read_statuses": [
+              "present",
+              "present"
+            ],
+            "difference_model_valid": true,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          },
+          "empty": {
+            "read_statuses": [
+              "missing"
+            ],
+            "difference_model_valid": false,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          },
+          "missing_y": {
+            "read_statuses": [
+              "present",
+              "missing"
+            ],
+            "difference_model_valid": false,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          },
+          "parse_error": {
+            "read_statuses": [
+              "parse_error"
+            ],
+            "difference_model_valid": false,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          },
+          "overflow128": {
+            "read_statuses": [
+              "128bit_overflow"
+            ],
+            "difference_model_valid": false,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          },
+          "difference_overflow": {
+            "read_statuses": [
+              "present",
+              "present"
+            ],
+            "difference_model_valid": false,
+            "initialization_in_hard_bounds": true,
+            "search_steps": 0
+          }
+        },
+        "replay_sha256": "96ae8cf8d1a3be590e3fce7627429f28ae8de3c100ccaec2e2553721b3a89354",
+        "library_sha256": "8ddafde97b11321ed949c933c6baa434220c33be3cbf85be48b50644a9d4bbb6",
+        "synthetic_only": true,
+        "SMT_calls": 0
+      },
+      "ldd": "\tlinux-vdso.so.1 (0x00007ffccd992000)\n\tlibasan.so.6 => /lib/x86_64-linux-gnu/libasan.so.6 (0x0000734e5cafc000)\n\tlibz3.so => /mnt/Space1/SMT_Sampling/guided_sampler/deps/round5_sanitize/lib/libz3.so (0x0000734dfca09000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x0000734dfc7dd000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x0000734dfc6f6000)\n\tlibubsan.so.1 => /lib/x86_64-linux-gnu/libubsan.so.1 (0x0000734dfc0c1000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x0000734dfc09f000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x0000734dfbe76000)\n\t/lib64/ld-linux-x86-64.so.2 (0x0000734e5ed53000)\n",
+      "config_sha256": "f44fd7d162b6a007eddbf8e067c9a9ec75f73b0919a3eaeb960fc71482309882",
+      "sampler_archive_sha256": "fefa5fdd160225ee0a364f473e94e59d9eea579aee0dab823f95ac6a06a5cc49"
+    }
+  },
+  "config_sha256": "29f40d96af774308c5374190d38c985d57370953def23147dea4d9dab6a2929b",
+  "parent_commit": "be6496c83f4464eccddaf8f1bfa2972b94968ca2",
+  "sampler_changes": "SupportOnly is the sole scoring ablation; R5 instrumentation only elsewhere",
+  "code_files": {
+    "include/round5/ccss_exchange_trace.hpp": "6fc97663564248d2f8c8babdad37ce6f01363841717edcdd4ae6dfdffe57fe43",
+    "include/round5/ccss_replay_recipe.hpp": "3102a6382b70273bd823c9dd589b43424f7f4fa2110b977542baef5ea462fe2b",
+    "include/round5/coverage_policy.hpp": "2b876f60a16504de35c428636f0139b6a80554e076d4f2a2e2e66172ff941772",
+    "include/round5/decision_audit.hpp": "bffda8847e8d444105737e6045d90fee99073e577fc938d5daa4ae0ee10bbc59",
+    "src/round5/ccss_probe.inc": "9ff440971dd56181173549dee6dd67b18213bd4a479c3cc5b1f98774055145fd",
+    "src/round5/ccss_replay_main.cpp": "1eb722fcf2e5276af99914bf46a3c55417d56fd9a06188c84b797f82e93d0c68",
+    "src/round5/soft_phase.inc": "a3da8ab17b82978a20e4c0782ab9e3b8dfc196a4cb55a4299e983a70e15e94e3"
+  }
+}

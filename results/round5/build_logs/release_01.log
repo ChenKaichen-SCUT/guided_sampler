@@ -1,0 +1,20 @@
++ cp -a --reflink=auto /tmp/guided_sampler_round4_worktrees/S_release/z3 /tmp/guided_sampler_round5_worktrees/release/z3
++ cp -a --reflink=auto /tmp/guided_sampler_round4_worktrees/S_release/HighDiv /tmp/guided_sampler_round5_worktrees/release/HighDiv
++ /usr/bin/python3 -m venv /mnt/Space1/SMT_Sampling/guided_sampler/deps/round5_release
++ /usr/bin/python3 /mnt/Space1/SMT_Sampling/guided_sampler/scripts/round5/patch_sources.py /mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round5_release release
+Traceback (most recent call last):
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/round5/patch_sources.py", line 100, in <module>
+    if __name__=='__main__':patch(pathlib.Path(sys.argv[1]),sys.argv[2])
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/round5/patch_sources.py", line 24, in patch
+    edit(p,'        // send model\n','        // send model\n        r5::batch(&m,m_context->get_A_provider_id());\n')
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/round5/patch_sources.py", line 8, in edit
+    s=path.read_text();assert s.count(old)==count,(path,old[:70],s.count(old));path.write_text(s.replace(old,new))
+AssertionError: (PosixPath('/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round5_release/z3/src/smt/smt_model_generator.cpp'), '        // send model\n', 2)
+Traceback (most recent call last):
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/round5/build.py", line 15, in <module>
+    run([sys.executable,ROOT/'scripts/round5/patch_sources.py',tree,a.variant])
+  File "/mnt/Space1/SMT_Sampling/guided_sampler/scripts/round5/build.py", line 9, in run
+    print('+',' '.join(map(str,cmd)),flush=True);subprocess.run(list(map(str,cmd)),check=True,**kw)
+  File "/usr/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/usr/bin/python3', '/mnt/Space1/SMT_Sampling/guided_sampler/scripts/round5/patch_sources.py', '/mnt/Space1/SMT_Sampling/guided_sampler/worktrees/round5_release', 'release']' returned non-zero exit status 1.

@@ -25,3 +25,5 @@ __pycache__/
 /results/round5/replay/
 /results/round5/correctness/
 /results/round5/readonly/coverage_bit_*.csv
+/results/round5/analysis/W_coverage_partition.csv
+/results/round5/analysis/W_bit_differences.csv
