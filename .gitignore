@@ -19,3 +19,9 @@ __pycache__/
 /results/round4/runs/
 /results/round4/correctness/
 /results/round4/mapping_checks/
+# Round 5 raw data and exact bit tables are preserved in the verified archive.
+/results/round5/W/
+/results/round5/capture/
+/results/round5/replay/
+/results/round5/correctness/
+/results/round5/readonly/coverage_bit_*.csv

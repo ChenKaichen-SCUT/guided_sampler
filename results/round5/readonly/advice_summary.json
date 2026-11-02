@@ -1,0 +1,876 @@
+{
+  "passed": true,
+  "runs": [
+    {
+      "run": "convert_S_ref",
+      "counts": {
+        "actions": 27,
+        "inherited_reference": 27,
+        "inherited_reference_changed_vs_native": 4,
+        "inherited_reference_changed_vs_fallback": 0,
+        "recorded_scored_opportunities": 2048
+      },
+      "by_source": {
+        "coverage_support": {
+          "actions": 0,
+          "same_native": 0,
+          "changed_native": 0,
+          "changed_local_fallback": 0,
+          "action_target_records": 0,
+          "unique_demands": 0,
+          "unique_nodes": 0,
+          "unique_atoms": 0,
+          "top10_demands": [],
+          "top10_atoms": [],
+          "top10_atom_action_fraction": null,
+          "bit_bands": {}
+        },
+        "avoid_direct_blocker": {
+          "actions": 0,
+          "same_native": 0,
+          "changed_native": 0,
+          "changed_local_fallback": 0,
+          "action_target_records": 0,
+          "unique_demands": 0,
+          "unique_nodes": 0,
+          "unique_atoms": 0,
+          "top10_demands": [],
+          "top10_atoms": [],
+          "top10_atom_action_fraction": null,
+          "bit_bands": {}
+        },
+        "inherited_reference": {
+          "actions": 27,
+          "same_native": 23,
+          "changed_native": 4,
+          "changed_local_fallback": 0,
+          "action_target_records": 0,
+          "unique_demands": 0,
+          "unique_nodes": 0,
+          "unique_atoms": 6,
+          "top10_demands": [],
+          "top10_atoms": [
+            [
+              "EQ:C0;16:I$11:z230_31_11_=1;",
+              11
+            ],
+            [
+              "LE:C-254;15:I$10:z948_31_0_=1;15:I$10:z948_31_8_=-256;12:I$8:z3_31_8_=256;",
+              5
+            ],
+            [
+              "LE:C-254;15:I$10:z145_31_8_=256;15:I$10:z928_31_0_=1;15:I$10:z928_31_8_=-256;",
+              4
+            ],
+            [
+              "LE:C-254;15:I$10:z936_31_0_=1;15:I$10:z936_31_8_=-256;13:I$9:z70_31_8_=256;",
+              3
+            ],
+            [
+              "LE:C-254;15:I$10:z161_31_8_=256;15:I$10:z956_31_0_=1;15:I$10:z956_31_8_=-256;",
+              3
+            ],
+            [
+              "LE:C-255;15:I$10:z108_31_8_=256;15:I$10:z896_31_0_=1;15:I$10:z896_31_8_=-256;",
+              1
+            ]
+          ],
+          "top10_atom_action_fraction": 1.0,
+          "bit_bands": {}
+        }
+      },
+      "strict_quota_only_count": "not_recorded",
+      "actual_actions_complete": true,
+      "source_hashes": {
+        "a_actions.jsonl": "f35b6aab63c0a7fc3ff12c456c083b8e230a4d838318fb9d512254c5405ee688",
+        "semantic.jsonl": "58b8d47adbf4bebf498bf836e1b87a6203297dabac9fc52bf851c62c855797bb",
+        "coverage_snapshots.jsonl": "663f657ca20649bedf76678cdaf0394c36c64e206ac5381053dc4b18bc2a3833",
+        "a_atom_catalog.jsonl": "2eaa9125d233f43b7d747228d82ccb25dfd461cd0d0bcd54f0594af22a6eaaf7"
+      }
+    },
+    {
+      "run": "convert_S_cov",
+      "counts": {
+        "actions": 6,
+        "coverage_support": 5,
+        "coverage_support_changed_vs_native": 4,
+        "coverage_support_changed_vs_fallback": 4,
+        "inherited_reference": 1,
+        "inherited_reference_changed_vs_native": 0,
+        "inherited_reference_changed_vs_fallback": 0,
+        "recorded_scored_opportunities": 256
+      },
+      "by_source": {
+        "coverage_support": {
+          "actions": 5,
+          "same_native": 1,
+          "changed_native": 4,
+          "changed_local_fallback": 4,
+          "action_target_records": 7,
+          "unique_demands": 5,
+          "unique_nodes": 5,
+          "unique_atoms": 3,
+          "top10_demands": [
+            [
+              [
+                3321,
+                0,
+                1
+              ],
+              3
+            ],
+            [
+              [
+                3498,
+                0,
+                1
+              ],
+              1
+            ],
+            [
+              [
+                3497,
+                0,
+                0
+              ],
+              1
+            ],
+            [
+              [
+                2600,
+                0,
+                1
+              ],
+              1
+            ],
+            [
+              [
+                2599,
+                0,
+                0
+              ],
+              1
+            ]
+          ],
+          "top10_atoms": [
+            [
+              "EQ:C0;16:I$11:z230_31_11_=1;",
+              3
+            ],
+            [
+              "LE:C9315;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;",
+              1
+            ],
+            [
+              "LE:C13878;13:I$9:sigma_45_=4294967296;13:I$9:z13_31_0_=-1;13:I$9:z14_31_0_=-1;13:I$9:z16_31_0_=-1;13:I$9:z18_31_0_=-1;13:I$9:z20_31_0_=-1;13:I$9:z22_31_0_=-1;13:I$9:z24_31_0_=-1;13:I$9:z26_31_0_=-1;13:I$9:z28_31_0_=-1;13:I$9:z30_31_0_=-1;13:I$9:z32_31_0_=-1;13:I$9:z34_31_0_=-1;13:I$9:z36_31_0_=-1;13:I$9:z38_31_0_=-1;13:I$9:z40_31_0_=-1;13:I$9:z42_31_0_=-1;",
+              1
+            ]
+          ],
+          "top10_atom_action_fraction": 1.0,
+          "bit_bands": {
+            "low_0_7": 7
+          }
+        },
+        "avoid_direct_blocker": {
+          "actions": 0,
+          "same_native": 0,
+          "changed_native": 0,
+          "changed_local_fallback": 0,
+          "action_target_records": 0,
+          "unique_demands": 0,
+          "unique_nodes": 0,
+          "unique_atoms": 0,
+          "top10_demands": [],
+          "top10_atoms": [],
+          "top10_atom_action_fraction": null,
+          "bit_bands": {}
+        },
+        "inherited_reference": {
+          "actions": 1,
+          "same_native": 1,
+          "changed_native": 0,
+          "changed_local_fallback": 0,
+          "action_target_records": 0,
+          "unique_demands": 0,
+          "unique_nodes": 0,
+          "unique_atoms": 1,
+          "top10_demands": [],
+          "top10_atoms": [
+            [
+              "LE:C-254;15:I$10:z145_31_8_=256;15:I$10:z928_31_0_=1;15:I$10:z928_31_8_=-256;",
+              1
+            ]
+          ],
+          "top10_atom_action_fraction": 1.0,
+          "bit_bands": {}
+        }
+      },
+      "strict_quota_only_count": "not_recorded",
+      "actual_actions_complete": true,
+      "source_hashes": {
+        "a_actions.jsonl": "91eeadbdb5724e4db426b92b12e31f0a4b865375e3f19db2ad8d32e27974f900",
+        "semantic.jsonl": "2ce5854fd5d2e6d092a6724dc57dcccda55cf72245b3a47be29f75b69267134f",
+        "coverage_snapshots.jsonl": "db9bee404092aadc06400893cf77300d2f999cd5480a277eb010984210692e9a",
+        "a_atom_catalog.jsonl": "2eaa9125d233f43b7d747228d82ccb25dfd461cd0d0bcd54f0594af22a6eaaf7"
+      }
+    },
+    {
+      "run": "SMT_random_S_ref",
+      "counts": {
+        "recorded_scored_opportunities": 512
+      },
+      "by_source": {
+        "coverage_support": {
+          "actions": 0,
+          "same_native": 0,
+          "changed_native": 0,
+          "changed_local_fallback": 0,
+          "action_target_records": 0,
+          "unique_demands": 0,
+          "unique_nodes": 0,
+          "unique_atoms": 0,
+          "top10_demands": [],
+          "top10_atoms": [],
+          "top10_atom_action_fraction": null,
+          "bit_bands": {}
+        },
+        "avoid_direct_blocker": {
+          "actions": 0,
+          "same_native": 0,
+          "changed_native": 0,
+          "changed_local_fallback": 0,
+          "action_target_records": 0,
+          "unique_demands": 0,
+          "unique_nodes": 0,
+          "unique_atoms": 0,
+          "top10_demands": [],
+          "top10_atoms": [],
+          "top10_atom_action_fraction": null,
+          "bit_bands": {}
+        },
+        "inherited_reference": {
+          "actions": 0,
+          "same_native": 0,
+          "changed_native": 0,
+          "changed_local_fallback": 0,
+          "action_target_records": 0,
+          "unique_demands": 0,
+          "unique_nodes": 0,
+          "unique_atoms": 0,
+          "top10_demands": [],
+          "top10_atoms": [],
+          "top10_atom_action_fraction": null,
+          "bit_bands": {}
+        }
+      },
+      "strict_quota_only_count": "not_recorded",
+      "actual_actions_complete": true,
+      "source_hashes": {
+        "a_actions.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "semantic.jsonl": "b2a48585020b0435888d724f24d242f15e8b63693a4713578e84bc17d92f62f8",
+        "coverage_snapshots.jsonl": "47b422b480752d691b82e2d92796aaac090aed49cda7be0d7a9d338d4d927d19",
+        "a_atom_catalog.jsonl": "265fae2856c0781e2c4a558bf2c7b74acf6c946d5bbdb8eca9e57a870352f744"
+      }
+    },
+    {
+      "run": "SMT_random_S_cov",
+      "counts": {
+        "actions": 16,
+        "coverage_support": 6,
+        "coverage_support_changed_vs_native": 4,
+        "coverage_support_changed_vs_fallback": 4,
+        "avoid_direct_blocker": 10,
+        "avoid_direct_blocker_changed_vs_native": 10,
+        "avoid_direct_blocker_changed_vs_fallback": 10,
+        "recorded_scored_opportunities": 512
+      },
+      "by_source": {
+        "coverage_support": {
+          "actions": 6,
+          "same_native": 2,
+          "changed_native": 4,
+          "changed_local_fallback": 4,
+          "action_target_records": 13,
+          "unique_demands": 7,
+          "unique_nodes": 5,
+          "unique_atoms": 4,
+          "top10_demands": [
+            [
+              [
+                2319,
+                12,
+                0
+              ],
+              3
+            ],
+            [
+              [
+                4882,
+                0,
+                1
+              ],
+              3
+            ],
+            [
+              [
+                2319,
+                9,
+                0
+              ],
+              3
+            ],
+            [
+              [
+                4922,
+                0,
+                0
+              ],
+              1
+            ],
+            [
+              [
+                2319,
+                3,
+                0
+              ],
+              1
+            ],
+            [
+              [
+                3365,
+                0,
+                0
+              ],
+              1
+            ],
+            [
+              [
+                4946,
+                0,
+                0
+              ],
+              1
+            ]
+          ],
+          "top10_atoms": [
+            [
+              "EQ:C0;9:I$5:xH510=1;",
+              3
+            ],
+            [
+              "EQ:C0;9:I$5:xH515=1;",
+              1
+            ],
+            [
+              "EQ:C0;9:I$5:xH316=1;",
+              1
+            ],
+            [
+              "EQ:C0;9:I$5:xH518=1;",
+              1
+            ]
+          ],
+          "top10_atom_action_fraction": 1.0,
+          "bit_bands": {
+            "low_0_7": 7,
+            "mid_8_31": 6
+          }
+        },
+        "avoid_direct_blocker": {
+          "actions": 10,
+          "same_native": 0,
+          "changed_native": 10,
+          "changed_local_fallback": 10,
+          "action_target_records": 556,
+          "unique_demands": 398,
+          "unique_nodes": 7,
+          "unique_atoms": 7,
+          "top10_demands": [
+            [
+              [
+                2363,
+                58,
+                1
+              ],
+              3
+            ],
+            [
+              [
+                2363,
+                16,
+                1
+              ],
+              3
+            ],
+            [
+              [
+                2363,
+                38,
+                1
+              ],
+              3
+            ],
+            [
+              [
+                2363,
+                49,
+                1
+              ],
+              3
+            ],
+            [
+              [
+                2363,
+                18,
+                1
+              ],
+              3
+            ],
+            [
+              [
+                2363,
+                29,
+                1
+              ],
+              3
+            ],
+            [
+              [
+                2363,
+                40,
+                1
+              ],
+              3
+            ],
+            [
+              [
+                2363,
+                62,
+                1
+              ],
+              3
+            ],
+            [
+              [
+                2363,
+                20,
+                1
+              ],
+              3
+            ],
+            [
+              [
+                2363,
+                31,
+                1
+              ],
+              3
+            ]
+          ],
+          "top10_atoms": [
+            [
+              "EQ:C0;9:I$5:xH515=1;",
+              3
+            ],
+            [
+              "EQ:C0;9:I$5:xH519=1;",
+              2
+            ],
+            [
+              "EQ:C0;9:I$5:xH499=1;",
+              1
+            ],
+            [
+              "EQ:C0;9:I$5:xH501=1;",
+              1
+            ],
+            [
+              "EQ:C0;9:I$5:xH512=1;",
+              1
+            ],
+            [
+              "EQ:C0;9:I$5:xH516=1;",
+              1
+            ],
+            [
+              "EQ:C0;9:I$5:xH323=1;",
+              1
+            ]
+          ],
+          "top10_atom_action_fraction": 1.0,
+          "bit_bands": {
+            "high_32_63": 320,
+            "mid_8_31": 210,
+            "low_0_7": 26
+          }
+        },
+        "inherited_reference": {
+          "actions": 0,
+          "same_native": 0,
+          "changed_native": 0,
+          "changed_local_fallback": 0,
+          "action_target_records": 0,
+          "unique_demands": 0,
+          "unique_nodes": 0,
+          "unique_atoms": 0,
+          "top10_demands": [],
+          "top10_atoms": [],
+          "top10_atom_action_fraction": null,
+          "bit_bands": {}
+        }
+      },
+      "strict_quota_only_count": "not_recorded",
+      "actual_actions_complete": true,
+      "source_hashes": {
+        "a_actions.jsonl": "54d0cbffcf1108cfaf4efbfba0b6927676d08c4f0af38f40d051867cc8f9655c",
+        "semantic.jsonl": "433c8c67ccbf8533c562dded139f33420452d2c2dc17e4e6d137020b06afddcc",
+        "coverage_snapshots.jsonl": "644ae4c3bb28f072c221d5abbaac641922542971df1701912a49eefdf846147b",
+        "a_atom_catalog.jsonl": "265fae2856c0781e2c4a558bf2c7b74acf6c946d5bbdb8eca9e57a870352f744"
+      }
+    },
+    {
+      "run": "SMT_real_S_ref",
+      "counts": {
+        "recorded_scored_opportunities": 512
+      },
+      "by_source": {
+        "coverage_support": {
+          "actions": 0,
+          "same_native": 0,
+          "changed_native": 0,
+          "changed_local_fallback": 0,
+          "action_target_records": 0,
+          "unique_demands": 0,
+          "unique_nodes": 0,
+          "unique_atoms": 0,
+          "top10_demands": [],
+          "top10_atoms": [],
+          "top10_atom_action_fraction": null,
+          "bit_bands": {}
+        },
+        "avoid_direct_blocker": {
+          "actions": 0,
+          "same_native": 0,
+          "changed_native": 0,
+          "changed_local_fallback": 0,
+          "action_target_records": 0,
+          "unique_demands": 0,
+          "unique_nodes": 0,
+          "unique_atoms": 0,
+          "top10_demands": [],
+          "top10_atoms": [],
+          "top10_atom_action_fraction": null,
+          "bit_bands": {}
+        },
+        "inherited_reference": {
+          "actions": 0,
+          "same_native": 0,
+          "changed_native": 0,
+          "changed_local_fallback": 0,
+          "action_target_records": 0,
+          "unique_demands": 0,
+          "unique_nodes": 0,
+          "unique_atoms": 0,
+          "top10_demands": [],
+          "top10_atoms": [],
+          "top10_atom_action_fraction": null,
+          "bit_bands": {}
+        }
+      },
+      "strict_quota_only_count": "not_recorded",
+      "actual_actions_complete": true,
+      "source_hashes": {
+        "a_actions.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "semantic.jsonl": "79d5961fee777e3f410b015c1a688e915a3088307fd75fbe7b84745459599345",
+        "coverage_snapshots.jsonl": "0697c08139ff1e58731a50c29ea1a3061ae2d8d0ba4edd93ff794961d004d08e",
+        "a_atom_catalog.jsonl": "02abd5c196148aa49622c88c15db99dd449f1ad5965e0af1e3ba6b2dc3c1603a"
+      }
+    },
+    {
+      "run": "SMT_real_S_cov",
+      "counts": {
+        "actions": 24,
+        "coverage_support": 7,
+        "coverage_support_changed_vs_native": 3,
+        "coverage_support_changed_vs_fallback": 3,
+        "raw_score_but_all_targets_attempted": 5,
+        "avoid_direct_blocker": 17,
+        "avoid_direct_blocker_changed_vs_native": 15,
+        "avoid_direct_blocker_changed_vs_fallback": 15,
+        "recorded_scored_opportunities": 512
+      },
+      "by_source": {
+        "coverage_support": {
+          "actions": 7,
+          "same_native": 4,
+          "changed_native": 3,
+          "changed_local_fallback": 3,
+          "action_target_records": 17,
+          "unique_demands": 14,
+          "unique_nodes": 6,
+          "unique_atoms": 4,
+          "top10_demands": [
+            [
+              [
+                2404,
+                0,
+                0
+              ],
+              4
+            ],
+            [
+              [
+                1478,
+                8,
+                0
+              ],
+              1
+            ],
+            [
+              [
+                1478,
+                11,
+                0
+              ],
+              1
+            ],
+            [
+              [
+                1478,
+                6,
+                0
+              ],
+              1
+            ],
+            [
+              [
+                1478,
+                7,
+                0
+              ],
+              1
+            ],
+            [
+              [
+                1478,
+                2,
+                0
+              ],
+              1
+            ],
+            [
+              [
+                3350,
+                0,
+                1
+              ],
+              1
+            ],
+            [
+              [
+                3342,
+                0,
+                1
+              ],
+              1
+            ],
+            [
+              [
+                1468,
+                11,
+                0
+              ],
+              1
+            ],
+            [
+              [
+                1468,
+                6,
+                0
+              ],
+              1
+            ]
+          ],
+          "top10_atoms": [
+            [
+              "EQ:C0;9:I$5:xH258=1;",
+              4
+            ],
+            [
+              "EQ:C0;9:I$5:xH380=1;",
+              1
+            ],
+            [
+              "EQ:C0;9:I$5:xH379=1;",
+              1
+            ],
+            [
+              "EQ:C0;9:I$5:xH376=1;",
+              1
+            ]
+          ],
+          "top10_atom_action_fraction": 1.0,
+          "bit_bands": {
+            "low_0_7": 13,
+            "mid_8_31": 4
+          }
+        },
+        "avoid_direct_blocker": {
+          "actions": 17,
+          "same_native": 2,
+          "changed_native": 15,
+          "changed_local_fallback": 15,
+          "action_target_records": 986,
+          "unique_demands": 467,
+          "unique_nodes": 8,
+          "unique_atoms": 8,
+          "top10_demands": [
+            [
+              [
+                1438,
+                20,
+                1
+              ],
+              5
+            ],
+            [
+              [
+                1438,
+                5,
+                1
+              ],
+              5
+            ],
+            [
+              [
+                1438,
+                31,
+                1
+              ],
+              5
+            ],
+            [
+              [
+                1438,
+                53,
+                1
+              ],
+              5
+            ],
+            [
+              [
+                1438,
+                22,
+                1
+              ],
+              5
+            ],
+            [
+              [
+                1438,
+                51,
+                1
+              ],
+              5
+            ],
+            [
+              [
+                1438,
+                9,
+                1
+              ],
+              5
+            ],
+            [
+              [
+                1438,
+                42,
+                1
+              ],
+              5
+            ],
+            [
+              [
+                1438,
+                40,
+                1
+              ],
+              5
+            ],
+            [
+              [
+                1438,
+                0,
+                1
+              ],
+              5
+            ]
+          ],
+          "top10_atoms": [
+            [
+              "EQ:C0;9:I$5:xH376=1;",
+              5
+            ],
+            [
+              "EQ:C0;9:I$5:xH383=1;",
+              4
+            ],
+            [
+              "EQ:C0;9:I$5:xH381=1;",
+              2
+            ],
+            [
+              "EQ:C0;9:I$5:xH380=1;",
+              2
+            ],
+            [
+              "EQ:C0;9:I$5:xH377=1;",
+              1
+            ],
+            [
+              "EQ:C0;9:I$5:xH382=1;",
+              1
+            ],
+            [
+              "EQ:C0;9:I$5:xH211=1;",
+              1
+            ],
+            [
+              "EQ:C0;9:I$5:xH257=1;",
+              1
+            ]
+          ],
+          "top10_atom_action_fraction": 1.0,
+          "bit_bands": {
+            "low_0_7": 72,
+            "mid_8_31": 370,
+            "high_32_63": 544
+          }
+        },
+        "inherited_reference": {
+          "actions": 0,
+          "same_native": 0,
+          "changed_native": 0,
+          "changed_local_fallback": 0,
+          "action_target_records": 0,
+          "unique_demands": 0,
+          "unique_nodes": 0,
+          "unique_atoms": 0,
+          "top10_demands": [],
+          "top10_atoms": [],
+          "top10_atom_action_fraction": null,
+          "bit_bands": {}
+        }
+      },
+      "strict_quota_only_count": "not_recorded",
+      "actual_actions_complete": true,
+      "source_hashes": {
+        "a_actions.jsonl": "e671da3666ff259feaafa43bb087912f7de8e487a550f329d7356bf6b40e5d6f",
+        "semantic.jsonl": "3756c704ff6ed35ceee9c02c8e50a17a4a0d58fefdaad55bfc4fb39ab8b4a6cb",
+        "coverage_snapshots.jsonl": "ce811ea2429644ad7d9eaefa78c1af8ad6b2b365dcfb039a25d28d3916a85567",
+        "a_atom_catalog.jsonl": "02abd5c196148aa49622c88c15db99dd449f1ad5965e0af1e3ba6b2dc3c1603a"
+      }
+    }
+  ],
+  "solver_calls": 0
+}

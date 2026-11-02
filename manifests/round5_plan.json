@@ -1,0 +1,25 @@
+{
+  "config_sha256": "29f40d96af774308c5374190d38c985d57370953def23147dea4d9dab6a2929b",
+  "guide_sha256": "86603c8ed9779c66877eb0e284dce15d2d37e2923309fa75a6e75db706c57b61",
+  "cpu_topology": "# The following is the parsable format, which can be fed to other\n# programs. Each different item in every column has an unique ID\n# starting usually from zero.\n# CPU,Core,Socket,Node\n0,0,0,0\n1,0,0,0\n2,1,0,0\n3,1,0,0\n4,2,0,0\n5,2,0,0\n6,3,0,0\n7,3,0,0\n8,4,0,0\n9,4,0,0\n10,5,0,0\n11,5,0,0\n12,6,0,0\n13,6,0,0\n14,7,0,0\n15,7,0,0\n",
+  "allowed_cpus": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "tests_frozen_before_implementation": true,
+  "formal_started": false
+}
