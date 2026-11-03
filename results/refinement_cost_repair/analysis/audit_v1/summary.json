@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "source_models": 43,
+  "production_sequences": 39,
+  "replayed_events": 559,
+  "independent_completed_candidate_checks": 133,
+  "unique_official_assignments_checked": 190,
+  "completed_real_probe_domain_pairs": 128,
+  "no_new_solver_checks": true,
+  "historical_cpu_credit_proven": false
+}

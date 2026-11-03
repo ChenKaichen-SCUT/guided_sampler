@@ -1,0 +1,17 @@
+{
+  "events": 520,
+  "completed_evaluations": 0,
+  "completed_domains": 273,
+  "parameters": 0,
+  "cancel_stages": {
+    "NumericValues": 51,
+    "LineTerms": 10,
+    "FormulaDomain": 27,
+    "TargetSelection": 3
+  },
+  "candidate_reasons": {},
+  "target_statuses": {
+    "no_nonzero_legal_parameter": 2118,
+    "wall_budget_exhausted": 2
+  }
+}

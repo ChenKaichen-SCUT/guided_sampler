@@ -1,0 +1,12 @@
+{
+  "correctness_passed": true,
+  "real_candidate_evaluations_in_main_L2": 0,
+  "complete_evaluations_in_events_without_tail_overrun": 0,
+  "all_three_Shared_repeats_positive_instances": [],
+  "offline_opportunity_threshold_met": false,
+  "historical_cpu_credit_proven": false,
+  "online_benefit_established": false,
+  "online_experiments_run": 0,
+  "next_online_authorized": false,
+  "decision": "整体 No-Go；保留已测得的局部成本/候选进展"
+}

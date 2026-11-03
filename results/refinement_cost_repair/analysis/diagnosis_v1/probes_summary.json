@@ -1,0 +1,23 @@
+{
+  "events": 36,
+  "completed_evaluations": 133,
+  "completed_domains": 256,
+  "parameters": 268,
+  "cancel_stages": {
+    "NumericValues": 8,
+    "ValidateFormula": 3,
+    "OfficialObserve": 2,
+    "PreserveAndScore": 1
+  },
+  "candidate_reasons": {
+    "protected_observation_missing": 99,
+    "candidate_duplicate": 4,
+    "incomplete_candidate": 6,
+    "eligible_strict_improvement": 34
+  },
+  "target_statuses": {
+    "no_nonzero_legal_parameter": 992,
+    "complete_no_hit_in_domain": 394,
+    "bounded_hits_found": 102
+  }
+}

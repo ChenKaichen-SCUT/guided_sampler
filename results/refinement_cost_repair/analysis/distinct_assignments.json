@@ -1,0 +1,14 @@
+{
+  "by_formula": {
+    "convert": 95,
+    "SMT_random": 8,
+    "SMT_real": 10
+  },
+  "total_distinct_formula_assignment_pairs": 113,
+  "assignment_records_including_repetitions": {
+    "convert": 867,
+    "SMT_random": 238,
+    "SMT_real": 246
+  },
+  "audit_summary_field_unique_official_assignments_checked_means_cache_miss_checks_not_global_unique": "The independent checker uses an LRU cache of 32 assignments; eviction can trigger repeated official checks. Distinct counts are computed here from complete formula/assignment identities, not from cache misses."
+}

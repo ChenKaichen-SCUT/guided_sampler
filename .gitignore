@@ -57,3 +57,9 @@ __pycache__/
 /results/refinement_cost_repair/offline/
 /results/refinement_cost_repair/oracle/
 /results/refinement_cost_repair/analysis/audit_v1/official/
+# Detailed analysis tables and witnesses are included in the same lossless archive.
+/results/refinement_cost_repair/analysis/audit_v1/*.json
+!/results/refinement_cost_repair/analysis/audit_v1/summary.json
+/results/refinement_cost_repair/analysis/diagnosis_v1/events.json
+/results/refinement_cost_repair/analysis/diagnosis_v1/preprocess.json
+/results/refinement_cost_repair/analysis/diagnosis_v1/diagnostic_opportunities.json

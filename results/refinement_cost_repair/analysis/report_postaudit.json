@@ -1,0 +1,11 @@
+{
+  "report_sha256": "85f5e0ca3ef740b0e444b7f2a43e1e58b88b3bd975c7514d8de54216aa90b0d8",
+  "input_summary_sha256": "d94ebd4292c65cf37a866dbc6e2f4ddcff0bdc8ffba667d8bbd1ab8d79e04477",
+  "distinct_counts_sha256": "d0459c2bf8d94829f75de72801a612dcb7f4ab49c6242239b912560f8a1d46e8",
+  "recorded_domains_sha256": "ae2e7d4fe16d697183407556e5f0f69bb22192500d32582c2564d8e12be2d5cb",
+  "diagnostic_opportunities_sha256": "a06d1d1a984a78ab6c13ec4f9716192b53e230f044ca842db27b780786e9562e",
+  "frozen_implementation_changed": false,
+  "extra_real_workers": 0,
+  "solver_checks": 0,
+  "note": "Post-audit interpretation and correction of a count label; original logs and frozen scripts preserved."
+}

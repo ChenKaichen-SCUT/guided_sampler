@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "frozen_files": 77,
+  "protected_metadata_files": 19031,
+  "protected_hashes": 35,
+  "original_artifacts_unchanged": true,
+  "offline_sequences": 39,
+  "source_models": 43,
+  "replayed_events": 559,
+  "diagnostic_workers": 9,
+  "oracle_cases": 24,
+  "oracle_checks_attempted": 0,
+  "all_prefixes_preserved": true,
+  "official_and_independent_agree": true,
+  "actual_replacement_isolation_passed": true,
+  "historical_cpu_credit_proven": false,
+  "real_online_sessions": 0,
+  "all_failures_retained": true,
+  "no_real_solver_in_audit": true,
+  "report_sha256": "85f5e0ca3ef740b0e444b7f2a43e1e58b88b3bd975c7514d8de54216aa90b0d8"
+}

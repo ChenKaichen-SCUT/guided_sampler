@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "metadata_pairs": 9,
+  "direction_selection_pairs": 24,
+  "domain_pairs": 128,
+  "target_pairs": 128,
+  "candidate_pairs": 66,
+  "completed_result_pairs": 26,
+  "real_solver_checks": 0,
+  "semantic_mismatch_stops_before_matrix": true
+}

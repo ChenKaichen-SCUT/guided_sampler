@@ -1,0 +1,87 @@
+{
+  "passed": true,
+  "groups": {
+    "probe:convert:Legacy": {
+      "status_incomplete": 4,
+      "status_not_started": 60
+    },
+    "probe:SMT_random:Legacy": {},
+    "probe:SMT_real:Legacy": {
+      "status_incomplete": 4,
+      "status_not_started": 60
+    },
+    "probe:convert:Shared": {
+      "status_supported": 64,
+      "logged_complete_domains": 64,
+      "has_nonzero_parameter": 64
+    },
+    "probe:convert:ValueCache": {
+      "status_supported": 64,
+      "logged_complete_domains": 64,
+      "has_nonzero_parameter": 64
+    },
+    "probe:SMT_random:Shared": {},
+    "probe:SMT_random:ValueCache": {},
+    "probe:SMT_real:Shared": {
+      "status_supported": 64,
+      "logged_complete_domains": 64,
+      "singleton_zero": 62,
+      "has_nonzero_parameter": 2,
+      "verified_no_nonzero_legal_parameter": 496
+    },
+    "probe:SMT_real:ValueCache": {
+      "status_supported": 64,
+      "logged_complete_domains": 64,
+      "singleton_zero": 62,
+      "has_nonzero_parameter": 2,
+      "verified_no_nonzero_legal_parameter": 496
+    },
+    "supplement:convert:Legacy": {},
+    "main_L2:convert:Legacy": {},
+    "supplement:convert:Shared": {},
+    "main_L2:convert:Shared": {},
+    "main_L2:convert:ValueCache": {},
+    "supplement:SMT_random:Legacy": {},
+    "main_L2:SMT_random:Legacy": {},
+    "supplement:SMT_random:Shared": {},
+    "main_L2:SMT_random:Shared": {},
+    "main_L2:SMT_random:ValueCache": {},
+    "supplement:SMT_real:Legacy": {
+      "status_incomplete": 14,
+      "status_not_started": 210
+    },
+    "main_L2:SMT_real:Legacy": {
+      "status_incomplete": 21,
+      "status_not_started": 315
+    },
+    "supplement:SMT_real:Shared": {
+      "status_supported": 65,
+      "logged_complete_domains": 67,
+      "singleton_zero": 67,
+      "status_incomplete": 13,
+      "status_not_started": 146,
+      "verified_no_nonzero_legal_parameter": 516,
+      "incomplete_hit_search": 1
+    },
+    "main_L2:SMT_real:Shared": {
+      "status_supported": 103,
+      "logged_complete_domains": 105,
+      "singleton_zero": 105,
+      "status_incomplete": 20,
+      "status_not_started": 213,
+      "verified_no_nonzero_legal_parameter": 818,
+      "incomplete_hit_search": 1
+    },
+    "main_L2:SMT_real:ValueCache": {
+      "status_supported": 98,
+      "logged_complete_domains": 101,
+      "singleton_zero": 101,
+      "status_incomplete": 21,
+      "status_not_started": 217,
+      "verified_no_nonzero_legal_parameter": 784
+    }
+  },
+  "solver_checks": 0,
+  "additional_real_experiment_workers": 0,
+  "scope": "classify and verify recorded completed intervals; no reconstruction of uncompleted work or changes to raw logs"
+}

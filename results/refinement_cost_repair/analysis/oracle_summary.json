@@ -1,0 +1,1893 @@
+{
+  "cases": 24,
+  "checks_attempted": 0,
+  "check_returns": 0,
+  "validated_deliveries": 0,
+  "last_stages": {
+    "OracleLegacy:extra_build": 4,
+    "OracleShared:extra_build": 12,
+    "OracleLegacy:reach_build": 8
+  },
+  "records": [
+    {
+      "id": "convert_02_OracleLegacy",
+      "instance": "convert",
+      "position": 2,
+      "mode": "OracleLegacy",
+      "status": "parent_deadline",
+      "last_work_stage": "extra_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:09:07.446774+00:00",
+        "finished_utc": "2026-11-03T09:09:10.457249+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0006455470000000033,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.010529265011428,
+        "user_cpu": 2.8133179999999998,
+        "system_cpu": 0.05173,
+        "max_rss_kb": 144288,
+        "deadline_seconds": 3,
+        "exit_delay": 0.010532044019782916,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.025934629999999993,
+          "wall": 0.11441239298437722,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.007581310000000001,
+          "wall": 0.011759335990063846,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.010414026,
+          "wall": 0.02161110899760388,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.464873539,
+          "wall": 0.46515398198971525,
+          "state": "completed"
+        },
+        "reach_build": {
+          "cpu": 0.294709035,
+          "wall": 0.29478320499765687,
+          "state": "completed"
+        },
+        "prefix_observations": {
+          "cpu": 0.16467944300000004,
+          "wall": 0.16479221900226548,
+          "state": "completed"
+        },
+        "protected_build": {
+          "cpu": 1.3184349069999999,
+          "wall": 1.3200635029934347,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "extra_build",
+        "state": "entered",
+        "wall": 2.3949197809852194,
+        "cpu": 2.287291854,
+        "counts": {
+          "prefix_argument_references": 8770,
+          "bit_requests": 26250,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 9580,
+          "encoded_observations": 26250,
+          "original_nodes": 9580,
+          "original_edges": 15183,
+          "protected_count": 26250,
+          "target_count": 152982
+        }
+      }
+    },
+    {
+      "id": "convert_02_OracleShared",
+      "instance": "convert",
+      "position": 2,
+      "mode": "OracleShared",
+      "status": "parent_deadline",
+      "last_work_stage": "extra_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:09:10.475354+00:00",
+        "finished_utc": "2026-11-03T09:09:13.483031+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005555660000000004,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.0088273779838346,
+        "user_cpu": 2.818225,
+        "system_cpu": 0.052189,
+        "max_rss_kb": 147648,
+        "deadline_seconds": 3,
+        "exit_delay": 0.00882863497827202,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.024924125,
+          "wall": 0.11037986201699823,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.007499463999999997,
+          "wall": 0.013613993010949343,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.009464591000000001,
+          "wall": 0.019929357018554583,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.4630803110000001,
+          "wall": 0.4635452549846377,
+          "state": "completed"
+        },
+        "reach_build": {
+          "cpu": 0.31302288999999994,
+          "wall": 0.31321919200127013,
+          "state": "completed"
+        },
+        "prefix_observations": {
+          "cpu": 0.16366133399999994,
+          "wall": 0.16384299198398367,
+          "state": "completed"
+        },
+        "protected_build": {
+          "cpu": 1.384839893,
+          "wall": 1.385019152017776,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "extra_build",
+        "state": "entered",
+        "wall": 2.4715978869935498,
+        "cpu": 2.367086821,
+        "counts": {
+          "prefix_argument_references": 11694,
+          "bit_requests": 26250,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 9580,
+          "encoded_observations": 26250,
+          "original_nodes": 9580,
+          "original_edges": 15183,
+          "protected_count": 26250,
+          "target_count": 152982
+        }
+      }
+    },
+    {
+      "id": "convert_03_OracleLegacy",
+      "instance": "convert",
+      "position": 3,
+      "mode": "OracleLegacy",
+      "status": "parent_deadline",
+      "last_work_stage": "extra_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:09:13.500622+00:00",
+        "finished_utc": "2026-11-03T09:09:16.511682+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.000542527000000001,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.011087947001215,
+        "user_cpu": 2.749554,
+        "system_cpu": 0.08344,
+        "max_rss_kb": 151852,
+        "deadline_seconds": 3,
+        "exit_delay": 0.011089123989222571,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.029869538000000005,
+          "wall": 0.14158186700660735,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.008401982999999995,
+          "wall": 0.02018794498872012,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.011134593999999998,
+          "wall": 0.026928406005026773,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.48593312699999996,
+          "wall": 0.48640404900652356,
+          "state": "completed"
+        },
+        "reach_build": {
+          "cpu": 0.3009173420000001,
+          "wall": 0.30103923799470067,
+          "state": "completed"
+        },
+        "prefix_observations": {
+          "cpu": 0.23318239900000004,
+          "wall": 0.23330958798760548,
+          "state": "completed"
+        },
+        "protected_build": {
+          "cpu": 0.05603455600000018,
+          "wall": 0.056145867973100394,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "extra_build",
+        "state": "entered",
+        "wall": 1.2680071060021874,
+        "cpu": 1.126077801,
+        "counts": {
+          "prefix_argument_references": 8770,
+          "bit_requests": 1049,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 9580,
+          "encoded_observations": 1049,
+          "original_nodes": 9580,
+          "original_edges": 15183,
+          "protected_count": 1049,
+          "target_count": 151963
+        }
+      }
+    },
+    {
+      "id": "convert_03_OracleShared",
+      "instance": "convert",
+      "position": 3,
+      "mode": "OracleShared",
+      "status": "parent_deadline",
+      "last_work_stage": "extra_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:09:16.534533+00:00",
+        "finished_utc": "2026-11-03T09:09:19.547775+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005331089999999969,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.013271497999085,
+        "user_cpu": 2.80152,
+        "system_cpu": 0.07203899999999999,
+        "max_rss_kb": 158032,
+        "deadline_seconds": 3,
+        "exit_delay": 0.013273139018565416,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.02607228,
+          "wall": 0.11301558199920692,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.008859039999999999,
+          "wall": 0.013243280001915991,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.009625898,
+          "wall": 0.019710296008270234,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.48396324099999993,
+          "wall": 0.48441299999831244,
+          "state": "completed"
+        },
+        "reach_build": {
+          "cpu": 0.34267200499999995,
+          "wall": 0.34280457501881756,
+          "state": "completed"
+        },
+        "prefix_observations": {
+          "cpu": 0.24460819600000006,
+          "wall": 0.24486304097808897,
+          "state": "completed"
+        },
+        "protected_build": {
+          "cpu": 0.056551529999999905,
+          "wall": 0.056683025002712384,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "extra_build",
+        "state": "entered",
+        "wall": 1.2784035220101941,
+        "cpu": 1.173929513,
+        "counts": {
+          "prefix_argument_references": 11694,
+          "bit_requests": 1049,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 9580,
+          "encoded_observations": 1049,
+          "original_nodes": 9580,
+          "original_edges": 15183,
+          "protected_count": 1049,
+          "target_count": 151963
+        }
+      }
+    },
+    {
+      "id": "convert_04_OracleLegacy",
+      "instance": "convert",
+      "position": 4,
+      "mode": "OracleLegacy",
+      "status": "parent_deadline",
+      "last_work_stage": "extra_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:09:19.568554+00:00",
+        "finished_utc": "2026-11-03T09:09:22.579121+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0006288740000000015,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.010598016990116,
+        "user_cpu": 2.802606,
+        "system_cpu": 0.064243,
+        "max_rss_kb": 152760,
+        "deadline_seconds": 3,
+        "exit_delay": 0.01059962998260744,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.027079195000000004,
+          "wall": 0.1157521220156923,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.007413289,
+          "wall": 0.011396483983844519,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.00943231,
+          "wall": 0.022183930996106938,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.47180942000000003,
+          "wall": 0.47232509302557446,
+          "state": "completed"
+        },
+        "reach_build": {
+          "cpu": 0.28195918899999994,
+          "wall": 0.2820966500148643,
+          "state": "completed"
+        },
+        "prefix_observations": {
+          "cpu": 0.314542385,
+          "wall": 0.31474620100925677,
+          "state": "completed"
+        },
+        "protected_build": {
+          "cpu": 0.24433604500000006,
+          "wall": 0.2444429589959327,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "extra_build",
+        "state": "entered",
+        "wall": 1.4652367180096917,
+        "cpu": 1.357141938,
+        "counts": {
+          "prefix_argument_references": 8770,
+          "bit_requests": 4324,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 9580,
+          "encoded_observations": 4324,
+          "original_nodes": 9580,
+          "original_edges": 15183,
+          "protected_count": 4324,
+          "target_count": 147640
+        }
+      }
+    },
+    {
+      "id": "convert_04_OracleShared",
+      "instance": "convert",
+      "position": 4,
+      "mode": "OracleShared",
+      "status": "parent_deadline",
+      "last_work_stage": "extra_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:09:22.594557+00:00",
+        "finished_utc": "2026-11-03T09:09:25.607636+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0004944549999999978,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.013107934995787,
+        "user_cpu": 2.783467,
+        "system_cpu": 0.09185,
+        "max_rss_kb": 158160,
+        "deadline_seconds": 3,
+        "exit_delay": 0.013109280989738181,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.025657222999999996,
+          "wall": 0.11242643898003735,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.0071923370000000035,
+          "wall": 0.010852910985704511,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.010573308000000003,
+          "wall": 0.020888359984382987,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.474785452,
+          "wall": 0.47509254098986275,
+          "state": "completed"
+        },
+        "reach_build": {
+          "cpu": 0.31750176500000005,
+          "wall": 0.31765599601203576,
+          "state": "completed"
+        },
+        "prefix_observations": {
+          "cpu": 0.2938554539999999,
+          "wall": 0.29399737299536355,
+          "state": "completed"
+        },
+        "protected_build": {
+          "cpu": 0.24729641300000016,
+          "wall": 0.24743475299328566,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "extra_build",
+        "state": "entered",
+        "wall": 1.48048730098526,
+        "cpu": 1.37746252,
+        "counts": {
+          "prefix_argument_references": 11694,
+          "bit_requests": 4324,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 9580,
+          "encoded_observations": 4324,
+          "original_nodes": 9580,
+          "original_edges": 15183,
+          "protected_count": 4324,
+          "target_count": 147640
+        }
+      }
+    },
+    {
+      "id": "convert_05_OracleLegacy",
+      "instance": "convert",
+      "position": 5,
+      "mode": "OracleLegacy",
+      "status": "parent_deadline",
+      "last_work_stage": "extra_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:09:25.624745+00:00",
+        "finished_utc": "2026-11-03T09:09:28.632542+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005284649999999988,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.007825154985767,
+        "user_cpu": 2.801102,
+        "system_cpu": 0.068516,
+        "max_rss_kb": 153268,
+        "deadline_seconds": 3,
+        "exit_delay": 0.00782644099672325,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.026898987,
+          "wall": 0.11092389200348407,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.007588339000000003,
+          "wall": 0.011726932978490368,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.010216335000000007,
+          "wall": 0.02085514599457383,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.47707831599999995,
+          "wall": 0.47754762999829836,
+          "state": "completed"
+        },
+        "reach_build": {
+          "cpu": 0.28860914299999996,
+          "wall": 0.28879029699601233,
+          "state": "completed"
+        },
+        "prefix_observations": {
+          "cpu": 0.3213875850000002,
+          "wall": 0.3215196880046278,
+          "state": "completed"
+        },
+        "protected_build": {
+          "cpu": 0.13260699200000015,
+          "wall": 0.1332790740125347,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "extra_build",
+        "state": "entered",
+        "wall": 1.367109143990092,
+        "cpu": 1.2649357540000001,
+        "counts": {
+          "prefix_argument_references": 8770,
+          "bit_requests": 2266,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 9580,
+          "encoded_observations": 2266,
+          "original_nodes": 9580,
+          "original_edges": 15183,
+          "protected_count": 2266,
+          "target_count": 145375
+        }
+      }
+    },
+    {
+      "id": "convert_05_OracleShared",
+      "instance": "convert",
+      "position": 5,
+      "mode": "OracleShared",
+      "status": "parent_deadline",
+      "last_work_stage": "extra_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:09:28.653469+00:00",
+        "finished_utc": "2026-11-03T09:09:31.659936+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005442439999999993,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.0064998570014723,
+        "user_cpu": 2.806384,
+        "system_cpu": 0.064145,
+        "max_rss_kb": 158804,
+        "deadline_seconds": 3,
+        "exit_delay": 0.006501258991193026,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.026343925999999997,
+          "wall": 0.10905621902202256,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.007709335000000001,
+          "wall": 0.013435342989396304,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.009626733999999998,
+          "wall": 0.019401679979637265,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.465811805,
+          "wall": 0.46626053302315995,
+          "state": "completed"
+        },
+        "reach_build": {
+          "cpu": 0.324343869,
+          "wall": 0.32441128001664765,
+          "state": "completed"
+        },
+        "prefix_observations": {
+          "cpu": 0.33524320900000004,
+          "wall": 0.33538207202218473,
+          "state": "completed"
+        },
+        "protected_build": {
+          "cpu": 0.12704908500000012,
+          "wall": 0.1271998709999025,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "extra_build",
+        "state": "entered",
+        "wall": 1.3974169569846708,
+        "cpu": 1.2966919840000002,
+        "counts": {
+          "prefix_argument_references": 11694,
+          "bit_requests": 2266,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 9580,
+          "encoded_observations": 2266,
+          "original_nodes": 9580,
+          "original_edges": 15183,
+          "protected_count": 2266,
+          "target_count": 145375
+        }
+      }
+    },
+    {
+      "id": "SMT_random_02_OracleLegacy",
+      "instance": "SMT_random",
+      "position": 2,
+      "mode": "OracleLegacy",
+      "status": "parent_deadline",
+      "last_work_stage": "reach_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:09:31.673498+00:00",
+        "finished_utc": "2026-11-03T09:09:34.681347+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005359379999999997,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.0078761910262983,
+        "user_cpu": 2.844589,
+        "system_cpu": 0.020087999999999998,
+        "max_rss_kb": 55960,
+        "deadline_seconds": 3,
+        "exit_delay": 0.007877827010815963,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.026849268,
+          "wall": 0.11589771500439383,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.004839331000000002,
+          "wall": 0.008180739008821547,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.008888221000000002,
+          "wall": 0.021096645010402426,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.347287453,
+          "wall": 0.34766056801890954,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "reach_build",
+        "state": "entered",
+        "wall": 0.4941777939966414,
+        "cpu": 0.38825137299999996,
+        "counts": {
+          "prefix_argument_references": 0,
+          "bit_requests": 0,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 0,
+          "encoded_observations": 0,
+          "original_nodes": 5792,
+          "original_edges": 12552
+        }
+      }
+    },
+    {
+      "id": "SMT_random_02_OracleShared",
+      "instance": "SMT_random",
+      "position": 2,
+      "mode": "OracleShared",
+      "status": "parent_deadline",
+      "last_work_stage": "extra_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:09:34.701057+00:00",
+        "finished_utc": "2026-11-03T09:09:37.710785+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.000638426999999997,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.0097582839953247,
+        "user_cpu": 2.793705,
+        "system_cpu": 0.063856,
+        "max_rss_kb": 118708,
+        "deadline_seconds": 3,
+        "exit_delay": 0.009759432985447347,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.026004749000000004,
+          "wall": 0.12218398199183866,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.0048364660000000045,
+          "wall": 0.00846797798294574,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.008805866000000006,
+          "wall": 0.022554757975740358,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.327416217,
+          "wall": 0.327979771012906,
+          "state": "completed"
+        },
+        "reach_build": {
+          "cpu": 0.25055084600000005,
+          "wall": 0.25064043601742014,
+          "state": "completed"
+        },
+        "prefix_observations": {
+          "cpu": 0.08374524300000008,
+          "wall": 0.08386155898915604,
+          "state": "completed"
+        },
+        "protected_build": {
+          "cpu": 0.28894694799999987,
+          "wall": 0.2890959990036208,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "extra_build",
+        "state": "entered",
+        "wall": 1.1070348779903725,
+        "cpu": 0.9908929980000001,
+        "counts": {
+          "prefix_argument_references": 8444,
+          "bit_requests": 5281,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 5792,
+          "encoded_observations": 5281,
+          "original_nodes": 5792,
+          "original_edges": 12552,
+          "protected_count": 5281,
+          "target_count": 98211
+        }
+      }
+    },
+    {
+      "id": "SMT_random_03_OracleLegacy",
+      "instance": "SMT_random",
+      "position": 3,
+      "mode": "OracleLegacy",
+      "status": "parent_deadline",
+      "last_work_stage": "reach_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:09:37.729542+00:00",
+        "finished_utc": "2026-11-03T09:09:40.736278+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005877720000000003,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.006769503990654,
+        "user_cpu": 2.80231,
+        "system_cpu": 0.055886,
+        "max_rss_kb": 55968,
+        "deadline_seconds": 3,
+        "exit_delay": 0.00677065399941057,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.026862154000000003,
+          "wall": 0.11734799802070484,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.005502343999999996,
+          "wall": 0.009176027990179136,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.008558102999999997,
+          "wall": 0.022640705981757492,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.35154393,
+          "wall": 0.3533680260006804,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "reach_build",
+        "state": "entered",
+        "wall": 0.5037649779987987,
+        "cpu": 0.392846067,
+        "counts": {
+          "prefix_argument_references": 0,
+          "bit_requests": 0,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 0,
+          "encoded_observations": 0,
+          "original_nodes": 5792,
+          "original_edges": 12552
+        }
+      }
+    },
+    {
+      "id": "SMT_random_03_OracleShared",
+      "instance": "SMT_random",
+      "position": 3,
+      "mode": "OracleShared",
+      "status": "parent_deadline",
+      "last_work_stage": "extra_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:09:40.754014+00:00",
+        "finished_utc": "2026-11-03T09:09:43.766093+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0007044969999999984,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.0139934470062144,
+        "user_cpu": 2.805871,
+        "system_cpu": 0.044092,
+        "max_rss_kb": 122108,
+        "deadline_seconds": 3,
+        "exit_delay": 0.013994879991514608,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.027091133,
+          "wall": 0.12401698200847022,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.005003442000000004,
+          "wall": 0.00941578601486981,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.009195558999999999,
+          "wall": 0.01994314498733729,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.324511306,
+          "wall": 0.3247837229864672,
+          "state": "completed"
+        },
+        "reach_build": {
+          "cpu": 0.255067402,
+          "wall": 0.25532325700623915,
+          "state": "completed"
+        },
+        "prefix_observations": {
+          "cpu": 0.11786169699999993,
+          "wall": 0.11797093800851144,
+          "state": "completed"
+        },
+        "protected_build": {
+          "cpu": 0.15775171500000007,
+          "wall": 0.15789677502471022,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "extra_build",
+        "state": "entered",
+        "wall": 1.0123766380129382,
+        "cpu": 0.89712619,
+        "counts": {
+          "prefix_argument_references": 8444,
+          "bit_requests": 2857,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 5792,
+          "encoded_observations": 2857,
+          "original_nodes": 5792,
+          "original_edges": 12552,
+          "protected_count": 2857,
+          "target_count": 95755
+        }
+      }
+    },
+    {
+      "id": "SMT_random_04_OracleLegacy",
+      "instance": "SMT_random",
+      "position": 4,
+      "mode": "OracleLegacy",
+      "status": "parent_deadline",
+      "last_work_stage": "reach_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:09:43.783261+00:00",
+        "finished_utc": "2026-11-03T09:09:46.787833+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005569360000000079,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.0046036730054766,
+        "user_cpu": 2.840375,
+        "system_cpu": 0.028003,
+        "max_rss_kb": 56096,
+        "deadline_seconds": 3,
+        "exit_delay": 0.004605196008924395,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.025441232999999997,
+          "wall": 0.1116519259812776,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.004756453000000001,
+          "wall": 0.007588170003145933,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.008463126999999997,
+          "wall": 0.018376268009888008,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.32930602699999995,
+          "wall": 0.32979627200984396,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "reach_build",
+        "state": "entered",
+        "wall": 0.4689031259913463,
+        "cpu": 0.368308182,
+        "counts": {
+          "prefix_argument_references": 0,
+          "bit_requests": 0,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 0,
+          "encoded_observations": 0,
+          "original_nodes": 5792,
+          "original_edges": 12552
+        }
+      }
+    },
+    {
+      "id": "SMT_random_04_OracleShared",
+      "instance": "SMT_random",
+      "position": 4,
+      "mode": "OracleShared",
+      "status": "parent_deadline",
+      "last_work_stage": "extra_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:09:46.807121+00:00",
+        "finished_utc": "2026-11-03T09:09:49.816995+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005956159999999933,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.009903131023748,
+        "user_cpu": 2.794342,
+        "system_cpu": 0.060222,
+        "max_rss_kb": 122572,
+        "deadline_seconds": 3,
+        "exit_delay": 0.009904784004902467,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.027875322,
+          "wall": 0.12765131698688492,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.006331903999999996,
+          "wall": 0.008913190016755834,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.008562504999999998,
+          "wall": 0.018204004009021446,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.332511943,
+          "wall": 0.3328754329995718,
+          "state": "completed"
+        },
+        "reach_build": {
+          "cpu": 0.24723462699999998,
+          "wall": 0.24730997698497958,
+          "state": "completed"
+        },
+        "prefix_observations": {
+          "cpu": 0.13417926400000002,
+          "wall": 0.1343071820156183,
+          "state": "completed"
+        },
+        "protected_build": {
+          "cpu": 0.06994025699999995,
+          "wall": 0.07020056300098076,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "extra_build",
+        "state": "entered",
+        "wall": 0.9415579149790574,
+        "cpu": 0.8271859899999999,
+        "counts": {
+          "prefix_argument_references": 8444,
+          "bit_requests": 1358,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 5792,
+          "encoded_observations": 1358,
+          "original_nodes": 5792,
+          "original_edges": 12552,
+          "protected_count": 1358,
+          "target_count": 94669
+        }
+      }
+    },
+    {
+      "id": "SMT_random_05_OracleLegacy",
+      "instance": "SMT_random",
+      "position": 5,
+      "mode": "OracleLegacy",
+      "status": "parent_deadline",
+      "last_work_stage": "reach_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:09:49.834521+00:00",
+        "finished_utc": "2026-11-03T09:09:52.839682+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005533029999999911,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.0051903809944633,
+        "user_cpu": 2.83369,
+        "system_cpu": 0.031928,
+        "max_rss_kb": 56064,
+        "deadline_seconds": 3,
+        "exit_delay": 0.005191524018300697,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.025794548,
+          "wall": 0.11406473600072786,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.004514878,
+          "wall": 0.007866102998377755,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.009162078,
+          "wall": 0.020889138017082587,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.322705422,
+          "wall": 0.32315838799695484,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "reach_build",
+        "state": "entered",
+        "wall": 0.4672193840087857,
+        "cpu": 0.36253599200000003,
+        "counts": {
+          "prefix_argument_references": 0,
+          "bit_requests": 0,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 0,
+          "encoded_observations": 0,
+          "original_nodes": 5792,
+          "original_edges": 12552
+        }
+      }
+    },
+    {
+      "id": "SMT_random_05_OracleShared",
+      "instance": "SMT_random",
+      "position": 5,
+      "mode": "OracleShared",
+      "status": "parent_deadline",
+      "last_work_stage": "extra_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:09:52.858277+00:00",
+        "finished_utc": "2026-11-03T09:09:55.870170+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0007479350000000051,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.011924922000617,
+        "user_cpu": 2.804602,
+        "system_cpu": 0.04801,
+        "max_rss_kb": 121936,
+        "deadline_seconds": 3,
+        "exit_delay": 0.011926270992262289,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.029506215,
+          "wall": 0.13109717599581927,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.004541653999999996,
+          "wall": 0.007309633016120642,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.011732445999999994,
+          "wall": 0.025230111001292244,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.32263153899999997,
+          "wall": 0.323112535988912,
+          "state": "completed"
+        },
+        "reach_build": {
+          "cpu": 0.24974527000000002,
+          "wall": 0.24982796001131646,
+          "state": "completed"
+        },
+        "prefix_observations": {
+          "cpu": 0.149170841,
+          "wall": 0.14937007098342292,
+          "state": "completed"
+        },
+        "protected_build": {
+          "cpu": 0.05827027699999998,
+          "wall": 0.05840595799963921,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "extra_build",
+        "state": "entered",
+        "wall": 0.9477959890209604,
+        "cpu": 0.8262291730000001,
+        "counts": {
+          "prefix_argument_references": 8444,
+          "bit_requests": 1059,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 5792,
+          "encoded_observations": 1059,
+          "original_nodes": 5792,
+          "original_edges": 12552,
+          "protected_count": 1059,
+          "target_count": 93790
+        }
+      }
+    },
+    {
+      "id": "SMT_real_02_OracleLegacy",
+      "instance": "SMT_real",
+      "position": 2,
+      "mode": "OracleLegacy",
+      "status": "parent_deadline",
+      "last_work_stage": "reach_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:09:55.883820+00:00",
+        "finished_utc": "2026-11-03T09:09:58.887713+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0006601450000000009,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.0039197859878186,
+        "user_cpu": 2.832725,
+        "system_cpu": 0.024107999999999997,
+        "max_rss_kb": 52776,
+        "deadline_seconds": 3,
+        "exit_delay": 0.003920816001482308,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.026588655,
+          "wall": 0.11785803901148029,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.003288098000000003,
+          "wall": 0.006094036012655124,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.007801419,
+          "wall": 0.019734364992473274,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.22245580699999995,
+          "wall": 0.22287889599101618,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "reach_build",
+        "state": "entered",
+        "wall": 0.36805751599604264,
+        "cpu": 0.260483396,
+        "counts": {
+          "prefix_argument_references": 0,
+          "bit_requests": 0,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 0,
+          "encoded_observations": 0,
+          "original_nodes": 4006,
+          "original_edges": 8880
+        }
+      }
+    },
+    {
+      "id": "SMT_real_02_OracleShared",
+      "instance": "SMT_real",
+      "position": 2,
+      "mode": "OracleShared",
+      "status": "parent_deadline",
+      "last_work_stage": "extra_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:09:58.906862+00:00",
+        "finished_utc": "2026-11-03T09:10:01.916979+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0006665720000000042,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.010146018001251,
+        "user_cpu": 2.827849,
+        "system_cpu": 0.040225,
+        "max_rss_kb": 106424,
+        "deadline_seconds": 3,
+        "exit_delay": 0.010147577995667234,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.025123394999999993,
+          "wall": 0.112355294986628,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.0035009959999999993,
+          "wall": 0.006073436001315713,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.007906118000000004,
+          "wall": 0.021377944998675957,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.22117905100000002,
+          "wall": 0.2216822790214792,
+          "state": "completed"
+        },
+        "reach_build": {
+          "cpu": 0.17034639899999998,
+          "wall": 0.17042999700061046,
+          "state": "completed"
+        },
+        "prefix_observations": {
+          "cpu": 0.045134830999999986,
+          "wall": 0.04522975301370025,
+          "state": "completed"
+        },
+        "protected_build": {
+          "cpu": 0.1509713159999999,
+          "wall": 0.15111670299666002,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "extra_build",
+        "state": "entered",
+        "wall": 0.7309954619850032,
+        "cpu": 0.624788943,
+        "counts": {
+          "prefix_argument_references": 6040,
+          "bit_requests": 2992,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 4006,
+          "encoded_observations": 2992,
+          "original_nodes": 4006,
+          "original_edges": 8880,
+          "protected_count": 2992,
+          "target_count": 62269
+        }
+      }
+    },
+    {
+      "id": "SMT_real_03_OracleLegacy",
+      "instance": "SMT_real",
+      "position": 3,
+      "mode": "OracleLegacy",
+      "status": "parent_deadline",
+      "last_work_stage": "reach_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:10:01.934672+00:00",
+        "finished_utc": "2026-11-03T09:10:04.943401+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005757819999999969,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.00876171598793,
+        "user_cpu": 2.8502099999999997,
+        "system_cpu": 0.016012,
+        "max_rss_kb": 52776,
+        "deadline_seconds": 3,
+        "exit_delay": 0.00876299399533309,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.026885364000000002,
+          "wall": 0.11603003297932446,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.0033197290000000004,
+          "wall": 0.006209851009771228,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.008657976999999997,
+          "wall": 0.01870494498871267,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.23717498700000003,
+          "wall": 0.2376214709947817,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "reach_build",
+        "state": "entered",
+        "wall": 0.3801360429788474,
+        "cpu": 0.276457392,
+        "counts": {
+          "prefix_argument_references": 0,
+          "bit_requests": 0,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 0,
+          "encoded_observations": 0,
+          "original_nodes": 4006,
+          "original_edges": 8880
+        }
+      }
+    },
+    {
+      "id": "SMT_real_03_OracleShared",
+      "instance": "SMT_real",
+      "position": 3,
+      "mode": "OracleShared",
+      "status": "parent_deadline",
+      "last_work_stage": "extra_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:10:04.960420+00:00",
+        "finished_utc": "2026-11-03T09:10:07.968260+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.000633731999999998,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.0078697740100324,
+        "user_cpu": 2.813463,
+        "system_cpu": 0.055869999999999996,
+        "max_rss_kb": 108728,
+        "deadline_seconds": 3,
+        "exit_delay": 0.00787108700023964,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.027439498,
+          "wall": 0.11322276201099157,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.003348623000000002,
+          "wall": 0.005582357000093907,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.008343736999999997,
+          "wall": 0.01747071900172159,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.22613095300000002,
+          "wall": 0.22656729200389236,
+          "state": "completed"
+        },
+        "reach_build": {
+          "cpu": 0.17487001799999996,
+          "wall": 0.17499232399859466,
+          "state": "completed"
+        },
+        "prefix_observations": {
+          "cpu": 0.06031843699999995,
+          "wall": 0.06044741702498868,
+          "state": "completed"
+        },
+        "protected_build": {
+          "cpu": 0.047699622,
+          "wall": 0.047777529020095244,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "extra_build",
+        "state": "entered",
+        "wall": 0.6482171619718429,
+        "cpu": 0.5487029219999999,
+        "counts": {
+          "prefix_argument_references": 6040,
+          "bit_requests": 911,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 4006,
+          "encoded_observations": 911,
+          "original_nodes": 4006,
+          "original_edges": 8880,
+          "protected_count": 911,
+          "target_count": 61527
+        }
+      }
+    },
+    {
+      "id": "SMT_real_04_OracleLegacy",
+      "instance": "SMT_real",
+      "position": 4,
+      "mode": "OracleLegacy",
+      "status": "parent_deadline",
+      "last_work_stage": "reach_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:10:07.980908+00:00",
+        "finished_utc": "2026-11-03T09:10:10.987185+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.000472765,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.0063031680183485,
+        "user_cpu": 2.839619,
+        "system_cpu": 0.032131,
+        "max_rss_kb": 52780,
+        "deadline_seconds": 3,
+        "exit_delay": 0.00630478301900439,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.025213905,
+          "wall": 0.10949832998448983,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.003216196999999997,
+          "wall": 0.005661586998030543,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.007643295999999997,
+          "wall": 0.01723630999913439,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.23062798899999998,
+          "wall": 0.23094728699652478,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "reach_build",
+        "state": "entered",
+        "wall": 0.36465339100686833,
+        "cpu": 0.267079444,
+        "counts": {
+          "prefix_argument_references": 0,
+          "bit_requests": 0,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 0,
+          "encoded_observations": 0,
+          "original_nodes": 4006,
+          "original_edges": 8880
+        }
+      }
+    },
+    {
+      "id": "SMT_real_04_OracleShared",
+      "instance": "SMT_real",
+      "position": 4,
+      "mode": "OracleShared",
+      "status": "parent_deadline",
+      "last_work_stage": "extra_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:10:11.005806+00:00",
+        "finished_utc": "2026-11-03T09:10:14.015604+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0006832899999999892,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.0109155329992063,
+        "user_cpu": 2.832542,
+        "system_cpu": 0.039951,
+        "max_rss_kb": 108196,
+        "deadline_seconds": 3,
+        "exit_delay": 0.010916908999206498,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.027965450999999995,
+          "wall": 0.11595060699619353,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.0033407239999999998,
+          "wall": 0.005501235980773345,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.008796967000000003,
+          "wall": 0.018290139007149264,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.228047351,
+          "wall": 0.2283516509924084,
+          "state": "completed"
+        },
+        "reach_build": {
+          "cpu": 0.17544007699999997,
+          "wall": 0.17556564300321043,
+          "state": "completed"
+        },
+        "prefix_observations": {
+          "cpu": 0.078461208,
+          "wall": 0.07852539900341071,
+          "state": "completed"
+        },
+        "protected_build": {
+          "cpu": 0.036211106999999965,
+          "wall": 0.036263895977754146,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "extra_build",
+        "state": "entered",
+        "wall": 0.6601855660264846,
+        "cpu": 0.558778837,
+        "counts": {
+          "prefix_argument_references": 6040,
+          "bit_requests": 692,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 4006,
+          "encoded_observations": 692,
+          "original_nodes": 4006,
+          "original_edges": 8880,
+          "protected_count": 692,
+          "target_count": 60908
+        }
+      }
+    },
+    {
+      "id": "SMT_real_05_OracleLegacy",
+      "instance": "SMT_real",
+      "position": 5,
+      "mode": "OracleLegacy",
+      "status": "parent_deadline",
+      "last_work_stage": "reach_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:10:14.033058+00:00",
+        "finished_utc": "2026-11-03T09:10:17.042199+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.000554885000000005,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.0091720220225397,
+        "user_cpu": 2.843515,
+        "system_cpu": 0.016132999999999998,
+        "max_rss_kb": 52648,
+        "deadline_seconds": 3,
+        "exit_delay": 0.009173736005323008,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.027927280000000002,
+          "wall": 0.12510950601426885,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.0034870020000000064,
+          "wall": 0.005621504009468481,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.008586948999999997,
+          "wall": 0.018655920983292162,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.24019446000000005,
+          "wall": 0.24106578799546696,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "reach_build",
+        "state": "entered",
+        "wall": 0.39162015801412053,
+        "cpu": 0.28054475500000003,
+        "counts": {
+          "prefix_argument_references": 0,
+          "bit_requests": 0,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 0,
+          "encoded_observations": 0,
+          "original_nodes": 4006,
+          "original_edges": 8880
+        }
+      }
+    },
+    {
+      "id": "SMT_real_05_OracleShared",
+      "instance": "SMT_real",
+      "position": 5,
+      "mode": "OracleShared",
+      "status": "parent_deadline",
+      "last_work_stage": "extra_build",
+      "checks_attempted": 0,
+      "check_return": false,
+      "validated_delivery": false,
+      "answer": null,
+      "result": {},
+      "terminal": {
+        "started_utc": "2026-11-03T09:10:17.059245+00:00",
+        "finished_utc": "2026-11-03T09:10:20.068031+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0006221640000000084,
+        "returncode": -9,
+        "external_timeout": true,
+        "parent_wall": 3.0088143089960795,
+        "user_cpu": 2.8185089999999997,
+        "system_cpu": 0.051752,
+        "max_rss_kb": 107708,
+        "deadline_seconds": 3,
+        "exit_delay": 0.008815551991574466,
+        "no_retry": true
+      },
+      "stages": {
+        "imports": {
+          "cpu": 0.028232815,
+          "wall": 0.11701842199545354,
+          "state": "completed"
+        },
+        "input_read": {
+          "cpu": 0.003676108000000001,
+          "wall": 0.007009508000919595,
+          "state": "completed"
+        },
+        "parse_formula": {
+          "cpu": 0.008101303000000004,
+          "wall": 0.017680999008007348,
+          "state": "completed"
+        },
+        "export_ast": {
+          "cpu": 0.234049787,
+          "wall": 0.23431719501968473,
+          "state": "completed"
+        },
+        "reach_build": {
+          "cpu": 0.18309741100000004,
+          "wall": 0.1831551089999266,
+          "state": "completed"
+        },
+        "prefix_observations": {
+          "cpu": 0.08297514000000006,
+          "wall": 0.08304017299087718,
+          "state": "completed"
+        },
+        "protected_build": {
+          "cpu": 0.018305934000000024,
+          "wall": 0.018435575999319553,
+          "state": "completed"
+        }
+      },
+      "raw_last_stage": {
+        "stage": "extra_build",
+        "state": "entered",
+        "wall": 0.6626188580121379,
+        "cpu": 0.558953543,
+        "counts": {
+          "prefix_argument_references": 6040,
+          "bit_requests": 316,
+          "bit_cache_hits": 0,
+          "encoded_nodes": 4006,
+          "encoded_observations": 316,
+          "original_nodes": 4006,
+          "original_edges": 8880,
+          "protected_count": 316,
+          "target_count": 60631
+        }
+      }
+    }
+  ]
+}
