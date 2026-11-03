@@ -20,7 +20,7 @@ for kind,path,jobs in [('probes','probes/legacy_v1',[j for j in cfg['probes'] if
    rs,trunc=stream_rows(d/'stream.jsonl');assert not trunc and not any(r['kind']=='failure' for r in rs)
 for v in ['release','sanitize']:
  for repair in ['Legacy','ValueCache','Shared']:
-  r=read(BASE/f'correctness/isolation_{v}_final/{repair}/audit.json');assert r['passed'] and r['checks']['actual_strict_covered_replacement_count']>=1
+  r=read(BASE/f'correctness/isolation_{v}_verified/{repair}/audit.json');assert r['passed'] and r['checks']['actual_strict_covered_replacement_count']>=1
 oracle=read(BASE/'analysis/oracle_summary.json');assert oracle['cases']==24 and oracle['checks_attempted']<=24
 assert not (BASE/'online').exists() and not (BASE/'short').exists() and not (BASE/'formal').exists()
 write(MAN/'attempts.json',{'all_failures_retained':True,'bounded_jobs':attempts,'correctness_and_build_attempts':[str(p.relative_to(ROOT)) for p in sorted((BASE/'build_logs').rglob('*')) if p.is_file()],'real_online_sessions':0,'HighDiv_reruns':0,'additional_seeds':0,'B_enabled':False})

@@ -34,10 +34,11 @@ struct CostTrace {
         for(unsigned i=0;i<records.size();++i){auto const& r=records[i];if(!r.calls)continue;j["stages"][stage_names[i]]={{"calls",r.calls},{"completed",r.completed},{"incomplete",r.incomplete},{"nodes",r.nodes},{"edges",r.edges},{"cache_hits",r.cache_hits},{"cache_misses",r.cache_misses},{"full_size_allocations",r.full_size_allocations},{"allocation_slots",r.allocation_slots},{"full_size_scans",r.full_size_scans},{"scan_slots",r.scan_slots},{"budget_checks",r.budget_checks},{"inclusive_cpu",r.inclusive_cpu},{"inclusive_wall",r.inclusive_wall},{"exclusive_cpu",r.exclusive_cpu},{"exclusive_wall",r.exclusive_wall},{"current_node",r.current_node},{"current_direction",r.current_direction}};}return j;}
 };
 class StageScope {
-    CostTrace* trace;StageScope* parent=nullptr;RepairStage stage,previous;double w=0,c=0,child_w=0,child_c=0;int exceptions=0;
+    CostTrace* trace;StageScope* parent=nullptr;RepairStage stage,previous;double w=0,c=0,child_w=0,child_c=0;int exceptions=0;bool forced_incomplete=false;
 public:
     StageScope(CostTrace* t,RepairStage s)noexcept:trace(t),stage(s){if(!trace)return;parent=trace->active;previous=trace->stage;trace->active=this;trace->stage=s;w=trace_wall();c=trace_cpu();exceptions=std::uncaught_exceptions();++trace->records[unsigned(s)].calls;}
-    ~StageScope()noexcept{if(!trace)return;double ew=trace_wall()-w,ec=trace_cpu()-c;auto& r=trace->records[unsigned(stage)];r.inclusive_wall+=ew;r.inclusive_cpu+=ec;r.exclusive_wall+=ew-child_w;r.exclusive_cpu+=ec-child_c;bool failed=std::uncaught_exceptions()>exceptions;if(failed){++r.incomplete;if(trace->last_incomplete==RepairStage::Count){trace->last_incomplete=stage;trace->last_node=trace->current_node;trace->last_direction=trace->current_direction;}}else ++r.completed;if(parent){parent->child_w+=ew;parent->child_c+=ec;}trace->active=parent;trace->stage=previous;}
+    void mark_incomplete()noexcept{forced_incomplete=true;if(parent)parent->mark_incomplete();}
+    ~StageScope()noexcept{if(!trace)return;double ew=trace_wall()-w,ec=trace_cpu()-c;auto& r=trace->records[unsigned(stage)];r.inclusive_wall+=ew;r.inclusive_cpu+=ec;r.exclusive_wall+=ew-child_w;r.exclusive_cpu+=ec-child_c;bool failed=forced_incomplete||std::uncaught_exceptions()>exceptions;if(failed&&parent)parent->mark_incomplete();if(failed){++r.incomplete;if(trace->last_incomplete==RepairStage::Count){trace->last_incomplete=stage;trace->last_node=trace->current_node;trace->last_direction=trace->current_direction;}}else ++r.completed;if(parent){parent->child_w+=ew;parent->child_c+=ec;}trace->active=parent;trace->stage=previous;}
     StageScope(StageScope const&)=delete;StageScope& operator=(StageScope const&)=delete;
 };
 }

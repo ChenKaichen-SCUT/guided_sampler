@@ -4,10 +4,10 @@ assert not (MAN/'implementation.json').exists();assert not (BASE/'offline/frozen
 checks={}
 for v in ['release','sanitize']:
  for kind in ['mechanisms','isolation','disabled']:
-  p=BASE/'correctness'/f'{kind}_{v}_{"frozen" if kind=="mechanisms" else "final"}/summary.json';assert read(p)['passed'];checks[str(p.relative_to(ROOT))]=digest(p)
- p=BASE/'correctness'/f'math_{v}_final/summary.json';assert read(p)['passed'];checks[str(p.relative_to(ROOT))]=digest(p)
+  p=BASE/'correctness'/f'{kind}_{v}_verified/summary.json';assert read(p)['passed'];checks[str(p.relative_to(ROOT))]=digest(p)
+ p=BASE/'correctness'/f'math_{v}_verified/summary.json';assert read(p)['passed'];checks[str(p.relative_to(ROOT))]=digest(p)
 for v in ['release','sanitize']:
- p=BASE/f'correctness/mechanisms_{v}_frozen/mechanisms.command.json';assert read(p)['binary_sha256']==digest(ROOT/f'build/cost_repair_mechanisms_{v}')
+ p=BASE/f'correctness/mechanisms_{v}_verified/mechanisms.command.json';assert read(p)['binary_sha256']==digest(ROOT/f'build/cost_repair_mechanisms_{v}')
 p=BASE/'correctness/oracle_01.json';assert read(p)['passed'];checks[str(p.relative_to(ROOT))]=digest(p)
 files={}
 for pattern in ['include/refinement/*.hpp','src/refinement/*','scripts/refinement_cost_repair/*.py','scripts/refinement/independent.py','scripts/refinement/oracle_encoder.py','tests/refinement_cost_repair/*','configs/refinement_cost_repair.json','docs/refinement_cost_repair/implementation.zh.md']:

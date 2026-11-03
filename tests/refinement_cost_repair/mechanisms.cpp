@@ -23,6 +23,8 @@ for(auto const& f:fixtures){WorkBudget b;auto ast=ast_from_json(f.at("ast"),b);s
         history.commit(m,native);
     }
 }
+// Handled local exhaustion is incomplete even without exception unwinding.
+{CostTrace tr;WorkBudget w(60,60,4096);w.trace=&tr;{StageScope outer(&tr,RepairStage::FormulaDomain);{StageScope inner(&tr,RepairStage::ModularHits);try{w.integer(Big(1)<<4096);REQUIRE(false);}catch(Exhausted const&){} }}REQUIRE(tr.records[unsigned(RepairStage::ModularHits)].incomplete==1&&tr.records[unsigned(RepairStage::ModularHits)].completed==0);REQUIRE(tr.records[unsigned(RepairStage::FormulaDomain)].incomplete==1);{StageScope domain(&tr,RepairStage::FormulaDomain);DomainBudget work{w};work.operations=200000;try{work.tick();REQUIRE(false);}catch(Exhausted const&){} }REQUIRE(tr.records[unsigned(RepairStage::FormulaDomain)].completed==0);}
 // Separate AST occurrences of the same original variable and mark wraparound.
 {auto a=finish({node(Op::Add,false,{1,2,3,4}),node(Op::Sub,false,{5,6}),node(Op::Mul,false,{5,7}),node(Op::Variable,false,{},2),node(Op::Variable,false,{},3),node(Op::Variable,false,{},0),node(Op::Variable,false,{},0),node(Op::Variable,false,{},1)},4);WorkBudget w;auto old=compile_affine_ir(a,w),fresh=compile_affine_ir(a,w,RepairMode::Shared);ScratchMarks marks(a.nodes.size());marks.epoch=UINT32_MAX;std::fill(marks.marks.begin(),marks.marks.end(),1);for(unsigned support=0;support<16;++support){IntegerVector d;for(unsigned v=0;v<4;++v)d[v]=(support>>v&1)?Big(v%2?-3:2):Big(0);auto affected=collect_affected(fresh.reverse,d,marks,w);for(unsigned n=0;n<a.nodes.size();++n){REQUIRE(depends_on(old.dependencies[n],d)==depends_on_direction(n,affected));++checks;}}}
 // A 12000-deep DAG must not use C++ recursion, including canceled requests.

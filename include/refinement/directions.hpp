@@ -6,7 +6,7 @@ struct Fraction {
     Big n=0,d=1;Fraction()=default;Fraction(Big a):n(std::move(a)){}Fraction(Big a,Big q):n(std::move(a)),d(std::move(q)){normalize();}
     void normalize(){if(d==0)throw std::runtime_error("zero rational denominator");if(d<0){n=-n;d=-d;}Big g=gcd_big(n,d);n/=g;d/=g;}
 };
-struct AlgebraBudget {WorkBudget& time;uint64_t ops=0;void check(){time.check();if(time.trace)++time.trace->elimination_ops;if(++ops>200000)throw Exhausted("component_elimination_budget");}void value(Fraction const& x){time.integer(x.n);time.integer(x.d);}};
+struct AlgebraBudget {WorkBudget& time;uint64_t ops=0;void check(){time.check();if(time.trace)++time.trace->elimination_ops;if(++ops>200000)time.exhausted("component_elimination_budget");}void value(Fraction const& x){time.integer(x.n);time.integer(x.d);}};
 inline Fraction normalized_fraction(Big n,Big d,AlgebraBudget& w){w.time.integer(n);w.time.bits(d);if(d==0)throw std::runtime_error("zero denominator");if(d<0){n=-n;d=-d;}Big g=checked_gcd(n,d,w.time);Fraction q;q.n=n/g;q.d=d/g;return q;}
 inline Fraction subtract(Fraction const& a,Fraction const& b,AlgebraBudget& w){w.check();return normalized_fraction(checked_add(checked_mul(a.n,b.d,w.time),-checked_mul(b.n,a.d,w.time),w.time),checked_mul(a.d,b.d,w.time),w);}
 inline Fraction multiply(Fraction const& a,Fraction const& b,AlgebraBudget& w){w.check();return normalized_fraction(checked_mul(a.n,b.n,w.time),checked_mul(a.d,b.d,w.time),w);}

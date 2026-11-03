@@ -30,7 +30,7 @@ try:
         with stage('solver_add'):solver=z3.Solver();solver.add(formula)
         with stage('smt2_export'):(out/'problem.smt2').write_text(solver.to_smt2())
         remaining=deadline-time.monotonic()
-        if remaining<=0:raise CaseTimeout()
+        if remaining<0.001:raise CaseTimeout()
         solver.set(timeout=max(1,int(min(2,remaining)*1000)))
         emit('check_attempt','entered',{'checks':1});result['checks']=1;result['status']='check_attempt';sw=time.monotonic();sc=time.process_time();answer=solver.check()
         result.update(answer=str(answer),status=str(answer),check_wall=time.monotonic()-sw,check_cpu=time.process_time()-sc);emit('check_return','completed',{'answer':str(answer)})

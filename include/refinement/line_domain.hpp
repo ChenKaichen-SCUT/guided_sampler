@@ -5,7 +5,7 @@ namespace refinement {
 // No integer sentinel participates in arithmetic.
 struct Interval {std::optional<Big> lo,hi;};
 using IntervalUnion=std::vector<Interval>;
-struct DomainBudget {WorkBudget& time;uint64_t operations=0;void tick(){time.check();if(++operations>200000)throw Exhausted("domain_budget_exhausted");}};
+struct DomainBudget {WorkBudget& time;uint64_t operations=0;void tick(){time.check();if(++operations>200000)time.exhausted("domain_budget_exhausted");}};
 inline bool lower_less(std::optional<Big> const& a,std::optional<Big> const& b){return !a?bool(b):b&&*a<*b;}
 inline bool upper_less(std::optional<Big> const& a,std::optional<Big> const& b){return !b?bool(a):a&&*a<*b;}
 inline bool nonempty(Interval const& i){return !i.lo||!i.hi||*i.lo<=*i.hi;}
@@ -14,14 +14,14 @@ inline IntervalUnion normalize(IntervalUnion src,DomainBudget& b){
     for(auto const& i:src){b.tick();if(!nonempty(i))continue;if(i.lo)b.time.integer(*i.lo);if(i.hi)b.time.integer(*i.hi);
         bool touch=false;if(!out.empty()){auto const& last=out.back();if(!last.hi||!i.lo)touch=true;else{Big next=*last.hi+1;b.time.integer(next);touch=*i.lo<=next;}}
         if(touch){if(!out.back().hi||!i.hi)out.back().hi.reset();else out.back().hi=std::max(*out.back().hi,*i.hi);}else out.push_back(i);
-        if(out.size()>4096)throw Exhausted("domain_interval_limit");
+        if(out.size()>4096)b.time.exhausted("domain_interval_limit");
     }return out;
 }
 inline IntervalUnion all_integers(){return {{std::nullopt,std::nullopt}};}
 inline bool domain_contains(IntervalUnion const& u,Big const& t){for(auto const& i:u)if((!i.lo||t>=*i.lo)&&(!i.hi||t<=*i.hi))return true;return false;}
 inline IntervalUnion unite(IntervalUnion const& a,IntervalUnion const& c,DomainBudget& b){IntervalUnion out=a;out.insert(out.end(),c.begin(),c.end());return normalize(std::move(out),b);}
-inline IntervalUnion intersect(IntervalUnion const& a,IntervalUnion const& c,DomainBudget& b){IntervalUnion out;size_t i=0,j=0;while(i<a.size()&&j<c.size()){b.tick();auto lo=lower_less(a[i].lo,c[j].lo)?c[j].lo:a[i].lo;auto hi=upper_less(a[i].hi,c[j].hi)?a[i].hi:c[j].hi;Interval x{lo,hi};if(nonempty(x))out.push_back(x);if(out.size()>4096)throw Exhausted("domain_interval_limit");if(a[i].hi==c[j].hi){++i;++j;}else if(upper_less(a[i].hi,c[j].hi))++i;else ++j;}return out;}
-inline IntervalUnion complement(IntervalUnion const& a,DomainBudget& b){IntervalUnion out;std::optional<Big> cursor;bool ended=false;for(auto const& i:a){b.tick();if(i.lo){Big h=*i.lo-1;b.time.integer(h);Interval gap{cursor,h};if(nonempty(gap))out.push_back(gap);}if(!i.hi){ended=true;break;}cursor=*i.hi+1;b.time.integer(*cursor);}if(!ended)out.push_back({cursor,std::nullopt});if(out.size()>4096)throw Exhausted("domain_interval_limit");return out;}
+inline IntervalUnion intersect(IntervalUnion const& a,IntervalUnion const& c,DomainBudget& b){IntervalUnion out;size_t i=0,j=0;while(i<a.size()&&j<c.size()){b.tick();auto lo=lower_less(a[i].lo,c[j].lo)?c[j].lo:a[i].lo;auto hi=upper_less(a[i].hi,c[j].hi)?a[i].hi:c[j].hi;Interval x{lo,hi};if(nonempty(x))out.push_back(x);if(out.size()>4096)b.time.exhausted("domain_interval_limit");if(a[i].hi==c[j].hi){++i;++j;}else if(upper_less(a[i].hi,c[j].hi))++i;else ++j;}return out;}
+inline IntervalUnion complement(IntervalUnion const& a,DomainBudget& b){IntervalUnion out;std::optional<Big> cursor;bool ended=false;for(auto const& i:a){b.tick();if(i.lo){Big h=*i.lo-1;b.time.integer(h);Interval gap{cursor,h};if(nonempty(gap))out.push_back(gap);}if(!i.hi){ended=true;break;}cursor=*i.hi+1;b.time.integer(*cursor);}if(!ended)out.push_back({cursor,std::nullopt});if(out.size()>4096)b.time.exhausted("domain_interval_limit");return out;}
 inline IntervalUnion le_domain(LineTerm const& v,DomainBudget& b){b.tick();if(v.slope==0)return v.constant<=0?all_integers():IntervalUnion{};if(v.slope>0)return {{std::nullopt,floor_div(-v.constant,v.slope)}};return {{ceil_div(-v.constant,v.slope),std::nullopt}};}
 inline IntervalUnion eq_domain(LineTerm const& v,DomainBudget& b){b.tick();if(v.slope==0)return v.constant==0?all_integers():IntervalUnion{};if((-v.constant)%v.slope!=0)return {};Big t=-v.constant/v.slope;b.time.integer(t);return {{t,t}};}
 inline IntervalUnion reflect(IntervalUnion const& a,DomainBudget& b){IntervalUnion out;for(auto it=a.rbegin();it!=a.rend();++it){b.tick();out.push_back({it->hi?std::optional<Big>(-*it->hi):std::nullopt,it->lo?std::optional<Big>(-*it->lo):std::nullopt});}return out;}
