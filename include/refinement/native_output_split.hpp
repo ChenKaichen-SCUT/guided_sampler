@@ -7,10 +7,10 @@ struct NativeAcceptance {bool legal=false,native_duplicate=false,accepted_for_na
 struct DeliveryResult {bool committed=false,replaced=false,output_duplicate=false;std::string reason;};
 class NativeOutputSplit {
 public:
-    NativeLedger native;OutputLedger output;BudgetLedger budget;Mode mode;
+    NativeLedger native;OutputLedger output;BudgetLedger budget;Mode mode;RepairMode repair_configuration;
     uint64_t native_raw_count=0,output_duplicates=0,replacements=0,covered_replacements=0,deadline_missed_after_native_ready=0;
     std::unique_ptr<Refiner> refiner;std::string disabled_reason;
-    NativeOutputSplit(size_t nodes,double seconds,Mode m):native(nodes),output(nodes),budget(seconds),mode(m){}
+    NativeOutputSplit(size_t nodes,double seconds,Mode m):native(nodes),output(nodes),budget(seconds),mode(m),repair_configuration(repair_mode(std::getenv("REFINEMENT_REPAIR_MODE")?std::getenv("REFINEMENT_REPAIR_MODE"):"Legacy")){}
     NativeAcceptance accept(Assignment assignment,ObservationTrace trace){NativeAcceptance a;a.assignment=std::move(assignment);a.trace=std::move(trace);a.legal=a.trace.legal;++native_raw_count;if(!a.legal)throw std::runtime_error("illegal native assignment");a.accepted_for_native_history=native.accept(a.assignment,a.trace);a.native_duplicate=!a.accepted_for_native_history;a.native_event_id=native.accepted_count;return a;}
     template<typename BuildAst,typename SaveMetadata,typename BuildHard,typename SaveResult>
     RefinementResult choose(NativeAcceptance const& a,double remaining,BuildAst build,SaveMetadata save,BuildHard hard,SaveResult log){
@@ -21,7 +21,7 @@ public:
         if(!budget.can_start(remaining)){result.reason=budget.disabled?disabled_reason:remaining<0.010?"deadline_reserve":"no_earned_budget";return result;}
         if(!budget.preprocess_attempted){
             budget.preprocess_attempted=true;auto b=budget.budget(true,remaining);
-            try{auto ast=build(b);refiner=std::make_unique<Refiner>(std::move(ast),b);save(*refiner,b);b.check();}
+            try{auto ast=build(b);refiner=std::make_unique<Refiner>(std::move(ast),b,repair_configuration);save(*refiner,b);b.check();}
             catch(Exhausted const& e){disabled_reason=e.what();budget.disabled=true;refiner.reset();}
             catch(Unsupported const& e){disabled_reason=e.what();budget.disabled=true;refiner.reset();}
             budget.charge(b,true);remaining-=b.wall();

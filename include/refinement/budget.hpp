@@ -22,8 +22,9 @@ struct WorkBudget {
     WorkBudget(double w,double c,unsigned bits=4096):max_wall(w),max_cpu(c),integer_bits(bits){}
     double wall()const{return wall_now()-start_wall;}
     double cpu()const{return cpu_now()-start_cpu;}
-    void check()const{if(trace)if(auto r=trace->record())++r->budget_checks;if(cancelled&&cancelled())throw Exhausted("cancelled");if(wall()>=max_wall)throw Exhausted("wall_budget_exhausted");if(cpu()>=max_cpu)throw Exhausted("cpu_budget_exhausted");}
-    void bits(Big const& v)const{if(integer_bits&&v!=0&&boost::multiprecision::msb(v<0?Big(-v):v)>=integer_bits)throw Exhausted("integer_bit_limit");}
+    [[noreturn]] void exhausted(char const* why)const{if(trace){trace->last_incomplete=trace->stage;trace->last_node=trace->current_node;trace->last_direction=trace->current_direction;}throw Exhausted(why);}
+    void check()const{if(trace)if(auto r=trace->record())++r->budget_checks;if(cancelled&&cancelled())exhausted("cancelled");if(wall()>=max_wall)exhausted("wall_budget_exhausted");if(cpu()>=max_cpu)exhausted("cpu_budget_exhausted");}
+    void bits(Big const& v)const{if(integer_bits&&v!=0&&boost::multiprecision::msb(v<0?Big(-v):v)>=integer_bits)exhausted("integer_bit_limit");}
     void integer(Big const& v)const{check();bits(v);}
 };
 struct BudgetLedger {

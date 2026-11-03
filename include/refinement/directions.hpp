@@ -23,7 +23,8 @@ inline DirectionPool build_integer_directions(AffineIR const& ir,EqualitySystem 
     std::map<unsigned,std::vector<unsigned>> component_rows;
     std::vector<std::vector<std::pair<unsigned,Big>>> equation_uses(nv);
     for(unsigned k=0;k<eq.rows.size();++k){b.check();auto const& row=eq.rows[k];if(!row.coefficients.empty())component_rows[root(row.coefficients.begin()->first)].push_back(k);for(auto const& [v,c]:row.coefficients)equation_uses[v].emplace_back(k,c);}
-    std::vector<std::vector<unsigned>> node_uses(nv);
+    std::vector<std::vector<unsigned>> node_uses;
+    if(ir.mode!=RepairMode::Shared)node_uses.resize(nv);
     for(unsigned n=0;n<ir.dependencies.size();++n){b.check();for(auto v:ir.dependencies[n])node_uses[v].push_back(n);}
     DirectionPool out;std::vector<std::vector<IntegerDirection>> generated;unsigned cid=0;
     for(auto const& [r,vars]:comps){b.check();Json info={{"component",cid},{"variables",vars},{"status","complete"}};std::vector<unsigned> rowids=component_rows[r];size_t nonzeros=0;
@@ -54,7 +55,8 @@ inline DirectionPool build_integer_directions(AffineIR const& ir,EqualitySystem 
         info["generated"]=dirs.size();out.components.push_back(info);generated.push_back(std::move(dirs));++cid;
     }
     StageScope affected_scope(b.trace,RepairStage::BuildAffected);
-    std::set<std::string> seen;for(size_t round=0;;++round){bool any=false;for(auto const& dirs:generated)if(round<dirs.size()){b.check();any=true;auto d=dirs[round];if(!seen.insert(direction_key(d.values)).second)continue;if(out.directions.size()>=256){++out.omitted;continue;}d.id=out.directions.size();std::set<unsigned> affected;for(auto const& [v,step]:d.values){b.check();affected.insert(node_uses[v].begin(),node_uses[v].end());}d.affected.assign(affected.begin(),affected.end());if(b.trace)b.trace->affected_entries+=d.affected.size();out.directions.push_back(std::move(d));}if(!any)break;}
+    ScratchMarks marks(ir.mode==RepairMode::Shared?ir.ast.nodes.size():0);if(b.trace&&ir.mode==RepairMode::Shared)b.trace->allocation(ir.ast.nodes.size());
+    std::set<std::string> seen;for(size_t round=0;;++round){bool any=false;for(auto const& dirs:generated)if(round<dirs.size()){b.check();any=true;auto d=dirs[round];if(!seen.insert(direction_key(d.values)).second)continue;if(out.directions.size()>=256){++out.omitted;continue;}d.id=out.directions.size();if(ir.mode==RepairMode::Shared)d.affected=collect_affected(ir.reverse,d.values,marks,b);else{std::set<unsigned> affected;for(auto const& [v,step]:d.values){b.check();affected.insert(node_uses[v].begin(),node_uses[v].end());}d.affected.assign(affected.begin(),affected.end());}if(b.trace)b.trace->affected_entries+=d.affected.size();out.directions.push_back(std::move(d));}if(!any)break;}
     for(auto& c:out.components){unsigned included=0;for(auto const& d:out.directions)if(d.component==c["component"])++included;c["included"]=included;c["omitted"]=c["generated"].get<unsigned>()-included;}
     return out;
 }

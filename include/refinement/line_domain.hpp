@@ -27,15 +27,21 @@ inline IntervalUnion eq_domain(LineTerm const& v,DomainBudget& b){b.tick();if(v.
 inline IntervalUnion reflect(IntervalUnion const& a,DomainBudget& b){IntervalUnion out;for(auto it=a.rbegin();it!=a.rend();++it){b.tick();out.push_back({it->hi?std::optional<Big>(-*it->hi):std::nullopt,it->lo?std::optional<Big>(-*it->lo):std::nullopt});}return out;}
 inline Json domain_json(IntervalUnion const& a){Json j=Json::array();for(auto const& i:a)j.push_back({i.lo?Json(i.lo->str()):Json("-inf"),i.hi?Json(i.hi->str()):Json("+inf")});return j;}
 class LineDomain {
-    AffineIR const& ir;Assignment const& anchor;IntegerVector const& direction;std::vector<std::optional<IntervalUnion>> cache;
+    AffineIR const& ir;Assignment const& anchor;IntegerVector const& direction;std::vector<std::optional<IntervalUnion>> cache;AnchorValues* values;std::vector<unsigned> affected;std::optional<LineValues> lines;
 public:
     DomainBudget work;
-    LineDomain(AffineIR const& a,Assignment const& m,IntegerVector const& d,WorkBudget& b):ir(a),anchor(m),direction(d),cache(a.ast.nodes.size()),work{b}{}
+    LineDomain(AffineIR const& a,Assignment const& m,IntegerVector const& d,WorkBudget& b,AnchorValues* numeric=nullptr,std::vector<unsigned> const* affected_nodes=nullptr):ir(a),anchor(m),direction(d),cache(a.ast.nodes.size()),values(numeric),work{b}{
+        if(b.trace)b.trace->allocation(a.ast.nodes.size());
+        if(a.mode==RepairMode::Shared){if(affected_nodes)affected=*affected_nodes;else{ScratchMarks scratch(a.ast.nodes.size());if(b.trace)b.trace->allocation(a.ast.nodes.size());affected=collect_affected(a.reverse,d,scratch,b);}}
+        if(values)lines.emplace(a,m,d,*values,affected);
+    }
+    bool varies(unsigned n)const{return ir.mode==RepairMode::Shared?depends_on_direction(n,affected):depends_on(ir.dependencies[n],direction);}
+    LineTerm line_term(unsigned n){return lines?lines->value(n,work.time):affine_on_line(ir,n,anchor,direction,work.time);}
     IntervalUnion truth(unsigned root){
         struct Frame{unsigned id;bool ready;};std::vector<Frame> todo{{root,false}};
         while(!todo.empty()){
             work.tick();auto f=todo.back();if(work.time.trace)work.time.trace->node(f.id);todo.pop_back();if(cache[f.id])continue;auto const& n=ir.ast.nodes[f.id];if(!n.boolean)throw std::runtime_error("nonboolean formula domain");
-            if(!depends_on(ir.dependencies[f.id],direction)){StageScope numeric(work.time.trace,RepairStage::NumericValues);auto e=evaluate(ir.ast,anchor,work.time,false,f.id);cache[f.id]=*e.values[f.id]!=0?all_integers():IntervalUnion{};continue;}
+            if(!varies(f.id)){Big v;if(values)v=values->numeric.value(f.id,work.time);else{StageScope numeric(work.time.trace,RepairStage::NumericValues);auto e=evaluate(ir.ast,anchor,work.time,false,f.id);v=*e.values[f.id];}cache[f.id]=v!=0?all_integers():IntervalUnion{};continue;}
             if(!f.ready){todo.push_back({f.id,true});for(auto c:n.children)if(ir.ast.nodes[c].boolean&&!cache[c])todo.push_back({c,false});continue;}
             auto const& cs=n.children;auto get=[&](unsigned k)->IntervalUnion const&{return *cache.at(cs.at(k));};IntervalUnion out;
             if(n.op==Op::And){out=all_integers();for(unsigned k=0;k<cs.size();++k)out=intersect(out,get(k),work);}
@@ -47,7 +53,7 @@ public:
             else if(n.op==Op::Eq||n.op==Op::Distinct||n.op==Op::Le||n.op==Op::Lt||n.op==Op::Ge||n.op==Op::Gt){
                 out=all_integers();for(unsigned l=0;l<cs.size();++l)for(unsigned r=l+1;r<cs.size();++r){if(n.op!=Op::Distinct&&r!=l+1)continue;work.tick();IntervalUnion atom;
                     if(ir.ast.nodes[cs[l]].boolean){if(n.op!=Op::Eq&&n.op!=Op::Distinct)throw Unsupported("ordered_boolean_comparison");atom=unite(intersect(*cache[cs[l]],*cache[cs[r]],work),intersect(complement(*cache[cs[l]],work),complement(*cache[cs[r]],work),work),work);}
-                    else{auto a=affine_on_line(ir,cs[l],anchor,direction,work.time),c=affine_on_line(ir,cs[r],anchor,direction,work.time);LineTerm diff{a.constant-c.constant,a.slope-c.slope};work.time.integer(diff.constant);work.time.integer(diff.slope);
+                    else{auto a=line_term(cs[l]),c=line_term(cs[r]);LineTerm diff{a.constant-c.constant,a.slope-c.slope};work.time.integer(diff.constant);work.time.integer(diff.slope);
                         if(n.op==Op::Eq||n.op==Op::Distinct)atom=eq_domain(diff,work);else{if(n.op==Op::Ge||n.op==Op::Gt){diff.constant=-diff.constant;diff.slope=-diff.slope;}if(n.op==Op::Lt||n.op==Op::Gt)++diff.constant;work.time.integer(diff.constant);atom=le_domain(diff,work);}}
                     if(n.op==Op::Distinct)atom=complement(atom,work);out=intersect(out,atom,work);
                 }

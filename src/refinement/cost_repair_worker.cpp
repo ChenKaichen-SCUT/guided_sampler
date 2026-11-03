@@ -7,13 +7,13 @@ int main(int argc,char** argv){
     double all_w=wall_now(),all_c=cpu_now();std::ofstream output(directory+"/stream.jsonl");
     auto emit=[&](Json const& j){output<<j.dump()<<'\n';output.flush();if(!output)throw std::runtime_error("stream write failed");};
     try{
-        if(mode!="Legacy")throw std::runtime_error("repair configurations not implemented at Legacy probe freeze");
+        auto configuration=repair_mode(mode);
         Json data;Ast ast;CostTrace parse_trace;WorkBudget parsing;parsing.trace=&parse_trace;
         {StageScope stage(&parse_trace,RepairStage::ParseInput);std::ifstream f(input);f>>data;}
         {StageScope stage(&parse_trace,RepairStage::CopyAst);ast=ast_from_json(data.at("ast"),parsing);}
         emit({{"kind","input"},{"mode",mode},{"track",track},{"nodes",ast.nodes.size()},{"variables",ast.variables.size()},{"parse_cpu",parsing.cpu()},{"parse_wall",parsing.wall()},{"trace",parse_trace.json()}});
         bool probe=track=="probe";double pre_cap=probe?2:.1,event_cap=probe?.5:.02;double used_w=0,used_c=0;Json record_tails=Json::array();std::unique_ptr<Refiner> ref;std::string pre_status="completed";CostTrace pre_trace;WorkBudget pre(pre_cap,pre_cap);pre.trace=&pre_trace;Json metadata=nullptr;
-        try{{StageScope copy(&pre_trace,RepairStage::CopyAst);ref=std::make_unique<Refiner>(ast,pre);} {StageScope meta(&pre_trace,RepairStage::Metadata);metadata=ref->metadata();} {StageScope serialized(&pre_trace,RepairStage::SerializeResult);emit({{"kind","metadata"},{"metadata",metadata}});pre.check();}}
+        try{{StageScope copy(&pre_trace,RepairStage::CopyAst);ref=std::make_unique<Refiner>(ast,pre,configuration);} {StageScope meta(&pre_trace,RepairStage::Metadata);metadata=ref->metadata();} {StageScope serialized(&pre_trace,RepairStage::SerializeResult);emit({{"kind","metadata"},{"metadata",metadata}});pre.check();}}
         catch(Exhausted const& e){pre_status=e.what();ref.reset();}catch(Unsupported const& e){pre_status=e.what();ref.reset();}
         double pw=pre.wall(),pc=pre.cpu();used_w+=pw;used_c+=pc;
         double tailw=wall_now(),tailc=cpu_now();emit({{"kind","preprocess"},{"status",pre_status},{"cpu",pc},{"wall",pw},{"cpu_cap",pre.max_cpu},{"wall_cap",pre.max_wall},{"trace",pre_trace.json()}});

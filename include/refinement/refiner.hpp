@@ -18,7 +18,7 @@ inline bool bool_target(Node const& n){return n.op==Op::Eq||n.op==Op::Distinct||
 class Refiner {
 public:
     AffineIR ir;EqualitySystem equalities;DirectionPool pool;
-    Refiner(Ast ast,WorkBudget& b):ir(compile_affine_ir(std::move(ast),b)),equalities(collect_mandatory_equalities(ir,b)),pool(build_integer_directions(ir,equalities,b)){
+    Refiner(Ast ast,WorkBudget& b,RepairMode mode=RepairMode::Legacy):ir(compile_affine_ir(std::move(ast),b,mode)),equalities(collect_mandatory_equalities(ir,b)),pool(build_integer_directions(ir,equalities,b)){
         if(!ir.ast.official_supported())throw Unsupported("official_observer_unsupported");
     }
     Json metadata()const{Json d=Json::array(),eq=Json::array();for(auto const& r:equalities.rows){Json c=Json::array();for(auto const& [i,v]:r.coefficients)c.push_back({i,v.str()});eq.push_back({{"coefficients",c},{"constant",r.constant.str()}});}for(auto const& x:pool.directions){Json c=Json::array();for(auto const& [i,v]:x.values)c.push_back({i,v.str()});d.push_back({{"id",x.id},{"component",x.component},{"coefficients",c},{"affected",x.affected}});}return {{"directions",d},{"equalities",eq},{"components",pool.components},{"omitted_directions",pool.omitted}};}
@@ -26,19 +26,21 @@ public:
         RefinementResult result;auto version=output.observations.version;std::set<std::string> evaluated{assignment_key(anchor)};
         struct State {unsigned dir;std::unique_ptr<LineDomain> domain;IntervalUnion legal;std::vector<BitTarget> targets;size_t next_target=0;std::vector<std::pair<Big,BitTarget>> pending;size_t next_parameter=0;bool exhausted=false,prepared=false;size_t record_index=0;};
         std::vector<State> states;ProtectedObservations protected_obs;Json pending_candidate;double pending_wall=0,pending_cpu=0;
+        std::unique_ptr<AnchorValues> values;std::vector<std::unique_ptr<AnchorValues>> hard_values;
         try{
             double sw=wall_now(),sc=cpu_now();{StageScope stage(b.trace,RepairStage::Protect);protected_obs=make_protected(base,output.observations,b);}result.protected_count=protected_obs.count;{StageScope stage(b.trace,RepairStage::ScoreBase);result.base_gain=marginal_gain(base,output.observations,b);}result.baseline_scored=true;
             for(unsigned n=0;n<protected_obs.zero.size();++n)if(protected_obs.zero[n]||protected_obs.one[n])result.protected_masks.push_back({n,protected_obs.zero[n],protected_obs.one[n]});
             std::vector<unsigned> selected;{StageScope stage(b.trace,RepairStage::RankDirections);selected=select_directions(pool,ir.ast,output.observations,event,b);}result.selected_direction_order=selected;result.selection_wall+=wall_now()-sw;result.selection_cpu+=cpu_now()-sc;
+            if(ir.mode!=RepairMode::Legacy){values=std::make_unique<AnchorValues>(ir,anchor,event,b);for(auto const& h:hard)hard_values.push_back(std::make_unique<AnchorValues>(h,anchor,event,b));}
             auto prepare_direction=[&](State& state){auto id=state.dir;auto& log=result.directions.at(state.record_index);log["status"]="incomplete";if(b.trace){b.trace->current_direction=id;b.trace->last_incomplete=RepairStage::Count;}double w=wall_now(),c=cpu_now();auto const& d=pool.directions[id];
-                try{{StageScope stage(b.trace,RepairStage::FormulaDomain);b.check();state.domain=std::make_unique<LineDomain>(ir,anchor,d.values,b);state.legal=state.domain->formula();
-                    for(auto const& h:hard){LineDomain hd(h,anchor,d.values,b);state.legal=intersect(state.legal,hd.formula(),state.domain->work);}
+                try{{StageScope stage(b.trace,RepairStage::FormulaDomain);b.check();state.domain=std::make_unique<LineDomain>(ir,anchor,d.values,b,values.get(),&d.affected);state.legal=state.domain->formula();
+                    for(size_t hi=0;hi<hard.size();++hi){auto const& h=hard[hi];LineDomain hd(h,anchor,d.values,b,values?hard_values[hi].get():nullptr);state.legal=intersect(state.legal,hd.formula(),state.domain->work);}
                     if(!domain_contains(state.legal,0))throw std::runtime_error("native anchor violates real hard conditions");
                     if(component_only){auto i=std::find_if(state.legal.begin(),state.legal.end(),[](auto const& x){return (!x.lo||*x.lo<=0)&&(!x.hi||*x.hi>=0);});state.legal={*i};}
                     log["intervals"]=domain_json(state.legal);log["interval_count"]=state.legal.size();if(b.trace)++b.trace->completed_domains;}
                     StageScope targets_stage(b.trace,RepairStage::TargetSelection);
                     std::vector<BitTarget> targets;
-                    for(auto node:d.affected){b.check();auto const& n=ir.ast.nodes[node];if(n.boolean){if(!bool_target(n))continue;}else {if(!ir.terms[node].supported)continue;auto term=affine_on_line(ir,node,anchor,d.values,b);if(term.slope==0)continue;}
+                    for(auto node:d.affected){b.check();auto const& n=ir.ast.nodes[node];if(n.boolean){if(!bool_target(n))continue;}else {if(!ir.terms[node].supported)continue;auto term=state.domain->line_term(node);if(term.slope==0)continue;}
                         uint64_t want=(output.observations.zero[node]^output.observations.one[node])&n.mask();
                         while(want){unsigned bit=std::countr_zero(want);bool desired=(output.observations.zero[node]>>bit)&1;auto observed=desired?base.one[node]:base.zero[node];if(!((observed>>bit)&1))targets.push_back({node,bit,desired});want&=want-1;}
                     }
@@ -48,11 +50,11 @@ public:
                 result.generation_wall+=wall_now()-w;result.generation_cpu+=cpu_now()-c;state.prepared=true;
             };
             for(auto id:selected){State state;state.dir=id;state.record_index=result.directions.size();result.directions.push_back({{"direction_id",id},{"component",pool.directions[id].component},{"status","not_started"},{"remaining_work_unknown",true}});states.push_back(std::move(state));}
-            bool active=true;while(active&&result.completed_evaluations<64){active=false;for(auto& state:states){if(result.completed_evaluations>=64)break;b.check();if(!state.prepared)prepare_direction(state);if(state.exhausted)continue;active=true;auto const& direction=pool.directions[state.dir];
+            bool active=true;while(active&&result.completed_evaluations<64){active=false;for(auto& state:states){if(result.completed_evaluations>=64)break;if(!state.prepared)result.directions.at(state.record_index)["status"]="incomplete";if(b.trace){b.trace->current_direction=state.dir;b.trace->current_node=-1;} {StageScope dispatch(b.trace,state.prepared?RepairStage::ModularHits:RepairStage::FormulaDomain);b.check();}if(!state.prepared)prepare_direction(state);if(state.exhausted)continue;active=true;auto const& direction=pool.directions[state.dir];
                     // One parameter per direction per round. No first direction can consume the event cap.
                     while(state.next_parameter>=state.pending.size()&&state.next_target<state.targets.size()){
                         auto target=state.targets[state.next_target++];StageScope modular_stage(b.trace,RepairStage::ModularHits);double w=wall_now(),c=cpu_now();HitResult hits;Json log={{"kind","target"},{"direction_id",state.dir},{"target_node",target.node},{"target_bit",target.bit},{"desired",target.desired}};
-                        try{if(ir.ast.nodes[target.node].boolean){auto matching=state.domain->truth(target.node);if(!target.desired)matching=complement(matching,state.domain->work);hits=nearest_boolean_hits(intersect(state.legal,matching,state.domain->work),b);}else hits=nearest_modular_hits(affine_on_line(ir,target.node,anchor,direction.values,b),target.bit,target.desired,state.legal,b);
+                        try{if(ir.ast.nodes[target.node].boolean){auto matching=state.domain->truth(target.node);if(!target.desired)matching=complement(matching,state.domain->work);hits=nearest_boolean_hits(intersect(state.legal,matching,state.domain->work),b);}else hits=nearest_modular_hits(state.domain->line_term(target.node),target.bit,target.desired,state.legal,b);
                             log["modular_status"]=hits.status;log["parameters"]=Json::array();for(auto const& t:hits.parameters){state.pending.emplace_back(t,target);log["parameters"].push_back(t.str());}
                         }catch(Exhausted const& e){std::string why=e.what();log["modular_status"]=why;log["search_complete"]=false;result.candidates.push_back(log);if(why=="domain_budget_exhausted"||why=="domain_interval_limit"||why=="integer_bit_limit"){state.exhausted=true;break;}throw;}
                         result.generation_wall+=wall_now()-w;result.generation_cpu+=cpu_now()-c;result.candidates.push_back(log);
@@ -75,7 +77,7 @@ public:
                     }catch(Exhausted const& e){log["reason"]="incomplete_candidate";log["cancellation"]=e.what();log["candidate_wall"]=wall_now()-pending_wall;log["candidate_cpu"]=cpu_now()-pending_cpu;result.candidates.push_back(log);pending_candidate=nullptr;throw;}
                 }}
             if(result.completed_evaluations>=64)result.cancellation="candidate_cap";
-        }catch(Exhausted const& e){result.cancellation=e.what();if(!pending_candidate.is_null()){pending_candidate["reason"]="incomplete_candidate_generation";pending_candidate["cancellation"]=e.what();pending_candidate["candidate_wall"]=wall_now()-pending_wall;pending_candidate["candidate_cpu"]=cpu_now()-pending_cpu;result.candidates.push_back(pending_candidate);}}
+        }catch(Exhausted const& e){result.cancellation=e.what();if(b.trace&&b.trace->last_direction>=0){for(auto& log:result.directions)if(log["direction_id"]==b.trace->last_direction){log["cancellation"]=e.what();log["remaining_work_unknown"]=true;log["cancellation_stage"]=b.trace->last_incomplete==RepairStage::Count?Json(nullptr):Json(stage_names[unsigned(b.trace->last_incomplete)]);log["current_node"]=b.trace->last_node;if(log["status"]=="incomplete")log["work_counters_at_cancel"]=b.trace->json();}}if(!pending_candidate.is_null()){pending_candidate["reason"]="incomplete_candidate_generation";pending_candidate["cancellation"]=e.what();pending_candidate["candidate_wall"]=wall_now()-pending_wall;pending_candidate["candidate_cpu"]=cpu_now()-pending_cpu;result.candidates.push_back(pending_candidate);}}
         if(output.observations.version!=version)throw std::runtime_error("output history changed during refinement");
         if(result.chosen)result.reason=result.chosen->gain.covered>result.base_gain.covered?"strict_covered_improvement":"single_sided_observation_only";
         else if(pool.directions.empty())result.reason="no_integer_direction";

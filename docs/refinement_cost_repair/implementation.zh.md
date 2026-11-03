@@ -11,3 +11,11 @@
 Legacy 三个诊断 worker 必须先于两项成本修复执行；它们的源文本和二进制 SHA 单独冻结。后续六探针和 39 条主/补充序列使用同一个最终 Release 构建，固定物理核 0，顺序执行，不与编译、压缩、上传或 oracle 并行。较宽探针不进入生产式历史或主覆盖表。随机分量限制保持 64/128/4096，预期仍有 10 个超限分量，无秩计算则标 rank_unknown。
 
 OracleLegacy 与 OracleShared 共享重型导入之前建立的阶段日志、3 秒冷案例、2 秒最多一次 check。SMT2 完整导出仍在 check 前且计费。只把截止内完成且独立验证的见证计为交付。父进程强制退出时保留最后有效阶段，不凭 check_attempt 推造 solver 内部状态。
+
+共同记录的正确性补丁：合成首方向取消测试首次失败（`mechanisms_release_01`），原因是入口检查在 direction 槽变成 incomplete 之前执行。最终构建先标记入口，再做原检查；预算异常同时保存实际抛出阶段，避免局部 catch 把前一异常阶段误带入下一候选。没有删除检查、改变数学或配额。修复前 Legacy 三探针不重跑，保留原源快照；后续三配置共享这项日志补丁。反向索引与数值缓存统计中的 numeric_cache_bytes 是槽存储下界，进程峰值 RSS 另报，不把它当大整数所有动态容量的精确值。
+
+最终接入：`REFINEMENT_REPAIR_MODE=Legacy|ValueCache|Shared` 在 NativeOutputSplit 创建时读取一次；Refiner 和真实硬条件编译均使用该配置。离线 worker 通过固定位置参数在启动时选配置，三个配置为同一二进制。实际新生成树在 `worktrees/cost_repair_{release,sanitize}`，旧树不改写。缓存持有完整 anchor 副本及公式指针/input_sha/event/完整赋值身份；所有者的原 AST 在缓存生命周期内保持不变。缓存构造时的赋值复制、身份构造和槽初始化均处在 NumericValues 计时中。
+
+计数解释：full_size_scans/scan_slots 记录已启动的全数组扫描规模，取消中途仍保留这次扫描，实际检查数另列，不能称全部扫描已执行完。cache_hits/misses 指 value/LineTerm 根请求是否已完成；节点访问数也含显式栈帧重访。所有完成候选仍重新评价原式、官方访问轨迹与完整保护，缓存不参与官方观察。父边索引的 dependency_entries 计直接边和变量出现点，Legacy/ValueCache 的同名项计传递变量依赖；报告需注明不同表示而不能当相同操作次数。
+
+限定实验之前的构建/测试可以重验正确性，均保留目录；正式探针和矩阵拒绝覆盖、没有自动重试。`scripts/refinement_cost_repair/run_offline.py` 按冻结39项运行，`run_oracles.py` 只按冻结24项运行；分析与官方计分在计时窗口全部结束后执行。严格单因素含义为数学/候选语义不变，消除重复工作自然可在同一时间内走到更多原有步骤；不把不同完成量直接转换成精确加速倍数。
