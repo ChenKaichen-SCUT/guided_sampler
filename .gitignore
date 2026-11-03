@@ -72,3 +72,6 @@ __pycache__/
 /results/refinement_budget_delivery/offline/
 /results/refinement_budget_delivery/real_diagnosis/
 /results/refinement_budget_delivery/analysis/audit_v1/
+# Per-event cost details and full atom lists are retained in the same archive.
+/results/refinement_budget_delivery/analysis/cost_diagnosis_v1/events.json
+/results/refinement_budget_delivery/analysis/real_scope_summary.json

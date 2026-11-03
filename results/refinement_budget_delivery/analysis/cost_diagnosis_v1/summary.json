@@ -1,0 +1,17 @@
+{
+  "new_workers": 0,
+  "real_solver_checks": 0,
+  "production_completed_evaluations": 0,
+  "production_cancellation_stages": {
+    "None": 352,
+    "RankDirections": 130,
+    "FormulaDomain": 8,
+    "NumericValues": 6
+  },
+  "preprocess_failure_stages": {
+    "VerifyDirections": 5,
+    "SerializeResult": 6,
+    "Metadata": 1,
+    "Elimination": 1
+  }
+}

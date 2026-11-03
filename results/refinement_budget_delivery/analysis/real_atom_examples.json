@@ -1,0 +1,127 @@
+[
+  {
+    "position": 2,
+    "direction": 129,
+    "node": 1856,
+    "formula": "(le 0 xH170)",
+    "role": "negative_lower_zero",
+    "scope": "mandatory_AND_path",
+    "roles": [
+      "negative_lower_zero"
+    ],
+    "left": 4,
+    "right": 1326,
+    "constant": "0",
+    "slope": "-1",
+    "normalized": "le_zero",
+    "before_distinct_complement": [
+      [
+        "0",
+        "+inf"
+      ]
+    ],
+    "floor": "0",
+    "ceil": "0",
+    "remainder": "0"
+  },
+  {
+    "position": 2,
+    "direction": 129,
+    "node": 3206,
+    "formula": "(eq xH362 0)",
+    "role": "nonzero_slope_equality_at_zero",
+    "scope": "conditional_boolean_structure",
+    "roles": [
+      "nonzero_slope_equality_at_zero"
+    ],
+    "left": 1328,
+    "right": 4,
+    "constant": "0",
+    "slope": "-1",
+    "normalized": "eq_zero",
+    "before_distinct_complement": [
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "floor": "0",
+    "ceil": "0",
+    "remainder": "0"
+  },
+  {
+    "position": 2,
+    "direction": 129,
+    "node": 3776,
+    "formula": "(le 0 xH362)",
+    "role": "positive_upper_zero",
+    "scope": "mandatory_AND_path",
+    "roles": [
+      "positive_upper_zero"
+    ],
+    "left": 4,
+    "right": 1328,
+    "constant": "0",
+    "slope": "1",
+    "normalized": "le_zero",
+    "before_distinct_complement": [
+      [
+        "-inf",
+        "0"
+      ]
+    ],
+    "floor": "0",
+    "ceil": "0",
+    "remainder": "0"
+  },
+  {
+    "position": 2,
+    "direction": 128,
+    "node": 2909,
+    "formula": "(ge xH130 1500)",
+    "role": "negative_lower_zero",
+    "scope": "conditional_boolean_structure",
+    "roles": [
+      "negative_lower_zero"
+    ],
+    "left": 968,
+    "right": 169,
+    "constant": "0",
+    "slope": "-1",
+    "normalized": "le_zero",
+    "before_distinct_complement": [
+      [
+        "0",
+        "+inf"
+      ]
+    ],
+    "floor": "0",
+    "ceil": "0",
+    "remainder": "0"
+  },
+  {
+    "position": 2,
+    "direction": 128,
+    "node": 2912,
+    "formula": "(le xH130 1500)",
+    "role": "positive_upper_zero",
+    "scope": "conditional_boolean_structure",
+    "roles": [
+      "positive_upper_zero"
+    ],
+    "left": 968,
+    "right": 169,
+    "constant": "0",
+    "slope": "1",
+    "normalized": "le_zero",
+    "before_distinct_complement": [
+      [
+        "-inf",
+        "0"
+      ]
+    ],
+    "floor": "0",
+    "ceil": "0",
+    "remainder": "0"
+  }
+]

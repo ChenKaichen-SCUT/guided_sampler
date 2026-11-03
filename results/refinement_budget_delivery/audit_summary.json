@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "base": "2dde70ab203009afdb07e4337eb3cdd637906704",
+  "source_commit": "9558a4333fd2b2399682f4dbaf53ae20137a95fd",
+  "audit": {
+    "passed": true,
+    "sequences": 22,
+    "probes": 4,
+    "source_models": 43,
+    "replayed_events": 518,
+    "official_audit_calls": 804,
+    "distinct_formula_assignment_objects": 114,
+    "complete_candidate_audits": 256,
+    "full_equality_row_checks": 7181127,
+    "complete_certificates": 192,
+    "diagnostic_records": 192,
+    "B2": 1,
+    "B3": 0,
+    "historical_cpu_credit_proven": false,
+    "real_solver_checks": 0
+  },
+  "frozen_files_verified": 89,
+  "frozen_artifacts_verified": 16,
+  "old_files_metadata_verified": 23159,
+  "old_hashes_verified": 52,
+  "attempt_counts": {
+    "probes": 4,
+    "offline": 22,
+    "real_diagnosis": 4
+  },
+  "report_sha256": "3adf1921eeb7a6b120072271ef6a9ef140d07b2dc51cd0b0cb5310de5c10fff0",
+  "real_report_sha256": "c14ad533241e831fba16bdd82cf469d338da9bf70413dc51cbf435da20aeeb93",
+  "historical_cpu_credit_proven": false,
+  "real_solver_checks": 0,
+  "new_native_sampling": 0
+}

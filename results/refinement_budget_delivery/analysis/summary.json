@@ -1,0 +1,1471 @@
+{
+  "gate": {
+    "A0": true,
+    "A1": false,
+    "A2": false,
+    "A3": false,
+    "A3_common_positions": [],
+    "A4": false,
+    "B1": true,
+    "B2": true,
+    "B3": false,
+    "overall_online_Go": false,
+    "historical_cpu_credit_proven": false
+  },
+  "audit": {
+    "passed": true,
+    "sequences": 22,
+    "probes": 4,
+    "source_models": 43,
+    "replayed_events": 518,
+    "official_audit_calls": 804,
+    "distinct_formula_assignment_objects": 114,
+    "complete_candidate_audits": 256,
+    "full_equality_row_checks": 7181127,
+    "complete_certificates": 192,
+    "diagnostic_records": 192,
+    "B2": 1,
+    "B3": 0,
+    "historical_cpu_credit_proven": false,
+    "real_solver_checks": 0
+  },
+  "formal_sequences": [
+    {
+      "sequence": "convert_V0_L2_r1",
+      "stage": "offline",
+      "instance": "convert",
+      "configuration": "V0",
+      "track": "L2",
+      "repeat": 1,
+      "counts": {
+        "completed_domains": 0,
+        "events": 27
+      },
+      "preprocess_status": "wall_budget_exhausted",
+      "preprocess_eligible": false,
+      "preprocess_cpu": 0.097371633,
+      "preprocess_wall": 0.0981703550205566,
+      "final_extra": 0,
+      "native_covered": 36550,
+      "output_covered": 36550,
+      "optional_cpu": 0.11058951499999979,
+      "optional_wall": 0.1260106810950674,
+      "mandatory_cpu": 0.23951915900000026,
+      "mandatory_wall": 0.2396522851777263,
+      "terminal": {
+        "started_utc": "2026-11-03T12:44:11.053119+00:00",
+        "finished_utc": "2026-11-03T12:44:11.474124+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005627269999999851,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 0.42104129202198237,
+        "user_cpu": 0.165125,
+        "system_cpu": 0.212304,
+        "max_rss_kb": 25744,
+        "deadline_seconds": 30,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266833.252624498,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 0.37285361,
+        "summary_cpu": 0.0021697829999999807,
+        "summary_wall": 0.008418808982241899
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "convert_V1_L2_r1",
+      "stage": "offline",
+      "instance": "convert",
+      "configuration": "V1",
+      "track": "L2",
+      "repeat": 1,
+      "counts": {
+        "completed_domains": 0,
+        "events": 27
+      },
+      "preprocess_status": "completed",
+      "preprocess_eligible": true,
+      "preprocess_cpu": 0.085660026,
+      "preprocess_wall": 0.09111164399655536,
+      "final_extra": 0,
+      "native_covered": 36550,
+      "output_covered": 36550,
+      "optional_cpu": 0.5686303190000005,
+      "optional_wall": 0.5912155510159209,
+      "mandatory_cpu": 0.24084368899999992,
+      "mandatory_wall": 0.24087111826520413,
+      "terminal": {
+        "started_utc": "2026-11-03T12:44:11.498282+00:00",
+        "finished_utc": "2026-11-03T12:44:12.383375+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005579479999999748,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 0.8864378299913369,
+        "user_cpu": 0.361975,
+        "system_cpu": 0.475854,
+        "max_rss_kb": 31632,
+        "deadline_seconds": 30,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266834.160283275,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 0.8305743200000001,
+        "summary_cpu": 0.0017798259999999289,
+        "summary_wall": 0.003443620982579887
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "convert_V2_L2_r1",
+      "stage": "offline",
+      "instance": "convert",
+      "configuration": "V2",
+      "track": "L2",
+      "repeat": 1,
+      "counts": {
+        "completed_domains": 0,
+        "events": 27
+      },
+      "preprocess_status": "completed",
+      "preprocess_eligible": true,
+      "preprocess_cpu": 0.090499382,
+      "preprocess_wall": 0.09430676198098809,
+      "final_extra": 0,
+      "native_covered": 36550,
+      "output_covered": 36550,
+      "optional_cpu": 0.5734516250000004,
+      "optional_wall": 0.5973858968354762,
+      "mandatory_cpu": 0.24229786999999992,
+      "mandatory_wall": 0.2423029108904302,
+      "terminal": {
+        "started_utc": "2026-11-03T12:44:12.423207+00:00",
+        "finished_utc": "2026-11-03T12:44:13.318340+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005480210000000096,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 0.8951614599791355,
+        "user_cpu": 0.321716,
+        "system_cpu": 0.5203059999999999,
+        "max_rss_kb": 33992,
+        "deadline_seconds": 30,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266835.098098715,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 0.837309776,
+        "summary_cpu": 0.001724599999999965,
+        "summary_wall": 0.002888945979066193
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "convert_V3_L2_r1",
+      "stage": "offline",
+      "instance": "convert",
+      "configuration": "V3",
+      "track": "L2",
+      "repeat": 1,
+      "counts": {
+        "completed_domains": 0,
+        "events": 27
+      },
+      "preprocess_status": "wall_budget_exhausted",
+      "preprocess_eligible": false,
+      "preprocess_cpu": 0.09874653900000001,
+      "preprocess_wall": 0.10225638200063258,
+      "final_extra": 0,
+      "native_covered": 36550,
+      "output_covered": 36550,
+      "optional_cpu": 0.11142558500000042,
+      "optional_wall": 0.12419952015625313,
+      "mandatory_cpu": 0.240041432,
+      "mandatory_wall": 0.24005420797038823,
+      "terminal": {
+        "started_utc": "2026-11-03T12:44:13.358806+00:00",
+        "finished_utc": "2026-11-03T12:44:13.778120+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.000765528999999987,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 0.4193450089660473,
+        "user_cpu": 0.199116,
+        "system_cpu": 0.17879799999999998,
+        "max_rss_kb": 43092,
+        "deadline_seconds": 30,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266835.557486207,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 0.373135683,
+        "summary_cpu": 0.001697375000000001,
+        "summary_wall": 0.0029137309757061303
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "convert_V2_L2_r2",
+      "stage": "offline",
+      "instance": "convert",
+      "configuration": "V2",
+      "track": "L2",
+      "repeat": 2,
+      "counts": {
+        "completed_domains": 0,
+        "events": 27
+      },
+      "preprocess_status": "wall_budget_exhausted",
+      "preprocess_eligible": false,
+      "preprocess_cpu": 0.10135317800000002,
+      "preprocess_wall": 0.10229258402250707,
+      "final_extra": 0,
+      "native_covered": 36550,
+      "output_covered": 36550,
+      "optional_cpu": 0.11438126800000012,
+      "optional_wall": 0.1367115790490061,
+      "mandatory_cpu": 0.24022805400000002,
+      "mandatory_wall": 0.24023194512119517,
+      "terminal": {
+        "started_utc": "2026-11-03T12:44:13.816237+00:00",
+        "finished_utc": "2026-11-03T12:44:14.249894+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005723160000000171,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 0.433693380036857,
+        "user_cpu": 0.21512599999999998,
+        "system_cpu": 0.16732,
+        "max_rss_kb": 45184,
+        "deadline_seconds": 30,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266836.027895969,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 0.37649463400000005,
+        "summary_cpu": 0.0017415390000000142,
+        "summary_wall": 0.008212196989916265
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "convert_V3_L2_r2",
+      "stage": "offline",
+      "instance": "convert",
+      "configuration": "V3",
+      "track": "L2",
+      "repeat": 2,
+      "counts": {
+        "completed_domains": 0,
+        "events": 27
+      },
+      "preprocess_status": "wall_budget_exhausted",
+      "preprocess_eligible": false,
+      "preprocess_cpu": 0.09952873300000001,
+      "preprocess_wall": 0.10491846199147403,
+      "final_extra": 0,
+      "native_covered": 36550,
+      "output_covered": 36550,
+      "optional_cpu": 0.11151582199999993,
+      "optional_wall": 0.1267771198763512,
+      "mandatory_cpu": 0.236865559,
+      "mandatory_wall": 0.23687432677252218,
+      "terminal": {
+        "started_utc": "2026-11-03T12:44:14.273161+00:00",
+        "finished_utc": "2026-11-03T12:44:14.688013+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005535990000000157,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 0.4148827720200643,
+        "user_cpu": 0.173671,
+        "system_cpu": 0.200687,
+        "max_rss_kb": 45184,
+        "deadline_seconds": 30,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266836.467770545,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 0.36977895800000005,
+        "summary_cpu": 0.0015803229999999946,
+        "summary_wall": 0.002887075999751687
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "convert_V0_L2_r2",
+      "stage": "offline",
+      "instance": "convert",
+      "configuration": "V0",
+      "track": "L2",
+      "repeat": 2,
+      "counts": {
+        "completed_domains": 0,
+        "events": 27
+      },
+      "preprocess_status": "wall_budget_exhausted",
+      "preprocess_eligible": false,
+      "preprocess_cpu": 0.09757632300000002,
+      "preprocess_wall": 0.09812307503307238,
+      "final_extra": 0,
+      "native_covered": 36550,
+      "output_covered": 36550,
+      "optional_cpu": 0.11019825500000016,
+      "optional_wall": 0.12530238274484873,
+      "mandatory_cpu": 0.23874853600000007,
+      "mandatory_wall": 0.23875680210767314,
+      "terminal": {
+        "started_utc": "2026-11-03T12:44:14.721588+00:00",
+        "finished_utc": "2026-11-03T12:44:15.136197+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.000569244999999996,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 0.41465549799613655,
+        "user_cpu": 0.19133999999999998,
+        "system_cpu": 0.183367,
+        "max_rss_kb": 45184,
+        "deadline_seconds": 30,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266836.915954838,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 0.370218568,
+        "summary_cpu": 0.001661434999999989,
+        "summary_wall": 0.008115432981867343
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "convert_V1_L2_r2",
+      "stage": "offline",
+      "instance": "convert",
+      "configuration": "V1",
+      "track": "L2",
+      "repeat": 2,
+      "counts": {
+        "completed_domains": 0,
+        "events": 27
+      },
+      "preprocess_status": "completed",
+      "preprocess_eligible": true,
+      "preprocess_cpu": 0.08574901100000001,
+      "preprocess_wall": 0.08940553897991776,
+      "final_extra": 0,
+      "native_covered": 36550,
+      "output_covered": 36550,
+      "optional_cpu": 0.5695529349999997,
+      "optional_wall": 0.5949455118970945,
+      "mandatory_cpu": 0.24173301099999994,
+      "mandatory_wall": 0.2417465541511774,
+      "terminal": {
+        "started_utc": "2026-11-03T12:44:15.158374+00:00",
+        "finished_utc": "2026-11-03T12:44:16.045838+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0006070320000000073,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 0.8874965499853715,
+        "user_cpu": 0.394127,
+        "system_cpu": 0.443912,
+        "max_rss_kb": 45184,
+        "deadline_seconds": 30,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266837.824670751,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 0.8326910790000001,
+        "summary_cpu": 0.0017696659999999476,
+        "summary_wall": 0.00922580499900505
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "convert_V3_L2_r3",
+      "stage": "offline",
+      "instance": "convert",
+      "configuration": "V3",
+      "track": "L2",
+      "repeat": 3,
+      "counts": {
+        "completed_domains": 0,
+        "events": 27
+      },
+      "preprocess_status": "wall_budget_exhausted",
+      "preprocess_eligible": false,
+      "preprocess_cpu": 0.099850462,
+      "preprocess_wall": 0.1032081600278616,
+      "final_extra": 0,
+      "native_covered": 36550,
+      "output_covered": 36550,
+      "optional_cpu": 0.11216739199999975,
+      "optional_wall": 0.13092309108469635,
+      "mandatory_cpu": 0.24018439100000002,
+      "mandatory_wall": 0.24019092187518254,
+      "terminal": {
+        "started_utc": "2026-11-03T12:44:16.078374+00:00",
+        "finished_utc": "2026-11-03T12:44:16.499633+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005560749999999892,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 0.42129099799785763,
+        "user_cpu": 0.175457,
+        "system_cpu": 0.20274999999999999,
+        "max_rss_kb": 45184,
+        "deadline_seconds": 30,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266838.279125451,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 0.373599112,
+        "summary_cpu": 0.0016238040000000065,
+        "summary_wall": 0.008922461012843996
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "convert_V0_L2_r3",
+      "stage": "offline",
+      "instance": "convert",
+      "configuration": "V0",
+      "track": "L2",
+      "repeat": 3,
+      "counts": {
+        "completed_domains": 0,
+        "events": 27
+      },
+      "preprocess_status": "wall_budget_exhausted",
+      "preprocess_eligible": false,
+      "preprocess_cpu": 0.09710536800000001,
+      "preprocess_wall": 0.09808235900709406,
+      "final_extra": 0,
+      "native_covered": 36550,
+      "output_covered": 36550,
+      "optional_cpu": 0.11051764500000023,
+      "optional_wall": 0.12215072981780395,
+      "mandatory_cpu": 0.24036821199999997,
+      "mandatory_wall": 0.24039653822546825,
+      "terminal": {
+        "started_utc": "2026-11-03T12:44:16.532588+00:00",
+        "finished_utc": "2026-11-03T12:44:16.945101+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005174119999999949,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 0.41254752600798383,
+        "user_cpu": 0.152916,
+        "system_cpu": 0.223493,
+        "max_rss_kb": 45184,
+        "deadline_seconds": 30,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266838.724521476,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 0.37175986,
+        "summary_cpu": 0.001638479000000026,
+        "summary_wall": 0.0030301709775812924
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "convert_V1_L2_r3",
+      "stage": "offline",
+      "instance": "convert",
+      "configuration": "V1",
+      "track": "L2",
+      "repeat": 3,
+      "counts": {
+        "completed_domains": 0,
+        "events": 27
+      },
+      "preprocess_status": "completed",
+      "preprocess_eligible": true,
+      "preprocess_cpu": 0.08505290200000001,
+      "preprocess_wall": 0.08872937597334385,
+      "final_extra": 0,
+      "native_covered": 36550,
+      "output_covered": 36550,
+      "optional_cpu": 0.5675087160000006,
+      "optional_wall": 0.5905463410308585,
+      "mandatory_cpu": 0.238556147,
+      "mandatory_wall": 0.23856285779038444,
+      "terminal": {
+        "started_utc": "2026-11-03T12:44:16.993587+00:00",
+        "finished_utc": "2026-11-03T12:44:17.875999+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0007571769999999978,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 0.8824502210482024,
+        "user_cpu": 0.35234499999999996,
+        "system_cpu": 0.48046999999999995,
+        "max_rss_kb": 45184,
+        "deadline_seconds": 30,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266839.654498794,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 0.827253164,
+        "summary_cpu": 0.0017788310000000918,
+        "summary_wall": 0.008545044984202832
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "convert_V2_L2_r3",
+      "stage": "offline",
+      "instance": "convert",
+      "configuration": "V2",
+      "track": "L2",
+      "repeat": 3,
+      "counts": {
+        "completed_domains": 0,
+        "events": 27
+      },
+      "preprocess_status": "completed",
+      "preprocess_eligible": true,
+      "preprocess_cpu": 0.09101715800000001,
+      "preprocess_wall": 0.09549408702878281,
+      "final_extra": 0,
+      "native_covered": 36550,
+      "output_covered": 36550,
+      "optional_cpu": 0.5733878049999995,
+      "optional_wall": 0.5994663871824741,
+      "mandatory_cpu": 0.2387112399999999,
+      "mandatory_wall": 0.23871661792509258,
+      "terminal": {
+        "started_utc": "2026-11-03T12:44:17.910282+00:00",
+        "finished_utc": "2026-11-03T12:44:18.798288+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.000520485000000015,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 0.888035312993452,
+        "user_cpu": 0.32082299999999997,
+        "system_cpu": 0.517328,
+        "max_rss_kb": 45184,
+        "deadline_seconds": 30,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266840.577422556,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 0.8330177360000001,
+        "summary_cpu": 0.0016135179999999805,
+        "summary_wall": 0.008084401022642851
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "convert_V0_L1_r1",
+      "stage": "offline",
+      "instance": "convert",
+      "configuration": "V0",
+      "track": "L1",
+      "repeat": 1,
+      "counts": {
+        "completed_domains": 0,
+        "events": 27
+      },
+      "preprocess_status": "wall_budget_exhausted",
+      "preprocess_eligible": false,
+      "preprocess_cpu": 0.097088983,
+      "preprocess_wall": 0.09790040395455435,
+      "final_extra": 0,
+      "native_covered": 36550,
+      "output_covered": 36550,
+      "optional_cpu": 0.10951956499999964,
+      "optional_wall": 0.1250413887319155,
+      "mandatory_cpu": 0.23632521100000015,
+      "mandatory_wall": 0.23633339803200215,
+      "terminal": {
+        "started_utc": "2026-11-03T12:44:18.834707+00:00",
+        "finished_utc": "2026-11-03T12:44:19.246766+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005528289999999769,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 0.4120936149847694,
+        "user_cpu": 0.18592999999999998,
+        "system_cpu": 0.18592999999999998,
+        "max_rss_kb": 45184,
+        "deadline_seconds": 30,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266841.026087552,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 0.367046042,
+        "summary_cpu": 0.0016799150000000318,
+        "summary_wall": 0.008279877016320825
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "convert_V3_L1_r1",
+      "stage": "offline",
+      "instance": "convert",
+      "configuration": "V3",
+      "track": "L1",
+      "repeat": 1,
+      "counts": {
+        "completed_domains": 0,
+        "events": 27
+      },
+      "preprocess_status": "wall_budget_exhausted",
+      "preprocess_eligible": false,
+      "preprocess_cpu": 0.09799830500000001,
+      "preprocess_wall": 0.10184515896253288,
+      "final_extra": 0,
+      "native_covered": 36550,
+      "output_covered": 36550,
+      "optional_cpu": 0.1104617609999998,
+      "optional_wall": 0.1284317919635214,
+      "mandatory_cpu": 0.23671739600000014,
+      "mandatory_wall": 0.2367323209764436,
+      "terminal": {
+        "started_utc": "2026-11-03T12:44:19.272771+00:00",
+        "finished_utc": "2026-11-03T12:44:19.692104+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005338089999999962,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 0.4193644330371171,
+        "user_cpu": 0.15592,
+        "system_cpu": 0.216766,
+        "max_rss_kb": 45184,
+        "deadline_seconds": 30,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266841.47209545,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 0.368361626,
+        "summary_cpu": 0.0017040420000000167,
+        "summary_wall": 0.008103984000626951
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "convert_V3_L1_r2",
+      "stage": "offline",
+      "instance": "convert",
+      "configuration": "V3",
+      "track": "L1",
+      "repeat": 2,
+      "counts": {
+        "completed_domains": 0,
+        "events": 27
+      },
+      "preprocess_status": "wall_budget_exhausted",
+      "preprocess_eligible": false,
+      "preprocess_cpu": 0.09839724,
+      "preprocess_wall": 0.10183755902107805,
+      "final_extra": 0,
+      "native_covered": 36550,
+      "output_covered": 36550,
+      "optional_cpu": 0.11048551299999981,
+      "optional_wall": 0.129291468358133,
+      "mandatory_cpu": 0.24142487599999995,
+      "mandatory_wall": 0.24143327021738514,
+      "terminal": {
+        "started_utc": "2026-11-03T12:44:19.725242+00:00",
+        "finished_utc": "2026-11-03T12:44:20.147114+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0006022279999999824,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 0.421900044020731,
+        "user_cpu": 0.18246099999999998,
+        "system_cpu": 0.194902,
+        "max_rss_kb": 45184,
+        "deadline_seconds": 30,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266841.926037169,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 0.37288197700000003,
+        "summary_cpu": 0.001585736999999976,
+        "summary_wall": 0.008195087022613734
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "convert_V0_L1_r2",
+      "stage": "offline",
+      "instance": "convert",
+      "configuration": "V0",
+      "track": "L1",
+      "repeat": 2,
+      "counts": {
+        "completed_domains": 0,
+        "events": 27
+      },
+      "preprocess_status": "wall_budget_exhausted",
+      "preprocess_eligible": false,
+      "preprocess_cpu": 0.09703343700000001,
+      "preprocess_wall": 0.09771869197720662,
+      "final_extra": 0,
+      "native_covered": 36550,
+      "output_covered": 36550,
+      "optional_cpu": 0.11021886099999988,
+      "optional_wall": 0.1271995600545779,
+      "mandatory_cpu": 0.24457564800000017,
+      "mandatory_wall": 0.24458341021090746,
+      "terminal": {
+        "started_utc": "2026-11-03T12:44:20.179456+00:00",
+        "finished_utc": "2026-11-03T12:44:20.632928+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005432979999999699,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 0.45350911299465224,
+        "user_cpu": 0.17513399999999998,
+        "system_cpu": 0.20771699999999998,
+        "max_rss_kb": 45644,
+        "deadline_seconds": 30,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266842.412208245,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 0.378220125,
+        "summary_cpu": 0.001734742999999983,
+        "summary_wall": 0.008679121034219861
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "convert_V0_L1_r3",
+      "stage": "offline",
+      "instance": "convert",
+      "configuration": "V0",
+      "track": "L1",
+      "repeat": 3,
+      "counts": {
+        "completed_domains": 0,
+        "events": 27
+      },
+      "preprocess_status": "wall_budget_exhausted",
+      "preprocess_eligible": false,
+      "preprocess_cpu": 0.097148366,
+      "preprocess_wall": 0.09787291201064363,
+      "final_extra": 0,
+      "native_covered": 36550,
+      "output_covered": 36550,
+      "optional_cpu": 0.10988654700000004,
+      "optional_wall": 0.13127469329629093,
+      "mandatory_cpu": 0.23686635899999992,
+      "mandatory_wall": 0.2368749228771776,
+      "terminal": {
+        "started_utc": "2026-11-03T12:44:20.662379+00:00",
+        "finished_utc": "2026-11-03T12:44:21.083778+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005913310000000283,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 0.4214287899667397,
+        "user_cpu": 0.178731,
+        "system_cpu": 0.19497899999999999,
+        "max_rss_kb": 45644,
+        "deadline_seconds": 30,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266842.863600562,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 0.369330898,
+        "summary_cpu": 0.001634500999999955,
+        "summary_wall": 0.008878141990862787
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "convert_V3_L1_r3",
+      "stage": "offline",
+      "instance": "convert",
+      "configuration": "V3",
+      "track": "L1",
+      "repeat": 3,
+      "counts": {
+        "completed_domains": 0,
+        "events": 27
+      },
+      "preprocess_status": "wall_budget_exhausted",
+      "preprocess_eligible": false,
+      "preprocess_cpu": 0.09820516900000001,
+      "preprocess_wall": 0.10209937900071964,
+      "final_extra": 0,
+      "native_covered": 36550,
+      "output_covered": 36550,
+      "optional_cpu": 0.11027647600000015,
+      "optional_wall": 0.13172489905264229,
+      "mandatory_cpu": 0.24624934299999998,
+      "mandatory_wall": 0.24625572300283238,
+      "terminal": {
+        "started_utc": "2026-11-03T12:44:21.112042+00:00",
+        "finished_utc": "2026-11-03T12:44:21.544066+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005605690000000108,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 0.4320579000050202,
+        "user_cpu": 0.185105,
+        "system_cpu": 0.19691999999999998,
+        "max_rss_kb": 45644,
+        "deadline_seconds": 30,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266843.322632992,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 0.377324894,
+        "summary_cpu": 0.0017006359999999776,
+        "summary_wall": 0.008722511993255466
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "SMT_random_V0_L2_r1",
+      "stage": "offline",
+      "instance": "SMT_random",
+      "configuration": "V0",
+      "track": "L2",
+      "repeat": 1,
+      "counts": {
+        "completed_domains": 0,
+        "events": 8
+      },
+      "preprocess_status": "completed",
+      "preprocess_eligible": true,
+      "preprocess_cpu": 0.012735129000000001,
+      "preprocess_wall": 0.01337087998399511,
+      "final_extra": 0,
+      "native_covered": 11230,
+      "output_covered": 11230,
+      "optional_cpu": 0.03183274500000005,
+      "optional_wall": 0.035562683013267815,
+      "mandatory_cpu": 0.038380789,
+      "mandatory_wall": 0.03838198719313368,
+      "terminal": {
+        "started_utc": "2026-11-03T12:44:22.091611+00:00",
+        "finished_utc": "2026-11-03T12:44:22.205395+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005549210000000415,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 0.11381284100934863,
+        "user_cpu": 0.047103,
+        "system_cpu": 0.039251999999999995,
+        "max_rss_kb": 45644,
+        "deadline_seconds": 30,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266843.987659573,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 0.08426314500000001,
+        "summary_cpu": 0.0005058400000000074,
+        "summary_wall": 0.001263700018171221
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "SMT_random_V3_L2_r1",
+      "stage": "offline",
+      "instance": "SMT_random",
+      "configuration": "V3",
+      "track": "L2",
+      "repeat": 1,
+      "counts": {
+        "completed_domains": 0,
+        "events": 8
+      },
+      "preprocess_status": "completed",
+      "preprocess_eligible": true,
+      "preprocess_cpu": 0.009407563999999998,
+      "preprocess_wall": 0.009886062995065004,
+      "final_extra": 0,
+      "native_covered": 11230,
+      "output_covered": 11230,
+      "optional_cpu": 0.03623327800000002,
+      "optional_wall": 0.039762027212418616,
+      "mandatory_cpu": 0.038078841999999974,
+      "mandatory_wall": 0.03810867096763104,
+      "terminal": {
+        "started_utc": "2026-11-03T12:44:22.227717+00:00",
+        "finished_utc": "2026-11-03T12:44:22.342281+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.000548702000000012,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 0.1145966260228306,
+        "user_cpu": 0.039201,
+        "system_cpu": 0.050962,
+        "max_rss_kb": 45644,
+        "deadline_seconds": 30,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266844.124668004,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 0.08813063600000001,
+        "summary_cpu": 0.0005048680000000055,
+        "summary_wall": 0.0011711199767887592
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "SMT_real_V0_L2_r1",
+      "stage": "offline",
+      "instance": "SMT_real",
+      "configuration": "V0",
+      "track": "L2",
+      "repeat": 1,
+      "counts": {
+        "completed_domains": 28,
+        "events": 8,
+        "target_records": 224,
+        "proposed_parameters": 0
+      },
+      "preprocess_status": "completed",
+      "preprocess_eligible": true,
+      "preprocess_cpu": 0.038180616,
+      "preprocess_wall": 0.03956822300096974,
+      "final_extra": 0,
+      "native_covered": 5961,
+      "output_covered": 5961,
+      "optional_cpu": 0.16955098500000004,
+      "optional_wall": 0.1768467899528332,
+      "mandatory_cpu": 0.026523624999999974,
+      "mandatory_wall": 0.026523146079853177,
+      "terminal": {
+        "started_utc": "2026-11-03T12:44:21.575577+00:00",
+        "finished_utc": "2026-11-03T12:44:21.810267+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0009702059999999735,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 0.23472378199221566,
+        "user_cpu": 0.105913,
+        "system_cpu": 0.10184,
+        "max_rss_kb": 45644,
+        "deadline_seconds": 30,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266843.592279837,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 0.20594990200000002,
+        "summary_cpu": 0.0003906480000000212,
+        "summary_wall": 0.0013729240163229406
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "SMT_real_V3_L2_r1",
+      "stage": "offline",
+      "instance": "SMT_real",
+      "configuration": "V3",
+      "track": "L2",
+      "repeat": 1,
+      "counts": {
+        "completed_domains": 35,
+        "events": 8,
+        "target_records": 280,
+        "proposed_parameters": 0
+      },
+      "preprocess_status": "completed",
+      "preprocess_eligible": true,
+      "preprocess_cpu": 0.039928132000000005,
+      "preprocess_wall": 0.04193148197373375,
+      "final_extra": 0,
+      "native_covered": 5961,
+      "output_covered": 5961,
+      "optional_cpu": 0.17186853599999993,
+      "optional_wall": 0.17927094892365858,
+      "mandatory_cpu": 0.026740868999999987,
+      "mandatory_wall": 0.02674123801989481,
+      "terminal": {
+        "started_utc": "2026-11-03T12:44:21.833037+00:00",
+        "finished_utc": "2026-11-03T12:44:22.069355+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005278710000000131,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 0.23634980100905523,
+        "user_cpu": 0.093535,
+        "system_cpu": 0.116919,
+        "max_rss_kb": 45644,
+        "deadline_seconds": 30,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266843.851597354,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 0.20844904900000003,
+        "summary_cpu": 0.00039362999999997816,
+        "summary_wall": 0.001393428014125675
+      },
+      "truncated": false
+    }
+  ],
+  "probe_sequences": [
+    {
+      "sequence": "convert_V0",
+      "stage": "probes",
+      "instance": "convert",
+      "configuration": "V0",
+      "track": "probe",
+      "repeat": null,
+      "counts": {
+        "completed_domains": 64,
+        "events": 5,
+        "target_records": 232,
+        "proposed_parameters": 130,
+        "candidate_records": 64,
+        "candidate_protected_observation_missing": 45,
+        "complete_evaluations": 61,
+        "protected_rejected": 45,
+        "candidate_incomplete_candidate": 3,
+        "candidate_eligible_strict_improvement": 16,
+        "preserved": 16
+      },
+      "preprocess_status": "completed",
+      "preprocess_eligible": true,
+      "preprocess_cpu": 0.13233934200000003,
+      "preprocess_wall": 0.13623510900652036,
+      "final_extra": 0,
+      "native_covered": 33858,
+      "output_covered": 33858,
+      "optional_cpu": 2.2274054669999996,
+      "optional_wall": 2.270794556767214,
+      "mandatory_cpu": 0.046404159999999944,
+      "mandatory_wall": 0.04640736512374133,
+      "terminal": {
+        "started_utc": "2026-11-03T12:43:28.911275+00:00",
+        "finished_utc": "2026-11-03T12:43:31.282937+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005508199999999797,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 2.371694604982622,
+        "user_cpu": 1.104841,
+        "system_cpu": 1.196911,
+        "max_rss_kb": 90692,
+        "deadline_seconds": 6,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266793.057888046,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 2.29541038,
+        "summary_cpu": 0.0005334569999999594,
+        "summary_wall": 0.0014117619721218944
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "convert_V1",
+      "stage": "probes",
+      "instance": "convert",
+      "configuration": "V1",
+      "track": "probe",
+      "repeat": null,
+      "counts": {
+        "completed_domains": 64,
+        "events": 5,
+        "target_records": 232,
+        "proposed_parameters": 130,
+        "candidate_records": 64,
+        "candidate_protected_observation_missing": 46,
+        "complete_evaluations": 63,
+        "protected_rejected": 46,
+        "candidate_eligible_strict_improvement": 17,
+        "preserved": 17,
+        "candidate_incomplete_candidate": 1
+      },
+      "preprocess_status": "completed",
+      "preprocess_eligible": true,
+      "preprocess_cpu": 0.089272829,
+      "preprocess_wall": 0.09303846303373575,
+      "final_extra": 0,
+      "native_covered": 33858,
+      "output_covered": 33858,
+      "optional_cpu": 2.186954938,
+      "optional_wall": 2.230265205085743,
+      "mandatory_cpu": 0.04469883900000002,
+      "mandatory_wall": 0.044698657060507685,
+      "terminal": {
+        "started_utc": "2026-11-03T12:43:31.584528+00:00",
+        "finished_utc": "2026-11-03T12:43:33.913455+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005634530000000471,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 2.3289618200506084,
+        "user_cpu": 1.061628,
+        "system_cpu": 1.198352,
+        "max_rss_kb": 146224,
+        "deadline_seconds": 6,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266795.68829682,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 2.254021497,
+        "summary_cpu": 0.0005745029999997264,
+        "summary_wall": 0.0014077600208111107
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "convert_V2",
+      "stage": "probes",
+      "instance": "convert",
+      "configuration": "V2",
+      "track": "probe",
+      "repeat": null,
+      "counts": {
+        "completed_domains": 64,
+        "events": 5,
+        "target_records": 232,
+        "proposed_parameters": 130,
+        "candidate_records": 67,
+        "candidate_protected_observation_missing": 47,
+        "complete_evaluations": 64,
+        "protected_rejected": 47,
+        "candidate_incomplete_candidate": 3,
+        "candidate_eligible_strict_improvement": 17,
+        "preserved": 17
+      },
+      "preprocess_status": "completed",
+      "preprocess_eligible": true,
+      "preprocess_cpu": 0.09275766700000002,
+      "preprocess_wall": 0.09627597103826702,
+      "final_extra": 0,
+      "native_covered": 33858,
+      "output_covered": 33858,
+      "optional_cpu": 2.1807504319999995,
+      "optional_wall": 2.229352907044813,
+      "mandatory_cpu": 0.04440025600000022,
+      "mandatory_wall": 0.04440163401886821,
+      "terminal": {
+        "started_utc": "2026-11-03T12:43:34.302805+00:00",
+        "finished_utc": "2026-11-03T12:43:36.630599+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005589870000000108,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 2.327833897958044,
+        "user_cpu": 1.130524,
+        "system_cpu": 1.122477,
+        "max_rss_kb": 262412,
+        "deadline_seconds": 6,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266798.405582905,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 2.246983603,
+        "summary_cpu": 0.0004831940000000756,
+        "summary_wall": 0.0010451609850861132
+      },
+      "truncated": false
+    },
+    {
+      "sequence": "convert_V3",
+      "stage": "probes",
+      "instance": "convert",
+      "configuration": "V3",
+      "track": "probe",
+      "repeat": null,
+      "counts": {
+        "completed_domains": 64,
+        "events": 5,
+        "target_records": 232,
+        "proposed_parameters": 130,
+        "candidate_records": 71,
+        "candidate_protected_observation_missing": 50,
+        "complete_evaluations": 68,
+        "protected_rejected": 50,
+        "candidate_incomplete_candidate": 3,
+        "candidate_eligible_strict_improvement": 18,
+        "preserved": 18
+      },
+      "preprocess_status": "completed",
+      "preprocess_eligible": true,
+      "preprocess_cpu": 0.09719754800000001,
+      "preprocess_wall": 0.10061052901437506,
+      "final_extra": 0,
+      "native_covered": 33858,
+      "output_covered": 33858,
+      "optional_cpu": 2.166347600000001,
+      "optional_wall": 2.2158701377920806,
+      "mandatory_cpu": 0.04563288999999979,
+      "mandatory_wall": 0.045641486009117216,
+      "terminal": {
+        "started_utc": "2026-11-03T12:43:36.995359+00:00",
+        "finished_utc": "2026-11-03T12:43:39.308542+00:00",
+        "affinity": [
+          0
+        ],
+        "parent_cpu": 0.0005826279999998629,
+        "returncode": 0,
+        "external_timeout": false,
+        "parent_wall": 2.313212812994607,
+        "user_cpu": 1.039551,
+        "system_cpu": 1.199482,
+        "max_rss_kb": 267868,
+        "deadline_seconds": 6,
+        "exit_delay": 0,
+        "no_retry": true
+      },
+      "summary_tail": {
+        "last_monotonic": 266801.083893075,
+        "last_record_self_tail": "parent measured, not zero",
+        "last_thread_cpu": 2.233100345,
+        "summary_cpu": 0.0004946960000000722,
+        "summary_wall": 0.0011388250277377665
+      },
+      "truncated": false
+    }
+  ],
+  "group_compression": [
+    {
+      "configuration": "V0",
+      "directions": 256,
+      "affected_entries": 209575
+    },
+    {
+      "configuration": "V1",
+      "directions": 256,
+      "affected_entries": 209575
+    },
+    {
+      "configuration": "V2",
+      "directions": 256,
+      "affected_entries": 209575
+    },
+    {
+      "configuration": "V3",
+      "directions": 256,
+      "affected_entries": 209575,
+      "compressed_group_direction_entries": 32554,
+      "groups": 533,
+      "original_affected_entries": 209575
+    }
+  ],
+  "real_funnel": [
+    [
+      2,
+      "original",
+      16,
+      16,
+      16,
+      16,
+      15,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      "combination",
+      32,
+      32,
+      32,
+      32,
+      32,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      3,
+      "original",
+      16,
+      16,
+      16,
+      16,
+      16,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      3,
+      "combination",
+      32,
+      32,
+      32,
+      32,
+      32,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      4,
+      "original",
+      16,
+      16,
+      16,
+      16,
+      16,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      4,
+      "combination",
+      32,
+      32,
+      32,
+      32,
+      32,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      5,
+      "original",
+      16,
+      16,
+      16,
+      16,
+      15,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      5,
+      "combination",
+      32,
+      32,
+      32,
+      32,
+      31,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0
+    ]
+  ]
+}

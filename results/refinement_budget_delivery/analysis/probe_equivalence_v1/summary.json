@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "pairs": {
+    "metadata_pairs": 6,
+    "candidate_or_target_pairs": 1765,
+    "rank_pairs": 24,
+    "domain_pairs": 384,
+    "target_list_pairs": 384
+  },
+  "censored_workers": [],
+  "uses_only_jointly_completed_work": true,
+  "new_workers": 0
+}
