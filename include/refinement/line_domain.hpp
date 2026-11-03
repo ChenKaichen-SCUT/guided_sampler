@@ -34,8 +34,8 @@ public:
     IntervalUnion truth(unsigned root){
         struct Frame{unsigned id;bool ready;};std::vector<Frame> todo{{root,false}};
         while(!todo.empty()){
-            work.tick();auto f=todo.back();todo.pop_back();if(cache[f.id])continue;auto const& n=ir.ast.nodes[f.id];if(!n.boolean)throw std::runtime_error("nonboolean formula domain");
-            if(!depends_on(ir.dependencies[f.id],direction)){auto e=evaluate(ir.ast,anchor,work.time,false,f.id);cache[f.id]=*e.values[f.id]!=0?all_integers():IntervalUnion{};continue;}
+            work.tick();auto f=todo.back();if(work.time.trace)work.time.trace->node(f.id);todo.pop_back();if(cache[f.id])continue;auto const& n=ir.ast.nodes[f.id];if(!n.boolean)throw std::runtime_error("nonboolean formula domain");
+            if(!depends_on(ir.dependencies[f.id],direction)){StageScope numeric(work.time.trace,RepairStage::NumericValues);auto e=evaluate(ir.ast,anchor,work.time,false,f.id);cache[f.id]=*e.values[f.id]!=0?all_integers():IntervalUnion{};continue;}
             if(!f.ready){todo.push_back({f.id,true});for(auto c:n.children)if(ir.ast.nodes[c].boolean&&!cache[c])todo.push_back({c,false});continue;}
             auto const& cs=n.children;auto get=[&](unsigned k)->IntervalUnion const&{return *cache.at(cs.at(k));};IntervalUnion out;
             if(n.op==Op::And){out=all_integers();for(unsigned k=0;k<cs.size();++k)out=intersect(out,get(k),work);}

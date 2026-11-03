@@ -1,0 +1,627 @@
+{
+  "base": "ae6da89e16be99142b7402fe6f0bccfb87e19893",
+  "source_models": 43,
+  "replayed_events": 559,
+  "cpu": 0,
+  "seed": 0,
+  "online_sessions": 0,
+  "B": false,
+  "guard": 65536,
+  "numeric_cache_initialization": "empty per anchor; no native trace prefill",
+  "affine_constant": "old coefficient dot product order, separate anchor cache",
+  "dependency": "complete syntactic parent closure; x-x remains affected",
+  "budgets": {
+    "preprocess": 0.1,
+    "event": 0.02,
+    "sequence": 6,
+    "probe_preprocess": 2,
+    "probe_event": 0.5,
+    "probe_worker_wall": 5,
+    "oracle_case_wall": 3,
+    "oracle_check_wall": 2
+  },
+  "limits": {
+    "direction_pool": 256,
+    "directions_per_event": 16,
+    "ranked_directions": 8,
+    "targets_per_direction": 8,
+    "hits_per_target": 4,
+    "full_candidates_per_event": 64,
+    "component_variables": 64,
+    "component_rows": 128,
+    "component_nonzeros": 4096,
+    "integer_bits": 4096,
+    "interval_limit": 4096,
+    "domain_ops": 200000,
+    "elimination_ops": 200000
+  },
+  "offline": [
+    {
+      "id": "convert_Legacy_L2_r1",
+      "instance": "convert",
+      "mode": "Legacy",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 1
+    },
+    {
+      "id": "convert_ValueCache_L2_r1",
+      "instance": "convert",
+      "mode": "ValueCache",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 1
+    },
+    {
+      "id": "convert_Shared_L2_r1",
+      "instance": "convert",
+      "mode": "Shared",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 1
+    },
+    {
+      "id": "SMT_random_Legacy_L2_r1",
+      "instance": "SMT_random",
+      "mode": "Legacy",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 1
+    },
+    {
+      "id": "SMT_random_ValueCache_L2_r1",
+      "instance": "SMT_random",
+      "mode": "ValueCache",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 1
+    },
+    {
+      "id": "SMT_random_Shared_L2_r1",
+      "instance": "SMT_random",
+      "mode": "Shared",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 1
+    },
+    {
+      "id": "SMT_real_Legacy_L2_r1",
+      "instance": "SMT_real",
+      "mode": "Legacy",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 1
+    },
+    {
+      "id": "SMT_real_ValueCache_L2_r1",
+      "instance": "SMT_real",
+      "mode": "ValueCache",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 1
+    },
+    {
+      "id": "SMT_real_Shared_L2_r1",
+      "instance": "SMT_real",
+      "mode": "Shared",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 1
+    },
+    {
+      "id": "convert_ValueCache_L2_r2",
+      "instance": "convert",
+      "mode": "ValueCache",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 2
+    },
+    {
+      "id": "convert_Shared_L2_r2",
+      "instance": "convert",
+      "mode": "Shared",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 2
+    },
+    {
+      "id": "convert_Legacy_L2_r2",
+      "instance": "convert",
+      "mode": "Legacy",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 2
+    },
+    {
+      "id": "SMT_random_ValueCache_L2_r2",
+      "instance": "SMT_random",
+      "mode": "ValueCache",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 2
+    },
+    {
+      "id": "SMT_random_Shared_L2_r2",
+      "instance": "SMT_random",
+      "mode": "Shared",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 2
+    },
+    {
+      "id": "SMT_random_Legacy_L2_r2",
+      "instance": "SMT_random",
+      "mode": "Legacy",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 2
+    },
+    {
+      "id": "SMT_real_ValueCache_L2_r2",
+      "instance": "SMT_real",
+      "mode": "ValueCache",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 2
+    },
+    {
+      "id": "SMT_real_Shared_L2_r2",
+      "instance": "SMT_real",
+      "mode": "Shared",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 2
+    },
+    {
+      "id": "SMT_real_Legacy_L2_r2",
+      "instance": "SMT_real",
+      "mode": "Legacy",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 2
+    },
+    {
+      "id": "convert_Shared_L2_r3",
+      "instance": "convert",
+      "mode": "Shared",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 3
+    },
+    {
+      "id": "convert_Legacy_L2_r3",
+      "instance": "convert",
+      "mode": "Legacy",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 3
+    },
+    {
+      "id": "convert_ValueCache_L2_r3",
+      "instance": "convert",
+      "mode": "ValueCache",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 3
+    },
+    {
+      "id": "SMT_random_Shared_L2_r3",
+      "instance": "SMT_random",
+      "mode": "Shared",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 3
+    },
+    {
+      "id": "SMT_random_Legacy_L2_r3",
+      "instance": "SMT_random",
+      "mode": "Legacy",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 3
+    },
+    {
+      "id": "SMT_random_ValueCache_L2_r3",
+      "instance": "SMT_random",
+      "mode": "ValueCache",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 3
+    },
+    {
+      "id": "SMT_real_Shared_L2_r3",
+      "instance": "SMT_real",
+      "mode": "Shared",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 3
+    },
+    {
+      "id": "SMT_real_Legacy_L2_r3",
+      "instance": "SMT_real",
+      "mode": "Legacy",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 3
+    },
+    {
+      "id": "SMT_real_ValueCache_L2_r3",
+      "instance": "SMT_real",
+      "mode": "ValueCache",
+      "layer": "L2",
+      "component_only": false,
+      "repeat": 3
+    },
+    {
+      "id": "convert_Legacy_L1_once",
+      "instance": "convert",
+      "mode": "Legacy",
+      "layer": "L1",
+      "component_only": false,
+      "repeat": null
+    },
+    {
+      "id": "convert_Legacy_L2_component_once",
+      "instance": "convert",
+      "mode": "Legacy",
+      "layer": "L2",
+      "component_only": true,
+      "repeat": null
+    },
+    {
+      "id": "convert_Shared_L1_once",
+      "instance": "convert",
+      "mode": "Shared",
+      "layer": "L1",
+      "component_only": false,
+      "repeat": null
+    },
+    {
+      "id": "convert_Shared_L2_component_once",
+      "instance": "convert",
+      "mode": "Shared",
+      "layer": "L2",
+      "component_only": true,
+      "repeat": null
+    },
+    {
+      "id": "SMT_random_Legacy_L1_once",
+      "instance": "SMT_random",
+      "mode": "Legacy",
+      "layer": "L1",
+      "component_only": false,
+      "repeat": null
+    },
+    {
+      "id": "SMT_random_Legacy_L2_component_once",
+      "instance": "SMT_random",
+      "mode": "Legacy",
+      "layer": "L2",
+      "component_only": true,
+      "repeat": null
+    },
+    {
+      "id": "SMT_random_Shared_L1_once",
+      "instance": "SMT_random",
+      "mode": "Shared",
+      "layer": "L1",
+      "component_only": false,
+      "repeat": null
+    },
+    {
+      "id": "SMT_random_Shared_L2_component_once",
+      "instance": "SMT_random",
+      "mode": "Shared",
+      "layer": "L2",
+      "component_only": true,
+      "repeat": null
+    },
+    {
+      "id": "SMT_real_Legacy_L1_once",
+      "instance": "SMT_real",
+      "mode": "Legacy",
+      "layer": "L1",
+      "component_only": false,
+      "repeat": null
+    },
+    {
+      "id": "SMT_real_Legacy_L2_component_once",
+      "instance": "SMT_real",
+      "mode": "Legacy",
+      "layer": "L2",
+      "component_only": true,
+      "repeat": null
+    },
+    {
+      "id": "SMT_real_Shared_L1_once",
+      "instance": "SMT_real",
+      "mode": "Shared",
+      "layer": "L1",
+      "component_only": false,
+      "repeat": null
+    },
+    {
+      "id": "SMT_real_Shared_L2_component_once",
+      "instance": "SMT_real",
+      "mode": "Shared",
+      "layer": "L2",
+      "component_only": true,
+      "repeat": null
+    }
+  ],
+  "probes": [
+    {
+      "id": "convert_Legacy",
+      "instance": "convert",
+      "mode": "Legacy",
+      "positions": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "SMT_random_Legacy",
+      "instance": "SMT_random",
+      "mode": "Legacy",
+      "positions": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "SMT_real_Legacy",
+      "instance": "SMT_real",
+      "mode": "Legacy",
+      "positions": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "convert_ValueCache",
+      "instance": "convert",
+      "mode": "ValueCache",
+      "positions": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "SMT_random_ValueCache",
+      "instance": "SMT_random",
+      "mode": "ValueCache",
+      "positions": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "SMT_real_ValueCache",
+      "instance": "SMT_real",
+      "mode": "ValueCache",
+      "positions": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "convert_Shared",
+      "instance": "convert",
+      "mode": "Shared",
+      "positions": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "SMT_random_Shared",
+      "instance": "SMT_random",
+      "mode": "Shared",
+      "positions": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "SMT_real_Shared",
+      "instance": "SMT_real",
+      "mode": "Shared",
+      "positions": [
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  ],
+  "oracles": [
+    {
+      "id": "convert_02_OracleLegacy",
+      "instance": "convert",
+      "position": 2,
+      "mode": "OracleLegacy"
+    },
+    {
+      "id": "convert_02_OracleShared",
+      "instance": "convert",
+      "position": 2,
+      "mode": "OracleShared"
+    },
+    {
+      "id": "convert_03_OracleLegacy",
+      "instance": "convert",
+      "position": 3,
+      "mode": "OracleLegacy"
+    },
+    {
+      "id": "convert_03_OracleShared",
+      "instance": "convert",
+      "position": 3,
+      "mode": "OracleShared"
+    },
+    {
+      "id": "convert_04_OracleLegacy",
+      "instance": "convert",
+      "position": 4,
+      "mode": "OracleLegacy"
+    },
+    {
+      "id": "convert_04_OracleShared",
+      "instance": "convert",
+      "position": 4,
+      "mode": "OracleShared"
+    },
+    {
+      "id": "convert_05_OracleLegacy",
+      "instance": "convert",
+      "position": 5,
+      "mode": "OracleLegacy"
+    },
+    {
+      "id": "convert_05_OracleShared",
+      "instance": "convert",
+      "position": 5,
+      "mode": "OracleShared"
+    },
+    {
+      "id": "SMT_random_02_OracleLegacy",
+      "instance": "SMT_random",
+      "position": 2,
+      "mode": "OracleLegacy"
+    },
+    {
+      "id": "SMT_random_02_OracleShared",
+      "instance": "SMT_random",
+      "position": 2,
+      "mode": "OracleShared"
+    },
+    {
+      "id": "SMT_random_03_OracleLegacy",
+      "instance": "SMT_random",
+      "position": 3,
+      "mode": "OracleLegacy"
+    },
+    {
+      "id": "SMT_random_03_OracleShared",
+      "instance": "SMT_random",
+      "position": 3,
+      "mode": "OracleShared"
+    },
+    {
+      "id": "SMT_random_04_OracleLegacy",
+      "instance": "SMT_random",
+      "position": 4,
+      "mode": "OracleLegacy"
+    },
+    {
+      "id": "SMT_random_04_OracleShared",
+      "instance": "SMT_random",
+      "position": 4,
+      "mode": "OracleShared"
+    },
+    {
+      "id": "SMT_random_05_OracleLegacy",
+      "instance": "SMT_random",
+      "position": 5,
+      "mode": "OracleLegacy"
+    },
+    {
+      "id": "SMT_random_05_OracleShared",
+      "instance": "SMT_random",
+      "position": 5,
+      "mode": "OracleShared"
+    },
+    {
+      "id": "SMT_real_02_OracleLegacy",
+      "instance": "SMT_real",
+      "position": 2,
+      "mode": "OracleLegacy"
+    },
+    {
+      "id": "SMT_real_02_OracleShared",
+      "instance": "SMT_real",
+      "position": 2,
+      "mode": "OracleShared"
+    },
+    {
+      "id": "SMT_real_03_OracleLegacy",
+      "instance": "SMT_real",
+      "position": 3,
+      "mode": "OracleLegacy"
+    },
+    {
+      "id": "SMT_real_03_OracleShared",
+      "instance": "SMT_real",
+      "position": 3,
+      "mode": "OracleShared"
+    },
+    {
+      "id": "SMT_real_04_OracleLegacy",
+      "instance": "SMT_real",
+      "position": 4,
+      "mode": "OracleLegacy"
+    },
+    {
+      "id": "SMT_real_04_OracleShared",
+      "instance": "SMT_real",
+      "position": 4,
+      "mode": "OracleShared"
+    },
+    {
+      "id": "SMT_real_05_OracleLegacy",
+      "instance": "SMT_real",
+      "position": 5,
+      "mode": "OracleLegacy"
+    },
+    {
+      "id": "SMT_real_05_OracleShared",
+      "instance": "SMT_real",
+      "position": 5,
+      "mode": "OracleShared"
+    }
+  ],
+  "historical_cpu_credit_proven": false,
+  "tests": {
+    "reuse_math": "244612 arithmetic,1356 hits,7938 domain points,4 direction systems,32 official traces",
+    "deep_DAG_nodes": 12000,
+    "support_sets": "all subsets for fixed four-variable DAGs",
+    "anchor_sequence": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        -3
+      ],
+      [
+        -1,
+        9223372036854775808
+      ]
+    ],
+    "oracle_extra_widths": [
+      1,
+      2,
+      8,
+      64
+    ],
+    "synthetic_seed": 0,
+    "real_fixed_workload_probes_only": true
+  }
+}

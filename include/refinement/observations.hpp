@@ -42,10 +42,11 @@ struct ObservationTrace {std::vector<std::optional<Big>> values;std::vector<uint
 inline ObservationTrace evaluate(Ast const& ast,Assignment const& assignment,WorkBudget& budget,bool official=true,unsigned root=0){
     if(assignment.size()!=ast.variables.size())throw std::runtime_error("incomplete original assignment");
     if(official&&!ast.official_supported())throw Unsupported("official_observer_unsupported");
+    if(budget.trace)budget.trace->allocation(ast.nodes.size(),3);
     ObservationTrace out;out.values.resize(ast.nodes.size());out.zero.resize(ast.nodes.size());out.one.resize(ast.nodes.size());
     struct Frame{unsigned id;size_t child;};std::vector<Frame> stack{{root,0}};
     while(!stack.empty()){
-        budget.check();auto& f=stack.back();auto const& n=ast.nodes[f.id];if(out.values[f.id]){stack.pop_back();continue;}
+        budget.check();auto& f=stack.back();auto const& n=ast.nodes[f.id];if(budget.trace)budget.trace->node(f.id);if(out.values[f.id]){stack.pop_back();continue;}
         if(n.op==Op::Constant||n.op==Op::Variable){Big v=n.op==Op::Constant?n.constant:assignment.at(n.variable);if(n.boolean&&v!=0&&v!=1)throw std::runtime_error("invalid Boolean assignment");budget.integer(v);out.values[f.id]=v;stack.pop_back();continue;}
         auto value=[&](unsigned k)->Big const&{return *out.values[n.children.at(k)];};
         if(n.op==Op::Ite){unsigned cond=n.children.at(0);if(!out.values[cond]){stack.push_back({cond,0});continue;}unsigned child=n.children.at(value(0)!=0?1:2);if(!out.values[child]){stack.push_back({child,0});continue;}out.values[f.id]=*out.values[child];stack.pop_back();continue;}
@@ -67,6 +68,7 @@ inline ObservationTrace evaluate(Ast const& ast,Assignment const& assignment,Wor
         default:throw Unsupported("numeric_evaluation_unsupported");}
         budget.integer(result);out.values[f.id]=result;stack.pop_back();
     }
+    if(budget.trace)budget.trace->scan(ast.nodes.size());
     for(unsigned i=0;i<ast.nodes.size();++i){budget.check();if(out.values[i]){out.one[i]=low64(*out.values[i])&ast.nodes[i].mask();out.zero[i]=~out.one[i]&ast.nodes[i].mask();}}
     out.legal=out.values.at(root).has_value()&&*out.values[root]!=0;return out;
 }

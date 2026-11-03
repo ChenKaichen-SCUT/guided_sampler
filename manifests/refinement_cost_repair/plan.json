@@ -1,0 +1,29 @@
+{
+  "config_sha256": "985ba4d8b89e0304ef0425c9cf79635a186c46a11f6eb00d2f11cb8e1323dfd5",
+  "guide_sha256": "4820b27367e83980e15db54425ce8d9a1ffa640c4a69956381e750ad1dcf544f",
+  "source_models": 43,
+  "replayed_events": 559,
+  "cpu_topology": "# The following is the parsable format, which can be fed to other\n# programs. Each different item in every column has an unique ID\n# starting usually from zero.\n# CPU,Core,Socket\n0,0,0\n1,0,0\n2,1,0\n3,1,0\n4,2,0\n5,2,0\n6,3,0\n7,3,0\n8,4,0\n9,4,0\n10,5,0\n11,5,0\n12,6,0\n13,6,0\n14,7,0\n15,7,0\n",
+  "allowed_cpus": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "old_archive_verified_members": 1940,
+  "before_cost_implementation": true,
+  "new_real_sampler_sessions": 0,
+  "oracle_max_cases": 24
+}
