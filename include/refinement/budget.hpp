@@ -18,10 +18,13 @@ struct WorkBudget {
     double start_wall=wall_now(),start_cpu=cpu_now();
     double max_wall=std::numeric_limits<double>::infinity(),max_cpu=std::numeric_limits<double>::infinity();
     unsigned integer_bits=0;std::function<bool()> cancelled;CostTrace* trace=nullptr;
+    // Only synthetic tests supply clocks. Views keep the exact original start/deadline origin.
+    std::function<double()> wall_clock,cpu_clock;
     WorkBudget()=default;
     WorkBudget(double w,double c,unsigned bits=4096):max_wall(w),max_cpu(c),integer_bits(bits){}
-    double wall()const{return wall_now()-start_wall;}
-    double cpu()const{return cpu_now()-start_cpu;}
+    double wall()const{return (wall_clock?wall_clock():wall_now())-start_wall;}
+    double cpu()const{return (cpu_clock?cpu_clock():cpu_now())-start_cpu;}
+    WorkBudget view(double wall_cap,double cpu_cap)const{auto out=*this;out.max_wall=std::min(max_wall,wall_cap);out.max_cpu=std::min(max_cpu,cpu_cap);return out;}
     [[noreturn]] void exhausted(char const* why)const{if(trace){if(trace->active)trace->active->mark_incomplete();trace->last_incomplete=trace->stage;trace->last_node=trace->current_node;trace->last_direction=trace->current_direction;}throw Exhausted(why);}
     void check()const{if(trace)if(auto r=trace->record())++r->budget_checks;if(cancelled&&cancelled())exhausted("cancelled");if(wall()>=max_wall)exhausted("wall_budget_exhausted");if(cpu()>=max_cpu)exhausted("cpu_budget_exhausted");}
     void bits(Big const& v)const{if(integer_bits&&v!=0&&boost::multiprecision::msb(v<0?Big(-v):v)>=integer_bits)exhausted("integer_bit_limit");}

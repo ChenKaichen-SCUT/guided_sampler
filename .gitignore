@@ -63,3 +63,12 @@ __pycache__/
 /results/refinement_cost_repair/analysis/diagnosis_v1/events.json
 /results/refinement_cost_repair/analysis/diagnosis_v1/preprocess.json
 /results/refinement_cost_repair/analysis/diagnosis_v1/diagnostic_opportunities.json
+
+# Full bounded-delivery raw evidence is preserved in its lossless archive.
+/results/refinement_budget_delivery/build_logs/
+/results/refinement_budget_delivery/build_provenance/
+/results/refinement_budget_delivery/correctness/
+/results/refinement_budget_delivery/probes/
+/results/refinement_budget_delivery/offline/
+/results/refinement_budget_delivery/real_diagnosis/
+/results/refinement_budget_delivery/analysis/audit_v1/

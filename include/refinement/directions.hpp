@@ -1,6 +1,7 @@
 #pragma once
 #include "affine_ir.hpp"
 #include <numeric>
+#include "sparse_equality.hpp"
 namespace refinement {
 struct Fraction {
     Big n=0,d=1;Fraction()=default;Fraction(Big a):n(std::move(a)){}Fraction(Big a,Big q):n(std::move(a)),d(std::move(q)){normalize();}
@@ -12,7 +13,7 @@ inline Fraction subtract(Fraction const& a,Fraction const& b,AlgebraBudget& w){w
 inline Fraction multiply(Fraction const& a,Fraction const& b,AlgebraBudget& w){w.check();return normalized_fraction(checked_mul(a.n,b.n,w.time),checked_mul(a.d,b.d,w.time),w);}
 inline Fraction divide(Fraction const& a,Fraction const& b,AlgebraBudget& w){w.check();if(b.n==0)throw std::runtime_error("zero pivot");return normalized_fraction(checked_mul(a.n,b.d,w.time),checked_mul(a.d,b.n,w.time),w);}
 struct IntegerDirection {unsigned id=0,component=0,local_id=0;IntegerVector values;std::vector<unsigned> affected;};
-struct DirectionPool {std::vector<IntegerDirection> directions;Json components=Json::array();uint64_t omitted=0;};
+struct DirectionPool {std::vector<IntegerDirection> directions;Json components=Json::array();uint64_t omitted=0;InfluenceIndex influence;};
 inline std::string direction_key(IntegerVector const& d){std::string s;for(auto const& [i,v]:d)s+=std::to_string(i)+":"+v.str()+";";return s;}
 inline DirectionPool build_integer_directions(AffineIR const& ir,EqualitySystem const& eq,WorkBudget& b){
     StageScope components(b.trace,RepairStage::Components);
@@ -24,10 +25,13 @@ inline DirectionPool build_integer_directions(AffineIR const& ir,EqualitySystem 
     std::vector<std::vector<std::pair<unsigned,Big>>> equation_uses(nv);
     for(unsigned k=0;k<eq.rows.size();++k){b.check();auto const& row=eq.rows[k];if(!row.coefficients.empty())component_rows[root(row.coefficients.begin()->first)].push_back(k);for(auto const& [v,c]:row.coefficients)equation_uses[v].emplace_back(k,c);}
     std::vector<std::vector<unsigned>> node_uses;
-    if(ir.mode!=RepairMode::Shared)node_uses.resize(nv);
+    if(ir.strategies.influence==InfluenceStrategy::TransitiveVariables)node_uses.resize(nv);
     for(unsigned n=0;n<ir.dependencies.size();++n){b.check();for(auto v:ir.dependencies[n])node_uses[v].push_back(n);}
+    std::optional<SparseRowAccumulator> sparse;
+    if(b.trace)b.trace->equality_rows=eq.rows.size();
+    if(ir.strategies.verify==EqualityVerifyStrategy::SparseRows){StageScope verify(b.trace,RepairStage::VerifyDirections);validate_incidence(eq,equation_uses,b);sparse.emplace(eq.rows.size(),b);}
     DirectionPool out;std::vector<std::vector<IntegerDirection>> generated;unsigned cid=0;
-    for(auto const& [r,vars]:comps){b.check();Json info={{"component",cid},{"variables",vars},{"status","complete"}};std::vector<unsigned> rowids=component_rows[r];size_t nonzeros=0;
+    for(auto const& [r,vars]:comps){if(b.trace){b.trace->current_component=cid;b.trace->current_local_direction=-1;b.trace->current_direction=-1;}b.check();Json info={{"component",cid},{"variables",vars},{"status","complete"}};std::vector<unsigned> rowids=component_rows[r];size_t nonzeros=0;
         for(auto k:rowids){b.check();nonzeros+=eq.rows[k].coefficients.size();}
         info["rows"]=rowids;info["nonzeros"]=nonzeros;std::vector<IntegerDirection> dirs;
         if(vars.size()>64||rowids.size()>128||nonzeros>4096)info["status"]="component_size_limit";
@@ -43,25 +47,34 @@ inline DirectionPool build_integer_directions(AffineIR const& ir,EqualitySystem 
             unsigned lid=0;for(auto free:vars)if(std::find(pivots.begin(),pivots.end(),free)==pivots.end()){
                 w.check();std::map<unsigned,Fraction> rational;rational[free]=Fraction(1);Big lcm=1;
                 for(unsigned p=0;p<pivots.size();++p)if(rows[p].count(free)){auto q=rows[p].at(free);q.n=-q.n;rational[pivots[p]]=q;lcm=checked_mul(lcm/checked_gcd(lcm,q.d,b),q.d,b);b.integer(lcm);}
-                IntegerDirection dir;dir.component=cid;dir.local_id=lid++;Big gcd=0;
+                IntegerDirection dir;dir.component=cid;dir.local_id=lid++;if(b.trace){b.trace->current_component=cid;b.trace->current_local_direction=dir.local_id;b.trace->current_direction=-1;}Big gcd=0;
                 for(auto const& [v,q]:rational){b.check();Big c=checked_mul(q.n,lcm/q.d,b);b.integer(c);if(c!=0){dir.values[v]=c;gcd=checked_gcd(gcd,c,b);}}
                 if(dir.values.empty())continue;Big sign=dir.values.begin()->second<0?-1:1;for(auto& [v,c]:dir.values){c=sign*(c/gcd);b.integer(c);}
                 // Verify all mandatory rows, including rows not used by this component.
-                StageScope verify(b.trace,RepairStage::VerifyDirections);std::vector<Big> dots(eq.rows.size(),0);for(auto const& [v,step]:dir.values)for(auto const& [row,c]:equation_uses[v])dots[row]=checked_add(dots[row],checked_mul(c,step,b),b);for(auto const& dot:dots){b.check();if(dot!=0)throw std::runtime_error("integer direction violates mandatory equality");}
+                StageScope verify(b.trace,RepairStage::VerifyDirections);
+                if(sparse)sparse->verify(dir.values,equation_uses,b);
+                else{std::vector<Big> dots(eq.rows.size(),0);if(b.trace){b.trace->verify_slots+=eq.rows.size();++b.trace->verify_full_scans;}
+                    for(auto const& [v,step]:dir.values)for(auto const& [row,c]:equation_uses[v]){dots[row]=checked_add(dots[row],checked_mul(c,step,b),b);if(b.trace)++b.trace->verify_multiply_adds;}
+                    for(auto const& dot:dots){b.check();if(dot!=0)throw std::runtime_error("integer direction violates mandatory equality");}}
+                if(b.trace){Json coefficients=Json::array();for(auto const& [v,c]:dir.values){b.check();coefficients.push_back({v,c.str()});}b.trace->verified_directions.push_back({{"component",cid},{"local_id",dir.local_id},{"pool_id",nullptr},{"coefficients",coefficients}});}
+
                 dirs.push_back(std::move(dir));
             }
             info["elimination_ops"]=w.ops;info["nullity"]=dirs.size();
-        }catch(Exhausted const& e){std::string why=e.what();if(why!="component_elimination_budget"&&why!="integer_bit_limit")throw;dirs.clear();info["status"]=why;}
+        }catch(Exhausted const& e){std::string why=e.what();if(why!="component_elimination_budget"&&why!="integer_bit_limit")throw;dirs.clear();info["status"]=why;info["cancellation_component"]=cid;info["cancellation_local_id"]=b.trace?Json(b.trace->current_local_direction):Json(nullptr);}
         info["generated"]=dirs.size();out.components.push_back(info);generated.push_back(std::move(dirs));++cid;
     }
     StageScope affected_scope(b.trace,RepairStage::BuildAffected);
-    ScratchMarks marks(ir.mode==RepairMode::Shared?ir.ast.nodes.size():0);if(b.trace&&ir.mode==RepairMode::Shared)b.trace->allocation(ir.ast.nodes.size());
-    std::set<std::string> seen;for(size_t round=0;;++round){bool any=false;for(auto const& dirs:generated)if(round<dirs.size()){b.check();any=true;auto d=dirs[round];if(!seen.insert(direction_key(d.values)).second)continue;if(out.directions.size()>=256){++out.omitted;continue;}d.id=out.directions.size();if(ir.mode==RepairMode::Shared)d.affected=collect_affected(ir.reverse,d.values,marks,b);else{std::set<unsigned> affected;for(auto const& [v,step]:d.values){b.check();affected.insert(node_uses[v].begin(),node_uses[v].end());}d.affected.assign(affected.begin(),affected.end());}if(b.trace)b.trace->affected_entries+=d.affected.size();out.directions.push_back(std::move(d));}if(!any)break;}
+    ScratchMarks marks(ir.strategies.influence==InfluenceStrategy::ReverseParents?ir.ast.nodes.size():0);if(b.trace&&ir.strategies.influence==InfluenceStrategy::ReverseParents)b.trace->allocation(ir.ast.nodes.size());
+    std::set<std::string> seen;for(size_t round=0;;++round){bool any=false;for(auto const& dirs:generated)if(round<dirs.size()){b.check();any=true;auto d=dirs[round];if(!seen.insert(direction_key(d.values)).second)continue;if(out.directions.size()>=256){++out.omitted;continue;}d.id=out.directions.size();if(ir.strategies.influence==InfluenceStrategy::ReverseParents)d.affected=collect_affected(ir.reverse,d.values,marks,b);else if(ir.strategies.influence==InfluenceStrategy::TransitiveVariables){std::set<unsigned> affected;for(auto const& [v,step]:d.values){b.check();affected.insert(node_uses[v].begin(),node_uses[v].end());}d.affected.assign(affected.begin(),affected.end());}if(b.trace)b.trace->affected_entries+=d.affected.size();out.directions.push_back(std::move(d));}if(!any)break;}
+    if(ir.strategies.influence==InfluenceStrategy::DirectionBits)out.influence=build_direction_influence(ir.ast,out.directions,b);
+    if(b.trace){std::map<std::pair<unsigned,unsigned>,unsigned> ids;for(auto const& d:out.directions){b.check();ids[{d.component,d.local_id}]=d.id;}for(auto& v:b.trace->verified_directions){b.check();auto it=ids.find({v["component"].get<unsigned>(),v["local_id"].get<unsigned>()});if(it!=ids.end())v["pool_id"]=it->second;}}
+    if(b.trace)for(auto const& d:out.directions){b.check();b.trace->affected_storage_bytes+=d.affected.capacity()*sizeof(unsigned);}
     for(auto& c:out.components){unsigned included=0;for(auto const& d:out.directions)if(d.component==c["component"])++included;c["included"]=included;c["omitted"]=c["generated"].get<unsigned>()-included;}
     return out;
 }
-inline std::vector<unsigned> select_directions(DirectionPool const& pool,Ast const& ast,ObservationHistory const& history,uint64_t event,WorkBudget& b){
-    std::vector<std::pair<uint64_t,unsigned>> ranked;for(auto const& d:pool.directions){uint64_t score=0;for(auto n:d.affected){b.check();score+=std::popcount(ast.nodes[n].mask()&~(history.zero[n]&history.one[n]));}ranked.emplace_back(score,d.id);}
+inline std::vector<unsigned> select_directions(DirectionPool const& pool,Ast const& ast,ObservationHistory const& history,uint64_t event,WorkBudget& b,std::vector<uint64_t>* scores=nullptr){
+    if(scores)scores->clear();std::vector<std::pair<uint64_t,unsigned>> ranked;for(auto const& d:pool.directions){uint64_t score=0;for(auto n:d.affected){b.check();score+=std::popcount(ast.nodes[n].mask()&~(history.zero[n]&history.one[n]));}ranked.emplace_back(score,d.id);if(scores)scores->push_back(score);}
     std::sort(ranked.begin(),ranked.end(),[](auto a,auto c){return a.first!=c.first?a.first>c.first:a.second<c.second;});std::vector<unsigned> chosen;
     for(size_t i=0;i<std::min(size_t(8),ranked.size());++i)chosen.push_back(ranked[i].second);
     std::vector<unsigned> rest;for(auto const& d:pool.directions)if(std::find(chosen.begin(),chosen.end(),d.id)==chosen.end())rest.push_back(d.id);

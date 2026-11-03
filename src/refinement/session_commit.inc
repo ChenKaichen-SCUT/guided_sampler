@@ -36,7 +36,7 @@
         auto result=split->choose(accepted,remaining(),
             [&](refinement::WorkBudget& b){return refinement::copy_original_ast(native_ast(),variables,input_sha,b);},
             [&](refinement::Refiner const& r,refinement::WorkBudget& b){std::ofstream f(dir+"/refinement_metadata.json");f<<Json({{"ast",refinement::ast_json(r.ir.ast)},{"algebra",r.metadata()}}).dump()<<'\n';f.flush();if(!f)throw std::runtime_error("refinement metadata I/O failure");b.check();},
-            [&](refinement::WorkBudget& b){std::vector<refinement::AffineIR> hard;for(auto const& h:real_hard){b.check();OriginalAst ast(h);hard.push_back(refinement::compile_affine_ir(refinement::copy_original_ast(ast,variables,"real_hard",b),b,split->repair_configuration));}return hard;},
+            [&](refinement::WorkBudget& b){std::vector<refinement::AffineIR> hard;for(auto const& h:real_hard){b.check();OriginalAst ast(h);hard.push_back(refinement::compile_affine_ir(refinement::copy_original_ast(ast,variables,"real_hard",b),b,split->search_strategies));}return hard;},
             [&](refinement::RefinementResult const& r,refinement::WorkBudget&){std::ofstream f(dir+"/refinement_candidates.jsonl",std::ios::app);auto j=refinement::refinement_json(r);j["native_event_id"]=accepted.native_event_id;f<<j.dump()<<'\n';f.flush();if(!f)throw std::runtime_error("candidate log I/O failure");detail_logged=true;});
         auto const& chosen=result.chosen?result.chosen->assignment:native;
         auto const& chosen_trace=result.chosen?result.chosen->trace:trace;

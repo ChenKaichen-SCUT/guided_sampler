@@ -1,0 +1,1483 @@
+{
+  "search": [
+    {
+      "name": "box",
+      "ast": {
+        "input_sha": "synthetic",
+        "variables": [
+          {
+            "name": "x",
+            "sort": "Int"
+          },
+          {
+            "name": "y",
+            "sort": "Int"
+          }
+        ],
+        "nodes": [
+          {
+            "sort": "Bool",
+            "children": [
+              1,
+              4,
+              6,
+              8
+            ],
+            "op": "and"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              3
+            ],
+            "op": "ge"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 0
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "0"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              5
+            ],
+            "op": "le"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "31"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              7,
+              3
+            ],
+            "op": "ge"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 1
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              7,
+              5
+            ],
+            "op": "le"
+          }
+        ]
+      },
+      "models": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "name": "protected",
+      "ast": {
+        "input_sha": "synthetic",
+        "variables": [
+          {
+            "name": "x",
+            "sort": "Int"
+          },
+          {
+            "name": "y",
+            "sort": "Int"
+          }
+        ],
+        "nodes": [
+          {
+            "sort": "Bool",
+            "children": [
+              1,
+              4
+            ],
+            "op": "or"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              3
+            ],
+            "op": "eq"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 0
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "0"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              5,
+              7
+            ],
+            "op": "and"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              6,
+              3
+            ],
+            "op": "ge"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 1
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              6,
+              8
+            ],
+            "op": "le"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "31"
+          }
+        ]
+      },
+      "models": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "name": "disconnected",
+      "ast": {
+        "input_sha": "synthetic",
+        "variables": [
+          {
+            "name": "x",
+            "sort": "Int"
+          }
+        ],
+        "nodes": [
+          {
+            "sort": "Bool",
+            "children": [
+              1,
+              4,
+              9
+            ],
+            "op": "and"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              3
+            ],
+            "op": "ge"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 0
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "0"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              5,
+              7
+            ],
+            "op": "or"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              6
+            ],
+            "op": "le"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "3"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              8
+            ],
+            "op": "ge"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "10"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              10
+            ],
+            "op": "le"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "15"
+          }
+        ]
+      },
+      "models": [
+        [
+          "0"
+        ],
+        [
+          "1"
+        ],
+        [
+          "10"
+        ]
+      ]
+    },
+    {
+      "name": "equality",
+      "ast": {
+        "input_sha": "synthetic",
+        "variables": [
+          {
+            "name": "x",
+            "sort": "Int"
+          },
+          {
+            "name": "y",
+            "sort": "Int"
+          },
+          {
+            "name": "z",
+            "sort": "Int"
+          }
+        ],
+        "nodes": [
+          {
+            "sort": "Bool",
+            "children": [
+              1,
+              6,
+              8,
+              9
+            ],
+            "op": "and"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              5
+            ],
+            "op": "eq"
+          },
+          {
+            "sort": "Int",
+            "children": [
+              3,
+              4
+            ],
+            "op": "add"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 0
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 1
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 2
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              3,
+              7
+            ],
+            "op": "ge"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "0"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              4,
+              7
+            ],
+            "op": "ge"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              5,
+              10
+            ],
+            "op": "le"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "31"
+          }
+        ]
+      },
+      "models": [
+        [
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "1",
+          "2"
+        ]
+      ]
+    },
+    {
+      "name": "syntactic",
+      "ast": {
+        "input_sha": "synthetic",
+        "variables": [
+          {
+            "name": "w",
+            "sort": "Int"
+          },
+          {
+            "name": "x",
+            "sort": "Int"
+          },
+          {
+            "name": "y",
+            "sort": "Int"
+          },
+          {
+            "name": "z",
+            "sort": "Int"
+          }
+        ],
+        "nodes": [
+          {
+            "sort": "Bool",
+            "children": [
+              1,
+              5,
+              9,
+              13,
+              15
+            ],
+            "op": "and"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              4
+            ],
+            "op": "eq"
+          },
+          {
+            "sort": "Int",
+            "children": [
+              3,
+              3
+            ],
+            "op": "sub"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 1
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "0"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              6,
+              7
+            ],
+            "op": "or"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              3,
+              4
+            ],
+            "op": "eq"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              8,
+              4
+            ],
+            "op": "ge"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 2
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              10,
+              4
+            ],
+            "op": "ge"
+          },
+          {
+            "sort": "Int",
+            "children": [
+              11,
+              8,
+              12
+            ],
+            "op": "ite"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              3,
+              4
+            ],
+            "op": "gt"
+          },
+          {
+            "sort": "Int",
+            "children": [
+              8
+            ],
+            "op": "neg"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              14,
+              14
+            ],
+            "op": "eq"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 0
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              16,
+              4
+            ],
+            "op": "ge"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 3
+          }
+        ]
+      },
+      "models": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          "1"
+        ]
+      ]
+    },
+    {
+      "name": "nonlinear_invariant",
+      "ast": {
+        "input_sha": "synthetic",
+        "variables": [
+          {
+            "name": "x",
+            "sort": "Int"
+          },
+          {
+            "name": "y",
+            "sort": "Int"
+          }
+        ],
+        "nodes": [
+          {
+            "sort": "Bool",
+            "children": [
+              1,
+              4,
+              6
+            ],
+            "op": "and"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              3
+            ],
+            "op": "ge"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 0
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "0"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              5
+            ],
+            "op": "le"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "31"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              7,
+              3
+            ],
+            "op": "ge"
+          },
+          {
+            "sort": "Int",
+            "children": [
+              8,
+              8
+            ],
+            "op": "mul"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 1
+          }
+        ]
+      },
+      "models": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "2",
+          "0"
+        ]
+      ]
+    }
+  ],
+  "blocking": [
+    {
+      "name": "coordinated",
+      "ast": {
+        "input_sha": "synthetic",
+        "variables": [
+          {
+            "name": "x",
+            "sort": "Int"
+          },
+          {
+            "name": "y",
+            "sort": "Int"
+          }
+        ],
+        "nodes": [
+          {
+            "sort": "Bool",
+            "children": [
+              1,
+              4,
+              6,
+              7
+            ],
+            "op": "and"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              3
+            ],
+            "op": "ge"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 0
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "0"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              5,
+              3
+            ],
+            "op": "ge"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 1
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              5
+            ],
+            "op": "le"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              5,
+              8
+            ],
+            "op": "le"
+          },
+          {
+            "sort": "Int",
+            "children": [
+              9,
+              2
+            ],
+            "op": "mul"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "2"
+          }
+        ]
+      },
+      "anchor": [
+        "0",
+        "0"
+      ],
+      "directions": [
+        [
+          [
+            0,
+            "1"
+          ]
+        ],
+        [
+          [
+            1,
+            "1"
+          ]
+        ],
+        [
+          [
+            0,
+            "1"
+          ],
+          [
+            1,
+            "1"
+          ]
+        ],
+        [
+          [
+            0,
+            "1"
+          ],
+          [
+            1,
+            "-1"
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "opposite_tight",
+      "ast": {
+        "input_sha": "synthetic",
+        "variables": [
+          {
+            "name": "x",
+            "sort": "Int"
+          }
+        ],
+        "nodes": [
+          {
+            "sort": "Bool",
+            "children": [
+              1,
+              4
+            ],
+            "op": "and"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              3
+            ],
+            "op": "ge"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 0
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "0"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              3
+            ],
+            "op": "le"
+          }
+        ]
+      },
+      "anchor": [
+        "0"
+      ],
+      "directions": [
+        [
+          [
+            0,
+            "1"
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "branch_equality",
+      "ast": {
+        "input_sha": "synthetic",
+        "variables": [
+          {
+            "name": "x",
+            "sort": "Int"
+          },
+          {
+            "name": "y",
+            "sort": "Int"
+          }
+        ],
+        "nodes": [
+          {
+            "sort": "Bool",
+            "children": [
+              1,
+              7
+            ],
+            "op": "or"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              5
+            ],
+            "op": "and"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              3,
+              4
+            ],
+            "op": "eq"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 0
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "0"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              6,
+              4
+            ],
+            "op": "ge"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 1
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              8,
+              5
+            ],
+            "op": "and"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              3,
+              9
+            ],
+            "op": "eq"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "2"
+          }
+        ]
+      },
+      "anchor": [
+        "0",
+        "0"
+      ],
+      "directions": [
+        [
+          [
+            0,
+            "1"
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "or_far",
+      "ast": {
+        "input_sha": "synthetic",
+        "variables": [
+          {
+            "name": "x",
+            "sort": "Int"
+          }
+        ],
+        "nodes": [
+          {
+            "sort": "Bool",
+            "children": [
+              1,
+              4
+            ],
+            "op": "or"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              3
+            ],
+            "op": "eq"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 0
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "0"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              5
+            ],
+            "op": "eq"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "2"
+          }
+        ]
+      },
+      "anchor": [
+        "0"
+      ],
+      "directions": [
+        [
+          [
+            0,
+            "1"
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "integer_rounding",
+      "ast": {
+        "input_sha": "synthetic",
+        "variables": [
+          {
+            "name": "x",
+            "sort": "Int"
+          },
+          {
+            "name": "y",
+            "sort": "Int"
+          }
+        ],
+        "nodes": [
+          {
+            "sort": "Bool",
+            "children": [
+              1,
+              4,
+              6
+            ],
+            "op": "and"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              3
+            ],
+            "op": "ge"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 0
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "-1"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              5
+            ],
+            "op": "le"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "1"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              7,
+              7
+            ],
+            "op": "eq"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 1
+          }
+        ]
+      },
+      "anchor": [
+        "0",
+        "0"
+      ],
+      "directions": [
+        [
+          [
+            0,
+            "2"
+          ],
+          [
+            1,
+            "1"
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "three_way",
+      "ast": {
+        "input_sha": "synthetic",
+        "variables": [
+          {
+            "name": "x",
+            "sort": "Int"
+          },
+          {
+            "name": "y",
+            "sort": "Int"
+          },
+          {
+            "name": "z",
+            "sort": "Int"
+          }
+        ],
+        "nodes": [
+          {
+            "sort": "Bool",
+            "children": [
+              1,
+              4,
+              6,
+              7,
+              9
+            ],
+            "op": "and"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              3
+            ],
+            "op": "ge"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 0
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "0"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              5
+            ],
+            "op": "le"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 1
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              5,
+              2
+            ],
+            "op": "le"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              5,
+              8
+            ],
+            "op": "le"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 2
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              8,
+              5
+            ],
+            "op": "le"
+          }
+        ]
+      },
+      "anchor": [
+        "0",
+        "0",
+        "0"
+      ],
+      "directions": [
+        [
+          [
+            0,
+            "1"
+          ]
+        ],
+        [
+          [
+            1,
+            "1"
+          ]
+        ],
+        [
+          [
+            2,
+            "1"
+          ]
+        ],
+        [
+          [
+            0,
+            "1"
+          ],
+          [
+            1,
+            "1"
+          ]
+        ],
+        [
+          [
+            0,
+            "1"
+          ],
+          [
+            2,
+            "1"
+          ]
+        ],
+        [
+          [
+            1,
+            "1"
+          ],
+          [
+            2,
+            "1"
+          ]
+        ],
+        [
+          [
+            0,
+            "1"
+          ],
+          [
+            1,
+            "1"
+          ],
+          [
+            2,
+            "1"
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "not_disconnected",
+      "ast": {
+        "input_sha": "synthetic",
+        "variables": [
+          {
+            "name": "x",
+            "sort": "Int"
+          }
+        ],
+        "nodes": [
+          {
+            "sort": "Bool",
+            "children": [
+              1
+            ],
+            "op": "not"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              5
+            ],
+            "op": "and"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              3,
+              4
+            ],
+            "op": "gt"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 0
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "0"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              3,
+              6
+            ],
+            "op": "lt"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "3"
+          }
+        ]
+      },
+      "anchor": [
+        "0"
+      ],
+      "directions": [
+        [
+          [
+            0,
+            "1"
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "dag",
+      "ast": {
+        "input_sha": "synthetic",
+        "variables": [
+          {
+            "name": "x",
+            "sort": "Int"
+          }
+        ],
+        "nodes": [
+          {
+            "sort": "Bool",
+            "children": [
+              1,
+              7
+            ],
+            "op": "or"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              5
+            ],
+            "op": "and"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              3,
+              4
+            ],
+            "op": "ge"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "var",
+            "variable": 0
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "0"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              3,
+              6
+            ],
+            "op": "le"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "3"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              2,
+              8
+            ],
+            "op": "and"
+          },
+          {
+            "sort": "Bool",
+            "children": [
+              3,
+              9
+            ],
+            "op": "ge"
+          },
+          {
+            "sort": "Int",
+            "children": [],
+            "op": "const",
+            "value": "10"
+          }
+        ]
+      },
+      "anchor": [
+        "0"
+      ],
+      "directions": [
+        [
+          [
+            0,
+            "1"
+          ]
+        ]
+      ]
+    }
+  ]
+}
