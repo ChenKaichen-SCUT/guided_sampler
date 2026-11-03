@@ -1,0 +1,36 @@
+{
+  "captured_utc": "2026-11-03T12:40:23.221548+00:00",
+  "uname": {
+    "system": "Linux",
+    "node": "5dc13410e6dc",
+    "release": "6.6.87.2-microsoft-standard-WSL2",
+    "version": "#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025",
+    "machine": "x86_64",
+    "processor": "x86_64"
+  },
+  "memory_info": "MemTotal:       30802096 kB\nMemFree:        21862920 kB\nMemAvailable:   27068696 kB\nBuffers:           22908 kB\nCached:          3033016 kB\nSwapCached:           12 kB\nActive:           677384 kB\nInactive:        5082520 kB\nActive(anon):       3076 kB\nInactive(anon):  2729560 kB\nActive(file):     674308 kB\nInactive(file):  2352960 kB\nUnevictable:          64 kB\nMlocked:              64 kB\nSwapTotal:      33554432 kB\nSwapFree:       33552896 kB\nDirty:               308 kB\nWriteback:             0 kB\nAnonPages:       2704184 kB\nMapped:          1430740 kB\nShmem:             28612 kB\nKReclaimable:    2541752 kB\nSlab:            2805100 kB\nSReclaimable:    2541752 kB\nSUnreclaim:       263348 kB\nKernelStack:       12720 kB\nPageTables:        33400 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    48955480 kB\nCommitted_AS:    6639156 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       67580 kB\nVmallocChunk:          0 kB\nPercpu:             8384 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      117760 kB\nDirectMap2M:     9318400 kB\nDirectMap1G:    31457280 kB\n",
+  "logical_cpu": 0,
+  "allowed_affinity_before_pin": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "core_id": "0",
+  "siblings": "0-1",
+  "exclusive_host": false,
+  "timed_worker_concurrency": 1,
+  "compiler": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n"
+}
