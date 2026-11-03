@@ -5,7 +5,8 @@ p=argparse.ArgumentParser();p.add_argument('variant');p.add_argument('attempt');
 if a.variant=='sanitize':env.update(ASAN_OPTIONS='detect_leaks=1:halt_on_error=1',UBSAN_OPTIONS='halt_on_error=1:print_stacktrace=1',LSAN_OPTIONS='suppressions='+str(ROOT/'tests/lsan-upstream.supp')+':print_suppressions=1')
 def run(cmd,name,ee=None):
  ee=env.copy() if ee is None else ee;write(d/(name+'.command.json'),{'command':list(map(str,cmd)),'binary_sha256':digest(cmd[0]),'environment':{k:v for k,v in ee.items() if k.startswith(('REFINEMENT','ASAN','LSAN','UBSAN'))}})
- with open(d/(name+'.stdout'),'w') as f,open(d/(name+'.stderr'),'w') as e:r=subprocess.run(list(map(str,cmd)),stdout=f,stderr=e,env=ee,timeout=300)
+ runtime=d/(name+'_runtime');runtime.mkdir()
+ with open(d/(name+'.stdout'),'w') as f,open(d/(name+'.stderr'),'w') as e:r=subprocess.run(list(map(str,cmd)),stdout=f,stderr=e,env=ee,timeout=300,cwd=runtime)
  assert r.returncode==0,(name,r.returncode);assert 'runtime error:' not in (d/(name+'.stderr')).read_text();assert 'ERROR: AddressSanitizer' not in (d/(name+'.stderr')).read_text()
 if a.mode=='mechanisms':
  run([ROOT/f'build/cost_repair_mechanisms_{a.variant}',ROOT/'tests/refinement_cost_repair/fixtures.json',d/'evidence.json'],'mechanisms')
