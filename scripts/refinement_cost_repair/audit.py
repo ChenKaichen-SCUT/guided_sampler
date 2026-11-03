@@ -8,7 +8,7 @@ out=attempt('analysis','audit_v1');cfg=read(ROOT/'configs/refinement_cost_repair
 def masks(js):return {(i,b,v) for i,z,o,*rest in js for b in range(64) for v in (0,1) if (o if v else z)>>b&1}
 for name in ['convert','SMT_random','SMT_real']:
  data=read(ROOT/'results/refinement/offline/inputs_v1'/f'{name}.json');ast=data['ast'];models=data['models'];root=z3.And(z3.parse_smt2_file(data['input']));aa,ns,vs=export(root);assert aa['nodes']==ast['nodes'] and aa['variables']==ast['variables']
- @functools.lru_cache(maxsize=None)
+ @functools.lru_cache(maxsize=32)
  def inspect(m):
   global unique_official
   legal,tr=evaluate(ast,m);ok,official=official_trace(root,{v['name']:int(x) for v,x in zip(ast['variables'],m)});assert ok==legal and official=={i:value for i,(bits,value) in tr.items()};unique_official+=1
