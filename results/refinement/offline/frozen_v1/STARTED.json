@@ -1,0 +1,7 @@
+{
+  "freeze_sha256": "98f1bab802e1f3867f3fed4b6055b7813ea0297c43009207d7f7db7d8af91815",
+  "input_summary_sha256": "cb84aacc6ae06ee245f3921067b319855c7567c88a087dd9f9357768d1456edd",
+  "no_retry": true,
+  "fixed_caps_only": true,
+  "historical_cpu_credit_missing": true
+}

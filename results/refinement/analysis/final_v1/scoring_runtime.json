@@ -1,0 +1,12 @@
+{
+  "python": "/mnt/Space1/SMT_Sampling/guided_sampler/deps/baseline/bin/python3",
+  "z3_version": "Z3 4.14.2.0",
+  "loaded_libraries": [
+    {
+      "path": "/mnt/Space1/SMT_Sampling/guided_sampler/deps/baseline/lib/libz3.so",
+      "sha256": "968b9fc64facee7af34320d96f035210ad8bcac30aac25c1e319610ebd9519b0"
+    }
+  ],
+  "metric_sha256": "a51cdd069321cd32becf8eeb5e606cb71fbab16ae3e0231f68963eaadf493f04",
+  "official_command_inputs_verified": true
+}

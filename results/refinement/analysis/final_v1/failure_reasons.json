@@ -1,0 +1,117 @@
+[
+  {
+    "sequence": "SMT_random_L1_main",
+    "preprocessing_reason": "completed",
+    "pool_directions": 0,
+    "components": 89,
+    "component_size_limited": 10,
+    "completed_domain_records": 0,
+    "completed_evaluations": 0,
+    "event_cancellations": {},
+    "incomplete_direction_identity_logged": null,
+    "interpretation": "No completed direction/candidate is not proof of mathematical infeasibility."
+  },
+  {
+    "sequence": "SMT_random_L2_component_only",
+    "preprocessing_reason": "completed",
+    "pool_directions": 0,
+    "components": 89,
+    "component_size_limited": 10,
+    "completed_domain_records": 0,
+    "completed_evaluations": 0,
+    "event_cancellations": {},
+    "incomplete_direction_identity_logged": null,
+    "interpretation": "No completed direction/candidate is not proof of mathematical infeasibility."
+  },
+  {
+    "sequence": "SMT_random_L2_main",
+    "preprocessing_reason": "completed",
+    "pool_directions": 0,
+    "components": 89,
+    "component_size_limited": 10,
+    "completed_domain_records": 0,
+    "completed_evaluations": 0,
+    "event_cancellations": {},
+    "incomplete_direction_identity_logged": null,
+    "interpretation": "No completed direction/candidate is not proof of mathematical infeasibility."
+  },
+  {
+    "sequence": "SMT_real_L1_main",
+    "preprocessing_reason": "completed",
+    "pool_directions": 177,
+    "components": 116,
+    "component_size_limited": 2,
+    "completed_domain_records": 0,
+    "completed_evaluations": 0,
+    "event_cancellations": {
+      "wall_budget_exhausted": 7
+    },
+    "incomplete_direction_identity_logged": false,
+    "interpretation": "No completed direction/candidate is not proof of mathematical infeasibility."
+  },
+  {
+    "sequence": "SMT_real_L2_component_only",
+    "preprocessing_reason": "completed",
+    "pool_directions": 177,
+    "components": 116,
+    "component_size_limited": 2,
+    "completed_domain_records": 0,
+    "completed_evaluations": 0,
+    "event_cancellations": {
+      "wall_budget_exhausted": 7
+    },
+    "incomplete_direction_identity_logged": false,
+    "interpretation": "No completed direction/candidate is not proof of mathematical infeasibility."
+  },
+  {
+    "sequence": "SMT_real_L2_main",
+    "preprocessing_reason": "completed",
+    "pool_directions": 177,
+    "components": 116,
+    "component_size_limited": 2,
+    "completed_domain_records": 0,
+    "completed_evaluations": 0,
+    "event_cancellations": {
+      "wall_budget_exhausted": 6,
+      "cpu_budget_exhausted": 1
+    },
+    "incomplete_direction_identity_logged": false,
+    "interpretation": "No completed direction/candidate is not proof of mathematical infeasibility."
+  },
+  {
+    "sequence": "convert_L1_main",
+    "preprocessing_reason": "wall_budget_exhausted",
+    "pool_directions": null,
+    "components": null,
+    "component_size_limited": null,
+    "completed_domain_records": 0,
+    "completed_evaluations": 0,
+    "event_cancellations": {},
+    "incomplete_direction_identity_logged": null,
+    "interpretation": "No completed direction/candidate is not proof of mathematical infeasibility."
+  },
+  {
+    "sequence": "convert_L2_component_only",
+    "preprocessing_reason": "wall_budget_exhausted",
+    "pool_directions": null,
+    "components": null,
+    "component_size_limited": null,
+    "completed_domain_records": 0,
+    "completed_evaluations": 0,
+    "event_cancellations": {},
+    "incomplete_direction_identity_logged": null,
+    "interpretation": "No completed direction/candidate is not proof of mathematical infeasibility."
+  },
+  {
+    "sequence": "convert_L2_main",
+    "preprocessing_reason": "wall_budget_exhausted",
+    "pool_directions": null,
+    "components": null,
+    "component_size_limited": null,
+    "completed_domain_records": 0,
+    "completed_evaluations": 0,
+    "event_cancellations": {},
+    "incomplete_direction_identity_logged": null,
+    "interpretation": "No completed direction/candidate is not proof of mathematical infeasibility."
+  }
+]

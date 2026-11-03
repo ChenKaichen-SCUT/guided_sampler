@@ -1,0 +1,13 @@
+{
+  "command": [
+    "taskset",
+    "-c",
+    "0",
+    "python",
+    "scripts/refinement/run_offline.py"
+  ],
+  "cpu": 0,
+  "implementation_commit": "4b61386b17cf7e97e52661af49933e4eda31f284",
+  "only_frozen_models": true,
+  "no_new_solver_session": true
+}

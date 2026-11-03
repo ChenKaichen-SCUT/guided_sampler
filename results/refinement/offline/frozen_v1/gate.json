@@ -1,0 +1,12 @@
+{
+  "correctness_audit_passed": true,
+  "positive_L2_instances": 0,
+  "all_endpoints_preserved": true,
+  "valid_frozen_past_CPU_credit": false,
+  "offline_gate_passed": false,
+  "decision": "No-Go",
+  "short_sessions_authorized_by_gate": false,
+  "reason": "Historical per-model native CPU credit is unavailable; fixed-cap opportunity results cannot prove the mandatory online CPU AND wall budget gate. Fewer than two L2 endpoints improved.",
+  "short_sessions_run": 0,
+  "formal_sessions_run": 0
+}

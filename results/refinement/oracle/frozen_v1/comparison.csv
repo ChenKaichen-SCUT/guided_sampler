@@ -1,0 +1,13 @@
+instance,position,candidate_strict_covered_success,candidate_reason,candidate_cpu_with_amortized_preprocess,candidate_wall_with_amortized_preprocess,oracle_status,oracle_checks,oracle_cpu,oracle_wall,common_success,cpu_ratio,wall_ratio,oracle_answer_censored,native_prefix_cpu_credit_missing
+convert,2,False,preprocessing_disabled:wall_budget_exhausted,0.003882346076923077,0.0038977785376258767,oracle_case_external_timeout,,2.886889,3.012610208010301,False,,,True,True
+convert,3,False,preprocessing_disabled:wall_budget_exhausted,0.003882346076923077,0.0038977785376258767,oracle_case_external_timeout,,2.878932,3.012546473008115,False,,,True,True
+convert,4,False,preprocessing_disabled:wall_budget_exhausted,0.003882346076923077,0.0038977785376258767,oracle_case_external_timeout,,2.868806,3.0129174619796686,False,,,True,True
+convert,5,False,preprocessing_disabled:wall_budget_exhausted,0.003882346076923077,0.0038977785376258767,oracle_case_external_timeout,,2.8816279999999987,3.0133565989963245,False,,,True,True
+SMT_random,2,False,no_integer_direction,0.004084253,0.0041167658554123986,oracle_case_external_timeout,,2.8753550000000003,3.0113305959966965,False,,,True,True
+SMT_random,3,False,no_integer_direction,0.003912863,0.003920711859661554,oracle_case_external_timeout,,2.8837109999999977,3.0098220570071135,False,,,True,True
+SMT_random,4,False,no_integer_direction,0.003947696999999997,0.003955555838599269,oracle_case_external_timeout,,2.885239000000002,3.014845605008304,False,,,True,True
+SMT_random,5,False,no_integer_direction,0.0038527029999999964,0.0038605598591467632,oracle_case_external_timeout,,2.883919999999999,3.0097547530021984,False,,,True,True
+SMT_real,2,False,no_strictly_better_candidate,0.02538384885714286,0.02560612215893343,oracle_case_external_timeout,,2.8688949999999993,3.010129786009202,False,,,True,True
+SMT_real,3,False,no_strictly_better_candidate,0.025239039857142858,0.025252890161937103,oracle_case_external_timeout,,2.8767509999999983,3.009821259009186,False,,,True,True
+SMT_real,4,False,no_strictly_better_candidate,0.025183641857142846,0.02524065916077234,oracle_case_external_timeout,,2.884858000000003,3.0087778530141804,False,,,True,True
+SMT_real,5,False,no_strictly_better_candidate,0.025187901857142852,0.025201771146385,oracle_case_external_timeout,,2.8828189999999987,3.0109767440008,False,,,True,True

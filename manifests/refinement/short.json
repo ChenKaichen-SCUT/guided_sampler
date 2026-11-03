@@ -1,0 +1,9 @@
+{
+  "executed": false,
+  "predeclared_session_count": 24,
+  "decision": "No-Go",
+  "blocking_gate": "offline",
+  "reason": "zero strict covered improvement on all three instances; no historical past-prefix native CPU credit",
+  "no_queue_started": true,
+  "no_retry_or_extra_seed": true
+}

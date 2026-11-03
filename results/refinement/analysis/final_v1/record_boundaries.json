@@ -1,0 +1,9 @@
+{
+  "derived_hashes_are_labeled": true,
+  "event_count_including_first_models": 129,
+  "source_model_count": 43,
+  "native_ready_and_CPU_missing_in_historical_logs": true,
+  "incomplete_domain_log_limitation": "On a global budget exception before prepare_direction returns, event cancellation and full elapsed cost survive but the in-flight direction record is absent. Do not call these unsupported, empty-domain, unreachable, or no-solution results. Phase subtotal remainder is retained as unclassified incomplete/log work.",
+  "offline_transport_cost": "CLI retains event JSON in memory. Per-event JSON encoding is inside the stage measurement; final whole-response export/pipe write, original input parsing and mandatory native observation are included in complete subprocess CPU/wall, not allocated to individual events. No stage-only number establishes an online budget or end-to-end benefit.",
+  "oracle_checkpoint": "All 12 raw results have missing check count and no check-start checkpoint. Worker must write checkpoint before its sole solver.check; absence supports a derived pre-check termination classification, not a SAT/UNSAT answer. Raw nulls are preserved."
+}

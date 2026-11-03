@@ -37,3 +37,14 @@ __pycache__/
 
 # Full F prefix curves are retained in the verified lossless archive.
 /results/round6/formal_analysis/curves.csv
+
+# Observation-preserving refinement: complete raw evidence is in archives/refinement.
+/results/refinement/build_logs/
+/results/refinement/build_provenance/
+/results/refinement/correctness/
+/results/refinement/offline/inputs_v1/
+/results/refinement/offline/frozen_v1/*_L1_main/
+/results/refinement/offline/frozen_v1/*_L2_main/
+/results/refinement/offline/frozen_v1/*_L2_component_only/
+/results/refinement/oracle/frozen_v1/*_0[2-5]/
+/results/refinement/analysis/final_v1/events.jsonl

@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "frozen_source_files_verified": 78,
+  "historical_metadata_verified": 17087,
+  "historical_sha256_verified": 26,
+  "all_8_input_sha256_unchanged": true,
+  "frozen_artifacts": {
+    "host_release": {
+      "path": "worktrees/refinement_release/HighDiv/highdiv",
+      "sha256": "1fe96bae6ceb33704661c4adb08bb5cd055634991d26a16fc947d39c1eedcd16"
+    },
+    "library_release": {
+      "path": "deps/round6_release/lib/libz3.so",
+      "sha256": "8dbf39f6a5412325e72f8d6c12b19a7804ef75cdf7149b793968c72c85667aab"
+    },
+    "cli_release": {
+      "path": "build/refinement_cli",
+      "sha256": "d5164dab2d1f5b61d5af0ca529d3587124ec71e1e82c1d7556b5b255c8ddfd5f"
+    },
+    "host_sanitize": {
+      "path": "worktrees/refinement_sanitize/HighDiv/highdiv",
+      "sha256": "40aa168bec8193056d5a55c08e8a0705e0d87cb3f170fd1b35024634891b90aa"
+    },
+    "library_sanitize": {
+      "path": "deps/round6_sanitize/lib/libz3.so",
+      "sha256": "4de9aa84690b379433d24400c712eaf0c6da15540af40386d09f5e2b3e8426ae"
+    },
+    "cli_sanitize": {
+      "path": "build/refinement_cli_sanitize",
+      "sha256": "4b56959bb59a93ff84e8be49f566d438aeedadb405a85c6f2f38a7aeadb354ba"
+    }
+  },
+  "offline_models": 43,
+  "L1_positions": 40,
+  "L2_strategies": 2,
+  "oracle_cases": 12,
+  "short_sessions": 0,
+  "formal_sessions": 0,
+  "HighDiv_reruns": 0,
+  "additional_seeds": 0,
+  "B_enabled": false,
+  "decision": "No-Go",
+  "native_isolation_real_replacement": true,
+  "all_output_prefix_observations_contain_native": true,
+  "official_and_independent_coverage_equal": true,
+  "report_sha256": "7e25c60b970dd1330f047d81067d594bc10dff9f313978a6782d9a07ce07021d",
+  "negative_and_failed_attempts_retained": true
+}

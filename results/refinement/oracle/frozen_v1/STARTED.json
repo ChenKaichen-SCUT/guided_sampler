@@ -1,0 +1,57 @@
+{
+  "jobs": [
+    [
+      "convert",
+      2
+    ],
+    [
+      "convert",
+      3
+    ],
+    [
+      "convert",
+      4
+    ],
+    [
+      "convert",
+      5
+    ],
+    [
+      "SMT_random",
+      2
+    ],
+    [
+      "SMT_random",
+      3
+    ],
+    [
+      "SMT_random",
+      4
+    ],
+    [
+      "SMT_random",
+      5
+    ],
+    [
+      "SMT_real",
+      2
+    ],
+    [
+      "SMT_real",
+      3
+    ],
+    [
+      "SMT_real",
+      4
+    ],
+    [
+      "SMT_real",
+      5
+    ]
+  ],
+  "max_checks": 12,
+  "per_case_total_wall": 3,
+  "per_check_wall": 2,
+  "no_retry": true,
+  "cold_start": true
+}
