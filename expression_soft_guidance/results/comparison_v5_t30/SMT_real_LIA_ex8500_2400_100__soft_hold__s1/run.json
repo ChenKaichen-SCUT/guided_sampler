@@ -1,0 +1,51 @@
+{
+  "bench": "SMT_real_LIA_ex8500_2400_100.smt2",
+  "input": "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/SMT_real_LIA_ex8500_2400_100.smt2",
+  "mode": "soft_hold",
+  "effective_env": {
+    "ESG_MODE": "soft",
+    "ESG_CCSS_MS": "100",
+    "ESG_CCSS_FEEDBACK": "hold"
+  },
+  "seed": 1,
+  "command": [
+    "taskset",
+    "-c",
+    "10",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/bin/highdiv_soft",
+    "-i",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/SMT_real_LIA_ex8500_2400_100.smt2",
+    "-o",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/results/comparison_v5_t30/SMT_real_LIA_ex8500_2400_100__soft_hold__s1",
+    "-n",
+    "4294967295",
+    "-t",
+    "30.0",
+    "-s",
+    "1"
+  ],
+  "exit_code": 0,
+  "outer_wall": 30.038809711986687,
+  "hard_timeout": false,
+  "limit": 30.0,
+  "summary": {
+    "ccss_calls": 51,
+    "ccss_deadline_hits": 0,
+    "ccss_wall": 0.7142050730000181,
+    "covered": 7168,
+    "duplicates": 0,
+    "filter": {
+      "filtered_occurrences": 350,
+      "proof_calls": 51,
+      "proof_wall": 0.27919367599999995,
+      "static_bits": 350,
+      "unsat_bits": 0
+    },
+    "limit": 30.0,
+    "mode": "soft",
+    "models": 51,
+    "normal": true,
+    "queries": 52,
+    "wall": 30.003332017
+  }
+}

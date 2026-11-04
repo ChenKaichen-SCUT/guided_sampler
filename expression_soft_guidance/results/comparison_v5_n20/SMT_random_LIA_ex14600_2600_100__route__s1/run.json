@@ -1,0 +1,42 @@
+{
+  "bench": "SMT_random_LIA_ex14600_2600_100.smt2",
+  "input": "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/SMT_random_LIA_ex14600_2600_100.smt2",
+  "mode": "route",
+  "effective_env": {
+    "ESG_MODE": "route"
+  },
+  "seed": 1,
+  "command": [
+    "taskset",
+    "-c",
+    "8",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/bin/highdiv_soft",
+    "-i",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/SMT_random_LIA_ex14600_2600_100.smt2",
+    "-o",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/results/comparison_v5_n20/SMT_random_LIA_ex14600_2600_100__route__s1",
+    "-n",
+    "20",
+    "-t",
+    "30.0",
+    "-s",
+    "1"
+  ],
+  "exit_code": 0,
+  "outer_wall": 30.027111921983305,
+  "hard_timeout": false,
+  "limit": 30.0,
+  "summary": {
+    "ccss_calls": 11,
+    "ccss_deadline_hits": 0,
+    "ccss_wall": 0.25794974800000237,
+    "covered": 11930,
+    "duplicates": 0,
+    "limit": 30.0,
+    "mode": "route",
+    "models": 11,
+    "normal": true,
+    "queries": 12,
+    "wall": 30.00396808
+  }
+}

@@ -1,0 +1,619 @@
+{
+  "runs": [
+    {
+      "bench": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+      "mode": "base_complete",
+      "seed": 0,
+      "exit_code": 0,
+      "outer_wall": 0.1158332169870846,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 15570,
+      "total": 16943,
+      "coverage": 0.9189635837809125,
+      "last_sample": 0.089492526,
+      "sources": {
+        "CDCL": 10,
+        "CCSS": 10
+      },
+      "source_gains": {
+        "CDCL": 1667,
+        "CCSS": 13903
+      },
+      "time_checkpoints": {
+        "1": 15570,
+        "5": 15570,
+        "10": 15570,
+        "20": 15570,
+        "29": 15570,
+        "30": 15570
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4760,
+        "5": 8566,
+        "10": 12914,
+        "20": 15570
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 6.539699999999656e-05,
+      "cdcl_wall": 0.013104062999999994,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 0.090963932,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+      "mode": "base_complete",
+      "seed": 1,
+      "exit_code": 0,
+      "outer_wall": 0.11574860999826342,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 15566,
+      "total": 16943,
+      "coverage": 0.9187274980818037,
+      "last_sample": 0.087662504,
+      "sources": {
+        "CDCL": 10,
+        "CCSS": 10
+      },
+      "source_gains": {
+        "CDCL": 2090,
+        "CCSS": 13476
+      },
+      "time_checkpoints": {
+        "1": 15566,
+        "5": 15566,
+        "10": 15566,
+        "20": 15566,
+        "29": 15566,
+        "30": 15566
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4691,
+        "5": 8671,
+        "10": 13042,
+        "20": 15566
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 6.279100000000822e-05,
+      "cdcl_wall": 0.016256807999999987,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 0.089014476,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+      "mode": "baseline",
+      "seed": 0,
+      "exit_code": 0,
+      "outer_wall": 0.11580787901766598,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 15570,
+      "total": 16943,
+      "coverage": 0.9189635837809125,
+      "last_sample": 0.077304573,
+      "sources": {
+        "CDCL": 10,
+        "CCSS": 10
+      },
+      "source_gains": {
+        "CDCL": 1667,
+        "CCSS": 13903
+      },
+      "time_checkpoints": {
+        "1": 15570,
+        "5": 15570,
+        "10": 15570,
+        "20": 15570,
+        "29": 15570,
+        "30": 15570
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4760,
+        "5": 8566,
+        "10": 12914,
+        "20": 15570
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 6.314900000000973e-05,
+      "cdcl_wall": 0.012867127000000003,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 0.078691889,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+      "mode": "baseline",
+      "seed": 1,
+      "exit_code": 0,
+      "outer_wall": 0.11601820302894339,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 15566,
+      "total": 16943,
+      "coverage": 0.9187274980818037,
+      "last_sample": 0.088323339,
+      "sources": {
+        "CDCL": 10,
+        "CCSS": 10
+      },
+      "source_gains": {
+        "CDCL": 2090,
+        "CCSS": 13476
+      },
+      "time_checkpoints": {
+        "1": 15566,
+        "5": 15566,
+        "10": 15566,
+        "20": 15566,
+        "29": 15566,
+        "30": 15566
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4691,
+        "5": 8671,
+        "10": 13042,
+        "20": 15566
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 7.54759999999962e-05,
+      "cdcl_wall": 0.020938458000000007,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 0.089668899,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+      "mode": "native",
+      "seed": 0,
+      "exit_code": 0,
+      "outer_wall": 0.11534640297759324,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 15570,
+      "total": 16943,
+      "coverage": 0.9189635837809125,
+      "last_sample": 0.076113046,
+      "sources": {
+        "CDCL": 10,
+        "CCSS": 10
+      },
+      "source_gains": {
+        "CDCL": 1667,
+        "CCSS": 13903
+      },
+      "time_checkpoints": {
+        "1": 15570,
+        "5": 15570,
+        "10": 15570,
+        "20": 15570,
+        "29": 15570,
+        "30": 15570
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4760,
+        "5": 8566,
+        "10": 12914,
+        "20": 15570
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 5.9323999999997754e-05,
+      "cdcl_wall": 0.012897919999999986,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 0.0775324,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+      "mode": "native",
+      "seed": 1,
+      "exit_code": 0,
+      "outer_wall": 0.11550935101695359,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 15566,
+      "total": 16943,
+      "coverage": 0.9187274980818037,
+      "last_sample": 0.090824251,
+      "sources": {
+        "CDCL": 10,
+        "CCSS": 10
+      },
+      "source_gains": {
+        "CDCL": 2090,
+        "CCSS": 13476
+      },
+      "time_checkpoints": {
+        "1": 15566,
+        "5": 15566,
+        "10": 15566,
+        "20": 15566,
+        "29": 15566,
+        "30": 15566
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4691,
+        "5": 8671,
+        "10": 13042,
+        "20": 15566
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 7.230500000000167e-05,
+      "cdcl_wall": 0.017737377999999984,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 0.092487161,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+      "mode": "observe",
+      "seed": 0,
+      "exit_code": 0,
+      "outer_wall": 0.11560364597244188,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 15570,
+      "total": 16943,
+      "coverage": 0.9189635837809125,
+      "last_sample": 0.094118902,
+      "sources": {
+        "CDCL": 10,
+        "CCSS": 10
+      },
+      "source_gains": {
+        "CDCL": 1667,
+        "CCSS": 13903
+      },
+      "time_checkpoints": {
+        "1": 15570,
+        "5": 15570,
+        "10": 15570,
+        "20": 15570,
+        "29": 15570,
+        "30": 15570
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4760,
+        "5": 8566,
+        "10": 12914,
+        "20": 15570
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 6.41419999999858e-05,
+      "cdcl_wall": 0.013789246000000005,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 0.095641919,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+      "mode": "observe",
+      "seed": 1,
+      "exit_code": 0,
+      "outer_wall": 0.11580792395398021,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 15566,
+      "total": 16943,
+      "coverage": 0.9187274980818037,
+      "last_sample": 0.087923799,
+      "sources": {
+        "CDCL": 10,
+        "CCSS": 10
+      },
+      "source_gains": {
+        "CDCL": 2090,
+        "CCSS": 13476
+      },
+      "time_checkpoints": {
+        "1": 15566,
+        "5": 15566,
+        "10": 15566,
+        "20": 15566,
+        "29": 15566,
+        "30": 15566
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4691,
+        "5": 8671,
+        "10": 13042,
+        "20": 15566
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 5.481900000000109e-05,
+      "cdcl_wall": 0.01574408499999999,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 0.089219852,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+      "mode": "route",
+      "seed": 0,
+      "exit_code": 0,
+      "outer_wall": 0.11555908102309331,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 15570,
+      "total": 16943,
+      "coverage": 0.9189635837809125,
+      "last_sample": 0.08927744,
+      "sources": {
+        "CDCL": 10,
+        "CCSS": 10
+      },
+      "source_gains": {
+        "CDCL": 1667,
+        "CCSS": 13903
+      },
+      "time_checkpoints": {
+        "1": 15570,
+        "5": 15570,
+        "10": 15570,
+        "20": 15570,
+        "29": 15570,
+        "30": 15570
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4760,
+        "5": 8566,
+        "10": 12914,
+        "20": 15570
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 7.651900000000753e-05,
+      "cdcl_wall": 0.012831583000000006,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 0.090680058,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+      "mode": "route",
+      "seed": 1,
+      "exit_code": 0,
+      "outer_wall": 0.11522361094830558,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 15566,
+      "total": 16943,
+      "coverage": 0.9187274980818037,
+      "last_sample": 0.083368449,
+      "sources": {
+        "CDCL": 10,
+        "CCSS": 10
+      },
+      "source_gains": {
+        "CDCL": 2090,
+        "CCSS": 13476
+      },
+      "time_checkpoints": {
+        "1": 15566,
+        "5": 15566,
+        "10": 15566,
+        "20": 15566,
+        "29": 15566,
+        "30": 15566
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4691,
+        "5": 8671,
+        "10": 13042,
+        "20": 15566
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 7.89499999999995e-05,
+      "cdcl_wall": 0.015692663000000003,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 0.084820028,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+      "mode": "soft_complete",
+      "seed": 0,
+      "exit_code": 0,
+      "outer_wall": 0.21620255894958973,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 15689,
+      "total": 16943,
+      "coverage": 0.9259871333293985,
+      "last_sample": 0.183891029,
+      "sources": {
+        "CDCL": 10,
+        "CCSS": 10
+      },
+      "source_gains": {
+        "CDCL": 1996,
+        "CCSS": 13693
+      },
+      "time_checkpoints": {
+        "1": 15689,
+        "5": 15689,
+        "10": 15689,
+        "20": 15689,
+        "29": 15689,
+        "30": 15689
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4760,
+        "5": 8351,
+        "10": 13270,
+        "20": 15689
+      },
+      "targets_observed": 48,
+      "target_hits": 29,
+      "target_queries": 9,
+      "preferred_decisions": 81,
+      "prepared_goals": 48,
+      "excluded_auxiliaries": 92,
+      "preparation_wall": 0.014412302999999991,
+      "cdcl_wall": 0.08164613600000002,
+      "errors": [],
+      "history_checks": 9,
+      "independent_goal_checks": 48,
+      "sampling_wall": 0.185592727,
+      "unprepared_sat_queries": 0,
+      "filter": {
+        "filtered_occurrences": 2,
+        "proof_calls": 9,
+        "proof_wall": 0.01143808,
+        "static_bits": 2,
+        "unsat_bits": 0
+      }
+    },
+    {
+      "bench": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+      "mode": "soft_complete",
+      "seed": 1,
+      "exit_code": 0,
+      "outer_wall": 0.2155039290082641,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 15303,
+      "total": 16943,
+      "coverage": 0.9032048633654016,
+      "last_sample": 0.153233983,
+      "sources": {
+        "CDCL": 10,
+        "CCSS": 10
+      },
+      "source_gains": {
+        "CDCL": 2167,
+        "CCSS": 13136
+      },
+      "time_checkpoints": {
+        "1": 15303,
+        "5": 15303,
+        "10": 15303,
+        "20": 15303,
+        "29": 15303,
+        "30": 15303
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4691,
+        "5": 8465,
+        "10": 12930,
+        "20": 15303
+      },
+      "targets_observed": 53,
+      "target_hits": 30,
+      "target_queries": 9,
+      "preferred_decisions": 80,
+      "prepared_goals": 53,
+      "excluded_auxiliaries": 93,
+      "preparation_wall": 0.015603137000000022,
+      "cdcl_wall": 0.05982526300000001,
+      "errors": [],
+      "history_checks": 9,
+      "independent_goal_checks": 53,
+      "sampling_wall": 0.155211876,
+      "unprepared_sat_queries": 0,
+      "filter": {
+        "filtered_occurrences": 2,
+        "proof_calls": 9,
+        "proof_wall": 0.012822179,
+        "static_bits": 2,
+        "unsat_bits": 0
+      }
+    }
+  ],
+  "all_passed": true,
+  "wall": 1.7604528359952383,
+  "oracle_library_sha256": "968b9fc64facee7af34320d96f035210ad8bcac30aac25c1e319610ebd9519b0"
+}

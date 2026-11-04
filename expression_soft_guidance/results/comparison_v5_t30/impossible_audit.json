@@ -1,0 +1,86 @@
+{
+  "all_passed": true,
+  "benches": [
+    {
+      "bench": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+      "logged_claims": 540,
+      "unique_proofs": 54,
+      "outcomes": {
+        "unsat": 54
+      },
+      "target_filter_checks": 1289,
+      "errors": []
+    },
+    {
+      "bench": "CAV_2009_benchmarks_problem__019.smt2",
+      "logged_claims": 316,
+      "unique_proofs": 35,
+      "outcomes": {
+        "unsat": 35
+      },
+      "target_filter_checks": 101,
+      "errors": []
+    },
+    {
+      "bench": "SMT_random_LIA_ex14600_2600_100.smt2",
+      "logged_claims": 10,
+      "unique_proofs": 1,
+      "outcomes": {
+        "unsat": 1
+      },
+      "target_filter_checks": 105,
+      "errors": []
+    },
+    {
+      "bench": "SMT_real_LIA_ex8500_2400_100.smt2",
+      "logged_claims": 70,
+      "unique_proofs": 7,
+      "outcomes": {
+        "unsat": 7
+      },
+      "target_filter_checks": 507,
+      "errors": []
+    },
+    {
+      "bench": "convert_convert-jpg2gif-query-1459.smt2",
+      "logged_claims": 1609,
+      "unique_proofs": 486,
+      "outcomes": {
+        "unsat": 486
+      },
+      "target_filter_checks": 1710,
+      "errors": []
+    },
+    {
+      "bench": "dillig_40-10.smt2",
+      "logged_claims": 620,
+      "unique_proofs": 62,
+      "outcomes": {
+        "unsat": 62
+      },
+      "target_filter_checks": 195,
+      "errors": []
+    },
+    {
+      "bench": "pb2010_normalized-j3048_8-sat.smt2",
+      "logged_claims": 822,
+      "unique_proofs": 90,
+      "outcomes": {
+        "unsat": 90
+      },
+      "target_filter_checks": 1225,
+      "errors": []
+    },
+    {
+      "bench": "prime_cone_sat_14.smt2",
+      "logged_claims": 150,
+      "unique_proofs": 15,
+      "outcomes": {
+        "unsat": 15
+      },
+      "target_filter_checks": 170,
+      "errors": []
+    }
+  ],
+  "wall": 3.8848286740249023
+}

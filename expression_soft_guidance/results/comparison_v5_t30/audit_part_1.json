@@ -1,0 +1,931 @@
+{
+  "runs": [
+    {
+      "bench": "CAV_2009_benchmarks_problem__019.smt2",
+      "mode": "base_budget",
+      "seed": 0,
+      "exit_code": 0,
+      "outer_wall": 30.03990942897508,
+      "limit": 30.0,
+      "models": 5526,
+      "covered": 8960,
+      "total": 11429,
+      "coverage": 0.7839706011024586,
+      "last_sample": 29.994667138,
+      "sources": {
+        "CDCL": 2763,
+        "CCSS": 2763
+      },
+      "source_gains": {
+        "CDCL": 1733,
+        "CCSS": 7227
+      },
+      "time_checkpoints": {
+        "1": 8960,
+        "5": 8960,
+        "10": 8960,
+        "20": 8960,
+        "29": 8960,
+        "30": 8960
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4362,
+        "5": 7512,
+        "10": 8851,
+        "20": 8960,
+        "50": 8960,
+        "100": 8960,
+        "200": 8960,
+        "500": 8960,
+        "1000": 8960
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 0.01646115599991579,
+      "cdcl_wall": 13.370473145000027,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 30.004659557,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "CAV_2009_benchmarks_problem__019.smt2",
+      "mode": "base_budget",
+      "seed": 1,
+      "exit_code": 0,
+      "outer_wall": 30.037141674023587,
+      "limit": 30.0,
+      "models": 5613,
+      "covered": 8960,
+      "total": 11429,
+      "coverage": 0.7839706011024586,
+      "last_sample": 29.99606414,
+      "sources": {
+        "CDCL": 2807,
+        "CCSS": 2806
+      },
+      "source_gains": {
+        "CDCL": 1925,
+        "CCSS": 7035
+      },
+      "time_checkpoints": {
+        "1": 8960,
+        "5": 8960,
+        "10": 8960,
+        "20": 8960,
+        "29": 8960,
+        "30": 8960
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4469,
+        "5": 7722,
+        "10": 8860,
+        "20": 8959,
+        "50": 8960,
+        "100": 8960,
+        "200": 8960,
+        "500": 8960,
+        "1000": 8960
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 0.01683544199997479,
+      "cdcl_wall": 13.627028250000006,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 30.004374481,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "CAV_2009_benchmarks_problem__019.smt2",
+      "mode": "base_complete",
+      "seed": 0,
+      "exit_code": 0,
+      "outer_wall": 30.033833808032796,
+      "limit": 30.0,
+      "models": 5782,
+      "covered": 8960,
+      "total": 11429,
+      "coverage": 0.7839706011024586,
+      "last_sample": 29.994809839,
+      "sources": {
+        "CDCL": 2891,
+        "CCSS": 2891
+      },
+      "source_gains": {
+        "CDCL": 1733,
+        "CCSS": 7227
+      },
+      "time_checkpoints": {
+        "1": 8960,
+        "5": 8960,
+        "10": 8960,
+        "20": 8960,
+        "29": 8960,
+        "30": 8960
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4362,
+        "5": 7512,
+        "10": 8851,
+        "20": 8960,
+        "50": 8960,
+        "100": 8960,
+        "200": 8960,
+        "500": 8960,
+        "1000": 8960
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 0.016070068000047913,
+      "cdcl_wall": 13.668155132000052,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 30.005118396,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "CAV_2009_benchmarks_problem__019.smt2",
+      "mode": "base_complete",
+      "seed": 1,
+      "exit_code": 0,
+      "outer_wall": 30.03329708898673,
+      "limit": 30.0,
+      "models": 5643,
+      "covered": 8960,
+      "total": 11429,
+      "coverage": 0.7839706011024586,
+      "last_sample": 29.999512344,
+      "sources": {
+        "CDCL": 2822,
+        "CCSS": 2821
+      },
+      "source_gains": {
+        "CDCL": 1925,
+        "CCSS": 7035
+      },
+      "time_checkpoints": {
+        "1": 8960,
+        "5": 8960,
+        "10": 8960,
+        "20": 8960,
+        "29": 8960,
+        "30": 8960
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4469,
+        "5": 7722,
+        "10": 8860,
+        "20": 8959,
+        "50": 8960,
+        "100": 8960,
+        "200": 8960,
+        "500": 8960,
+        "1000": 8960
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 0.015921136999980795,
+      "cdcl_wall": 13.807629586999992,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 30.005928268,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "CAV_2009_benchmarks_problem__019.smt2",
+      "mode": "baseline",
+      "seed": 0,
+      "exit_code": 0,
+      "outer_wall": 29.08551202097442,
+      "limit": 30.0,
+      "models": 5823,
+      "covered": 8960,
+      "total": 11429,
+      "coverage": 0.7839706011024586,
+      "last_sample": 29.010907797,
+      "sources": {
+        "CDCL": 2912,
+        "CCSS": 2911
+      },
+      "source_gains": {
+        "CDCL": 1733,
+        "CCSS": 7227
+      },
+      "time_checkpoints": {
+        "1": 8960,
+        "5": 8960,
+        "10": 8960,
+        "20": 8960,
+        "29": 8960,
+        "30": 8960
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4362,
+        "5": 7512,
+        "10": 8851,
+        "20": 8960,
+        "50": 8960,
+        "100": 8960,
+        "200": 8960,
+        "500": 8960,
+        "1000": 8960
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 0.017534748999977087,
+      "cdcl_wall": 14.151292970000066,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 29.016646521,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "CAV_2009_benchmarks_problem__019.smt2",
+      "mode": "baseline",
+      "seed": 1,
+      "exit_code": 0,
+      "outer_wall": 29.08597151102731,
+      "limit": 30.0,
+      "models": 6087,
+      "covered": 8960,
+      "total": 11429,
+      "coverage": 0.7839706011024586,
+      "last_sample": 29.000838645,
+      "sources": {
+        "CDCL": 3044,
+        "CCSS": 3043
+      },
+      "source_gains": {
+        "CDCL": 1925,
+        "CCSS": 7035
+      },
+      "time_checkpoints": {
+        "1": 8960,
+        "5": 8960,
+        "10": 8960,
+        "20": 8960,
+        "29": 8960,
+        "30": 8960
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4469,
+        "5": 7722,
+        "10": 8860,
+        "20": 8959,
+        "50": 8960,
+        "100": 8960,
+        "200": 8960,
+        "500": 8960,
+        "1000": 8960
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 0.01704766099992515,
+      "cdcl_wall": 14.057998391000073,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 29.006884751,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "CAV_2009_benchmarks_problem__019.smt2",
+      "mode": "soft",
+      "seed": 0,
+      "exit_code": 0,
+      "outer_wall": 29.034455467015505,
+      "limit": 30.0,
+      "models": 5593,
+      "covered": 8960,
+      "total": 11429,
+      "coverage": 0.7839706011024586,
+      "last_sample": 29.00316543,
+      "sources": {
+        "CDCL": 2797,
+        "CCSS": 2796
+      },
+      "source_gains": {
+        "CDCL": 1724,
+        "CCSS": 7236
+      },
+      "time_checkpoints": {
+        "1": 8960,
+        "5": 8960,
+        "10": 8960,
+        "20": 8960,
+        "29": 8960,
+        "30": 8960
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4362,
+        "5": 7505,
+        "10": 8814,
+        "20": 8960,
+        "50": 8960,
+        "100": 8960,
+        "200": 8960,
+        "500": 8960,
+        "1000": 8960
+      },
+      "targets_observed": 30,
+      "target_hits": 22,
+      "target_queries": 8,
+      "preferred_decisions": 52,
+      "prepared_goals": 30,
+      "excluded_auxiliaries": 63,
+      "preparation_wall": 0.038162913999973215,
+      "cdcl_wall": 13.290051969000029,
+      "errors": [],
+      "history_checks": 8,
+      "independent_goal_checks": 30,
+      "sampling_wall": 29.007635136,
+      "unprepared_sat_queries": 0,
+      "filter": {
+        "filtered_occurrences": 6246208,
+        "proof_calls": 8,
+        "proof_wall": 0.005415807999999999,
+        "static_bits": 2240,
+        "unsat_bits": 0
+      }
+    },
+    {
+      "bench": "CAV_2009_benchmarks_problem__019.smt2",
+      "mode": "soft",
+      "seed": 1,
+      "exit_code": 0,
+      "outer_wall": 29.03662746498594,
+      "limit": 30.0,
+      "models": 5489,
+      "covered": 8960,
+      "total": 11429,
+      "coverage": 0.7839706011024586,
+      "last_sample": 29.003991655,
+      "sources": {
+        "CDCL": 2745,
+        "CCSS": 2744
+      },
+      "source_gains": {
+        "CDCL": 1890,
+        "CCSS": 7070
+      },
+      "time_checkpoints": {
+        "1": 8960,
+        "5": 8960,
+        "10": 8960,
+        "20": 8960,
+        "29": 8960,
+        "30": 8960
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4469,
+        "5": 7677,
+        "10": 8820,
+        "20": 8959,
+        "50": 8960,
+        "100": 8960,
+        "200": 8960,
+        "500": 8960,
+        "1000": 8960
+      },
+      "targets_observed": 29,
+      "target_hits": 21,
+      "target_queries": 9,
+      "preferred_decisions": 38,
+      "prepared_goals": 29,
+      "excluded_auxiliaries": 64,
+      "preparation_wall": 0.03718427699987417,
+      "cdcl_wall": 13.278443304000083,
+      "errors": [],
+      "history_checks": 9,
+      "independent_goal_checks": 29,
+      "sampling_wall": 29.008400512,
+      "unprepared_sat_queries": 0,
+      "filter": {
+        "filtered_occurrences": 6128640,
+        "proof_calls": 9,
+        "proof_wall": 0.006404203,
+        "static_bits": 2240,
+        "unsat_bits": 0
+      }
+    },
+    {
+      "bench": "CAV_2009_benchmarks_problem__019.smt2",
+      "mode": "soft_budget",
+      "seed": 0,
+      "exit_code": 0,
+      "outer_wall": 30.034862638975028,
+      "limit": 30.0,
+      "models": 5666,
+      "covered": 8960,
+      "total": 11429,
+      "coverage": 0.7839706011024586,
+      "last_sample": 29.992294441,
+      "sources": {
+        "CDCL": 2833,
+        "CCSS": 2833
+      },
+      "source_gains": {
+        "CDCL": 1724,
+        "CCSS": 7236
+      },
+      "time_checkpoints": {
+        "1": 8960,
+        "5": 8960,
+        "10": 8960,
+        "20": 8960,
+        "29": 8960,
+        "30": 8960
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4362,
+        "5": 7505,
+        "10": 8814,
+        "20": 8960,
+        "50": 8960,
+        "100": 8960,
+        "200": 8960,
+        "500": 8960,
+        "1000": 8960
+      },
+      "targets_observed": 30,
+      "target_hits": 22,
+      "target_queries": 8,
+      "preferred_decisions": 52,
+      "prepared_goals": 30,
+      "excluded_auxiliaries": 63,
+      "preparation_wall": 0.03619262699997948,
+      "cdcl_wall": 13.421521866999957,
+      "errors": [],
+      "history_checks": 8,
+      "independent_goal_checks": 30,
+      "sampling_wall": 30.006062536,
+      "unprepared_sat_queries": 0,
+      "filter": {
+        "filtered_occurrences": 6329088,
+        "proof_calls": 8,
+        "proof_wall": 0.005073579999999999,
+        "static_bits": 2240,
+        "unsat_bits": 0
+      }
+    },
+    {
+      "bench": "CAV_2009_benchmarks_problem__019.smt2",
+      "mode": "soft_budget",
+      "seed": 1,
+      "exit_code": 0,
+      "outer_wall": 30.03876701905392,
+      "limit": 30.0,
+      "models": 5547,
+      "covered": 8960,
+      "total": 11429,
+      "coverage": 0.7839706011024586,
+      "last_sample": 29.998042658,
+      "sources": {
+        "CDCL": 2774,
+        "CCSS": 2773
+      },
+      "source_gains": {
+        "CDCL": 1890,
+        "CCSS": 7070
+      },
+      "time_checkpoints": {
+        "1": 8960,
+        "5": 8960,
+        "10": 8960,
+        "20": 8960,
+        "29": 8960,
+        "30": 8960
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4469,
+        "5": 7677,
+        "10": 8820,
+        "20": 8959,
+        "50": 8960,
+        "100": 8960,
+        "200": 8960,
+        "500": 8960,
+        "1000": 8960
+      },
+      "targets_observed": 29,
+      "target_hits": 21,
+      "target_queries": 9,
+      "preferred_decisions": 38,
+      "prepared_goals": 29,
+      "excluded_auxiliaries": 64,
+      "preparation_wall": 0.03847616799989536,
+      "cdcl_wall": 13.313586523000101,
+      "errors": [],
+      "history_checks": 9,
+      "independent_goal_checks": 29,
+      "sampling_wall": 30.004309805,
+      "unprepared_sat_queries": 0,
+      "filter": {
+        "filtered_occurrences": 6193600,
+        "proof_calls": 9,
+        "proof_wall": 0.006412254,
+        "static_bits": 2240,
+        "unsat_bits": 0
+      }
+    },
+    {
+      "bench": "CAV_2009_benchmarks_problem__019.smt2",
+      "mode": "soft_complete",
+      "seed": 0,
+      "exit_code": 0,
+      "outer_wall": 30.036201297014486,
+      "limit": 30.0,
+      "models": 5620,
+      "covered": 8960,
+      "total": 11429,
+      "coverage": 0.7839706011024586,
+      "last_sample": 29.998524109,
+      "sources": {
+        "CDCL": 2810,
+        "CCSS": 2810
+      },
+      "source_gains": {
+        "CDCL": 1724,
+        "CCSS": 7236
+      },
+      "time_checkpoints": {
+        "1": 8960,
+        "5": 8960,
+        "10": 8960,
+        "20": 8960,
+        "29": 8960,
+        "30": 8960
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4362,
+        "5": 7505,
+        "10": 8814,
+        "20": 8960,
+        "50": 8960,
+        "100": 8960,
+        "200": 8960,
+        "500": 8960,
+        "1000": 8960
+      },
+      "targets_observed": 30,
+      "target_hits": 22,
+      "target_queries": 8,
+      "preferred_decisions": 52,
+      "prepared_goals": 30,
+      "excluded_auxiliaries": 63,
+      "preparation_wall": 0.04983599199995377,
+      "cdcl_wall": 13.710568669000063,
+      "errors": [],
+      "history_checks": 8,
+      "independent_goal_checks": 30,
+      "sampling_wall": 30.004894197,
+      "unprepared_sat_queries": 0,
+      "filter": {
+        "filtered_occurrences": 6277568,
+        "proof_calls": 8,
+        "proof_wall": 0.00544903,
+        "static_bits": 2240,
+        "unsat_bits": 0
+      }
+    },
+    {
+      "bench": "CAV_2009_benchmarks_problem__019.smt2",
+      "mode": "soft_complete",
+      "seed": 1,
+      "exit_code": 0,
+      "outer_wall": 30.038416962022893,
+      "limit": 30.0,
+      "models": 5643,
+      "covered": 8960,
+      "total": 11429,
+      "coverage": 0.7839706011024586,
+      "last_sample": 29.998126655,
+      "sources": {
+        "CDCL": 2822,
+        "CCSS": 2821
+      },
+      "source_gains": {
+        "CDCL": 1890,
+        "CCSS": 7070
+      },
+      "time_checkpoints": {
+        "1": 8960,
+        "5": 8960,
+        "10": 8960,
+        "20": 8960,
+        "29": 8960,
+        "30": 8960
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4469,
+        "5": 7677,
+        "10": 8820,
+        "20": 8959,
+        "50": 8960,
+        "100": 8960,
+        "200": 8960,
+        "500": 8960,
+        "1000": 8960
+      },
+      "targets_observed": 29,
+      "target_hits": 21,
+      "target_queries": 9,
+      "preferred_decisions": 38,
+      "prepared_goals": 29,
+      "excluded_auxiliaries": 64,
+      "preparation_wall": 0.037724441999992635,
+      "cdcl_wall": 13.575456326000026,
+      "errors": [],
+      "history_checks": 9,
+      "independent_goal_checks": 29,
+      "sampling_wall": 30.004204697,
+      "unprepared_sat_queries": 0,
+      "filter": {
+        "filtered_occurrences": 6301120,
+        "proof_calls": 9,
+        "proof_wall": 0.006570638999999999,
+        "static_bits": 2240,
+        "unsat_bits": 0
+      }
+    },
+    {
+      "bench": "CAV_2009_benchmarks_problem__019.smt2",
+      "mode": "soft_hold",
+      "seed": 0,
+      "exit_code": 0,
+      "outer_wall": 30.037747399008367,
+      "limit": 30.0,
+      "models": 5498,
+      "covered": 8960,
+      "total": 11429,
+      "coverage": 0.7839706011024586,
+      "last_sample": 29.994807182,
+      "sources": {
+        "CDCL": 2749,
+        "CCSS": 2749
+      },
+      "source_gains": {
+        "CDCL": 1866,
+        "CCSS": 7094
+      },
+      "time_checkpoints": {
+        "1": 8960,
+        "5": 8960,
+        "10": 8960,
+        "20": 8960,
+        "29": 8960,
+        "30": 8960
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4362,
+        "5": 7597,
+        "10": 8855,
+        "20": 8957,
+        "50": 8960,
+        "100": 8960,
+        "200": 8960,
+        "500": 8960,
+        "1000": 8960
+      },
+      "targets_observed": 29,
+      "target_hits": 19,
+      "target_queries": 10,
+      "preferred_decisions": 48,
+      "prepared_goals": 29,
+      "excluded_auxiliaries": 62,
+      "preparation_wall": 0.040299098000041896,
+      "cdcl_wall": 13.814234953000092,
+      "errors": [],
+      "history_checks": 10,
+      "independent_goal_checks": 29,
+      "sampling_wall": 30.005269529,
+      "unprepared_sat_queries": 0,
+      "filter": {
+        "filtered_occurrences": 6137472,
+        "proof_calls": 10,
+        "proof_wall": 0.009194321,
+        "static_bits": 2240,
+        "unsat_bits": 0
+      }
+    },
+    {
+      "bench": "CAV_2009_benchmarks_problem__019.smt2",
+      "mode": "soft_hold",
+      "seed": 1,
+      "exit_code": 0,
+      "outer_wall": 30.035617773013655,
+      "limit": 30.0,
+      "models": 5690,
+      "covered": 8960,
+      "total": 11429,
+      "coverage": 0.7839706011024586,
+      "last_sample": 29.991817788,
+      "sources": {
+        "CDCL": 2845,
+        "CCSS": 2845
+      },
+      "source_gains": {
+        "CDCL": 1963,
+        "CCSS": 6997
+      },
+      "time_checkpoints": {
+        "1": 8960,
+        "5": 8960,
+        "10": 8960,
+        "20": 8960,
+        "29": 8960,
+        "30": 8960
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 4469,
+        "5": 7792,
+        "10": 8872,
+        "20": 8958,
+        "50": 8960,
+        "100": 8960,
+        "200": 8960,
+        "500": 8960,
+        "1000": 8960
+      },
+      "targets_observed": 26,
+      "target_hits": 23,
+      "target_queries": 10,
+      "preferred_decisions": 26,
+      "prepared_goals": 26,
+      "excluded_auxiliaries": 59,
+      "preparation_wall": 0.041327141000078144,
+      "cdcl_wall": 13.8219088709999,
+      "errors": [],
+      "history_checks": 10,
+      "independent_goal_checks": 26,
+      "sampling_wall": 30.004561831,
+      "unprepared_sat_queries": 0,
+      "filter": {
+        "filtered_occurrences": 6354880,
+        "proof_calls": 8,
+        "proof_wall": 0.011095902000000001,
+        "static_bits": 2240,
+        "unsat_bits": 0
+      }
+    },
+    {
+      "bench": "CAV_2009_benchmarks_problem__019.smt2",
+      "mode": "soft_off",
+      "seed": 0,
+      "exit_code": 0,
+      "outer_wall": 30.038834417006,
+      "limit": 30.0,
+      "models": 15,
+      "covered": 8499,
+      "total": 11429,
+      "coverage": 0.7436346137019861,
+      "last_sample": 0.213131486,
+      "sources": {
+        "CDCL": 15
+      },
+      "source_gains": {
+        "CDCL": 8499
+      },
+      "time_checkpoints": {
+        "1": 8499,
+        "5": 8499,
+        "10": 8499,
+        "20": 8499,
+        "29": 8499,
+        "30": 8499
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 2952,
+        "5": 6163,
+        "10": 8103
+      },
+      "targets_observed": 69,
+      "target_hits": 69,
+      "target_queries": 15,
+      "preferred_decisions": 141,
+      "prepared_goals": 77,
+      "excluded_auxiliaries": 27,
+      "preparation_wall": 0.020704776,
+      "cdcl_wall": 29.952378138,
+      "errors": [],
+      "history_checks": 15,
+      "independent_goal_checks": 69,
+      "sampling_wall": 30.002407713,
+      "unprepared_sat_queries": 0,
+      "filter": {
+        "filtered_occurrences": 1152,
+        "proof_calls": 15,
+        "proof_wall": 0.013480668000000001,
+        "static_bits": 1152,
+        "unsat_bits": 0
+      }
+    },
+    {
+      "bench": "CAV_2009_benchmarks_problem__019.smt2",
+      "mode": "soft_off",
+      "seed": 1,
+      "exit_code": 0,
+      "outer_wall": 30.03627460898133,
+      "limit": 30.0,
+      "models": 15,
+      "covered": 8499,
+      "total": 11429,
+      "coverage": 0.7436346137019861,
+      "last_sample": 0.200669979,
+      "sources": {
+        "CDCL": 15
+      },
+      "source_gains": {
+        "CDCL": 8499
+      },
+      "time_checkpoints": {
+        "1": 8499,
+        "5": 8499,
+        "10": 8499,
+        "20": 8499,
+        "29": 8499,
+        "30": 8499
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 2952,
+        "5": 6163,
+        "10": 8103
+      },
+      "targets_observed": 69,
+      "target_hits": 69,
+      "target_queries": 15,
+      "preferred_decisions": 141,
+      "prepared_goals": 77,
+      "excluded_auxiliaries": 27,
+      "preparation_wall": 0.018043206999999988,
+      "cdcl_wall": 29.951770564,
+      "errors": [],
+      "history_checks": 15,
+      "independent_goal_checks": 69,
+      "sampling_wall": 30.001855959,
+      "unprepared_sat_queries": 0,
+      "filter": {
+        "filtered_occurrences": 1152,
+        "proof_calls": 15,
+        "proof_wall": 0.011858263999999999,
+        "static_bits": 1152,
+        "unsat_bits": 0
+      }
+    }
+  ],
+  "all_passed": true,
+  "wall": 212.41799269797048,
+  "oracle_library_sha256": "968b9fc64facee7af34320d96f035210ad8bcac30aac25c1e319610ebd9519b0"
+}

@@ -1,0 +1,6 @@
+scenario 0 sum 130 hits 3 chosen 3
+scenario 1 sum 130 hits 3 chosen 3
+scenario 2 sum 130 hits 2 chosen 6
+scenario 3 sum 10 hits 2 chosen 3
+scenario 4 sum 18 hits 2 chosen 3
+scenario 5 sum 10 hits 0 chosen 0

@@ -1,0 +1,42 @@
+{
+  "bench": "SMT_random_LIA_ex14600_2600_100.smt2",
+  "input": "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/SMT_random_LIA_ex14600_2600_100.smt2",
+  "mode": "native",
+  "effective_env": {
+    "ESG_MODE": "native"
+  },
+  "seed": 1,
+  "command": [
+    "taskset",
+    "-c",
+    "8",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/bin/highdiv_soft",
+    "-i",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/SMT_random_LIA_ex14600_2600_100.smt2",
+    "-o",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/results/comparison_v5_n20/SMT_random_LIA_ex14600_2600_100__native__s1",
+    "-n",
+    "20",
+    "-t",
+    "30.0",
+    "-s",
+    "1"
+  ],
+  "exit_code": 0,
+  "outer_wall": 29.730335458007175,
+  "hard_timeout": false,
+  "limit": 30.0,
+  "summary": {
+    "ccss_calls": 12,
+    "ccss_deadline_hits": 0,
+    "ccss_wall": 0.2510773390000023,
+    "covered": 0,
+    "duplicates": 0,
+    "limit": 30.0,
+    "mode": "native",
+    "models": 13,
+    "normal": true,
+    "queries": 13,
+    "wall": 29.695288713
+  }
+}

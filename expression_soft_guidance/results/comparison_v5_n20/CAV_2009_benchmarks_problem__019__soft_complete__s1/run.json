@@ -1,0 +1,51 @@
+{
+  "bench": "CAV_2009_benchmarks_problem__019.smt2",
+  "input": "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/CAV_2009_benchmarks_problem__019.smt2",
+  "mode": "soft_complete",
+  "effective_env": {
+    "ESG_MODE": "soft",
+    "ESG_CCSS_MS": "100",
+    "ESG_CCSS_FEEDBACK": "complete"
+  },
+  "seed": 1,
+  "command": [
+    "taskset",
+    "-c",
+    "2",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/bin/highdiv_soft",
+    "-i",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/CAV_2009_benchmarks_problem__019.smt2",
+    "-o",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/results/comparison_v5_n20/CAV_2009_benchmarks_problem__019__soft_complete__s1",
+    "-n",
+    "20",
+    "-t",
+    "30.0",
+    "-s",
+    "1"
+  ],
+  "exit_code": 0,
+  "outer_wall": 0.16571717301849276,
+  "hard_timeout": false,
+  "limit": 30.0,
+  "summary": {
+    "ccss_calls": 10,
+    "ccss_deadline_hits": 0,
+    "ccss_wall": 0.041017911000000004,
+    "covered": 8959,
+    "duplicates": 0,
+    "filter": {
+      "filtered_occurrences": 2240,
+      "proof_calls": 9,
+      "proof_wall": 0.007077917,
+      "static_bits": 2240,
+      "unsat_bits": 0
+    },
+    "limit": 30.0,
+    "mode": "soft",
+    "models": 20,
+    "normal": true,
+    "queries": 10,
+    "wall": 0.131142616
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "version": "V1",
+  "frozen_from": "expression-soft-guidance internal v5",
+  "primary_profile": "soft_budget",
+  "primary_environment": {"ESG_MODE": "soft", "ESG_CCSS_MS": "100"},
+  "alternate_profile": "soft_complete",
+  "evaluation": "coverage at equal wall-clock time; sample count is diagnostic only",
+  "verification": "results/v5_final_verification.json",
+  "upstream_commit": "f2c6e1756b13281d96cbf90a8bd940129e56cce4"
+}

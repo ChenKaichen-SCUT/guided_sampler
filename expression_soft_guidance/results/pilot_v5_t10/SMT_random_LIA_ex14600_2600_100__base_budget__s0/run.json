@@ -1,0 +1,43 @@
+{
+  "bench": "SMT_random_LIA_ex14600_2600_100.smt2",
+  "input": "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/SMT_random_LIA_ex14600_2600_100.smt2",
+  "mode": "base_budget",
+  "effective_env": {
+    "ESG_MODE": "observe",
+    "ESG_CCSS_MS": "100"
+  },
+  "seed": 0,
+  "command": [
+    "taskset",
+    "-c",
+    "6",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/bin/highdiv_soft",
+    "-i",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/SMT_random_LIA_ex14600_2600_100.smt2",
+    "-o",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/results/pilot_v5_t10/SMT_random_LIA_ex14600_2600_100__base_budget__s0",
+    "-n",
+    "4294967295",
+    "-t",
+    "10.0",
+    "-s",
+    "0"
+  ],
+  "exit_code": 0,
+  "outer_wall": 10.040491892024875,
+  "hard_timeout": false,
+  "limit": 10.0,
+  "summary": {
+    "ccss_calls": 3,
+    "ccss_deadline_hits": 0,
+    "ccss_wall": 0.06824092800000026,
+    "covered": 7688,
+    "duplicates": 0,
+    "limit": 10.0,
+    "mode": "observe",
+    "models": 3,
+    "normal": true,
+    "queries": 4,
+    "wall": 10.003825712
+  }
+}

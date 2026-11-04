@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "compared": 14,
+  "replay": "/tmp/expr_v5_patch_replay_5n45jlje",
+  "compiled": "/tmp/expr_soft_build_v3/z3",
+  "sha256": {
+    "src/smt/smt_context.cpp": "eb93db84325afc4d14cf31cef45bcb975aea468997b5955861f2a02c317f9031",
+    "src/api/api_solver.cpp": "9ed4681de3548cacc8235392ed2fd153aaf97f521493811afe5da35d39faa78f",
+    "src/smt/smt_model_generator.cpp": "2deef9ca6b6f2c6bf72199443b5ff74da869352ed3773802076c7adbe271ed57",
+    "src/solver/combined_solver.cpp": "834829316dfb8ee5f824f39030c9172d81615542977eee89085699b64054b883",
+    "src/solver/tactic2solver.cpp": "b5a303bee18f1d694ad4b8983fb6236ccca48a7e0061aeb504ad3a31c566b959",
+    "src/smt/tactic/smt_tactic_core.cpp": "7418ad8654225106b52701dd38d73f6e4c3d6708605482d0e3b93a6fadff9b4e",
+    "src/ast/converters/model_converter.h": "a6dab48821d169a74329eefaaf21b9d2d0442af72c45fccc3846f45bdebbad99",
+    "src/ast/converters/model_converter.cpp": "bb22bb0ec493feea71b1fb9fc2d531e998dc77e8f8d22087173cdc05dcb32e11",
+    "src/ast/converters/generic_model_converter.h": "12e20792dd04a6e3cbfb764f2d55810c99717ecac96ab3bed77bd0d2a170afab",
+    "src/ast/converters/generic_model_converter.cpp": "13359014a514c986ee1d9f32d501a07d83a4ac37d4f3ec8c8a54735fd58407c7",
+    "src/sampler/sampler.cpp": "aff3e6a3138b3a1aa0eb444ec9081619e406b5230fb02b89719fea14b8a5045a",
+    "src/smt/smt_context_pp.cpp": "b6263eb78f11dd474da8f82100ec812c11b1c7536c6e6647ce516782d0f75446",
+    "src/smt/expr_soft.h": "5ad85a2dbe5d37b1844ad29139c20a0d5a68e36a23c4887d64c44123930cc6d9",
+    "src/sampler/ccss_control.h": "8c901494a97bcb682b811bc0a1f3d6760f76f2323da56c4f38ca4d88ff0929d5"
+  }
+}

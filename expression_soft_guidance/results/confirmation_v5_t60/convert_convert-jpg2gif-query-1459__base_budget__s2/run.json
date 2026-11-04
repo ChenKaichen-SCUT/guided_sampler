@@ -1,0 +1,43 @@
+{
+  "bench": "convert_convert-jpg2gif-query-1459.smt2",
+  "input": "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/convert_convert-jpg2gif-query-1459.smt2",
+  "mode": "base_budget",
+  "effective_env": {
+    "ESG_MODE": "observe",
+    "ESG_CCSS_MS": "100"
+  },
+  "seed": 2,
+  "command": [
+    "taskset",
+    "-c",
+    "8",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/bin/highdiv_soft",
+    "-i",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/convert_convert-jpg2gif-query-1459.smt2",
+    "-o",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/results/confirmation_v5_t60/convert_convert-jpg2gif-query-1459__base_budget__s2",
+    "-n",
+    "4294967295",
+    "-t",
+    "60.0",
+    "-s",
+    "2"
+  ],
+  "exit_code": 0,
+  "outer_wall": 60.11430579505395,
+  "hard_timeout": false,
+  "limit": 60.0,
+  "summary": {
+    "ccss_calls": 341,
+    "ccss_deadline_hits": 0,
+    "ccss_wall": 12.764378835000013,
+    "covered": 41424,
+    "duplicates": 0,
+    "limit": 60.0,
+    "mode": "observe",
+    "models": 682,
+    "normal": true,
+    "queries": 342,
+    "wall": 60.048976108
+  }
+}

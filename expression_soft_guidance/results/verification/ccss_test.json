@@ -1,0 +1,30 @@
+{
+  "deadline_recovery_checks": [
+    {
+      "expired_wall": 0.018717617
+    },
+    {
+      "expired_wall": 0.000200375
+    },
+    {
+      "expired_wall": 0.000171218
+    },
+    {
+      "expired_wall": 0.000145012
+    },
+    {
+      "expired_wall": 0.000130737
+    },
+    {
+      "expired_wall": 0.000124019
+    },
+    {
+      "expired_wall": 0.000145451
+    },
+    {
+      "expired_wall": 0.000136581
+    }
+  ],
+  "exchange_checks": 7,
+  "passed": true
+}

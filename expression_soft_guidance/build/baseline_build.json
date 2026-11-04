@@ -1,0 +1,7 @@
+{
+  "compiler": "g++ (Ubuntu 15.2.0-16ubuntu1) 15.2.0\nCopyright (C) 2025 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "wall": 8.101735798991285,
+  "sha256": "e0dd0db0e3dad48ffa2f311fa837d3ff707c65515a4101eb1507aad25acec2b2",
+  "source": "/tmp/expr_soft_baseline_same_compiler",
+  "method": "reuse only unchanged objects; restore all three modified translation units from verified HighDiv; rebuild all dependent archives and library"
+}

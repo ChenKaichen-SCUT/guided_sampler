@@ -1,0 +1,595 @@
+{
+  "runs": [
+    {
+      "bench": "SMT_real_LIA_ex8500_2400_100.smt2",
+      "mode": "base_complete",
+      "seed": 0,
+      "exit_code": 0,
+      "outer_wall": 7.482646417978685,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 6522,
+      "total": 66061,
+      "coverage": 0.0987269341971814,
+      "last_sample": 7.416308105,
+      "sources": {
+        "CDCL": 20
+      },
+      "source_gains": {
+        "CDCL": 6522
+      },
+      "time_checkpoints": {
+        "1": 2492,
+        "5": 6113,
+        "10": 6522,
+        "20": 6522,
+        "29": 6522,
+        "30": 6522
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 2492,
+        "5": 4894,
+        "10": 5924,
+        "20": 6522
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 0.00011855099999881491,
+      "cdcl_wall": 7.041511616,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 7.41806686,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "SMT_real_LIA_ex8500_2400_100.smt2",
+      "mode": "base_complete",
+      "seed": 1,
+      "exit_code": 0,
+      "outer_wall": 8.633765621983912,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 6522,
+      "total": 66061,
+      "coverage": 0.0987269341971814,
+      "last_sample": 8.571043192,
+      "sources": {
+        "CDCL": 20
+      },
+      "source_gains": {
+        "CDCL": 6522
+      },
+      "time_checkpoints": {
+        "1": 2492,
+        "5": 5993,
+        "10": 6522,
+        "20": 6522,
+        "29": 6522,
+        "30": 6522
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 2492,
+        "5": 4894,
+        "10": 5924,
+        "20": 6522
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 0.00013154600000102323,
+      "cdcl_wall": 8.141129498000002,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 8.573813306,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "SMT_real_LIA_ex8500_2400_100.smt2",
+      "mode": "baseline",
+      "seed": 0,
+      "exit_code": 0,
+      "outer_wall": 8.686875599029008,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 6522,
+      "total": 66061,
+      "coverage": 0.0987269341971814,
+      "last_sample": 8.635640344,
+      "sources": {
+        "CDCL": 20
+      },
+      "source_gains": {
+        "CDCL": 6522
+      },
+      "time_checkpoints": {
+        "1": 0,
+        "5": 5993,
+        "10": 6522,
+        "20": 6522,
+        "29": 6522,
+        "30": 6522
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 2492,
+        "5": 4894,
+        "10": 5924,
+        "20": 6522
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 0.0001227129999978871,
+      "cdcl_wall": 8.220620412000002,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 8.637747719,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "SMT_real_LIA_ex8500_2400_100.smt2",
+      "mode": "baseline",
+      "seed": 1,
+      "exit_code": 0,
+      "outer_wall": 7.980050075042527,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 6522,
+      "total": 66061,
+      "coverage": 0.0987269341971814,
+      "last_sample": 7.917863323,
+      "sources": {
+        "CDCL": 20
+      },
+      "source_gains": {
+        "CDCL": 6522
+      },
+      "time_checkpoints": {
+        "1": 2492,
+        "5": 6113,
+        "10": 6522,
+        "20": 6522,
+        "29": 6522,
+        "30": 6522
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 2492,
+        "5": 4894,
+        "10": 5924,
+        "20": 6522
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 0.00011870099999881922,
+      "cdcl_wall": 7.507198101000001,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 7.919859509,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "SMT_real_LIA_ex8500_2400_100.smt2",
+      "mode": "native",
+      "seed": 0,
+      "exit_code": 0,
+      "outer_wall": 7.778943571029231,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 6522,
+      "total": 66061,
+      "coverage": 0.0987269341971814,
+      "last_sample": 7.759666664,
+      "sources": {
+        "CDCL": 20
+      },
+      "source_gains": {
+        "CDCL": 6522
+      },
+      "time_checkpoints": {
+        "1": 2492,
+        "5": 6113,
+        "10": 6522,
+        "20": 6522,
+        "29": 6522,
+        "30": 6522
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 2492,
+        "5": 4894,
+        "10": 5924,
+        "20": 6522
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 0.0001136100000006593,
+      "cdcl_wall": 7.381533459,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 7.761844893,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "SMT_real_LIA_ex8500_2400_100.smt2",
+      "mode": "native",
+      "seed": 1,
+      "exit_code": 0,
+      "outer_wall": 7.379809650010429,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 6522,
+      "total": 66061,
+      "coverage": 0.0987269341971814,
+      "last_sample": 7.320550961,
+      "sources": {
+        "CDCL": 20
+      },
+      "source_gains": {
+        "CDCL": 6522
+      },
+      "time_checkpoints": {
+        "1": 2492,
+        "5": 6220,
+        "10": 6522,
+        "20": 6522,
+        "29": 6522,
+        "30": 6522
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 2492,
+        "5": 4894,
+        "10": 5924,
+        "20": 6522
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 0.0001144719999995325,
+      "cdcl_wall": 6.9711820499999995,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 7.32240838,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "SMT_real_LIA_ex8500_2400_100.smt2",
+      "mode": "observe",
+      "seed": 0,
+      "exit_code": 0,
+      "outer_wall": 7.93346972001018,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 6522,
+      "total": 66061,
+      "coverage": 0.0987269341971814,
+      "last_sample": 7.872661464,
+      "sources": {
+        "CDCL": 20
+      },
+      "source_gains": {
+        "CDCL": 6522
+      },
+      "time_checkpoints": {
+        "1": 2492,
+        "5": 6113,
+        "10": 6522,
+        "20": 6522,
+        "29": 6522,
+        "30": 6522
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 2492,
+        "5": 4894,
+        "10": 5924,
+        "20": 6522
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 0.0001233249999991054,
+      "cdcl_wall": 7.480625990999999,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 7.875786567,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "SMT_real_LIA_ex8500_2400_100.smt2",
+      "mode": "observe",
+      "seed": 1,
+      "exit_code": 0,
+      "outer_wall": 7.832451317983214,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 6522,
+      "total": 66061,
+      "coverage": 0.0987269341971814,
+      "last_sample": 7.785875555,
+      "sources": {
+        "CDCL": 20
+      },
+      "source_gains": {
+        "CDCL": 6522
+      },
+      "time_checkpoints": {
+        "1": 2492,
+        "5": 6113,
+        "10": 6522,
+        "20": 6522,
+        "29": 6522,
+        "30": 6522
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 2492,
+        "5": 4894,
+        "10": 5924,
+        "20": 6522
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 0.000122363999997592,
+      "cdcl_wall": 7.399978744000001,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 7.788597128,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "SMT_real_LIA_ex8500_2400_100.smt2",
+      "mode": "route",
+      "seed": 0,
+      "exit_code": 0,
+      "outer_wall": 7.88379440800054,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 6522,
+      "total": 66061,
+      "coverage": 0.0987269341971814,
+      "last_sample": 7.831530984,
+      "sources": {
+        "CDCL": 20
+      },
+      "source_gains": {
+        "CDCL": 6522
+      },
+      "time_checkpoints": {
+        "1": 2492,
+        "5": 6113,
+        "10": 6522,
+        "20": 6522,
+        "29": 6522,
+        "30": 6522
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 2492,
+        "5": 4894,
+        "10": 5924,
+        "20": 6522
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 0.00016804599999967196,
+      "cdcl_wall": 7.42687525,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 7.834074041,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "SMT_real_LIA_ex8500_2400_100.smt2",
+      "mode": "route",
+      "seed": 1,
+      "exit_code": 0,
+      "outer_wall": 8.48300081101479,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 6522,
+      "total": 66061,
+      "coverage": 0.0987269341971814,
+      "last_sample": 8.43378494,
+      "sources": {
+        "CDCL": 20
+      },
+      "source_gains": {
+        "CDCL": 6522
+      },
+      "time_checkpoints": {
+        "1": 2492,
+        "5": 5993,
+        "10": 6522,
+        "20": 6522,
+        "29": 6522,
+        "30": 6522
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 2492,
+        "5": 4894,
+        "10": 5924,
+        "20": 6522
+      },
+      "targets_observed": 0,
+      "target_hits": 0,
+      "target_queries": 0,
+      "preferred_decisions": 0,
+      "prepared_goals": 0,
+      "excluded_auxiliaries": 0,
+      "preparation_wall": 0.00019882099999998792,
+      "cdcl_wall": 8.003361627,
+      "errors": [],
+      "history_checks": 0,
+      "independent_goal_checks": 0,
+      "sampling_wall": 8.435936618,
+      "unprepared_sat_queries": 0,
+      "filter": {}
+    },
+    {
+      "bench": "SMT_real_LIA_ex8500_2400_100.smt2",
+      "mode": "soft_complete",
+      "seed": 0,
+      "exit_code": 0,
+      "outer_wall": 10.086060247034766,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 6753,
+      "total": 66061,
+      "coverage": 0.10222370233572002,
+      "last_sample": 10.046666496,
+      "sources": {
+        "CDCL": 20
+      },
+      "source_gains": {
+        "CDCL": 6753
+      },
+      "time_checkpoints": {
+        "1": 0,
+        "5": 5782,
+        "10": 6732,
+        "20": 6753,
+        "29": 6753,
+        "30": 6753
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 2168,
+        "5": 5466,
+        "10": 6192,
+        "20": 6753
+      },
+      "targets_observed": 141,
+      "target_hits": 1,
+      "target_queries": 19,
+      "preferred_decisions": 524,
+      "prepared_goals": 141,
+      "excluded_auxiliaries": 24,
+      "preparation_wall": 0.12683263999999567,
+      "cdcl_wall": 9.490984716000002,
+      "errors": [],
+      "history_checks": 19,
+      "independent_goal_checks": 141,
+      "sampling_wall": 10.048869015,
+      "unprepared_sat_queries": 0,
+      "filter": {
+        "filtered_occurrences": 150,
+        "proof_calls": 19,
+        "proof_wall": 0.11278061999999998,
+        "static_bits": 150,
+        "unsat_bits": 0
+      }
+    },
+    {
+      "bench": "SMT_real_LIA_ex8500_2400_100.smt2",
+      "mode": "soft_complete",
+      "seed": 1,
+      "exit_code": 0,
+      "outer_wall": 9.134943421988282,
+      "limit": 30.0,
+      "models": 20,
+      "covered": 6753,
+      "total": 66061,
+      "coverage": 0.10222370233572002,
+      "last_sample": 9.077792375,
+      "sources": {
+        "CDCL": 20
+      },
+      "source_gains": {
+        "CDCL": 6753
+      },
+      "time_checkpoints": {
+        "1": 0,
+        "5": 5962,
+        "10": 6753,
+        "20": 6753,
+        "29": 6753,
+        "30": 6753
+      },
+      "checkpoints": {
+        "1": 0,
+        "2": 2168,
+        "5": 5466,
+        "10": 6192,
+        "20": 6753
+      },
+      "targets_observed": 141,
+      "target_hits": 1,
+      "target_queries": 19,
+      "preferred_decisions": 524,
+      "prepared_goals": 141,
+      "excluded_auxiliaries": 24,
+      "preparation_wall": 0.1256059909999987,
+      "cdcl_wall": 8.549735206,
+      "errors": [],
+      "history_checks": 19,
+      "independent_goal_checks": 141,
+      "sampling_wall": 9.08017521,
+      "unprepared_sat_queries": 0,
+      "filter": {
+        "filtered_occurrences": 150,
+        "proof_calls": 19,
+        "proof_wall": 0.113965743,
+        "static_bits": 150,
+        "unsat_bits": 0
+      }
+    }
+  ],
+  "all_passed": true,
+  "wall": 7.3729457260342315,
+  "oracle_library_sha256": "968b9fc64facee7af34320d96f035210ad8bcac30aac25c1e319610ebd9519b0"
+}

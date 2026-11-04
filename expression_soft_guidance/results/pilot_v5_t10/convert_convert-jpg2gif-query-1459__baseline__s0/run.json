@@ -1,0 +1,42 @@
+{
+  "bench": "convert_convert-jpg2gif-query-1459.smt2",
+  "input": "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/convert_convert-jpg2gif-query-1459.smt2",
+  "mode": "baseline",
+  "effective_env": {
+    "ESG_MODE": "native"
+  },
+  "seed": 0,
+  "command": [
+    "taskset",
+    "-c",
+    "2",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/bin/highdiv_baseline",
+    "-i",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/convert_convert-jpg2gif-query-1459.smt2",
+    "-o",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/results/pilot_v5_t10/convert_convert-jpg2gif-query-1459__baseline__s0",
+    "-n",
+    "4294967295",
+    "-t",
+    "10.0",
+    "-s",
+    "0"
+  ],
+  "exit_code": 0,
+  "outer_wall": 9.082526237994898,
+  "hard_timeout": false,
+  "limit": 10.0,
+  "summary": {
+    "ccss_calls": 153,
+    "ccss_deadline_hits": 0,
+    "ccss_wall": 5.066834303999993,
+    "covered": 0,
+    "duplicates": 0,
+    "limit": 10.0,
+    "mode": "native",
+    "models": 307,
+    "normal": true,
+    "queries": 154,
+    "wall": 9.039958852
+  }
+}

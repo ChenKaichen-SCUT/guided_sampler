@@ -1,0 +1,50 @@
+{
+  "bench": "SMT_random_LIA_ex14600_2600_100.smt2",
+  "input": "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/SMT_random_LIA_ex14600_2600_100.smt2",
+  "mode": "soft_budget",
+  "effective_env": {
+    "ESG_MODE": "soft",
+    "ESG_CCSS_MS": "100"
+  },
+  "seed": 0,
+  "command": [
+    "taskset",
+    "-c",
+    "8",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/bin/highdiv_soft",
+    "-i",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/SMT_random_LIA_ex14600_2600_100.smt2",
+    "-o",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/results/comparison_v5_t30/SMT_random_LIA_ex14600_2600_100__soft_budget__s0",
+    "-n",
+    "4294967295",
+    "-t",
+    "30.0",
+    "-s",
+    "0"
+  ],
+  "exit_code": 0,
+  "outer_wall": 30.04056804801803,
+  "hard_timeout": false,
+  "limit": 30.0,
+  "summary": {
+    "ccss_calls": 10,
+    "ccss_deadline_hits": 0,
+    "ccss_wall": 0.24487153499999836,
+    "covered": 11394,
+    "duplicates": 0,
+    "filter": {
+      "filtered_occurrences": 50,
+      "proof_calls": 10,
+      "proof_wall": 0.080158885,
+      "static_bits": 50,
+      "unsat_bits": 0
+    },
+    "limit": 30.0,
+    "mode": "soft",
+    "models": 10,
+    "normal": true,
+    "queries": 11,
+    "wall": 30.004393888
+  }
+}

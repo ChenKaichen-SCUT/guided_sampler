@@ -1,0 +1,51 @@
+{
+  "bench": "convert_convert-jpg2gif-query-1459.smt2",
+  "input": "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/convert_convert-jpg2gif-query-1459.smt2",
+  "mode": "soft_complete",
+  "effective_env": {
+    "ESG_MODE": "soft",
+    "ESG_CCSS_MS": "100",
+    "ESG_CCSS_FEEDBACK": "complete"
+  },
+  "seed": 3,
+  "command": [
+    "taskset",
+    "-c",
+    "6",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/bin/highdiv_soft",
+    "-i",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/convert_convert-jpg2gif-query-1459.smt2",
+    "-o",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/results/confirmation_v5_t60/convert_convert-jpg2gif-query-1459__soft_complete__s3",
+    "-n",
+    "4294967295",
+    "-t",
+    "60.0",
+    "-s",
+    "3"
+  ],
+  "exit_code": 0,
+  "outer_wall": 60.115395644970704,
+  "hard_timeout": false,
+  "limit": 60.0,
+  "summary": {
+    "ccss_calls": 371,
+    "ccss_deadline_hits": 2,
+    "ccss_wall": 14.064001491999974,
+    "covered": 46586,
+    "duplicates": 0,
+    "filter": {
+      "filtered_occurrences": 10133,
+      "proof_calls": 172,
+      "proof_wall": 0.501563877,
+      "static_bits": 10133,
+      "unsat_bits": 54
+    },
+    "limit": 60.0,
+    "mode": "soft",
+    "models": 740,
+    "normal": true,
+    "queries": 372,
+    "wall": 60.054573011
+  }
+}

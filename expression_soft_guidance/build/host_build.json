@@ -1,0 +1,95 @@
+[
+  {
+    "name": "highdiv_baseline",
+    "command": [
+      "g++",
+      "-O3",
+      "-DNDEBUG",
+      "-std=c++20",
+      "-I/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/include",
+      "-I/mnt/e/Space1/SMT_Sampling/guided_sampler/build/performance_path/header_dependencies/usr/include",
+      "-I/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/deps/baseline/include",
+      "-DESG_NO_KERNEL",
+      "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/src/main/main.cpp",
+      "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/src/sampler/sampler.cpp",
+      "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/src/sampler/liasampler.cpp",
+      "-L/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/deps/baseline/lib",
+      "-Wl,-rpath,/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/deps/baseline/lib",
+      "-lz3",
+      "-pthread",
+      "-o",
+      "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/bin/highdiv_baseline"
+    ],
+    "exit_code": 0,
+    "wall": 17.427208708017133,
+    "sha256": "9a4bacc722d1e991a053ef608f6c2b6f0be61dcf180caad4fc84e1b91b9b7d5d"
+  },
+  {
+    "name": "highdiv_soft",
+    "command": [
+      "g++",
+      "-O3",
+      "-DNDEBUG",
+      "-std=c++20",
+      "-I/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/include",
+      "-I/mnt/e/Space1/SMT_Sampling/guided_sampler/build/performance_path/header_dependencies/usr/include",
+      "-I/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/deps/soft/include",
+      "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/src/main/main.cpp",
+      "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/src/sampler/sampler.cpp",
+      "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/src/sampler/liasampler.cpp",
+      "-L/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/deps/soft/lib",
+      "-Wl,-rpath,/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/deps/soft/lib",
+      "-lz3",
+      "-pthread",
+      "-o",
+      "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/bin/highdiv_soft"
+    ],
+    "exit_code": 0,
+    "wall": 17.22983780899085,
+    "sha256": "dd9a45dbb5d26aa9067347d692a3031b210785c3289f41390242e3a2d2aa4672"
+  },
+  {
+    "name": "kernel_test",
+    "command": [
+      "g++",
+      "-O3",
+      "-DNDEBUG",
+      "-std=c++20",
+      "-I/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/include",
+      "-I/mnt/e/Space1/SMT_Sampling/guided_sampler/build/performance_path/header_dependencies/usr/include",
+      "-I/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/deps/soft/include",
+      "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/tests/kernel.cpp",
+      "-L/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/deps/soft/lib",
+      "-Wl,-rpath,/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/deps/soft/lib",
+      "-lz3",
+      "-pthread",
+      "-o",
+      "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/bin/kernel_test"
+    ],
+    "exit_code": 0,
+    "wall": 6.7115806129877456,
+    "sha256": "3ab91b29c32b9e811ed0f663a7ec99231b3a0beb92b27c97bbf490832297efb7"
+  },
+  {
+    "name": "ccss_test",
+    "command": [
+      "g++",
+      "-O3",
+      "-DNDEBUG",
+      "-std=c++20",
+      "-I/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/include",
+      "-I/mnt/e/Space1/SMT_Sampling/guided_sampler/build/performance_path/header_dependencies/usr/include",
+      "-I/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/deps/soft/include",
+      "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/tests/ccss.cpp",
+      "-L/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/deps/soft/lib",
+      "-Wl,-rpath,/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/deps/soft/lib",
+      "-lz3",
+      "-pthread",
+      "-o",
+      "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/bin/ccss_test"
+    ],
+    "exit_code": 0,
+    "wall": 3.2667146289604716,
+    "sha256": "f6cc050cc9358953276d5e322c7add52419fac5c301a911ab62817dec8d7b9e8"
+  }
+]

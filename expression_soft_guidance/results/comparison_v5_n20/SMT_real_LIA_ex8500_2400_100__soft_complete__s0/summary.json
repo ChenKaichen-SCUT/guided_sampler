@@ -1,0 +1,20 @@
+{
+  "ccss_calls": 19,
+  "ccss_deadline_hits": 0,
+  "ccss_wall": 0.25036283899999767,
+  "covered": 6753,
+  "duplicates": 0,
+  "filter": {
+    "filtered_occurrences": 150,
+    "proof_calls": 19,
+    "proof_wall": 0.11278061999999998,
+    "static_bits": 150,
+    "unsat_bits": 0
+  },
+  "limit": 30.0,
+  "mode": "soft",
+  "models": 20,
+  "normal": true,
+  "queries": 20,
+  "wall": 10.048869015
+}

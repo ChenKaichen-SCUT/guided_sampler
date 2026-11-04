@@ -1,0 +1,11 @@
+# Legacy local build and output directories
+/bin/
+/lib/
+/out/
+/calc_result/
+/calc_result_*/
+/samples/
+/test_cases/
+/QF_LIA/
+/csv_dir/
+*.xlsx

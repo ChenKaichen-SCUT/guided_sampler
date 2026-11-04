@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use HighDiv, please cite the accompanying TACAS 2026 paper."
+type: software
+title: HighDiv
+authors:
+  - family-names: Lai
+    given-names: Yong
+  - family-names: Li
+    given-names: Junjie
+  - family-names: Luo
+    given-names: Chuan
+preferred-citation:
+  type: conference-paper
+  title: "SMT(LIA) Sampling with High Diversity"
+  authors:
+    - family-names: Lai
+      given-names: Yong
+    - family-names: Li
+      given-names: Junjie
+    - family-names: Luo
+      given-names: Chuan
+  collection-title: "Tools and Algorithms for the Construction and Analysis of Systems"
+  collection-type: proceedings
+  year: 2026
+  volume: 16505
+  start: 192
+  end: 212
+  publisher:
+    name: Springer
+  doi: "10.1007/978-3-032-22752-2_10"
+  url: "https://doi.org/10.1007/978-3-032-22752-2_10"

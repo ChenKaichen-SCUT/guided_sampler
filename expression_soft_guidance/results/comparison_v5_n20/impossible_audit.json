@@ -1,0 +1,86 @@
+{
+  "all_passed": true,
+  "benches": [
+    {
+      "bench": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+      "logged_claims": 4,
+      "unique_proofs": 2,
+      "outcomes": {
+        "unsat": 2
+      },
+      "target_filter_checks": 18,
+      "errors": []
+    },
+    {
+      "bench": "CAV_2009_benchmarks_problem__019.smt2",
+      "logged_claims": 70,
+      "unique_proofs": 35,
+      "outcomes": {
+        "unsat": 35
+      },
+      "target_filter_checks": 17,
+      "errors": []
+    },
+    {
+      "bench": "SMT_random_LIA_ex14600_2600_100.smt2",
+      "logged_claims": 2,
+      "unique_proofs": 1,
+      "outcomes": {
+        "unsat": 1
+      },
+      "target_filter_checks": 21,
+      "errors": []
+    },
+    {
+      "bench": "SMT_real_LIA_ex8500_2400_100.smt2",
+      "logged_claims": 6,
+      "unique_proofs": 3,
+      "outcomes": {
+        "unsat": 3
+      },
+      "target_filter_checks": 38,
+      "errors": []
+    },
+    {
+      "bench": "convert_convert-jpg2gif-query-1459.smt2",
+      "logged_claims": 24,
+      "unique_proofs": 12,
+      "outcomes": {
+        "unsat": 12
+      },
+      "target_filter_checks": 20,
+      "errors": []
+    },
+    {
+      "bench": "dillig_40-10.smt2",
+      "logged_claims": 48,
+      "unique_proofs": 26,
+      "outcomes": {
+        "unsat": 26
+      },
+      "target_filter_checks": 18,
+      "errors": []
+    },
+    {
+      "bench": "pb2010_normalized-j3048_8-sat.smt2",
+      "logged_claims": 30,
+      "unique_proofs": 17,
+      "outcomes": {
+        "unsat": 17
+      },
+      "target_filter_checks": 36,
+      "errors": []
+    },
+    {
+      "bench": "prime_cone_sat_14.smt2",
+      "logged_claims": 30,
+      "unique_proofs": 15,
+      "outcomes": {
+        "unsat": 15
+      },
+      "target_filter_checks": 18,
+      "errors": []
+    }
+  ],
+  "wall": 1.7831941060139798
+}

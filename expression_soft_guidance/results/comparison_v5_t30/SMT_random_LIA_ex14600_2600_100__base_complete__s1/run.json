@@ -1,0 +1,44 @@
+{
+  "bench": "SMT_random_LIA_ex14600_2600_100.smt2",
+  "input": "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/SMT_random_LIA_ex14600_2600_100.smt2",
+  "mode": "base_complete",
+  "effective_env": {
+    "ESG_MODE": "observe",
+    "ESG_CCSS_MS": "100",
+    "ESG_CCSS_FEEDBACK": "complete"
+  },
+  "seed": 1,
+  "command": [
+    "taskset",
+    "-c",
+    "14",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/bin/highdiv_soft",
+    "-i",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/SMT_random_LIA_ex14600_2600_100.smt2",
+    "-o",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/results/comparison_v5_t30/SMT_random_LIA_ex14600_2600_100__base_complete__s1",
+    "-n",
+    "4294967295",
+    "-t",
+    "30.0",
+    "-s",
+    "1"
+  ],
+  "exit_code": 0,
+  "outer_wall": 30.038930907961912,
+  "hard_timeout": false,
+  "limit": 30.0,
+  "summary": {
+    "ccss_calls": 10,
+    "ccss_deadline_hits": 0,
+    "ccss_wall": 0.2508901390000027,
+    "covered": 11703,
+    "duplicates": 0,
+    "limit": 30.0,
+    "mode": "observe",
+    "models": 10,
+    "normal": true,
+    "queries": 11,
+    "wall": 30.004475412
+  }
+}

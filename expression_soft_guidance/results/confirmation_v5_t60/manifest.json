@@ -1,0 +1,115 @@
+{
+  "arguments": {
+    "name": "confirmation_v5_t60",
+    "seconds": 60.0,
+    "modes": "baseline,base_budget,soft_budget,soft_complete",
+    "seeds": "2,3,4,5",
+    "bench": "convert",
+    "workers": 8,
+    "samples": 4294967295,
+    "suite": "registered"
+  },
+  "cpus": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14
+  ],
+  "benchmarks": {
+    "convert_convert-jpg2gif-query-1459.smt2": "0ea6c3119acb120f7655fae65cc9c743358f1914111e7cf2ab5290951d896f32"
+  },
+  "binaries": {
+    "highdiv_baseline": "9a4bacc722d1e991a053ef608f6c2b6f0be61dcf180caad4fc84e1b91b9b7d5d",
+    "highdiv_soft": "dd9a45dbb5d26aa9067347d692a3031b210785c3289f41390242e3a2d2aa4672"
+  },
+  "library_sha256": {
+    "baseline": "e0dd0db0e3dad48ffa2f311fa837d3ff707c65515a4101eb1507aad25acec2b2",
+    "soft": "24e53b10edcc8a22c0bff061ecff8bb5fc612de2b42a50a3d2ff9b0d037d8121"
+  },
+  "task_order": [
+    [
+      "convert_convert-jpg2gif-query-1459.smt2",
+      "baseline",
+      5
+    ],
+    [
+      "convert_convert-jpg2gif-query-1459.smt2",
+      "base_budget",
+      5
+    ],
+    [
+      "convert_convert-jpg2gif-query-1459.smt2",
+      "baseline",
+      3
+    ],
+    [
+      "convert_convert-jpg2gif-query-1459.smt2",
+      "soft_complete",
+      3
+    ],
+    [
+      "convert_convert-jpg2gif-query-1459.smt2",
+      "base_budget",
+      2
+    ],
+    [
+      "convert_convert-jpg2gif-query-1459.smt2",
+      "soft_complete",
+      5
+    ],
+    [
+      "convert_convert-jpg2gif-query-1459.smt2",
+      "base_budget",
+      4
+    ],
+    [
+      "convert_convert-jpg2gif-query-1459.smt2",
+      "soft_budget",
+      4
+    ],
+    [
+      "convert_convert-jpg2gif-query-1459.smt2",
+      "soft_budget",
+      2
+    ],
+    [
+      "convert_convert-jpg2gif-query-1459.smt2",
+      "baseline",
+      2
+    ],
+    [
+      "convert_convert-jpg2gif-query-1459.smt2",
+      "soft_budget",
+      3
+    ],
+    [
+      "convert_convert-jpg2gif-query-1459.smt2",
+      "soft_complete",
+      2
+    ],
+    [
+      "convert_convert-jpg2gif-query-1459.smt2",
+      "soft_budget",
+      5
+    ],
+    [
+      "convert_convert-jpg2gif-query-1459.smt2",
+      "base_budget",
+      3
+    ],
+    [
+      "convert_convert-jpg2gif-query-1459.smt2",
+      "baseline",
+      4
+    ],
+    [
+      "convert_convert-jpg2gif-query-1459.smt2",
+      "soft_complete",
+      4
+    ]
+  ]
+}

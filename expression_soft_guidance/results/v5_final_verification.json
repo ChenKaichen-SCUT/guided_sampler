@@ -1,0 +1,292 @@
+{
+  "passed": true,
+  "runs": [
+    {
+      "name": "comparison_v5_t30",
+      "runs": 128,
+      "models": 406483,
+      "matching_implementation_files": 21,
+      "exclusion_certificates": 750,
+      "max_ccss_overshoot_ms": 7.146310000000085,
+      "max_bounded_ccss_phase_seconds": 0.12751357500000005
+    },
+    {
+      "name": "comparison_v5_n20",
+      "runs": 96,
+      "models": 1810,
+      "matching_implementation_files": 21,
+      "exclusion_certificates": 111,
+      "max_ccss_overshoot_ms": 1.5624940000000578,
+      "max_bounded_ccss_phase_seconds": 0.10628164200000012
+    },
+    {
+      "name": "confirmation_v5_t60",
+      "runs": 16,
+      "models": 6722,
+      "matching_implementation_files": 21,
+      "exclusion_certificates": 462,
+      "max_ccss_overshoot_ms": 3.0178769999999844,
+      "max_bounded_ccss_phase_seconds": 0.10301971700000001
+    }
+  ],
+  "upstream_verified_files": 2935,
+  "upstream_commit": "f2c6e1756b13281d96cbf90a8bd940129e56cce4",
+  "exports": {
+    "baseline": [],
+    "soft": [
+      "Z3_expr_ccss_begin",
+      "Z3_expr_ccss_end",
+      "Z3_expr_exchange",
+      "Z3_expr_exchange_value",
+      "Z3_expr_soft_begin",
+      "Z3_expr_soft_end",
+      "Z3_expr_soft_stats"
+    ]
+  },
+  "prefix_comparisons": 48,
+  "unit_checks": {
+    "pattern_test": {
+      "bit_checks": 8487,
+      "coordination_example": "130",
+      "passed": true
+    },
+    "kernel_test": {
+      "cases": [
+        {
+          "chosen": 3,
+          "exchange_skips": 5,
+          "false": 0,
+          "hits": 3,
+          "prepared": 3,
+          "scenario": 0,
+          "sum": "130"
+        },
+        {
+          "chosen": 3,
+          "exchange_skips": 5,
+          "false": 0,
+          "hits": 3,
+          "prepared": 3,
+          "scenario": 1,
+          "sum": "130"
+        },
+        {
+          "chosen": 6,
+          "exchange_skips": 5,
+          "false": 8,
+          "hits": 2,
+          "prepared": 3,
+          "scenario": 2,
+          "sum": "130"
+        },
+        {
+          "chosen": 3,
+          "exchange_skips": 5,
+          "false": 1,
+          "hits": 2,
+          "prepared": 3,
+          "scenario": 3,
+          "sum": "10"
+        },
+        {
+          "chosen": 3,
+          "exchange_skips": 5,
+          "false": 1,
+          "hits": 2,
+          "prepared": 3,
+          "scenario": 4,
+          "sum": "18"
+        },
+        {
+          "chosen": 0,
+          "exchange_skips": 5,
+          "false": 42,
+          "hits": 0,
+          "prepared": 3,
+          "scenario": 5,
+          "sum": "10"
+        },
+        {
+          "incremental": 0,
+          "iteration": 0,
+          "mapped": 0,
+          "prepared": 0,
+          "route_scenario": 0,
+          "tactic": 1
+        },
+        {
+          "incremental": 0,
+          "iteration": 1,
+          "mapped": 0,
+          "prepared": 0,
+          "route_scenario": 0,
+          "tactic": 1
+        },
+        {
+          "incremental": 0,
+          "iteration": 2,
+          "mapped": 0,
+          "prepared": 0,
+          "route_scenario": 0,
+          "tactic": 1
+        },
+        {
+          "incremental": 0,
+          "iteration": 0,
+          "mapped": 3,
+          "prepared": 3,
+          "route_scenario": 1,
+          "tactic": 1
+        },
+        {
+          "incremental": 0,
+          "iteration": 1,
+          "mapped": 3,
+          "prepared": 3,
+          "route_scenario": 1,
+          "tactic": 1
+        },
+        {
+          "incremental": 0,
+          "iteration": 2,
+          "mapped": 3,
+          "prepared": 3,
+          "route_scenario": 1,
+          "tactic": 1
+        },
+        {
+          "incremental": 0,
+          "iteration": 0,
+          "mapped": 0,
+          "prepared": 0,
+          "route_scenario": 2,
+          "tactic": 1
+        },
+        {
+          "incremental": 1,
+          "iteration": 1,
+          "mapped": 0,
+          "prepared": 0,
+          "route_scenario": 2,
+          "tactic": 0
+        },
+        {
+          "incremental": 1,
+          "iteration": 2,
+          "mapped": 0,
+          "prepared": 0,
+          "route_scenario": 2,
+          "tactic": 0
+        },
+        {
+          "incremental": 0,
+          "iteration": 0,
+          "mapped": 3,
+          "prepared": 3,
+          "route_scenario": 3,
+          "tactic": 1
+        },
+        {
+          "incremental": 1,
+          "iteration": 1,
+          "mapped": 0,
+          "prepared": 3,
+          "route_scenario": 3,
+          "tactic": 0
+        },
+        {
+          "incremental": 1,
+          "iteration": 2,
+          "mapped": 0,
+          "prepared": 3,
+          "route_scenario": 3,
+          "tactic": 0
+        }
+      ],
+      "passed": true,
+      "reach_checks": 773
+    },
+    "impossible_test": {
+      "F_only_unsat_cached": true,
+      "budget_exhaustion_not_impossibility": true,
+      "exhaustive_fact_checks": 6240,
+      "historical_assignment_not_used": true,
+      "passed": true
+    },
+    "ccss_test": {
+      "deadline_recovery_checks": [
+        {
+          "expired_wall": 0.018717617
+        },
+        {
+          "expired_wall": 0.000200375
+        },
+        {
+          "expired_wall": 0.000171218
+        },
+        {
+          "expired_wall": 0.000145012
+        },
+        {
+          "expired_wall": 0.000130737
+        },
+        {
+          "expired_wall": 0.000124019
+        },
+        {
+          "expired_wall": 0.000145451
+        },
+        {
+          "expired_wall": 0.000136581
+        }
+      ],
+      "exchange_checks": 7,
+      "passed": true
+    }
+  },
+  "patch_replay": {
+    "passed": true,
+    "compared": 14,
+    "replay": "/tmp/expr_v5_patch_replay_5n45jlje",
+    "compiled": "/tmp/expr_soft_build_v3/z3",
+    "sha256": {
+      "src/smt/smt_context.cpp": "eb93db84325afc4d14cf31cef45bcb975aea468997b5955861f2a02c317f9031",
+      "src/api/api_solver.cpp": "9ed4681de3548cacc8235392ed2fd153aaf97f521493811afe5da35d39faa78f",
+      "src/smt/smt_model_generator.cpp": "2deef9ca6b6f2c6bf72199443b5ff74da869352ed3773802076c7adbe271ed57",
+      "src/solver/combined_solver.cpp": "834829316dfb8ee5f824f39030c9172d81615542977eee89085699b64054b883",
+      "src/solver/tactic2solver.cpp": "b5a303bee18f1d694ad4b8983fb6236ccca48a7e0061aeb504ad3a31c566b959",
+      "src/smt/tactic/smt_tactic_core.cpp": "7418ad8654225106b52701dd38d73f6e4c3d6708605482d0e3b93a6fadff9b4e",
+      "src/ast/converters/model_converter.h": "a6dab48821d169a74329eefaaf21b9d2d0442af72c45fccc3846f45bdebbad99",
+      "src/ast/converters/model_converter.cpp": "bb22bb0ec493feea71b1fb9fc2d531e998dc77e8f8d22087173cdc05dcb32e11",
+      "src/ast/converters/generic_model_converter.h": "12e20792dd04a6e3cbfb764f2d55810c99717ecac96ab3bed77bd0d2a170afab",
+      "src/ast/converters/generic_model_converter.cpp": "13359014a514c986ee1d9f32d501a07d83a4ac37d4f3ec8c8a54735fd58407c7",
+      "src/sampler/sampler.cpp": "aff3e6a3138b3a1aa0eb444ec9081619e406b5230fb02b89719fea14b8a5045a",
+      "src/smt/smt_context_pp.cpp": "b6263eb78f11dd474da8f82100ec812c11b1c7536c6e6647ce516782d0f75446",
+      "src/smt/expr_soft.h": "5ad85a2dbe5d37b1844ad29139c20a0d5a68e36a23c4887d64c44123930cc6d9",
+      "src/sampler/ccss_control.h": "8c901494a97bcb682b811bc0a1f3d6760f76f2323da56c4f38ca4d88ff0929d5"
+    }
+  },
+  "implementation": {
+    "include/impossible.hpp": "3aee306f2487c42a08d4228d80ead0d16d1d94b5978148da71cd57c9dac840df",
+    "include/kernel_api.hpp": "406e8a1d91577b76cc4ce7f8dcf077ab8248402bddf68eb5b2b7586f01372f09",
+    "include/observer.hpp": "a1868e4abe3816212cb6a99de9d2db2f42128086a001edba71cbe7b4f54d740e",
+    "include/pattern.hpp": "a94f30725202e5c3b2133b86e59c1df7817196bba90320c1b753237b97d8378e",
+    "include/session.hpp": "ce5d4a90509ac6acb73efd0ec0ba3001376bd8612cd32b5259ee3bef2d768231",
+    "kernel/api.inc": "7e8e4400d0a12d6431284396acd4910da413fb25561f8837237994c820b49430",
+    "kernel/ccss_api.inc": "4e95f04fe21a57a00242f2063447b9424d059820856f4e10ef440a6ecfe154c2",
+    "kernel/ccss_control.h": "8c901494a97bcb682b811bc0a1f3d6760f76f2323da56c4f38ca4d88ff0929d5",
+    "kernel/decide.inc": "f1f8f9c1283cc2ffba2ee218e897602420e88b60b1e6f96529f90e9c03ee91aa",
+    "kernel/expr_soft.h": "5ad85a2dbe5d37b1844ad29139c20a0d5a68e36a23c4887d64c44123930cc6d9",
+    "kernel/prepare.inc": "e2b5ca96679a8eba487f0187fbbbf4ecda343b8423096608b512d99e797ddf3f",
+    "kernel/tactic.inc": "cafe3a171100427fad2197a2eef5640f5126f220649dfa6350904ed030303228",
+    "src/main/main.cpp": "31479fa529094ab9843d0e0860610dd1ba20483063df226de833f85cbdd2f560",
+    "src/sampler/liasampler.cpp": "25a776bd7198554351928a005d094307d156107d67a4a08eb2d32e636f5f80ea",
+    "src/sampler/liasampler.h": "479ec28174e0d5e5c1729290ce68ce0b3c97dbab56e18c59455fafa5eb698f4e",
+    "src/sampler/sampler.cpp": "2a826310731f14bfa7a4215202c86817891f8d0e031364ca4ff7ec32df6c54a3",
+    "src/sampler/sampler.h": "df3c9c20bdfa84acbafb19ea22facd512913407b50cfa9ed36deba2278a6d1ec",
+    "tests/ccss.cpp": "e0c0b6b9d325a91399d0076c562fd6cc5e35091737ef382b2d60dcf132649fac",
+    "tests/impossible.cpp": "24ce7860a43ee0b0e2a9c04d432f6d3ac8f402881622c6211df40248d9b773b6",
+    "tests/kernel.cpp": "67c87e5c3243d481a6031da836384838cf5e236bd9fc598c77f98af6ab04a401",
+    "tests/pattern.cpp": "36620a5212732e00e4c32d13748b67f5b8b4a8ab0a09de84e6c855dbbe84e9c5"
+  }
+}

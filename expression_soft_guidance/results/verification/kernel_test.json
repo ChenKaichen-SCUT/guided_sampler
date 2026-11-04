@@ -1,0 +1,156 @@
+{
+  "cases": [
+    {
+      "chosen": 3,
+      "exchange_skips": 5,
+      "false": 0,
+      "hits": 3,
+      "prepared": 3,
+      "scenario": 0,
+      "sum": "130"
+    },
+    {
+      "chosen": 3,
+      "exchange_skips": 5,
+      "false": 0,
+      "hits": 3,
+      "prepared": 3,
+      "scenario": 1,
+      "sum": "130"
+    },
+    {
+      "chosen": 6,
+      "exchange_skips": 5,
+      "false": 8,
+      "hits": 2,
+      "prepared": 3,
+      "scenario": 2,
+      "sum": "130"
+    },
+    {
+      "chosen": 3,
+      "exchange_skips": 5,
+      "false": 1,
+      "hits": 2,
+      "prepared": 3,
+      "scenario": 3,
+      "sum": "10"
+    },
+    {
+      "chosen": 3,
+      "exchange_skips": 5,
+      "false": 1,
+      "hits": 2,
+      "prepared": 3,
+      "scenario": 4,
+      "sum": "18"
+    },
+    {
+      "chosen": 0,
+      "exchange_skips": 5,
+      "false": 42,
+      "hits": 0,
+      "prepared": 3,
+      "scenario": 5,
+      "sum": "10"
+    },
+    {
+      "incremental": 0,
+      "iteration": 0,
+      "mapped": 0,
+      "prepared": 0,
+      "route_scenario": 0,
+      "tactic": 1
+    },
+    {
+      "incremental": 0,
+      "iteration": 1,
+      "mapped": 0,
+      "prepared": 0,
+      "route_scenario": 0,
+      "tactic": 1
+    },
+    {
+      "incremental": 0,
+      "iteration": 2,
+      "mapped": 0,
+      "prepared": 0,
+      "route_scenario": 0,
+      "tactic": 1
+    },
+    {
+      "incremental": 0,
+      "iteration": 0,
+      "mapped": 3,
+      "prepared": 3,
+      "route_scenario": 1,
+      "tactic": 1
+    },
+    {
+      "incremental": 0,
+      "iteration": 1,
+      "mapped": 3,
+      "prepared": 3,
+      "route_scenario": 1,
+      "tactic": 1
+    },
+    {
+      "incremental": 0,
+      "iteration": 2,
+      "mapped": 3,
+      "prepared": 3,
+      "route_scenario": 1,
+      "tactic": 1
+    },
+    {
+      "incremental": 0,
+      "iteration": 0,
+      "mapped": 0,
+      "prepared": 0,
+      "route_scenario": 2,
+      "tactic": 1
+    },
+    {
+      "incremental": 1,
+      "iteration": 1,
+      "mapped": 0,
+      "prepared": 0,
+      "route_scenario": 2,
+      "tactic": 0
+    },
+    {
+      "incremental": 1,
+      "iteration": 2,
+      "mapped": 0,
+      "prepared": 0,
+      "route_scenario": 2,
+      "tactic": 0
+    },
+    {
+      "incremental": 0,
+      "iteration": 0,
+      "mapped": 3,
+      "prepared": 3,
+      "route_scenario": 3,
+      "tactic": 1
+    },
+    {
+      "incremental": 1,
+      "iteration": 1,
+      "mapped": 0,
+      "prepared": 3,
+      "route_scenario": 3,
+      "tactic": 0
+    },
+    {
+      "incremental": 1,
+      "iteration": 2,
+      "mapped": 0,
+      "prepared": 3,
+      "route_scenario": 3,
+      "tactic": 0
+    }
+  ],
+  "passed": true,
+  "reach_checks": 773
+}

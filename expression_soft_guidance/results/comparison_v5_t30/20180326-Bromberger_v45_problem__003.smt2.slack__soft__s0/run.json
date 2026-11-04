@@ -1,0 +1,49 @@
+{
+  "bench": "20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+  "input": "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+  "mode": "soft",
+  "effective_env": {
+    "ESG_MODE": "soft"
+  },
+  "seed": 0,
+  "command": [
+    "taskset",
+    "-c",
+    "10",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/bin/highdiv_soft",
+    "-i",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/20180326-Bromberger_v45_problem__003.smt2.slack.smt2",
+    "-o",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/results/comparison_v5_t30/20180326-Bromberger_v45_problem__003.smt2.slack__soft__s0",
+    "-n",
+    "4294967295",
+    "-t",
+    "30.0",
+    "-s",
+    "0"
+  ],
+  "exit_code": 0,
+  "outer_wall": 29.086202926991973,
+  "hard_timeout": false,
+  "limit": 30.0,
+  "summary": {
+    "ccss_calls": 3782,
+    "ccss_deadline_hits": 0,
+    "ccss_wall": 16.068051396000076,
+    "covered": 16330,
+    "duplicates": 0,
+    "filter": {
+      "filtered_occurrences": 202068,
+      "proof_calls": 38,
+      "proof_wall": 0.045480004999999976,
+      "static_bits": 54,
+      "unsat_bits": 0
+    },
+    "limit": 30.0,
+    "mode": "soft",
+    "models": 7565,
+    "normal": true,
+    "queries": 3783,
+    "wall": 29.014903355
+  }
+}

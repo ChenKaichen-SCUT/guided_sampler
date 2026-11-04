@@ -1,0 +1,13 @@
+[
+  {
+    "command": [
+      "make",
+      "-C",
+      "build",
+      "-j8",
+      "libz3.so"
+    ],
+    "exit_code": 0,
+    "wall": 3.324465985002462
+  }
+]

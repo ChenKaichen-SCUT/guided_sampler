@@ -1,0 +1,7 @@
+{
+  "F_only_unsat_cached": true,
+  "budget_exhaustion_not_impossibility": true,
+  "exhaustive_fact_checks": 6240,
+  "historical_assignment_not_used": true,
+  "passed": true
+}

@@ -1,0 +1,44 @@
+{
+  "bench": "dillig_40-10.smt2",
+  "input": "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/dillig_40-10.smt2",
+  "mode": "base_complete",
+  "effective_env": {
+    "ESG_MODE": "observe",
+    "ESG_CCSS_MS": "100",
+    "ESG_CCSS_FEEDBACK": "complete"
+  },
+  "seed": 1,
+  "command": [
+    "taskset",
+    "-c",
+    "12",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/bin/highdiv_soft",
+    "-i",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/dillig_40-10.smt2",
+    "-o",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/results/comparison_v5_n20/dillig_40-10__base_complete__s1",
+    "-n",
+    "20",
+    "-t",
+    "30.0",
+    "-s",
+    "1"
+  ],
+  "exit_code": 0,
+  "outer_wall": 0.16768819495337084,
+  "hard_timeout": false,
+  "limit": 30.0,
+  "summary": {
+    "ccss_calls": 10,
+    "ccss_deadline_hits": 0,
+    "ccss_wall": 0.030358371000000023,
+    "covered": 47593,
+    "duplicates": 0,
+    "limit": 30.0,
+    "mode": "observe",
+    "models": 20,
+    "normal": true,
+    "queries": 10,
+    "wall": 0.122452128
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "bench": "CAV_2009_benchmarks_problem__019.smt2",
+  "input": "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/CAV_2009_benchmarks_problem__019.smt2",
+  "mode": "native",
+  "effective_env": {
+    "ESG_MODE": "native"
+  },
+  "seed": 0,
+  "command": [
+    "taskset",
+    "-c",
+    "6",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/bin/highdiv_soft",
+    "-i",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/CAV_2009_benchmarks_problem__019.smt2",
+    "-o",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/results/comparison_v5_n20/CAV_2009_benchmarks_problem__019__native__s0",
+    "-n",
+    "20",
+    "-t",
+    "30.0",
+    "-s",
+    "0"
+  ],
+  "exit_code": 0,
+  "outer_wall": 0.16737734898924828,
+  "hard_timeout": false,
+  "limit": 30.0,
+  "summary": {
+    "ccss_calls": 10,
+    "ccss_deadline_hits": 0,
+    "ccss_wall": 0.037709389999999995,
+    "covered": 0,
+    "duplicates": 0,
+    "limit": 30.0,
+    "mode": "native",
+    "models": 20,
+    "normal": true,
+    "queries": 10,
+    "wall": 0.115103645
+  }
+}

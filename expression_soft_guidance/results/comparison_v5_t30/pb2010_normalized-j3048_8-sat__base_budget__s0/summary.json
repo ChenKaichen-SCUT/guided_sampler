@@ -1,0 +1,13 @@
+{
+  "ccss_calls": 155,
+  "ccss_deadline_hits": 4,
+  "ccss_wall": 17.541600095000014,
+  "covered": 56551,
+  "duplicates": 163,
+  "limit": 30.0,
+  "mode": "observe",
+  "models": 130,
+  "normal": true,
+  "queries": 155,
+  "wall": 30.031229531
+}

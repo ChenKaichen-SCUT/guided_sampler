@@ -1,0 +1,43 @@
+{
+  "bench": "prime_cone_sat_14.smt2",
+  "input": "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/prime_cone_sat_14.smt2",
+  "mode": "base_budget",
+  "effective_env": {
+    "ESG_MODE": "observe",
+    "ESG_CCSS_MS": "100"
+  },
+  "seed": 0,
+  "command": [
+    "taskset",
+    "-c",
+    "6",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/bin/highdiv_soft",
+    "-i",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/prime_cone_sat_14.smt2",
+    "-o",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/results/comparison_v5_t30/prime_cone_sat_14__base_budget__s0",
+    "-n",
+    "4294967295",
+    "-t",
+    "30.0",
+    "-s",
+    "0"
+  ],
+  "exit_code": 0,
+  "outer_wall": 30.036282264976762,
+  "hard_timeout": false,
+  "limit": 30.0,
+  "summary": {
+    "ccss_calls": 2531,
+    "ccss_deadline_hits": 0,
+    "ccss_wall": 24.997674155000023,
+    "covered": 14383,
+    "duplicates": 1,
+    "limit": 30.0,
+    "mode": "observe",
+    "models": 5061,
+    "normal": true,
+    "queries": 2532,
+    "wall": 30.004969761
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "bench": "pb2010_normalized-j3048_8-sat.smt2",
+  "input": "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/pb2010_normalized-j3048_8-sat.smt2",
+  "mode": "observe",
+  "effective_env": {
+    "ESG_MODE": "observe"
+  },
+  "seed": 1,
+  "command": [
+    "taskset",
+    "-c",
+    "14",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/bin/highdiv_soft",
+    "-i",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/pb2010_normalized-j3048_8-sat.smt2",
+    "-o",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/results/comparison_v5_n20/pb2010_normalized-j3048_8-sat__observe__s1",
+    "-n",
+    "20",
+    "-t",
+    "30.0",
+    "-s",
+    "1"
+  ],
+  "exit_code": 0,
+  "outer_wall": 3.7741772850276902,
+  "hard_timeout": false,
+  "limit": 30.0,
+  "summary": {
+    "ccss_calls": 21,
+    "ccss_deadline_hits": 0,
+    "ccss_wall": 1.938009967,
+    "covered": 53732,
+    "duplicates": 22,
+    "limit": 30.0,
+    "mode": "observe",
+    "models": 20,
+    "normal": true,
+    "queries": 21,
+    "wall": 3.741081646
+  }
+}

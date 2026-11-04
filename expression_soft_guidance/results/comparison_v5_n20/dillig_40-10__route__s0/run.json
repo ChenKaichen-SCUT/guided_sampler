@@ -1,0 +1,42 @@
+{
+  "bench": "dillig_40-10.smt2",
+  "input": "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/dillig_40-10.smt2",
+  "mode": "route",
+  "effective_env": {
+    "ESG_MODE": "route"
+  },
+  "seed": 0,
+  "command": [
+    "taskset",
+    "-c",
+    "2",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/bin/highdiv_soft",
+    "-i",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/benchmarks/dillig_40-10.smt2",
+    "-o",
+    "/mnt/e/Space1/SMT_Sampling/expression_soft_guidance/results/comparison_v5_n20/dillig_40-10__route__s0",
+    "-n",
+    "20",
+    "-t",
+    "30.0",
+    "-s",
+    "0"
+  ],
+  "exit_code": 0,
+  "outer_wall": 0.16698590700980276,
+  "hard_timeout": false,
+  "limit": 30.0,
+  "summary": {
+    "ccss_calls": 10,
+    "ccss_deadline_hits": 0,
+    "ccss_wall": 0.03239023200000002,
+    "covered": 47589,
+    "duplicates": 0,
+    "limit": 30.0,
+    "mode": "route",
+    "models": 20,
+    "normal": true,
+    "queries": 10,
+    "wall": 0.123114142
+  }
+}

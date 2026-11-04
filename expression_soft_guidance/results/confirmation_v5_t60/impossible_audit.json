@@ -1,0 +1,16 @@
+{
+  "all_passed": true,
+  "benches": [
+    {
+      "bench": "convert_convert-jpg2gif-query-1459.smt2",
+      "logged_claims": 1339,
+      "unique_proofs": 462,
+      "outcomes": {
+        "unsat": 462
+      },
+      "target_filter_checks": 1386,
+      "errors": []
+    }
+  ],
+  "wall": 2.449038009974174
+}
